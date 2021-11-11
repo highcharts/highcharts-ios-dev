@@ -1,9 +1,9 @@
 {
   "_meta": {
     "branch": "master",
-    "commit": "fb2231ee7c",
-    "version": "9.3.0",
-    "date": "Thu Oct 21 2021 11:31:11 GMT+0200 (sentraleuropeisk sommertid)"
+    "commit": "07ea76547b",
+    "version": "9.3.1",
+    "date": "Fri Nov 05 2021 10:15:01 GMT+0100 (sentraleuropeisk normaltid)"
   },
   "accessibility": {
     "doclet": {
@@ -3208,7 +3208,9 @@
               "declare": "Highcharts.AnnotationMockPointOptionsObject",
               "type": {
                 "names": [
-                  "Highcharts.AnnotationMockPointOptionsObject"
+                  "string",
+                  "Highcharts.AnnotationMockPointOptionsObject",
+                  "Highcharts.AnnotationMockPointFunction"
                 ]
               },
               "requires": [
@@ -4435,7 +4437,9 @@
               "declare": "Highcharts.AnnotationMockPointOptionsObject",
               "type": {
                 "names": [
-                  "Highcharts.AnnotationMockPointOptionsObject"
+                  "string",
+                  "Highcharts.AnnotationMockPointOptionsObject",
+                  "Highcharts.AnnotationMockPointFunction"
                 ]
               },
               "extends": "annotations.labels.point",
@@ -5398,11 +5402,10 @@
           "description": "Set the series threshold for when the boost should kick in globally.\n\nSetting to e.g. 20 will cause the whole chart to enter boost mode\nif there are 20 or more series active. When the chart is in boost mode,\nevery series in it will be rendered to a common canvas. This offers\na significant speed improvment in charts with a very high\namount of series.",
           "type": {
             "names": [
-              "number",
-              "null"
+              "number"
             ]
           },
-          "defaultvalue": "null"
+          "defaultvalue": "50"
         },
         "meta": {
           "filename": "js/Extensions/Boost/BoostOptions.js",
@@ -18140,8 +18143,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.backgroundColor",
                   "name": "backgroundColor",
-                  "line": 820,
-                  "lineEnd": 820,
+                  "line": 833,
+                  "lineEnd": 833,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Background color"
@@ -18160,8 +18163,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.backgroundColors",
                   "name": "backgroundColors",
-                  "line": 821,
-                  "lineEnd": 821,
+                  "line": 834,
+                  "lineEnd": 834,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Background colors"
@@ -18180,8 +18183,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.borderColor",
                   "name": "borderColor",
-                  "line": 822,
-                  "lineEnd": 822,
+                  "line": 835,
+                  "lineEnd": 835,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Border color"
@@ -18200,8 +18203,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.borderRadius",
                   "name": "borderRadius",
-                  "line": 823,
-                  "lineEnd": 823,
+                  "line": 836,
+                  "lineEnd": 836,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Border radius"
@@ -18220,8 +18223,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.borderWidth",
                   "name": "borderWidth",
-                  "line": 824,
-                  "lineEnd": 824,
+                  "line": 837,
+                  "lineEnd": 837,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Border width"
@@ -18300,8 +18303,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.color",
                   "name": "color",
-                  "line": 828,
-                  "lineEnd": 828,
+                  "line": 841,
+                  "lineEnd": 841,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Color"
@@ -18620,8 +18623,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.fill",
                   "name": "fill",
-                  "line": 812,
-                  "lineEnd": 812,
+                  "line": 825,
+                  "lineEnd": 825,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Fill"
@@ -18660,8 +18663,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.fontSize",
                   "name": "fontSize",
-                  "line": 827,
-                  "lineEnd": 827,
+                  "line": 840,
+                  "lineEnd": 840,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Font size"
@@ -18680,8 +18683,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.format",
                   "name": "format",
-                  "line": 813,
-                  "lineEnd": 813,
+                  "line": 826,
+                  "lineEnd": 826,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Text"
@@ -18700,8 +18703,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.height",
                   "name": "height",
-                  "line": 829,
-                  "lineEnd": 829,
+                  "line": 842,
+                  "lineEnd": 842,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Height"
@@ -19891,8 +19894,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.labelOptions",
                   "name": "labelOptions",
-                  "line": 818,
-                  "lineEnd": 818,
+                  "line": 831,
+                  "lineEnd": 831,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Label options"
@@ -19911,8 +19914,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.labels",
                   "name": "labels",
-                  "line": 819,
-                  "lineEnd": 819,
+                  "line": 832,
+                  "lineEnd": 832,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Labels"
@@ -19951,8 +19954,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.lines",
                   "name": "lines",
-                  "line": 805,
-                  "lineEnd": 805,
+                  "line": 818,
+                  "lineEnd": 818,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Lines"
@@ -20151,8 +20154,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.name",
                   "name": "name",
-                  "line": 817,
-                  "lineEnd": 817,
+                  "line": 830,
+                  "lineEnd": 830,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Name"
@@ -20211,8 +20214,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.padding",
                   "name": "padding",
-                  "line": 826,
-                  "lineEnd": 826,
+                  "line": 839,
+                  "lineEnd": 839,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Padding"
@@ -20531,8 +20534,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.shapeOptions",
                   "name": "shapeOptions",
-                  "line": 810,
-                  "lineEnd": 810,
+                  "line": 823,
+                  "lineEnd": 823,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Shape options"
@@ -20551,8 +20554,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.shapes",
                   "name": "shapes",
-                  "line": 830,
-                  "lineEnd": 830,
+                  "line": 843,
+                  "lineEnd": 843,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Shape options"
@@ -20611,8 +20614,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.simpleShapes",
                   "name": "simpleShapes",
-                  "line": 804,
-                  "lineEnd": 804,
+                  "line": 817,
+                  "lineEnd": 817,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Simple shapes"
@@ -20671,8 +20674,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.stroke",
                   "name": "stroke",
-                  "line": 815,
-                  "lineEnd": 815,
+                  "line": 828,
+                  "lineEnd": 828,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Line color"
@@ -20691,8 +20694,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.strokeWidth",
                   "name": "strokeWidth",
-                  "line": 814,
-                  "lineEnd": 814,
+                  "line": 827,
+                  "lineEnd": 827,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Line width"
@@ -20711,8 +20714,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.style",
                   "name": "style",
-                  "line": 825,
-                  "lineEnd": 825,
+                  "line": 838,
+                  "lineEnd": 838,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Style"
@@ -20751,8 +20754,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.title",
                   "name": "title",
-                  "line": 816,
-                  "lineEnd": 816,
+                  "line": 829,
+                  "lineEnd": 829,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Title"
@@ -20811,8 +20814,8 @@
                 "meta": {
                   "fullname": "lang.navigation.popup.typeOptions",
                   "name": "typeOptions",
-                  "line": 811,
-                  "lineEnd": 811,
+                  "line": 824,
+                  "lineEnd": 824,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "Details"
@@ -26223,7 +26226,7 @@
       },
       "projection": {
         "doclet": {
-          "description": "Beta feature in v9.3. The projection options allow applying client side\nprojection to a map given in coordinates, typically from TopoJSON or\nGeoJSON.\n\nSub-options are:\n* `projection.name`, which as of v9.3 can be `EqualEarth`, `Miller`,\n`Orthographic` or `WebMercator`.\n* `rotation`, a three-axis rotation of the globe prior to projection,\nwhich in practice can be used for example to render a world map with the\nAmericas centered (`[90, 0]`), or to rotate an orthographic projection.",
+          "description": "Beta feature in v9.3. The projection options allow applying client side\nprojection to a map given in coordinates, typically from TopoJSON or\nGeoJSON.\n\nSub-options are:\n* `name`, which as of v9.3 can be `EqualEarth`,\n`LambertConformalConic`, `Miller`, `Orthographic` or `WebMercator`.\n* `parallels`, the standard parallels for the LambertConformalConic\nprojection.\n* `rotation`, a three-axis rotation of the globe prior to projection,\nwhich in practice can be used for example to render a world map with the\nAmericas centered (`[90, 0]`), or to rotate an orthographic projection.",
           "type": {
             "names": [
               "object"
@@ -26251,7 +26254,7 @@
           "fullname": "mapView.projection",
           "name": "projection",
           "line": 56,
-          "lineEnd": 71,
+          "lineEnd": 73,
           "column": 4,
           "filename": "js/Maps/MapViewOptionsDefault.js",
           "default": "undefined"
@@ -26295,8 +26298,8 @@
         "meta": {
           "fullname": "mapView.zoom",
           "name": "zoom",
-          "line": 73,
-          "lineEnd": 87,
+          "line": 75,
+          "lineEnd": 89,
           "column": 4,
           "filename": "js/Maps/MapViewOptionsDefault.js",
           "default": "undefined"
@@ -26340,7 +26343,7 @@
           ],
           "type": {
             "names": [
-              "*"
+              "Highcharts.AnnotationsOptions"
             ]
           },
           "extends": "annotations",
@@ -26361,8 +26364,8 @@
         },
         "meta": {
           "filename": "js/Extensions/Annotations/NavigationBindings.js",
-          "line": 1125,
-          "lineEnd": 1137
+          "line": 1138,
+          "lineEnd": 1150
         },
         "children": {}
       },
@@ -26519,8 +26522,8 @@
             "meta": {
               "fullname": "navigation.bindings.circleAnnotation",
               "name": "circleAnnotation",
-              "line": 881,
-              "lineEnd": 887,
+              "line": 894,
+              "lineEnd": 900,
               "column": 12,
               "filename": "js/Extensions/Annotations/NavigationBindings.js"
             },
@@ -26672,8 +26675,8 @@
             "meta": {
               "fullname": "navigation.bindings.ellipseAnnotation",
               "name": "ellipseAnnotation",
-              "line": 934,
-              "lineEnd": 934,
+              "line": 947,
+              "lineEnd": 947,
               "column": 12,
               "filename": "js/Extensions/Annotations/NavigationBindings.js"
             },
@@ -26690,8 +26693,8 @@
                 "meta": {
                   "fullname": "navigation.bindings.ellipseAnnotation.className",
                   "name": "className",
-                  "line": 935,
-                  "lineEnd": 935,
+                  "line": 948,
+                  "lineEnd": 948,
                   "column": 16,
                   "filename": "js/Extensions/Annotations/NavigationBindings.js",
                   "default": "highcharts-ellipse-annotation"
@@ -27008,8 +27011,8 @@
             "meta": {
               "fullname": "navigation.bindings.labelAnnotation",
               "name": "labelAnnotation",
-              "line": 1034,
-              "lineEnd": 1039,
+              "line": 1047,
+              "lineEnd": 1052,
               "column": 12,
               "filename": "js/Extensions/Annotations/NavigationBindings.js"
             },
@@ -27194,8 +27197,8 @@
             "meta": {
               "fullname": "navigation.bindings.rectangleAnnotation",
               "name": "rectangleAnnotation",
-              "line": 974,
-              "lineEnd": 980,
+              "line": 987,
+              "lineEnd": 993,
               "column": 12,
               "filename": "js/Extensions/Annotations/NavigationBindings.js"
             },
@@ -27712,8 +27715,8 @@
         "meta": {
           "fullname": "navigation.bindingsClassName",
           "name": "bindingsClassName",
-          "line": 841,
-          "lineEnd": 850,
+          "line": 854,
+          "lineEnd": 863,
           "column": 8,
           "filename": "js/Extensions/Annotations/NavigationBindings.js",
           "default": "highcharts-bindings-container"
@@ -27882,8 +27885,8 @@
         "meta": {
           "fullname": "navigation.events",
           "name": "events",
-          "line": 1074,
-          "lineEnd": 1082,
+          "line": 1087,
+          "lineEnd": 1095,
           "column": 8,
           "filename": "js/Extensions/Annotations/NavigationBindings.js"
         },
@@ -27900,8 +27903,8 @@
             },
             "meta": {
               "filename": "js/Extensions/Annotations/NavigationBindings.js",
-              "line": 1089,
-              "lineEnd": 1095
+              "line": 1102,
+              "lineEnd": 1108
             },
             "children": {}
           },
@@ -27930,8 +27933,8 @@
             },
             "meta": {
               "filename": "js/Extensions/Annotations/NavigationBindings.js",
-              "line": 1106,
-              "lineEnd": 1116
+              "line": 1119,
+              "lineEnd": 1129
             },
             "children": {}
           },
@@ -27960,8 +27963,8 @@
             },
             "meta": {
               "filename": "js/Extensions/Annotations/NavigationBindings.js",
-              "line": 1096,
-              "lineEnd": 1105
+              "line": 1109,
+              "lineEnd": 1118
             },
             "children": {}
           },
@@ -27977,8 +27980,8 @@
             },
             "meta": {
               "filename": "js/Extensions/Annotations/NavigationBindings.js",
-              "line": 1083,
-              "lineEnd": 1088
+              "line": 1096,
+              "lineEnd": 1101
             },
             "children": {}
           }
@@ -28000,8 +28003,8 @@
         },
         "meta": {
           "filename": "js/Extensions/Annotations/NavigationBindings.js",
-          "line": 1074,
-          "lineEnd": 1082
+          "line": 1087,
+          "lineEnd": 1095
         },
         "children": {}
       }
@@ -30370,11 +30373,11 @@
   },
   "plotOptions": {
     "meta": {
-      "filename": "js/Series/Variwide/VariwideSeries.js",
+      "filename": "js/Series/XRange/XRangeSeries.js",
       "name": "plotOptions",
       "fullname": "plotOptions",
-      "line": 183,
-      "lineEnd": 187,
+      "line": 414,
+      "lineEnd": 418,
       "column": 4
     },
     "doclet": {
@@ -45218,8 +45221,8 @@
             },
             "meta": {
               "filename": "js/Stock/Indicators/SMA/SMAIndicator.js",
-              "line": 247,
-              "lineEnd": 257
+              "line": 255,
+              "lineEnd": 265
             },
             "children": {}
           }
@@ -54803,7 +54806,7 @@
                   "description": "Options for the cluster data labels.",
                   "type": {
                     "names": [
-                      "*"
+                      "Highcharts.DataLabelsOptions"
                     ]
                   },
                   "since": "8.0.0"
@@ -55214,7 +55217,7 @@
                   ],
                   "type": {
                     "names": [
-                      "*"
+                      "Highcharts.PointMarkerOptionsObject"
                     ]
                   },
                   "since": "8.0.0"
@@ -64400,8 +64403,8 @@
           "filename": "js/Stock/Indicators/SMA/SMAIndicator.js",
           "name": "sma",
           "fullname": "plotOptions.sma",
-          "line": 247,
-          "lineEnd": 257,
+          "line": 255,
+          "lineEnd": 265,
           "column": 4
         },
         "children": {
@@ -64434,8 +64437,8 @@
             "meta": {
               "fullname": "plotOptions.sma.compareToMain",
               "name": "compareToMain",
-              "line": 297,
-              "lineEnd": 306,
+              "line": 305,
+              "lineEnd": 314,
               "column": 8,
               "filename": "js/Stock/Indicators/SMA/SMAIndicator.js",
               "default": false
@@ -64456,8 +64459,8 @@
             "meta": {
               "fullname": "plotOptions.sma.linkedTo",
               "name": "linkedTo",
-              "line": 290,
-              "lineEnd": 295,
+              "line": 298,
+              "lineEnd": 303,
               "column": 8,
               "filename": "js/Stock/Indicators/SMA/SMAIndicator.js",
               "default": "undefined"
@@ -64478,8 +64481,8 @@
             "meta": {
               "fullname": "plotOptions.sma.name",
               "name": "name",
-              "line": 276,
-              "lineEnd": 282,
+              "line": 284,
+              "lineEnd": 290,
               "column": 8,
               "filename": "js/Stock/Indicators/SMA/SMAIndicator.js",
               "default": "undefined"
@@ -64499,8 +64502,8 @@
             "meta": {
               "fullname": "plotOptions.sma.params",
               "name": "params",
-              "line": 308,
-              "lineEnd": 310,
+              "line": 316,
+              "lineEnd": 318,
               "column": 8,
               "filename": "js/Stock/Indicators/SMA/SMAIndicator.js"
             },
@@ -64519,8 +64522,8 @@
                 "meta": {
                   "fullname": "plotOptions.sma.params.index",
                   "name": "index",
-                  "line": 312,
-                  "lineEnd": 316,
+                  "line": 320,
+                  "lineEnd": 324,
                   "column": 12,
                   "filename": "js/Stock/Indicators/SMA/SMAIndicator.js",
                   "default": 3
@@ -64541,8 +64544,8 @@
                 "meta": {
                   "fullname": "plotOptions.sma.params.period",
                   "name": "period",
-                  "line": 318,
-                  "lineEnd": 322,
+                  "line": 326,
+                  "lineEnd": 330,
                   "column": 12,
                   "filename": "js/Stock/Indicators/SMA/SMAIndicator.js",
                   "default": 14
@@ -64562,8 +64565,8 @@
             "meta": {
               "fullname": "plotOptions.sma.tooltip",
               "name": "tooltip",
-              "line": 284,
-              "lineEnd": 284,
+              "line": 292,
+              "lineEnd": 292,
               "column": 8,
               "filename": "js/Stock/Indicators/SMA/SMAIndicator.js"
             },
@@ -64581,8 +64584,8 @@
                 "meta": {
                   "fullname": "plotOptions.sma.tooltip.valueDecimals",
                   "name": "valueDecimals",
-                  "line": 285,
-                  "lineEnd": 287,
+                  "line": 293,
+                  "lineEnd": 295,
                   "column": 12,
                   "filename": "js/Stock/Indicators/SMA/SMAIndicator.js",
                   "default": 4
@@ -75612,7 +75615,7 @@
             "children": {
               "dataLabels": {
                 "doclet": {
-                  "extends": "plotOptions.arearange.dataLabels",
+                  "extends": "series.arearange.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock"
@@ -77644,7 +77647,7 @@
             "children": {
               "dataLabels": {
                 "doclet": {
-                  "extends": "plotOptions.columnrange.dataLabels",
+                  "extends": "series.columnrange.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock"
@@ -80792,7 +80795,7 @@
                     }
                   ],
                   "declare": "Highcharts.DataLabelsOptions",
-                  "extends": "plotOptions.series.dataLabels",
+                  "extends": "plotOptions.line.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock",
@@ -81168,7 +81171,7 @@
       "lollipop": {
         "doclet": {
           "description": "The `lollipop` series. If the [type](#series.lollipop.type) option is\nnot specified, it is inherited from [chart.type](#chart.type).\n\nIn TypeScript the [type](series.lollipop.type) option must always be set.\n\nConfiguration options for the series are given in three levels:\n1. Options for all series in a chart are defined in the\n   [plotOptions.series](plotOptions.series) object.\n2. Options for all `lollipop` series are defined in\n   [plotOptions.lollipop](plotOptions.lollipop).\n3. Options for one single series are given in\n   [the series instance array](series.lollipop).\n\n```\nHighcharts.chart('container', {\n    plotOptions: {\n        series: {\n            // general options for all series\n        },\n        lollipop: {\n            // shared options for all lollipop series\n        }\n    },\n    series: [{\n        // specific options for this series instance\n        type: 'lollipop'\n    }]\n});\n```\n            ",
-          "extends": "series,plotOptions.lollipop",
+          "extends": "series,plotOptions.lollipop,",
           "exclude": [
             "boostThreshold",
             "boostBlending"
@@ -81408,8 +81411,8 @@
                 },
                 "meta": {
                   "filename": "js/Series/Map/MapSeries.js",
-                  "line": 1091,
-                  "lineEnd": 1097
+                  "line": 1094,
+                  "lineEnd": 1100
                 },
                 "children": {}
               },
@@ -81602,7 +81605,7 @@
               },
               "path": {
                 "doclet": {
-                  "description": "For map and mapline series types, the SVG path for the shape. For\ncompatibily with old IE, not all SVG path definitions are supported,\nbut M, L and C operators are safe.\n\nTo achieve a better separation between the structure and the data,\nit is recommended to use `mapData` to define that paths instead\nof defining them on the data points themselves.",
+                  "description": "For map and mapline series types, the SVG path for the shape. For\ncompatibily with old IE, not all SVG path definitions are supported,\nbut M, L and C operators are safe.\n\nTo achieve a better separation between the structure and the data,\nit is recommended to use `mapData` to define that paths instead\nof defining them on the data points themselves.\n\nFor providing true geographical shapes based on longitude and latitude, use\nthe `geometry` option instead.",
                   "sample": {
                     "value": "maps/series/data-path/\n        Paths defined in data"
                   },
@@ -81624,7 +81627,7 @@
                 "meta": {
                   "filename": "js/Series/Map/MapSeries.js",
                   "line": 1068,
-                  "lineEnd": 1083
+                  "lineEnd": 1086
                 },
                 "children": {}
               },
@@ -81643,8 +81646,8 @@
                 },
                 "meta": {
                   "filename": "js/Series/Map/MapSeries.js",
-                  "line": 1084,
-                  "lineEnd": 1090
+                  "line": 1087,
+                  "lineEnd": 1093
                 },
                 "children": {}
               }
@@ -81812,6 +81815,10 @@
                   "Array.<(number|Array.<string, (number|null)>|null|*)>"
                 ]
               },
+              "extends": "series.map.data",
+              "exclude": [
+                "drilldown"
+              ],
               "products": [
                 "highmaps"
               ]
@@ -81819,7 +81826,7 @@
             "meta": {
               "filename": "js/Series/MapLine/MapLineSeries.js",
               "line": 139,
-              "lineEnd": 182
+              "lineEnd": 184
             },
             "children": {}
           }
@@ -81839,13 +81846,13 @@
         },
         "meta": {
           "filename": "js/Series/MapPoint/MapPointSeries.js",
-          "line": 168,
-          "lineEnd": 177
+          "line": 169,
+          "lineEnd": 178
         },
         "children": {
           "data": {
             "doclet": {
-              "description": "An array of data points for the series. For the `mappoint` series\ntype, points can be given in the following ways:\n\n1. An array of numerical values. In this case, the numerical values will be\n   interpreted as `y` options. The `x` values will be automatically\n   calculated, either starting at 0 and incremented by 1, or from\n   `pointStart` and `pointInterval` given in the series options. If the axis\n   has categories, these will be used. Example:\n   ```js\n   data: [0, 5, 3, 5]\n   ```\n\n2. An array of arrays with 2 values. In this case, the values correspond to\n   `x,y`. If the first value is a string, it is applied as the name of the\n   point, and the `x` value is inferred.\n   ```js\n       data: [\n           [0, 1],\n           [1, 8],\n           [2, 7]\n       ]\n   ```\n\n3. An array of objects with named values. The following snippet shows only a\n   few settings, see the complete options set below. If the total number of\n   data points exceeds the series'\n   [turboThreshold](#series.mappoint.turboThreshold),\n   this option is not available.\n   ```js\n       data: [{\n           x: 1,\n           y: 7,\n           name: \"Point2\",\n           color: \"#00FF00\"\n       }, {\n           x: 1,\n           y: 4,\n           name: \"Point1\",\n           color: \"#FF00FF\"\n       }]\n   ```",
+              "description": "An array of data points for the series. For the `mappoint` series\ntype, points can be given in the following ways:\n\n1. An array of numerical values. In this case, the numerical values will be\n   interpreted as `y` options. The `x` values will be automatically\n   calculated, either starting at 0 and incremented by 1, or from\n   `pointStart` and `pointInterval` given in the series options. If the axis\n   has categories, these will be used. Example:\n   ```js\n   data: [0, 5, 3, 5]\n   ```\n\n2. An array of arrays with 2 values. In this case, the values correspond\nto `[hc-key, value]`. Example:\n\n ```js\n    data: [\n        ['us-ny', 0],\n        ['us-mi', 5],\n        ['us-tx', 3],\n        ['us-ak', 5]\n    ]\n ```\n\n3. An array of objects with named values. The following snippet shows only a\n   few settings, see the complete options set below. If the total number of\n   data points exceeds the series'\n   [turboThreshold](#series.mappoint.turboThreshold),\n   this option is not available.\n   ```js\n       data: [{\n           x: 1,\n           y: 7,\n           name: \"Point2\",\n           color: \"#00FF00\"\n       }, {\n           x: 1,\n           y: 4,\n           name: \"Point1\",\n           color: \"#FF00FF\"\n       }]\n   ```",
               "type": {
                 "names": [
                   "Array.<(number|Array.<number, (number|null)>|null|*)>"
@@ -81865,8 +81872,8 @@
             },
             "meta": {
               "filename": "js/Series/MapPoint/MapPointSeries.js",
-              "line": 178,
-              "lineEnd": 226
+              "line": 179,
+              "lineEnd": 228
             },
             "children": {
               "geometry": {
@@ -81893,8 +81900,8 @@
                 },
                 "meta": {
                   "filename": "js/Series/MapPoint/MapPointSeries.js",
-                  "line": 227,
-                  "lineEnd": 245
+                  "line": 229,
+                  "lineEnd": 247
                 },
                 "children": {
                   "coordinates": {
@@ -81912,8 +81919,8 @@
                     },
                     "meta": {
                       "filename": "js/Series/MapPoint/MapPointSeries.js",
-                      "line": 255,
-                      "lineEnd": 262
+                      "line": 257,
+                      "lineEnd": 264
                     },
                     "children": {}
                   },
@@ -81933,8 +81940,8 @@
                     },
                     "meta": {
                       "filename": "js/Series/MapPoint/MapPointSeries.js",
-                      "line": 246,
-                      "lineEnd": 254
+                      "line": 248,
+                      "lineEnd": 256
                     },
                     "children": {}
                   }
@@ -81970,8 +81977,8 @@
                 },
                 "meta": {
                   "filename": "js/Series/MapPoint/MapPointSeries.js",
-                  "line": 263,
-                  "lineEnd": 274
+                  "line": 265,
+                  "lineEnd": 276
                 },
                 "children": {}
               },
@@ -82005,8 +82012,8 @@
                 },
                 "meta": {
                   "filename": "js/Series/MapPoint/MapPointSeries.js",
-                  "line": 275,
-                  "lineEnd": 286
+                  "line": 277,
+                  "lineEnd": 288
                 },
                 "children": {}
               },
@@ -82039,8 +82046,8 @@
                 },
                 "meta": {
                   "filename": "js/Series/MapPoint/MapPointSeries.js",
-                  "line": 287,
-                  "lineEnd": 296
+                  "line": 289,
+                  "lineEnd": 298
                 },
                 "children": {}
               },
@@ -82074,8 +82081,8 @@
                 },
                 "meta": {
                   "filename": "js/Series/MapPoint/MapPointSeries.js",
-                  "line": 297,
-                  "lineEnd": 306
+                  "line": 299,
+                  "lineEnd": 308
                 },
                 "children": {}
               }
@@ -83146,7 +83153,7 @@
                 "doclet": {
                   "type": {
                     "names": [
-                      "*"
+                      "Highcharts.SeriesPieDataLabelsOptionsObject"
                     ]
                   },
                   "products": [
@@ -84404,8 +84411,8 @@
         },
         "meta": {
           "filename": "js/Stock/Indicators/SMA/SMAIndicator.js",
-          "line": 351,
-          "lineEnd": 361
+          "line": 357,
+          "lineEnd": 367
         },
         "children": {}
       },
@@ -85934,8 +85941,8 @@
         },
         "meta": {
           "filename": "js/Stock/Indicators/VBP/VBPIndicator.js",
-          "line": 545,
-          "lineEnd": 556
+          "line": 544,
+          "lineEnd": 555
         },
         "children": {}
       },
