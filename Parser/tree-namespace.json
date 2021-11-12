@@ -6,8 +6,8 @@
 	},
 	"meta": {
 		"branch": "master",
-		"commit": "fb2231ee7c",
-		"date": "Thu Oct 21 2021 11:29:43 GMT+0200 (sentraleuropeisk sommertid)",
+		"commit": "07ea76547b",
+		"date": "Fri Nov 05 2021 10:14:22 GMT+0100 (sentraleuropeisk normaltid)",
 		"files": [
 			{
 				"path": "code/highcharts.src.js",
@@ -490,7 +490,7 @@
 				"line": 0
 			}
 		],
-		"version": "9.3.0"
+		"version": "9.3.1"
 	},
 	"children": [
 		{
@@ -1331,7 +1331,7 @@
 						"files": [
 							{
 								"path": "code/modules/accessibility.src.js",
-								"line": 9746
+								"line": 9963
 							}
 						]
 					}
@@ -2977,7 +2977,7 @@
 									},
 									{
 										"path": "code/modules/stock.src.js",
-										"line": 3037
+										"line": 3033
 									}
 								]
 							}
@@ -3922,7 +3922,7 @@
 								"files": [
 									{
 										"path": "code/modules/stock.src.js",
-										"line": 1382
+										"line": 1378
 									}
 								]
 							}
@@ -3961,7 +3961,7 @@
 								"files": [
 									{
 										"path": "code/modules/stock.src.js",
-										"line": 1445
+										"line": 1441
 									}
 								]
 							}
@@ -4041,7 +4041,7 @@
 								"files": [
 									{
 										"path": "code/modules/stock.src.js",
-										"line": 3098
+										"line": 3094
 									}
 								]
 							}
@@ -5358,7 +5358,7 @@
 							},
 							{
 								"path": "code/modules/map.src.js",
-								"line": 5867
+								"line": 5955
 							}
 						]
 					},
@@ -5380,7 +5380,7 @@
 									},
 									{
 										"path": "code/modules/map.src.js",
-										"line": 5869
+										"line": 5957
 									}
 								]
 							}
@@ -5402,7 +5402,7 @@
 									},
 									{
 										"path": "code/modules/map.src.js",
-										"line": 5873
+										"line": 5961
 									}
 								]
 							}
@@ -5424,7 +5424,7 @@
 									},
 									{
 										"path": "code/modules/map.src.js",
-										"line": 5877
+										"line": 5965
 									}
 								]
 							}
@@ -5449,7 +5449,7 @@
 							},
 							{
 								"path": "code/modules/map.src.js",
-								"line": 7392
+								"line": 7480
 							}
 						]
 					}
@@ -6692,7 +6692,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9354
+										"line": 9442
 									}
 								]
 							}
@@ -6723,7 +6723,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9320
+										"line": 9408
 									}
 								]
 							}
@@ -8273,7 +8273,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9185
+										"line": 9273
 									}
 								]
 							}
@@ -8310,7 +8310,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9257
+										"line": 9345
 									}
 								]
 							}
@@ -10366,7 +10366,7 @@
 							},
 							{
 								"path": "code/modules/stock.src.js",
-								"line": 2345
+								"line": 2341
 							}
 						]
 					}
@@ -10392,7 +10392,7 @@
 							},
 							{
 								"path": "code/modules/stock.src.js",
-								"line": 2350
+								"line": 2346
 							}
 						]
 					}
@@ -10420,7 +10420,7 @@
 							},
 							{
 								"path": "code/modules/stock.src.js",
-								"line": 2342
+								"line": 2338
 							}
 						]
 					}
@@ -10439,7 +10439,7 @@
 							},
 							{
 								"path": "code/modules/stock.src.js",
-								"line": 2355
+								"line": 2351
 							}
 						]
 					},
@@ -10461,7 +10461,7 @@
 									},
 									{
 										"path": "code/modules/stock.src.js",
-										"line": 2357
+										"line": 2353
 									}
 								]
 							}
@@ -10484,7 +10484,7 @@
 									},
 									{
 										"path": "code/modules/stock.src.js",
-										"line": 2360
+										"line": 2356
 									}
 								]
 							}
@@ -10506,7 +10506,7 @@
 									},
 									{
 										"path": "code/modules/stock.src.js",
-										"line": 2363
+										"line": 2359
 									}
 								]
 							}
@@ -12202,7 +12202,7 @@
 						"files": [
 							{
 								"path": "code/modules/stock.src.js",
-								"line": 5692
+								"line": 5688
 							}
 						]
 					}
@@ -12517,7 +12517,7 @@
 						"files": [
 							{
 								"path": "code/modules/map.src.js",
-								"line": 9023
+								"line": 9111
 							}
 						]
 					},
@@ -12536,7 +12536,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9027
+										"line": 9115
 									}
 								]
 							}
@@ -12555,7 +12555,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9031
+										"line": 9119
 									}
 								]
 							}
@@ -12574,7 +12574,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9035
+										"line": 9123
 									}
 								]
 							}
@@ -12592,7 +12592,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9039
+										"line": 9127
 									}
 								]
 							}
@@ -12611,7 +12611,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9043
+										"line": 9131
 									}
 								]
 							}
@@ -12630,7 +12630,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9052
+										"line": 9140
 									}
 								]
 							}
@@ -12649,7 +12649,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9056
+										"line": 9144
 									}
 								]
 							}
@@ -12668,7 +12668,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9061
+										"line": 9149
 									}
 								]
 							}
@@ -12688,7 +12688,7 @@
 						"files": [
 							{
 								"path": "code/modules/map.src.js",
-								"line": 9066
+								"line": 9154
 							}
 						]
 					},
@@ -12706,7 +12706,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9070
+										"line": 9158
 									}
 								]
 							}
@@ -12723,7 +12723,7 @@
 						"files": [
 							{
 								"path": "code/modules/map.src.js",
-								"line": 9075
+								"line": 9163
 							}
 						]
 					},
@@ -12741,7 +12741,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9079
+										"line": 9167
 									}
 								]
 							}
@@ -12760,7 +12760,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9083
+										"line": 9171
 									}
 								]
 							}
@@ -12779,7 +12779,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9088
+										"line": 9176
 									}
 								]
 							}
@@ -12798,7 +12798,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9092
+										"line": 9180
 									}
 								]
 							}
@@ -12817,7 +12817,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9096
+										"line": 9184
 									}
 								]
 							}
@@ -12836,7 +12836,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9100
+										"line": 9188
 									}
 								]
 							}
@@ -12855,7 +12855,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9106
+										"line": 9194
 									}
 								]
 							}
@@ -12874,7 +12874,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9110
+										"line": 9198
 									}
 								]
 							}
@@ -12893,7 +12893,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9114
+										"line": 9202
 									}
 								]
 							}
@@ -12912,7 +12912,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9118
+										"line": 9206
 									}
 								]
 							}
@@ -12931,7 +12931,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9122
+										"line": 9210
 									}
 								]
 							}
@@ -14152,7 +14152,7 @@
 						"files": [
 							{
 								"path": "code/modules/map.src.js",
-								"line": 9153
+								"line": 9241
 							}
 						]
 					}
@@ -14170,7 +14170,7 @@
 						"files": [
 							{
 								"path": "code/modules/map.src.js",
-								"line": 3546
+								"line": 3627
 							}
 						]
 					},
@@ -14209,7 +14209,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 3560
+										"line": 3641
 									}
 								]
 							}
@@ -14226,7 +14226,7 @@
 						"files": [
 							{
 								"path": "code/modules/map.src.js",
-								"line": 9127
+								"line": 9215
 							}
 						]
 					},
@@ -14244,7 +14244,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9131
+										"line": 9219
 									}
 								]
 							}
@@ -14263,7 +14263,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9135
+										"line": 9223
 									}
 								]
 							}
@@ -14280,7 +14280,7 @@
 						"files": [
 							{
 								"path": "code/modules/map.src.js",
-								"line": 9140
+								"line": 9228
 							}
 						]
 					},
@@ -14298,7 +14298,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9144
+										"line": 9232
 									}
 								]
 							}
@@ -14316,7 +14316,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9148
+										"line": 9236
 									}
 								]
 							}
@@ -14333,7 +14333,7 @@
 						"files": [
 							{
 								"path": "code/modules/map.src.js",
-								"line": 2995
+								"line": 3076
 							}
 						]
 					},
@@ -14352,7 +14352,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 3016
+										"line": 3097
 									}
 								]
 							}
@@ -14437,7 +14437,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 3140
+										"line": 3221
 									}
 								]
 							}
@@ -14466,7 +14466,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 3317
+										"line": 3398
 									}
 								]
 							}
@@ -14495,7 +14495,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 3300
+										"line": 3381
 									}
 								]
 							}
@@ -14545,7 +14545,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 3206
+										"line": 3287
 									}
 								]
 							}
@@ -14588,7 +14588,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 3336
+										"line": 3417
 									}
 								]
 							}
@@ -14607,7 +14607,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 3025
+										"line": 3106
 									}
 								]
 							}
@@ -14659,7 +14659,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 3376
+										"line": 3457
 									}
 								]
 							}
@@ -16002,7 +16002,7 @@
 									},
 									{
 										"path": "code/modules/map.src.js",
-										"line": 8647
+										"line": 8735
 									}
 								]
 							}
@@ -16020,7 +16020,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 9456
+										"line": 9544
 									}
 								]
 							}
@@ -16386,7 +16386,7 @@
 									},
 									{
 										"path": "code/modules/map.src.js",
-										"line": 8652
+										"line": 8740
 									}
 								]
 							}
@@ -16485,7 +16485,7 @@
 								"files": [
 									{
 										"path": "code/modules/map.src.js",
-										"line": 3808
+										"line": 3889
 									}
 								]
 							}
@@ -16502,7 +16502,7 @@
 						"files": [
 							{
 								"path": "code/modules/accessibility.src.js",
-								"line": 9770
+								"line": 9987
 							}
 						]
 					},
@@ -16521,7 +16521,7 @@
 								"files": [
 									{
 										"path": "code/modules/accessibility.src.js",
-										"line": 9772
+										"line": 9989
 									}
 								]
 							}
@@ -16540,7 +16540,7 @@
 								"files": [
 									{
 										"path": "code/modules/accessibility.src.js",
-										"line": 9778
+										"line": 9995
 									}
 								]
 							}
@@ -17963,7 +17963,7 @@
 								"files": [
 									{
 										"path": "code/modules/accessibility.src.js",
-										"line": 9787
+										"line": 10004
 									}
 								]
 							}
@@ -17986,7 +17986,7 @@
 									},
 									{
 										"path": "code/modules/map.src.js",
-										"line": 8660
+										"line": 8748
 									}
 								]
 							}
@@ -18010,7 +18010,7 @@
 									},
 									{
 										"path": "code/modules/map.src.js",
-										"line": 8664
+										"line": 8752
 									}
 								]
 							}
@@ -19029,7 +19029,7 @@
 						"files": [
 							{
 								"path": "code/modules/accessibility.src.js",
-								"line": 5246
+								"line": 5374
 							},
 							{
 								"path": "code/modules/gantt.src.js",
@@ -19037,7 +19037,7 @@
 							},
 							{
 								"path": "code/modules/stock.src.js",
-								"line": 9191
+								"line": 9187
 							}
 						]
 					}
@@ -19075,7 +19075,7 @@
 						"files": [
 							{
 								"path": "code/modules/accessibility.src.js",
-								"line": 5251
+								"line": 5379
 							},
 							{
 								"path": "code/modules/gantt.src.js",
@@ -19083,7 +19083,7 @@
 							},
 							{
 								"path": "code/modules/stock.src.js",
-								"line": 9196
+								"line": 9192
 							}
 						]
 					}
@@ -19115,7 +19115,7 @@
 						"files": [
 							{
 								"path": "code/modules/accessibility.src.js",
-								"line": 5262
+								"line": 5390
 							},
 							{
 								"path": "code/modules/gantt.src.js",
@@ -19123,7 +19123,7 @@
 							},
 							{
 								"path": "code/modules/stock.src.js",
-								"line": 9207
+								"line": 9203
 							}
 						]
 					}
@@ -19246,7 +19246,7 @@
 						"files": [
 							{
 								"path": "code/modules/stock.src.js",
-								"line": 5109
+								"line": 5105
 							}
 						]
 					}
@@ -22076,7 +22076,7 @@
 						"files": [
 							{
 								"path": "code/modules/accessibility.src.js",
-								"line": 9793
+								"line": 10010
 							}
 						]
 					}
@@ -22108,7 +22108,7 @@
 						"files": [
 							{
 								"path": "code/modules/accessibility.src.js",
-								"line": 9801
+								"line": 10018
 							}
 						]
 					}
@@ -23204,7 +23204,7 @@
 								"files": [
 									{
 										"path": "code/modules/stock.src.js",
-										"line": 1314
+										"line": 1310
 									}
 								]
 							}
@@ -23240,7 +23240,7 @@
 								"files": [
 									{
 										"path": "code/modules/stock.src.js",
-										"line": 1410
+										"line": 1406
 									}
 								]
 							}
@@ -25422,7 +25422,7 @@
 						"files": [
 							{
 								"path": "code/modules/stock.src.js",
-								"line": 11607
+								"line": 11603
 							}
 						]
 					},
@@ -25461,7 +25461,7 @@
 								"files": [
 									{
 										"path": "code/modules/stock.src.js",
-										"line": 11621
+										"line": 11617
 									}
 								]
 							}
@@ -28159,7 +28159,7 @@
 							},
 							{
 								"path": "code/modules/map.src.js",
-								"line": 6435
+								"line": 6523
 							}
 						]
 					}
@@ -28539,7 +28539,7 @@
 						"files": [
 							{
 								"path": "code/modules/accessibility.src.js",
-								"line": 10996
+								"line": 11213
 							}
 						]
 					}
@@ -28567,7 +28567,7 @@
 						"files": [
 							{
 								"path": "code/modules/accessibility.src.js",
-								"line": 4329
+								"line": 4457
 							}
 						]
 					}
@@ -29162,7 +29162,7 @@
 						"files": [
 							{
 								"path": "code/modules/map.src.js",
-								"line": 9394
+								"line": 9482
 							}
 						]
 					}
@@ -30174,7 +30174,7 @@
 						"files": [
 							{
 								"path": "code/modules/map.src.js",
-								"line": 3619
+								"line": 3700
 							}
 						]
 					}
@@ -30193,7 +30193,7 @@
 						"files": [
 							{
 								"path": "code/modules/map.src.js",
-								"line": 3610
+								"line": 3691
 							}
 						]
 					}
@@ -30602,7 +30602,7 @@
 							},
 							{
 								"path": "code/modules/map.src.js",
-								"line": 6620
+								"line": 6708
 							}
 						]
 					}
@@ -31203,7 +31203,7 @@
 						"files": [
 							{
 								"path": "code/modules/map.src.js",
-								"line": 3652
+								"line": 3733
 							}
 						]
 					}
@@ -31283,7 +31283,7 @@
 						"files": [
 							{
 								"path": "code/modules/stock.src.js",
-								"line": 11728
+								"line": 11724
 							}
 						]
 					}
@@ -31393,7 +31393,7 @@
 						"files": [
 							{
 								"path": "code/modules/stock.src.js",
-								"line": 6265
+								"line": 6261
 							}
 						]
 					}
@@ -31537,14 +31537,14 @@
 				{
 					"doclet": {
 						"name": "Highcharts.worldSize",
-						"description": "The world size equals meters in the Web Mercator projection, to match a\n256 square tile to zoom level 0",
+						"description": "The world size in terms of 10k meters in the Web Mercator projection, to\nmatch a 256 square tile to zoom level 0",
 						"kind": "member"
 					},
 					"meta": {
 						"files": [
 							{
 								"path": "code/modules/map.src.js",
-								"line": 2993
+								"line": 3074
 							}
 						]
 					}
