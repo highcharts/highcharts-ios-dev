@@ -6,6 +6,7 @@ html {
 }
 
 body {
+  background: #fff;
   margin: 0
 }
 
@@ -389,16 +390,16 @@ td>:last-child {
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2;
-  background: #414141;
+  background: #46465c;
   color: #fff;
   font-size: 1.35em;
+  left: 0;
+  letter-spacing: .05em;
   line-height: 25px;
-  letter-spacing: .05em
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
 }
 
 header #library-title {
@@ -548,7 +549,7 @@ article #content .title {
 }
 
 article #content p {
-  color: #414141;
+  color: #46465c;
   margin: 0 0 15px 0
 }
 
@@ -570,7 +571,7 @@ article #content main ul li {
 
 article #content main ul li:before {
 /*  content: "\02022";*/
-  color: #414141;
+  color: #46465c;
   font-size: 1.08em;
   line-height: 1;
   position: absolute;
@@ -593,7 +594,7 @@ article #content footer .footer-copyright {
 /*article .footerMain, article #content .footerMain {
   padding: 10px 0;
   width: 100%;
-  background: #373648;
+  background: #2f2b38;
   color: #eeeaea;
   display: inline-block;
   text-align: center;
@@ -615,7 +616,7 @@ article .footerMain a {
 }
 
 article .footerMain a:hover {
-  color: #90ee7e;
+  color: #a3edba;
 }
 
 article .footer-social {
@@ -626,7 +627,7 @@ article .footer-social {
  .footerMain{
   padding: 10px 0;
   width: 100%;
-  background: #373648;
+  background: #2f2b38;
   color: #eeeaea;
   display: inline-block;
   text-align: center;
@@ -648,7 +649,7 @@ article .footer-social {
 }
 
  .footerMain a:hover {
-  color: #90ee7e;
+  color: #a3edba;
 }
 
  .footer-social {
@@ -824,17 +825,13 @@ article #content .title {
   overflow: hidden;
 }
 
-.headerMain a {
-  color: #eeeaea;
-  font-weight: 300;
-}
-
 .headerMain .row a:hover {
-  color: #90ee7e;
+  color: #a3edba;
 }
 
 .headerMain .row-1 {
   background: #47475C;
+  box-sizing: content-box;
   height: 50px;
 }
 
@@ -861,9 +858,8 @@ article #content .title {
 
 #highcharts-logo a {
   display: inline-block;
-  height: 50px;
+  height: 44px;
   width: auto;
-  margin: 0 -20px;
 }
 
 #highcharts-logo img {
@@ -877,19 +873,20 @@ article #content .title {
 }
 
 .headerMain .row-2 {
-  height: 37px;
-  background: #373648;
+  background: #2f2b38;
+  color: #fff;
+  height: 44px;
+  overflow: hidden;
 }
 
 .headerMain .row-2 .menu {
-  height: 37px;
-  line-height: 37px;
   float: left;
-  padding: 0 1em;
 }
 
-.headerMain .row-2 .menu a.dropdown-link {
-  padding: 0 15px;
+.headerMain .row-2 .menu a {
+  display: inline-block;
+  line-height: 2em;
+  padding: 8px 16px;
 }
 
 /* .headerMain .row-2 .menu#product-selector {
@@ -922,13 +919,14 @@ article #content .title {
 }
 
 .dropdown-menu ul {
-  display: inline-block;
-  margin: -1px 2px 2px -1px;
-  padding: 5px 0;
-  background: #373648;
+  background: #2f2b38;
   border: 1px solid rgba(0, 0, 0, .15);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  display: inline-block;
   font-size: 14px;
+  margin: -1px 2px 2px -1px;
   min-width: 100px;
+  padding: 5px 0;
   text-align: left;
 }
 
@@ -950,7 +948,7 @@ article #content .title {
 }
 
 .dropdown-menu li.highlighted a:hover {
-  color: #90ee7e;
+  color: #a3edba;
 }
 
 .dropdown-menu li.highlighted a, .dropdown-menu li a:hover {
@@ -1038,8 +1036,10 @@ article #content .title {
         left: 0 !important;
         width: 100% !important;
     }*/
-  .headerMain .row {
-    padding: 0 15px;
+  .headerMain .row-1 {
+    height: 60px;
+    line-height: 60px;
+    padding: 4px 17px;
   }
   #highcharts-logo {
     width: 25%;
@@ -1048,7 +1048,7 @@ article #content .title {
     margin: 0;
   }
   #highcharts-logo img {
-    height: 130%;
+    max-height: 60px;
   }
   #page-title {
     width: 50%;
@@ -1062,8 +1062,8 @@ article #content .title {
     padding: 0;
     margin-right: 0;
     margin-left: -1px;
-    /* Couteract border 
   }
+    /* Couteract border 
   .navigation {
     width: 30%;
   }
@@ -1088,11 +1088,9 @@ article #content .title {
 
 
 #page-title h1 {
-  color: #eeeaea;
   margin: 0;
-  font-weight: 300;
-  font-size: 20px;
-  padding: 2px 15px 0 15px;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 /*
