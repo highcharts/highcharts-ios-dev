@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
 /**
  *  Plugin Class Required to export functionality.
  */
-@interface HIGExport : NSObject
+@interface HIGExport : NSObject <WKDownloadDelegate>
 
 /**
  *  Parse objects from JS and create objective-c representations.

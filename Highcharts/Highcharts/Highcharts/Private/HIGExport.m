@@ -9,7 +9,7 @@
 #import "HIGExport.h"
 
 @interface HIGExport ()
-
+@property (nonatomic, strong) NSURL *downloadURL;
 @end
 
 @implementation HIGExport
@@ -46,8 +46,7 @@
     }
 
     if(!isWrite) {
-        NSLog(@"Error writing file at %@\n%@", filePath, [error localizedFailureReason]);
-        return;
+      return;
     }
 
     [self action:@[[NSURL fileURLWithPath:filePath]]];
@@ -67,6 +66,43 @@
     }
     
     [self.viewController presentViewController:activityViewController animated:YES completion:nil];
+}
+
+- (void)clearTmpDirectory {
+    NSArray* tmpDirectory = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:NSTemporaryDirectory() error:NULL];
+  
+    for (NSString *file in tmpDirectory) {
+      NSError *error = nil;
+      [[NSFileManager defaultManager] removeItemAtPath:[NSTemporaryDirectory() stringByAppendingPathComponent:file] error:&error];
+    }
+}
+
+#pragma mark - WKDownloadDelegate
+
+- (void)download:(WKDownload *)download decideDestinationUsingResponse:(NSURLResponse *)response suggestedFilename:(NSString *)suggestedFilename completionHandler:(void (^)(NSURL * _Nullable))completionHandler  API_AVAILABLE(ios(15.0)) {
+  self.downloadURL = nil;
+  [self clearTmpDirectory];
+  
+  NSURL *url = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:suggestedFilename]];
+  
+  self.downloadURL = url;
+  
+  completionHandler(url);
+}
+
+- (void)downloadDidFinish:(WKDownload *)download  API_AVAILABLE(ios(15.0)) {
+  if (!self.downloadURL) {
+    return;
+  }
+  
+  UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[self.downloadURL] applicationActivities:nil];
+    
+  if ([activityViewController respondsToSelector:@selector(popoverPresentationController)]) {
+      activityViewController.popoverPresentationController.sourceView = self.viewController.view;
+      activityViewController.popoverPresentationController.sourceRect = CGRectMake(self.viewController.view.center.x, self.viewController.view.center.x , 0, 0);
+  }
+  
+  [self.viewController presentViewController:activityViewController animated:YES completion:nil];
 }
 
 @end
