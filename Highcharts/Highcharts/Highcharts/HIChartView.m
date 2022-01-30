@@ -26,6 +26,7 @@
 @property (nonatomic, weak) NSTimer *reloadTimer;
 @property (nonatomic, strong) NSMutableDictionary *closures;
 @property (nonatomic, strong) NSArray *additionalPlugins;
+@property (nonatomic, strong) HIGExport *export;
 @end
 
 static BOOL preloaded = NO;
@@ -98,6 +99,7 @@ static NSBundle *highchartsBundle = nil;
     WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
     configuration.userContentController = controller;
     
+    self.export = [[HIGExport alloc] init];
     self.closures = [[NSMutableDictionary alloc] init];
     self.webView = [[_synced boolValue] ? [HIWKSyncedWebView alloc] : [WKWebView alloc] initWithFrame:frame configuration:configuration];
     self.webView.scrollView.scrollEnabled = NO;
@@ -362,8 +364,26 @@ static NSBundle *highchartsBundle = nil;
 
 #pragma mark - WKWebViewDelegate
 
-- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
-{
+- (void)webView:(WKWebView *)webView navigationResponse:(WKNavigationResponse *)navigationResponse didBecomeDownload:(WKDownload *)download  API_AVAILABLE(ios(15.0)) {
+  self.export.viewController = self.viewController;
+  download.delegate = self.export;
+}
+
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction preferences:(WKWebpagePreferences *)preferences decisionHandler:(void (^)(WKNavigationActionPolicy, WKWebpagePreferences * _Nonnull))decisionHandler  API_AVAILABLE(ios(13.0)) {
+  
+  if (@available(iOS 15.0, *)) {
+    if (navigationAction.shouldPerformDownload) {
+      decisionHandler(WKNavigationActionPolicyDownload, preferences);
+    } else {
+      decisionHandler(WKNavigationActionPolicyAllow, preferences);
+    }
+  } else {
+    decisionHandler(WKNavigationActionPolicyAllow, preferences);
+  }
+}
+
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    
     NSURL *url = navigationAction.request.URL;
     
     // Open taped link in external browser.
@@ -386,6 +406,14 @@ static NSBundle *highchartsBundle = nil;
     }
     
     decisionHandler(WKNavigationActionPolicyAllow);
+}
+
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
+    if (@available(iOS 15.0, *)) {
+      decisionHandler(WKNavigationResponsePolicyDownload);
+    } else {
+      decisionHandler(WKNavigationResponsePolicyAllow);
+    }
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
