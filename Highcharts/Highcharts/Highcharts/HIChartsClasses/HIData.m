@@ -75,11 +75,11 @@
 	copyData.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyData.connectorColor = [self.connectorColor copyWithZone: zone];
 	copyData.connectorWidth = [self.connectorWidth copyWithZone: zone];
-	copyData.sliced = [self.sliced copyWithZone: zone];
 	copyData.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyData.value = [self.value copyWithZone: zone];
 	copyData.isIntermediateSum = [self.isIntermediateSum copyWithZone: zone];
 	copyData.isSum = [self.isSum copyWithZone: zone];
+	copyData.sliced = [self.sliced copyWithZone: zone];
 	copyData.to = [self.to copyWithZone: zone];
 	copyData.from = [self.from copyWithZone: zone];
 	copyData.gradientForSides = [self.gradientForSides copyWithZone: zone];
@@ -322,9 +322,6 @@
 	if (self.connectorWidth) {
 		params[@"connectorWidth"] = self.connectorWidth;
 	}
-	if (self.sliced) {
-		params[@"sliced"] = self.sliced;
-	}
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
 	}
@@ -336,6 +333,9 @@
 	}
 	if (self.isSum) {
 		params[@"isSum"] = self.isSum;
+	}
+	if (self.sliced) {
+		params[@"sliced"] = self.sliced;
 	}
 	if (self.to) {
 		params[@"to"] = self.to;
@@ -783,12 +783,6 @@
 	[self updateNSObject:oldValue newValue:connectorWidth propertyName:@"connectorWidth"];
 }
 
--(void)setSliced:(NSNumber *)sliced {
-	NSNumber *oldValue = _sliced;
-	_sliced = sliced;
-	[self updateNSObject:oldValue newValue:sliced propertyName:@"sliced"];
-}
-
 -(void)setPointPadding:(NSNumber *)pointPadding {
 	NSNumber *oldValue = _pointPadding;
 	_pointPadding = pointPadding;
@@ -811,6 +805,12 @@
 	NSNumber *oldValue = _isSum;
 	_isSum = isSum;
 	[self updateNSObject:oldValue newValue:isSum propertyName:@"isSum"];
+}
+
+-(void)setSliced:(NSNumber *)sliced {
+	NSNumber *oldValue = _sliced;
+	_sliced = sliced;
+	[self updateNSObject:oldValue newValue:sliced propertyName:@"sliced"];
 }
 
 -(void)setTo:(NSString *)to {
