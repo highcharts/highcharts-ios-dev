@@ -16,7 +16,7 @@
 #import "HIParallelAxes.h"
 #import "HIFront.h"
 #import "HIDragHandle.h"
-#import "HIReverse-arrow.h"
+#import "HIReverseArrow.h"
 #import "HIOrganization.h"
 #import "HIActiveDataLabelStyle.h"
 #import "HIMinute.h"
