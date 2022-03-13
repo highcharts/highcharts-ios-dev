@@ -77,6 +77,8 @@
 		
 		<option value="//api/name/enabled">enabled</option>
 		
+		<option value="//api/name/pixelRatio">pixelRatio</option>
+		
 		<option value="//api/name/seriesThreshold">seriesThreshold</option>
 		
 		<option value="//api/name/useGPUTranslations">useGPUTranslations</option>
@@ -188,6 +190,60 @@
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>true</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIBoost.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pixelRatio" title="pixelRatio"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pixelRatio">&nbsp;&nbsp;pixelRatio</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The pixel ratio for the WebGL content. If 0, the <code>window.devicePixelRatio</code> is used. This ensures sharp graphics on high DPI displays like Apple&rsquo;s Retina, as well as when a page is zoomed. The default is left at 1 for now, as this is a new feature that has the potential to break existing setups. Over time, when it has been battle tested, the intention is to set it to 0 by default. Another use case for this option is to set it to 2 in order to make exported and upscaled charts render sharp. One limitation when using the <code>pixelRatio</code> is that the line width of graphs is scaled down. Since the Boost module currently can only render 1px line widths, it is scaled down to a thin 0.5 pixels on a Retina display.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pixelRatio</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>1</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line-devicepixelratio">Enable the <code>devicePixelRatio</code></a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/boost/line-export-pixelratio">Sharper graphics in export</a></li>
+</ul>
+
 			</div>
 			
 

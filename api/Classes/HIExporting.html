@@ -99,6 +99,8 @@
 		
 		<option value="//api/name/menuItemDefinitions">menuItemDefinitions</option>
 		
+		<option value="//api/name/pdfFont">pdfFont</option>
+		
 		<option value="//api/name/printMaxWidth">printMaxWidth</option>
 		
 		<option value="//api/name/scale">scale</option>
@@ -1130,6 +1132,57 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/pdfFont" title="pdfFont"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pdfFont">&nbsp;&nbsp;pdfFont</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Settings for a custom font for the exported PDF, when using the <code>offline-exporting</code> module. This is used for languages containing non-ASCII characters, like Chinese, Russian, Japanese etc. As described in the <a href="https://github.com/parallax/jsPDF#use-of-unicode-characters--utf-8">jsPDF docs</a>, the 14 standard fonts in PDF are limited to the ASCII-codepage. Therefore, in order to support other text in the exported PDF, one or more TTF font files have to be passed on to the exporting module. See more in <a href="https://www.highcharts.com/docs/export-module/client-side-export">the docs</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPdfFont *pdfFont</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/offline-download-pdffont/">Download PDF in a language containing non-Latin characters.</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIExporting.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/chartOptions" title="chartOptions"></a>
 	<h3 class="method-title"><code><a href="#//api/name/chartOptions">&nbsp;&nbsp;chartOptions</a></code>
 </h3>
@@ -1233,7 +1286,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Path where Highcharts will look for export module dependencies to load on demand if they don&rsquo;t already exist on <code>window</code>. Should currently point to location of <a href="https://github.com/canvg/canvg">CanVG</a> library, <a href="https://github.com/yWorks/jsPDF">jsPDF</a> and <a href="https://github.com/yWorks/svg2pdf.js">svg2pdf.js</a>, required for client side export in certain browsers.</p>
+				<p>Path where Highcharts will look for export module dependencies to load on demand if they don&rsquo;t already exist on <code>window</code>. Should currently point to location of <a href="https://github.com/canvg/canvg">CanVG</a> library, <a href="https://github.com/parallax/jsPDF">jsPDF</a> and <a href="https://github.com/yWorks/svg2pdf.js">svg2pdf.js</a>, required for client side export in certain browsers.</p>
 			</div>
 			
 		    
@@ -1327,7 +1380,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2021 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2022 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>
