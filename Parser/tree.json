@@ -3225,9 +3225,7 @@
               "declare": "Highcharts.AnnotationMockPointOptionsObject",
               "type": {
                 "names": [
-                  "string",
-                  "Highcharts.AnnotationMockPointOptionsObject",
-                  "Highcharts.AnnotationMockPointFunction"
+                  "Highcharts.AnnotationMockPointOptionsObject"
                 ]
               },
               "requires": [
@@ -4454,9 +4452,7 @@
               "declare": "Highcharts.AnnotationMockPointOptionsObject",
               "type": {
                 "names": [
-                  "string",
-                  "Highcharts.AnnotationMockPointOptionsObject",
-                  "Highcharts.AnnotationMockPointFunction"
+                  "Highcharts.AnnotationMockPointOptionsObject"
                 ]
               },
               "extends": "annotations.labels.point",
@@ -27039,7 +27035,7 @@
           ],
           "type": {
             "names": [
-              "Highcharts.AnnotationsOptions"
+              "*"
             ]
           },
           "extends": "annotations",
@@ -32602,7 +32598,6 @@
               "linkTextPath": {
                 "doclet": {
                   "description": "Options for a _link_ label text which should follow link\nconnection. Border and background are disabled for a label that\nfollows a path.\n\n**Note:** Only SVG-based renderer supports this option. Setting\n`useHTML` to true will disable this option.",
-                  "extends": "plotOptions.arcdiagram.dataLabels.linkTextPath",
                   "since": "10.0.0"
                 },
                 "meta": {
@@ -56523,7 +56518,7 @@
                   "description": "Options for the cluster data labels.",
                   "type": {
                     "names": [
-                      "Highcharts.DataLabelsOptions"
+                      "*"
                     ]
                   },
                   "since": "8.0.0"
@@ -56934,7 +56929,7 @@
                   ],
                   "type": {
                     "names": [
-                      "Highcharts.PointMarkerOptionsObject"
+                      "*"
                     ]
                   },
                   "since": "8.0.0"
@@ -77274,7 +77269,7 @@
             "children": {
               "dataLabels": {
                 "doclet": {
-                  "extends": "series.arearange.dataLabels",
+                  "extends": "plotOptions.arearange.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock"
@@ -79306,7 +79301,7 @@
             "children": {
               "dataLabels": {
                 "doclet": {
-                  "extends": "series.columnrange.dataLabels",
+                  "extends": "plotOptions.columnrange.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock"
@@ -82449,7 +82444,7 @@
                     }
                   ],
                   "declare": "Highcharts.DataLabelsOptions",
-                  "extends": "plotOptions.line.dataLabels",
+                  "extends": "plotOptions.series.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock",
@@ -84831,7 +84826,7 @@
                 "doclet": {
                   "type": {
                     "names": [
-                      "Highcharts.SeriesPieDataLabelsOptionsObject"
+                      "*"
                     ]
                   },
                   "products": [
