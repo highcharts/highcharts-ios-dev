@@ -13,8 +13,8 @@
 	copyStyle.transition = [self.transition copyWithZone: zone];
 	copyStyle.fontWeight = [self.fontWeight copyWithZone: zone];
 	copyStyle.fontSize = [self.fontSize copyWithZone: zone];
-	copyStyle.textOutline = [self.textOutline copyWithZone: zone];
 	copyStyle.color = [self.color copyWithZone: zone];
+	copyStyle.textOutline = [self.textOutline copyWithZone: zone];
 	copyStyle.cursor = [self.cursor copyWithZone: zone];
 	copyStyle.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyStyle.lineWidth = [self.lineWidth copyWithZone: zone];
@@ -35,11 +35,11 @@
 	if (self.fontSize) {
 		params[@"fontSize"] = self.fontSize;
 	}
-	if (self.textOutline) {
-		params[@"textOutline"] = self.textOutline;
-	}
 	if (self.color) {
 		params[@"color"] = self.color;
+	}
+	if (self.textOutline) {
+		params[@"textOutline"] = self.textOutline;
 	}
 	if (self.cursor) {
 		params[@"cursor"] = self.cursor;
@@ -79,16 +79,16 @@
 	[self updateNSObject:oldValue newValue:fontSize propertyName:@"fontSize"];
 }
 
--(void)setTextOutline:(NSString *)textOutline {
-	NSString *oldValue = _textOutline;
-	_textOutline = textOutline;
-	[self updateNSObject:oldValue newValue:textOutline propertyName:@"textOutline"];
-}
-
 -(void)setColor:(NSString *)color {
 	NSString *oldValue = _color;
 	_color = color;
 	[self updateNSObject:oldValue newValue:color propertyName:@"color"];
+}
+
+-(void)setTextOutline:(NSString *)textOutline {
+	NSString *oldValue = _textOutline;
+	_textOutline = textOutline;
+	[self updateNSObject:oldValue newValue:textOutline propertyName:@"textOutline"];
 }
 
 -(void)setCursor:(NSString *)cursor {

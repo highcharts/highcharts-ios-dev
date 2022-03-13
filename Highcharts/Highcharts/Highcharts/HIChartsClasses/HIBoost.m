@@ -11,6 +11,7 @@
 	[super copyWithZone:zone];
 	HIBoost *copyBoost = [[HIBoost allocWithZone: zone] init];
 	copyBoost.allowForce = [self.allowForce copyWithZone: zone];
+	copyBoost.pixelRatio = [self.pixelRatio copyWithZone: zone];
 	copyBoost.enabled = [self.enabled copyWithZone: zone];
 	copyBoost.seriesThreshold = [self.seriesThreshold copyWithZone: zone];
 	copyBoost.usePreallocated = [self.usePreallocated copyWithZone: zone];
@@ -24,6 +25,9 @@
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.allowForce) {
 		params[@"allowForce"] = self.allowForce;
+	}
+	if (self.pixelRatio) {
+		params[@"pixelRatio"] = self.pixelRatio;
 	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
@@ -49,6 +53,12 @@
 	NSNumber *oldValue = _allowForce;
 	_allowForce = allowForce;
 	[self updateNSObject:oldValue newValue:allowForce propertyName:@"allowForce"];
+}
+
+-(void)setPixelRatio:(NSNumber *)pixelRatio {
+	NSNumber *oldValue = _pixelRatio;
+	_pixelRatio = pixelRatio;
+	[self updateNSObject:oldValue newValue:pixelRatio propertyName:@"pixelRatio"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {

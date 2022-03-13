@@ -27,8 +27,10 @@
 	copyOrganization.yAxis = [self.yAxis copyWithZone: zone];
 	copyOrganization.zIndex = [self.zIndex copyWithZone: zone];
 	copyOrganization.borderColor = [self.borderColor copyWithZone: zone];
-	copyOrganization.nodeWidth = [self.nodeWidth copyWithZone: zone];
+	copyOrganization.minNodeLength = [self.minNodeLength copyWithZone: zone];
 	copyOrganization.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyOrganization.hangingIndentTranslation = [self.hangingIndentTranslation copyWithZone: zone];
+	copyOrganization.nodeWidth = [self.nodeWidth copyWithZone: zone];
 	copyOrganization.tooltip = [self.tooltip copyWithZone: zone];
 	copyOrganization.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyOrganization.linkRadius = [self.linkRadius copyWithZone: zone];
@@ -93,11 +95,17 @@
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
-	if (self.nodeWidth) {
-		params[@"nodeWidth"] = self.nodeWidth;
+	if (self.minNodeLength) {
+		params[@"minNodeLength"] = self.minNodeLength;
 	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
+	}
+	if (self.hangingIndentTranslation) {
+		params[@"hangingIndentTranslation"] = self.hangingIndentTranslation;
+	}
+	if (self.nodeWidth) {
+		params[@"nodeWidth"] = self.nodeWidth;
 	}
 	if (self.linkRadius) {
 		params[@"linkRadius"] = self.linkRadius;
@@ -165,16 +173,28 @@
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
--(void)setNodeWidth:(NSNumber *)nodeWidth {
-	NSNumber *oldValue = _nodeWidth;
-	_nodeWidth = nodeWidth;
-	[self updateNSObject:oldValue newValue:nodeWidth propertyName:@"nodeWidth"];
+-(void)setMinNodeLength:(NSNumber *)minNodeLength {
+	NSNumber *oldValue = _minNodeLength;
+	_minNodeLength = minNodeLength;
+	[self updateNSObject:oldValue newValue:minNodeLength propertyName:@"minNodeLength"];
 }
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {
 	NSNumber *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
 	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+}
+
+-(void)setHangingIndentTranslation:(NSString *)hangingIndentTranslation {
+	NSString *oldValue = _hangingIndentTranslation;
+	_hangingIndentTranslation = hangingIndentTranslation;
+	[self updateNSObject:oldValue newValue:hangingIndentTranslation propertyName:@"hangingIndentTranslation"];
+}
+
+-(void)setNodeWidth:(NSNumber *)nodeWidth {
+	NSNumber *oldValue = _nodeWidth;
+	_nodeWidth = nodeWidth;
+	[self updateNSObject:oldValue newValue:nodeWidth propertyName:@"nodeWidth"];
 }
 
 -(void)setLinkRadius:(NSNumber *)linkRadius {

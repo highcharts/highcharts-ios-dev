@@ -10,6 +10,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HILinkTextPath *copyLinkTextPath = [[HILinkTextPath allocWithZone: zone] init];
+	copyLinkTextPath.attributes = [self.attributes copyWithZone: zone];
 	copyLinkTextPath.enabled = [self.enabled copyWithZone: zone];
 	return copyLinkTextPath;
 }
@@ -17,6 +18,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.attributes) {
+		params[@"attributes"] = [self.attributes getParams];
+	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
@@ -24,6 +28,12 @@
 }
 
 # pragma mark - Setters
+
+-(void)setAttributes:(HIAttributes *)attributes {
+	HIAttributes *oldValue = _attributes;
+	_attributes = attributes;
+	[self updateHIObject:oldValue newValue:attributes propertyName:@"attributes"];
+}
 
 -(void)setEnabled:(NSNumber *)enabled {
 	NSNumber *oldValue = _enabled;

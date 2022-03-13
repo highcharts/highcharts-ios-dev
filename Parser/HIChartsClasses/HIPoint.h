@@ -10,7 +10,6 @@
 #import "HIColor.h"
 #import "HIFunction.h"
 #import "HIAnimationOptionsObject.h"
-#import "HISeries.h"
 
 
 /**
@@ -78,10 +77,6 @@ The translated Y value for the point in terms of pixels. Relative to the Y axis 
 Whether the point is selected or not.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *selected;
-/**
-The series object associated with the point.
-*/
-@property(nonatomic, readwrite) HISeries *series;
 /**
 Pie series only. Whether to display a slice offset from the center.
 */

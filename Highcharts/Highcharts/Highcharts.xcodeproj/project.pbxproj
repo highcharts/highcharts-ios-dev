@@ -49,6 +49,18 @@
 		34E28E461CD1071C00DFE9CD /* UIColor+HIG.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E28E441CD1071C00DFE9CD /* UIColor+HIG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34E28E4A1CD10CA300DFE9CD /* UIImage+HIG.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E28E481CD10CA300DFE9CD /* UIImage+HIG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34EC1CF61CDCC783001DB3A0 /* HIGOptionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EC1CF51CDCC783001DB3A0 /* HIGOptionsTest.m */; };
+		5BC750B027DDE22E006744AA /* HIArcdiagram.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC750AE27DDE22E006744AA /* HIArcdiagram.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BC750B127DDE22E006744AA /* HIArcdiagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC750AF27DDE22E006744AA /* HIArcdiagram.m */; };
+		5BC750B427DDE266006744AA /* HIBreadcrumbs.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC750B227DDE266006744AA /* HIBreadcrumbs.m */; };
+		5BC750B527DDE266006744AA /* HIBreadcrumbs.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC750B327DDE266006744AA /* HIBreadcrumbs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BC750B827DDE273006744AA /* HIBreadcrumbsAlignOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC750B627DDE273006744AA /* HIBreadcrumbsAlignOptions.m */; };
+		5BC750B927DDE273006744AA /* HIBreadcrumbsAlignOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC750B727DDE273006744AA /* HIBreadcrumbsAlignOptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BC750BE27DDE288006744AA /* HIPdfFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC750BA27DDE288006744AA /* HIPdfFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BC750BF27DDE288006744AA /* HIButtonTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC750BB27DDE288006744AA /* HIButtonTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BC750C027DDE288006744AA /* HIPdfFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC750BC27DDE288006744AA /* HIPdfFont.m */; };
+		5BC750C127DDE288006744AA /* HIButtonTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC750BD27DDE288006744AA /* HIButtonTheme.m */; };
+		5BC750C427DDE29B006744AA /* HISeparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC750C227DDE29B006744AA /* HISeparator.m */; };
+		5BC750C527DDE29B006744AA /* HISeparator.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC750C327DDE29B006744AA /* HISeparator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD07384E264479B900D6EF30 /* HICredits.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0736BE2644799900D6EF30 /* HICredits.m */; };
 		CD07384F264479B900D6EF30 /* HITilemap.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0736BF2644799900D6EF30 /* HITilemap.m */; };
 		CD073850264479B900D6EF30 /* HIErrorbar.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0736C02644799900D6EF30 /* HIErrorbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -529,6 +541,18 @@
 		34E28E481CD10CA300DFE9CD /* UIImage+HIG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HIG.h"; sourceTree = "<group>"; };
 		34E28E491CD10CA300DFE9CD /* UIImage+HIG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HIG.m"; sourceTree = "<group>"; };
 		34EC1CF51CDCC783001DB3A0 /* HIGOptionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGOptionsTest.m; sourceTree = "<group>"; };
+		5BC750AE27DDE22E006744AA /* HIArcdiagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIArcdiagram.h; sourceTree = "<group>"; };
+		5BC750AF27DDE22E006744AA /* HIArcdiagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIArcdiagram.m; sourceTree = "<group>"; };
+		5BC750B227DDE266006744AA /* HIBreadcrumbs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIBreadcrumbs.m; sourceTree = "<group>"; };
+		5BC750B327DDE266006744AA /* HIBreadcrumbs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIBreadcrumbs.h; sourceTree = "<group>"; };
+		5BC750B627DDE273006744AA /* HIBreadcrumbsAlignOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIBreadcrumbsAlignOptions.m; sourceTree = "<group>"; };
+		5BC750B727DDE273006744AA /* HIBreadcrumbsAlignOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIBreadcrumbsAlignOptions.h; sourceTree = "<group>"; };
+		5BC750BA27DDE288006744AA /* HIPdfFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPdfFont.h; sourceTree = "<group>"; };
+		5BC750BB27DDE288006744AA /* HIButtonTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIButtonTheme.h; sourceTree = "<group>"; };
+		5BC750BC27DDE288006744AA /* HIPdfFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPdfFont.m; sourceTree = "<group>"; };
+		5BC750BD27DDE288006744AA /* HIButtonTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIButtonTheme.m; sourceTree = "<group>"; };
+		5BC750C227DDE29B006744AA /* HISeparator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HISeparator.m; sourceTree = "<group>"; };
+		5BC750C327DDE29B006744AA /* HISeparator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HISeparator.h; sourceTree = "<group>"; };
 		CD0736BE2644799900D6EF30 /* HICredits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HICredits.m; sourceTree = "<group>"; };
 		CD0736BF2644799900D6EF30 /* HITilemap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITilemap.m; sourceTree = "<group>"; };
 		CD0736C02644799900D6EF30 /* HIErrorbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIErrorbar.h; sourceTree = "<group>"; };
@@ -990,6 +1014,18 @@
 		2011ABB31E7013F30027DA10 /* HIChartsClasses */ = {
 			isa = PBXGroup;
 			children = (
+				5BC750C327DDE29B006744AA /* HISeparator.h */,
+				5BC750C227DDE29B006744AA /* HISeparator.m */,
+				5BC750BB27DDE288006744AA /* HIButtonTheme.h */,
+				5BC750BD27DDE288006744AA /* HIButtonTheme.m */,
+				5BC750BA27DDE288006744AA /* HIPdfFont.h */,
+				5BC750BC27DDE288006744AA /* HIPdfFont.m */,
+				5BC750B727DDE273006744AA /* HIBreadcrumbsAlignOptions.h */,
+				5BC750B627DDE273006744AA /* HIBreadcrumbsAlignOptions.m */,
+				5BC750B327DDE266006744AA /* HIBreadcrumbs.h */,
+				5BC750B227DDE266006744AA /* HIBreadcrumbs.m */,
+				5BC750AE27DDE22E006744AA /* HIArcdiagram.h */,
+				5BC750AF27DDE22E006744AA /* HIArcdiagram.m */,
 				CD5AF2EC272DA29C00287289 /* HIEllipseAnnotation.h */,
 				CD5AF2EB272DA29C00287289 /* HIEllipseAnnotation.m */,
 				CD5AF2E7272DA03E00287289 /* HIAnnotationMockPointOptionsObject.h */,
@@ -1539,6 +1575,7 @@
 				CD07397D264479BA00D6EF30 /* HIColumnrange.h in Headers */,
 				CD91B3032062741200BCEE37 /* HIGHTML.h in Headers */,
 				CD91B3042062741200BCEE37 /* HIGJavaScript.h in Headers */,
+				5BC750C527DDE29B006744AA /* HISeparator.h in Headers */,
 				CD073965264479BA00D6EF30 /* HIPatternOptionsObject.h in Headers */,
 				CD0739A9264479BA00D6EF30 /* HIMillisecond.h in Headers */,
 				CD0739A3264479BA00D6EF30 /* HITime.h in Headers */,
@@ -1592,6 +1629,7 @@
 				CD073966264479BA00D6EF30 /* HIHour.h in Headers */,
 				CD07386A264479B900D6EF30 /* HIXAxis.h in Headers */,
 				CD0738B3264479BA00D6EF30 /* HIMinute.h in Headers */,
+				5BC750B527DDE266006744AA /* HIBreadcrumbs.h in Headers */,
 				CD073939264479BA00D6EF30 /* HIData.h in Headers */,
 				CD0738EF264479BA00D6EF30 /* HISeriesTypeDescriptions.h in Headers */,
 				CD073928264479BA00D6EF30 /* HINodes.h in Headers */,
@@ -1632,6 +1670,7 @@
 				CD073905264479BA00D6EF30 /* HIBoxplot.h in Headers */,
 				CD0738EE264479BA00D6EF30 /* HIPyramid.h in Headers */,
 				CD073870264479BA00D6EF30 /* HIVenn.h in Headers */,
+				5BC750B927DDE273006744AA /* HIBreadcrumbsAlignOptions.h in Headers */,
 				CD073874264479BA00D6EF30 /* HIArearange.h in Headers */,
 				CD0738C9264479BA00D6EF30 /* HIYear.h in Headers */,
 				CD0739B4264479BA00D6EF30 /* HIInactive.h in Headers */,
@@ -1678,6 +1717,8 @@
 				CD07389D264479BA00D6EF30 /* HIPosition.h in Headers */,
 				CD07398C264479BA00D6EF30 /* HIParallelAxes.h in Headers */,
 				CD0739C2264479BA00D6EF30 /* HINetworkgraph.h in Headers */,
+				5BC750BE27DDE288006744AA /* HIPdfFont.h in Headers */,
+				5BC750B027DDE22E006744AA /* HIArcdiagram.h in Headers */,
 				CD0738C5264479BA00D6EF30 /* HIRotation.h in Headers */,
 				CD07390F264479BA00D6EF30 /* HIPareto.h in Headers */,
 				CD07390D264479BA00D6EF30 /* HITilemap.h in Headers */,
@@ -1735,6 +1776,7 @@
 				CD75BF0125E713ED00A3D71A /* HIAccessibilityLegend.h in Headers */,
 				CD75BF0A25E713F300A3D71A /* HIAccessibilityExporting.h in Headers */,
 				CD75BEF825E713E700A3D71A /* HIAccessibilitySeries.h in Headers */,
+				5BC750BF27DDE288006744AA /* HIButtonTheme.h in Headers */,
 				CD3F770A2056AE4300527CBE /* HIChartContext.h in Headers */,
 				CDDF95D71F9F5D480021A129 /* HIFunction.h in Headers */,
 				EC1449381F4A854900612B1C /* HIChartViewDelegate.h in Headers */,
@@ -1924,6 +1966,7 @@
 				CD0738C6264479BA00D6EF30 /* HIChart.m in Sources */,
 				CD073941264479BA00D6EF30 /* HIBullet.m in Sources */,
 				CD07394B264479BA00D6EF30 /* HIResponsive.m in Sources */,
+				5BC750C427DDE29B006744AA /* HISeparator.m in Sources */,
 				CD0738A9264479BA00D6EF30 /* HIVariwide.m in Sources */,
 				CD0739B6264479BA00D6EF30 /* HIMillisecond.m in Sources */,
 				CD0738A8264479BA00D6EF30 /* HIFilter.m in Sources */,
@@ -1940,6 +1983,7 @@
 				CD0738A0264479BA00D6EF30 /* HITooltip.m in Sources */,
 				CD073957264479BA00D6EF30 /* HILegend.m in Sources */,
 				CD073920264479BA00D6EF30 /* HIColumnpyramid.m in Sources */,
+				5BC750C027DDE288006744AA /* HIPdfFont.m in Sources */,
 				CD0738B4264479BA00D6EF30 /* HIDataClasses.m in Sources */,
 				CD07395E264479BA00D6EF30 /* HILang.m in Sources */,
 				CD073958264479BA00D6EF30 /* HIShadowOptionsObject.m in Sources */,
@@ -1976,6 +2020,7 @@
 				CD1DF89421F9EECA005DF8A7 /* HICustomFont.m in Sources */,
 				CD073986264479BA00D6EF30 /* HIGeoJSON.m in Sources */,
 				CD07395A264479BA00D6EF30 /* HIAccessibility.m in Sources */,
+				5BC750B827DDE273006744AA /* HIBreadcrumbsAlignOptions.m in Sources */,
 				CD07392B264479BA00D6EF30 /* HISunburst.m in Sources */,
 				CD07397E264479BA00D6EF30 /* HIDefs.m in Sources */,
 				CD0738D9264479BA00D6EF30 /* HIGauge.m in Sources */,
@@ -2003,12 +2048,14 @@
 				CD073991264479BA00D6EF30 /* HIHeatmap.m in Sources */,
 				CD0739D1264479BA00D6EF30 /* HIDefault.m in Sources */,
 				CD073903264479BA00D6EF30 /* HIStates.m in Sources */,
+				5BC750C127DDE288006744AA /* HIButtonTheme.m in Sources */,
 				CD07385D264479B900D6EF30 /* HICaption.m in Sources */,
 				CD0738D7264479BA00D6EF30 /* HIVenn.m in Sources */,
 				CD0738A5264479BA00D6EF30 /* HIRadialGradientColorObject.m in Sources */,
 				CD0739CB264479BA00D6EF30 /* HIHover.m in Sources */,
 				CD0739DD264479BA00D6EF30 /* HIAxis.m in Sources */,
 				CD073983264479BA00D6EF30 /* HIDrillUpButton.m in Sources */,
+				5BC750B127DDE22E006744AA /* HIArcdiagram.m in Sources */,
 				CD07390A264479BA00D6EF30 /* HIGuideBox.m in Sources */,
 				CD07395B264479BA00D6EF30 /* HITop.m in Sources */,
 				CD073975264479BA00D6EF30 /* HIBar.m in Sources */,
@@ -2038,6 +2085,7 @@
 				CD073872264479BA00D6EF30 /* HIStreamgraph.m in Sources */,
 				CD073934264479BA00D6EF30 /* HICSSObject.m in Sources */,
 				CD0739AD264479BA00D6EF30 /* HIOptions3d.m in Sources */,
+				5BC750B427DDE266006744AA /* HIBreadcrumbs.m in Sources */,
 				CD07393F264479BA00D6EF30 /* HICondition.m in Sources */,
 				CD0738FD264479BA00D6EF30 /* HIFrame.m in Sources */,
 				CD073997264479BA00D6EF30 /* HIGradientColorObject.m in Sources */,

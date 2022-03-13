@@ -326,9 +326,7 @@ hc_types = {
         "Highcharts.FormatterCallbackFunction.<Series>": 'HIFunction',
         #8.2.0
         "string|Array.<(Array.<string>|Array.<string, number>|Array.<string, number, number>|Array.<string, number, number, number, number>|Array.<string, number, number, number, number, number, number>|Array.<string, number, number, number, number, number, number, number>)>|undefined": 'NSArray /* <NSString, NSNumber> */',
-        "Array.<Array.<number, string|Highcharts.GradientColorObject|Highcharts.PatternObject>>": 'NSArray',
-        #10.0.0
-        "series": "HISeries"
+        "Array.<Array.<number, string|Highcharts.GradientColorObject|Highcharts.PatternObject>>": 'NSArray'
     }
 
 def get_type(x):
@@ -1166,7 +1164,6 @@ def add_additional_fields_to_point():
         ("plotX", "number", "The translated X value for the point in terms of pixels. Relative to the X axis position if the series has one, otherwise relative to the plot area. Depending on the series type this value might not be defined."),
         ("plotY", "number", "The translated Y value for the point in terms of pixels. Relative to the Y axis position if the series has one, otherwise relative to the plot area. Depending on the series type this value might not be defined."),
         ("selected", "boolean", "Whether the point is selected or not."),
-        ("series", "series", "The series object associated with the point."),
         ("sliced", "boolean", "Pie series only. Whether to display a slice offset from the center."),
         ("total", "number", "The total of values in either a stack for stacked series, or a pie in a pie series."),
         ("visible", "boolean", "For certain series types, like pie charts, where individual points can be shown or hidden."),

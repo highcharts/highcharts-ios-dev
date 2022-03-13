@@ -25,7 +25,6 @@
 	copyPoint.plotX = [self.plotX copyWithZone: zone];
 	copyPoint.plotY = [self.plotY copyWithZone: zone];
 	copyPoint.selected = [self.selected copyWithZone: zone];
-	copyPoint.series = [self.series copyWithZone: zone];
 	copyPoint.sliced = [self.sliced copyWithZone: zone];
 	copyPoint.total = [self.total copyWithZone: zone];
 	copyPoint.visible = [self.visible copyWithZone: zone];
@@ -83,9 +82,6 @@
 	}
 	if (self.selected) {
 		params[@"selected"] = self.selected;
-	}
-	if (self.series) {
-		params[@"series"] = [self.series getParams];
 	}
 	if (self.sliced) {
 		params[@"sliced"] = self.sliced;
@@ -198,12 +194,6 @@
 	NSNumber *oldValue = _selected;
 	_selected = selected;
 	[self updateNSObject:oldValue newValue:selected propertyName:@"selected"];
-}
-
--(void)setSeries:(HISeries *)series {
-	HISeries *oldValue = _series;
-	_series = series;
-	[self updateHIObject:oldValue newValue:series propertyName:@"series"];
 }
 
 -(void)setSliced:(NSNumber *)sliced {
