@@ -63,9 +63,9 @@
 	copyDataLabels.alternate = [self.alternate copyWithZone: zone];
 	copyDataLabels.width = [self.width copyWithZone: zone];
 	copyDataLabels.zIndex = [self.zIndex copyWithZone: zone];
+	copyDataLabels.linkTextPath = [self.linkTextPath copyWithZone: zone];
 	copyDataLabels.linkFormat = [self.linkFormat copyWithZone: zone];
 	copyDataLabels.linkFormatter = [self.linkFormatter copyWithZone: zone];
-	copyDataLabels.linkTextPath = [self.linkTextPath copyWithZone: zone];
 	return copyDataLabels;
 }
 
@@ -231,14 +231,14 @@
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
 	}
+	if (self.linkTextPath) {
+		params[@"linkTextPath"] = [self.linkTextPath getParams];
+	}
 	if (self.linkFormat) {
 		params[@"linkFormat"] = self.linkFormat;
 	}
 	if (self.linkFormatter) {
 		params[@"linkFormatter"] = [self.linkFormatter getFunction];
-	}
-	if (self.linkTextPath) {
-		params[@"linkTextPath"] = [self.linkTextPath getParams];
 	}
 	return params;
 }
@@ -563,6 +563,12 @@
 	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
+-(void)setLinkTextPath:(HILinkTextPath *)linkTextPath {
+	HILinkTextPath *oldValue = _linkTextPath;
+	_linkTextPath = linkTextPath;
+	[self updateHIObject:oldValue newValue:linkTextPath propertyName:@"linkTextPath"];
+}
+
 -(void)setLinkFormat:(NSString *)linkFormat {
 	NSString *oldValue = _linkFormat;
 	_linkFormat = linkFormat;
@@ -573,12 +579,6 @@
 	HIFunction *oldValue = _linkFormatter;
 	_linkFormatter = linkFormatter;
 	[self updateHIObject:oldValue newValue:linkFormatter propertyName:@"linkFormatter"];
-}
-
--(void)setLinkTextPath:(HILinkTextPath *)linkTextPath {
-	HILinkTextPath *oldValue = _linkTextPath;
-	_linkTextPath = linkTextPath;
-	[self updateHIObject:oldValue newValue:linkTextPath propertyName:@"linkTextPath"];
 }
 
 @end

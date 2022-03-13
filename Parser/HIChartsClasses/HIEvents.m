@@ -31,7 +31,6 @@
 	copyEvents.drilldown = [self.drilldown copyWithZone: zone];
 	copyEvents.redraw = [self.redraw copyWithZone: zone];
 	copyEvents.afterPrint = [self.afterPrint copyWithZone: zone];
-	copyEvents.drillToCluster = [self.drillToCluster copyWithZone: zone];
 	copyEvents.unselect = [self.unselect copyWithZone: zone];
 	copyEvents.drop = [self.drop copyWithZone: zone];
 	copyEvents.update = [self.update copyWithZone: zone];
@@ -41,6 +40,7 @@
 	copyEvents.mouseOver = [self.mouseOver copyWithZone: zone];
 	copyEvents.select = [self.select copyWithZone: zone];
 	copyEvents.dragStart = [self.dragStart copyWithZone: zone];
+	copyEvents.drillToCluster = [self.drillToCluster copyWithZone: zone];
 	copyEvents.setRootNode = [self.setRootNode copyWithZone: zone];
 	copyEvents.closePopup = [self.closePopup copyWithZone: zone];
 	copyEvents.selectButton = [self.selectButton copyWithZone: zone];
@@ -121,9 +121,6 @@
 	if (self.afterPrint) {
 		params[@"afterPrint"] = [self.afterPrint getFunction];
 	}
-	if (self.drillToCluster) {
-		params[@"drillToCluster"] = [self.drillToCluster getFunction];
-	}
 	if (self.unselect) {
 		params[@"unselect"] = [self.unselect getFunction];
 	}
@@ -150,6 +147,9 @@
 	}
 	if (self.dragStart) {
 		params[@"dragStart"] = [self.dragStart getFunction];
+	}
+	if (self.drillToCluster) {
+		params[@"drillToCluster"] = [self.drillToCluster getFunction];
 	}
 	if (self.setRootNode) {
 		params[@"setRootNode"] = [self.setRootNode getFunction];
@@ -315,12 +315,6 @@
 	[self updateHIObject:oldValue newValue:afterPrint propertyName:@"afterPrint"];
 }
 
--(void)setDrillToCluster:(HIFunction *)drillToCluster {
-	HIFunction *oldValue = _drillToCluster;
-	_drillToCluster = drillToCluster;
-	[self updateHIObject:oldValue newValue:drillToCluster propertyName:@"drillToCluster"];
-}
-
 -(void)setUnselect:(HIFunction *)unselect {
 	HIFunction *oldValue = _unselect;
 	_unselect = unselect;
@@ -373,6 +367,12 @@
 	HIFunction *oldValue = _dragStart;
 	_dragStart = dragStart;
 	[self updateHIObject:oldValue newValue:dragStart propertyName:@"dragStart"];
+}
+
+-(void)setDrillToCluster:(HIFunction *)drillToCluster {
+	HIFunction *oldValue = _drillToCluster;
+	_drillToCluster = drillToCluster;
+	[self updateHIObject:oldValue newValue:drillToCluster propertyName:@"drillToCluster"];
 }
 
 -(void)setSetRootNode:(HIFunction *)setRootNode {

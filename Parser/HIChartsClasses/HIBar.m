@@ -33,6 +33,7 @@
 	copyBar.groupZPadding = [self.groupZPadding copyWithZone: zone];
 	copyBar.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyBar.colors = [self.colors copyWithZone: zone];
+	copyBar.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyBar.threshold = [self.threshold copyWithZone: zone];
 	copyBar.borderColor = [self.borderColor copyWithZone: zone];
 	copyBar.edgeColor = [self.edgeColor copyWithZone: zone];
@@ -56,7 +57,6 @@
 	copyBar.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyBar.colorKey = [self.colorKey copyWithZone: zone];
 	copyBar.softThreshold = [self.softThreshold copyWithZone: zone];
-	copyBar.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyBar.point = [self.point copyWithZone: zone];
 	copyBar.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyBar.label = [self.label copyWithZone: zone];

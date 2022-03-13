@@ -87,6 +87,7 @@
 	copyPyramid3d.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyPyramid3d.states = [self.states copyWithZone: zone];
 	copyPyramid3d.colors = [self.colors copyWithZone: zone];
+	copyPyramid3d.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyPyramid3d.threshold = [self.threshold copyWithZone: zone];
 	copyPyramid3d.borderColor = [self.borderColor copyWithZone: zone];
 	copyPyramid3d.edgeColor = [self.edgeColor copyWithZone: zone];
@@ -107,7 +108,6 @@
 	copyPyramid3d.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyPyramid3d.colorKey = [self.colorKey copyWithZone: zone];
 	copyPyramid3d.softThreshold = [self.softThreshold copyWithZone: zone];
-	copyPyramid3d.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyPyramid3d.point = [self.point copyWithZone: zone];
 	copyPyramid3d.label = [self.label copyWithZone: zone];
 	copyPyramid3d.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];

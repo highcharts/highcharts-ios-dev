@@ -30,6 +30,7 @@
 	copyExporting.url = [self.url copyWithZone: zone];
 	copyExporting.enabled = [self.enabled copyWithZone: zone];
 	copyExporting.allowHTML = [self.allowHTML copyWithZone: zone];
+	copyExporting.pdfFont = [self.pdfFont copyWithZone: zone];
 	copyExporting.chartOptions = [self.chartOptions copyWithZone: zone];
 	copyExporting.error = [self.error copyWithZone: zone];
 	copyExporting.libURL = [self.libURL copyWithZone: zone];
@@ -100,6 +101,9 @@
 	}
 	if (self.allowHTML) {
 		params[@"allowHTML"] = self.allowHTML;
+	}
+	if (self.pdfFont) {
+		params[@"pdfFont"] = [self.pdfFont getParams];
 	}
 	if (self.chartOptions) {
 		params[@"chartOptions"] = self.chartOptions;
@@ -239,6 +243,12 @@
 	NSNumber *oldValue = _allowHTML;
 	_allowHTML = allowHTML;
 	[self updateNSObject:oldValue newValue:allowHTML propertyName:@"allowHTML"];
+}
+
+-(void)setPdfFont:(HIPdfFont *)pdfFont {
+	HIPdfFont *oldValue = _pdfFont;
+	_pdfFont = pdfFont;
+	[self updateHIObject:oldValue newValue:pdfFont propertyName:@"pdfFont"];
 }
 
 -(void)setChartOptions:(NSDictionary *)chartOptions {

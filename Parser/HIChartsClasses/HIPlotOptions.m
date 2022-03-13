@@ -17,6 +17,7 @@
 	copyPlotOptions.networkgraph = [self.networkgraph copyWithZone: zone];
 	copyPlotOptions.bar = [self.bar copyWithZone: zone];
 	copyPlotOptions.variwide = [self.variwide copyWithZone: zone];
+	copyPlotOptions.arcdiagram = [self.arcdiagram copyWithZone: zone];
 	copyPlotOptions.areasplinerange = [self.areasplinerange copyWithZone: zone];
 	copyPlotOptions.item = [self.item copyWithZone: zone];
 	copyPlotOptions.vector = [self.vector copyWithZone: zone];
@@ -87,6 +88,9 @@
 	}
 	if (self.variwide) {
 		params[@"variwide"] = [self.variwide getParams];
+	}
+	if (self.arcdiagram) {
+		params[@"arcdiagram"] = [self.arcdiagram getParams];
 	}
 	if (self.areasplinerange) {
 		params[@"areasplinerange"] = [self.areasplinerange getParams];
@@ -265,6 +269,12 @@
 	HIVariwide *oldValue = _variwide;
 	_variwide = variwide;
 	[self updateHIObject:oldValue newValue:variwide propertyName:@"variwide"];
+}
+
+-(void)setArcdiagram:(HIArcdiagram *)arcdiagram {
+	HIArcdiagram *oldValue = _arcdiagram;
+	_arcdiagram = arcdiagram;
+	[self updateHIObject:oldValue newValue:arcdiagram propertyName:@"arcdiagram"];
 }
 
 -(void)setAreasplinerange:(HIAreasplinerange *)areasplinerange {
