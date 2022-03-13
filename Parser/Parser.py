@@ -326,7 +326,9 @@ hc_types = {
         "Highcharts.FormatterCallbackFunction.<Series>": 'HIFunction',
         #8.2.0
         "string|Array.<(Array.<string>|Array.<string, number>|Array.<string, number, number>|Array.<string, number, number, number, number>|Array.<string, number, number, number, number, number, number>|Array.<string, number, number, number, number, number, number, number>)>|undefined": 'NSArray /* <NSString, NSNumber> */',
-        "Array.<Array.<number, string|Highcharts.GradientColorObject|Highcharts.PatternObject>>": 'NSArray'
+        "Array.<Array.<number, string|Highcharts.GradientColorObject|Highcharts.PatternObject>>": 'NSArray',
+        #10.0.0
+        "series": "HISeries"
     }
 
 def get_type(x):
@@ -1154,6 +1156,34 @@ def add_to_structure(name, source, parent):
             for children in childrens:
                 add_to_structure(children, childrens[children], fullname)
 
+def add_additional_fields_to_point():
+    fields = [
+        ("category", "string", "For categorized axes this property holds the category name for the point. For other axes it holds the X value."),
+        ("color", "Highcharts.ColorString", "The point's current color."),
+        ("colorIndex", "number", "The point's current color index, used in styled mode instead of `color`. The color index is inserted in class names used for styling."),
+        ("name", "string", "The name of the point. The name can be given as the first position of the point configuration array, or as a `name` property in the configuration:"),
+        ("percentage", "number", "The percentage for points in a stacked series or pies."),
+        ("plotX", "number", "The translated X value for the point in terms of pixels. Relative to the X axis position if the series has one, otherwise relative to the plot area. Depending on the series type this value might not be defined."),
+        ("plotY", "number", "The translated Y value for the point in terms of pixels. Relative to the Y axis position if the series has one, otherwise relative to the plot area. Depending on the series type this value might not be defined."),
+        ("selected", "boolean", "Whether the point is selected or not."),
+        ("series", "series", "The series object associated with the point."),
+        ("sliced", "boolean", "Pie series only. Whether to display a slice offset from the center."),
+        ("total", "number", "The total of values in either a stack for stacked series, or a pie in a pie series."),
+        ("visible", "boolean", "For certain series types, like pie charts, where individual points can be shown or hidden."),
+        ("x", "number", "The x value of the point."),
+        ("y", "number", "The y value of the point.")
+    ]
+
+    acc_point = "accessibility.point"
+
+    if acc_point in structure:
+        parent = structure[acc_point]
+
+        for field in fields:
+            name = acc_point + "." + field[0]
+            hi_class = HIChartsClass(name, field[1], field[2], None, None, None, None, None, None, None, acc_point)
+            structure[name] = hi_class
+            parent.add_property(hi_class)
 
 def add_additions_to_series():
     with open('addition_to_series.js') as data_file:
@@ -1219,6 +1249,7 @@ def create_structure():
         add_to_structure(field, data[field], None)
 
     add_additions_to_series()
+    add_additional_fields_to_point()
 
     for field in structure:
         merge_extended_properties(field)
