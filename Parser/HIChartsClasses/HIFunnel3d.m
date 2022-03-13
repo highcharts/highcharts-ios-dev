@@ -34,6 +34,7 @@
 	copyFunnel3d.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyFunnel3d.states = [self.states copyWithZone: zone];
 	copyFunnel3d.colors = [self.colors copyWithZone: zone];
+	copyFunnel3d.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyFunnel3d.threshold = [self.threshold copyWithZone: zone];
 	copyFunnel3d.borderColor = [self.borderColor copyWithZone: zone];
 	copyFunnel3d.edgeColor = [self.edgeColor copyWithZone: zone];
@@ -54,7 +55,6 @@
 	copyFunnel3d.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyFunnel3d.colorKey = [self.colorKey copyWithZone: zone];
 	copyFunnel3d.softThreshold = [self.softThreshold copyWithZone: zone];
-	copyFunnel3d.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyFunnel3d.point = [self.point copyWithZone: zone];
 	copyFunnel3d.label = [self.label copyWithZone: zone];
 	copyFunnel3d.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];

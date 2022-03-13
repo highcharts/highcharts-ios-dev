@@ -23,6 +23,7 @@
 	copyVariwide.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyVariwide.states = [self.states copyWithZone: zone];
 	copyVariwide.colors = [self.colors copyWithZone: zone];
+	copyVariwide.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyVariwide.threshold = [self.threshold copyWithZone: zone];
 	copyVariwide.borderColor = [self.borderColor copyWithZone: zone];
 	copyVariwide.centerInCategory = [self.centerInCategory copyWithZone: zone];
@@ -42,7 +43,6 @@
 	copyVariwide.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyVariwide.colorKey = [self.colorKey copyWithZone: zone];
 	copyVariwide.softThreshold = [self.softThreshold copyWithZone: zone];
-	copyVariwide.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyVariwide.point = [self.point copyWithZone: zone];
 	copyVariwide.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyVariwide.label = [self.label copyWithZone: zone];

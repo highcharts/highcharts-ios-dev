@@ -31,6 +31,7 @@
 	copyColumnpyramid.minPointLength = [self.minPointLength copyWithZone: zone];
 	copyColumnpyramid.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyColumnpyramid.colors = [self.colors copyWithZone: zone];
+	copyColumnpyramid.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyColumnpyramid.borderColor = [self.borderColor copyWithZone: zone];
 	copyColumnpyramid.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyColumnpyramid.tooltip = [self.tooltip copyWithZone: zone];
@@ -48,7 +49,6 @@
 	copyColumnpyramid.color = [self.color copyWithZone: zone];
 	copyColumnpyramid.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyColumnpyramid.colorKey = [self.colorKey copyWithZone: zone];
-	copyColumnpyramid.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyColumnpyramid.point = [self.point copyWithZone: zone];
 	copyColumnpyramid.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyColumnpyramid.label = [self.label copyWithZone: zone];

@@ -62,6 +62,7 @@ The text to display when the chart contains no data.
 * [No-data text](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/no-data-to-display/no-data-line)
 */
 @property(nonatomic, readwrite) NSString *noData;
+@property(nonatomic, readwrite) NSString *mainBreadcrumb;
 /**
 The loading text that appears when the chart is set into the loading state following a call to `chart.showLoading`.
 */
@@ -104,7 +105,7 @@ Exporting module only. The text for the SVG download menu item.
 /**
 The text for the button that appears when drilling down, linking back to the parent series. The parent series' name is inserted for `{series.name}`.
 */
-@property(nonatomic, readwrite) NSString *drillUpText;
+@property(nonatomic, readwrite) id drillUpText;
 /**
 The text for the menu item.
 */

@@ -20,6 +20,7 @@
 	copyChart.marginRight = [self.marginRight copyWithZone: zone];
 	copyChart.zoomBySingleTouch = [self.zoomBySingleTouch copyWithZone: zone];
 	copyChart.plotBorderColor = [self.plotBorderColor copyWithZone: zone];
+	copyChart.alignThresholds = [self.alignThresholds copyWithZone: zone];
 	copyChart.spacingRight = [self.spacingRight copyWithZone: zone];
 	copyChart.borderColor = [self.borderColor copyWithZone: zone];
 	copyChart.className = [self.className copyWithZone: zone];
@@ -95,6 +96,8 @@
 	}
 	if (self.plotBorderColor) {
 		params[@"plotBorderColor"] = [self.plotBorderColor getData];
+	}
+	if (self.alignThresholds) {
 	}
 	if (self.spacingRight) {
 		params[@"spacingRight"] = self.spacingRight;
@@ -297,6 +300,12 @@
 	HIColor *oldValue = _plotBorderColor;
 	_plotBorderColor = plotBorderColor;
 	[self updateHIObject:oldValue newValue:plotBorderColor propertyName:@"plotBorderColor"];
+}
+
+-(void)setAlignThresholds:(id)alignThresholds {
+	id oldValue = _alignThresholds;
+	_alignThresholds = alignThresholds;
+	[self updateNSObject:oldValue newValue:alignThresholds propertyName:@"alignThresholds"];
 }
 
 -(void)setSpacingRight:(NSNumber *)spacingRight {

@@ -31,6 +31,7 @@
 	copyTreemap.colors = [self.colors copyWithZone: zone];
 	copyTreemap.sortIndex = [self.sortIndex copyWithZone: zone];
 	copyTreemap.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyTreemap.breadcrumbs = [self.breadcrumbs copyWithZone: zone];
 	copyTreemap.tooltip = [self.tooltip copyWithZone: zone];
 	copyTreemap.allowTraversingTree = [self.allowTraversingTree copyWithZone: zone];
 	copyTreemap.events = [self.events copyWithZone: zone];
@@ -40,19 +41,16 @@
 	copyTreemap.levels = [self.levels copyWithZone: zone];
 	copyTreemap.interactByLeaf = [self.interactByLeaf copyWithZone: zone];
 	copyTreemap.alternateStartingDirection = [self.alternateStartingDirection copyWithZone: zone];
-	copyTreemap.traverseUpButton = [self.traverseUpButton copyWithZone: zone];
 	copyTreemap.colorKey = [self.colorKey copyWithZone: zone];
 	copyTreemap.layoutAlgorithm = [self.layoutAlgorithm copyWithZone: zone];
 	copyTreemap.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyTreemap.levelIsConstant = [self.levelIsConstant copyWithZone: zone];
 	copyTreemap.showInLegend = [self.showInLegend copyWithZone: zone];
-	copyTreemap.cluster = [self.cluster copyWithZone: zone];
 	copyTreemap.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyTreemap.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyTreemap.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyTreemap.linecap = [self.linecap copyWithZone: zone];
 	copyTreemap.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyTreemap.selected = [self.selected copyWithZone: zone];
 	copyTreemap.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyTreemap.clip = [self.clip copyWithZone: zone];
 	copyTreemap.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -64,7 +62,6 @@
 	copyTreemap.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyTreemap.cursor = [self.cursor copyWithZone: zone];
 	copyTreemap.dashStyle = [self.dashStyle copyWithZone: zone];
-	copyTreemap.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyTreemap.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyTreemap.custom = [self.custom copyWithZone: zone];
 	copyTreemap.stacking = [self.stacking copyWithZone: zone];
@@ -73,9 +70,10 @@
 	copyTreemap.threshold = [self.threshold copyWithZone: zone];
 	copyTreemap.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyTreemap.boostBlending = [self.boostBlending copyWithZone: zone];
+	copyTreemap.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyTreemap.definition = [self.definition copyWithZone: zone];
 	copyTreemap.keys = [self.keys copyWithZone: zone];
-	copyTreemap.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyTreemap.selected = [self.selected copyWithZone: zone];
 	copyTreemap.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyTreemap.accessibility = [self.accessibility copyWithZone: zone];
 	copyTreemap.step = [self.step copyWithZone: zone];
@@ -90,7 +88,6 @@
 	copyTreemap.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyTreemap.className = [self.className copyWithZone: zone];
 	copyTreemap.pointStart = [self.pointStart copyWithZone: zone];
-	copyTreemap.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyTreemap.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	return copyTreemap;
 }
@@ -115,7 +112,10 @@
 		params[@"sortIndex"] = self.sortIndex;
 	}
 	if (self.colorByPoint) {
-		params[@"colorByPoint"] = self.colorByPoint;
+    params[@"colorByPoint"] = self.colorByPoint;
+	}
+	if (self.breadcrumbs) {
+		params[@"breadcrumbs"] = [self.breadcrumbs getParams];
 	}
 	if (self.allowTraversingTree) {
 		params[@"allowTraversingTree"] = self.allowTraversingTree;
@@ -141,17 +141,11 @@
 	if (self.alternateStartingDirection) {
 		params[@"alternateStartingDirection"] = self.alternateStartingDirection;
 	}
-	if (self.traverseUpButton) {
-		params[@"traverseUpButton"] = [self.traverseUpButton getParams];
-	}
 	if (self.layoutAlgorithm) {
 		params[@"layoutAlgorithm"] = self.layoutAlgorithm;
 	}
 	if (self.levelIsConstant) {
 		params[@"levelIsConstant"] = self.levelIsConstant;
-	}
-	if (self.cluster) {
-		params[@"cluster"] = [self.cluster getParams];
 	}
 	return params;
 }
@@ -188,6 +182,12 @@
 	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
 }
 
+-(void)setBreadcrumbs:(HIBreadcrumbs *)breadcrumbs {
+	HIBreadcrumbs *oldValue = _breadcrumbs;
+	_breadcrumbs = breadcrumbs;
+	[self updateHIObject:oldValue newValue:breadcrumbs propertyName:@"breadcrumbs"];
+}
+
 -(void)setAllowTraversingTree:(NSNumber *)allowTraversingTree {
 	NSNumber *oldValue = _allowTraversingTree;
 	_allowTraversingTree = allowTraversingTree;
@@ -218,12 +218,6 @@
 	[self updateNSObject:oldValue newValue:alternateStartingDirection propertyName:@"alternateStartingDirection"];
 }
 
--(void)setTraverseUpButton:(HITraverseUpButton *)traverseUpButton {
-	HITraverseUpButton *oldValue = _traverseUpButton;
-	_traverseUpButton = traverseUpButton;
-	[self updateHIObject:oldValue newValue:traverseUpButton propertyName:@"traverseUpButton"];
-}
-
 -(void)setLayoutAlgorithm:(NSString *)layoutAlgorithm {
 	NSString *oldValue = _layoutAlgorithm;
 	_layoutAlgorithm = layoutAlgorithm;
@@ -234,12 +228,6 @@
 	NSNumber *oldValue = _levelIsConstant;
 	_levelIsConstant = levelIsConstant;
 	[self updateNSObject:oldValue newValue:levelIsConstant propertyName:@"levelIsConstant"];
-}
-
--(void)setCluster:(HICluster *)cluster {
-	HICluster *oldValue = _cluster;
-	_cluster = cluster;
-	[self updateHIObject:oldValue newValue:cluster propertyName:@"cluster"];
 }
 
 @end

@@ -83,6 +83,8 @@
 		
 		<option value="//api/name/bindingsClassName">bindingsClassName</option>
 		
+		<option value="//api/name/breadcrumbs">breadcrumbs</option>
+		
 		<option value="//api/name/buttonOptions">buttonOptions</option>
 		
 		<option value="//api/name/enabled">enabled</option>
@@ -173,8 +175,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/iconsURL" title="iconsURL"></a>
-	<h3 class="method-title"><code><a href="#//api/name/iconsURL">&nbsp;&nbsp;iconsURL</a></code>
+	<a name="//api/name/annotationsOptions" title="annotationsOptions"></a>
+	<h3 class="method-title"><code><a href="#//api/name/annotationsOptions">&nbsp;&nbsp;annotationsOptions</a></code>
 </h3>
 
 	<div class="method-info">
@@ -184,12 +186,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Path where Highcharts will look for icons. Change this to use icons from a different server.</p>
+				<p>Additional options to be merged into all annotations.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *iconsURL</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAnnotationsOptions *annotationsOptions</code></div>
 
 		    
 			
@@ -198,6 +200,16 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/stocktools/navigation-annotation-options">Set red color of all line annotations</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -255,8 +267,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/annotationsOptions" title="annotationsOptions"></a>
-	<h3 class="method-title"><code><a href="#//api/name/annotationsOptions">&nbsp;&nbsp;annotationsOptions</a></code>
+	<a name="//api/name/breadcrumbs" title="breadcrumbs"></a>
+	<h3 class="method-title"><code><a href="#//api/name/breadcrumbs">&nbsp;&nbsp;breadcrumbs</a></code>
 </h3>
 
 	<div class="method-info">
@@ -266,12 +278,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Additional options to be merged into all annotations.</p>
+				<p>Options for breadcrumbs. Breadcrumbs general options are defined in <code>navigation.breadcrumbs</code>. Specific options for drilldown are set in <code>drilldown.breadcrumbs</code> and for tree-like series traversing, in <code>plotOptions[series].breadcrumbs</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAnnotationsOptions *annotationsOptions</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIBreadcrumbs *breadcrumbs</code></div>
 
 		    
 			
@@ -280,16 +292,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/stock/stocktools/navigation-annotation-options">Set red color of all line annotations</a></li>
-</ul>
-
-			</div>
 			
 
 			
@@ -375,6 +377,47 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIEvents *events</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HINavigation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/iconsURL" title="iconsURL"></a>
+	<h3 class="method-title"><code><a href="#//api/name/iconsURL">&nbsp;&nbsp;iconsURL</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Path where Highcharts will look for icons. Change this to use icons from a different server.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *iconsURL</code></div>
 
 		    
 			
@@ -777,7 +820,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2021 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2022 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>

@@ -16,6 +16,7 @@
 	copyDragDrop.draggableX1 = [self.draggableX1 copyWithZone: zone];
 	copyDragDrop.draggableQ1 = [self.draggableQ1 copyWithZone: zone];
 	copyDragDrop.draggableQ3 = [self.draggableQ3 copyWithZone: zone];
+	copyDragDrop.dragHandle = [self.dragHandle copyWithZone: zone];
 	copyDragDrop.draggableTarget = [self.draggableTarget copyWithZone: zone];
 	copyDragDrop.guideBox = [self.guideBox copyWithZone: zone];
 	copyDragDrop.dragMaxX = [self.dragMaxX copyWithZone: zone];
@@ -28,7 +29,6 @@
 	copyDragDrop.draggableX = [self.draggableX copyWithZone: zone];
 	copyDragDrop.dragSensitivity = [self.dragSensitivity copyWithZone: zone];
 	copyDragDrop.groupBy = [self.groupBy copyWithZone: zone];
-	copyDragDrop.dragHandle = [self.dragHandle copyWithZone: zone];
 	copyDragDrop.liveRedraw = [self.liveRedraw copyWithZone: zone];
 	return copyDragDrop;
 }
@@ -53,6 +53,9 @@
 	}
 	if (self.draggableQ3) {
 		params[@"draggableQ3"] = self.draggableQ3;
+	}
+	if (self.dragHandle) {
+		params[@"dragHandle"] = [self.dragHandle getParams];
 	}
 	if (self.draggableTarget) {
 		params[@"draggableTarget"] = self.draggableTarget;
@@ -89,9 +92,6 @@
 	}
 	if (self.groupBy) {
 		params[@"groupBy"] = self.groupBy;
-	}
-	if (self.dragHandle) {
-		params[@"dragHandle"] = [self.dragHandle getParams];
 	}
 	if (self.liveRedraw) {
 		params[@"liveRedraw"] = self.liveRedraw;
@@ -135,6 +135,12 @@
 	NSNumber *oldValue = _draggableQ3;
 	_draggableQ3 = draggableQ3;
 	[self updateNSObject:oldValue newValue:draggableQ3 propertyName:@"draggableQ3"];
+}
+
+-(void)setDragHandle:(HIDragHandle *)dragHandle {
+	HIDragHandle *oldValue = _dragHandle;
+	_dragHandle = dragHandle;
+	[self updateHIObject:oldValue newValue:dragHandle propertyName:@"dragHandle"];
 }
 
 -(void)setDraggableTarget:(NSNumber *)draggableTarget {
@@ -207,12 +213,6 @@
 	NSString *oldValue = _groupBy;
 	_groupBy = groupBy;
 	[self updateNSObject:oldValue newValue:groupBy propertyName:@"groupBy"];
-}
-
--(void)setDragHandle:(HIDragHandle *)dragHandle {
-	HIDragHandle *oldValue = _dragHandle;
-	_dragHandle = dragHandle;
-	[self updateHIObject:oldValue newValue:dragHandle propertyName:@"dragHandle"];
 }
 
 -(void)setLiveRedraw:(NSNumber *)liveRedraw {

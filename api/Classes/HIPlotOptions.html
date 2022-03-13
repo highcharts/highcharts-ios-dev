@@ -71,6 +71,8 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/arcdiagram">arcdiagram</option>
+		
 		<option value="//api/name/area">area</option>
 		
 		<option value="//api/name/arearange">arearange</option>
@@ -574,6 +576,57 @@
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/variwide/">Variwide chart</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-variwide/inverted/">Inverted variwide chart</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-variwide/datetime/">Variwide columns on a datetime axis</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotOptions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/arcdiagram" title="arcdiagram"></a>
+	<h3 class="method-title"><code><a href="#//api/name/arcdiagram">&nbsp;&nbsp;arcdiagram</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Arc diagram series is a chart drawing style in which the vertices of the chart are positioned along a line on the Euclidean plane and the edges are drawn as a semicircle in one of the two half-planes delimited by the line, or as smooth curves formed by sequences of semicircles. In TypeScript the <code>type</code> option must always be set. Configuration options for the series are given in three levels: 1. Options for all series in a chart are defined in the  <code>plotOptions.series</code> object. 2. Options for all <code>arcdiagram</code> series are defined in  <code>plotOptions.arcdiagram</code>. 3. Options for one single series are given in  <code>the series instance array</code>. <code>Highcharts.chart('container', {   plotOptions: {     series: {       // general options for all series     },     arcdiagram: {       // shared options for all arcdiagram series     }   },   series: [{     // specific options for this series instance     type: 'arcdiagram'   }] });</code></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIArcdiagram *arcdiagram</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/arc-diagram/">Arc Diagram</a></li>
 </ul>
 
 			</div>
@@ -2875,7 +2928,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2021 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2022 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>

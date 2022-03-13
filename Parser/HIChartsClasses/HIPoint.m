@@ -17,6 +17,19 @@
 	copyPoint.dateFormatter = [self.dateFormatter copyWithZone: zone];
 	copyPoint.valuePrefix = [self.valuePrefix copyWithZone: zone];
 	copyPoint.valueDecimals = [self.valueDecimals copyWithZone: zone];
+	copyPoint.category = [self.category copyWithZone: zone];
+	copyPoint.color = [self.color copyWithZone: zone];
+	copyPoint.colorIndex = [self.colorIndex copyWithZone: zone];
+	copyPoint.name = [self.name copyWithZone: zone];
+	copyPoint.percentage = [self.percentage copyWithZone: zone];
+	copyPoint.plotX = [self.plotX copyWithZone: zone];
+	copyPoint.plotY = [self.plotY copyWithZone: zone];
+	copyPoint.selected = [self.selected copyWithZone: zone];
+	copyPoint.sliced = [self.sliced copyWithZone: zone];
+	copyPoint.total = [self.total copyWithZone: zone];
+	copyPoint.visible = [self.visible copyWithZone: zone];
+	copyPoint.x = [self.x copyWithZone: zone];
+	copyPoint.y = [self.y copyWithZone: zone];
 	copyPoint.events = [self.events copyWithZone: zone];
 	return copyPoint;
 }
@@ -45,6 +58,45 @@
 	}
 	if (self.valueDecimals) {
 		params[@"valueDecimals"] = self.valueDecimals;
+	}
+	if (self.category) {
+		params[@"category"] = self.category;
+	}
+	if (self.color) {
+		params[@"color"] = [self.color getData];
+	}
+	if (self.colorIndex) {
+		params[@"colorIndex"] = self.colorIndex;
+	}
+	if (self.name) {
+		params[@"name"] = self.name;
+	}
+	if (self.percentage) {
+		params[@"percentage"] = self.percentage;
+	}
+	if (self.plotX) {
+		params[@"plotX"] = self.plotX;
+	}
+	if (self.plotY) {
+		params[@"plotY"] = self.plotY;
+	}
+	if (self.selected) {
+		params[@"selected"] = self.selected;
+	}
+	if (self.sliced) {
+		params[@"sliced"] = self.sliced;
+	}
+	if (self.total) {
+		params[@"total"] = self.total;
+	}
+	if (self.visible) {
+		params[@"visible"] = self.visible;
+	}
+	if (self.x) {
+		params[@"x"] = self.x;
+	}
+	if (self.y) {
+		params[@"y"] = self.y;
 	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
@@ -94,6 +146,84 @@
 	NSNumber *oldValue = _valueDecimals;
 	_valueDecimals = valueDecimals;
 	[self updateNSObject:oldValue newValue:valueDecimals propertyName:@"valueDecimals"];
+}
+
+-(void)setCategory:(NSString *)category {
+	NSString *oldValue = _category;
+	_category = category;
+	[self updateNSObject:oldValue newValue:category propertyName:@"category"];
+}
+
+-(void)setColor:(HIColor *)color {
+	HIColor *oldValue = _color;
+	_color = color;
+	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
+}
+
+-(void)setColorIndex:(NSNumber *)colorIndex {
+	NSNumber *oldValue = _colorIndex;
+	_colorIndex = colorIndex;
+	[self updateNSObject:oldValue newValue:colorIndex propertyName:@"colorIndex"];
+}
+
+-(void)setName:(NSString *)name {
+	NSString *oldValue = _name;
+	_name = name;
+	[self updateNSObject:oldValue newValue:name propertyName:@"name"];
+}
+
+-(void)setPercentage:(NSNumber *)percentage {
+	NSNumber *oldValue = _percentage;
+	_percentage = percentage;
+	[self updateNSObject:oldValue newValue:percentage propertyName:@"percentage"];
+}
+
+-(void)setPlotX:(NSNumber *)plotX {
+	NSNumber *oldValue = _plotX;
+	_plotX = plotX;
+	[self updateNSObject:oldValue newValue:plotX propertyName:@"plotX"];
+}
+
+-(void)setPlotY:(NSNumber *)plotY {
+	NSNumber *oldValue = _plotY;
+	_plotY = plotY;
+	[self updateNSObject:oldValue newValue:plotY propertyName:@"plotY"];
+}
+
+-(void)setSelected:(NSNumber *)selected {
+	NSNumber *oldValue = _selected;
+	_selected = selected;
+	[self updateNSObject:oldValue newValue:selected propertyName:@"selected"];
+}
+
+-(void)setSliced:(NSNumber *)sliced {
+	NSNumber *oldValue = _sliced;
+	_sliced = sliced;
+	[self updateNSObject:oldValue newValue:sliced propertyName:@"sliced"];
+}
+
+-(void)setTotal:(NSNumber *)total {
+	NSNumber *oldValue = _total;
+	_total = total;
+	[self updateNSObject:oldValue newValue:total propertyName:@"total"];
+}
+
+-(void)setVisible:(NSNumber *)visible {
+	NSNumber *oldValue = _visible;
+	_visible = visible;
+	[self updateNSObject:oldValue newValue:visible propertyName:@"visible"];
+}
+
+-(void)setX:(NSNumber *)x {
+	NSNumber *oldValue = _x;
+	_x = x;
+	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
+}
+
+-(void)setY:(NSNumber *)y {
+	NSNumber *oldValue = _y;
+	_y = y;
+	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }
 
 -(void)setEvents:(HIEvents *)events {

@@ -10,6 +10,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIAttributes *copyAttributes = [[HIAttributes allocWithZone: zone] init];
+	copyAttributes.startOffset = [self.startOffset copyWithZone: zone];
 	copyAttributes.refX = [self.refX copyWithZone: zone];
 	copyAttributes.markerWidth = [self.markerWidth copyWithZone: zone];
 	copyAttributes.refY = [self.refY copyWithZone: zone];
@@ -22,6 +23,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.startOffset) {
+		params[@"startOffset"] = self.startOffset;
+	}
 	if (self.refX) {
 		params[@"refX"] = self.refX;
 	}
@@ -44,6 +48,12 @@
 }
 
 # pragma mark - Setters
+
+-(void)setStartOffset:(NSString *)startOffset {
+	NSString *oldValue = _startOffset;
+	_startOffset = startOffset;
+	[self updateNSObject:oldValue newValue:startOffset propertyName:@"startOffset"];
+}
 
 -(void)setRefX:(NSNumber *)refX {
 	NSNumber *oldValue = _refX;

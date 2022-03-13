@@ -1177,47 +1177,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/drillToCluster" title="drillToCluster"></a>
-	<h3 class="method-title"><code><a href="#//api/name/drillToCluster">&nbsp;&nbsp;drillToCluster</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Fires when the cluster point is clicked and <code>drillToCluster</code> is enabled. One parameter, <code>event</code>, is passed to the function. The default action is to zoom to the cluster points range. This can be prevented by calling <code>event.preventDefault()</code>.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *drillToCluster</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIEvents.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/unselect" title="unselect"></a>
 	<h3 class="method-title"><code><a href="#//api/name/unselect">&nbsp;&nbsp;unselect</a></code>
 </h3>
@@ -1535,7 +1494,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Fires when the mouse enters the area close to the point. One parameter, <code>event</code>, is passed to the function, containing common event information.</p>
+				<p>Fires when the mouse enters the area close to the point. One parameter, <code>event</code>, is passed to the function, containing common event information. Returning <code>false</code> cancels the default behavior, which is to show a tooltip for the point.</p>
 			</div>
 			
 		    
@@ -1661,6 +1620,47 @@
 </ul>
 
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/drillToCluster" title="drillToCluster"></a>
+	<h3 class="method-title"><code><a href="#//api/name/drillToCluster">&nbsp;&nbsp;drillToCluster</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fires when the cluster point is clicked and <code>drillToCluster</code> is enabled. One parameter, <code>event</code>, is passed to the function. The default action is to zoom to the cluster points range. This can be prevented by calling <code>event.preventDefault()</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *drillToCluster</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			

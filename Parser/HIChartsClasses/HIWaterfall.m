@@ -29,6 +29,7 @@
 	copyWaterfall.groupZPadding = [self.groupZPadding copyWithZone: zone];
 	copyWaterfall.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyWaterfall.colors = [self.colors copyWithZone: zone];
+	copyWaterfall.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyWaterfall.threshold = [self.threshold copyWithZone: zone];
 	copyWaterfall.edgeColor = [self.edgeColor copyWithZone: zone];
 	copyWaterfall.centerInCategory = [self.centerInCategory copyWithZone: zone];
@@ -50,7 +51,6 @@
 	copyWaterfall.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyWaterfall.colorKey = [self.colorKey copyWithZone: zone];
 	copyWaterfall.softThreshold = [self.softThreshold copyWithZone: zone];
-	copyWaterfall.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyWaterfall.point = [self.point copyWithZone: zone];
 	copyWaterfall.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyWaterfall.label = [self.label copyWithZone: zone];

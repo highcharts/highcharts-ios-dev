@@ -11,11 +11,12 @@
 	[super copyWithZone:zone];
 	HINavigation *copyNavigation = [[HINavigation allocWithZone: zone] init];
 	copyNavigation.buttonOptions = [self.buttonOptions copyWithZone: zone];
-	copyNavigation.iconsURL = [self.iconsURL copyWithZone: zone];
-	copyNavigation.bindingsClassName = [self.bindingsClassName copyWithZone: zone];
 	copyNavigation.annotationsOptions = [self.annotationsOptions copyWithZone: zone];
+	copyNavigation.bindingsClassName = [self.bindingsClassName copyWithZone: zone];
+	copyNavigation.breadcrumbs = [self.breadcrumbs copyWithZone: zone];
 	copyNavigation.bindings = [self.bindings copyWithZone: zone];
 	copyNavigation.events = [self.events copyWithZone: zone];
+	copyNavigation.iconsURL = [self.iconsURL copyWithZone: zone];
 	copyNavigation.style = [self.style copyWithZone: zone];
 	copyNavigation.inactiveColor = [self.inactiveColor copyWithZone: zone];
 	copyNavigation.enabled = [self.enabled copyWithZone: zone];
@@ -32,20 +33,23 @@
 	if (self.buttonOptions) {
 		params[@"buttonOptions"] = [self.buttonOptions getParams];
 	}
-	if (self.iconsURL) {
-		params[@"iconsURL"] = self.iconsURL;
+	if (self.annotationsOptions) {
+		params[@"annotationsOptions"] = [self.annotationsOptions getParams];
 	}
 	if (self.bindingsClassName) {
 		params[@"bindingsClassName"] = self.bindingsClassName;
 	}
-	if (self.annotationsOptions) {
-		params[@"annotationsOptions"] = [self.annotationsOptions getParams];
+	if (self.breadcrumbs) {
+		params[@"breadcrumbs"] = [self.breadcrumbs getParams];
 	}
 	if (self.bindings) {
 		params[@"bindings"] = [self.bindings getParams];
 	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
+	}
+	if (self.iconsURL) {
+		params[@"iconsURL"] = self.iconsURL;
 	}
 	if (self.style) {
 		params[@"style"] = [self.style getParams];
@@ -79,10 +83,10 @@
 	[self updateHIObject:oldValue newValue:buttonOptions propertyName:@"buttonOptions"];
 }
 
--(void)setIconsURL:(NSString *)iconsURL {
-	NSString *oldValue = _iconsURL;
-	_iconsURL = iconsURL;
-	[self updateNSObject:oldValue newValue:iconsURL propertyName:@"iconsURL"];
+-(void)setAnnotationsOptions:(HIAnnotationsOptions *)annotationsOptions {
+	HIAnnotationsOptions *oldValue = _annotationsOptions;
+	_annotationsOptions = annotationsOptions;
+	[self updateHIObject:oldValue newValue:annotationsOptions propertyName:@"annotationsOptions"];
 }
 
 -(void)setBindingsClassName:(NSString *)bindingsClassName {
@@ -91,10 +95,10 @@
 	[self updateNSObject:oldValue newValue:bindingsClassName propertyName:@"bindingsClassName"];
 }
 
--(void)setAnnotationsOptions:(HIAnnotationsOptions *)annotationsOptions {
-	HIAnnotationsOptions *oldValue = _annotationsOptions;
-	_annotationsOptions = annotationsOptions;
-	[self updateHIObject:oldValue newValue:annotationsOptions propertyName:@"annotationsOptions"];
+-(void)setBreadcrumbs:(HIBreadcrumbs *)breadcrumbs {
+	HIBreadcrumbs *oldValue = _breadcrumbs;
+	_breadcrumbs = breadcrumbs;
+	[self updateHIObject:oldValue newValue:breadcrumbs propertyName:@"breadcrumbs"];
 }
 
 -(void)setBindings:(HIBindings *)bindings {
@@ -107,6 +111,12 @@
 	HIEvents *oldValue = _events;
 	_events = events;
 	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
+}
+
+-(void)setIconsURL:(NSString *)iconsURL {
+	NSString *oldValue = _iconsURL;
+	_iconsURL = iconsURL;
+	[self updateNSObject:oldValue newValue:iconsURL propertyName:@"iconsURL"];
 }
 
 -(void)setStyle:(HICSSObject *)style {

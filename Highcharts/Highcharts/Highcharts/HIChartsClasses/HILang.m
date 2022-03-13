@@ -19,6 +19,7 @@
 	copyLang.exportData = [self.exportData copyWithZone: zone];
 	copyLang.viewFullscreen = [self.viewFullscreen copyWithZone: zone];
 	copyLang.noData = [self.noData copyWithZone: zone];
+	copyLang.mainBreadcrumb = [self.mainBreadcrumb copyWithZone: zone];
 	copyLang.loading = [self.loading copyWithZone: zone];
 	copyLang.numericSymbols = [self.numericSymbols copyWithZone: zone];
 	copyLang.printChart = [self.printChart copyWithZone: zone];
@@ -80,6 +81,9 @@
 	}
 	if (self.noData) {
 		params[@"noData"] = self.noData;
+	}
+	if (self.mainBreadcrumb) {
+		params[@"mainBreadcrumb"] = self.mainBreadcrumb;
 	}
 	if (self.loading) {
 		params[@"loading"] = self.loading;
@@ -234,6 +238,12 @@
 	NSString *oldValue = _noData;
 	_noData = noData;
 	[self updateNSObject:oldValue newValue:noData propertyName:@"noData"];
+}
+
+-(void)setMainBreadcrumb:(NSString *)mainBreadcrumb {
+	NSString *oldValue = _mainBreadcrumb;
+	_mainBreadcrumb = mainBreadcrumb;
+	[self updateNSObject:oldValue newValue:mainBreadcrumb propertyName:@"mainBreadcrumb"];
 }
 
 -(void)setLoading:(NSString *)loading {

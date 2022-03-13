@@ -19,6 +19,7 @@
 	copyLang.exportData = [self.exportData copyWithZone: zone];
 	copyLang.viewFullscreen = [self.viewFullscreen copyWithZone: zone];
 	copyLang.noData = [self.noData copyWithZone: zone];
+	copyLang.mainBreadcrumb = [self.mainBreadcrumb copyWithZone: zone];
 	copyLang.loading = [self.loading copyWithZone: zone];
 	copyLang.numericSymbols = [self.numericSymbols copyWithZone: zone];
 	copyLang.printChart = [self.printChart copyWithZone: zone];
@@ -81,6 +82,9 @@
 	if (self.noData) {
 		params[@"noData"] = self.noData;
 	}
+	if (self.mainBreadcrumb) {
+		params[@"mainBreadcrumb"] = self.mainBreadcrumb;
+	}
 	if (self.loading) {
 		params[@"loading"] = self.loading;
 	}
@@ -118,7 +122,6 @@
 		params[@"downloadSVG"] = self.downloadSVG;
 	}
 	if (self.drillUpText) {
-		params[@"drillUpText"] = self.drillUpText;
 	}
 	if (self.viewData) {
 		params[@"viewData"] = self.viewData;
@@ -236,6 +239,12 @@
 	[self updateNSObject:oldValue newValue:noData propertyName:@"noData"];
 }
 
+-(void)setMainBreadcrumb:(NSString *)mainBreadcrumb {
+	NSString *oldValue = _mainBreadcrumb;
+	_mainBreadcrumb = mainBreadcrumb;
+	[self updateNSObject:oldValue newValue:mainBreadcrumb propertyName:@"mainBreadcrumb"];
+}
+
 -(void)setLoading:(NSString *)loading {
 	NSString *oldValue = _loading;
 	_loading = loading;
@@ -272,8 +281,8 @@
 	[self updateNSObject:oldValue newValue:downloadSVG propertyName:@"downloadSVG"];
 }
 
--(void)setDrillUpText:(NSString *)drillUpText {
-	NSString *oldValue = _drillUpText;
+-(void)setDrillUpText:(id)drillUpText {
+	id oldValue = _drillUpText;
 	_drillUpText = drillUpText;
 	[self updateNSObject:oldValue newValue:drillUpText propertyName:@"drillUpText"];
 }

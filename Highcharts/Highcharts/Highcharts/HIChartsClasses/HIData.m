@@ -65,6 +65,9 @@
 	copyData.legendIndex = [self.legendIndex copyWithZone: zone];
 	copyData.marker = [self.marker copyWithZone: zone];
 	copyData.label = [self.label copyWithZone: zone];
+	copyData.from = [self.from copyWithZone: zone];
+	copyData.weight = [self.weight copyWithZone: zone];
+	copyData.to = [self.to copyWithZone: zone];
 	copyData.direction = [self.direction copyWithZone: zone];
 	copyData.length = [self.length copyWithZone: zone];
 	copyData.target = [self.target copyWithZone: zone];
@@ -80,10 +83,7 @@
 	copyData.isIntermediateSum = [self.isIntermediateSum copyWithZone: zone];
 	copyData.isSum = [self.isSum copyWithZone: zone];
 	copyData.sliced = [self.sliced copyWithZone: zone];
-	copyData.to = [self.to copyWithZone: zone];
-	copyData.from = [self.from copyWithZone: zone];
 	copyData.gradientForSides = [self.gradientForSides copyWithZone: zone];
-	copyData.weight = [self.weight copyWithZone: zone];
 	copyData.innerRadius = [self.innerRadius copyWithZone: zone];
 	copyData.radius = [self.radius copyWithZone: zone];
 	copyData.outgoing = [self.outgoing copyWithZone: zone];
@@ -292,6 +292,15 @@
 	if (self.label) {
 		params[@"label"] = self.label;
 	}
+	if (self.from) {
+		params[@"from"] = self.from;
+	}
+	if (self.weight) {
+		params[@"weight"] = self.weight;
+	}
+	if (self.to) {
+		params[@"to"] = self.to;
+	}
 	if (self.direction) {
 		params[@"direction"] = self.direction;
 	}
@@ -337,17 +346,8 @@
 	if (self.sliced) {
 		params[@"sliced"] = self.sliced;
 	}
-	if (self.to) {
-		params[@"to"] = self.to;
-	}
-	if (self.from) {
-		params[@"from"] = self.from;
-	}
 	if (self.gradientForSides) {
 		params[@"gradientForSides"] = self.gradientForSides;
-	}
-	if (self.weight) {
-		params[@"weight"] = self.weight;
 	}
 	if (self.innerRadius) {
 		params[@"innerRadius"] = self.innerRadius;
@@ -723,6 +723,24 @@
 	[self updateNSObject:oldValue newValue:label propertyName:@"label"];
 }
 
+-(void)setFrom:(NSString *)from {
+	NSString *oldValue = _from;
+	_from = from;
+	[self updateNSObject:oldValue newValue:from propertyName:@"from"];
+}
+
+-(void)setWeight:(NSNumber *)weight {
+	NSNumber *oldValue = _weight;
+	_weight = weight;
+	[self updateNSObject:oldValue newValue:weight propertyName:@"weight"];
+}
+
+-(void)setTo:(NSString *)to {
+	NSString *oldValue = _to;
+	_to = to;
+	[self updateNSObject:oldValue newValue:to propertyName:@"to"];
+}
+
 -(void)setDirection:(NSNumber *)direction {
 	NSNumber *oldValue = _direction;
 	_direction = direction;
@@ -813,28 +831,10 @@
 	[self updateNSObject:oldValue newValue:sliced propertyName:@"sliced"];
 }
 
--(void)setTo:(NSString *)to {
-	NSString *oldValue = _to;
-	_to = to;
-	[self updateNSObject:oldValue newValue:to propertyName:@"to"];
-}
-
--(void)setFrom:(NSString *)from {
-	NSString *oldValue = _from;
-	_from = from;
-	[self updateNSObject:oldValue newValue:from propertyName:@"from"];
-}
-
 -(void)setGradientForSides:(NSNumber *)gradientForSides {
 	NSNumber *oldValue = _gradientForSides;
 	_gradientForSides = gradientForSides;
 	[self updateNSObject:oldValue newValue:gradientForSides propertyName:@"gradientForSides"];
-}
-
--(void)setWeight:(NSNumber *)weight {
-	NSNumber *oldValue = _weight;
-	_weight = weight;
-	[self updateNSObject:oldValue newValue:weight propertyName:@"weight"];
 }
 
 -(void)setInnerRadius:(id)innerRadius {

@@ -19,7 +19,7 @@
 	copySunburst.rootId = [self.rootId copyWithZone: zone];
 	copySunburst.levelSize = [self.levelSize copyWithZone: zone];
 	copySunburst.center = [self.center copyWithZone: zone];
-	copySunburst.traverseUpButton = [self.traverseUpButton copyWithZone: zone];
+	copySunburst.breadcrumbs = [self.breadcrumbs copyWithZone: zone];
 	copySunburst.slicedOffset = [self.slicedOffset copyWithZone: zone];
 	copySunburst.levels = [self.levels copyWithZone: zone];
 	copySunburst.dataLabels = [self.dataLabels copyWithZone: zone];
@@ -95,8 +95,8 @@
 		}
 		params[@"center"] = array;
 	}
-	if (self.traverseUpButton) {
-		params[@"traverseUpButton"] = [self.traverseUpButton getParams];
+	if (self.breadcrumbs) {
+		params[@"breadcrumbs"] = [self.breadcrumbs getParams];
 	}
 	if (self.slicedOffset) {
 		params[@"slicedOffset"] = self.slicedOffset;
@@ -170,10 +170,10 @@
 	[self updateArrayObject:oldValue newValue:center propertyName:@"center"];
 }
 
--(void)setTraverseUpButton:(HITraverseUpButton *)traverseUpButton {
-	HITraverseUpButton *oldValue = _traverseUpButton;
-	_traverseUpButton = traverseUpButton;
-	[self updateHIObject:oldValue newValue:traverseUpButton propertyName:@"traverseUpButton"];
+-(void)setBreadcrumbs:(HIBreadcrumbs *)breadcrumbs {
+	HIBreadcrumbs *oldValue = _breadcrumbs;
+	_breadcrumbs = breadcrumbs;
+	[self updateHIObject:oldValue newValue:breadcrumbs propertyName:@"breadcrumbs"];
 }
 
 -(void)setSlicedOffset:(NSNumber *)slicedOffset {

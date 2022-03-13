@@ -79,7 +79,7 @@
 		
 		<option value="//api/name/animation">animation</option>
 		
-		<option value="//api/name/drillUpButton">drillUpButton</option>
+		<option value="//api/name/breadcrumbs">breadcrumbs</option>
 		
 		<option value="//api/name/series">series</option>
 		
@@ -196,8 +196,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/series" title="series"></a>
-	<h3 class="method-title"><code><a href="#//api/name/series">&nbsp;&nbsp;series</a></code>
+	<a name="//api/name/breadcrumbs" title="breadcrumbs"></a>
+	<h3 class="method-title"><code><a href="#//api/name/breadcrumbs">&nbsp;&nbsp;breadcrumbs</a></code>
 </h3>
 
 	<div class="method-info">
@@ -207,12 +207,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>An array of series configurations for the drill down. Each series configuration uses the same syntax as the <code>series</code> option set. These drilldown series are hidden by default. The drilldown series is linked to the parent series' point by its <code>id</code>.</p>
+				<p>Options for the breadcrumbs, the navigation at the top leading the way up through the drilldown levels.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray *series</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIBreadcrumbs *breadcrumbs</code></div>
 
 		    
 			
@@ -331,8 +331,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/drillUpButton" title="drillUpButton"></a>
-	<h3 class="method-title"><code><a href="#//api/name/drillUpButton">&nbsp;&nbsp;drillUpButton</a></code>
+	<a name="//api/name/series" title="series"></a>
+	<h3 class="method-title"><code><a href="#//api/name/series">&nbsp;&nbsp;series</a></code>
 </h3>
 
 	<div class="method-info">
@@ -342,12 +342,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Options for the drill up button that appears when drilling down on a series. The text for the button is defined in <code>lang.drillUpText</code>.</p>
+				<p>An array of series configurations for the drill down. Each series configuration uses the same syntax as the <code>series</code> option set. These drilldown series are hidden by default. The drilldown series is linked to the parent series' point by its <code>id</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDrillUpButton *drillUpButton</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray *series</code></div>
 
 		    
 			
@@ -356,16 +356,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/drilldown/drillupbutton/">Drill up button</a></li>
-</ul>
-
-			</div>
 			
 
 			

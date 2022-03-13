@@ -355,6 +355,10 @@ Whether to position data labels alternately. For example, if `distance` is set e
 @property(nonatomic, readwrite) NSNumber *width;
 @property(nonatomic, readwrite) NSNumber *zIndex;
 /**
+Options for a _link_ label text which should follow link connection. Border and background are disabled for a label that follows a path. **Note:** Only SVG-based renderer supports this option. Setting `useHTML` to true will disable this option.
+*/
+@property(nonatomic, readwrite) HILinkTextPath *linkTextPath;
+/**
 The [format string](https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting) specifying what to show for _links_ in the networkgraph. (Default: `undefined`)
 */
 @property(nonatomic, readwrite) NSString *linkFormat;
@@ -362,10 +366,6 @@ The [format string](https://www.highcharts.com/docs/chart-concepts/labels-and-st
 Callback to format data labels for _links_ in the sankey diagram. The `linkFormat` option takes precedence over the `linkFormatter`.
 */
 @property(nonatomic, readwrite) HIFunction *linkFormatter;
-/**
-Options for a _link_ label text which should follow link connection. Border and background are disabled for a label that follows a path. **Note:** Only SVG-based renderer supports this option. Setting `useHTML` to true will disable this option.
-*/
-@property(nonatomic, readwrite) HILinkTextPath *linkTextPath;
 
 -(NSDictionary *)getParams;
 

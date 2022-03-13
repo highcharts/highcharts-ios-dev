@@ -71,6 +71,8 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/alignThresholds">alignThresholds</option>
+		
 		<option value="//api/name/alignTicks">alignTicks</option>
 		
 		<option value="//api/name/animation">animation</option>
@@ -502,7 +504,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>When using multiple axis, the ticks of two or more opposite axes will automatically be aligned by adding ticks to the axis or axes with the least ticks, as if <code>tickAmount</code> were specified. This can be prevented by setting <code>alignTicks</code> to false. If the grid lines look messy, it&rsquo;s a good idea to hide them for the secondary axis by setting <code>gridLineWidth</code> to 0. If <code>startOnTick</code> or <code>endOnTick</code> in an Axis options are set to false, then the <code>alignTicks</code> will be disabled for the Axis. Disabled for logarithmic axes.</p>
+				<p>When using multiple axes, the ticks of two or more opposite axes will automatically be aligned by adding ticks to the axis or axes with the least ticks, as if <code>tickAmount</code> were specified. This can be prevented by setting <code>alignTicks</code> to false. If the grid lines look messy, it&rsquo;s a good idea to hide them for the secondary axis by setting <code>gridLineWidth</code> to 0. If <code>startOnTick</code> or <code>endOnTick</code> in the axis options are set to false, then the <code>alignTicks</code> will be disabled for the axis. Disabled for logarithmic axes.</p>
 			</div>
 			
 		    
@@ -730,6 +732,57 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/plotbordercolor/">Blue border</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChart.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/alignThresholds" title="alignThresholds"></a>
+	<h3 class="method-title"><code><a href="#//api/name/alignThresholds">&nbsp;&nbsp;alignThresholds</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When using multiple axes, align the thresholds. When this is true, other ticks will also be aligned. Note that for line series and some other series types, the <code>threshold</code> option is set to <code>null</code> by default. This will in turn cause their y-axis to not have a threshold. In order to avoid that, set the series <code>threshold</code> to 0 or another number. If <code>startOnTick</code> or <code>endOnTick</code> in the axis options are set to false, or if the axis is logarithmic, the threshold will not be aligned.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id alignThresholds</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/alignthresholds/">Set to true</a></li>
 </ul>
 
 			</div>
@@ -2789,7 +2842,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2021 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2022 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>

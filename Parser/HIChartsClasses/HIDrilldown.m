@@ -11,10 +11,10 @@
 	[super copyWithZone:zone];
 	HIDrilldown *copyDrilldown = [[HIDrilldown allocWithZone: zone] init];
 	copyDrilldown.activeDataLabelStyle = [self.activeDataLabelStyle copyWithZone: zone];
-	copyDrilldown.series = [self.series copyWithZone: zone];
+	copyDrilldown.breadcrumbs = [self.breadcrumbs copyWithZone: zone];
 	copyDrilldown.allowPointDrilldown = [self.allowPointDrilldown copyWithZone: zone];
 	copyDrilldown.animation = [self.animation copyWithZone: zone];
-	copyDrilldown.drillUpButton = [self.drillUpButton copyWithZone: zone];
+	copyDrilldown.series = [self.series copyWithZone: zone];
 	copyDrilldown.activeAxisLabelStyle = [self.activeAxisLabelStyle copyWithZone: zone];
 	return copyDrilldown;
 }
@@ -24,6 +24,15 @@
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.activeDataLabelStyle) {
 		params[@"activeDataLabelStyle"] = [self.activeDataLabelStyle getParams];
+	}
+	if (self.breadcrumbs) {
+		params[@"breadcrumbs"] = [self.breadcrumbs getParams];
+	}
+	if (self.allowPointDrilldown) {
+		params[@"allowPointDrilldown"] = self.allowPointDrilldown;
+	}
+	if (self.animation) {
+		params[@"animation"] = [self.animation getParams];
 	}
 	if (self.series) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -36,15 +45,6 @@
 			}
 		}
 		params[@"series"] = array;
-	}
-	if (self.allowPointDrilldown) {
-		params[@"allowPointDrilldown"] = self.allowPointDrilldown;
-	}
-	if (self.animation) {
-		params[@"animation"] = [self.animation getParams];
-	}
-	if (self.drillUpButton) {
-		params[@"drillUpButton"] = [self.drillUpButton getParams];
 	}
 	if (self.activeAxisLabelStyle) {
 		params[@"activeAxisLabelStyle"] = [self.activeAxisLabelStyle getParams];
@@ -60,10 +60,10 @@
 	[self updateHIObject:oldValue newValue:activeDataLabelStyle propertyName:@"activeDataLabelStyle"];
 }
 
--(void)setSeries:(NSArray *)series {
-	NSArray *oldValue = _series;
-	_series = series;
-	[self updateArrayObject:oldValue newValue:series propertyName:@"series"];
+-(void)setBreadcrumbs:(HIBreadcrumbs *)breadcrumbs {
+	HIBreadcrumbs *oldValue = _breadcrumbs;
+	_breadcrumbs = breadcrumbs;
+	[self updateHIObject:oldValue newValue:breadcrumbs propertyName:@"breadcrumbs"];
 }
 
 -(void)setAllowPointDrilldown:(NSNumber *)allowPointDrilldown {
@@ -78,10 +78,10 @@
 	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
--(void)setDrillUpButton:(HIDrillUpButton *)drillUpButton {
-	HIDrillUpButton *oldValue = _drillUpButton;
-	_drillUpButton = drillUpButton;
-	[self updateHIObject:oldValue newValue:drillUpButton propertyName:@"drillUpButton"];
+-(void)setSeries:(NSArray *)series {
+	NSArray *oldValue = _series;
+	_series = series;
+	[self updateArrayObject:oldValue newValue:series propertyName:@"series"];
 }
 
 -(void)setActiveAxisLabelStyle:(HICSSObject *)activeAxisLabelStyle {
