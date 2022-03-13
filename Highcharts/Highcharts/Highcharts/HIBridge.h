@@ -205,3 +205,5 @@
 #import "HIColor.h"
 #import "HIFunction.h"
 #import "HIOptions.h"
+#import "HIDrillUpButton.h"
+#import "HITraverseUpButton.h"
