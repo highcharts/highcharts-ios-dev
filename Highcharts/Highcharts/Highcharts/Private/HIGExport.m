@@ -33,7 +33,7 @@
     } else if ([params hasPrefix:@"data:application/pdf"]) {
         filePath = [docPath stringByAppendingPathComponent:[fileName stringByAppendingString:@".pdf"]];
 
-        NSString *pdfBase64 = [params stringByReplacingOccurrencesOfString:@"data:application/pdf;base64," withString:@""];
+        NSString *pdfBase64 = [params stringByReplacingOccurrencesOfString:@"data:application/pdf;filename=generated.pdf;base64," withString:@""];
         NSData *pdfData = [[NSData alloc] initWithBase64EncodedString:pdfBase64 options:NSDataBase64DecodingIgnoreUnknownCharacters];
 
         isWrite = [pdfData writeToFile:filePath options:NSDataWritingAtomic error:&error];

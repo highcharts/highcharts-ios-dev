@@ -370,8 +370,25 @@ static NSBundle *highchartsBundle = nil;
 }
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction preferences:(WKWebpagePreferences *)preferences decisionHandler:(void (^)(WKNavigationActionPolicy, WKWebpagePreferences * _Nonnull))decisionHandler  API_AVAILABLE(ios(13.0)) {
-  
-  if (@available(iOS 15.0, *)) {
+
+  NSURL *url = navigationAction.request.URL;
+
+  // Open taped link in external browser.
+  if ([url.scheme isEqualToString:@"http"] || [url.scheme isEqualToString:@"https"]) {
+    BOOL openExternalPage = navigationAction.navigationType == WKNavigationTypeOther;
+    if (openExternalPage) {
+      [[UIApplication sharedApplication] openURL:url];
+    }
+
+    decisionHandler(WKNavigationActionPolicyAllow, preferences);
+  } else if ([url.scheme isEqualToString:@"data"]) {
+    HIGExport *export = [[HIGExport alloc] init];
+    export.viewController = self.viewController;
+      
+    [export response:navigationAction.request.URL.absoluteString filename:self.options.exporting.filename];
+
+    decisionHandler(WKNavigationActionPolicyCancel, preferences);
+  } else if (@available(iOS 15.0, *)) {
     if (navigationAction.shouldPerformDownload) {
       decisionHandler(WKNavigationActionPolicyDownload, preferences);
     } else {
@@ -387,25 +404,23 @@ static NSBundle *highchartsBundle = nil;
     NSURL *url = navigationAction.request.URL;
     
     // Open taped link in external browser.
-    if ([url.scheme isEqualToString:@"http"]) {
-        BOOL openExternalPage = navigationAction.navigationType == WKNavigationTypeOther;
-        if (openExternalPage) {
-            [[UIApplication sharedApplication] openURL:url];
-        }
+    if ([url.scheme isEqualToString:@"http"] || [url.scheme isEqualToString:@"https"]) {
+      BOOL openExternalPage = navigationAction.navigationType == WKNavigationTypeOther;
+      if (openExternalPage) {
+        [[UIApplication sharedApplication] openURL:url];
+      }
+
+      decisionHandler(WKNavigationActionPolicyAllow);
+    } else if ([url.scheme isEqualToString:@"data"]) {
+      HIGExport *export = [[HIGExport alloc] init];
+      export.viewController = self.viewController;
+      
+      [export response:url.absoluteString filename:self.options.exporting.filename];
+      
+      decisionHandler(WKNavigationActionPolicyCancel);
+    } else {
+      decisionHandler(WKNavigationActionPolicyAllow);
     }
-    
-    if ([url.scheme isEqualToString:@"data"]) {
-        decisionHandler(WKNavigationActionPolicyCancel);
-        
-        HIGExport *export = [[HIGExport alloc] init];
-        export.viewController = self.viewController;
-        
-        [export response:url.absoluteString filename:self.options.exporting.filename];
-        
-        return;
-    }
-    
-    decisionHandler(WKNavigationActionPolicyAllow);
 }
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
