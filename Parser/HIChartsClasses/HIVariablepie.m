@@ -36,6 +36,7 @@
 	copyVariablepie.colors = [self.colors copyWithZone: zone];
 	copyVariablepie.size = [self.size copyWithZone: zone];
 	copyVariablepie.borderColor = [self.borderColor copyWithZone: zone];
+	copyVariablepie.thickness = [self.thickness copyWithZone: zone];
 	copyVariablepie.minSize = [self.minSize copyWithZone: zone];
 	copyVariablepie.fillColor = [self.fillColor copyWithZone: zone];
 	copyVariablepie.startAngle = [self.startAngle copyWithZone: zone];
@@ -109,6 +110,9 @@
 	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
+	}
+	if (self.thickness) {
+		params[@"thickness"] = self.thickness;
 	}
 	if (self.minSize) {
 		params[@"minSize"] = self.minSize;
@@ -203,6 +207,12 @@
 	HIColor *oldValue = _borderColor;
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setThickness:(NSNumber *)thickness {
+	NSNumber *oldValue = _thickness;
+	_thickness = thickness;
+	[self updateNSObject:oldValue newValue:thickness propertyName:@"thickness"];
 }
 
 -(void)setMinSize:(id)minSize {

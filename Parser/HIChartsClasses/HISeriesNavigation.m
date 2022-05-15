@@ -10,6 +10,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HISeriesNavigation *copySeriesNavigation = [[HISeriesNavigation allocWithZone: zone] init];
+	copySeriesNavigation.rememberPointFocus = [self.rememberPointFocus copyWithZone: zone];
 	copySeriesNavigation.skipNullPoints = [self.skipNullPoints copyWithZone: zone];
 	copySeriesNavigation.mode = [self.mode copyWithZone: zone];
 	copySeriesNavigation.pointNavigationEnabledThreshold = [self.pointNavigationEnabledThreshold copyWithZone: zone];
@@ -19,6 +20,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.rememberPointFocus) {
+		params[@"rememberPointFocus"] = self.rememberPointFocus;
+	}
 	if (self.skipNullPoints) {
 		params[@"skipNullPoints"] = self.skipNullPoints;
 	}
@@ -32,6 +36,12 @@
 }
 
 # pragma mark - Setters
+
+-(void)setRememberPointFocus:(NSNumber *)rememberPointFocus {
+	NSNumber *oldValue = _rememberPointFocus;
+	_rememberPointFocus = rememberPointFocus;
+	[self updateNSObject:oldValue newValue:rememberPointFocus propertyName:@"rememberPointFocus"];
+}
 
 -(void)setSkipNullPoints:(NSNumber *)skipNullPoints {
 	NSNumber *oldValue = _skipNullPoints;

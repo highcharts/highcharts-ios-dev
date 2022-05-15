@@ -22,6 +22,7 @@
 	copySeries.zIndex = [self.zIndex copyWithZone: zone];
 	copySeries.descriptionFormatter = [self.descriptionFormatter copyWithZone: zone];
 	copySeries.pointDescriptionEnabledThreshold = [self.pointDescriptionEnabledThreshold copyWithZone: zone];
+	copySeries.descriptionFormat = [self.descriptionFormat copyWithZone: zone];
 	copySeries.describeSingleSeries = [self.describeSingleSeries copyWithZone: zone];
 	copySeries.definition = [self.definition copyWithZone: zone];
 	copySeries.xAxisDescription = [self.xAxisDescription copyWithZone: zone];
@@ -138,6 +139,9 @@
 	}
 	if (self.pointDescriptionEnabledThreshold) {
 		params[@"pointDescriptionEnabledThreshold"] = self.pointDescriptionEnabledThreshold;
+	}
+	if (self.descriptionFormat) {
+		params[@"descriptionFormat"] = self.descriptionFormat;
 	}
 	if (self.describeSingleSeries) {
 		params[@"describeSingleSeries"] = self.describeSingleSeries;
@@ -436,6 +440,12 @@
 	NSNumber *oldValue = _pointDescriptionEnabledThreshold;
 	_pointDescriptionEnabledThreshold = pointDescriptionEnabledThreshold;
 	[self updateNSObject:oldValue newValue:pointDescriptionEnabledThreshold propertyName:@"pointDescriptionEnabledThreshold"];
+}
+
+-(void)setDescriptionFormat:(NSString *)descriptionFormat {
+	NSString *oldValue = _descriptionFormat;
+	_descriptionFormat = descriptionFormat;
+	[self updateNSObject:oldValue newValue:descriptionFormat propertyName:@"descriptionFormat"];
 }
 
 -(void)setDescribeSingleSeries:(NSNumber *)describeSingleSeries {

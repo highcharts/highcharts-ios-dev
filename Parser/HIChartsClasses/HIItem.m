@@ -32,6 +32,7 @@
 	copyItem.colors = [self.colors copyWithZone: zone];
 	copyItem.size = [self.size copyWithZone: zone];
 	copyItem.tooltip = [self.tooltip copyWithZone: zone];
+	copyItem.thickness = [self.thickness copyWithZone: zone];
 	copyItem.minSize = [self.minSize copyWithZone: zone];
 	copyItem.fillColor = [self.fillColor copyWithZone: zone];
 	copyItem.events = [self.events copyWithZone: zone];
@@ -102,6 +103,9 @@
 	}
 	if (self.size) {
 		params[@"size"] = self.size;
+	}
+	if (self.thickness) {
+		params[@"thickness"] = self.thickness;
 	}
 	if (self.minSize) {
 		params[@"minSize"] = self.minSize;
@@ -178,6 +182,12 @@
 	id oldValue = _size;
 	_size = size;
 	[self updateNSObject:oldValue newValue:size propertyName:@"size"];
+}
+
+-(void)setThickness:(NSNumber *)thickness {
+	NSNumber *oldValue = _thickness;
+	_thickness = thickness;
+	[self updateNSObject:oldValue newValue:thickness propertyName:@"thickness"];
 }
 
 -(void)setMinSize:(id)minSize {
