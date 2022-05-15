@@ -28,7 +28,6 @@
 	copyWordcloud.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyWordcloud.placementStrategy = [self.placementStrategy copyWithZone: zone];
 	copyWordcloud.borderRadius = [self.borderRadius copyWithZone: zone];
-	copyWordcloud.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyWordcloud.states = [self.states copyWithZone: zone];
 	copyWordcloud.colors = [self.colors copyWithZone: zone];
 	copyWordcloud.borderColor = [self.borderColor copyWithZone: zone];

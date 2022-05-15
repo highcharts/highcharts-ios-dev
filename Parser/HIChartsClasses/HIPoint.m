@@ -13,6 +13,7 @@
 	copyPoint.descriptionFormatter = [self.descriptionFormatter copyWithZone: zone];
 	copyPoint.valueDescriptionFormat = [self.valueDescriptionFormat copyWithZone: zone];
 	copyPoint.valueSuffix = [self.valueSuffix copyWithZone: zone];
+	copyPoint.describeNull = [self.describeNull copyWithZone: zone];
 	copyPoint.dateFormat = [self.dateFormat copyWithZone: zone];
 	copyPoint.dateFormatter = [self.dateFormatter copyWithZone: zone];
 	copyPoint.valuePrefix = [self.valuePrefix copyWithZone: zone];
@@ -46,6 +47,9 @@
 	}
 	if (self.valueSuffix) {
 		params[@"valueSuffix"] = self.valueSuffix;
+	}
+	if (self.describeNull) {
+		params[@"describeNull"] = self.describeNull;
 	}
 	if (self.dateFormat) {
 		params[@"dateFormat"] = self.dateFormat;
@@ -122,6 +126,12 @@
 	NSString *oldValue = _valueSuffix;
 	_valueSuffix = valueSuffix;
 	[self updateNSObject:oldValue newValue:valueSuffix propertyName:@"valueSuffix"];
+}
+
+-(void)setDescribeNull:(NSNumber *)describeNull {
+	NSNumber *oldValue = _describeNull;
+	_describeNull = describeNull;
+	[self updateNSObject:oldValue newValue:describeNull propertyName:@"describeNull"];
 }
 
 -(void)setDateFormat:(NSString *)dateFormat {

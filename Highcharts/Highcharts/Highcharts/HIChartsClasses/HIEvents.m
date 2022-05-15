@@ -21,9 +21,11 @@
 	copyEvents.click = [self.click copyWithZone: zone];
 	copyEvents.mousemove = [self.mousemove copyWithZone: zone];
 	copyEvents.load = [self.load copyWithZone: zone];
+	copyEvents.fullscreenOpen = [self.fullscreenOpen copyWithZone: zone];
 	copyEvents.selection = [self.selection copyWithZone: zone];
 	copyEvents.render = [self.render copyWithZone: zone];
 	copyEvents.addSeries = [self.addSeries copyWithZone: zone];
+	copyEvents.fullscreenClose = [self.fullscreenClose copyWithZone: zone];
 	copyEvents.drillup = [self.drillup copyWithZone: zone];
 	copyEvents.beforePrint = [self.beforePrint copyWithZone: zone];
 	copyEvents.drillupall = [self.drillupall copyWithZone: zone];
@@ -91,6 +93,9 @@
 	if (self.load) {
 		params[@"load"] = [self.load getFunction];
 	}
+	if (self.fullscreenOpen) {
+		params[@"fullscreenOpen"] = [self.fullscreenOpen getFunction];
+	}
 	if (self.selection) {
 		params[@"selection"] = [self.selection getFunction];
 	}
@@ -99,6 +104,9 @@
 	}
 	if (self.addSeries) {
 		params[@"addSeries"] = [self.addSeries getFunction];
+	}
+	if (self.fullscreenClose) {
+		params[@"fullscreenClose"] = [self.fullscreenClose getFunction];
 	}
 	if (self.drillup) {
 		params[@"drillup"] = [self.drillup getFunction];
@@ -255,6 +263,12 @@
 	[self updateHIObject:oldValue newValue:load propertyName:@"load"];
 }
 
+-(void)setFullscreenOpen:(HIFunction *)fullscreenOpen {
+	HIFunction *oldValue = _fullscreenOpen;
+	_fullscreenOpen = fullscreenOpen;
+	[self updateHIObject:oldValue newValue:fullscreenOpen propertyName:@"fullscreenOpen"];
+}
+
 -(void)setSelection:(HIFunction *)selection {
 	HIFunction *oldValue = _selection;
 	_selection = selection;
@@ -271,6 +285,12 @@
 	HIFunction *oldValue = _addSeries;
 	_addSeries = addSeries;
 	[self updateHIObject:oldValue newValue:addSeries propertyName:@"addSeries"];
+}
+
+-(void)setFullscreenClose:(HIFunction *)fullscreenClose {
+	HIFunction *oldValue = _fullscreenClose;
+	_fullscreenClose = fullscreenClose;
+	[self updateHIObject:oldValue newValue:fullscreenClose propertyName:@"fullscreenClose"];
 }
 
 -(void)setDrillup:(HIFunction *)drillup {

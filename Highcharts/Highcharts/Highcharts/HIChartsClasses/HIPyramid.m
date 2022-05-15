@@ -38,6 +38,7 @@
 	copyPyramid.colors = [self.colors copyWithZone: zone];
 	copyPyramid.borderColor = [self.borderColor copyWithZone: zone];
 	copyPyramid.tooltip = [self.tooltip copyWithZone: zone];
+	copyPyramid.thickness = [self.thickness copyWithZone: zone];
 	copyPyramid.minSize = [self.minSize copyWithZone: zone];
 	copyPyramid.fillColor = [self.fillColor copyWithZone: zone];
 	copyPyramid.startAngle = [self.startAngle copyWithZone: zone];
@@ -117,6 +118,9 @@
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
+	if (self.thickness) {
+		params[@"thickness"] = self.thickness;
+	}
 	if (self.minSize) {
 		params[@"minSize"] = self.minSize;
 	}
@@ -195,6 +199,12 @@
 	HIColor *oldValue = _borderColor;
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setThickness:(NSNumber *)thickness {
+	NSNumber *oldValue = _thickness;
+	_thickness = thickness;
+	[self updateNSObject:oldValue newValue:thickness propertyName:@"thickness"];
 }
 
 -(void)setMinSize:(id)minSize {

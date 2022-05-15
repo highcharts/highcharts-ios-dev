@@ -32,6 +32,7 @@
 	copySunburst.size = [self.size copyWithZone: zone];
 	copySunburst.borderColor = [self.borderColor copyWithZone: zone];
 	copySunburst.tooltip = [self.tooltip copyWithZone: zone];
+	copySunburst.thickness = [self.thickness copyWithZone: zone];
 	copySunburst.fillColor = [self.fillColor copyWithZone: zone];
 	copySunburst.startAngle = [self.startAngle copyWithZone: zone];
 	copySunburst.events = [self.events copyWithZone: zone];
@@ -132,6 +133,9 @@
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
+	if (self.thickness) {
+		params[@"thickness"] = self.thickness;
+	}
 	if (self.fillColor) {
 		params[@"fillColor"] = [self.fillColor getData];
 	}
@@ -216,6 +220,12 @@
 	HIColor *oldValue = _borderColor;
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
+}
+
+-(void)setThickness:(NSNumber *)thickness {
+	NSNumber *oldValue = _thickness;
+	_thickness = thickness;
+	[self updateNSObject:oldValue newValue:thickness propertyName:@"thickness"];
 }
 
 -(void)setFillColor:(HIColor *)fillColor {

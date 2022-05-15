@@ -30,13 +30,13 @@ Here we present how to create basic chart and place it in your project.
 - First of all download Highcharts xcframework from here: [Highcharts](https://github.com/highcharts/highcharts-ios/tree/master/XCFramework) 
 or by using **Cocoapods** by adding 
     ```
-    pod 'Highcharts', '~> 10.0.0.1'
+    pod 'Highcharts', '~> 10.1.0'
     ```
     to your Podfile
     
     or **Carthage** by adding
     ```
-    github "https://github.com/highcharts/highcharts-ios" >= 10.0.0.1
+    github "https://github.com/highcharts/highcharts-ios" >= 10.1.0
     ```
     to your Cartfile
     
@@ -221,10 +221,10 @@ plotOptions.series.point = HIPoint()
 plotOptions.series.point.events = HIEvents()
     
 let clickFunction = HIFunction(closure: { [weak self] context in
-  guard let self = self else { return }
+  guard let self = self, let context = context else { return }
 
-  let category = context?.getProperty("this.category") ?? "",
-      value = context?.getProperty("this.y") ?? ""
+  let category = context.getProperty("this.category") ?? "",
+      value = context.getProperty("this.y") ?? ""
 
   let alertMessage = "Category: \(category), value: \(value)"
 

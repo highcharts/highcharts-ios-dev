@@ -81,6 +81,8 @@
 		
 		<option value="//api/name/dateFormatter">dateFormatter</option>
 		
+		<option value="//api/name/describeNull">describeNull</option>
+		
 		<option value="//api/name/descriptionFormatter">descriptionFormatter</option>
 		
 		<option value="//api/name/events">events</option>
@@ -261,7 +263,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Format to use for describing the values of data points to assistive technology - including screen readers. The point context is available as <code>{point}</code>. Additionally, the series name, annotation info, and description added in <code>point.accessibility.description</code> is added by default if relevant. To override this, use the <code>accessibility.point.descriptionFormatter</code> option.</p>
+				<p>Format to use for describing the values of data points to assistive technology - including screen readers. The point context is available as <code>{point}</code>. Other available context variables include <code>{index}</code>, <code>{value}</code>, and <code>{xDescription}</code>. Additionally, the series name, annotation info, and description added in <code>point.accessibility.description</code> is added by default if relevant. To override this, use the <code>accessibility.point.descriptionFormatter</code> option.</p>
 			</div>
 			
 		    
@@ -308,6 +310,47 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *valueSuffix</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPoint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/describeNull" title="describeNull"></a>
+	<h3 class="method-title"><code><a href="#//api/name/describeNull">&nbsp;&nbsp;describeNull</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether or not to describe points with the value <code>null</code> to assistive technology, such as screen readers.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *describeNull</code></div>
 
 		    
 			

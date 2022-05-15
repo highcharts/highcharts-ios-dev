@@ -119,6 +119,8 @@
 		
 		<option value="//api/name/describeSingleSeries">describeSingleSeries</option>
 		
+		<option value="//api/name/descriptionFormat">descriptionFormat</option>
+		
 		<option value="//api/name/descriptionFormatter">descriptionFormatter</option>
 		
 		<option value="//api/name/dragDrop">dragDrop</option>
@@ -963,6 +965,57 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/descriptionFormat" title="descriptionFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/descriptionFormat">&nbsp;&nbsp;descriptionFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Format to use for describing the data series group to assistive technology - including screen readers. The series context and its subproperties are available under the variable <code>{series}</code>, for example <code>{series.name}</code> for the series name, and <code>{series.points.length}</code> for the number of data points. The chart context and its subproperties are available under the variable <code>{chart}</code>, for example <code>{chart.series.length}</code> for the number of series in the chart. <code>{seriesDescription}</code> refers to the automatic description of the series type and number of points added by Highcharts by default. <code>{authorDescription}</code> refers to the description added in <code>series.description</code> if one is present. <code>{axisDescription}</code> refers to the description added if the chart has multiple X or Y axes. Note that if <code>series.descriptionFormatter</code> is declared it will take precedence, and this option will be overridden.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *descriptionFormat</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/accessibility/advanced-accessible">Accessible low-medium-high chart</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/describeSingleSeries" title="describeSingleSeries"></a>
 	<h3 class="method-title"><code><a href="#//api/name/describeSingleSeries">&nbsp;&nbsp;describeSingleSeries</a></code>
 </h3>
@@ -1179,7 +1232,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Lang configuration for the series main summary. Each series type has two modes: 1. This series type is the only series type used in the  chart 2. This is a combination chart with multiple series types If a definition does not exist for the specific series type and mode, the &lsquo;default&rsquo; lang definitions are used.</p>
+				<p>Lang configuration for the series main summary. Each series type has two modes: 1. This series type is the only series type used in the  chart 2. This is a combination chart with multiple series types If a definition does not exist for the specific series type and mode, the &lsquo;default&rsquo; lang definitions are used. Chart and its subproperties can be accessed with the <code>{chart}</code> variable. The series and its subproperties can be accessed with the <code>{series}</code> variable. The series index (starting from 1) can be accessed with the <code>{seriesNumber}</code> variable.</p>
 			</div>
 			
 		    
