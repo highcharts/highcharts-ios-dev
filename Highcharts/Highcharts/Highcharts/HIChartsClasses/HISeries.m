@@ -1,9 +1,5 @@
 #import "HIChartsJSONSerializableSubclass.h"
 #import "HISeries.h"
-#import "HIPie.h"
-#import "HIItem.h"
-#import "HIFunnel.h"
-#import "HIVariablepie.h"
 
 @implementation HISeries
 
@@ -26,6 +22,7 @@
 	copySeries.zIndex = [self.zIndex copyWithZone: zone];
 	copySeries.descriptionFormatter = [self.descriptionFormatter copyWithZone: zone];
 	copySeries.pointDescriptionEnabledThreshold = [self.pointDescriptionEnabledThreshold copyWithZone: zone];
+	copySeries.descriptionFormat = [self.descriptionFormat copyWithZone: zone];
 	copySeries.describeSingleSeries = [self.describeSingleSeries copyWithZone: zone];
 	copySeries.definition = [self.definition copyWithZone: zone];
 	copySeries.xAxisDescription = [self.xAxisDescription copyWithZone: zone];
@@ -142,6 +139,9 @@
 	}
 	if (self.pointDescriptionEnabledThreshold) {
 		params[@"pointDescriptionEnabledThreshold"] = self.pointDescriptionEnabledThreshold;
+	}
+	if (self.descriptionFormat) {
+		params[@"descriptionFormat"] = self.descriptionFormat;
 	}
 	if (self.describeSingleSeries) {
 		params[@"describeSingleSeries"] = self.describeSingleSeries;
@@ -335,24 +335,18 @@
 	if (self.stickyTracking) {
 		params[@"stickyTracking"] = self.stickyTracking;
 	}
-  if (self.dataLabels) {
-    if ([self isKindOfClass:[HIPie class]] || [self isKindOfClass:[HIItem class]] || [self isKindOfClass:[HIFunnel class]] || [self isKindOfClass:[HIVariablepie class]]) {
-      id obj = [self.dataLabels firstObject];
-      if (obj && [obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-        params[@"dataLabels"] = [(HIChartsJSONSerializable *)obj getParams];
-      }
-    } else {
-      NSMutableArray *array = [[NSMutableArray alloc] init];
-      for (id obj in self.dataLabels) {
-        if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-          [array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-        } else {
-          [array addObject: obj];
-        }
-      }
-      params[@"dataLabels"] = array;
-    }
-  }
+	if (self.dataLabels) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.dataLabels) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"dataLabels"] = array;
+	}
 	if (self.className) {
 		params[@"className"] = self.className;
 	}
@@ -446,6 +440,12 @@
 	NSNumber *oldValue = _pointDescriptionEnabledThreshold;
 	_pointDescriptionEnabledThreshold = pointDescriptionEnabledThreshold;
 	[self updateNSObject:oldValue newValue:pointDescriptionEnabledThreshold propertyName:@"pointDescriptionEnabledThreshold"];
+}
+
+-(void)setDescriptionFormat:(NSString *)descriptionFormat {
+	NSString *oldValue = _descriptionFormat;
+	_descriptionFormat = descriptionFormat;
+	[self updateNSObject:oldValue newValue:descriptionFormat propertyName:@"descriptionFormat"];
 }
 
 -(void)setDescribeSingleSeries:(NSNumber *)describeSingleSeries {

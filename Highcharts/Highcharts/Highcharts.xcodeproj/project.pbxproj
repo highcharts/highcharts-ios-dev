@@ -127,7 +127,6 @@
 		CD073890264479BA00D6EF30 /* HIEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0737002644799E00D6EF30 /* HIEvents.m */; };
 		CD073891264479BA00D6EF30 /* HIFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0737012644799E00D6EF30 /* HIFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD073893264479BA00D6EF30 /* HIRangeSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0737032644799E00D6EF30 /* HIRangeSelector.m */; };
-		CD073894264479BA00D6EF30 /* HITraverseUpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0737042644799E00D6EF30 /* HITraverseUpButton.m */; };
 		CD073895264479BA00D6EF30 /* HIVariablepie.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0737052644799E00D6EF30 /* HIVariablepie.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD073896264479BA00D6EF30 /* HILevels.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0737062644799F00D6EF30 /* HILevels.m */; };
 		CD073897264479BA00D6EF30 /* HIVector.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0737072644799F00D6EF30 /* HIVector.m */; };
@@ -221,7 +220,6 @@
 		CD0738EF264479BA00D6EF30 /* HISeriesTypeDescriptions.h in Headers */ = {isa = PBXBuildFile; fileRef = CD07375F264479A500D6EF30 /* HISeriesTypeDescriptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD0738F0264479BA00D6EF30 /* HIAxis.h in Headers */ = {isa = PBXBuildFile; fileRef = CD073760264479A500D6EF30 /* HIAxis.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD0738F1264479BA00D6EF30 /* HIPanning.h in Headers */ = {isa = PBXBuildFile; fileRef = CD073761264479A500D6EF30 /* HIPanning.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CD0738F2264479BA00D6EF30 /* HITraverseUpButton.h in Headers */ = {isa = PBXBuildFile; fileRef = CD073762264479A500D6EF30 /* HITraverseUpButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD0738F3264479BA00D6EF30 /* HIYAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = CD073763264479A600D6EF30 /* HIYAxis.m */; };
 		CD0738F4264479BA00D6EF30 /* HIOrganization.m in Sources */ = {isa = PBXBuildFile; fileRef = CD073764264479A600D6EF30 /* HIOrganization.m */; };
 		CD0738F5264479BA00D6EF30 /* HISeries.h in Headers */ = {isa = PBXBuildFile; fileRef = CD073765264479A600D6EF30 /* HISeries.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -234,7 +232,6 @@
 		CD0738FC264479BA00D6EF30 /* HITime.m in Sources */ = {isa = PBXBuildFile; fileRef = CD07376C264479A600D6EF30 /* HITime.m */; };
 		CD0738FD264479BA00D6EF30 /* HIFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = CD07376D264479A600D6EF30 /* HIFrame.m */; };
 		CD0738FE264479BA00D6EF30 /* HIFocusBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD07376E264479A600D6EF30 /* HIFocusBorder.m */; };
-		CD0738FF264479BA00D6EF30 /* HIDrillUpButton.h in Headers */ = {isa = PBXBuildFile; fileRef = CD07376F264479A600D6EF30 /* HIDrillUpButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD073900264479BA00D6EF30 /* HIPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = CD073770264479A700D6EF30 /* HIPolygon.m */; };
 		CD073901264479BA00D6EF30 /* HICSSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = CD073771264479A700D6EF30 /* HICSSObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD073902264479BA00D6EF30 /* HIBellcurve.m in Sources */ = {isa = PBXBuildFile; fileRef = CD073772264479A700D6EF30 /* HIBellcurve.m */; };
@@ -366,7 +363,6 @@
 		CD073980264479BA00D6EF30 /* HIPlotBands.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0737F0264479B100D6EF30 /* HIPlotBands.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD073981264479BA00D6EF30 /* HIJitter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0737F1264479B100D6EF30 /* HIJitter.m */; };
 		CD073982264479BA00D6EF30 /* HIDataSorting.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0737F2264479B200D6EF30 /* HIDataSorting.m */; };
-		CD073983264479BA00D6EF30 /* HIDrillUpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0737F3264479B200D6EF30 /* HIDrillUpButton.m */; };
 		CD073984264479BA00D6EF30 /* HIFunnel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0737F4264479B200D6EF30 /* HIFunnel.m */; };
 		CD073985264479BA00D6EF30 /* HIXrange.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0737F5264479B200D6EF30 /* HIXrange.m */; };
 		CD073986264479BA00D6EF30 /* HIGeoJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0737F6264479B200D6EF30 /* HIGeoJSON.m */; };
@@ -619,7 +615,6 @@
 		CD0737002644799E00D6EF30 /* HIEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIEvents.m; sourceTree = "<group>"; };
 		CD0737012644799E00D6EF30 /* HIFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIFilter.h; sourceTree = "<group>"; };
 		CD0737032644799E00D6EF30 /* HIRangeSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIRangeSelector.m; sourceTree = "<group>"; };
-		CD0737042644799E00D6EF30 /* HITraverseUpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITraverseUpButton.m; sourceTree = "<group>"; };
 		CD0737052644799E00D6EF30 /* HIVariablepie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIVariablepie.h; sourceTree = "<group>"; };
 		CD0737062644799F00D6EF30 /* HILevels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HILevels.m; sourceTree = "<group>"; };
 		CD0737072644799F00D6EF30 /* HIVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIVector.m; sourceTree = "<group>"; };
@@ -713,7 +708,6 @@
 		CD07375F264479A500D6EF30 /* HISeriesTypeDescriptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HISeriesTypeDescriptions.h; sourceTree = "<group>"; };
 		CD073760264479A500D6EF30 /* HIAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIAxis.h; sourceTree = "<group>"; };
 		CD073761264479A500D6EF30 /* HIPanning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPanning.h; sourceTree = "<group>"; };
-		CD073762264479A500D6EF30 /* HITraverseUpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HITraverseUpButton.h; sourceTree = "<group>"; };
 		CD073763264479A600D6EF30 /* HIYAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIYAxis.m; sourceTree = "<group>"; };
 		CD073764264479A600D6EF30 /* HIOrganization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIOrganization.m; sourceTree = "<group>"; };
 		CD073765264479A600D6EF30 /* HISeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HISeries.h; sourceTree = "<group>"; };
@@ -726,7 +720,6 @@
 		CD07376C264479A600D6EF30 /* HITime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITime.m; sourceTree = "<group>"; };
 		CD07376D264479A600D6EF30 /* HIFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIFrame.m; sourceTree = "<group>"; };
 		CD07376E264479A600D6EF30 /* HIFocusBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIFocusBorder.m; sourceTree = "<group>"; };
-		CD07376F264479A600D6EF30 /* HIDrillUpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDrillUpButton.h; sourceTree = "<group>"; };
 		CD073770264479A700D6EF30 /* HIPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPolygon.m; sourceTree = "<group>"; };
 		CD073771264479A700D6EF30 /* HICSSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HICSSObject.h; sourceTree = "<group>"; };
 		CD073772264479A700D6EF30 /* HIBellcurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIBellcurve.m; sourceTree = "<group>"; };
@@ -858,7 +851,6 @@
 		CD0737F0264479B100D6EF30 /* HIPlotBands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPlotBands.h; sourceTree = "<group>"; };
 		CD0737F1264479B100D6EF30 /* HIJitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIJitter.m; sourceTree = "<group>"; };
 		CD0737F2264479B200D6EF30 /* HIDataSorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDataSorting.m; sourceTree = "<group>"; };
-		CD0737F3264479B200D6EF30 /* HIDrillUpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDrillUpButton.m; sourceTree = "<group>"; };
 		CD0737F4264479B200D6EF30 /* HIFunnel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIFunnel.m; sourceTree = "<group>"; };
 		CD0737F5264479B200D6EF30 /* HIXrange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIXrange.m; sourceTree = "<group>"; };
 		CD0737F6264479B200D6EF30 /* HIGeoJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGeoJSON.m; sourceTree = "<group>"; };
@@ -1158,8 +1150,6 @@
 				CD07378C264479A900D6EF30 /* HIDragHandle.m */,
 				CD073737264479A200D6EF30 /* HIDrilldown.h */,
 				CD0737E3264479B000D6EF30 /* HIDrilldown.m */,
-				CD07376F264479A600D6EF30 /* HIDrillUpButton.h */,
-				CD0737F3264479B200D6EF30 /* HIDrillUpButton.m */,
 				CD073838264479B800D6EF30 /* HIDumbbell.h */,
 				CD0737C2264479AD00D6EF30 /* HIDumbbell.m */,
 				CD0736C02644799900D6EF30 /* HIErrorbar.h */,
@@ -1396,8 +1386,6 @@
 				CD0737102644799F00D6EF30 /* HITooltip.m */,
 				CD073808264479B300D6EF30 /* HITop.h */,
 				CD0737CB264479AE00D6EF30 /* HITop.m */,
-				CD073762264479A500D6EF30 /* HITraverseUpButton.h */,
-				CD0737042644799E00D6EF30 /* HITraverseUpButton.m */,
 				CD0737AA264479AB00D6EF30 /* HITreemap.h */,
 				CD0736CF2644799A00D6EF30 /* HITreemap.m */,
 				CD0737052644799E00D6EF30 /* HIVariablepie.h */,
@@ -1586,7 +1574,6 @@
 				CD0738C2264479BA00D6EF30 /* HIStates.h in Headers */,
 				CD91B3022062741200BCEE37 /* HIFunctionSubclass.h in Headers */,
 				CD0738AF264479BA00D6EF30 /* HICaption.h in Headers */,
-				CD0738FF264479BA00D6EF30 /* HIDrillUpButton.h in Headers */,
 				CD073869264479B900D6EF30 /* HIVector.h in Headers */,
 				CD07388C264479BA00D6EF30 /* HIAreaspline.h in Headers */,
 				CD073910264479BA00D6EF30 /* HITheme.h in Headers */,
@@ -1695,7 +1682,6 @@
 				CD073936264479BA00D6EF30 /* HICrosshair.h in Headers */,
 				CD0738EC264479BA00D6EF30 /* HIPoint.h in Headers */,
 				CD07399F264479BA00D6EF30 /* HIFrame.h in Headers */,
-				CD0738F2264479BA00D6EF30 /* HITraverseUpButton.h in Headers */,
 				CD07392C264479BA00D6EF30 /* HIBullet.h in Headers */,
 				CD073992264479BA00D6EF30 /* HIShadowOptionsObject.h in Headers */,
 				CD073907264479BA00D6EF30 /* HIActiveDataLabelStyle.h in Headers */,
@@ -2054,7 +2040,6 @@
 				CD0738A5264479BA00D6EF30 /* HIRadialGradientColorObject.m in Sources */,
 				CD0739CB264479BA00D6EF30 /* HIHover.m in Sources */,
 				CD0739DD264479BA00D6EF30 /* HIAxis.m in Sources */,
-				CD073983264479BA00D6EF30 /* HIDrillUpButton.m in Sources */,
 				5BC750B127DDE22E006744AA /* HIArcdiagram.m in Sources */,
 				CD07390A264479BA00D6EF30 /* HIGuideBox.m in Sources */,
 				CD07395B264479BA00D6EF30 /* HITop.m in Sources */,
@@ -2142,7 +2127,6 @@
 				CD073962264479BA00D6EF30 /* HILabelIntersectBoxObject.m in Sources */,
 				CD0738F7264479BA00D6EF30 /* HISeriesTypeDescriptions.m in Sources */,
 				CD073904264479BA00D6EF30 /* HIPyramid.m in Sources */,
-				CD073894264479BA00D6EF30 /* HITraverseUpButton.m in Sources */,
 				CD073902264479BA00D6EF30 /* HIBellcurve.m in Sources */,
 				CD073908264479BA00D6EF30 /* HILeft.m in Sources */,
 				CD0738C8264479BA00D6EF30 /* HIPareto.m in Sources */,

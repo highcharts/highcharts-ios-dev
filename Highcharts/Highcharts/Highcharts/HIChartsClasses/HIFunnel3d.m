@@ -96,6 +96,7 @@
 	copyFunnel3d.zIndex = [self.zIndex copyWithZone: zone];
 	copyFunnel3d.center = [self.center copyWithZone: zone];
 	copyFunnel3d.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
+	copyFunnel3d.thickness = [self.thickness copyWithZone: zone];
 	copyFunnel3d.minSize = [self.minSize copyWithZone: zone];
 	copyFunnel3d.fillColor = [self.fillColor copyWithZone: zone];
 	copyFunnel3d.startAngle = [self.startAngle copyWithZone: zone];
@@ -195,6 +196,9 @@
 	}
 	if (self.ignoreHiddenPoint) {
 		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
+	}
+	if (self.thickness) {
+		params[@"thickness"] = self.thickness;
 	}
 	if (self.minSize) {
 		params[@"minSize"] = self.minSize;
@@ -364,6 +368,12 @@
 	NSNumber *oldValue = _ignoreHiddenPoint;
 	_ignoreHiddenPoint = ignoreHiddenPoint;
 	[self updateNSObject:oldValue newValue:ignoreHiddenPoint propertyName:@"ignoreHiddenPoint"];
+}
+
+-(void)setThickness:(NSNumber *)thickness {
+	NSNumber *oldValue = _thickness;
+	_thickness = thickness;
+	[self updateNSObject:oldValue newValue:thickness propertyName:@"thickness"];
 }
 
 -(void)setMinSize:(id)minSize {

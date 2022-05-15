@@ -15,6 +15,7 @@
 	copyChart.spacingBottom = [self.spacingBottom copyWithZone: zone];
 	copyChart.plotShadow = [self.plotShadow copyWithZone: zone];
 	copyChart.height = [self.height copyWithZone: zone];
+	copyChart.style = [self.style copyWithZone: zone];
 	copyChart.alignTicks = [self.alignTicks copyWithZone: zone];
 	copyChart.displayErrors = [self.displayErrors copyWithZone: zone];
 	copyChart.marginRight = [self.marginRight copyWithZone: zone];
@@ -31,7 +32,7 @@
 	copyChart.spacingTop = [self.spacingTop copyWithZone: zone];
 	copyChart.marginBottom = [self.marginBottom copyWithZone: zone];
 	copyChart.width = [self.width copyWithZone: zone];
-	copyChart.marginLeft = [self.marginLeft copyWithZone: zone];
+	copyChart.animation = [self.animation copyWithZone: zone];
 	copyChart.plotBackgroundColor = [self.plotBackgroundColor copyWithZone: zone];
 	copyChart.backgroundColor = [self.backgroundColor copyWithZone: zone];
 	copyChart.panning = [self.panning copyWithZone: zone];
@@ -41,11 +42,11 @@
 	copyChart.spacingLeft = [self.spacingLeft copyWithZone: zone];
 	copyChart.spacing = [self.spacing copyWithZone: zone];
 	copyChart.panKey = [self.panKey copyWithZone: zone];
-	copyChart.style = [self.style copyWithZone: zone];
+	copyChart.marginLeft = [self.marginLeft copyWithZone: zone];
+	copyChart.allowMutatingData = [self.allowMutatingData copyWithZone: zone];
 	copyChart.scrollablePlotArea = [self.scrollablePlotArea copyWithZone: zone];
 	copyChart.shadow = [self.shadow copyWithZone: zone];
 	copyChart.inverted = [self.inverted copyWithZone: zone];
-	copyChart.animation = [self.animation copyWithZone: zone];
 	copyChart.plotBorderWidth = [self.plotBorderWidth copyWithZone: zone];
 	copyChart.zoomKey = [self.zoomKey copyWithZone: zone];
 	copyChart.ignoreHiddenSeries = [self.ignoreHiddenSeries copyWithZone: zone];
@@ -81,6 +82,9 @@
 	}
 	if (self.height) {
 		params[@"height"] = self.height;
+	}
+	if (self.style) {
+		params[@"style"] = [self.style getParams];
 	}
 	if (self.alignTicks) {
 		params[@"alignTicks"] = self.alignTicks;
@@ -129,8 +133,8 @@
 	if (self.width) {
 		params[@"width"] = self.width;
 	}
-	if (self.marginLeft) {
-		params[@"marginLeft"] = self.marginLeft;
+	if (self.animation) {
+		params[@"animation"] = [self.animation getParams];
 	}
 	if (self.plotBackgroundColor) {
 		params[@"plotBackgroundColor"] = [self.plotBackgroundColor getData];
@@ -168,8 +172,11 @@
 	if (self.panKey) {
 		params[@"panKey"] = self.panKey;
 	}
-	if (self.style) {
-		params[@"style"] = [self.style getParams];
+	if (self.marginLeft) {
+		params[@"marginLeft"] = self.marginLeft;
+	}
+	if (self.allowMutatingData) {
+		params[@"allowMutatingData"] = self.allowMutatingData;
 	}
 	if (self.scrollablePlotArea) {
 		params[@"scrollablePlotArea"] = [self.scrollablePlotArea getParams];
@@ -179,9 +186,6 @@
 	}
 	if (self.inverted) {
 		params[@"inverted"] = self.inverted;
-	}
-	if (self.animation) {
-		params[@"animation"] = [self.animation getParams];
 	}
 	if (self.plotBorderWidth) {
 		params[@"plotBorderWidth"] = self.plotBorderWidth;
@@ -270,6 +274,12 @@
 	id oldValue = _height;
 	_height = height;
 	[self updateNSObject:oldValue newValue:height propertyName:@"height"];
+}
+
+-(void)setStyle:(HICSSObject *)style {
+	HICSSObject *oldValue = _style;
+	_style = style;
+	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setAlignTicks:(NSNumber *)alignTicks {
@@ -368,10 +378,10 @@
 	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
 }
 
--(void)setMarginLeft:(NSNumber *)marginLeft {
-	NSNumber *oldValue = _marginLeft;
-	_marginLeft = marginLeft;
-	[self updateNSObject:oldValue newValue:marginLeft propertyName:@"marginLeft"];
+-(void)setAnimation:(HIAnimationOptionsObject *)animation {
+	HIAnimationOptionsObject *oldValue = _animation;
+	_animation = animation;
+	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
 -(void)setPlotBackgroundColor:(HIColor *)plotBackgroundColor {
@@ -428,10 +438,16 @@
 	[self updateNSObject:oldValue newValue:panKey propertyName:@"panKey"];
 }
 
--(void)setStyle:(HICSSObject *)style {
-	HICSSObject *oldValue = _style;
-	_style = style;
-	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
+-(void)setMarginLeft:(NSNumber *)marginLeft {
+	NSNumber *oldValue = _marginLeft;
+	_marginLeft = marginLeft;
+	[self updateNSObject:oldValue newValue:marginLeft propertyName:@"marginLeft"];
+}
+
+-(void)setAllowMutatingData:(NSNumber *)allowMutatingData {
+	NSNumber *oldValue = _allowMutatingData;
+	_allowMutatingData = allowMutatingData;
+	[self updateNSObject:oldValue newValue:allowMutatingData propertyName:@"allowMutatingData"];
 }
 
 -(void)setScrollablePlotArea:(HIScrollablePlotArea *)scrollablePlotArea {
@@ -450,12 +466,6 @@
 	NSNumber *oldValue = _inverted;
 	_inverted = inverted;
 	[self updateNSObject:oldValue newValue:inverted propertyName:@"inverted"];
-}
-
--(void)setAnimation:(HIAnimationOptionsObject *)animation {
-	HIAnimationOptionsObject *oldValue = _animation;
-	_animation = animation;
-	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
 -(void)setPlotBorderWidth:(NSNumber *)plotBorderWidth {

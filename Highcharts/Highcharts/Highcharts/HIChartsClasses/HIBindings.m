@@ -55,8 +55,8 @@
 	[self updateHIObject:oldValue newValue:circleAnnotation propertyName:@"circleAnnotation"];
 }
 
--(void)setEllipseAnnotation:(HIEllipseAnnotation *)ellipseAnnotation {
-	HIEllipseAnnotation *oldValue = _ellipseAnnotation;
+-(void)setEllipseAnnotation:(HINavigationBindingsOptionsObject *)ellipseAnnotation {
+	HINavigationBindingsOptionsObject *oldValue = _ellipseAnnotation;
 	_ellipseAnnotation = ellipseAnnotation;
 	[self updateHIObject:oldValue newValue:ellipseAnnotation propertyName:@"ellipseAnnotation"];
 }
