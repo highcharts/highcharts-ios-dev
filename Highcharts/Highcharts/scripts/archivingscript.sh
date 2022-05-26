@@ -2,15 +2,42 @@
 
 mkdir -p "Build"
 
-xcodebuild -project Highcharts.xcodeproj -configuration Release -scheme Highcharts -sdk iphoneos SYMROOT=Build -arch armv7 -arch armv7s -arch arm64 only_active_arch=no
+xcodebuild \
+	-project Highcharts.xcodeproj \
+	-configuration Release \
+	-scheme Highcharts \
+	-sdk iphoneos \
+	SYMROOT=Build \
+	-arch armv7 \
+	-arch armv7s \
+	-arch arm64 \
+	-arch arm64e \
+	ONLY_ACTIVE_ARCH=no
 
-xcodebuild -scheme Highcharts archive -project Highcharts.xcodeproj -configuration Release -sdk iphoneos -archivePath Archive -arch armv7 -arch armv7s -arch arm64 only_active_arch=no
+xcodebuild archive \
+	-scheme Highcharts \
+	-project Highcharts.xcodeproj \
+	-configuration Release \
+	-sdk iphoneos \
+	-archivePath Archive \
+	-arch armv7 \
+	-arch armv7s \
+	-arch arm64 \
+	-arch arm64e \
+	ONLY_ACTIVE_ARCH=no
 
-xcodebuild build -project Highcharts.xcodeproj -configuration Release -scheme Highcharts -sdk iphonesimulator SYMROOT=Build only_active_arch=no -arch x86_64
+xcodebuild build \
+	-project Highcharts.xcodeproj \
+	-configuration Release \
+	-scheme Highcharts \
+	-sdk iphonesimulator SYMROOT=Build \
+	ONLY_ACTIVE_ARCH=no \
+	-arch x86_64
 
 cp -RL Archive.xcarchive/Products/Library/Frameworks/ Build/Release-universal/
 
-lipo -create Archive.xcarchive/Products/Library/Frameworks/Highcharts.framework/Highcharts Build/Release-iphonesimulator/Highcharts.framework/Highcharts -output Build/Release-universal/Highcharts.framework/Highcharts
+lipo -create Archive.xcarchive/Products/Library/Frameworks/Highcharts.framework/Highcharts Build/Release-iphonesimulator/Highcharts.framework/Highcharts \
+	-output Build/Release-universal/Highcharts.framework/Highcharts
 
 cp -RL Build/Release-universal/ Ready/
 
