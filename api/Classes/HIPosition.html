@@ -73,6 +73,10 @@
 		
 		<option value="//api/name/align">align</option>
 		
+		<option value="//api/name/offsetX">offsetX</option>
+		
+		<option value="//api/name/offsetY">offsetY</option>
+		
 		<option value="//api/name/verticalAlign">verticalAlign</option>
 		
 		<option value="//api/name/x">x</option>
@@ -123,14 +127,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The position of the button.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/resetzoombutton-position/">Above the plot area</a></li>
-</ul>
-
+						<p>Options allowing to set a position and an offset of the series in the <em>Series on point</em> feature.</p>
 					</div>
 					
 					
@@ -157,7 +154,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The vertical offset of the button.</p>
+				<p>Y position of the series center. By default, the series is displayed on the point that it is connected to.</p>
 			</div>
 			
 		    
@@ -198,12 +195,94 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The horizontal offset of the button.</p>
+				<p>X position of the series center. By default, the series is displayed on the point that it is connected to.</p>
 			</div>
 			
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *x</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPosition.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/offsetX" title="offsetX"></a>
+	<h3 class="method-title"><code><a href="#//api/name/offsetX">&nbsp;&nbsp;offsetX</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Series center offset from the original x position. If defined, the connector line is drawn connecting original position with new position.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *offsetX</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPosition.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/offsetY" title="offsetY"></a>
+	<h3 class="method-title"><code><a href="#//api/name/offsetY">&nbsp;&nbsp;offsetY</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Series center offset from the original y position. If defined, the connector line is drawn from original position to a new position.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *offsetY</code></div>
 
 		    
 			
