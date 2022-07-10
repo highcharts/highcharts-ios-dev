@@ -14,23 +14,17 @@
     
     HIOptions *options = [[HIOptions alloc]init];
     
-    HIData *data = [[HIData alloc] init];
-    data.table = @"<table id='freq' border='0' cellspacing='0' cellpadding='0'> <tr nowrap bgcolor='#CCCCFF'> <th colspan='9' class='hdr'>Table of Frequencies (percent)</th> </tr> <tr nowrap bgcolor='#CCCCFF'> <th class='freq'>Direction</th> <th class='freq'>&lt; 0.5 m/s</th> <th class='freq'>0.5-2 m/s</th> <th class='freq'>2-4 m/s</th> <th class='freq'>4-6 m/s</th> <th class='freq'>6-8 m/s</th> <th class='freq'>8-10 m/s</th> <th class='freq'>&gt; 10 m/s</th> <th class='freq'>Total</th> </tr> <tr nowrap> <td class='dir'>N</td> <td class='data'>1.81</td> <td class='data'>1.78</td> <td class='data'>0.16</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>3.75</td> </tr> <tr nowrap bgcolor='#DDDDDD'> <td class='dir'>NNE</td> <td class='data'>0.62</td> <td class='data'>1.09</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>1.71</td> </tr> <tr nowrap> <td class='dir'>NE</td> <td class='data'>0.82</td> <td class='data'>0.82</td> <td class='data'>0.07</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>1.71</td> </tr> <tr nowrap bgcolor='#DDDDDD'> <td class='dir'>ENE</td> <td class='data'>0.59</td> <td class='data'>1.22</td> <td class='data'>0.07</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>1.88</td> </tr> <tr nowrap> <td class='dir'>E</td> <td class='data'>0.62</td> <td class='data'>2.20</td> <td class='data'>0.49</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>3.32</td> </tr> <tr nowrap bgcolor='#DDDDDD'> <td class='dir'>ESE</td> <td class='data'>1.22</td> <td class='data'>2.01</td> <td class='data'>1.55</td> <td class='data'>0.30</td> <td class='data'>0.13</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>5.20</td> </tr> <tr nowrap> <td class='dir'>SE</td> <td class='data'>1.61</td> <td class='data'>3.06</td> <td class='data'>2.37</td> <td class='data'>2.14</td> <td class='data'>1.74</td> <td class='data'>0.39</td> <td class='data'>0.13</td> <td class='data'>11.45</td> </tr> <tr nowrap bgcolor='#DDDDDD'> <td class='dir'>SSE</td> <td class='data'>2.04</td> <td class='data'>3.42</td> <td class='data'>1.97</td> <td class='data'>0.86</td> <td class='data'>0.53</td> <td class='data'>0.49</td> <td class='data'>0.00</td> <td class='data'>9.31</td> </tr> <tr nowrap> <td class='dir'>S</td> <td class='data'>2.66</td> <td class='data'>4.74</td> <td class='data'>0.43</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>7.83</td> </tr> <tr nowrap bgcolor='#DDDDDD'> <td class='dir'>SSW</td> <td class='data'>2.96</td> <td class='data'>4.14</td> <td class='data'>0.26</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>7.37</td> </tr> <tr nowrap> <td class='dir'>SW</td> <td class='data'>2.53</td> <td class='data'>4.01</td> <td class='data'>1.22</td> <td class='data'>0.49</td> <td class='data'>0.13</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>8.39</td> </tr> <tr nowrap bgcolor='#DDDDDD'> <td class='dir'>WSW</td> <td class='data'>1.97</td> <td class='data'>2.66</td> <td class='data'>1.97</td> <td class='data'>0.79</td> <td class='data'>0.30</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>7.70</td> </tr> <tr nowrap> <td class='dir'>W</td> <td class='data'>1.64</td> <td class='data'>1.71</td> <td class='data'>0.92</td> <td class='data'>1.45</td> <td class='data'>0.26</td> <td class='data'>0.10</td> <td class='data'>0.00</td> <td class='data'>6.09</td> </tr> <tr nowrap bgcolor='#DDDDDD'> <td class='dir'>WNW</td> <td class='data'>1.32</td> <td class='data'>2.40</td> <td class='data'>0.99</td> <td class='data'>1.61</td> <td class='data'>0.33</td> <td class='data'>0.00</td> <td class='data'>0.00</td> <td class='data'>6.64</td> </tr> <tr nowrap> <td class='dir'>NW</td> <td class='data'>1.58</td> <td class='data'>4.28</td> <td class='data'>1.28</td> <td class='data'>0.76</td> <td class='data'>0.66</td> <td class='data'>0.69</td> <td class='data'>0.03</td> <td class='data'>9.28</td> </tr> <tr nowrap bgcolor='#DDDDDD'> <td class='dir'>NNW</td> <td class='data'>1.51</td> <td class='data'>5.00</td> <td class='data'>1.32</td> <td class='data'>0.13</td> <td class='data'>0.23</td> <td class='data'>0.13</td> <td class='data'>0.07</td> <td class='data'>8.39</td> </tr> <tr nowrap> <td class='totals'>Total</td> <td class='totals'>25.53</td> <td class='totals'>44.54</td> <td class='totals'>15.07</td> <td class='totals'>8.52</td> <td class='totals'>4.31</td> <td class='totals'>1.81</td> <td class='totals'>0.23</td> <td class='totals'>&nbsp;</td> </tr> </table>";
-    
-    data.startRow = @1;
-    data.endRow = @17;
-    data.endColumn = @7;
-    
-    
     HIChart *chart = [[HIChart alloc]init];
     chart.polar = [[NSNumber alloc] initWithBool:true];
     chart.type = @"column";
     
     HITitle *title = [[HITitle alloc]init];
     title.text = @"Wind rose for South Shore Met Station, Oregon";
+    title.align = @"left";
     
     HISubtitle *subtitle = [[HISubtitle alloc]init];
     subtitle.text = @"Source: or.water.usgs.gov";
+    subtitle.align = @"left";
     
     HIPane *pane = [[HIPane alloc]init];
     pane.size = @"85%";
@@ -54,7 +48,9 @@
     HIPlotOptions *plotoptions = [[HIPlotOptions alloc] init];
     plotoptions.series = [[HISeries alloc] init];
     plotoptions.series.stacking = @"normal";
-    plotoptions.series.shadow = [[NSNumber alloc] initWithBool:false];
+    plotoptions.series.shadow = [[HIShadowOptionsObject alloc] init];
+    plotoptions.series.shadow.opacity = @0;
+    // plotoptions.series.groupPadding = @0;
     plotoptions.series.pointPlacement = @"on";
     
     HILegend *legend = [[HILegend alloc]init];
@@ -62,6 +58,160 @@
     legend.verticalAlign = @"top";
     legend.y = @100;
     legend.layout = @"vertical";
+    
+    HIColumn *column1 = [[HIColumn alloc] init];
+    column1.turboThreshold = @0;
+    column1.name = @"&lt; 0.5 m/s";
+    column1.data = @[
+      @[@"N", @1.81],
+      @[@"NNE", @0.62],
+      @[@"NE", @0.82],
+      @[@"ENE", @0.59],
+      @[@"E", @0.62],
+      @[@"ESE", @1.22],
+      @[@"SE", @1.61],
+      @[@"SSE", @2.04],
+      @[@"S", @2.66],
+      @[@"SSW", @2.96],
+      @[@"SW", @2.53],
+      @[@"WSW", @1.97],
+      @[@"W", @1.64],
+      @[@"WNW", @1.32],
+      @[@"NW", @1.58],
+      @[@"NNW", @1.51]
+    ];
+    
+    HIColumn *column2 = [[HIColumn alloc] init];
+    column2.turboThreshold = @0;
+    column2.name = @"0.5-2 m/s";
+    column2.data = @[
+      @[@"N", @1.78],
+      @[@"NNE", @1.09],
+      @[@"NE", @0.82],
+      @[@"ENE", @1.22],
+      @[@"E", @2.2],
+      @[@"ESE", @2.01],
+      @[@"SE", @3.06],
+      @[@"SSE", @3.42],
+      @[@"S", @4.74],
+      @[@"SSW", @4.14],
+      @[@"SW", @4.01],
+      @[@"WSW", @2.66],
+      @[@"W", @1.71],
+      @[@"WNW", @2.4],
+      @[@"NW", @4.28],
+      @[@"NNW", @5]
+    ];
+    
+    HIColumn *column3 = [[HIColumn alloc] init];
+    column3.turboThreshold = @0;
+    column3.name = @"2-4 m/s";
+    column3.data = @[
+      @[@"N", @0.16],
+      @[@"NNE", @0],
+      @[@"NE", @0.07],
+      @[@"ENE", @0.07],
+      @[@"E", @0.49],
+      @[@"ESE", @1.55],
+      @[@"SE", @2.37],
+      @[@"SSE", @1.97],
+      @[@"S", @0.43],
+      @[@"SSW", @0.26],
+      @[@"SW", @1.22],
+      @[@"WSW", @1.97],
+      @[@"W", @0.92],
+      @[@"WNW", @0.99],
+      @[@"NW", @1.28],
+      @[@"NNW", @1.32]
+    ];
+    
+    HIColumn *column4 = [[HIColumn alloc] init];
+    column4.turboThreshold = @0;
+    column4.name = @"4-6 m/s";
+    column4.data = @[
+      @[@"N", @0],
+      @[@"NNE", @0],
+      @[@"NE", @0],
+      @[@"ENE", @0],
+      @[@"E", @0],
+      @[@"ESE", @0.3],
+      @[@"SE", @2.14],
+      @[@"SSE", @0.86],
+      @[@"S", @0],
+      @[@"SSW", @0],
+      @[@"SW", @0.49],
+      @[@"WSW", @0.79],
+      @[@"W", @1.45],
+      @[@"WNW", @1.61],
+      @[@"NW", @0.76],
+      @[@"NNW", @0.13]
+    ];
+    
+    HIColumn *column5 = [[HIColumn alloc] init];
+    column5.turboThreshold = @0;
+    column5.name = @"6-8 m/s";
+    column5.data = @[
+      @[@"N", @0],
+      @[@"NNE", @0],
+      @[@"NE", @0],
+      @[@"ENE", @0],
+      @[@"E", @0],
+      @[@"ESE", @0.13],
+      @[@"SE", @1.74],
+      @[@"SSE", @0.53],
+      @[@"S", @0],
+      @[@"SSW", @0],
+      @[@"SW", @0.13],
+      @[@"WSW", @0.3],
+      @[@"W", @0.26],
+      @[@"WNW", @0.33],
+      @[@"NW", @0.66],
+      @[@"NNW", @0.23]
+    ];
+    
+    HIColumn *column6 = [[HIColumn alloc] init];
+    column6.turboThreshold = @0;
+    column6.name = @"8-10 m/s";
+    column6.data = @[
+      @[@"N", @0],
+      @[@"NNE", @0],
+      @[@"NE", @0],
+      @[@"ENE", @0],
+      @[@"E", @0],
+      @[@"ESE", @0],
+      @[@"SE", @0.39],
+      @[@"SSE", @0.49],
+      @[@"S", @0],
+      @[@"SSW", @0],
+      @[@"SW", @0],
+      @[@"WSW", @0],
+      @[@"W", @0.1],
+      @[@"WNW", @0],
+      @[@"NW", @0.69],
+      @[@"NNW", @0.13]
+    ];
+    
+    HIColumn *column7 = [[HIColumn alloc] init];
+    column7.turboThreshold = @0;
+    column7.name = @"&gt; 10 m/s";
+    column7.data = @[
+      @[@"N", @0],
+      @[@"NNE", @0],
+      @[@"NE", @0],
+      @[@"ENE", @0],
+      @[@"E", @0],
+      @[@"ESE", @0],
+      @[@"SE", @0.13],
+      @[@"SSE", @0],
+      @[@"S", @0],
+      @[@"SSW", @0],
+      @[@"SW", @0],
+      @[@"WSW", @0],
+      @[@"W", @0],
+      @[@"WNW", @0],
+      @[@"NW", @0.03],
+      @[@"NNW", @0.07]
+    ];
     
     options.chart = chart;
     options.title = title;
@@ -72,7 +222,7 @@
     options.plotOptions = plotoptions;
     options.xAxis = [NSMutableArray arrayWithObjects:xaxis, nil];
     options.yAxis = [NSMutableArray arrayWithObjects:yaxis, nil];
-    options.data = data;
+    options.series = [NSMutableArray arrayWithObjects:column1, column2, column3, column4, column5, column6, column7, nil];
     
     chartView.options = options;
     
