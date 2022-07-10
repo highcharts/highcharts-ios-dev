@@ -51,6 +51,7 @@
 	copyDumbbell.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyDumbbell.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyDumbbell.custom = [self.custom copyWithZone: zone];
+	copyDumbbell.onPoint = [self.onPoint copyWithZone: zone];
 	copyDumbbell.animation = [self.animation copyWithZone: zone];
 	copyDumbbell.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyDumbbell.relativeXValue = [self.relativeXValue copyWithZone: zone];

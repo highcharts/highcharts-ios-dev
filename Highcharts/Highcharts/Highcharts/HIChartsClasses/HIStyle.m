@@ -20,6 +20,9 @@
 	copyStyle.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyStyle.textOverflow = [self.textOverflow copyWithZone: zone];
 	copyStyle.whiteSpace = [self.whiteSpace copyWithZone: zone];
+	copyStyle.stroke = [self.stroke copyWithZone: zone];
+	copyStyle.strokeWidth = [self.strokeWidth copyWithZone: zone];
+	copyStyle.fill = [self.fill copyWithZone: zone];
 	return copyStyle;
 }
 
@@ -55,6 +58,15 @@
 	}
 	if (self.whiteSpace) {
 		params[@"whiteSpace"] = self.whiteSpace;
+	}
+	if (self.stroke) {
+		params[@"stroke"] = self.stroke;
+	}
+	if (self.strokeWidth) {
+		params[@"stroke-width"] = self.strokeWidth;
+	}
+	if (self.fill) {
+		params[@"fill"] = self.fill;
 	}
 	return params;
 }
@@ -119,6 +131,24 @@
 	NSString *oldValue = _whiteSpace;
 	_whiteSpace = whiteSpace;
 	[self updateNSObject:oldValue newValue:whiteSpace propertyName:@"whiteSpace"];
+}
+
+-(void)setStroke:(NSString *)stroke {
+	NSString *oldValue = _stroke;
+	_stroke = stroke;
+	[self updateNSObject:oldValue newValue:stroke propertyName:@"stroke"];
+}
+
+-(void)setStrokeWidth:(NSNumber *)strokeWidth {
+	NSNumber *oldValue = _strokeWidth;
+	_strokeWidth = strokeWidth;
+	[self updateNSObject:oldValue newValue:strokeWidth propertyName:@"strokeWidth"];
+}
+
+-(void)setFill:(NSString *)fill {
+	NSString *oldValue = _fill;
+	_fill = fill;
+	[self updateNSObject:oldValue newValue:fill propertyName:@"fill"];
 }
 
 @end

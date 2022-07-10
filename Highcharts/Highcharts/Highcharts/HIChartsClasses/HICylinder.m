@@ -55,6 +55,7 @@
 	copyCylinder.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyCylinder.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyCylinder.custom = [self.custom copyWithZone: zone];
+	copyCylinder.onPoint = [self.onPoint copyWithZone: zone];
 	copyCylinder.stacking = [self.stacking copyWithZone: zone];
 	copyCylinder.animation = [self.animation copyWithZone: zone];
 	copyCylinder.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];

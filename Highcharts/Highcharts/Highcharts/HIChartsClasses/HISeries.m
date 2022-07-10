@@ -57,6 +57,7 @@
 	copySeries.connectNulls = [self.connectNulls copyWithZone: zone];
 	copySeries.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copySeries.custom = [self.custom copyWithZone: zone];
+	copySeries.onPoint = [self.onPoint copyWithZone: zone];
 	copySeries.stacking = [self.stacking copyWithZone: zone];
 	copySeries.animation = [self.animation copyWithZone: zone];
 	copySeries.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
@@ -236,6 +237,9 @@
 	}
 	if (self.custom) {
 		params[@"custom"] = self.custom;
+	}
+	if (self.onPoint) {
+		params[@"onPoint"] = [self.onPoint getParams];
 	}
 	if (self.stacking) {
 		params[@"stacking"] = self.stacking;
@@ -636,6 +640,12 @@
 	NSDictionary *oldValue = _custom;
 	_custom = custom;
 	[self updateNSObject:oldValue newValue:custom propertyName:@"custom"];
+}
+
+-(void)setOnPoint:(HIOnPoint *)onPoint {
+	HIOnPoint *oldValue = _onPoint;
+	_onPoint = onPoint;
+	[self updateHIObject:oldValue newValue:onPoint propertyName:@"onPoint"];
 }
 
 -(void)setStacking:(NSString *)stacking {

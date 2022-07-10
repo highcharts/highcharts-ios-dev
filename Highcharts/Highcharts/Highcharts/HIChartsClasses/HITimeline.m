@@ -45,6 +45,7 @@
 	copyTimeline.cursor = [self.cursor copyWithZone: zone];
 	copyTimeline.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyTimeline.custom = [self.custom copyWithZone: zone];
+	copyTimeline.onPoint = [self.onPoint copyWithZone: zone];
 	copyTimeline.animation = [self.animation copyWithZone: zone];
 	copyTimeline.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyTimeline.showCheckbox = [self.showCheckbox copyWithZone: zone];

@@ -57,6 +57,7 @@
 	copyAreasplinerange.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyAreasplinerange.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyAreasplinerange.custom = [self.custom copyWithZone: zone];
+	copyAreasplinerange.onPoint = [self.onPoint copyWithZone: zone];
 	copyAreasplinerange.animation = [self.animation copyWithZone: zone];
 	copyAreasplinerange.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyAreasplinerange.relativeXValue = [self.relativeXValue copyWithZone: zone];
@@ -116,8 +117,8 @@
 	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
 }
 
--(void)setFillOpacity:(NSNumber *)fillOpacity {
-	NSNumber *oldValue = _fillOpacity;
+-(void)setFillOpacity:(id)fillOpacity {
+	id oldValue = _fillOpacity;
 	_fillOpacity = fillOpacity;
 	[self updateNSObject:oldValue newValue:fillOpacity propertyName:@"fillOpacity"];
 }

@@ -61,6 +61,10 @@
 		5BC750C127DDE288006744AA /* HIButtonTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC750BD27DDE288006744AA /* HIButtonTheme.m */; };
 		5BC750C427DDE29B006744AA /* HISeparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC750C227DDE29B006744AA /* HISeparator.m */; };
 		5BC750C527DDE29B006744AA /* HISeparator.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC750C327DDE29B006744AA /* HISeparator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BF16896287AB99900A0B460 /* HIConnectorOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BF16892287AB99800A0B460 /* HIConnectorOptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BF16897287AB99900A0B460 /* HIOnPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BF16893287AB99900A0B460 /* HIOnPoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BF16898287AB99900A0B460 /* HIOnPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF16894287AB99900A0B460 /* HIOnPoint.m */; };
+		5BF16899287AB99900A0B460 /* HIConnectorOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF16895287AB99900A0B460 /* HIConnectorOptions.m */; };
 		CD07384E264479B900D6EF30 /* HICredits.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0736BE2644799900D6EF30 /* HICredits.m */; };
 		CD07384F264479B900D6EF30 /* HITilemap.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0736BF2644799900D6EF30 /* HITilemap.m */; };
 		CD073850264479B900D6EF30 /* HIErrorbar.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0736C02644799900D6EF30 /* HIErrorbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -549,6 +553,10 @@
 		5BC750BD27DDE288006744AA /* HIButtonTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIButtonTheme.m; sourceTree = "<group>"; };
 		5BC750C227DDE29B006744AA /* HISeparator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HISeparator.m; sourceTree = "<group>"; };
 		5BC750C327DDE29B006744AA /* HISeparator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HISeparator.h; sourceTree = "<group>"; };
+		5BF16892287AB99800A0B460 /* HIConnectorOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIConnectorOptions.h; sourceTree = "<group>"; };
+		5BF16893287AB99900A0B460 /* HIOnPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIOnPoint.h; sourceTree = "<group>"; };
+		5BF16894287AB99900A0B460 /* HIOnPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIOnPoint.m; sourceTree = "<group>"; };
+		5BF16895287AB99900A0B460 /* HIConnectorOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIConnectorOptions.m; sourceTree = "<group>"; };
 		CD0736BE2644799900D6EF30 /* HICredits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HICredits.m; sourceTree = "<group>"; };
 		CD0736BF2644799900D6EF30 /* HITilemap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITilemap.m; sourceTree = "<group>"; };
 		CD0736C02644799900D6EF30 /* HIErrorbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIErrorbar.h; sourceTree = "<group>"; };
@@ -1006,6 +1014,10 @@
 		2011ABB31E7013F30027DA10 /* HIChartsClasses */ = {
 			isa = PBXGroup;
 			children = (
+				5BF16892287AB99800A0B460 /* HIConnectorOptions.h */,
+				5BF16895287AB99900A0B460 /* HIConnectorOptions.m */,
+				5BF16893287AB99900A0B460 /* HIOnPoint.h */,
+				5BF16894287AB99900A0B460 /* HIOnPoint.m */,
 				5BC750C327DDE29B006744AA /* HISeparator.h */,
 				5BC750C227DDE29B006744AA /* HISeparator.m */,
 				5BC750BB27DDE288006744AA /* HIButtonTheme.h */,
@@ -1568,6 +1580,7 @@
 				CD0739A9264479BA00D6EF30 /* HIMillisecond.h in Headers */,
 				CD0739A3264479BA00D6EF30 /* HITime.h in Headers */,
 				CD073998264479BA00D6EF30 /* HITop.h in Headers */,
+				5BF16896287AB99900A0B460 /* HIConnectorOptions.h in Headers */,
 				CD91B2FD2062741200BCEE37 /* HIGBundle.h in Headers */,
 				CD07397F264479BA00D6EF30 /* HILeft.h in Headers */,
 				CD91B3012062741200BCEE37 /* HIGDependency.h in Headers */,
@@ -1617,6 +1630,7 @@
 				CD07386A264479B900D6EF30 /* HIXAxis.h in Headers */,
 				CD0738B3264479BA00D6EF30 /* HIMinute.h in Headers */,
 				5BC750B527DDE266006744AA /* HIBreadcrumbs.h in Headers */,
+				5BF16897287AB99900A0B460 /* HIOnPoint.h in Headers */,
 				CD073939264479BA00D6EF30 /* HIData.h in Headers */,
 				CD0738EF264479BA00D6EF30 /* HISeriesTypeDescriptions.h in Headers */,
 				CD073928264479BA00D6EF30 /* HINodes.h in Headers */,
@@ -2045,9 +2059,11 @@
 				CD07395B264479BA00D6EF30 /* HITop.m in Sources */,
 				CD073975264479BA00D6EF30 /* HIBar.m in Sources */,
 				CD0738B0264479BA00D6EF30 /* HIContextButton.m in Sources */,
+				5BF16898287AB99900A0B460 /* HIOnPoint.m in Sources */,
 				CD073856264479B900D6EF30 /* HIHalo.m in Sources */,
 				CD073951264479BA00D6EF30 /* HIRight.m in Sources */,
 				CD07396D264479BA00D6EF30 /* HINodes.m in Sources */,
+				5BF16899287AB99900A0B460 /* HIConnectorOptions.m in Sources */,
 				CD07394E264479BA00D6EF30 /* HIActiveDataLabelStyle.m in Sources */,
 				CD073890264479BA00D6EF30 /* HIEvents.m in Sources */,
 				CD0738BC264479BA00D6EF30 /* HIASTNode.m in Sources */,

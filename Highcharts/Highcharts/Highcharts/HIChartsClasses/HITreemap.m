@@ -64,6 +64,7 @@
 	copyTreemap.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyTreemap.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyTreemap.custom = [self.custom copyWithZone: zone];
+	copyTreemap.onPoint = [self.onPoint copyWithZone: zone];
 	copyTreemap.stacking = [self.stacking copyWithZone: zone];
 	copyTreemap.animation = [self.animation copyWithZone: zone];
 	copyTreemap.relativeXValue = [self.relativeXValue copyWithZone: zone];
@@ -112,7 +113,7 @@
 		params[@"sortIndex"] = self.sortIndex;
 	}
 	if (self.colorByPoint) {
-    params[@"colorByPoint"] = self.colorByPoint;
+		params[@"colorByPoint"] = self.colorByPoint;
 	}
 	if (self.breadcrumbs) {
 		params[@"breadcrumbs"] = [self.breadcrumbs getParams];
