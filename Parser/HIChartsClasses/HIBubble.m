@@ -62,6 +62,7 @@
 	copyBubble.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyBubble.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBubble.custom = [self.custom copyWithZone: zone];
+	copyBubble.onPoint = [self.onPoint copyWithZone: zone];
 	copyBubble.stacking = [self.stacking copyWithZone: zone];
 	copyBubble.animation = [self.animation copyWithZone: zone];
 	copyBubble.relativeXValue = [self.relativeXValue copyWithZone: zone];

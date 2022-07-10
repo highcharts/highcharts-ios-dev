@@ -65,6 +65,7 @@
 	copyBar.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyBar.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBar.custom = [self.custom copyWithZone: zone];
+	copyBar.onPoint = [self.onPoint copyWithZone: zone];
 	copyBar.stacking = [self.stacking copyWithZone: zone];
 	copyBar.animation = [self.animation copyWithZone: zone];
 	copyBar.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];

@@ -13,6 +13,7 @@
 	copyBreadcrumbs.zIndex = [self.zIndex copyWithZone: zone];
 	copyBreadcrumbs.style = [self.style copyWithZone: zone];
 	copyBreadcrumbs.format = [self.format copyWithZone: zone];
+	copyBreadcrumbs.rtl = [self.rtl copyWithZone: zone];
 	copyBreadcrumbs.useHTML = [self.useHTML copyWithZone: zone];
 	copyBreadcrumbs.buttonTheme = [self.buttonTheme copyWithZone: zone];
 	copyBreadcrumbs.relativeTo = [self.relativeTo copyWithZone: zone];
@@ -37,6 +38,9 @@
 	}
 	if (self.format) {
 		params[@"format"] = self.format;
+	}
+	if (self.rtl) {
+		params[@"rtl"] = self.rtl;
 	}
 	if (self.useHTML) {
 		params[@"useHTML"] = self.useHTML;
@@ -89,6 +93,12 @@
 	NSString *oldValue = _format;
 	_format = format;
 	[self updateNSObject:oldValue newValue:format propertyName:@"format"];
+}
+
+-(void)setRtl:(NSNumber *)rtl {
+	NSNumber *oldValue = _rtl;
+	_rtl = rtl;
+	[self updateNSObject:oldValue newValue:rtl propertyName:@"rtl"];
 }
 
 -(void)setUseHTML:(NSNumber *)useHTML {

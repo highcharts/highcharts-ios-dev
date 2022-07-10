@@ -58,6 +58,7 @@
 	copyVariablepie.cursor = [self.cursor copyWithZone: zone];
 	copyVariablepie.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyVariablepie.custom = [self.custom copyWithZone: zone];
+	copyVariablepie.onPoint = [self.onPoint copyWithZone: zone];
 	copyVariablepie.animation = [self.animation copyWithZone: zone];
 	copyVariablepie.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyVariablepie.showCheckbox = [self.showCheckbox copyWithZone: zone];

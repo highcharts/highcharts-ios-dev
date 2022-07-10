@@ -60,6 +60,7 @@
 	copyPackedbubble.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyPackedbubble.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPackedbubble.custom = [self.custom copyWithZone: zone];
+	copyPackedbubble.onPoint = [self.onPoint copyWithZone: zone];
 	copyPackedbubble.stacking = [self.stacking copyWithZone: zone];
 	copyPackedbubble.animation = [self.animation copyWithZone: zone];
 	copyPackedbubble.relativeXValue = [self.relativeXValue copyWithZone: zone];

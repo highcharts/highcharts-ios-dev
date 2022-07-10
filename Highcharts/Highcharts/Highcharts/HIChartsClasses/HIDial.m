@@ -17,6 +17,7 @@
 	copyDial.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyDial.backgroundColor = [self.backgroundColor copyWithZone: zone];
 	copyDial.topWidth = [self.topWidth copyWithZone: zone];
+	copyDial.path = [self.path copyWithZone: zone];
 	copyDial.baseWidth = [self.baseWidth copyWithZone: zone];
 	return copyDial;
 }
@@ -44,6 +45,9 @@
 	}
 	if (self.topWidth) {
 		params[@"topWidth"] = self.topWidth;
+	}
+	if (self.path) {
+		params[@"path"] = self.path;
 	}
 	if (self.baseWidth) {
 		params[@"baseWidth"] = self.baseWidth;
@@ -93,6 +97,12 @@
 	NSNumber *oldValue = _topWidth;
 	_topWidth = topWidth;
 	[self updateNSObject:oldValue newValue:topWidth propertyName:@"topWidth"];
+}
+
+-(void)setPath:(id)path {
+	id oldValue = _path;
+	_path = path;
+	[self updateNSObject:oldValue newValue:path propertyName:@"path"];
 }
 
 -(void)setBaseWidth:(NSNumber *)baseWidth {

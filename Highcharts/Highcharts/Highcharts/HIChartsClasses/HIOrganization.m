@@ -39,6 +39,7 @@
 	copyOrganization.linkLineWidth = [self.linkLineWidth copyWithZone: zone];
 	copyOrganization.hangingIndent = [self.hangingIndent copyWithZone: zone];
 	copyOrganization.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyOrganization.opacity = [self.opacity copyWithZone: zone];
 	copyOrganization.minLinkWidth = [self.minLinkWidth copyWithZone: zone];
 	copyOrganization.nodePadding = [self.nodePadding copyWithZone: zone];
 	copyOrganization.states = [self.states copyWithZone: zone];
@@ -59,11 +60,11 @@
 	copyOrganization.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyOrganization.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyOrganization.custom = [self.custom copyWithZone: zone];
+	copyOrganization.onPoint = [self.onPoint copyWithZone: zone];
 	copyOrganization.animation = [self.animation copyWithZone: zone];
 	copyOrganization.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyOrganization.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyOrganization.events = [self.events copyWithZone: zone];
-	copyOrganization.opacity = [self.opacity copyWithZone: zone];
 	copyOrganization.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyOrganization.definition = [self.definition copyWithZone: zone];
 	copyOrganization.keys = [self.keys copyWithZone: zone];

@@ -16,6 +16,7 @@
 	[super copyWithZone:zone];
 	HISankey *copySankey = [[HISankey allocWithZone: zone] init];
 	copySankey.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copySankey.opacity = [self.opacity copyWithZone: zone];
 	copySankey.minLinkWidth = [self.minLinkWidth copyWithZone: zone];
 	copySankey.curveFactor = [self.curveFactor copyWithZone: zone];
 	copySankey.nodePadding = [self.nodePadding copyWithZone: zone];
@@ -42,11 +43,11 @@
 	copySankey.dashStyle = [self.dashStyle copyWithZone: zone];
 	copySankey.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copySankey.custom = [self.custom copyWithZone: zone];
+	copySankey.onPoint = [self.onPoint copyWithZone: zone];
 	copySankey.animation = [self.animation copyWithZone: zone];
 	copySankey.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copySankey.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copySankey.events = [self.events copyWithZone: zone];
-	copySankey.opacity = [self.opacity copyWithZone: zone];
 	copySankey.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copySankey.definition = [self.definition copyWithZone: zone];
 	copySankey.keys = [self.keys copyWithZone: zone];

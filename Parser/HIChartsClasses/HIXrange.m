@@ -56,6 +56,7 @@
 	copyXrange.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyXrange.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyXrange.custom = [self.custom copyWithZone: zone];
+	copyXrange.onPoint = [self.onPoint copyWithZone: zone];
 	copyXrange.animation = [self.animation copyWithZone: zone];
 	copyXrange.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyXrange.showCheckbox = [self.showCheckbox copyWithZone: zone];

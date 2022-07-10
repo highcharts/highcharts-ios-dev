@@ -40,6 +40,7 @@
 	copyPolygon.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyPolygon.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPolygon.custom = [self.custom copyWithZone: zone];
+	copyPolygon.onPoint = [self.onPoint copyWithZone: zone];
 	copyPolygon.stacking = [self.stacking copyWithZone: zone];
 	copyPolygon.animation = [self.animation copyWithZone: zone];
 	copyPolygon.relativeXValue = [self.relativeXValue copyWithZone: zone];

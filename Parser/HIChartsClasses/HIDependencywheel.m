@@ -30,6 +30,7 @@
 	copyDependencywheel.center = [self.center copyWithZone: zone];
 	copyDependencywheel.curveFactor = [self.curveFactor copyWithZone: zone];
 	copyDependencywheel.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyDependencywheel.opacity = [self.opacity copyWithZone: zone];
 	copyDependencywheel.minLinkWidth = [self.minLinkWidth copyWithZone: zone];
 	copyDependencywheel.nodePadding = [self.nodePadding copyWithZone: zone];
 	copyDependencywheel.tooltip = [self.tooltip copyWithZone: zone];
@@ -55,11 +56,11 @@
 	copyDependencywheel.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyDependencywheel.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyDependencywheel.custom = [self.custom copyWithZone: zone];
+	copyDependencywheel.onPoint = [self.onPoint copyWithZone: zone];
 	copyDependencywheel.animation = [self.animation copyWithZone: zone];
 	copyDependencywheel.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyDependencywheel.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyDependencywheel.events = [self.events copyWithZone: zone];
-	copyDependencywheel.opacity = [self.opacity copyWithZone: zone];
 	copyDependencywheel.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyDependencywheel.definition = [self.definition copyWithZone: zone];
 	copyDependencywheel.keys = [self.keys copyWithZone: zone];

@@ -56,6 +56,7 @@
 	copyColumn.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyColumn.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyColumn.custom = [self.custom copyWithZone: zone];
+	copyColumn.onPoint = [self.onPoint copyWithZone: zone];
 	copyColumn.stacking = [self.stacking copyWithZone: zone];
 	copyColumn.animation = [self.animation copyWithZone: zone];
 	copyColumn.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];

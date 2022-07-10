@@ -48,6 +48,7 @@
 	copySpline.connectNulls = [self.connectNulls copyWithZone: zone];
 	copySpline.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copySpline.custom = [self.custom copyWithZone: zone];
+	copySpline.onPoint = [self.onPoint copyWithZone: zone];
 	copySpline.stacking = [self.stacking copyWithZone: zone];
 	copySpline.animation = [self.animation copyWithZone: zone];
 	copySpline.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];

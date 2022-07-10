@@ -50,6 +50,7 @@
 	copyScatter3d.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyScatter3d.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyScatter3d.custom = [self.custom copyWithZone: zone];
+	copyScatter3d.onPoint = [self.onPoint copyWithZone: zone];
 	copyScatter3d.stacking = [self.stacking copyWithZone: zone];
 	copyScatter3d.animation = [self.animation copyWithZone: zone];
 	copyScatter3d.relativeXValue = [self.relativeXValue copyWithZone: zone];

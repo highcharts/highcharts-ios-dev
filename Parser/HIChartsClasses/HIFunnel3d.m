@@ -63,6 +63,7 @@
 	copyFunnel3d.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyFunnel3d.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyFunnel3d.custom = [self.custom copyWithZone: zone];
+	copyFunnel3d.onPoint = [self.onPoint copyWithZone: zone];
 	copyFunnel3d.stacking = [self.stacking copyWithZone: zone];
 	copyFunnel3d.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyFunnel3d.relativeXValue = [self.relativeXValue copyWithZone: zone];

@@ -57,6 +57,7 @@
 	copyColumnpyramid.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyColumnpyramid.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyColumnpyramid.custom = [self.custom copyWithZone: zone];
+	copyColumnpyramid.onPoint = [self.onPoint copyWithZone: zone];
 	copyColumnpyramid.stacking = [self.stacking copyWithZone: zone];
 	copyColumnpyramid.animation = [self.animation copyWithZone: zone];
 	copyColumnpyramid.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];

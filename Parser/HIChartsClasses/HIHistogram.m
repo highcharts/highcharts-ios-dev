@@ -66,6 +66,7 @@
 	copyHistogram.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyHistogram.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyHistogram.custom = [self.custom copyWithZone: zone];
+	copyHistogram.onPoint = [self.onPoint copyWithZone: zone];
 	copyHistogram.animation = [self.animation copyWithZone: zone];
 	copyHistogram.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyHistogram.relativeXValue = [self.relativeXValue copyWithZone: zone];

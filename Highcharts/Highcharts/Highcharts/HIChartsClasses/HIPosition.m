@@ -12,6 +12,8 @@
 	HIPosition *copyPosition = [[HIPosition allocWithZone: zone] init];
 	copyPosition.y = [self.y copyWithZone: zone];
 	copyPosition.x = [self.x copyWithZone: zone];
+	copyPosition.offsetX = [self.offsetX copyWithZone: zone];
+	copyPosition.offsetY = [self.offsetY copyWithZone: zone];
 	copyPosition.align = [self.align copyWithZone: zone];
 	copyPosition.verticalAlign = [self.verticalAlign copyWithZone: zone];
 	return copyPosition;
@@ -25,6 +27,12 @@
 	}
 	if (self.x) {
 		params[@"x"] = self.x;
+	}
+	if (self.offsetX) {
+		params[@"offsetX"] = self.offsetX;
+	}
+	if (self.offsetY) {
+		params[@"offsetY"] = self.offsetY;
 	}
 	if (self.align) {
 		params[@"align"] = self.align;
@@ -47,6 +55,18 @@
 	NSNumber *oldValue = _x;
 	_x = x;
 	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
+}
+
+-(void)setOffsetX:(NSNumber *)offsetX {
+	NSNumber *oldValue = _offsetX;
+	_offsetX = offsetX;
+	[self updateNSObject:oldValue newValue:offsetX propertyName:@"offsetX"];
+}
+
+-(void)setOffsetY:(NSNumber *)offsetY {
+	NSNumber *oldValue = _offsetY;
+	_offsetY = offsetY;
+	[self updateNSObject:oldValue newValue:offsetY propertyName:@"offsetY"];
 }
 
 -(void)setAlign:(NSString *)align {

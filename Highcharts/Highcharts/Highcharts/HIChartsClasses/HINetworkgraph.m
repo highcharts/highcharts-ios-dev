@@ -42,6 +42,7 @@
 	copyNetworkgraph.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyNetworkgraph.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyNetworkgraph.custom = [self.custom copyWithZone: zone];
+	copyNetworkgraph.onPoint = [self.onPoint copyWithZone: zone];
 	copyNetworkgraph.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyNetworkgraph.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyNetworkgraph.showCheckbox = [self.showCheckbox copyWithZone: zone];

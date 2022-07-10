@@ -102,6 +102,7 @@
 		params[@"plotBorderColor"] = [self.plotBorderColor getData];
 	}
 	if (self.alignThresholds) {
+		params[@"alignThresholds"] = self.alignThresholds;
 	}
 	if (self.spacingRight) {
 		params[@"spacingRight"] = self.spacingRight;
@@ -312,8 +313,8 @@
 	[self updateHIObject:oldValue newValue:plotBorderColor propertyName:@"plotBorderColor"];
 }
 
--(void)setAlignThresholds:(id)alignThresholds {
-	id oldValue = _alignThresholds;
+-(void)setAlignThresholds:(NSNumber *)alignThresholds {
+	NSNumber *oldValue = _alignThresholds;
 	_alignThresholds = alignThresholds;
 	[self updateNSObject:oldValue newValue:alignThresholds propertyName:@"alignThresholds"];
 }

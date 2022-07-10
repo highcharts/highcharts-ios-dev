@@ -73,6 +73,7 @@
 	copyErrorbar.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyErrorbar.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyErrorbar.custom = [self.custom copyWithZone: zone];
+	copyErrorbar.onPoint = [self.onPoint copyWithZone: zone];
 	copyErrorbar.animation = [self.animation copyWithZone: zone];
 	copyErrorbar.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyErrorbar.relativeXValue = [self.relativeXValue copyWithZone: zone];

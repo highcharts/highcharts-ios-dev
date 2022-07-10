@@ -60,6 +60,7 @@
 	copyLollipop.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyLollipop.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyLollipop.custom = [self.custom copyWithZone: zone];
+	copyLollipop.onPoint = [self.onPoint copyWithZone: zone];
 	copyLollipop.animation = [self.animation copyWithZone: zone];
 	copyLollipop.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyLollipop.relativeXValue = [self.relativeXValue copyWithZone: zone];

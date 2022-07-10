@@ -39,6 +39,7 @@
 	copyTilemap.cursor = [self.cursor copyWithZone: zone];
 	copyTilemap.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyTilemap.custom = [self.custom copyWithZone: zone];
+	copyTilemap.onPoint = [self.onPoint copyWithZone: zone];
 	copyTilemap.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyTilemap.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyTilemap.events = [self.events copyWithZone: zone];

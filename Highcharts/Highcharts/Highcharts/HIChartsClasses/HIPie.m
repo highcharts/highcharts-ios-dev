@@ -46,6 +46,7 @@
 	copyPie.cursor = [self.cursor copyWithZone: zone];
 	copyPie.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPie.custom = [self.custom copyWithZone: zone];
+	copyPie.onPoint = [self.onPoint copyWithZone: zone];
 	copyPie.animation = [self.animation copyWithZone: zone];
 	copyPie.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyPie.showCheckbox = [self.showCheckbox copyWithZone: zone];

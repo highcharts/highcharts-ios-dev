@@ -28,7 +28,6 @@
 	copyWordcloud.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyWordcloud.placementStrategy = [self.placementStrategy copyWithZone: zone];
 	copyWordcloud.borderRadius = [self.borderRadius copyWithZone: zone];
-	copyWordcloud.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyWordcloud.states = [self.states copyWithZone: zone];
 	copyWordcloud.colors = [self.colors copyWithZone: zone];
 	copyWordcloud.borderColor = [self.borderColor copyWithZone: zone];
@@ -46,6 +45,7 @@
 	copyWordcloud.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyWordcloud.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyWordcloud.custom = [self.custom copyWithZone: zone];
+	copyWordcloud.onPoint = [self.onPoint copyWithZone: zone];
 	copyWordcloud.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyWordcloud.events = [self.events copyWithZone: zone];
 	copyWordcloud.opacity = [self.opacity copyWithZone: zone];

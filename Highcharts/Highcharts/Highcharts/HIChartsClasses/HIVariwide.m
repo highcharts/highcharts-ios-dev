@@ -52,6 +52,7 @@
 	copyVariwide.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyVariwide.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyVariwide.custom = [self.custom copyWithZone: zone];
+	copyVariwide.onPoint = [self.onPoint copyWithZone: zone];
 	copyVariwide.stacking = [self.stacking copyWithZone: zone];
 	copyVariwide.animation = [self.animation copyWithZone: zone];
 	copyVariwide.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];

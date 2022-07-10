@@ -59,6 +59,7 @@
 	copyWaterfall.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyWaterfall.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyWaterfall.custom = [self.custom copyWithZone: zone];
+	copyWaterfall.onPoint = [self.onPoint copyWithZone: zone];
 	copyWaterfall.stacking = [self.stacking copyWithZone: zone];
 	copyWaterfall.animation = [self.animation copyWithZone: zone];
 	copyWaterfall.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];

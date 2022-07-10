@@ -59,6 +59,7 @@
 	copyWindbarb.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyWindbarb.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyWindbarb.custom = [self.custom copyWithZone: zone];
+	copyWindbarb.onPoint = [self.onPoint copyWithZone: zone];
 	copyWindbarb.animation = [self.animation copyWithZone: zone];
 	copyWindbarb.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyWindbarb.relativeXValue = [self.relativeXValue copyWithZone: zone];
