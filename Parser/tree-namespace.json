@@ -2832,9 +2832,7 @@
 						"description": "Shape point as string, object or function.",
 						"kind": "typedef",
 						"types": [
-							"string",
-							"Highcharts.AnnotationMockPointOptionsObject",
-							"Highcharts.AnnotationMockPointFunction"
+							"Highcharts.AnnotationMockPointOptionsObject"
 						]
 					},
 					"meta": {
