@@ -72,6 +72,7 @@
 	copyBoxplot.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyBoxplot.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBoxplot.custom = [self.custom copyWithZone: zone];
+	copyBoxplot.onPoint = [self.onPoint copyWithZone: zone];
 	copyBoxplot.animation = [self.animation copyWithZone: zone];
 	copyBoxplot.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyBoxplot.relativeXValue = [self.relativeXValue copyWithZone: zone];

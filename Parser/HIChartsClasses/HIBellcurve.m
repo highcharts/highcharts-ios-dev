@@ -54,6 +54,7 @@
 	copyBellcurve.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyBellcurve.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBellcurve.custom = [self.custom copyWithZone: zone];
+	copyBellcurve.onPoint = [self.onPoint copyWithZone: zone];
 	copyBellcurve.animation = [self.animation copyWithZone: zone];
 	copyBellcurve.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyBellcurve.relativeXValue = [self.relativeXValue copyWithZone: zone];
@@ -130,8 +131,8 @@
 	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
 }
 
--(void)setFillOpacity:(NSNumber *)fillOpacity {
-	NSNumber *oldValue = _fillOpacity;
+-(void)setFillOpacity:(id)fillOpacity {
+	id oldValue = _fillOpacity;
 	_fillOpacity = fillOpacity;
 	[self updateNSObject:oldValue newValue:fillOpacity propertyName:@"fillOpacity"];
 }

@@ -65,7 +65,7 @@ The sort index of the point inside the treemap level.
 /**
 When using automatic point colors pulled from the `options.colors` collection, this option determines whether the chart should receive one color per series or one color per point.
 */
-@property(nonatomic, readwrite) id colorByPoint;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *colorByPoint;
 /**
 Options for the breadcrumbs, the navigation at the top leading the way up through the traversed levels.
 */

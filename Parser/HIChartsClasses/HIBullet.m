@@ -66,6 +66,7 @@
 	copyBullet.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyBullet.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBullet.custom = [self.custom copyWithZone: zone];
+	copyBullet.onPoint = [self.onPoint copyWithZone: zone];
 	copyBullet.stacking = [self.stacking copyWithZone: zone];
 	copyBullet.animation = [self.animation copyWithZone: zone];
 	copyBullet.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];

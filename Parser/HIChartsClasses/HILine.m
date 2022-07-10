@@ -39,6 +39,7 @@
 	copyLine.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyLine.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyLine.custom = [self.custom copyWithZone: zone];
+	copyLine.onPoint = [self.onPoint copyWithZone: zone];
 	copyLine.stacking = [self.stacking copyWithZone: zone];
 	copyLine.animation = [self.animation copyWithZone: zone];
 	copyLine.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];

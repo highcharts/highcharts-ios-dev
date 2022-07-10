@@ -57,6 +57,7 @@
 	copyFunnel.cursor = [self.cursor copyWithZone: zone];
 	copyFunnel.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyFunnel.custom = [self.custom copyWithZone: zone];
+	copyFunnel.onPoint = [self.onPoint copyWithZone: zone];
 	copyFunnel.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyFunnel.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyFunnel.opacity = [self.opacity copyWithZone: zone];

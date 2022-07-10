@@ -32,6 +32,7 @@
 	copyArcdiagram.centeredLinks = [self.centeredLinks copyWithZone: zone];
 	copyArcdiagram.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyArcdiagram.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyArcdiagram.opacity = [self.opacity copyWithZone: zone];
 	copyArcdiagram.minLinkWidth = [self.minLinkWidth copyWithZone: zone];
 	copyArcdiagram.tooltip = [self.tooltip copyWithZone: zone];
 	copyArcdiagram.states = [self.states copyWithZone: zone];
@@ -54,10 +55,10 @@
 	copyArcdiagram.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyArcdiagram.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyArcdiagram.custom = [self.custom copyWithZone: zone];
+	copyArcdiagram.onPoint = [self.onPoint copyWithZone: zone];
 	copyArcdiagram.animation = [self.animation copyWithZone: zone];
 	copyArcdiagram.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyArcdiagram.events = [self.events copyWithZone: zone];
-	copyArcdiagram.opacity = [self.opacity copyWithZone: zone];
 	copyArcdiagram.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyArcdiagram.definition = [self.definition copyWithZone: zone];
 	copyArcdiagram.keys = [self.keys copyWithZone: zone];

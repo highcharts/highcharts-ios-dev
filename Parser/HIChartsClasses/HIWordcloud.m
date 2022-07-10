@@ -45,6 +45,7 @@
 	copyWordcloud.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyWordcloud.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyWordcloud.custom = [self.custom copyWithZone: zone];
+	copyWordcloud.onPoint = [self.onPoint copyWithZone: zone];
 	copyWordcloud.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyWordcloud.events = [self.events copyWithZone: zone];
 	copyWordcloud.opacity = [self.opacity copyWithZone: zone];

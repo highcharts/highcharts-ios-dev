@@ -17,6 +17,7 @@
 	HIGauge *copyGauge = [[HIGauge allocWithZone: zone] init];
 	copyGauge.dial = [self.dial copyWithZone: zone];
 	copyGauge.overshoot = [self.overshoot copyWithZone: zone];
+	copyGauge.tooltip = [self.tooltip copyWithZone: zone];
 	copyGauge.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyGauge.wrap = [self.wrap copyWithZone: zone];
 	copyGauge.pivot = [self.pivot copyWithZone: zone];
@@ -28,12 +29,12 @@
 	copyGauge.color = [self.color copyWithZone: zone];
 	copyGauge.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyGauge.point = [self.point copyWithZone: zone];
-	copyGauge.tooltip = [self.tooltip copyWithZone: zone];
 	copyGauge.label = [self.label copyWithZone: zone];
 	copyGauge.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyGauge.cursor = [self.cursor copyWithZone: zone];
 	copyGauge.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyGauge.custom = [self.custom copyWithZone: zone];
+	copyGauge.onPoint = [self.onPoint copyWithZone: zone];
 	copyGauge.animation = [self.animation copyWithZone: zone];
 	copyGauge.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyGauge.showCheckbox = [self.showCheckbox copyWithZone: zone];

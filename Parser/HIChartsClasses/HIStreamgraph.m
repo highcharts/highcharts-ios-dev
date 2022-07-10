@@ -57,6 +57,7 @@
 	copyStreamgraph.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyStreamgraph.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyStreamgraph.custom = [self.custom copyWithZone: zone];
+	copyStreamgraph.onPoint = [self.onPoint copyWithZone: zone];
 	copyStreamgraph.animation = [self.animation copyWithZone: zone];
 	copyStreamgraph.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyStreamgraph.relativeXValue = [self.relativeXValue copyWithZone: zone];

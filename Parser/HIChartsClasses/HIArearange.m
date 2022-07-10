@@ -48,6 +48,7 @@
 	copyArearange.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyArearange.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyArearange.custom = [self.custom copyWithZone: zone];
+	copyArearange.onPoint = [self.onPoint copyWithZone: zone];
 	copyArearange.animation = [self.animation copyWithZone: zone];
 	copyArearange.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyArearange.relativeXValue = [self.relativeXValue copyWithZone: zone];
