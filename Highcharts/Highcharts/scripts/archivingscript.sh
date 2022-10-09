@@ -8,8 +8,6 @@ xcodebuild \
 	-scheme Highcharts \
 	-sdk iphoneos \
 	SYMROOT=Build \
-	-arch armv7 \
-	-arch armv7s \
 	-arch arm64 \
 	-arch arm64e \
 	ONLY_ACTIVE_ARCH=no
@@ -20,8 +18,6 @@ xcodebuild archive \
 	-configuration Release \
 	-sdk iphoneos \
 	-archivePath Archive \
-	-arch armv7 \
-	-arch armv7s \
 	-arch arm64 \
 	-arch arm64e \
 	ONLY_ACTIVE_ARCH=no
