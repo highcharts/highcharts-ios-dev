@@ -71,6 +71,7 @@
 	copyPyramid3d.crisp = [self.crisp copyWithZone: zone];
 	copyPyramid3d.visible = [self.visible copyWithZone: zone];
 	copyPyramid3d.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyPyramid3d.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyPyramid3d.className = [self.className copyWithZone: zone];
 	copyPyramid3d.reversed = [self.reversed copyWithZone: zone];
 	copyPyramid3d.dataLabels = [self.dataLabels copyWithZone: zone];
@@ -135,12 +136,13 @@
 	copyPyramid3d.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyPyramid3d.shadow = [self.shadow copyWithZone: zone];
 	copyPyramid3d.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
-	copyPyramid3d.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyPyramid3d.zones = [self.zones copyWithZone: zone];
 	copyPyramid3d.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyPyramid3d.crisp = [self.crisp copyWithZone: zone];
 	copyPyramid3d.visible = [self.visible copyWithZone: zone];
 	copyPyramid3d.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyPyramid3d.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
+	copyPyramid3d.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyPyramid3d.className = [self.className copyWithZone: zone];
 	copyPyramid3d.pointStart = [self.pointStart copyWithZone: zone];
 	return copyPyramid3d;
@@ -291,14 +293,14 @@
 	[self updateNSObject:oldValue newValue:reversed propertyName:@"reversed"];
 }
 
--(void)setNeckWidth:(NSString *)neckWidth {
-	NSString *oldValue = _neckWidth;
+-(void)setNeckWidth:(NSNumber *)neckWidth {
+	NSNumber *oldValue = _neckWidth;
 	_neckWidth = neckWidth;
 	[self updateNSObject:oldValue newValue:neckWidth propertyName:@"neckWidth"];
 }
 
--(void)setNeckHeight:(NSString *)neckHeight {
-	NSString *oldValue = _neckHeight;
+-(void)setNeckHeight:(NSNumber *)neckHeight {
+	NSNumber *oldValue = _neckHeight;
 	_neckHeight = neckHeight;
 	[self updateNSObject:oldValue newValue:neckHeight propertyName:@"neckHeight"];
 }

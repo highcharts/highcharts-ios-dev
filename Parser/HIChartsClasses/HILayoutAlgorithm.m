@@ -183,8 +183,8 @@
 	[self updateNSObject:oldValue newValue:bubblePadding propertyName:@"bubblePadding"];
 }
 
--(void)setSplitSeries:(NSString *)splitSeries {
-	NSString *oldValue = _splitSeries;
+-(void)setSplitSeries:(NSNumber *)splitSeries {
+	NSNumber *oldValue = _splitSeries;
 	_splitSeries = splitSeries;
 	[self updateNSObject:oldValue newValue:splitSeries propertyName:@"splitSeries"];
 }

@@ -26,7 +26,6 @@
 	copyLang.numericSymbolMagnitude = [self.numericSymbolMagnitude copyWithZone: zone];
 	copyLang.weekdays = [self.weekdays copyWithZone: zone];
 	copyLang.downloadSVG = [self.downloadSVG copyWithZone: zone];
-	copyLang.drillUpText = [self.drillUpText copyWithZone: zone];
 	copyLang.viewData = [self.viewData copyWithZone: zone];
 	copyLang.contextButtonTitle = [self.contextButtonTitle copyWithZone: zone];
 	copyLang.invalidDate = [self.invalidDate copyWithZone: zone];
@@ -120,8 +119,6 @@
 	}
 	if (self.downloadSVG) {
 		params[@"downloadSVG"] = self.downloadSVG;
-	}
-	if (self.drillUpText) {
 	}
 	if (self.viewData) {
 		params[@"viewData"] = self.viewData;
@@ -279,12 +276,6 @@
 	NSString *oldValue = _downloadSVG;
 	_downloadSVG = downloadSVG;
 	[self updateNSObject:oldValue newValue:downloadSVG propertyName:@"downloadSVG"];
-}
-
--(void)setDrillUpText:(id)drillUpText {
-	id oldValue = _drillUpText;
-	_drillUpText = drillUpText;
-	[self updateNSObject:oldValue newValue:drillUpText propertyName:@"drillUpText"];
 }
 
 -(void)setViewData:(NSString *)viewData {

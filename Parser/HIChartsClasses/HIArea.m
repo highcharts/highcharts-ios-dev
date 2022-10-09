@@ -76,14 +76,15 @@
 	copyArea.shadow = [self.shadow copyWithZone: zone];
 	copyArea.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyArea.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyArea.zoneAxis = [self.zoneAxis copyWithZone: zone];
+	copyArea.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyArea.zones = [self.zones copyWithZone: zone];
 	copyArea.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyArea.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyArea.crisp = [self.crisp copyWithZone: zone];
 	copyArea.visible = [self.visible copyWithZone: zone];
 	copyArea.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyArea.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyArea.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
+	copyArea.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyArea.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyArea.className = [self.className copyWithZone: zone];
 	copyArea.pointStart = [self.pointStart copyWithZone: zone];

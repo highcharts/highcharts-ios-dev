@@ -19,7 +19,6 @@
 	copyWordcloud.style = [self.style copyWithZone: zone];
 	copyWordcloud.minFontSize = [self.minFontSize copyWithZone: zone];
 	copyWordcloud.maxFontSize = [self.maxFontSize copyWithZone: zone];
-	copyWordcloud.allowExtendPlayingField = [self.allowExtendPlayingField copyWithZone: zone];
 	copyWordcloud.spiral = [self.spiral copyWithZone: zone];
 	copyWordcloud.tooltip = [self.tooltip copyWithZone: zone];
 	copyWordcloud.animation = [self.animation copyWithZone: zone];
@@ -59,6 +58,7 @@
 	copyWordcloud.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyWordcloud.visible = [self.visible copyWithZone: zone];
 	copyWordcloud.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyWordcloud.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyWordcloud.className = [self.className copyWithZone: zone];
 	copyWordcloud.data = [self.data copyWithZone: zone];
 	copyWordcloud.id = [self.id copyWithZone: zone];
@@ -87,9 +87,6 @@
 	}
 	if (self.maxFontSize) {
 		params[@"maxFontSize"] = self.maxFontSize;
-	}
-	if (self.allowExtendPlayingField) {
-		params[@"allowExtendPlayingField"] = self.allowExtendPlayingField;
 	}
 	if (self.spiral) {
 		params[@"spiral"] = self.spiral;
@@ -149,12 +146,6 @@
 	NSNumber *oldValue = _maxFontSize;
 	_maxFontSize = maxFontSize;
 	[self updateNSObject:oldValue newValue:maxFontSize propertyName:@"maxFontSize"];
-}
-
--(void)setAllowExtendPlayingField:(NSNumber *)allowExtendPlayingField {
-	NSNumber *oldValue = _allowExtendPlayingField;
-	_allowExtendPlayingField = allowExtendPlayingField;
-	[self updateNSObject:oldValue newValue:allowExtendPlayingField propertyName:@"allowExtendPlayingField"];
 }
 
 -(void)setSpiral:(NSString *)spiral {

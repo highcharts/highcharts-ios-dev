@@ -80,12 +80,13 @@
 	copyFunnel3d.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyFunnel3d.shadow = [self.shadow copyWithZone: zone];
 	copyFunnel3d.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
-	copyFunnel3d.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyFunnel3d.zones = [self.zones copyWithZone: zone];
 	copyFunnel3d.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyFunnel3d.crisp = [self.crisp copyWithZone: zone];
 	copyFunnel3d.visible = [self.visible copyWithZone: zone];
 	copyFunnel3d.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyFunnel3d.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
+	copyFunnel3d.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyFunnel3d.className = [self.className copyWithZone: zone];
 	copyFunnel3d.pointStart = [self.pointStart copyWithZone: zone];
 	copyFunnel3d.data = [self.data copyWithZone: zone];

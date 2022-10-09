@@ -74,13 +74,14 @@
 	copyAreasplinerange.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyAreasplinerange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyAreasplinerange.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyAreasplinerange.zoneAxis = [self.zoneAxis copyWithZone: zone];
+	copyAreasplinerange.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyAreasplinerange.zones = [self.zones copyWithZone: zone];
 	copyAreasplinerange.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyAreasplinerange.crisp = [self.crisp copyWithZone: zone];
 	copyAreasplinerange.visible = [self.visible copyWithZone: zone];
 	copyAreasplinerange.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyAreasplinerange.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyAreasplinerange.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
+	copyAreasplinerange.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyAreasplinerange.className = [self.className copyWithZone: zone];
 	copyAreasplinerange.pointStart = [self.pointStart copyWithZone: zone];
 	copyAreasplinerange.connectEnds = [self.connectEnds copyWithZone: zone];
@@ -117,8 +118,8 @@
 	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
 }
 
--(void)setFillOpacity:(id)fillOpacity {
-	id oldValue = _fillOpacity;
+-(void)setFillOpacity:(NSNumber *)fillOpacity {
+	NSNumber *oldValue = _fillOpacity;
 	_fillOpacity = fillOpacity;
 	[self updateNSObject:oldValue newValue:fillOpacity propertyName:@"fillOpacity"];
 }

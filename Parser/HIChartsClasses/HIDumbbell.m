@@ -69,11 +69,12 @@
 	copyDumbbell.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyDumbbell.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyDumbbell.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyDumbbell.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyDumbbell.zones = [self.zones copyWithZone: zone];
 	copyDumbbell.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyDumbbell.visible = [self.visible copyWithZone: zone];
 	copyDumbbell.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyDumbbell.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
+	copyDumbbell.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyDumbbell.className = [self.className copyWithZone: zone];
 	copyDumbbell.pointStart = [self.pointStart copyWithZone: zone];
 	copyDumbbell.connectEnds = [self.connectEnds copyWithZone: zone];

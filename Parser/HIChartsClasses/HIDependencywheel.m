@@ -26,6 +26,8 @@
 	copyDependencywheel.xAxis = [self.xAxis copyWithZone: zone];
 	copyDependencywheel.yAxis = [self.yAxis copyWithZone: zone];
 	copyDependencywheel.zIndex = [self.zIndex copyWithZone: zone];
+	copyDependencywheel.size = [self.size copyWithZone: zone];
+	copyDependencywheel.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyDependencywheel.startAngle = [self.startAngle copyWithZone: zone];
 	copyDependencywheel.center = [self.center copyWithZone: zone];
 	copyDependencywheel.curveFactor = [self.curveFactor copyWithZone: zone];
@@ -34,7 +36,6 @@
 	copyDependencywheel.minLinkWidth = [self.minLinkWidth copyWithZone: zone];
 	copyDependencywheel.nodePadding = [self.nodePadding copyWithZone: zone];
 	copyDependencywheel.tooltip = [self.tooltip copyWithZone: zone];
-	copyDependencywheel.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyDependencywheel.states = [self.states copyWithZone: zone];
 	copyDependencywheel.nodeWidth = [self.nodeWidth copyWithZone: zone];
 	copyDependencywheel.levels = [self.levels copyWithZone: zone];
@@ -71,6 +72,7 @@
 	copyDependencywheel.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyDependencywheel.visible = [self.visible copyWithZone: zone];
 	copyDependencywheel.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyDependencywheel.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyDependencywheel.className = [self.className copyWithZone: zone];
 	return copyDependencywheel;
 }
@@ -89,6 +91,9 @@
 			}
 		}
 		params[@"nodes"] = array;
+	}
+	if (self.size) {
+		params[@"size"] = self.size;
 	}
 	if (self.startAngle) {
 		params[@"startAngle"] = self.startAngle;
@@ -160,6 +165,12 @@
 	NSArray <HINodes *> *oldValue = _nodes;
 	_nodes = nodes;
 	[self updateArrayObject:oldValue newValue:nodes propertyName:@"nodes"];
+}
+
+-(void)setSize:(id)size {
+	id oldValue = _size;
+	_size = size;
+	[self updateNSObject:oldValue newValue:size propertyName:@"size"];
 }
 
 -(void)setStartAngle:(NSNumber *)startAngle {

@@ -60,6 +60,7 @@
 	copyVenn.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyVenn.crisp = [self.crisp copyWithZone: zone];
 	copyVenn.visible = [self.visible copyWithZone: zone];
+	copyVenn.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyVenn.className = [self.className copyWithZone: zone];
 	return copyVenn;
 }
