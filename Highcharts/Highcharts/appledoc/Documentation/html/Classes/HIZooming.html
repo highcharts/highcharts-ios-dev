@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>HIZooming Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta property="og:description" content="Interactive charts for your web pages.">
+	<meta property="og:determiner" content="">
+	<meta property="og:image" content="https://api.highcharts.com/highcharts/mstile-310x310.png">
+	<meta property="og:site_name" content="Highcharts">
+	<meta property="og:title" content="Highcharts iOS API Reference">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://api.highcharts.com/ios/highcharts/">
+	<meta name="searchboost" content="9700">
+	<meta name="searchtitle" content="iOS API Overview">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:creator" content="@highcharts">
+	<meta name="twitter:site" content="@highcharts">
+	<script type="text/javascript" src="./js/api.js"></script>
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+<!-- 	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">Highcharts </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Highsoft AS</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/key">key</option>
+		
+		<option value="//api/name/pinchType">pinchType</option>
+		
+		<option value="//api/name/resetButton">resetButton</option>
+		
+		<option value="//api/name/singleTouch">singleTouch</option>
+		
+		<option value="//api/name/type">type</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/getParams">- getParams</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside> -->
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">HIZooming Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>HIZooming.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Chart zooming options.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/resetButton" title="resetButton"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resetButton">&nbsp;&nbsp;resetButton</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The button that appears after a selection zoom, allowing the user to reset zoom.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIResetButton *resetButton</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIZooming.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/singleTouch" title="singleTouch"></a>
+	<h3 class="method-title"><code><a href="#//api/name/singleTouch">&nbsp;&nbsp;singleTouch</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Enables zooming by a single touch, in combination with <code>chart.zooming.type</code>. When enabled, two-finger pinch will still work as set up by [chart.zooming.pinchType] (#chart.zooming.pinchType). However, <code>singleTouch</code> will interfere with touch-dragging the chart to read the tooltip. And especially when vertical zooming is enabled, it will make it hard to scroll vertically on the page.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *singleTouch</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/zoombysingletouch">Zoom by single touch enabled, with buttons to toggle</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIZooming.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/type" title="type"></a>
+	<h3 class="method-title"><code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Decides in what dimensions the user can zoom by dragging the mouse. Can be one of <code>x</code>, <code>y</code> or <code>xy</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *type</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Accepted values:</strong> <code>["x", "y", "xy"]</code>.</p>
+
+<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIZooming.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pinchType" title="pinchType"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pinchType">&nbsp;&nbsp;pinchType</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Equivalent to <code>type</code>, but for multitouch gestures only. By default, the <code>pinchType</code> is the same as the <code>type</code> setting. However, pinching can be enabled separately in some cases, for example in stock charts where a mouse drag pans the chart, while pinching is enabled. When <code>tooltip.followTouchMove</code> is true, pinchType only applies to two-finger touches.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *pinchType</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Accepted values:</strong> <code>["x", "y", "xy"]</code>.</p>
+
+<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIZooming.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/key" title="key"></a>
+	<h3 class="method-title"><code><a href="#//api/name/key">&nbsp;&nbsp;key</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set a key to hold when dragging to zoom the chart. This is useful to avoid zooming while moving points. Should be set different than <code>chart.panKey</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *key</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Accepted values:</strong> <code>["alt", "ctrl", "meta", "shift"]</code>.</p>
+
+<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIZooming.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getParams" title="getParams"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getParams">&ndash;&nbsp;getParams</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (NSDictionary *)getParams</code></div>
+
+		    
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+			</div>
+		</div>
+	</article>
+	<footer>
+		<div class="footerMain">
+	       
+			<p class="copyright">Copyright &copy; 2022 Highsoft AS. All rights reserved.</p>
+			
+	        <div id="footer-social" class="footer-social">
+	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>
+	            <a href="https://twitter.com/Highcharts" title="Twitter" class="social-icon" target="_blank"><i class="fa fa-twitter"></i></a>
+	            <a href="http://www.linkedin.com/company/highsoft-solutions-as" title="LinkedIn" class="social-icon" target="_blank"><i class="fa fa-linkedin"></i></a>
+	            <a href="https://github.com/highcharts/highcharts" title="Github" class="social-icon" target="_blank"><i class="fa fa-github"></i></a>
+	            
+				<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com" target="_blank">appledoc 2.2.1 (build 1334)</a>.</p>
+				
+	        </div>
+	    </div>
+	</footer>
+	<script src="../js/script.js"></script>
+</body>
+</html>

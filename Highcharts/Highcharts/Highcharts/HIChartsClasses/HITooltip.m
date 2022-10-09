@@ -62,6 +62,7 @@
 		params[@"nullFormatter"] = [self.nullFormatter getFunction];
 	}
 	if (self.clusterFormat) {
+		params[@"clusterFormat"] = self.clusterFormat;
 	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
@@ -185,8 +186,8 @@
 	[self updateHIObject:oldValue newValue:nullFormatter propertyName:@"nullFormatter"];
 }
 
--(void)setClusterFormat:(id)clusterFormat {
-	id oldValue = _clusterFormat;
+-(void)setClusterFormat:(NSString *)clusterFormat {
+	NSString *oldValue = _clusterFormat;
 	_clusterFormat = clusterFormat;
 	[self updateNSObject:oldValue newValue:clusterFormat propertyName:@"clusterFormat"];
 }

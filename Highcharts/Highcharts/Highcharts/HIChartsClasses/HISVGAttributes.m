@@ -11,6 +11,8 @@
 	[super copyWithZone:zone];
 	HISVGAttributes *copySVGAttributes = [[HISVGAttributes allocWithZone: zone] init];
 	copySVGAttributes.d = [self.d copyWithZone: zone];
+	copySVGAttributes.dx = [self.dx copyWithZone: zone];
+	copySVGAttributes.dy = [self.dy copyWithZone: zone];
 	copySVGAttributes.fill = [self.fill copyWithZone: zone];
 	copySVGAttributes.inverted = [self.inverted copyWithZone: zone];
 	copySVGAttributes.matrix = [self.matrix copyWithZone: zone];
@@ -41,6 +43,12 @@
 			}
 		}
 		params[@"d"] = array;
+	}
+	if (self.dx) {
+		params[@"dx"] = self.dx;
+	}
+	if (self.dy) {
+		params[@"dy"] = self.dy;
 	}
 	if (self.fill) {
 		params[@"fill"] = [self.fill getData];
@@ -99,6 +107,18 @@
 	NSArray *oldValue = _d;
 	_d = d;
 	[self updateArrayObject:oldValue newValue:d propertyName:@"d"];
+}
+
+-(void)setDx:(NSNumber *)dx {
+	NSNumber *oldValue = _dx;
+	_dx = dx;
+	[self updateNSObject:oldValue newValue:dx propertyName:@"dx"];
+}
+
+-(void)setDy:(NSNumber *)dy {
+	NSNumber *oldValue = _dy;
+	_dy = dy;
+	[self updateNSObject:oldValue newValue:dy propertyName:@"dy"];
 }
 
 -(void)setFill:(HIColor *)fill {

@@ -90,12 +90,13 @@
 	copyBoxplot.shadow = [self.shadow copyWithZone: zone];
 	copyBoxplot.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyBoxplot.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyBoxplot.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBoxplot.zones = [self.zones copyWithZone: zone];
 	copyBoxplot.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyBoxplot.crisp = [self.crisp copyWithZone: zone];
 	copyBoxplot.visible = [self.visible copyWithZone: zone];
 	copyBoxplot.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyBoxplot.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
+	copyBoxplot.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBoxplot.className = [self.className copyWithZone: zone];
 	copyBoxplot.pointStart = [self.pointStart copyWithZone: zone];
 	copyBoxplot.showInLegend = [self.showInLegend copyWithZone: zone];

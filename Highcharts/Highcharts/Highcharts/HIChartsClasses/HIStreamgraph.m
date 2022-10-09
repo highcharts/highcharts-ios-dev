@@ -75,13 +75,14 @@
 	copyStreamgraph.shadow = [self.shadow copyWithZone: zone];
 	copyStreamgraph.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyStreamgraph.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyStreamgraph.zoneAxis = [self.zoneAxis copyWithZone: zone];
+	copyStreamgraph.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyStreamgraph.zones = [self.zones copyWithZone: zone];
 	copyStreamgraph.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyStreamgraph.crisp = [self.crisp copyWithZone: zone];
 	copyStreamgraph.visible = [self.visible copyWithZone: zone];
 	copyStreamgraph.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyStreamgraph.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyStreamgraph.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
+	copyStreamgraph.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyStreamgraph.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyStreamgraph.className = [self.className copyWithZone: zone];
 	copyStreamgraph.pointStart = [self.pointStart copyWithZone: zone];

@@ -15,13 +15,10 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIVector *copyVector = [[HIVector allocWithZone: zone] init];
-	copyVector.states = [self.states copyWithZone: zone];
-	copyVector.vectorLength = [self.vectorLength copyWithZone: zone];
-	copyVector.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyVector.tooltip = [self.tooltip copyWithZone: zone];
-	copyVector.rotationOrigin = [self.rotationOrigin copyWithZone: zone];
 	copyVector.cluster = [self.cluster copyWithZone: zone];
 	copyVector.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyVector.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyVector.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyVector.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyVector.colorIndex = [self.colorIndex copyWithZone: zone];
@@ -29,6 +26,7 @@
 	copyVector.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyVector.color = [self.color copyWithZone: zone];
 	copyVector.pointInterval = [self.pointInterval copyWithZone: zone];
+	copyVector.states = [self.states copyWithZone: zone];
 	copyVector.colorKey = [self.colorKey copyWithZone: zone];
 	copyVector.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyVector.point = [self.point copyWithZone: zone];
@@ -55,12 +53,13 @@
 	copyVector.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyVector.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyVector.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyVector.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyVector.zones = [self.zones copyWithZone: zone];
 	copyVector.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyVector.crisp = [self.crisp copyWithZone: zone];
 	copyVector.visible = [self.visible copyWithZone: zone];
 	copyVector.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyVector.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
+	copyVector.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyVector.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyVector.className = [self.className copyWithZone: zone];
 	copyVector.pointStart = [self.pointStart copyWithZone: zone];
@@ -81,12 +80,6 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
-	if (self.vectorLength) {
-		params[@"vectorLength"] = self.vectorLength;
-	}
-	if (self.rotationOrigin) {
-		params[@"rotationOrigin"] = self.rotationOrigin;
-	}
 	if (self.cluster) {
 		params[@"cluster"] = [self.cluster getParams];
 	}
@@ -94,18 +87,6 @@
 }
 
 # pragma mark - Setters
-
--(void)setVectorLength:(NSNumber *)vectorLength {
-	NSNumber *oldValue = _vectorLength;
-	_vectorLength = vectorLength;
-	[self updateNSObject:oldValue newValue:vectorLength propertyName:@"vectorLength"];
-}
-
--(void)setRotationOrigin:(NSString *)rotationOrigin {
-	NSString *oldValue = _rotationOrigin;
-	_rotationOrigin = rotationOrigin;
-	[self updateNSObject:oldValue newValue:rotationOrigin propertyName:@"rotationOrigin"];
-}
 
 -(void)setCluster:(HICluster *)cluster {
 	HICluster *oldValue = _cluster;

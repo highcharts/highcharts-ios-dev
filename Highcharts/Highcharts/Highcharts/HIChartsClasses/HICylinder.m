@@ -73,12 +73,13 @@
 	copyCylinder.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyCylinder.shadow = [self.shadow copyWithZone: zone];
 	copyCylinder.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
-	copyCylinder.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyCylinder.zones = [self.zones copyWithZone: zone];
 	copyCylinder.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyCylinder.crisp = [self.crisp copyWithZone: zone];
 	copyCylinder.visible = [self.visible copyWithZone: zone];
 	copyCylinder.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyCylinder.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
+	copyCylinder.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyCylinder.className = [self.className copyWithZone: zone];
 	copyCylinder.pointStart = [self.pointStart copyWithZone: zone];
 	copyCylinder.showInLegend = [self.showInLegend copyWithZone: zone];

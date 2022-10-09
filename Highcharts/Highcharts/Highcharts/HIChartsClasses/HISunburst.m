@@ -60,6 +60,7 @@
 	copySunburst.crisp = [self.crisp copyWithZone: zone];
 	copySunburst.visible = [self.visible copyWithZone: zone];
 	copySunburst.linkedTo = [self.linkedTo copyWithZone: zone];
+	copySunburst.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copySunburst.className = [self.className copyWithZone: zone];
 	copySunburst.data = [self.data copyWithZone: zone];
 	copySunburst.id = [self.id copyWithZone: zone];

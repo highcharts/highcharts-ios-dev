@@ -49,6 +49,10 @@
 		34E28E461CD1071C00DFE9CD /* UIColor+HIG.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E28E441CD1071C00DFE9CD /* UIColor+HIG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34E28E4A1CD10CA300DFE9CD /* UIImage+HIG.h in Headers */ = {isa = PBXBuildFile; fileRef = 34E28E481CD10CA300DFE9CD /* UIImage+HIG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34EC1CF61CDCC783001DB3A0 /* HIGOptionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EC1CF51CDCC783001DB3A0 /* HIGOptionsTest.m */; };
+		5B499CBF28F29B860088B8FA /* HIZooming.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B499CBD28F29B860088B8FA /* HIZooming.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B499CC028F29B860088B8FA /* HIZooming.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B499CBE28F29B860088B8FA /* HIZooming.m */; };
+		5B499CC328F29BC10088B8FA /* HIResetButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B499CC128F29BC10088B8FA /* HIResetButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B499CC428F29BC10088B8FA /* HIResetButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B499CC228F29BC10088B8FA /* HIResetButton.m */; };
 		5BC750B027DDE22E006744AA /* HIArcdiagram.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC750AE27DDE22E006744AA /* HIArcdiagram.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BC750B127DDE22E006744AA /* HIArcdiagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC750AF27DDE22E006744AA /* HIArcdiagram.m */; };
 		5BC750B427DDE266006744AA /* HIBreadcrumbs.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC750B227DDE266006744AA /* HIBreadcrumbs.m */; };
@@ -85,7 +89,6 @@
 		CD07385F264479B900D6EF30 /* HITreemap.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0736CF2644799A00D6EF30 /* HITreemap.m */; };
 		CD073860264479B900D6EF30 /* HITitle.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0736D02644799A00D6EF30 /* HITitle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD073861264479B900D6EF30 /* HIButtonOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0736D12644799B00D6EF30 /* HIButtonOptions.m */; };
-		CD073863264479B900D6EF30 /* HIResetZoomButton.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0736D32644799B00D6EF30 /* HIResetZoomButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD073864264479B900D6EF30 /* HIStreamgraph.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0736D42644799B00D6EF30 /* HIStreamgraph.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD073865264479B900D6EF30 /* HIParentNodeTextPath.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0736D52644799B00D6EF30 /* HIParentNodeTextPath.m */; };
 		CD073866264479B900D6EF30 /* HIScatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0736D62644799B00D6EF30 /* HIScatter.m */; };
@@ -411,7 +414,6 @@
 		CD0739AD264479BA00D6EF30 /* HIOptions3d.m in Sources */ = {isa = PBXBuildFile; fileRef = CD07381D264479B500D6EF30 /* HIOptions3d.m */; };
 		CD0739AE264479BA00D6EF30 /* HIPatternObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CD07381E264479B500D6EF30 /* HIPatternObject.m */; };
 		CD0739AF264479BA00D6EF30 /* HIShapeOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = CD07381F264479B600D6EF30 /* HIShapeOptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CD0739B0264479BA00D6EF30 /* HIResetZoomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CD073820264479B600D6EF30 /* HIResetZoomButton.m */; };
 		CD0739B1264479BA00D6EF30 /* HIExportData.h in Headers */ = {isa = PBXBuildFile; fileRef = CD073821264479B600D6EF30 /* HIExportData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD0739B2264479BA00D6EF30 /* HICsv.h in Headers */ = {isa = PBXBuildFile; fileRef = CD073822264479B600D6EF30 /* HICsv.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD0739B3264479BA00D6EF30 /* HIColorVariation.m in Sources */ = {isa = PBXBuildFile; fileRef = CD073823264479B600D6EF30 /* HIColorVariation.m */; };
@@ -541,6 +543,10 @@
 		34E28E481CD10CA300DFE9CD /* UIImage+HIG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HIG.h"; sourceTree = "<group>"; };
 		34E28E491CD10CA300DFE9CD /* UIImage+HIG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HIG.m"; sourceTree = "<group>"; };
 		34EC1CF51CDCC783001DB3A0 /* HIGOptionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGOptionsTest.m; sourceTree = "<group>"; };
+		5B499CBD28F29B860088B8FA /* HIZooming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIZooming.h; sourceTree = "<group>"; };
+		5B499CBE28F29B860088B8FA /* HIZooming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIZooming.m; sourceTree = "<group>"; };
+		5B499CC128F29BC10088B8FA /* HIResetButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIResetButton.h; sourceTree = "<group>"; };
+		5B499CC228F29BC10088B8FA /* HIResetButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIResetButton.m; sourceTree = "<group>"; };
 		5BC750AE27DDE22E006744AA /* HIArcdiagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIArcdiagram.h; sourceTree = "<group>"; };
 		5BC750AF27DDE22E006744AA /* HIArcdiagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIArcdiagram.m; sourceTree = "<group>"; };
 		5BC750B227DDE266006744AA /* HIBreadcrumbs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIBreadcrumbs.m; sourceTree = "<group>"; };
@@ -577,7 +583,6 @@
 		CD0736CF2644799A00D6EF30 /* HITreemap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HITreemap.m; sourceTree = "<group>"; };
 		CD0736D02644799A00D6EF30 /* HITitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HITitle.h; sourceTree = "<group>"; };
 		CD0736D12644799B00D6EF30 /* HIButtonOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIButtonOptions.m; sourceTree = "<group>"; };
-		CD0736D32644799B00D6EF30 /* HIResetZoomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIResetZoomButton.h; sourceTree = "<group>"; };
 		CD0736D42644799B00D6EF30 /* HIStreamgraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIStreamgraph.h; sourceTree = "<group>"; };
 		CD0736D52644799B00D6EF30 /* HIParentNodeTextPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIParentNodeTextPath.m; sourceTree = "<group>"; };
 		CD0736D62644799B00D6EF30 /* HIScatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIScatter.m; sourceTree = "<group>"; };
@@ -903,7 +908,6 @@
 		CD07381D264479B500D6EF30 /* HIOptions3d.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIOptions3d.m; sourceTree = "<group>"; };
 		CD07381E264479B500D6EF30 /* HIPatternObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPatternObject.m; sourceTree = "<group>"; };
 		CD07381F264479B600D6EF30 /* HIShapeOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIShapeOptions.h; sourceTree = "<group>"; };
-		CD073820264479B600D6EF30 /* HIResetZoomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIResetZoomButton.m; sourceTree = "<group>"; };
 		CD073821264479B600D6EF30 /* HIExportData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIExportData.h; sourceTree = "<group>"; };
 		CD073822264479B600D6EF30 /* HICsv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HICsv.h; sourceTree = "<group>"; };
 		CD073823264479B600D6EF30 /* HIColorVariation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIColorVariation.m; sourceTree = "<group>"; };
@@ -1014,6 +1018,10 @@
 		2011ABB31E7013F30027DA10 /* HIChartsClasses */ = {
 			isa = PBXGroup;
 			children = (
+				5B499CC128F29BC10088B8FA /* HIResetButton.h */,
+				5B499CC228F29BC10088B8FA /* HIResetButton.m */,
+				5B499CBD28F29B860088B8FA /* HIZooming.h */,
+				5B499CBE28F29B860088B8FA /* HIZooming.m */,
 				5BF16892287AB99800A0B460 /* HIConnectorOptions.h */,
 				5BF16895287AB99900A0B460 /* HIConnectorOptions.m */,
 				5BF16893287AB99900A0B460 /* HIOnPoint.h */,
@@ -1320,8 +1328,6 @@
 				CD073758264479A500D6EF30 /* HIRanges.m */,
 				CD07375D264479A500D6EF30 /* HIRangeSelector.h */,
 				CD0737032644799E00D6EF30 /* HIRangeSelector.m */,
-				CD0736D32644799B00D6EF30 /* HIResetZoomButton.h */,
-				CD073820264479B600D6EF30 /* HIResetZoomButton.m */,
 				CD0736DB2644799B00D6EF30 /* HIResponsive.h */,
 				CD0737BB264479AC00D6EF30 /* HIResponsive.m */,
 				CD073840264479B800D6EF30 /* HIRight.h */,
@@ -1603,6 +1609,7 @@
 				CD07386C264479B900D6EF30 /* HIBar.h in Headers */,
 				CD073A23264486F400D6EF30 /* HIAnimationOptionsObject.h in Headers */,
 				CD07398B264479BA00D6EF30 /* HIDataSorting.h in Headers */,
+				5B499CBF28F29B860088B8FA /* HIZooming.h in Headers */,
 				CD073917264479BA00D6EF30 /* HIDebug.h in Headers */,
 				CD0738E4264479BA00D6EF30 /* HIOptions3d.h in Headers */,
 				CD0738B2264479BA00D6EF30 /* HIFocusBorder.h in Headers */,
@@ -1614,6 +1621,7 @@
 				CD073898264479BA00D6EF30 /* HIItem.h in Headers */,
 				CD07398F264479BA00D6EF30 /* HIChart.h in Headers */,
 				CD0738F0264479BA00D6EF30 /* HIAxis.h in Headers */,
+				5B499CC328F29BC10088B8FA /* HIResetButton.h in Headers */,
 				CD0739A5264479BA00D6EF30 /* HIBindings.h in Headers */,
 				CD91B3072062741200BCEE37 /* HIGExport.h in Headers */,
 				CD0738BB264479BA00D6EF30 /* HILabelIntersectBoxObject.h in Headers */,
@@ -1622,7 +1630,6 @@
 				CD0738DB264479BA00D6EF30 /* HIWaterfall.h in Headers */,
 				CD073864264479B900D6EF30 /* HIStreamgraph.h in Headers */,
 				CD073884264479BA00D6EF30 /* HIGauge.h in Headers */,
-				CD073863264479B900D6EF30 /* HIResetZoomButton.h in Headers */,
 				CD0739CF264479BA00D6EF30 /* HIHalo.h in Headers */,
 				CD073A102644858800D6EF30 /* HIReverseArrow.h in Headers */,
 				CD073909264479BA00D6EF30 /* HIMarker.h in Headers */,
@@ -1956,7 +1963,6 @@
 				CD073988264479BA00D6EF30 /* HIZAxis.m in Sources */,
 				CD073851264479B900D6EF30 /* HIMarker.m in Sources */,
 				CD0738A4264479BA00D6EF30 /* HIBubble.m in Sources */,
-				CD0739B0264479BA00D6EF30 /* HIResetZoomButton.m in Sources */,
 				CD0738BA264479BA00D6EF30 /* HILink.m in Sources */,
 				CD0738AC264479BA00D6EF30 /* HIZones.m in Sources */,
 				CD073900264479BA00D6EF30 /* HIPolygon.m in Sources */,
@@ -2083,6 +2089,7 @@
 				CD5B35971F90C46C006159D7 /* HIChartView.m in Sources */,
 				CD073973264479BA00D6EF30 /* HIDrilldown.m in Sources */,
 				CD0738DE264479BA00D6EF30 /* HIArrow.m in Sources */,
+				5B499CC428F29BC10088B8FA /* HIResetButton.m in Sources */,
 				CD073872264479BA00D6EF30 /* HIStreamgraph.m in Sources */,
 				CD073934264479BA00D6EF30 /* HICSSObject.m in Sources */,
 				CD0739AD264479BA00D6EF30 /* HIOptions3d.m in Sources */,
@@ -2174,6 +2181,7 @@
 				CD07392A264479BA00D6EF30 /* HIRules.m in Sources */,
 				CD073858264479B900D6EF30 /* HICylinder.m in Sources */,
 				CD073868264479B900D6EF30 /* HILabelOptions.m in Sources */,
+				5B499CC028F29B860088B8FA /* HIZooming.m in Sources */,
 				CDE0D0CD25CE822F0055467B /* HILabelOptionsAccessibility.m in Sources */,
 				CD073952264479BA00D6EF30 /* HIDumbbell.m in Sources */,
 			);
@@ -2294,7 +2302,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FYYW4F45T7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 10.2.0;
+				DYLIB_CURRENT_VERSION = 10.2.1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2307,7 +2315,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LLVM_LTO = YES;
-				MARKETING_VERSION = 10.2.0;
+				MARKETING_VERSION = 10.2.1;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "";
@@ -2458,7 +2466,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FYYW4F45T7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 10.2.0;
+				DYLIB_CURRENT_VERSION = 10.2.1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2470,7 +2478,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LLVM_LTO = YES;
-				MARKETING_VERSION = 10.2.0;
+				MARKETING_VERSION = 10.2.1;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "";
@@ -2491,7 +2499,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FYYW4F45T7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 10.2.0;
+				DYLIB_CURRENT_VERSION = 10.2.1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2503,7 +2511,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LLVM_LTO = YES;
-				MARKETING_VERSION = 10.2.0;
+				MARKETING_VERSION = 10.2.1;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "";

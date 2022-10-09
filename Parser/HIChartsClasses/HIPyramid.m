@@ -72,6 +72,7 @@
 	copyPyramid.crisp = [self.crisp copyWithZone: zone];
 	copyPyramid.visible = [self.visible copyWithZone: zone];
 	copyPyramid.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyPyramid.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyPyramid.className = [self.className copyWithZone: zone];
 	return copyPyramid;
 }
@@ -154,14 +155,14 @@
 	[self updateNSObject:oldValue newValue:reversed propertyName:@"reversed"];
 }
 
--(void)setNeckWidth:(NSString *)neckWidth {
-	NSString *oldValue = _neckWidth;
+-(void)setNeckWidth:(NSNumber *)neckWidth {
+	NSNumber *oldValue = _neckWidth;
 	_neckWidth = neckWidth;
 	[self updateNSObject:oldValue newValue:neckWidth propertyName:@"neckWidth"];
 }
 
--(void)setNeckHeight:(NSString *)neckHeight {
-	NSString *oldValue = _neckHeight;
+-(void)setNeckHeight:(NSNumber *)neckHeight {
+	NSNumber *oldValue = _neckHeight;
 	_neckHeight = neckHeight;
 	[self updateNSObject:oldValue newValue:neckHeight propertyName:@"neckHeight"];
 }

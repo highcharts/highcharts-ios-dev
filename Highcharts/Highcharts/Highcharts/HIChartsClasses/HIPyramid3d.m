@@ -51,18 +51,19 @@
 	copyPyramid3d.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyPyramid3d.linecap = [self.linecap copyWithZone: zone];
 	copyPyramid3d.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyPyramid3d.selected = [self.selected copyWithZone: zone];
 	copyPyramid3d.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyPyramid3d.colorKey = [self.colorKey copyWithZone: zone];
 	copyPyramid3d.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPyramid3d.cursor = [self.cursor copyWithZone: zone];
 	copyPyramid3d.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPyramid3d.custom = [self.custom copyWithZone: zone];
+	copyPyramid3d.onPoint = [self.onPoint copyWithZone: zone];
 	copyPyramid3d.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyPyramid3d.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyPyramid3d.opacity = [self.opacity copyWithZone: zone];
 	copyPyramid3d.definition = [self.definition copyWithZone: zone];
 	copyPyramid3d.keys = [self.keys copyWithZone: zone];
+	copyPyramid3d.selected = [self.selected copyWithZone: zone];
 	copyPyramid3d.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPyramid3d.accessibility = [self.accessibility copyWithZone: zone];
 	copyPyramid3d.shadow = [self.shadow copyWithZone: zone];
@@ -70,6 +71,7 @@
 	copyPyramid3d.crisp = [self.crisp copyWithZone: zone];
 	copyPyramid3d.visible = [self.visible copyWithZone: zone];
 	copyPyramid3d.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyPyramid3d.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyPyramid3d.className = [self.className copyWithZone: zone];
 	copyPyramid3d.reversed = [self.reversed copyWithZone: zone];
 	copyPyramid3d.dataLabels = [self.dataLabels copyWithZone: zone];
@@ -88,6 +90,7 @@
 	copyPyramid3d.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyPyramid3d.states = [self.states copyWithZone: zone];
 	copyPyramid3d.colors = [self.colors copyWithZone: zone];
+	copyPyramid3d.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyPyramid3d.threshold = [self.threshold copyWithZone: zone];
 	copyPyramid3d.borderColor = [self.borderColor copyWithZone: zone];
 	copyPyramid3d.edgeColor = [self.edgeColor copyWithZone: zone];
@@ -101,7 +104,6 @@
 	copyPyramid3d.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyPyramid3d.grouping = [self.grouping copyWithZone: zone];
 	copyPyramid3d.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
-	copyPyramid3d.selected = [self.selected copyWithZone: zone];
 	copyPyramid3d.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyPyramid3d.clip = [self.clip copyWithZone: zone];
 	copyPyramid3d.negativeColor = [self.negativeColor copyWithZone: zone];
@@ -109,7 +111,6 @@
 	copyPyramid3d.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyPyramid3d.colorKey = [self.colorKey copyWithZone: zone];
 	copyPyramid3d.softThreshold = [self.softThreshold copyWithZone: zone];
-	copyPyramid3d.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyPyramid3d.point = [self.point copyWithZone: zone];
 	copyPyramid3d.label = [self.label copyWithZone: zone];
 	copyPyramid3d.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
@@ -118,26 +119,30 @@
 	copyPyramid3d.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyPyramid3d.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPyramid3d.custom = [self.custom copyWithZone: zone];
+	copyPyramid3d.onPoint = [self.onPoint copyWithZone: zone];
 	copyPyramid3d.stacking = [self.stacking copyWithZone: zone];
 	copyPyramid3d.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
+	copyPyramid3d.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyPyramid3d.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyPyramid3d.events = [self.events copyWithZone: zone];
 	copyPyramid3d.opacity = [self.opacity copyWithZone: zone];
 	copyPyramid3d.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyPyramid3d.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyPyramid3d.definition = [self.definition copyWithZone: zone];
 	copyPyramid3d.keys = [self.keys copyWithZone: zone];
-	copyPyramid3d.turboThreshold = [self.turboThreshold copyWithZone: zone];
+	copyPyramid3d.selected = [self.selected copyWithZone: zone];
 	copyPyramid3d.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPyramid3d.accessibility = [self.accessibility copyWithZone: zone];
 	copyPyramid3d.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyPyramid3d.shadow = [self.shadow copyWithZone: zone];
 	copyPyramid3d.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
-	copyPyramid3d.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyPyramid3d.zones = [self.zones copyWithZone: zone];
 	copyPyramid3d.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyPyramid3d.crisp = [self.crisp copyWithZone: zone];
 	copyPyramid3d.visible = [self.visible copyWithZone: zone];
 	copyPyramid3d.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyPyramid3d.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
+	copyPyramid3d.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyPyramid3d.className = [self.className copyWithZone: zone];
 	copyPyramid3d.pointStart = [self.pointStart copyWithZone: zone];
 	return copyPyramid3d;
@@ -288,14 +293,14 @@
 	[self updateNSObject:oldValue newValue:reversed propertyName:@"reversed"];
 }
 
--(void)setNeckWidth:(NSString *)neckWidth {
-	NSString *oldValue = _neckWidth;
+-(void)setNeckWidth:(NSNumber *)neckWidth {
+	NSNumber *oldValue = _neckWidth;
 	_neckWidth = neckWidth;
 	[self updateNSObject:oldValue newValue:neckWidth propertyName:@"neckWidth"];
 }
 
--(void)setNeckHeight:(NSString *)neckHeight {
-	NSString *oldValue = _neckHeight;
+-(void)setNeckHeight:(NSNumber *)neckHeight {
+	NSNumber *oldValue = _neckHeight;
 	_neckHeight = neckHeight;
 	[self updateNSObject:oldValue newValue:neckHeight propertyName:@"neckHeight"];
 }

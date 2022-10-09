@@ -78,11 +78,12 @@
 	copyLollipop.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyLollipop.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyLollipop.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyLollipop.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyLollipop.zones = [self.zones copyWithZone: zone];
 	copyLollipop.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyLollipop.visible = [self.visible copyWithZone: zone];
 	copyLollipop.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyLollipop.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
+	copyLollipop.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyLollipop.className = [self.className copyWithZone: zone];
 	copyLollipop.pointStart = [self.pointStart copyWithZone: zone];
 	copyLollipop.connectEnds = [self.connectEnds copyWithZone: zone];

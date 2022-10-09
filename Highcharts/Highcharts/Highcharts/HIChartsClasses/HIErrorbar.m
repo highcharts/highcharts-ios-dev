@@ -91,11 +91,12 @@
 	copyErrorbar.shadow = [self.shadow copyWithZone: zone];
 	copyErrorbar.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyErrorbar.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyErrorbar.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyErrorbar.zones = [self.zones copyWithZone: zone];
 	copyErrorbar.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyErrorbar.crisp = [self.crisp copyWithZone: zone];
 	copyErrorbar.visible = [self.visible copyWithZone: zone];
+	copyErrorbar.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
+	copyErrorbar.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyErrorbar.className = [self.className copyWithZone: zone];
 	copyErrorbar.pointStart = [self.pointStart copyWithZone: zone];
 	copyErrorbar.showInLegend = [self.showInLegend copyWithZone: zone];

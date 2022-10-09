@@ -79,6 +79,7 @@
 	copyPackedbubble.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyPackedbubble.visible = [self.visible copyWithZone: zone];
 	copyPackedbubble.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyPackedbubble.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyPackedbubble.className = [self.className copyWithZone: zone];
 	copyPackedbubble.pointStart = [self.pointStart copyWithZone: zone];
 	copyPackedbubble.showInLegend = [self.showInLegend copyWithZone: zone];

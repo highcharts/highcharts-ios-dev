@@ -46,12 +46,13 @@
 	copyGauge.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyGauge.accessibility = [self.accessibility copyWithZone: zone];
 	copyGauge.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyGauge.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyGauge.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyGauge.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyGauge.crisp = [self.crisp copyWithZone: zone];
 	copyGauge.visible = [self.visible copyWithZone: zone];
 	copyGauge.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyGauge.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyGauge.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyGauge.className = [self.className copyWithZone: zone];
 	copyGauge.pointStart = [self.pointStart copyWithZone: zone];
 	copyGauge.data = [self.data copyWithZone: zone];

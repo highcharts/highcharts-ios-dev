@@ -111,6 +111,8 @@
 		
 		<option value="//api/name/data">data</option>
 		
+		<option value="//api/name/dataAsColumns">dataAsColumns</option>
+		
 		<option value="//api/name/dataLabels">dataLabels</option>
 		
 		<option value="//api/name/dataSorting">dataSorting</option>
@@ -1692,6 +1694,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/coloraxis/custom-color-key/">Custom color key</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/coloraxis/color-key-with-stops/">Custom colorKey with color axis stops</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/coloraxis/changed-default-color-key/">Changed default color key</a></li>
 </ul>
 
@@ -2394,7 +2397,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Options for the <code>Series on point</code> feature. Only <code>pie</code> and <code>sunburst</code> series are supported at this moment.</p>
+				<p>Options for the <em>Series on point</em> feature. Only <code>pie</code> and <code>sunburst</code> series are supported at this moment.</p>
 			</div>
 			
 		    
@@ -2408,6 +2411,16 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-on-point/series-on-point">Series on point</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -3404,8 +3417,8 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/zoneAxis" title="zoneAxis"></a>
-	<h3 class="method-title"><code><a href="#//api/name/zoneAxis">&nbsp;&nbsp;zoneAxis</a></code>
+	<a name="//api/name/stickyTracking" title="stickyTracking"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stickyTracking">&nbsp;&nbsp;stickyTracking</a></code>
 </h3>
 
 	<div class="method-info">
@@ -3415,12 +3428,12 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Defines the Axis on which the zones are applied.</p>
+				<p>Sticky tracking of mouse events. When true, the <code>mouseOut</code> event on a series isn&rsquo;t triggered until the mouse moves over another series, or out of the plot area. When false, the <code>mouseOut</code> event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip when not shared. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc. <strong>Note:</strong> The boost module will force this option because of technical limitations.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *zoneAxis</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *stickyTracking</code></div>
 
 		    
 			
@@ -3432,12 +3445,13 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>y</code>.</p>
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-zoneaxis-x/">Zones on the X-Axis</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-true/">True by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-false/">False</a></li>
 </ul>
 
 			</div>
@@ -3768,8 +3782,8 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/stickyTracking" title="stickyTracking"></a>
-	<h3 class="method-title"><code><a href="#//api/name/stickyTracking">&nbsp;&nbsp;stickyTracking</a></code>
+	<a name="//api/name/dataAsColumns" title="dataAsColumns"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dataAsColumns">&nbsp;&nbsp;dataAsColumns</a></code>
 </h3>
 
 	<div class="method-info">
@@ -3779,12 +3793,53 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Sticky tracking of mouse events. When true, the <code>mouseOut</code> event on a series isn&rsquo;t triggered until the mouse moves over another series, or out of the plot area. When false, the <code>mouseOut</code> event on a series is triggered when the mouse leaves the area around the series' graph or markers. This also implies the tooltip when not shared. When <code>stickyTracking</code> is false and <code>tooltip.shared</code> is false, the tooltip will be hidden when moving the mouse between series. Defaults to true for line and area type series, but to false for columns, pies etc. <strong>Note:</strong> The boost module will force this option because of technical limitations.</p>
+				<p>Indicates data is structured as columns instead of rows.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *stickyTracking</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *dataAsColumns</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/zoneAxis" title="zoneAxis"></a>
+	<h3 class="method-title"><code><a href="#//api/name/zoneAxis">&nbsp;&nbsp;zoneAxis</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Defines the Axis on which the zones are applied.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *zoneAxis</code></div>
 
 		    
 			
@@ -3796,13 +3851,12 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>True</code>.</p>
+				<p><strong>Defaults to</strong> <code>y</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-true/">True by default</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stickytracking-false/">False</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/color-zones-zoneaxis-x/">Zones on the X-Axis</a></li>
 </ul>
 
 			</div>
@@ -4000,6 +4054,13 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>round</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-line/linecap/">Line cap comparison</a></li>
+</ul>
+
 			</div>
 			
 

@@ -72,13 +72,14 @@
 	copyBellcurve.shadow = [self.shadow copyWithZone: zone];
 	copyBellcurve.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyBellcurve.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyBellcurve.zoneAxis = [self.zoneAxis copyWithZone: zone];
+	copyBellcurve.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyBellcurve.zones = [self.zones copyWithZone: zone];
 	copyBellcurve.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyBellcurve.crisp = [self.crisp copyWithZone: zone];
 	copyBellcurve.visible = [self.visible copyWithZone: zone];
 	copyBellcurve.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyBellcurve.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyBellcurve.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
+	copyBellcurve.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBellcurve.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyBellcurve.className = [self.className copyWithZone: zone];
 	copyBellcurve.pointStart = [self.pointStart copyWithZone: zone];
@@ -131,8 +132,8 @@
 	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
 }
 
--(void)setFillOpacity:(id)fillOpacity {
-	id oldValue = _fillOpacity;
+-(void)setFillOpacity:(NSNumber *)fillOpacity {
+	NSNumber *oldValue = _fillOpacity;
 	_fillOpacity = fillOpacity;
 	[self updateNSObject:oldValue newValue:fillOpacity propertyName:@"fillOpacity"];
 }

@@ -85,8 +85,8 @@
 	[self updateNSObject:oldValue newValue:fontWeight propertyName:@"fontWeight"];
 }
 
--(void)setFontSize:(NSString *)fontSize {
-	NSString *oldValue = _fontSize;
+-(void)setFontSize:(NSNumber *)fontSize {
+	NSNumber *oldValue = _fontSize;
 	_fontSize = fontSize;
 	[self updateNSObject:oldValue newValue:fontSize propertyName:@"fontSize"];
 }

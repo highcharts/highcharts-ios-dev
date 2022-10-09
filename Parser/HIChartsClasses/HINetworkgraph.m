@@ -61,6 +61,7 @@
 	copyNetworkgraph.crisp = [self.crisp copyWithZone: zone];
 	copyNetworkgraph.visible = [self.visible copyWithZone: zone];
 	copyNetworkgraph.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyNetworkgraph.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyNetworkgraph.className = [self.className copyWithZone: zone];
 	return copyNetworkgraph;
 }

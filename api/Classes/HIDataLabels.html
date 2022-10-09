@@ -179,8 +179,6 @@
 		
 		<option value="//api/name/yLow">yLow</option>
 		
-		<option value="//api/name/z">z</option>
-		
 		<option value="//api/name/zIndex">zIndex</option>
 		
 	</optgroup>
@@ -529,7 +527,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *crookDistance</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *crookDistance</code></div>
 
 		    
 			
@@ -575,7 +573,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Alignment method for data labels. Possible values are: - <code>toPlotEdges</code>: Each label touches the nearest vertical edge of  the plot area. - <code>connectors</code>: Connectors have the same x position and the  widest label of each half (left &amp; right) touches the nearest  vertical edge of the plot area.</p>
+				<p>Alignment method for data labels. Possible values are: - <code>plotEdges</code>: Each label touches the nearest vertical edge of  the plot area. - <code>connectors</code>: Connectors have the same x position and the  widest label of each half (left &amp; right) touches the nearest  vertical edge of the plot area.</p>
 			</div>
 			
 		    
@@ -1732,6 +1730,52 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/zIndex" title="zIndex"></a>
+	<h3 class="method-title"><code><a href="#//api/name/zIndex">&nbsp;&nbsp;zIndex</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The z index of the data labels. Use a <code>zIndex</code> of 6 to display it above the series, or use a <code>zIndex</code> of 2 to display it behind the series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *zIndex</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>6</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/className" title="className"></a>
 	<h3 class="method-title"><code><a href="#//api/name/className">&nbsp;&nbsp;className</a></code>
 </h3>
@@ -1917,52 +1961,6 @@
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>center</code>.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDataLabels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/z" title="z"></a>
-	<h3 class="method-title"><code><a href="#//api/name/z">&nbsp;&nbsp;z</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The Z index of the data labels. The default Z index puts it above the series. Use a Z index of 2 to display it behind the series.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *z</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>6</code>.</p>
 			</div>
 			
 
@@ -2474,8 +2472,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/zIndex" title="zIndex"></a>
-	<h3 class="method-title"><code><a href="#//api/name/zIndex">&nbsp;&nbsp;zIndex</a></code>
+	<a name="//api/name/linkTextPath" title="linkTextPath"></a>
+	<h3 class="method-title"><code><a href="#//api/name/linkTextPath">&nbsp;&nbsp;linkTextPath</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2483,10 +2481,35 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for a <em>link</em> label text which should follow link connection. Border and background are disabled for a label that follows a path. <strong>Note:</strong> Only SVG-based renderer supports this option. Setting <code>useHTML</code> to true will disable this option.</p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *zIndex</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILinkTextPath *linkTextPath</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabels.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -2548,47 +2571,6 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *linkFormatter</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDataLabels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/linkTextPath" title="linkTextPath"></a>
-	<h3 class="method-title"><code><a href="#//api/name/linkTextPath">&nbsp;&nbsp;linkTextPath</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Options for a <em>link</em> label text which should follow link connection. Border and background are disabled for a label that follows a path. <strong>Note:</strong> Only SVG-based renderer supports this option. Setting <code>useHTML</code> to true will disable this option.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILinkTextPath *linkTextPath</code></div>
 
 		    
 			

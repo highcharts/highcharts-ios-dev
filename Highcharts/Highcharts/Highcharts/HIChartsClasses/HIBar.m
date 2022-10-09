@@ -85,12 +85,13 @@
 	copyBar.shadow = [self.shadow copyWithZone: zone];
 	copyBar.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyBar.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyBar.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBar.zones = [self.zones copyWithZone: zone];
 	copyBar.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyBar.crisp = [self.crisp copyWithZone: zone];
 	copyBar.visible = [self.visible copyWithZone: zone];
 	copyBar.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyBar.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
+	copyBar.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBar.className = [self.className copyWithZone: zone];
 	copyBar.pointStart = [self.pointStart copyWithZone: zone];
 	copyBar.boostThreshold = [self.boostThreshold copyWithZone: zone];
