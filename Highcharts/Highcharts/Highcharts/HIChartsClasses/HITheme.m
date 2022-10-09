@@ -10,34 +10,28 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HITheme *copyTheme = [[HITheme allocWithZone: zone] init];
-	copyTheme.zIndex = [self.zIndex copyWithZone: zone];
 	copyTheme.stroke = [self.stroke copyWithZone: zone];
 	copyTheme.fill = [self.fill copyWithZone: zone];
+	copyTheme.zIndex = [self.zIndex copyWithZone: zone];
 	return copyTheme;
 }
 
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
-	}
 	if (self.stroke) {
 		params[@"stroke"] = [self.stroke getData];
 	}
 	if (self.fill) {
 		params[@"fill"] = [self.fill getData];
 	}
+	if (self.zIndex) {
+		params[@"zIndex"] = self.zIndex;
+	}
 	return params;
 }
 
 # pragma mark - Setters
-
--(void)setZIndex:(NSNumber *)zIndex {
-	NSNumber *oldValue = _zIndex;
-	_zIndex = zIndex;
-	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
-}
 
 -(void)setStroke:(HIColor *)stroke {
 	HIColor *oldValue = _stroke;
@@ -49,6 +43,12 @@
 	HIColor *oldValue = _fill;
 	_fill = fill;
 	[self updateHIObject:oldValue newValue:fill propertyName:@"fill"];
+}
+
+-(void)setZIndex:(NSNumber *)zIndex {
+	NSNumber *oldValue = _zIndex;
+	_zIndex = zIndex;
+	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
 @end

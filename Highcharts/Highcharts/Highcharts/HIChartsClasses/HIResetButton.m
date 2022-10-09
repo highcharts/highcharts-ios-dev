@@ -1,7 +1,7 @@
 #import "HIChartsJSONSerializableSubclass.h"
-#import "HIResetZoomButton.h"
+#import "HIResetButton.h"
 
-@implementation HIResetZoomButton
+@implementation HIResetButton
 
 -(instancetype)init {
 	return [super init];
@@ -9,11 +9,11 @@
 
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
-	HIResetZoomButton *copyResetZoomButton = [[HIResetZoomButton allocWithZone: zone] init];
-	copyResetZoomButton.position = [self.position copyWithZone: zone];
-	copyResetZoomButton.theme = [self.theme copyWithZone: zone];
-	copyResetZoomButton.relativeTo = [self.relativeTo copyWithZone: zone];
-	return copyResetZoomButton;
+	HIResetButton *copyResetButton = [[HIResetButton allocWithZone: zone] init];
+	copyResetButton.position = [self.position copyWithZone: zone];
+	copyResetButton.theme = [self.theme copyWithZone: zone];
+	copyResetButton.relativeTo = [self.relativeTo copyWithZone: zone];
+	return copyResetButton;
 }
 
 -(NSDictionary *)getParams

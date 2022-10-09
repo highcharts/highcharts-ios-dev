@@ -25,8 +25,8 @@
 
 # pragma mark - Setters
 
--(void)setStyle:(HICSSObject *)style {
-  HICSSObject *oldValue = _style;
+-(void)setStyle:(HIStyle *)style {
+	HIStyle *oldValue = _style;
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }

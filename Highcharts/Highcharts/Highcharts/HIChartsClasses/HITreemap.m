@@ -81,12 +81,13 @@
 	copyTreemap.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyTreemap.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyTreemap.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyTreemap.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyTreemap.zones = [self.zones copyWithZone: zone];
 	copyTreemap.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyTreemap.crisp = [self.crisp copyWithZone: zone];
 	copyTreemap.visible = [self.visible copyWithZone: zone];
 	copyTreemap.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyTreemap.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
+	copyTreemap.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyTreemap.className = [self.className copyWithZone: zone];
 	copyTreemap.pointStart = [self.pointStart copyWithZone: zone];
 	copyTreemap.boostThreshold = [self.boostThreshold copyWithZone: zone];

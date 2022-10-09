@@ -48,10 +48,11 @@
 	copyPareto.accessibility = [self.accessibility copyWithZone: zone];
 	copyPareto.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyPareto.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyPareto.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyPareto.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyPareto.visible = [self.visible copyWithZone: zone];
 	copyPareto.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyPareto.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyPareto.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyPareto.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyPareto.className = [self.className copyWithZone: zone];
 	copyPareto.connectEnds = [self.connectEnds copyWithZone: zone];

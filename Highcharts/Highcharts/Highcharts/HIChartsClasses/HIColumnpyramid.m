@@ -79,6 +79,7 @@
 	copyColumnpyramid.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyColumnpyramid.visible = [self.visible copyWithZone: zone];
 	copyColumnpyramid.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyColumnpyramid.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyColumnpyramid.className = [self.className copyWithZone: zone];
 	copyColumnpyramid.pointStart = [self.pointStart copyWithZone: zone];
 	copyColumnpyramid.showInLegend = [self.showInLegend copyWithZone: zone];

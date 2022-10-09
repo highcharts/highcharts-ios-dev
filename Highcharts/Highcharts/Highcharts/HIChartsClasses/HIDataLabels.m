@@ -44,11 +44,11 @@
 	copyDataLabels.shadow = [self.shadow copyWithZone: zone];
 	copyDataLabels.x = [self.x copyWithZone: zone];
 	copyDataLabels.rotation = [self.rotation copyWithZone: zone];
+	copyDataLabels.zIndex = [self.zIndex copyWithZone: zone];
 	copyDataLabels.className = [self.className copyWithZone: zone];
 	copyDataLabels.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyDataLabels.y = [self.y copyWithZone: zone];
 	copyDataLabels.position = [self.position copyWithZone: zone];
-	copyDataLabels.z = [self.z copyWithZone: zone];
 	copyDataLabels.textPath = [self.textPath copyWithZone: zone];
 	copyDataLabels.yHigh = [self.yHigh copyWithZone: zone];
 	copyDataLabels.xHigh = [self.xHigh copyWithZone: zone];
@@ -62,10 +62,9 @@
 	copyDataLabels.attributes = [self.attributes copyWithZone: zone];
 	copyDataLabels.alternate = [self.alternate copyWithZone: zone];
 	copyDataLabels.width = [self.width copyWithZone: zone];
-	copyDataLabels.zIndex = [self.zIndex copyWithZone: zone];
+	copyDataLabels.linkTextPath = [self.linkTextPath copyWithZone: zone];
 	copyDataLabels.linkFormat = [self.linkFormat copyWithZone: zone];
 	copyDataLabels.linkFormatter = [self.linkFormatter copyWithZone: zone];
-	copyDataLabels.linkTextPath = [self.linkTextPath copyWithZone: zone];
 	return copyDataLabels;
 }
 
@@ -174,6 +173,9 @@
 	if (self.rotation) {
 		params[@"rotation"] = self.rotation;
 	}
+	if (self.zIndex) {
+		params[@"zIndex"] = self.zIndex;
+	}
 	if (self.className) {
 		params[@"className"] = self.className;
 	}
@@ -185,9 +187,6 @@
 	}
 	if (self.position) {
 		params[@"position"] = self.position;
-	}
-	if (self.z) {
-		params[@"z"] = self.z;
 	}
 	if (self.textPath) {
 		params[@"textPath"] = [self.textPath getParams];
@@ -228,17 +227,14 @@
 	if (self.width) {
 		params[@"width"] = self.width;
 	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
+	if (self.linkTextPath) {
+		params[@"linkTextPath"] = [self.linkTextPath getParams];
 	}
 	if (self.linkFormat) {
 		params[@"linkFormat"] = self.linkFormat;
 	}
 	if (self.linkFormatter) {
 		params[@"linkFormatter"] = [self.linkFormatter getFunction];
-	}
-	if (self.linkTextPath) {
-		params[@"linkTextPath"] = [self.linkTextPath getParams];
 	}
 	return params;
 }
@@ -305,8 +301,8 @@
 	[self updateHIObject:oldValue newValue:connectorColor propertyName:@"connectorColor"];
 }
 
--(void)setCrookDistance:(NSString *)crookDistance {
-	NSString *oldValue = _crookDistance;
+-(void)setCrookDistance:(NSNumber *)crookDistance {
+	NSNumber *oldValue = _crookDistance;
 	_crookDistance = crookDistance;
 	[self updateNSObject:oldValue newValue:crookDistance propertyName:@"crookDistance"];
 }
@@ -449,6 +445,12 @@
 	[self updateNSObject:oldValue newValue:rotation propertyName:@"rotation"];
 }
 
+-(void)setZIndex:(NSNumber *)zIndex {
+	NSNumber *oldValue = _zIndex;
+	_zIndex = zIndex;
+	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
+}
+
 -(void)setClassName:(NSString *)className {
 	NSString *oldValue = _className;
 	_className = className;
@@ -471,12 +473,6 @@
 	NSString *oldValue = _position;
 	_position = position;
 	[self updateNSObject:oldValue newValue:position propertyName:@"position"];
-}
-
--(void)setZ:(NSNumber *)z {
-	NSNumber *oldValue = _z;
-	_z = z;
-	[self updateNSObject:oldValue newValue:z propertyName:@"z"];
 }
 
 -(void)setTextPath:(HITextPath *)textPath {
@@ -557,10 +553,10 @@
 	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
 }
 
--(void)setZIndex:(NSNumber *)zIndex {
-	NSNumber *oldValue = _zIndex;
-	_zIndex = zIndex;
-	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
+-(void)setLinkTextPath:(HILinkTextPath *)linkTextPath {
+	HILinkTextPath *oldValue = _linkTextPath;
+	_linkTextPath = linkTextPath;
+	[self updateHIObject:oldValue newValue:linkTextPath propertyName:@"linkTextPath"];
 }
 
 -(void)setLinkFormat:(NSString *)linkFormat {
@@ -573,12 +569,6 @@
 	HIFunction *oldValue = _linkFormatter;
 	_linkFormatter = linkFormatter;
 	[self updateHIObject:oldValue newValue:linkFormatter propertyName:@"linkFormatter"];
-}
-
--(void)setLinkTextPath:(HILinkTextPath *)linkTextPath {
-	HILinkTextPath *oldValue = _linkTextPath;
-	_linkTextPath = linkTextPath;
-	[self updateHIObject:oldValue newValue:linkTextPath propertyName:@"linkTextPath"];
 }
 
 @end

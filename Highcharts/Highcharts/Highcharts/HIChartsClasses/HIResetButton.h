@@ -13,7 +13,7 @@
 /**
 The button that appears after a selection zoom, allowing the user to reset zoom.
 */
-@interface HIResetZoomButton: HIChartsJSONSerializable
+@interface HIResetButton: HIChartsJSONSerializable
 
 /**
 The position of the button.

@@ -74,6 +74,7 @@
 	copyVariablepie.crisp = [self.crisp copyWithZone: zone];
 	copyVariablepie.visible = [self.visible copyWithZone: zone];
 	copyVariablepie.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyVariablepie.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyVariablepie.className = [self.className copyWithZone: zone];
 	return copyVariablepie;
 }

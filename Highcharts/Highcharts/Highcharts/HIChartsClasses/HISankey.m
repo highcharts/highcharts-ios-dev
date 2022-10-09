@@ -58,6 +58,7 @@
 	copySankey.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copySankey.visible = [self.visible copyWithZone: zone];
 	copySankey.linkedTo = [self.linkedTo copyWithZone: zone];
+	copySankey.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copySankey.className = [self.className copyWithZone: zone];
 	copySankey.nodes = [self.nodes copyWithZone: zone];
 	copySankey.data = [self.data copyWithZone: zone];

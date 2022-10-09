@@ -72,6 +72,7 @@
 	copyFunnel.crisp = [self.crisp copyWithZone: zone];
 	copyFunnel.visible = [self.visible copyWithZone: zone];
 	copyFunnel.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyFunnel.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyFunnel.className = [self.className copyWithZone: zone];
 	return copyFunnel;
 }

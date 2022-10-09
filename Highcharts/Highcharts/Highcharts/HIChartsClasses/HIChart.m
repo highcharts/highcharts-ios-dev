@@ -19,7 +19,6 @@
 	copyChart.alignTicks = [self.alignTicks copyWithZone: zone];
 	copyChart.displayErrors = [self.displayErrors copyWithZone: zone];
 	copyChart.marginRight = [self.marginRight copyWithZone: zone];
-	copyChart.zoomBySingleTouch = [self.zoomBySingleTouch copyWithZone: zone];
 	copyChart.plotBorderColor = [self.plotBorderColor copyWithZone: zone];
 	copyChart.alignThresholds = [self.alignThresholds copyWithZone: zone];
 	copyChart.spacingRight = [self.spacingRight copyWithZone: zone];
@@ -28,7 +27,6 @@
 	copyChart.polar = [self.polar copyWithZone: zone];
 	copyChart.renderTo = [self.renderTo copyWithZone: zone];
 	copyChart.reflow = [self.reflow copyWithZone: zone];
-	copyChart.zoomType = [self.zoomType copyWithZone: zone];
 	copyChart.spacingTop = [self.spacingTop copyWithZone: zone];
 	copyChart.marginBottom = [self.marginBottom copyWithZone: zone];
 	copyChart.width = [self.width copyWithZone: zone];
@@ -48,15 +46,13 @@
 	copyChart.shadow = [self.shadow copyWithZone: zone];
 	copyChart.inverted = [self.inverted copyWithZone: zone];
 	copyChart.plotBorderWidth = [self.plotBorderWidth copyWithZone: zone];
-	copyChart.zoomKey = [self.zoomKey copyWithZone: zone];
 	copyChart.ignoreHiddenSeries = [self.ignoreHiddenSeries copyWithZone: zone];
+	copyChart.zooming = [self.zooming copyWithZone: zone];
 	copyChart.selectionMarkerFill = [self.selectionMarkerFill copyWithZone: zone];
 	copyChart.plotBackgroundImage = [self.plotBackgroundImage copyWithZone: zone];
 	copyChart.numberFormatter = [self.numberFormatter copyWithZone: zone];
-	copyChart.pinchType = [self.pinchType copyWithZone: zone];
 	copyChart.colorCount = [self.colorCount copyWithZone: zone];
 	copyChart.parallelCoordinates = [self.parallelCoordinates copyWithZone: zone];
-	copyChart.resetZoomButton = [self.resetZoomButton copyWithZone: zone];
 	copyChart.showAxes = [self.showAxes copyWithZone: zone];
 	copyChart.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyChart.marginTop = [self.marginTop copyWithZone: zone];
@@ -95,9 +91,6 @@
 	if (self.marginRight) {
 		params[@"marginRight"] = self.marginRight;
 	}
-	if (self.zoomBySingleTouch) {
-		params[@"zoomBySingleTouch"] = self.zoomBySingleTouch;
-	}
 	if (self.plotBorderColor) {
 		params[@"plotBorderColor"] = [self.plotBorderColor getData];
 	}
@@ -121,9 +114,6 @@
 	}
 	if (self.reflow) {
 		params[@"reflow"] = self.reflow;
-	}
-	if (self.zoomType) {
-		params[@"zoomType"] = self.zoomType;
 	}
 	if (self.spacingTop) {
 		params[@"spacingTop"] = self.spacingTop;
@@ -191,11 +181,11 @@
 	if (self.plotBorderWidth) {
 		params[@"plotBorderWidth"] = self.plotBorderWidth;
 	}
-	if (self.zoomKey) {
-		params[@"zoomKey"] = self.zoomKey;
-	}
 	if (self.ignoreHiddenSeries) {
 		params[@"ignoreHiddenSeries"] = self.ignoreHiddenSeries;
+	}
+	if (self.zooming) {
+		params[@"zooming"] = [self.zooming getParams];
 	}
 	if (self.selectionMarkerFill) {
 		params[@"selectionMarkerFill"] = [self.selectionMarkerFill getData];
@@ -206,17 +196,11 @@
 	if (self.numberFormatter) {
 		params[@"numberFormatter"] = [self.numberFormatter getFunction];
 	}
-	if (self.pinchType) {
-		params[@"pinchType"] = self.pinchType;
-	}
 	if (self.colorCount) {
 		params[@"colorCount"] = self.colorCount;
 	}
 	if (self.parallelCoordinates) {
 		params[@"parallelCoordinates"] = self.parallelCoordinates;
-	}
-	if (self.resetZoomButton) {
-		params[@"resetZoomButton"] = [self.resetZoomButton getParams];
 	}
 	if (self.showAxes) {
 		params[@"showAxes"] = self.showAxes;
@@ -301,12 +285,6 @@
 	[self updateNSObject:oldValue newValue:marginRight propertyName:@"marginRight"];
 }
 
--(void)setZoomBySingleTouch:(NSNumber *)zoomBySingleTouch {
-	NSNumber *oldValue = _zoomBySingleTouch;
-	_zoomBySingleTouch = zoomBySingleTouch;
-	[self updateNSObject:oldValue newValue:zoomBySingleTouch propertyName:@"zoomBySingleTouch"];
-}
-
 -(void)setPlotBorderColor:(HIColor *)plotBorderColor {
 	HIColor *oldValue = _plotBorderColor;
 	_plotBorderColor = plotBorderColor;
@@ -353,12 +331,6 @@
 	NSNumber *oldValue = _reflow;
 	_reflow = reflow;
 	[self updateNSObject:oldValue newValue:reflow propertyName:@"reflow"];
-}
-
--(void)setZoomType:(NSString *)zoomType {
-	NSString *oldValue = _zoomType;
-	_zoomType = zoomType;
-	[self updateNSObject:oldValue newValue:zoomType propertyName:@"zoomType"];
 }
 
 -(void)setSpacingTop:(NSNumber *)spacingTop {
@@ -475,16 +447,16 @@
 	[self updateNSObject:oldValue newValue:plotBorderWidth propertyName:@"plotBorderWidth"];
 }
 
--(void)setZoomKey:(NSString *)zoomKey {
-	NSString *oldValue = _zoomKey;
-	_zoomKey = zoomKey;
-	[self updateNSObject:oldValue newValue:zoomKey propertyName:@"zoomKey"];
-}
-
 -(void)setIgnoreHiddenSeries:(NSNumber *)ignoreHiddenSeries {
 	NSNumber *oldValue = _ignoreHiddenSeries;
 	_ignoreHiddenSeries = ignoreHiddenSeries;
 	[self updateNSObject:oldValue newValue:ignoreHiddenSeries propertyName:@"ignoreHiddenSeries"];
+}
+
+-(void)setZooming:(HIZooming *)zooming {
+	HIZooming *oldValue = _zooming;
+	_zooming = zooming;
+	[self updateHIObject:oldValue newValue:zooming propertyName:@"zooming"];
 }
 
 -(void)setSelectionMarkerFill:(HIColor *)selectionMarkerFill {
@@ -505,12 +477,6 @@
 	[self updateHIObject:oldValue newValue:numberFormatter propertyName:@"numberFormatter"];
 }
 
--(void)setPinchType:(NSString *)pinchType {
-	NSString *oldValue = _pinchType;
-	_pinchType = pinchType;
-	[self updateNSObject:oldValue newValue:pinchType propertyName:@"pinchType"];
-}
-
 -(void)setColorCount:(NSNumber *)colorCount {
 	NSNumber *oldValue = _colorCount;
 	_colorCount = colorCount;
@@ -521,12 +487,6 @@
 	NSNumber *oldValue = _parallelCoordinates;
 	_parallelCoordinates = parallelCoordinates;
 	[self updateNSObject:oldValue newValue:parallelCoordinates propertyName:@"parallelCoordinates"];
-}
-
--(void)setResetZoomButton:(HIResetZoomButton *)resetZoomButton {
-	HIResetZoomButton *oldValue = _resetZoomButton;
-	_resetZoomButton = resetZoomButton;
-	[self updateHIObject:oldValue newValue:resetZoomButton propertyName:@"resetZoomButton"];
 }
 
 -(void)setShowAxes:(NSNumber *)showAxes {

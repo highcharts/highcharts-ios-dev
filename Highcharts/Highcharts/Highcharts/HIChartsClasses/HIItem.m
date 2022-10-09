@@ -60,6 +60,7 @@
 	copyItem.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyItem.visible = [self.visible copyWithZone: zone];
 	copyItem.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyItem.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyItem.className = [self.className copyWithZone: zone];
 	copyItem.data = [self.data copyWithZone: zone];
 	copyItem.id = [self.id copyWithZone: zone];

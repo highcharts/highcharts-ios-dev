@@ -84,12 +84,13 @@
 	copyBullet.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyBullet.shadow = [self.shadow copyWithZone: zone];
 	copyBullet.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
-	copyBullet.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBullet.zones = [self.zones copyWithZone: zone];
 	copyBullet.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyBullet.crisp = [self.crisp copyWithZone: zone];
 	copyBullet.visible = [self.visible copyWithZone: zone];
 	copyBullet.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyBullet.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
+	copyBullet.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBullet.className = [self.className copyWithZone: zone];
 	copyBullet.pointStart = [self.pointStart copyWithZone: zone];
 	copyBullet.showInLegend = [self.showInLegend copyWithZone: zone];
