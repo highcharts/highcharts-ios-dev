@@ -1049,7 +1049,7 @@ def create_class(node):
                     defaults = defaultByProduct["highcharts"]
 
             if "defaultvalue" in doclet:
-                defaults = doclet["defaultvalue"].replace("\r", "\n")
+                defaults = doclet["defaultvalue"]
 
             if "samples" in doclet:
                 samples = doclet["samples"]

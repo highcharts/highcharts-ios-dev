@@ -2794,9 +2794,7 @@
 						"description": "Shape point as string, object or function.",
 						"kind": "typedef",
 						"types": [
-							"string",
-							"Highcharts.AnnotationMockPointOptionsObject",
-							"Highcharts.AnnotationMockPointFunction"
+							"Highcharts.AnnotationMockPointOptionsObject"
 						]
 					},
 					"meta": {
@@ -15822,8 +15820,7 @@
 								"kind": "member",
 								"types": [
 									"string",
-									"Highcharts.SVGAttributes",
-									"undefined"
+									"Highcharts.SVGAttributes"
 								]
 							},
 							"meta": {
@@ -20015,9 +20012,7 @@
 								"description": "",
 								"kind": "member",
 								"types": [
-									"string",
-									"Highcharts.SVGPathArray",
-									"undefined"
+									"Highcharts.SVGPathArray"
 								]
 							},
 							"meta": {
@@ -21274,7 +21269,7 @@
 						"description": "Array of path commands, that will go into the `d` attribute of an SVG\nelement.",
 						"kind": "typedef",
 						"types": [
-							"Array.<(Array.<Highcharts.SVGPathCommand>|Array.<Highcharts.SVGPathCommand, number>|Array.<Highcharts.SVGPathCommand, number, number>|Array.<Highcharts.SVGPathCommand, number, number, number, number>|Array.<Highcharts.SVGPathCommand, number, number, number, number, number, number>|Array.<Highcharts.SVGPathCommand, number, number, number, number, number, number, number>)>"
+							"Array.<Highcharts.SVGPathCommand>"
 						]
 					},
 					"meta": {
