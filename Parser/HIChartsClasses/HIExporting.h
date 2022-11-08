@@ -48,6 +48,8 @@ The width of the original chart when exported, unless an explicit `chart.width` 
 /**
 Defines the scale or zoom factor for the exported image compared to the on-screen display. While for instance a 600px wide chart may look good on a website, it will look bad in print. The default scale of 2 makes this chart export to a 1200px PNG or JPG.
 
+**Defaults to** `2`.
+
 **Try it**
 
 * [Scale demonstrated](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/scale/)
@@ -86,6 +88,8 @@ The pixel width of charts exported to PNG or JPG. As of Highcharts 3.0, the defa
 @property(nonatomic, readwrite) NSNumber *width;
 /**
 When printing the chart from the menu item in the burger menu, if the on-screen chart exceeds this width, it is resized. After printing or cancelled, it is restored. The default width makes the chart fit into typical paper format. Note that this does not affect the chart when printing the web page as a whole.
+
+**Defaults to** `780`.
 */
 @property(nonatomic, readwrite) NSNumber *printMaxWidth;
 /**
@@ -100,6 +104,8 @@ Options for exporting data to CSV or ExCel, or displaying the data in a HTML tab
 @property(nonatomic, readwrite) HICsv *csv;
 /**
 Default MIME type for exporting if `chart.exportChart()` is called without specifying a `type` option. Possible values are `image/png`, `image/jpeg`, `application/pdf` and `image/svg+xml`.
+
+**Defaults to** `image/png`.
 */
 @property(nonatomic, readwrite) NSString *type;
 /**
@@ -117,6 +123,8 @@ An object containing additional key value data for the POST form that sends the 
 /**
 Use multi level headers in data table. If `csv.columnHeaderFormatter` is defined, it has to return objects in order for multi level headers to work.
 
+**Defaults to** `True`.
+
 **Try it**
 
 * [Multiple table headers](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/multilevel-table)
@@ -124,6 +132,8 @@ Use multi level headers in data table. If `csv.columnHeaderFormatter` is defined
 @property(nonatomic, readwrite) NSNumber /* Bool */ *useMultiLevelHeaders;
 /**
 If using multi level table headers, use rowspans for headers that have only one level.
+
+**Defaults to** `True`.
 
 **Try it**
 
@@ -138,6 +148,8 @@ Whether or not to fall back to the export server if the offline-exporting module
 @property(nonatomic, readwrite) NSNumber /* Bool */ *fallbackToExportServer;
 /**
 The URL for the server module converting the SVG string to an image format. By default this points to Highchart's free web service.
+
+**Defaults to** `https://export.highcharts.com/`.
 */
 @property(nonatomic, readwrite) NSString *url;
 /**

@@ -51,6 +51,8 @@ The X axis range that each point is valid for. This determines the width of the 
 /**
 Padding between each column or bar, in x axis units.
 
+**Defaults to** `0.1`.
+
 **Try it**
 
 * [0.1 by default](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-default/)
@@ -136,6 +138,8 @@ When using automatic point colors pulled from the global `colors` or series-spec
 @property(nonatomic, readwrite) NSNumber /* Bool */ *colorByPoint;
 /**
 Padding between each value groups, in x axis units.
+
+**Defaults to** `0.2`.
 
 **Try it**
 

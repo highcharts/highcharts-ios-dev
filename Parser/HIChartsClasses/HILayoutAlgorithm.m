@@ -24,16 +24,16 @@
 	copyLayoutAlgorithm.splitSeries = [self.splitSeries copyWithZone: zone];
 	copyLayoutAlgorithm.parentNodeLimit = [self.parentNodeLimit copyWithZone: zone];
 	copyLayoutAlgorithm.integration = [self.integration copyWithZone: zone];
+	copyLayoutAlgorithm.approximation = [self.approximation copyWithZone: zone];
 	copyLayoutAlgorithm.linkLength = [self.linkLength copyWithZone: zone];
+	copyLayoutAlgorithm.repulsiveForce = [self.repulsiveForce copyWithZone: zone];
+	copyLayoutAlgorithm.theta = [self.theta copyWithZone: zone];
+	copyLayoutAlgorithm.attractiveForce = [self.attractiveForce copyWithZone: zone];
 	copyLayoutAlgorithm.type = [self.type copyWithZone: zone];
 	copyLayoutAlgorithm.distance = [self.distance copyWithZone: zone];
 	copyLayoutAlgorithm.gridSize = [self.gridSize copyWithZone: zone];
 	copyLayoutAlgorithm.kmeansThreshold = [self.kmeansThreshold copyWithZone: zone];
 	copyLayoutAlgorithm.iterations = [self.iterations copyWithZone: zone];
-	copyLayoutAlgorithm.approximation = [self.approximation copyWithZone: zone];
-	copyLayoutAlgorithm.repulsiveForce = [self.repulsiveForce copyWithZone: zone];
-	copyLayoutAlgorithm.theta = [self.theta copyWithZone: zone];
-	copyLayoutAlgorithm.attractiveForce = [self.attractiveForce copyWithZone: zone];
 	return copyLayoutAlgorithm;
 }
 
@@ -82,8 +82,20 @@
 	if (self.integration) {
 		params[@"integration"] = self.integration;
 	}
+	if (self.approximation) {
+		params[@"approximation"] = self.approximation;
+	}
 	if (self.linkLength) {
 		params[@"linkLength"] = self.linkLength;
+	}
+	if (self.repulsiveForce) {
+		params[@"repulsiveForce"] = [self.repulsiveForce getFunction];
+	}
+	if (self.theta) {
+		params[@"theta"] = self.theta;
+	}
+	if (self.attractiveForce) {
+		params[@"attractiveForce"] = [self.attractiveForce getFunction];
 	}
 	if (self.type) {
 		params[@"type"] = self.type;
@@ -99,18 +111,6 @@
 	}
 	if (self.iterations) {
 		params[@"iterations"] = self.iterations;
-	}
-	if (self.approximation) {
-		params[@"approximation"] = self.approximation;
-	}
-	if (self.repulsiveForce) {
-		params[@"repulsiveForce"] = [self.repulsiveForce getFunction];
-	}
-	if (self.theta) {
-		params[@"theta"] = self.theta;
-	}
-	if (self.attractiveForce) {
-		params[@"attractiveForce"] = [self.attractiveForce getFunction];
 	}
 	return params;
 }
@@ -201,10 +201,34 @@
 	[self updateNSObject:oldValue newValue:integration propertyName:@"integration"];
 }
 
+-(void)setApproximation:(NSString *)approximation {
+	NSString *oldValue = _approximation;
+	_approximation = approximation;
+	[self updateNSObject:oldValue newValue:approximation propertyName:@"approximation"];
+}
+
 -(void)setLinkLength:(NSNumber *)linkLength {
 	NSNumber *oldValue = _linkLength;
 	_linkLength = linkLength;
 	[self updateNSObject:oldValue newValue:linkLength propertyName:@"linkLength"];
+}
+
+-(void)setRepulsiveForce:(HIFunction *)repulsiveForce {
+	HIFunction *oldValue = _repulsiveForce;
+	_repulsiveForce = repulsiveForce;
+	[self updateHIObject:oldValue newValue:repulsiveForce propertyName:@"repulsiveForce"];
+}
+
+-(void)setTheta:(NSNumber *)theta {
+	NSNumber *oldValue = _theta;
+	_theta = theta;
+	[self updateNSObject:oldValue newValue:theta propertyName:@"theta"];
+}
+
+-(void)setAttractiveForce:(HIFunction *)attractiveForce {
+	HIFunction *oldValue = _attractiveForce;
+	_attractiveForce = attractiveForce;
+	[self updateHIObject:oldValue newValue:attractiveForce propertyName:@"attractiveForce"];
 }
 
 -(void)setType:(NSString *)type {
@@ -235,30 +259,6 @@
 	NSNumber *oldValue = _iterations;
 	_iterations = iterations;
 	[self updateNSObject:oldValue newValue:iterations propertyName:@"iterations"];
-}
-
--(void)setApproximation:(NSString *)approximation {
-	NSString *oldValue = _approximation;
-	_approximation = approximation;
-	[self updateNSObject:oldValue newValue:approximation propertyName:@"approximation"];
-}
-
--(void)setRepulsiveForce:(HIFunction *)repulsiveForce {
-	HIFunction *oldValue = _repulsiveForce;
-	_repulsiveForce = repulsiveForce;
-	[self updateHIObject:oldValue newValue:repulsiveForce propertyName:@"repulsiveForce"];
-}
-
--(void)setTheta:(NSNumber *)theta {
-	NSNumber *oldValue = _theta;
-	_theta = theta;
-	[self updateNSObject:oldValue newValue:theta propertyName:@"theta"];
-}
-
--(void)setAttractiveForce:(HIFunction *)attractiveForce {
-	HIFunction *oldValue = _attractiveForce;
-	_attractiveForce = attractiveForce;
-	[self updateHIObject:oldValue newValue:attractiveForce propertyName:@"attractiveForce"];
 }
 
 @end

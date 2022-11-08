@@ -51,6 +51,7 @@
 	copyAreaspline.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyAreaspline.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyAreaspline.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyAreaspline.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyAreaspline.events = [self.events copyWithZone: zone];
 	copyAreaspline.opacity = [self.opacity copyWithZone: zone];
 	copyAreaspline.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -60,6 +61,7 @@
 	copyAreaspline.selected = [self.selected copyWithZone: zone];
 	copyAreaspline.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyAreaspline.accessibility = [self.accessibility copyWithZone: zone];
+	copyAreaspline.step = [self.step copyWithZone: zone];
 	copyAreaspline.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyAreaspline.shadow = [self.shadow copyWithZone: zone];
 	copyAreaspline.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
@@ -77,6 +79,7 @@
 	copyAreaspline.className = [self.className copyWithZone: zone];
 	copyAreaspline.pointStart = [self.pointStart copyWithZone: zone];
 	copyAreaspline.connectEnds = [self.connectEnds copyWithZone: zone];
+	copyAreaspline.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyAreaspline.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyAreaspline.data = [self.data copyWithZone: zone];
 	copyAreaspline.id = [self.id copyWithZone: zone];

@@ -23,6 +23,7 @@
 	copyAreasplinerange.index = [self.index copyWithZone: zone];
 	copyAreasplinerange.legendIndex = [self.legendIndex copyWithZone: zone];
 	copyAreasplinerange.name = [self.name copyWithZone: zone];
+	copyAreasplinerange.stack = [self.stack copyWithZone: zone];
 	copyAreasplinerange.type = [self.type copyWithZone: zone];
 	copyAreasplinerange.xAxis = [self.xAxis copyWithZone: zone];
 	copyAreasplinerange.yAxis = [self.yAxis copyWithZone: zone];
@@ -58,10 +59,12 @@
 	copyAreasplinerange.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyAreasplinerange.custom = [self.custom copyWithZone: zone];
 	copyAreasplinerange.onPoint = [self.onPoint copyWithZone: zone];
+	copyAreasplinerange.stacking = [self.stacking copyWithZone: zone];
 	copyAreasplinerange.animation = [self.animation copyWithZone: zone];
 	copyAreasplinerange.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyAreasplinerange.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyAreasplinerange.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyAreasplinerange.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyAreasplinerange.events = [self.events copyWithZone: zone];
 	copyAreasplinerange.opacity = [self.opacity copyWithZone: zone];
 	copyAreasplinerange.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -71,6 +74,7 @@
 	copyAreasplinerange.selected = [self.selected copyWithZone: zone];
 	copyAreasplinerange.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyAreasplinerange.accessibility = [self.accessibility copyWithZone: zone];
+	copyAreasplinerange.step = [self.step copyWithZone: zone];
 	copyAreasplinerange.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyAreasplinerange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyAreasplinerange.colorAxis = [self.colorAxis copyWithZone: zone];
@@ -85,6 +89,7 @@
 	copyAreasplinerange.className = [self.className copyWithZone: zone];
 	copyAreasplinerange.pointStart = [self.pointStart copyWithZone: zone];
 	copyAreasplinerange.connectEnds = [self.connectEnds copyWithZone: zone];
+	copyAreasplinerange.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyAreasplinerange.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyAreasplinerange;
 }
