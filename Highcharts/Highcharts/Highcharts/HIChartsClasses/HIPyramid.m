@@ -20,7 +20,10 @@
 	copyPyramid.index = [self.index copyWithZone: zone];
 	copyPyramid.legendIndex = [self.legendIndex copyWithZone: zone];
 	copyPyramid.name = [self.name copyWithZone: zone];
+	copyPyramid.stack = [self.stack copyWithZone: zone];
 	copyPyramid.type = [self.type copyWithZone: zone];
+	copyPyramid.xAxis = [self.xAxis copyWithZone: zone];
+	copyPyramid.yAxis = [self.yAxis copyWithZone: zone];
 	copyPyramid.zIndex = [self.zIndex copyWithZone: zone];
 	copyPyramid.reversed = [self.reversed copyWithZone: zone];
 	copyPyramid.neckWidth = [self.neckWidth copyWithZone: zone];
@@ -36,6 +39,7 @@
 	copyPyramid.point = [self.point copyWithZone: zone];
 	copyPyramid.color = [self.color copyWithZone: zone];
 	copyPyramid.colors = [self.colors copyWithZone: zone];
+	copyPyramid.size = [self.size copyWithZone: zone];
 	copyPyramid.borderColor = [self.borderColor copyWithZone: zone];
 	copyPyramid.tooltip = [self.tooltip copyWithZone: zone];
 	copyPyramid.thickness = [self.thickness copyWithZone: zone];
@@ -44,6 +48,7 @@
 	copyPyramid.startAngle = [self.startAngle copyWithZone: zone];
 	copyPyramid.events = [self.events copyWithZone: zone];
 	copyPyramid.endAngle = [self.endAngle copyWithZone: zone];
+	copyPyramid.innerSize = [self.innerSize copyWithZone: zone];
 	copyPyramid.slicedOffset = [self.slicedOffset copyWithZone: zone];
 	copyPyramid.depth = [self.depth copyWithZone: zone];
 	copyPyramid.borderWidth = [self.borderWidth copyWithZone: zone];
@@ -52,28 +57,54 @@
 	copyPyramid.linecap = [self.linecap copyWithZone: zone];
 	copyPyramid.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyPyramid.colorIndex = [self.colorIndex copyWithZone: zone];
+	copyPyramid.negativeColor = [self.negativeColor copyWithZone: zone];
+	copyPyramid.pointInterval = [self.pointInterval copyWithZone: zone];
+	copyPyramid.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyPyramid.colorKey = [self.colorKey copyWithZone: zone];
+	copyPyramid.softThreshold = [self.softThreshold copyWithZone: zone];
+	copyPyramid.dragDrop = [self.dragDrop copyWithZone: zone];
+	copyPyramid.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyPyramid.marker = [self.marker copyWithZone: zone];
+	copyPyramid.label = [self.label copyWithZone: zone];
 	copyPyramid.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPyramid.cursor = [self.cursor copyWithZone: zone];
+	copyPyramid.dashStyle = [self.dashStyle copyWithZone: zone];
+	copyPyramid.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyPyramid.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyPyramid.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPyramid.custom = [self.custom copyWithZone: zone];
 	copyPyramid.onPoint = [self.onPoint copyWithZone: zone];
+	copyPyramid.stacking = [self.stacking copyWithZone: zone];
+	copyPyramid.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyPyramid.relativeXValue = [self.relativeXValue copyWithZone: zone];
+	copyPyramid.threshold = [self.threshold copyWithZone: zone];
 	copyPyramid.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyPyramid.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyPyramid.opacity = [self.opacity copyWithZone: zone];
+	copyPyramid.animationLimit = [self.animationLimit copyWithZone: zone];
+	copyPyramid.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyPyramid.definition = [self.definition copyWithZone: zone];
 	copyPyramid.keys = [self.keys copyWithZone: zone];
 	copyPyramid.selected = [self.selected copyWithZone: zone];
 	copyPyramid.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPyramid.accessibility = [self.accessibility copyWithZone: zone];
+	copyPyramid.step = [self.step copyWithZone: zone];
+	copyPyramid.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyPyramid.shadow = [self.shadow copyWithZone: zone];
 	copyPyramid.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPyramid.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyPyramid.zones = [self.zones copyWithZone: zone];
+	copyPyramid.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyPyramid.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyPyramid.crisp = [self.crisp copyWithZone: zone];
 	copyPyramid.visible = [self.visible copyWithZone: zone];
 	copyPyramid.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyPyramid.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
+	copyPyramid.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyPyramid.className = [self.className copyWithZone: zone];
+	copyPyramid.pointStart = [self.pointStart copyWithZone: zone];
+	copyPyramid.connectEnds = [self.connectEnds copyWithZone: zone];
+	copyPyramid.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	return copyPyramid;
 }
 
@@ -117,6 +148,9 @@
 		}
 		params[@"colors"] = array;
 	}
+	if (self.size) {
+		params[@"size"] = self.size;
+	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
@@ -134,6 +168,9 @@
 	}
 	if (self.endAngle) {
 		params[@"endAngle"] = self.endAngle;
+	}
+	if (self.innerSize) {
+		params[@"innerSize"] = self.innerSize;
 	}
 	if (self.slicedOffset) {
 		params[@"slicedOffset"] = self.slicedOffset;
@@ -197,6 +234,12 @@
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
 
+-(void)setSize:(id)size {
+	id oldValue = _size;
+	_size = size;
+	[self updateNSObject:oldValue newValue:size propertyName:@"size"];
+}
+
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
 	_borderColor = borderColor;
@@ -231,6 +274,12 @@
 	NSNumber *oldValue = _endAngle;
 	_endAngle = endAngle;
 	[self updateNSObject:oldValue newValue:endAngle propertyName:@"endAngle"];
+}
+
+-(void)setInnerSize:(id)innerSize {
+	id oldValue = _innerSize;
+	_innerSize = innerSize;
+	[self updateNSObject:oldValue newValue:innerSize propertyName:@"innerSize"];
 }
 
 -(void)setSlicedOffset:(NSNumber *)slicedOffset {

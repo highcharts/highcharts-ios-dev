@@ -25,6 +25,8 @@
 	copySunburst.dataLabels = [self.dataLabels copyWithZone: zone];
 	copySunburst.levelIsConstant = [self.levelIsConstant copyWithZone: zone];
 	copySunburst.allowTraversingTree = [self.allowTraversingTree copyWithZone: zone];
+	copySunburst.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
+	copySunburst.clip = [self.clip copyWithZone: zone];
 	copySunburst.point = [self.point copyWithZone: zone];
 	copySunburst.color = [self.color copyWithZone: zone];
 	copySunburst.states = [self.states copyWithZone: zone];
@@ -33,40 +35,74 @@
 	copySunburst.borderColor = [self.borderColor copyWithZone: zone];
 	copySunburst.tooltip = [self.tooltip copyWithZone: zone];
 	copySunburst.thickness = [self.thickness copyWithZone: zone];
+	copySunburst.minSize = [self.minSize copyWithZone: zone];
 	copySunburst.fillColor = [self.fillColor copyWithZone: zone];
 	copySunburst.startAngle = [self.startAngle copyWithZone: zone];
 	copySunburst.events = [self.events copyWithZone: zone];
+	copySunburst.endAngle = [self.endAngle copyWithZone: zone];
+	copySunburst.innerSize = [self.innerSize copyWithZone: zone];
+	copySunburst.depth = [self.depth copyWithZone: zone];
 	copySunburst.borderWidth = [self.borderWidth copyWithZone: zone];
 	copySunburst.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copySunburst.showInLegend = [self.showInLegend copyWithZone: zone];
+	copySunburst.linecap = [self.linecap copyWithZone: zone];
 	copySunburst.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copySunburst.colorIndex = [self.colorIndex copyWithZone: zone];
+	copySunburst.negativeColor = [self.negativeColor copyWithZone: zone];
+	copySunburst.pointInterval = [self.pointInterval copyWithZone: zone];
+	copySunburst.cropThreshold = [self.cropThreshold copyWithZone: zone];
+	copySunburst.colorKey = [self.colorKey copyWithZone: zone];
+	copySunburst.softThreshold = [self.softThreshold copyWithZone: zone];
+	copySunburst.dragDrop = [self.dragDrop copyWithZone: zone];
+	copySunburst.dataSorting = [self.dataSorting copyWithZone: zone];
+	copySunburst.marker = [self.marker copyWithZone: zone];
+	copySunburst.label = [self.label copyWithZone: zone];
 	copySunburst.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copySunburst.cursor = [self.cursor copyWithZone: zone];
+	copySunburst.dashStyle = [self.dashStyle copyWithZone: zone];
+	copySunburst.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copySunburst.connectNulls = [self.connectNulls copyWithZone: zone];
 	copySunburst.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copySunburst.custom = [self.custom copyWithZone: zone];
 	copySunburst.onPoint = [self.onPoint copyWithZone: zone];
+	copySunburst.stacking = [self.stacking copyWithZone: zone];
 	copySunburst.animation = [self.animation copyWithZone: zone];
+	copySunburst.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copySunburst.relativeXValue = [self.relativeXValue copyWithZone: zone];
+	copySunburst.threshold = [self.threshold copyWithZone: zone];
 	copySunburst.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copySunburst.boostBlending = [self.boostBlending copyWithZone: zone];
 	copySunburst.opacity = [self.opacity copyWithZone: zone];
+	copySunburst.animationLimit = [self.animationLimit copyWithZone: zone];
+	copySunburst.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copySunburst.definition = [self.definition copyWithZone: zone];
 	copySunburst.keys = [self.keys copyWithZone: zone];
 	copySunburst.selected = [self.selected copyWithZone: zone];
 	copySunburst.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copySunburst.accessibility = [self.accessibility copyWithZone: zone];
+	copySunburst.step = [self.step copyWithZone: zone];
+	copySunburst.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copySunburst.shadow = [self.shadow copyWithZone: zone];
 	copySunburst.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copySunburst.colorAxis = [self.colorAxis copyWithZone: zone];
+	copySunburst.zones = [self.zones copyWithZone: zone];
+	copySunburst.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copySunburst.lineWidth = [self.lineWidth copyWithZone: zone];
 	copySunburst.crisp = [self.crisp copyWithZone: zone];
 	copySunburst.visible = [self.visible copyWithZone: zone];
 	copySunburst.linkedTo = [self.linkedTo copyWithZone: zone];
 	copySunburst.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
+	copySunburst.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copySunburst.className = [self.className copyWithZone: zone];
+	copySunburst.pointStart = [self.pointStart copyWithZone: zone];
+	copySunburst.connectEnds = [self.connectEnds copyWithZone: zone];
+	copySunburst.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copySunburst.data = [self.data copyWithZone: zone];
 	copySunburst.id = [self.id copyWithZone: zone];
 	copySunburst.index = [self.index copyWithZone: zone];
 	copySunburst.legendIndex = [self.legendIndex copyWithZone: zone];
 	copySunburst.name = [self.name copyWithZone: zone];
+	copySunburst.stack = [self.stack copyWithZone: zone];
 	copySunburst.type = [self.type copyWithZone: zone];
 	copySunburst.xAxis = [self.xAxis copyWithZone: zone];
 	copySunburst.yAxis = [self.yAxis copyWithZone: zone];
@@ -122,6 +158,9 @@
 	if (self.allowTraversingTree) {
 		params[@"allowTraversingTree"] = self.allowTraversingTree;
 	}
+	if (self.ignoreHiddenPoint) {
+		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
+	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
@@ -138,11 +177,23 @@
 	if (self.thickness) {
 		params[@"thickness"] = self.thickness;
 	}
+	if (self.minSize) {
+		params[@"minSize"] = self.minSize;
+	}
 	if (self.fillColor) {
 		params[@"fillColor"] = [self.fillColor getData];
 	}
 	if (self.startAngle) {
 		params[@"startAngle"] = self.startAngle;
+	}
+	if (self.endAngle) {
+		params[@"endAngle"] = self.endAngle;
+	}
+	if (self.innerSize) {
+		params[@"innerSize"] = self.innerSize;
+	}
+	if (self.depth) {
+		params[@"depth"] = self.depth;
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
@@ -206,6 +257,12 @@
 	[self updateNSObject:oldValue newValue:allowTraversingTree propertyName:@"allowTraversingTree"];
 }
 
+-(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
+	NSNumber *oldValue = _ignoreHiddenPoint;
+	_ignoreHiddenPoint = ignoreHiddenPoint;
+	[self updateNSObject:oldValue newValue:ignoreHiddenPoint propertyName:@"ignoreHiddenPoint"];
+}
+
 -(void)setColors:(NSArray<HIColor *> *)colors {
 	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
@@ -230,6 +287,12 @@
 	[self updateNSObject:oldValue newValue:thickness propertyName:@"thickness"];
 }
 
+-(void)setMinSize:(id)minSize {
+	id oldValue = _minSize;
+	_minSize = minSize;
+	[self updateNSObject:oldValue newValue:minSize propertyName:@"minSize"];
+}
+
 -(void)setFillColor:(HIColor *)fillColor {
 	HIColor *oldValue = _fillColor;
 	_fillColor = fillColor;
@@ -240,6 +303,24 @@
 	NSNumber *oldValue = _startAngle;
 	_startAngle = startAngle;
 	[self updateNSObject:oldValue newValue:startAngle propertyName:@"startAngle"];
+}
+
+-(void)setEndAngle:(NSNumber *)endAngle {
+	NSNumber *oldValue = _endAngle;
+	_endAngle = endAngle;
+	[self updateNSObject:oldValue newValue:endAngle propertyName:@"endAngle"];
+}
+
+-(void)setInnerSize:(id)innerSize {
+	id oldValue = _innerSize;
+	_innerSize = innerSize;
+	[self updateNSObject:oldValue newValue:innerSize propertyName:@"innerSize"];
+}
+
+-(void)setDepth:(NSNumber *)depth {
+	NSNumber *oldValue = _depth;
+	_depth = depth;
+	[self updateNSObject:oldValue newValue:depth propertyName:@"depth"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {

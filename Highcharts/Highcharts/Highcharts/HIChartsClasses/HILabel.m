@@ -19,11 +19,11 @@
 	copyLabel.onArea = [self.onArea copyWithZone: zone];
 	copyLabel.boxesToAvoid = [self.boxesToAvoid copyWithZone: zone];
 	copyLabel.formatter = [self.formatter copyWithZone: zone];
+	copyLabel.useHTML = [self.useHTML copyWithZone: zone];
 	copyLabel.connectorAllowed = [self.connectorAllowed copyWithZone: zone];
 	copyLabel.verticalAlign = [self.verticalAlign copyWithZone: zone];
 	copyLabel.text = [self.text copyWithZone: zone];
 	copyLabel.align = [self.align copyWithZone: zone];
-	copyLabel.useHTML = [self.useHTML copyWithZone: zone];
 	copyLabel.y = [self.y copyWithZone: zone];
 	copyLabel.x = [self.x copyWithZone: zone];
 	copyLabel.rotation = [self.rotation copyWithZone: zone];
@@ -70,6 +70,9 @@
 	if (self.formatter) {
 		params[@"formatter"] = [self.formatter getFunction];
 	}
+	if (self.useHTML) {
+		params[@"useHTML"] = self.useHTML;
+	}
 	if (self.connectorAllowed) {
 		params[@"connectorAllowed"] = self.connectorAllowed;
 	}
@@ -81,9 +84,6 @@
 	}
 	if (self.align) {
 		params[@"align"] = self.align;
-	}
-	if (self.useHTML) {
-		params[@"useHTML"] = self.useHTML;
 	}
 	if (self.y) {
 		params[@"y"] = self.y;
@@ -156,6 +156,12 @@
 	[self updateHIObject:oldValue newValue:formatter propertyName:@"formatter"];
 }
 
+-(void)setUseHTML:(NSNumber *)useHTML {
+	NSNumber *oldValue = _useHTML;
+	_useHTML = useHTML;
+	[self updateNSObject:oldValue newValue:useHTML propertyName:@"useHTML"];
+}
+
 -(void)setConnectorAllowed:(NSNumber *)connectorAllowed {
 	NSNumber *oldValue = _connectorAllowed;
 	_connectorAllowed = connectorAllowed;
@@ -178,12 +184,6 @@
 	NSString *oldValue = _align;
 	_align = align;
 	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
-}
-
--(void)setUseHTML:(NSNumber *)useHTML {
-	NSNumber *oldValue = _useHTML;
-	_useHTML = useHTML;
-	[self updateNSObject:oldValue newValue:useHTML propertyName:@"useHTML"];
 }
 
 -(void)setY:(NSNumber *)y {

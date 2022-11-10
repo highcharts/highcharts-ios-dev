@@ -19,6 +19,7 @@
 	copyBellcurve.baseSeries = [self.baseSeries copyWithZone: zone];
 	copyBellcurve.fillColor = [self.fillColor copyWithZone: zone];
 	copyBellcurve.fillOpacity = [self.fillOpacity copyWithZone: zone];
+	copyBellcurve.data = [self.data copyWithZone: zone];
 	copyBellcurve.id = [self.id copyWithZone: zone];
 	copyBellcurve.index = [self.index copyWithZone: zone];
 	copyBellcurve.legendIndex = [self.legendIndex copyWithZone: zone];
@@ -40,10 +41,12 @@
 	copyBellcurve.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyBellcurve.clip = [self.clip copyWithZone: zone];
 	copyBellcurve.negativeColor = [self.negativeColor copyWithZone: zone];
+	copyBellcurve.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyBellcurve.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyBellcurve.states = [self.states copyWithZone: zone];
 	copyBellcurve.colorKey = [self.colorKey copyWithZone: zone];
 	copyBellcurve.softThreshold = [self.softThreshold copyWithZone: zone];
+	copyBellcurve.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyBellcurve.point = [self.point copyWithZone: zone];
 	copyBellcurve.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyBellcurve.tooltip = [self.tooltip copyWithZone: zone];
@@ -52,13 +55,16 @@
 	copyBellcurve.cursor = [self.cursor copyWithZone: zone];
 	copyBellcurve.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyBellcurve.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyBellcurve.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyBellcurve.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBellcurve.custom = [self.custom copyWithZone: zone];
 	copyBellcurve.onPoint = [self.onPoint copyWithZone: zone];
+	copyBellcurve.stacking = [self.stacking copyWithZone: zone];
 	copyBellcurve.animation = [self.animation copyWithZone: zone];
 	copyBellcurve.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyBellcurve.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyBellcurve.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyBellcurve.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyBellcurve.events = [self.events copyWithZone: zone];
 	copyBellcurve.opacity = [self.opacity copyWithZone: zone];
 	copyBellcurve.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -68,12 +74,14 @@
 	copyBellcurve.selected = [self.selected copyWithZone: zone];
 	copyBellcurve.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyBellcurve.accessibility = [self.accessibility copyWithZone: zone];
+	copyBellcurve.step = [self.step copyWithZone: zone];
 	copyBellcurve.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyBellcurve.shadow = [self.shadow copyWithZone: zone];
 	copyBellcurve.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyBellcurve.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyBellcurve.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyBellcurve.zones = [self.zones copyWithZone: zone];
+	copyBellcurve.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyBellcurve.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyBellcurve.crisp = [self.crisp copyWithZone: zone];
 	copyBellcurve.visible = [self.visible copyWithZone: zone];
@@ -84,6 +92,7 @@
 	copyBellcurve.className = [self.className copyWithZone: zone];
 	copyBellcurve.pointStart = [self.pointStart copyWithZone: zone];
 	copyBellcurve.connectEnds = [self.connectEnds copyWithZone: zone];
+	copyBellcurve.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyBellcurve.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyBellcurve;
 }

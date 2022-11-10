@@ -49,6 +49,7 @@
 	copyArearange.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyArearange.custom = [self.custom copyWithZone: zone];
 	copyArearange.onPoint = [self.onPoint copyWithZone: zone];
+	copyArearange.stacking = [self.stacking copyWithZone: zone];
 	copyArearange.animation = [self.animation copyWithZone: zone];
 	copyArearange.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyArearange.relativeXValue = [self.relativeXValue copyWithZone: zone];
@@ -85,6 +86,7 @@
 	copyArearange.index = [self.index copyWithZone: zone];
 	copyArearange.legendIndex = [self.legendIndex copyWithZone: zone];
 	copyArearange.name = [self.name copyWithZone: zone];
+	copyArearange.stack = [self.stack copyWithZone: zone];
 	copyArearange.type = [self.type copyWithZone: zone];
 	copyArearange.xAxis = [self.xAxis copyWithZone: zone];
 	copyArearange.yAxis = [self.yAxis copyWithZone: zone];

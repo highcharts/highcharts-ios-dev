@@ -16,15 +16,16 @@
 	[super copyWithZone:zone];
 	HIColumnrange *copyColumnrange = [[HIColumnrange allocWithZone: zone] init];
 	copyColumnrange.states = [self.states copyWithZone: zone];
+	copyColumnrange.pointRange = [self.pointRange copyWithZone: zone];
 	copyColumnrange.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyColumnrange.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyColumnrange.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyColumnrange.borderRadius = [self.borderRadius copyWithZone: zone];
-	copyColumnrange.pointRange = [self.pointRange copyWithZone: zone];
 	copyColumnrange.minPointLength = [self.minPointLength copyWithZone: zone];
 	copyColumnrange.groupZPadding = [self.groupZPadding copyWithZone: zone];
 	copyColumnrange.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyColumnrange.colors = [self.colors copyWithZone: zone];
+	copyColumnrange.threshold = [self.threshold copyWithZone: zone];
 	copyColumnrange.borderColor = [self.borderColor copyWithZone: zone];
 	copyColumnrange.edgeColor = [self.edgeColor copyWithZone: zone];
 	copyColumnrange.centerInCategory = [self.centerInCategory copyWithZone: zone];
@@ -38,22 +39,28 @@
 	copyColumnrange.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyColumnrange.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyColumnrange.grouping = [self.grouping copyWithZone: zone];
+	copyColumnrange.linecap = [self.linecap copyWithZone: zone];
 	copyColumnrange.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyColumnrange.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyColumnrange.clip = [self.clip copyWithZone: zone];
+	copyColumnrange.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyColumnrange.color = [self.color copyWithZone: zone];
 	copyColumnrange.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyColumnrange.colorKey = [self.colorKey copyWithZone: zone];
+	copyColumnrange.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyColumnrange.point = [self.point copyWithZone: zone];
 	copyColumnrange.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyColumnrange.marker = [self.marker copyWithZone: zone];
 	copyColumnrange.label = [self.label copyWithZone: zone];
 	copyColumnrange.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyColumnrange.cursor = [self.cursor copyWithZone: zone];
 	copyColumnrange.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyColumnrange.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyColumnrange.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyColumnrange.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyColumnrange.custom = [self.custom copyWithZone: zone];
 	copyColumnrange.onPoint = [self.onPoint copyWithZone: zone];
+	copyColumnrange.stacking = [self.stacking copyWithZone: zone];
 	copyColumnrange.animation = [self.animation copyWithZone: zone];
 	copyColumnrange.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyColumnrange.relativeXValue = [self.relativeXValue copyWithZone: zone];
@@ -68,12 +75,14 @@
 	copyColumnrange.selected = [self.selected copyWithZone: zone];
 	copyColumnrange.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyColumnrange.accessibility = [self.accessibility copyWithZone: zone];
+	copyColumnrange.step = [self.step copyWithZone: zone];
 	copyColumnrange.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyColumnrange.shadow = [self.shadow copyWithZone: zone];
 	copyColumnrange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyColumnrange.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyColumnrange.zones = [self.zones copyWithZone: zone];
 	copyColumnrange.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyColumnrange.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyColumnrange.crisp = [self.crisp copyWithZone: zone];
 	copyColumnrange.visible = [self.visible copyWithZone: zone];
 	copyColumnrange.linkedTo = [self.linkedTo copyWithZone: zone];
@@ -81,6 +90,7 @@
 	copyColumnrange.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyColumnrange.className = [self.className copyWithZone: zone];
 	copyColumnrange.pointStart = [self.pointStart copyWithZone: zone];
+	copyColumnrange.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyColumnrange.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyColumnrange.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyColumnrange.data = [self.data copyWithZone: zone];
@@ -88,6 +98,7 @@
 	copyColumnrange.index = [self.index copyWithZone: zone];
 	copyColumnrange.legendIndex = [self.legendIndex copyWithZone: zone];
 	copyColumnrange.name = [self.name copyWithZone: zone];
+	copyColumnrange.stack = [self.stack copyWithZone: zone];
 	copyColumnrange.type = [self.type copyWithZone: zone];
 	copyColumnrange.xAxis = [self.xAxis copyWithZone: zone];
 	copyColumnrange.yAxis = [self.yAxis copyWithZone: zone];
@@ -98,14 +109,14 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
+	if (self.pointRange) {
+		params[@"pointRange"] = self.pointRange;
+	}
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
 	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
-	}
-	if (self.pointRange) {
-		params[@"pointRange"] = self.pointRange;
 	}
 	if (self.minPointLength) {
 		params[@"minPointLength"] = self.minPointLength;
@@ -158,6 +169,12 @@
 
 # pragma mark - Setters
 
+-(void)setPointRange:(id)pointRange {
+	id oldValue = _pointRange;
+	_pointRange = pointRange;
+	[self updateNSObject:oldValue newValue:pointRange propertyName:@"pointRange"];
+}
+
 -(void)setPointPadding:(NSNumber *)pointPadding {
 	NSNumber *oldValue = _pointPadding;
 	_pointPadding = pointPadding;
@@ -168,12 +185,6 @@
 	NSNumber *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
 	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
-}
-
--(void)setPointRange:(NSNumber *)pointRange {
-	NSNumber *oldValue = _pointRange;
-	_pointRange = pointRange;
-	[self updateNSObject:oldValue newValue:pointRange propertyName:@"pointRange"];
 }
 
 -(void)setMinPointLength:(NSNumber *)minPointLength {

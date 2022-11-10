@@ -20,6 +20,7 @@
 	copyErrorbar.index = [self.index copyWithZone: zone];
 	copyErrorbar.legendIndex = [self.legendIndex copyWithZone: zone];
 	copyErrorbar.name = [self.name copyWithZone: zone];
+	copyErrorbar.stack = [self.stack copyWithZone: zone];
 	copyErrorbar.type = [self.type copyWithZone: zone];
 	copyErrorbar.xAxis = [self.xAxis copyWithZone: zone];
 	copyErrorbar.yAxis = [self.yAxis copyWithZone: zone];
@@ -44,10 +45,14 @@
 	copyErrorbar.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyErrorbar.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyErrorbar.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyErrorbar.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyErrorbar.pointRange = [self.pointRange copyWithZone: zone];
 	copyErrorbar.minPointLength = [self.minPointLength copyWithZone: zone];
+	copyErrorbar.groupZPadding = [self.groupZPadding copyWithZone: zone];
 	copyErrorbar.cropThreshold = [self.cropThreshold copyWithZone: zone];
+	copyErrorbar.states = [self.states copyWithZone: zone];
 	copyErrorbar.colors = [self.colors copyWithZone: zone];
+	copyErrorbar.borderColor = [self.borderColor copyWithZone: zone];
 	copyErrorbar.edgeColor = [self.edgeColor copyWithZone: zone];
 	copyErrorbar.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyErrorbar.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
@@ -57,7 +62,9 @@
 	copyErrorbar.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyErrorbar.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyErrorbar.depth = [self.depth copyWithZone: zone];
+	copyErrorbar.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyErrorbar.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyErrorbar.linecap = [self.linecap copyWithZone: zone];
 	copyErrorbar.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyErrorbar.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyErrorbar.clip = [self.clip copyWithZone: zone];
@@ -66,18 +73,22 @@
 	copyErrorbar.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyErrorbar.point = [self.point copyWithZone: zone];
 	copyErrorbar.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyErrorbar.marker = [self.marker copyWithZone: zone];
 	copyErrorbar.label = [self.label copyWithZone: zone];
 	copyErrorbar.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyErrorbar.cursor = [self.cursor copyWithZone: zone];
 	copyErrorbar.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyErrorbar.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyErrorbar.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyErrorbar.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyErrorbar.custom = [self.custom copyWithZone: zone];
 	copyErrorbar.onPoint = [self.onPoint copyWithZone: zone];
+	copyErrorbar.stacking = [self.stacking copyWithZone: zone];
 	copyErrorbar.animation = [self.animation copyWithZone: zone];
 	copyErrorbar.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyErrorbar.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyErrorbar.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyErrorbar.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyErrorbar.events = [self.events copyWithZone: zone];
 	copyErrorbar.opacity = [self.opacity copyWithZone: zone];
 	copyErrorbar.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -87,6 +98,7 @@
 	copyErrorbar.selected = [self.selected copyWithZone: zone];
 	copyErrorbar.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyErrorbar.accessibility = [self.accessibility copyWithZone: zone];
+	copyErrorbar.step = [self.step copyWithZone: zone];
 	copyErrorbar.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyErrorbar.shadow = [self.shadow copyWithZone: zone];
 	copyErrorbar.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
@@ -99,8 +111,9 @@
 	copyErrorbar.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyErrorbar.className = [self.className copyWithZone: zone];
 	copyErrorbar.pointStart = [self.pointStart copyWithZone: zone];
+	copyErrorbar.connectEnds = [self.connectEnds copyWithZone: zone];
+	copyErrorbar.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyErrorbar.showInLegend = [self.showInLegend copyWithZone: zone];
-	copyErrorbar.stacking = [self.stacking copyWithZone: zone];
 	return copyErrorbar;
 }
 
@@ -146,11 +159,17 @@
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
 	}
+	if (self.borderRadius) {
+		params[@"borderRadius"] = self.borderRadius;
+	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
 	}
 	if (self.minPointLength) {
 		params[@"minPointLength"] = self.minPointLength;
+	}
+	if (self.groupZPadding) {
+		params[@"groupZPadding"] = self.groupZPadding;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -158,6 +177,9 @@
 			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
+	}
+	if (self.borderColor) {
+		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.edgeColor) {
 		params[@"edgeColor"] = [self.edgeColor getData];
@@ -182,6 +204,9 @@
 	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
+	}
+	if (self.borderWidth) {
+		params[@"borderWidth"] = self.borderWidth;
 	}
 	return params;
 }
@@ -266,6 +291,12 @@
 	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
 }
 
+-(void)setBorderRadius:(NSNumber *)borderRadius {
+	NSNumber *oldValue = _borderRadius;
+	_borderRadius = borderRadius;
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+}
+
 -(void)setPointRange:(NSNumber *)pointRange {
 	NSNumber *oldValue = _pointRange;
 	_pointRange = pointRange;
@@ -278,10 +309,22 @@
 	[self updateNSObject:oldValue newValue:minPointLength propertyName:@"minPointLength"];
 }
 
+-(void)setGroupZPadding:(NSNumber *)groupZPadding {
+	NSNumber *oldValue = _groupZPadding;
+	_groupZPadding = groupZPadding;
+	[self updateNSObject:oldValue newValue:groupZPadding propertyName:@"groupZPadding"];
+}
+
 -(void)setColors:(NSArray<HIColor *> *)colors {
 	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
+}
+
+-(void)setBorderColor:(HIColor *)borderColor {
+	HIColor *oldValue = _borderColor;
+	_borderColor = borderColor;
+	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setEdgeColor:(HIColor *)edgeColor {
@@ -330,6 +373,12 @@
 	NSNumber *oldValue = _depth;
 	_depth = depth;
 	[self updateNSObject:oldValue newValue:depth propertyName:@"depth"];
+}
+
+-(void)setBorderWidth:(NSNumber *)borderWidth {
+	NSNumber *oldValue = _borderWidth;
+	_borderWidth = borderWidth;
+	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
 @end

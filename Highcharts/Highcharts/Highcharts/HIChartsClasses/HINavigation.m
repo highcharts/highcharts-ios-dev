@@ -10,10 +10,13 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HINavigation *copyNavigation = [[HINavigation allocWithZone: zone] init];
+	copyNavigation.menuStyle = [self.menuStyle copyWithZone: zone];
 	copyNavigation.buttonOptions = [self.buttonOptions copyWithZone: zone];
 	copyNavigation.annotationsOptions = [self.annotationsOptions copyWithZone: zone];
 	copyNavigation.bindingsClassName = [self.bindingsClassName copyWithZone: zone];
 	copyNavigation.breadcrumbs = [self.breadcrumbs copyWithZone: zone];
+	copyNavigation.menuItemHoverStyle = [self.menuItemHoverStyle copyWithZone: zone];
+	copyNavigation.menuItemStyle = [self.menuItemStyle copyWithZone: zone];
 	copyNavigation.bindings = [self.bindings copyWithZone: zone];
 	copyNavigation.events = [self.events copyWithZone: zone];
 	copyNavigation.iconsURL = [self.iconsURL copyWithZone: zone];
@@ -30,6 +33,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.menuStyle) {
+		params[@"menuStyle"] = [self.menuStyle getParams];
+	}
 	if (self.buttonOptions) {
 		params[@"buttonOptions"] = [self.buttonOptions getParams];
 	}
@@ -41,6 +47,12 @@
 	}
 	if (self.breadcrumbs) {
 		params[@"breadcrumbs"] = [self.breadcrumbs getParams];
+	}
+	if (self.menuItemHoverStyle) {
+		params[@"menuItemHoverStyle"] = [self.menuItemHoverStyle getParams];
+	}
+	if (self.menuItemStyle) {
+		params[@"menuItemStyle"] = [self.menuItemStyle getParams];
 	}
 	if (self.bindings) {
 		params[@"bindings"] = [self.bindings getParams];
@@ -77,6 +89,12 @@
 
 # pragma mark - Setters
 
+-(void)setMenuStyle:(HICSSObject *)menuStyle {
+	HICSSObject *oldValue = _menuStyle;
+	_menuStyle = menuStyle;
+	[self updateHIObject:oldValue newValue:menuStyle propertyName:@"menuStyle"];
+}
+
 -(void)setButtonOptions:(HIButtonOptions *)buttonOptions {
 	HIButtonOptions *oldValue = _buttonOptions;
 	_buttonOptions = buttonOptions;
@@ -99,6 +117,18 @@
 	HIBreadcrumbs *oldValue = _breadcrumbs;
 	_breadcrumbs = breadcrumbs;
 	[self updateHIObject:oldValue newValue:breadcrumbs propertyName:@"breadcrumbs"];
+}
+
+-(void)setMenuItemHoverStyle:(HICSSObject *)menuItemHoverStyle {
+	HICSSObject *oldValue = _menuItemHoverStyle;
+	_menuItemHoverStyle = menuItemHoverStyle;
+	[self updateHIObject:oldValue newValue:menuItemHoverStyle propertyName:@"menuItemHoverStyle"];
+}
+
+-(void)setMenuItemStyle:(HICSSObject *)menuItemStyle {
+	HICSSObject *oldValue = _menuItemStyle;
+	_menuItemStyle = menuItemStyle;
+	[self updateHIObject:oldValue newValue:menuItemStyle propertyName:@"menuItemStyle"];
 }
 
 -(void)setBindings:(HIBindings *)bindings {

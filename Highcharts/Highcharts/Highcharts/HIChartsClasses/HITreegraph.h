@@ -7,21 +7,23 @@
 */
 
 #import "HISeries.h"
-#import "HIBreadcrumbs.h"
+#import "HILink.h"
 #import "HILevels.h"
+#import "HICollapseButton.h"
+#import "HIBreadcrumbs.h"
 #import "HIJitter.h"
 #import "HICluster.h"
 #import "HIColor.h"
 
 
 /**
- A `treemap` series. If the `type` option is not specified, it is inherited from `chart.type`.
+ A `treegraph` series. If the `type` option is not specified, it is inherited from `chart.type`.
  
  Configuration options for the series are given in three levels:
  
  1. Options for all series in a chart are defined in the `plotOptions.series` object.
  
- 2. Options for all `treemap` series are defined in `plotOptions.treemap`.
+ 2. Options for all `treegraph` series are defined in `plotOptions.treegraph`.
  
  3. Options for one single series are given in `the series instance array`.
  
@@ -31,19 +33,42 @@
         series: {
             // general options for all series
         },
-        treemap: {
-            // shared options for all treemap series
+        treegraph: {
+            // shared options for all treegraph series
         }
     },
     series: [{
         // specific options for this series instance
-        type: 'treemap'
+        type: 'treegraph'
     }]
  });
  <pre>
  */
-@interface HITreemap: HISeries
+@interface HITreegraph: HISeries
 
+@property(nonatomic, readwrite) HILink *link;
+/**
+Set options on specific levels. Takes precedence over series options, but not point options.
+
+**Try it**
+
+* [Treegraph chart with level options applied](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-treegraph/level-options)
+*/
+@property(nonatomic, readwrite) HILevels *levels;
+/**
+Options applied to collapse Button. The collape button is the small button which indicates, that the node is collapsable.
+*/
+@property(nonatomic, readwrite) HICollapseButton *collapseButton;
+/**
+Flips the positions of the nodes of a treegraph along the horizontal axis (vertical if chart is inverted).
+
+**Defaults to** `false`.
+
+**Try it**
+
+* [Treegraph series with reversed nodes.](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-treegraph/reversed-nodes)
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *reversed;
 /**
 Whether to ignore hidden points when the layout algorithm runs. If `false`, hidden points will leave open spaces.
 
@@ -88,15 +113,6 @@ Defines which direction the layout algorithm will start drawing.
 **Defaults to** `vertical`.
 */
 @property(nonatomic, readwrite) NSString *layoutStartingDirection;
-/**
-Set options on specific levels. Takes precedence over series options, but not point options.
-
-**Try it**
-
-* [Styling dataLabels and borders](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-levels/)
-* [Different layoutAlgorithm](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/treemap-with-levels/)
-*/
-@property(nonatomic, readwrite) NSArray <HILevels *> *levels;
 /**
 This option decides if the user can interact with the parent nodes or just the leaf nodes. When this option is undefined, it will be true by default. However when allowTraversingTree is true, then it will be false by default.
 
