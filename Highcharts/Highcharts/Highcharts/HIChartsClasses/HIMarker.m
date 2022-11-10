@@ -14,15 +14,15 @@
 	copyMarker.symbol = [self.symbol copyWithZone: zone];
 	copyMarker.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyMarker.radius = [self.radius copyWithZone: zone];
-	copyMarker.lineColor = [self.lineColor copyWithZone: zone];
+	copyMarker.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyMarker.enabled = [self.enabled copyWithZone: zone];
 	copyMarker.height = [self.height copyWithZone: zone];
 	copyMarker.width = [self.width copyWithZone: zone];
 	copyMarker.fillColor = [self.fillColor copyWithZone: zone];
+	copyMarker.lineColor = [self.lineColor copyWithZone: zone];
+	copyMarker.enabledThreshold = [self.enabledThreshold copyWithZone: zone];
 	copyMarker.color = [self.color copyWithZone: zone];
 	copyMarker.animation = [self.animation copyWithZone: zone];
-	copyMarker.fillOpacity = [self.fillOpacity copyWithZone: zone];
-	copyMarker.enabledThreshold = [self.enabledThreshold copyWithZone: zone];
 	return copyMarker;
 }
 
@@ -41,8 +41,8 @@
 	if (self.radius) {
 		params[@"radius"] = self.radius;
 	}
-	if (self.lineColor) {
-		params[@"lineColor"] = self.lineColor;
+	if (self.fillOpacity) {
+		params[@"fillOpacity"] = self.fillOpacity;
 	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
@@ -56,17 +56,17 @@
 	if (self.fillColor) {
 		params[@"fillColor"] = [self.fillColor getData];
 	}
+	if (self.lineColor) {
+		params[@"lineColor"] = [self.lineColor getData];
+	}
+	if (self.enabledThreshold) {
+		params[@"enabledThreshold"] = self.enabledThreshold;
+	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
 	}
 	if (self.animation) {
 		params[@"animation"] = [self.animation getParams];
-	}
-	if (self.fillOpacity) {
-		params[@"fillOpacity"] = self.fillOpacity;
-	}
-	if (self.enabledThreshold) {
-		params[@"enabledThreshold"] = self.enabledThreshold;
 	}
 	return params;
 }
@@ -97,10 +97,10 @@
 	[self updateNSObject:oldValue newValue:radius propertyName:@"radius"];
 }
 
--(void)setLineColor:(NSString *)lineColor {
-	NSString *oldValue = _lineColor;
-	_lineColor = lineColor;
-	[self updateNSObject:oldValue newValue:lineColor propertyName:@"lineColor"];
+-(void)setFillOpacity:(NSNumber *)fillOpacity {
+	NSNumber *oldValue = _fillOpacity;
+	_fillOpacity = fillOpacity;
+	[self updateNSObject:oldValue newValue:fillOpacity propertyName:@"fillOpacity"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {
@@ -127,6 +127,18 @@
 	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
 }
 
+-(void)setLineColor:(HIColor *)lineColor {
+	HIColor *oldValue = _lineColor;
+	_lineColor = lineColor;
+	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
+}
+
+-(void)setEnabledThreshold:(NSNumber *)enabledThreshold {
+	NSNumber *oldValue = _enabledThreshold;
+	_enabledThreshold = enabledThreshold;
+	[self updateNSObject:oldValue newValue:enabledThreshold propertyName:@"enabledThreshold"];
+}
+
 -(void)setColor:(HIColor *)color {
 	HIColor *oldValue = _color;
 	_color = color;
@@ -137,18 +149,6 @@
 	HIAnimationOptionsObject *oldValue = _animation;
 	_animation = animation;
 	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
-}
-
--(void)setFillOpacity:(NSNumber *)fillOpacity {
-	NSNumber *oldValue = _fillOpacity;
-	_fillOpacity = fillOpacity;
-	[self updateNSObject:oldValue newValue:fillOpacity propertyName:@"fillOpacity"];
-}
-
--(void)setEnabledThreshold:(NSNumber *)enabledThreshold {
-	NSNumber *oldValue = _enabledThreshold;
-	_enabledThreshold = enabledThreshold;
-	[self updateNSObject:oldValue newValue:enabledThreshold propertyName:@"enabledThreshold"];
 }
 
 @end

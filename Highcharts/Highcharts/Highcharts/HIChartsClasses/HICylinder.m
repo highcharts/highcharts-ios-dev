@@ -23,6 +23,7 @@
 	copyCylinder.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyCylinder.states = [self.states copyWithZone: zone];
 	copyCylinder.colors = [self.colors copyWithZone: zone];
+	copyCylinder.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyCylinder.threshold = [self.threshold copyWithZone: zone];
 	copyCylinder.borderColor = [self.borderColor copyWithZone: zone];
 	copyCylinder.edgeColor = [self.edgeColor copyWithZone: zone];
@@ -38,6 +39,7 @@
 	copyCylinder.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyCylinder.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyCylinder.grouping = [self.grouping copyWithZone: zone];
+	copyCylinder.linecap = [self.linecap copyWithZone: zone];
 	copyCylinder.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyCylinder.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyCylinder.clip = [self.clip copyWithZone: zone];
@@ -48,11 +50,13 @@
 	copyCylinder.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyCylinder.point = [self.point copyWithZone: zone];
 	copyCylinder.dataSorting = [self.dataSorting copyWithZone: zone];
+	copyCylinder.marker = [self.marker copyWithZone: zone];
 	copyCylinder.label = [self.label copyWithZone: zone];
 	copyCylinder.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyCylinder.cursor = [self.cursor copyWithZone: zone];
 	copyCylinder.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyCylinder.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyCylinder.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyCylinder.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyCylinder.custom = [self.custom copyWithZone: zone];
 	copyCylinder.onPoint = [self.onPoint copyWithZone: zone];
@@ -61,6 +65,7 @@
 	copyCylinder.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyCylinder.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyCylinder.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyCylinder.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyCylinder.events = [self.events copyWithZone: zone];
 	copyCylinder.opacity = [self.opacity copyWithZone: zone];
 	copyCylinder.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -70,11 +75,14 @@
 	copyCylinder.selected = [self.selected copyWithZone: zone];
 	copyCylinder.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyCylinder.accessibility = [self.accessibility copyWithZone: zone];
+	copyCylinder.step = [self.step copyWithZone: zone];
 	copyCylinder.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyCylinder.shadow = [self.shadow copyWithZone: zone];
 	copyCylinder.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyCylinder.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyCylinder.zones = [self.zones copyWithZone: zone];
 	copyCylinder.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyCylinder.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyCylinder.crisp = [self.crisp copyWithZone: zone];
 	copyCylinder.visible = [self.visible copyWithZone: zone];
 	copyCylinder.linkedTo = [self.linkedTo copyWithZone: zone];
@@ -82,6 +90,8 @@
 	copyCylinder.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyCylinder.className = [self.className copyWithZone: zone];
 	copyCylinder.pointStart = [self.pointStart copyWithZone: zone];
+	copyCylinder.connectEnds = [self.connectEnds copyWithZone: zone];
+	copyCylinder.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyCylinder.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyCylinder.data = [self.data copyWithZone: zone];
 	copyCylinder.id = [self.id copyWithZone: zone];

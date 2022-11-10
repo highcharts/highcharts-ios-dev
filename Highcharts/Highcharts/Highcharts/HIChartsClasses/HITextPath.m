@@ -29,8 +29,8 @@
 
 # pragma mark - Setters
 
--(void)setAttributes:(HISVGAttributes *)attributes {
-	HISVGAttributes *oldValue = _attributes;
+-(void)setAttributes:(HIAttributes *)attributes {
+	HIAttributes *oldValue = _attributes;
 	_attributes = attributes;
 	[self updateHIObject:oldValue newValue:attributes propertyName:@"attributes"];
 }

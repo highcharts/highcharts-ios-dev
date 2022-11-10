@@ -46,6 +46,7 @@
 	copyTooltip.followPointer = [self.followPointer copyWithZone: zone];
 	copyTooltip.hideDelay = [self.hideDelay copyWithZone: zone];
 	copyTooltip.valueDecimals = [self.valueDecimals copyWithZone: zone];
+	copyTooltip.linkFormat = [self.linkFormat copyWithZone: zone];
 	copyTooltip.nodeFormat = [self.nodeFormat copyWithZone: zone];
 	copyTooltip.nodeFormatter = [self.nodeFormatter copyWithZone: zone];
 	return copyTooltip;
@@ -162,6 +163,9 @@
 	}
 	if (self.valueDecimals) {
 		params[@"valueDecimals"] = self.valueDecimals;
+	}
+	if (self.linkFormat) {
+		params[@"linkFormat"] = self.linkFormat;
 	}
 	if (self.nodeFormat) {
 		params[@"nodeFormat"] = self.nodeFormat;
@@ -388,6 +392,12 @@
 	NSNumber *oldValue = _valueDecimals;
 	_valueDecimals = valueDecimals;
 	[self updateNSObject:oldValue newValue:valueDecimals propertyName:@"valueDecimals"];
+}
+
+-(void)setLinkFormat:(NSString *)linkFormat {
+	NSString *oldValue = _linkFormat;
+	_linkFormat = linkFormat;
+	[self updateNSObject:oldValue newValue:linkFormat propertyName:@"linkFormat"];
 }
 
 -(void)setNodeFormat:(NSString *)nodeFormat {

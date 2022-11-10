@@ -36,7 +36,6 @@
 	copyDataLabels.borderColor = [self.borderColor copyWithZone: zone];
 	copyDataLabels.filter = [self.filter copyWithZone: zone];
 	copyDataLabels.useHTML = [self.useHTML copyWithZone: zone];
-	copyDataLabels.color = [self.color copyWithZone: zone];
 	copyDataLabels.animation = [self.animation copyWithZone: zone];
 	copyDataLabels.backgroundColor = [self.backgroundColor copyWithZone: zone];
 	copyDataLabels.nullFormat = [self.nullFormat copyWithZone: zone];
@@ -61,6 +60,7 @@
 	copyDataLabels.parentNodeFormatter = [self.parentNodeFormatter copyWithZone: zone];
 	copyDataLabels.attributes = [self.attributes copyWithZone: zone];
 	copyDataLabels.alternate = [self.alternate copyWithZone: zone];
+	copyDataLabels.color = [self.color copyWithZone: zone];
 	copyDataLabels.width = [self.width copyWithZone: zone];
 	copyDataLabels.linkTextPath = [self.linkTextPath copyWithZone: zone];
 	copyDataLabels.linkFormat = [self.linkFormat copyWithZone: zone];
@@ -149,9 +149,6 @@
 	if (self.useHTML) {
 		params[@"useHTML"] = self.useHTML;
 	}
-	if (self.color) {
-		params[@"color"] = [self.color getData];
-	}
 	if (self.animation) {
 		params[@"animation"] = [self.animation getParams];
 	}
@@ -223,6 +220,9 @@
 	}
 	if (self.alternate) {
 		params[@"alternate"] = self.alternate;
+	}
+	if (self.color) {
+		params[@"color"] = self.color;
 	}
 	if (self.width) {
 		params[@"width"] = self.width;
@@ -397,12 +397,6 @@
 	[self updateNSObject:oldValue newValue:useHTML propertyName:@"useHTML"];
 }
 
--(void)setColor:(HIColor *)color {
-	HIColor *oldValue = _color;
-	_color = color;
-	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
-}
-
 -(void)setAnimation:(HIAnimationOptionsObject *)animation {
 	HIAnimationOptionsObject *oldValue = _animation;
 	_animation = animation;
@@ -545,6 +539,12 @@
 	NSNumber *oldValue = _alternate;
 	_alternate = alternate;
 	[self updateNSObject:oldValue newValue:alternate propertyName:@"alternate"];
+}
+
+-(void)setColor:(NSString *)color {
+	NSString *oldValue = _color;
+	_color = color;
+	[self updateNSObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setWidth:(NSNumber *)width {

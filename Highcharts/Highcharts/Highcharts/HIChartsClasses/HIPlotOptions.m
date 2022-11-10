@@ -14,6 +14,7 @@
 	copyPlotOptions.variablepie = [self.variablepie copyWithZone: zone];
 	copyPlotOptions.dumbbell = [self.dumbbell copyWithZone: zone];
 	copyPlotOptions.streamgraph = [self.streamgraph copyWithZone: zone];
+	copyPlotOptions.treegraph = [self.treegraph copyWithZone: zone];
 	copyPlotOptions.networkgraph = [self.networkgraph copyWithZone: zone];
 	copyPlotOptions.bar = [self.bar copyWithZone: zone];
 	copyPlotOptions.variwide = [self.variwide copyWithZone: zone];
@@ -79,6 +80,9 @@
 	}
 	if (self.streamgraph) {
 		params[@"streamgraph"] = [self.streamgraph getParams];
+	}
+	if (self.treegraph) {
+		params[@"treegraph"] = [self.treegraph getParams];
 	}
 	if (self.networkgraph) {
 		params[@"networkgraph"] = [self.networkgraph getParams];
@@ -251,6 +255,12 @@
 	HIStreamgraph *oldValue = _streamgraph;
 	_streamgraph = streamgraph;
 	[self updateHIObject:oldValue newValue:streamgraph propertyName:@"streamgraph"];
+}
+
+-(void)setTreegraph:(HITreegraph *)treegraph {
+	HITreegraph *oldValue = _treegraph;
+	_treegraph = treegraph;
+	[self updateHIObject:oldValue newValue:treegraph propertyName:@"treegraph"];
 }
 
 -(void)setNetworkgraph:(HINetworkgraph *)networkgraph {

@@ -73,13 +73,19 @@
 		
 		<option value="//api/name/colorByPoint">colorByPoint</option>
 		
+		<option value="//api/name/dial">dial</option>
+		
 		<option value="//api/name/innerRadius">innerRadius</option>
 		
 		<option value="//api/name/overshoot">overshoot</option>
 		
+		<option value="//api/name/pivot">pivot</option>
+		
 		<option value="//api/name/radius">radius</option>
 		
 		<option value="//api/name/rounded">rounded</option>
+		
+		<option value="//api/name/wrap">wrap</option>
 		
 	</optgroup>
 	
@@ -193,6 +199,11 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
+			</div>
+			
 
 			
 
@@ -272,12 +283,12 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The inner radius for points in a solid gauge. Can be given as a number (pixels) or percentage string.</p>
+				<p>The inner radius for points in a solid gauge. Can be given only in percentage, either as a number or a string like <code>"50%"</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id innerRadius</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *innerRadius</code></div>
 
 		    
 			
@@ -289,7 +300,7 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>60</code>.</p>
+				<p><strong>Defaults to</strong> <code>"60%"</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -378,12 +389,12 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The outer radius for points in a solid gauge. Can be given as a number (pixels) or percentage string.</p>
+				<p>The outer radius for points in a solid gauge. Can be given only in percentage, either as a number or a string like <code>"100%"</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id radius</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *radius</code></div>
 
 		    
 			
@@ -395,12 +406,160 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>100</code>.</p>
+				<p><strong>Defaults to</strong> <code>"100%"</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/solidgauge-radius/">Individual radius and innerRadius</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISolidgauge.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dial" title="dial"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dial">&nbsp;&nbsp;dial</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for the dial or arrow pointer of the gauge. In styled mode, the dial is styled with the <code>.highcharts-gauge-series .highcharts-dial</code> rule.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIDial *dial</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/gauge/">Styled mode</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISolidgauge.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/wrap" title="wrap"></a>
+	<h3 class="method-title"><code><a href="#//api/name/wrap">&nbsp;&nbsp;wrap</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When this option is <code>true</code>, the dial will wrap around the axes. For instance, in a full-range gauge going from 0 to 360, a value of 400 will point to 40. When <code>wrap</code> is <code>false</code>, the dial stops at 360.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *wrap</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>true</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISolidgauge.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pivot" title="pivot"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pivot">&nbsp;&nbsp;pivot</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for the pivot or the center point of the gauge. In styled mode, the pivot is styled with the <code>.highcharts-gauge-series .highcharts-pivot</code> rule.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPivot *pivot</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/gauge/">Styled mode</a></li>
 </ul>
 
 			</div>

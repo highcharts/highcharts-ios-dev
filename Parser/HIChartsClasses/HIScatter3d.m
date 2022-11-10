@@ -27,6 +27,7 @@
 	copyScatter3d.zIndex = [self.zIndex copyWithZone: zone];
 	copyScatter3d.tooltip = [self.tooltip copyWithZone: zone];
 	copyScatter3d.jitter = [self.jitter copyWithZone: zone];
+	copyScatter3d.cluster = [self.cluster copyWithZone: zone];
 	copyScatter3d.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyScatter3d.marker = [self.marker copyWithZone: zone];
 	copyScatter3d.lineWidth = [self.lineWidth copyWithZone: zone];
@@ -38,15 +39,18 @@
 	copyScatter3d.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyScatter3d.color = [self.color copyWithZone: zone];
 	copyScatter3d.pointInterval = [self.pointInterval copyWithZone: zone];
+	copyScatter3d.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyScatter3d.states = [self.states copyWithZone: zone];
 	copyScatter3d.colorKey = [self.colorKey copyWithZone: zone];
 	copyScatter3d.softThreshold = [self.softThreshold copyWithZone: zone];
+	copyScatter3d.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyScatter3d.point = [self.point copyWithZone: zone];
 	copyScatter3d.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyScatter3d.label = [self.label copyWithZone: zone];
 	copyScatter3d.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyScatter3d.cursor = [self.cursor copyWithZone: zone];
 	copyScatter3d.dashStyle = [self.dashStyle copyWithZone: zone];
+	copyScatter3d.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyScatter3d.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyScatter3d.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyScatter3d.custom = [self.custom copyWithZone: zone];
@@ -56,6 +60,7 @@
 	copyScatter3d.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyScatter3d.threshold = [self.threshold copyWithZone: zone];
 	copyScatter3d.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyScatter3d.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyScatter3d.events = [self.events copyWithZone: zone];
 	copyScatter3d.opacity = [self.opacity copyWithZone: zone];
 	copyScatter3d.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -67,6 +72,7 @@
 	copyScatter3d.accessibility = [self.accessibility copyWithZone: zone];
 	copyScatter3d.step = [self.step copyWithZone: zone];
 	copyScatter3d.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyScatter3d.shadow = [self.shadow copyWithZone: zone];
 	copyScatter3d.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyScatter3d.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyScatter3d.zones = [self.zones copyWithZone: zone];
@@ -80,6 +86,7 @@
 	copyScatter3d.className = [self.className copyWithZone: zone];
 	copyScatter3d.pointStart = [self.pointStart copyWithZone: zone];
 	copyScatter3d.connectEnds = [self.connectEnds copyWithZone: zone];
+	copyScatter3d.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyScatter3d.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyScatter3d;
 }
@@ -90,6 +97,9 @@
 	if (self.jitter) {
 		params[@"jitter"] = [self.jitter getParams];
 	}
+	if (self.cluster) {
+		params[@"cluster"] = [self.cluster getParams];
+	}
 	return params;
 }
 
@@ -99,6 +109,12 @@
 	HIJitter *oldValue = _jitter;
 	_jitter = jitter;
 	[self updateHIObject:oldValue newValue:jitter propertyName:@"jitter"];
+}
+
+-(void)setCluster:(HICluster *)cluster {
+	HICluster *oldValue = _cluster;
+	_cluster = cluster;
+	[self updateHIObject:oldValue newValue:cluster propertyName:@"cluster"];
 }
 
 @end

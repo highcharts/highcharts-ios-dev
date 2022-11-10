@@ -535,8 +535,8 @@
 	[self updateHIObject:oldValue newValue:minColor propertyName:@"minColor"];
 }
 
--(void)setShowLastLabel:(NSNumber *)showLastLabel {
-	NSNumber *oldValue = _showLastLabel;
+-(void)setShowLastLabel:(NSString *)showLastLabel {
+	NSString *oldValue = _showLastLabel;
 	_showLastLabel = showLastLabel;
 	[self updateNSObject:oldValue newValue:showLastLabel propertyName:@"showLastLabel"];
 }

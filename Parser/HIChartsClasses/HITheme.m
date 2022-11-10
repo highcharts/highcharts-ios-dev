@@ -10,6 +10,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HITheme *copyTheme = [[HITheme allocWithZone: zone] init];
+	copyTheme.padding = [self.padding copyWithZone: zone];
 	copyTheme.stroke = [self.stroke copyWithZone: zone];
 	copyTheme.fill = [self.fill copyWithZone: zone];
 	copyTheme.zIndex = [self.zIndex copyWithZone: zone];
@@ -19,6 +20,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.padding) {
+		params[@"padding"] = self.padding;
+	}
 	if (self.stroke) {
 		params[@"stroke"] = [self.stroke getData];
 	}
@@ -32,6 +36,12 @@
 }
 
 # pragma mark - Setters
+
+-(void)setPadding:(NSNumber *)padding {
+	NSNumber *oldValue = _padding;
+	_padding = padding;
+	[self updateNSObject:oldValue newValue:padding propertyName:@"padding"];
+}
 
 -(void)setStroke:(HIColor *)stroke {
 	HIColor *oldValue = _stroke;

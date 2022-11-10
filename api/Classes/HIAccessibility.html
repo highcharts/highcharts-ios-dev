@@ -221,7 +221,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["all", "one", "disabled"]</code>.</p>
+				<p><strong>Defaults to</strong> <code>all</code>.</p>
 			</div>
 			
 
@@ -318,7 +318,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>*[data-highcharts-chart="{index}"] + .highcharts-description</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/accessibility/accessible-line">Accessible line chart</a></li>
@@ -489,6 +491,11 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
+			</div>
 			
 
 			
@@ -850,6 +857,11 @@
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>,</code>.</p>
+			</div>
+			
 
 			
 
@@ -882,6 +894,47 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIChartTypes *chartTypes</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/seriesTypeDescriptions" title="seriesTypeDescriptions"></a>
+	<h3 class="method-title"><code><a href="#//api/name/seriesTypeDescriptions">&nbsp;&nbsp;seriesTypeDescriptions</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Descriptions of lesser known series types. The relevant description is added to the screen reader information region when these series types are used.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISeriesTypeDescriptions *seriesTypeDescriptions</code></div>
 
 		    
 			
@@ -1001,47 +1054,6 @@
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *credits</code></div>
 
 		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/seriesTypeDescriptions" title="seriesTypeDescriptions"></a>
-	<h3 class="method-title"><code><a href="#//api/name/seriesTypeDescriptions">&nbsp;&nbsp;seriesTypeDescriptions</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Descriptions of lesser known series types. The relevant description is added to the screen reader information region when these series types are used.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISeriesTypeDescriptions *seriesTypeDescriptions</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
-			</div>
-			
-			
 		</div>
 	</div>
 </div><div class="section-method">

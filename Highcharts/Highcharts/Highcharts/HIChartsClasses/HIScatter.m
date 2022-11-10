@@ -29,6 +29,7 @@
 	copyScatter.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyScatter.color = [self.color copyWithZone: zone];
 	copyScatter.pointInterval = [self.pointInterval copyWithZone: zone];
+	copyScatter.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyScatter.states = [self.states copyWithZone: zone];
 	copyScatter.colorKey = [self.colorKey copyWithZone: zone];
 	copyScatter.softThreshold = [self.softThreshold copyWithZone: zone];
@@ -39,6 +40,7 @@
 	copyScatter.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyScatter.cursor = [self.cursor copyWithZone: zone];
 	copyScatter.dashStyle = [self.dashStyle copyWithZone: zone];
+	copyScatter.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyScatter.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyScatter.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyScatter.custom = [self.custom copyWithZone: zone];
@@ -60,6 +62,7 @@
 	copyScatter.accessibility = [self.accessibility copyWithZone: zone];
 	copyScatter.step = [self.step copyWithZone: zone];
 	copyScatter.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyScatter.shadow = [self.shadow copyWithZone: zone];
 	copyScatter.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyScatter.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyScatter.zones = [self.zones copyWithZone: zone];

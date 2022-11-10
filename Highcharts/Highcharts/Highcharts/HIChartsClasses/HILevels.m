@@ -10,6 +10,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HILevels *copyLevels = [[HILevels allocWithZone: zone] init];
+	copyLevels.collapsed = [self.collapsed copyWithZone: zone];
 	copyLevels.borderColor = [self.borderColor copyWithZone: zone];
 	copyLevels.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyLevels.colorVariation = [self.colorVariation copyWithZone: zone];
@@ -29,6 +30,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.collapsed) {
+		params[@"collapsed"] = self.collapsed;
+	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
@@ -72,6 +76,12 @@
 }
 
 # pragma mark - Setters
+
+-(void)setCollapsed:(NSNumber *)collapsed {
+	NSNumber *oldValue = _collapsed;
+	_collapsed = collapsed;
+	[self updateNSObject:oldValue newValue:collapsed propertyName:@"collapsed"];
+}
 
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;

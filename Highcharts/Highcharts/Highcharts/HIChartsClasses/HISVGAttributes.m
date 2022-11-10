@@ -103,8 +103,8 @@
 
 # pragma mark - Setters
 
--(void)setD:(NSArray *)d {
-	NSArray *oldValue = _d;
+-(void)setD:(NSArray<NSString *> *)d {
+	NSArray<NSString *> *oldValue = _d;
 	_d = d;
 	[self updateArrayObject:oldValue newValue:d propertyName:@"d"];
 }

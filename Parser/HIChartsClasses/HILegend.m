@@ -13,6 +13,7 @@
 	copyLegend.symbolRadius = [self.symbolRadius copyWithZone: zone];
 	copyLegend.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyLegend.rtl = [self.rtl copyWithZone: zone];
+	copyLegend.valueSuffix = [self.valueSuffix copyWithZone: zone];
 	copyLegend.accessibility = [self.accessibility copyWithZone: zone];
 	copyLegend.squareSymbol = [self.squareSymbol copyWithZone: zone];
 	copyLegend.itemWidth = [self.itemWidth copyWithZone: zone];
@@ -50,6 +51,7 @@
 	copyLegend.y = [self.y copyWithZone: zone];
 	copyLegend.x = [self.x copyWithZone: zone];
 	copyLegend.margin = [self.margin copyWithZone: zone];
+	copyLegend.valueDecimals = [self.valueDecimals copyWithZone: zone];
 	copyLegend.legendLabel = [self.legendLabel copyWithZone: zone];
 	copyLegend.legendLabelNoTitle = [self.legendLabelNoTitle copyWithZone: zone];
 	copyLegend.legendItem = [self.legendItem copyWithZone: zone];
@@ -68,6 +70,9 @@
 	}
 	if (self.rtl) {
 		params[@"rtl"] = self.rtl;
+	}
+	if (self.valueSuffix) {
+		params[@"valueSuffix"] = self.valueSuffix;
 	}
 	if (self.accessibility) {
 		params[@"accessibility"] = [self.accessibility getParams];
@@ -180,6 +185,9 @@
 	if (self.margin) {
 		params[@"margin"] = self.margin;
 	}
+	if (self.valueDecimals) {
+		params[@"valueDecimals"] = self.valueDecimals;
+	}
 	if (self.legendLabel) {
 		params[@"legendLabel"] = self.legendLabel;
 	}
@@ -210,6 +218,12 @@
 	NSNumber *oldValue = _rtl;
 	_rtl = rtl;
 	[self updateNSObject:oldValue newValue:rtl propertyName:@"rtl"];
+}
+
+-(void)setValueSuffix:(NSString *)valueSuffix {
+	NSString *oldValue = _valueSuffix;
+	_valueSuffix = valueSuffix;
+	[self updateNSObject:oldValue newValue:valueSuffix propertyName:@"valueSuffix"];
 }
 
 -(void)setAccessibility:(HIAccessibility *)accessibility {
@@ -432,6 +446,12 @@
 	NSNumber *oldValue = _margin;
 	_margin = margin;
 	[self updateNSObject:oldValue newValue:margin propertyName:@"margin"];
+}
+
+-(void)setValueDecimals:(NSNumber *)valueDecimals {
+	NSNumber *oldValue = _valueDecimals;
+	_valueDecimals = valueDecimals;
+	[self updateNSObject:oldValue newValue:valueDecimals propertyName:@"valueDecimals"];
 }
 
 -(void)setLegendLabel:(NSString *)legendLabel {

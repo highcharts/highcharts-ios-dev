@@ -28,10 +28,10 @@
 	copyAccessibility.svgContainerLabel = [self.svgContainerLabel copyWithZone: zone];
 	copyAccessibility.thousandsSep = [self.thousandsSep copyWithZone: zone];
 	copyAccessibility.chartTypes = [self.chartTypes copyWithZone: zone];
+	copyAccessibility.seriesTypeDescriptions = [self.seriesTypeDescriptions copyWithZone: zone];
 	copyAccessibility.table = [self.table copyWithZone: zone];
 	copyAccessibility.zoom = [self.zoom copyWithZone: zone];
 	copyAccessibility.credits = [self.credits copyWithZone: zone];
-	copyAccessibility.seriesTypeDescriptions = [self.seriesTypeDescriptions copyWithZone: zone];
 	copyAccessibility.drillUpButton = [self.drillUpButton copyWithZone: zone];
 	copyAccessibility.exporting = [self.exporting copyWithZone: zone];
 	copyAccessibility.rangeSelector = [self.rangeSelector copyWithZone: zone];
@@ -101,6 +101,9 @@
 	if (self.chartTypes) {
 		params[@"chartTypes"] = [self.chartTypes getParams];
 	}
+	if (self.seriesTypeDescriptions) {
+		params[@"seriesTypeDescriptions"] = [self.seriesTypeDescriptions getParams];
+	}
 	if (self.table) {
 		params[@"table"] = [self.table getParams];
 	}
@@ -109,9 +112,6 @@
 	}
 	if (self.credits) {
 		params[@"credits"] = self.credits;
-	}
-	if (self.seriesTypeDescriptions) {
-		params[@"seriesTypeDescriptions"] = [self.seriesTypeDescriptions getParams];
 	}
 	if (self.drillUpButton) {
 		params[@"drillUpButton"] = self.drillUpButton;
@@ -253,6 +253,12 @@
 	[self updateHIObject:oldValue newValue:chartTypes propertyName:@"chartTypes"];
 }
 
+-(void)setSeriesTypeDescriptions:(HISeriesTypeDescriptions *)seriesTypeDescriptions {
+	HISeriesTypeDescriptions *oldValue = _seriesTypeDescriptions;
+	_seriesTypeDescriptions = seriesTypeDescriptions;
+	[self updateHIObject:oldValue newValue:seriesTypeDescriptions propertyName:@"seriesTypeDescriptions"];
+}
+
 -(void)setTable:(HITable *)table {
 	HITable *oldValue = _table;
 	_table = table;
@@ -269,12 +275,6 @@
 	NSString *oldValue = _credits;
 	_credits = credits;
 	[self updateNSObject:oldValue newValue:credits propertyName:@"credits"];
-}
-
--(void)setSeriesTypeDescriptions:(HISeriesTypeDescriptions *)seriesTypeDescriptions {
-	HISeriesTypeDescriptions *oldValue = _seriesTypeDescriptions;
-	_seriesTypeDescriptions = seriesTypeDescriptions;
-	[self updateHIObject:oldValue newValue:seriesTypeDescriptions propertyName:@"seriesTypeDescriptions"];
 }
 
 -(void)setDrillUpButton:(NSString *)drillUpButton {

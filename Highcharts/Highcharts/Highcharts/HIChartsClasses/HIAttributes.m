@@ -10,18 +10,26 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIAttributes *copyAttributes = [[HIAttributes allocWithZone: zone] init];
+	copyAttributes.startOffset = [self.startOffset copyWithZone: zone];
+	copyAttributes.zIndex = [self.zIndex copyWithZone: zone];
 	copyAttributes.refX = [self.refX copyWithZone: zone];
 	copyAttributes.markerWidth = [self.markerWidth copyWithZone: zone];
 	copyAttributes.refY = [self.refY copyWithZone: zone];
 	copyAttributes.id = [self.id copyWithZone: zone];
 	copyAttributes.markerHeight = [self.markerHeight copyWithZone: zone];
-	copyAttributes.zIndex = [self.zIndex copyWithZone: zone];
+	copyAttributes.dy = [self.dy copyWithZone: zone];
 	return copyAttributes;
 }
 
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.startOffset) {
+		params[@"startOffset"] = self.startOffset;
+	}
+	if (self.zIndex) {
+		params[@"zIndex"] = self.zIndex;
+	}
 	if (self.refX) {
 		params[@"refX"] = self.refX;
 	}
@@ -37,13 +45,25 @@
 	if (self.markerHeight) {
 		params[@"markerHeight"] = self.markerHeight;
 	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
+	if (self.dy) {
+		params[@"dy"] = [self.dy getParams];
 	}
 	return params;
 }
 
 # pragma mark - Setters
+
+-(void)setStartOffset:(NSNumber *)startOffset {
+	NSNumber *oldValue = _startOffset;
+	_startOffset = startOffset;
+	[self updateNSObject:oldValue newValue:startOffset propertyName:@"startOffset"];
+}
+
+-(void)setZIndex:(NSNumber *)zIndex {
+	NSNumber *oldValue = _zIndex;
+	_zIndex = zIndex;
+	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
+}
 
 -(void)setRefX:(NSNumber *)refX {
 	NSNumber *oldValue = _refX;
@@ -75,10 +95,10 @@
 	[self updateNSObject:oldValue newValue:markerHeight propertyName:@"markerHeight"];
 }
 
--(void)setZIndex:(NSNumber *)zIndex {
-	NSNumber *oldValue = _zIndex;
-	_zIndex = zIndex;
-	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
+-(void)setDy:(HISVGAttributes *)dy {
+	HISVGAttributes *oldValue = _dy;
+	_dy = dy;
+	[self updateHIObject:oldValue newValue:dy propertyName:@"dy"];
 }
 
 @end
