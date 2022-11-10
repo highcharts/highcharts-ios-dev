@@ -83,6 +83,10 @@
 		
 		<option value="//api/name/className">className</option>
 		
+		<option value="//api/name/collapseButton">collapseButton</option>
+		
+		<option value="//api/name/collapsed">collapsed</option>
+		
 		<option value="//api/name/color">color</option>
 		
 		<option value="//api/name/colorIndex">colorIndex</option>
@@ -843,10 +847,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["YYYY/mm/dd", "dd/mm/YYYY", "mm/dd/YYYY", "dd/mm/YYYY",
-            "dd/mm/YY", "mm/dd/YY"]</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/data/dateformat-auto/">Best guess date format</a></li>
@@ -2209,7 +2210,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A specific color index to use for the point, so its graphic representations are given the class name <code>highcharts-color-{n}</code>. In styled mode this will change the color of the graphic. In non-styled mode, the color by is set by the <code>fill</code> attribute, so the change in class name won&rsquo;t have a visual effect by default.</p>
+				<p>A specific color index to use for the point, so its graphic representations are given the class name <code>highcharts-color-{n}</code>. In styled mode this will change the color of the graphic. In non-styled mode, the color is set by the <code>fill</code> attribute, so the change in class name won&rsquo;t have a visual effect by default.</p>
 			</div>
 			
 		    
@@ -2223,6 +2224,16 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/colorindex/">Series and point color index</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -2496,6 +2507,47 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *className</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/marker" title="marker"></a>
+	<h3 class="method-title"><code><a href="#//api/name/marker">&nbsp;&nbsp;marker</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for the point markers of line-like series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIMarker *marker</code></div>
 
 		    
 			
@@ -2837,6 +2889,57 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/sliced" title="sliced"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sliced">&nbsp;&nbsp;sliced</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether to display a slice offset from the center.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *sliced</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/sliced/">One sliced point</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/legendIndex" title="legendIndex"></a>
 	<h3 class="method-title"><code><a href="#//api/name/legendIndex">&nbsp;&nbsp;legendIndex</a></code>
 </h3>
@@ -2854,47 +2957,6 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *legendIndex</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/marker" title="marker"></a>
-	<h3 class="method-title"><code><a href="#//api/name/marker">&nbsp;&nbsp;marker</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Options for the point markers of line-like series.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIMarker *marker</code></div>
 
 		    
 			
@@ -2944,6 +3006,59 @@
 
 			
 
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/outgoing" title="outgoing"></a>
+	<h3 class="method-title"><code><a href="#//api/name/outgoing">&nbsp;&nbsp;outgoing</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether the link goes out of the system.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *outgoing</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>false</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sankey-outgoing">Sankey chart with outgoing links</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -3523,6 +3638,52 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/lowColor" title="lowColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lowColor">&nbsp;&nbsp;lowColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Color of the start markers in a dumbbell graph.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *lowColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>#333333</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/pointPadding" title="pointPadding"></a>
 	<h3 class="method-title"><code><a href="#//api/name/pointPadding">&nbsp;&nbsp;pointPadding</a></code>
 </h3>
@@ -3721,57 +3882,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/sliced" title="sliced"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sliced">&nbsp;&nbsp;sliced</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Whether to display a slice offset from the center.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *sliced</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/point/sliced/">One sliced point</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/gradientForSides" title="gradientForSides"></a>
 	<h3 class="method-title"><code><a href="#//api/name/gradientForSides">&nbsp;&nbsp;gradientForSides</a></code>
 </h3>
@@ -3824,12 +3934,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The inner radius of an individual point in a solid gauge. Can be given as a number (pixels) or percentage string.</p>
+				<p>The inner radius of an individual point in a solid gauge. Can be given only in percentage, either as a number or a string like <code>"50%"</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id innerRadius</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *innerRadius</code></div>
 
 		    
 			
@@ -3875,12 +3985,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The outer radius of an individual point in a solid gauge. Can be given as a number (pixels) or percentage string.</p>
+				<p>The outer radius of an individual point in a solid gauge. Can be given only in percentage, either as a number or a string like <code>"100%"</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id radius</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *radius</code></div>
 
 		    
 			
@@ -3896,59 +4006,6 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/solidgauge-radius/">Individual radius and innerRadius</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/outgoing" title="outgoing"></a>
-	<h3 class="method-title"><code><a href="#//api/name/outgoing">&nbsp;&nbsp;outgoing</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Whether the link goes out of the system.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *outgoing</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>false</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sankey-outgoing">Sankey chart with outgoing links</a></li>
 </ul>
 
 			</div>
@@ -3993,52 +4050,6 @@
 
 			
 
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIData.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/lowColor" title="lowColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/lowColor">&nbsp;&nbsp;lowColor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Color of the start markers in a dumbbell graph.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *lowColor</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>#333333</code>.</p>
-			</div>
 			
 
 			
@@ -4286,6 +4297,98 @@
 </ul>
 
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/collapsed" title="collapsed"></a>
+	<h3 class="method-title"><code><a href="#//api/name/collapsed">&nbsp;&nbsp;collapsed</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>If point&rsquo;s children should be initially hidden</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *collapsed</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-treegraph/level-options">Treegraph chart with initially hidden children</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/collapseButton" title="collapseButton"></a>
+	<h3 class="method-title"><code><a href="#//api/name/collapseButton">&nbsp;&nbsp;collapseButton</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options used for button, which toggles the collapse status of the node.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id collapseButton</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			

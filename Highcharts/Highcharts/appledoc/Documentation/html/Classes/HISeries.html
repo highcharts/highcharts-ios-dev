@@ -954,6 +954,11 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>200</code>.</p>
+			</div>
+			
 
 			
 
@@ -997,7 +1002,9 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>{seriesDescription}{authorDescription}{axisDescription}</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/accessibility/advanced-accessible">Accessible low-medium-high chart</a></li>
@@ -1087,6 +1094,11 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>{description}</code>.</p>
+			</div>
+			
 
 			
 
@@ -1127,6 +1139,11 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>X axis, {name}</code>.</p>
+			</div>
 			
 
 			
@@ -1169,6 +1186,11 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>Y axis, {name}</code>.</p>
+			</div>
+			
 
 			
 
@@ -1209,6 +1231,11 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>{Annotation: #each(annotations). }</code>.</p>
+			</div>
 			
 
 			
@@ -1292,6 +1319,11 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>No value</code>.</p>
+			</div>
+			
 
 			
 
@@ -1373,6 +1405,16 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/colorindex/">Series and point color index</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -1629,6 +1671,11 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>300</code>.</p>
+			</div>
+			
 
 			
 
@@ -1740,6 +1787,11 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
+			</div>
 			
 
 			
@@ -2465,9 +2517,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["normal", "overlap", "percent", "stream"]</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-stacking-line/">Line</a></li>
@@ -2510,7 +2560,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see <code>chart.animation</code> and the animation parameter under the API methods. The following properties are supported: - <code>defer</code>: The animation delay time in milliseconds. - <code>duration</code>: The duration of the animation in milliseconds. - <code>easing</code>: Can be a string reference to an easing function set on  the <code>Math</code> object or a function. See the <em>Custom easing function</em>  demo below. Due to poor performance, animation is disabled in old IE browsers for several chart types.</p>
+				<p>Enable or disable the initial animation when a series is displayed. The animation can also be set as a configuration object. Please note that this option only applies to the initial animation of the series itself. For other animations, see <code>chart.animation</code> and the animation parameter under the API methods. The following properties are supported: - <code>defer</code>: The animation delay time in milliseconds. - <code>duration</code>: The duration of the animation in milliseconds. (Defaults to  <code>1000</code>) - <code>easing</code>: Can be a string reference to an easing function set on  the <code>Math</code> object or a function. See the <em>Custom easing function</em>  demo below. (Defaults to <code>easeInOutSine</code>) Due to poor performance, animation is disabled in old IE browsers for several chart types.</p>
 			</div>
 			
 		    
@@ -2582,7 +2632,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["x", "xy"]</code>.</p>
+				<p><strong>Defaults to</strong> <code>x</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -2785,9 +2835,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["add", "multiply", "darken"]</code>.</p>
-
-<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
 			</div>
 			
 
@@ -2872,6 +2920,11 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>1</code>.</p>
+			</div>
+			
 
 			
 
@@ -2898,7 +2951,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>For some series, there is a limit that shuts down initial animation by default when the total number of points in the chart is too high. For example, for a column chart and its derivatives, animation does not run if there is more than 250 points totally. To disable this cap, set <code>animationLimit</code> to <code>Infinity</code>.</p>
+				<p>For some series, there is a limit that shuts down animation by default when the total number of points in the chart is too high. For example, for a column chart and its derivatives, animation does not run if there is more than 250 points totally. To disable this cap, set <code>animationLimit</code> to <code>Infinity</code>. This option works if animation is fired on individual points, not on a group of points like e.g. during the initial animation.</p>
 			</div>
 			
 		    
@@ -2912,6 +2965,16 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-animationlimit/">Animation limit on updating individual points</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -2953,6 +3016,11 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>1000</code>.</p>
+			</div>
 			
 
 			
@@ -3184,9 +3252,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["left", "center", "right"]</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/line-step/">Different step line options</a></li>
@@ -3550,9 +3616,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["day", "month", "year"]</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-pointintervalunit/">One point a month</a></li>
@@ -3603,7 +3667,9 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>2</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-linewidth-general/">On all series</a></li>
@@ -3655,7 +3721,9 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-crisp-false/">Crisp is false</a></li>

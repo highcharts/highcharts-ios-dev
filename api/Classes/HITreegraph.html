@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIColumn Class Reference</title>
+	<title>HITreegraph Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -71,39 +71,41 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/borderColor">borderColor</option>
+		<option value="//api/name/allowTraversingTree">allowTraversingTree</option>
+		
+		<option value="//api/name/alternateStartingDirection">alternateStartingDirection</option>
 		
 		<option value="//api/name/borderRadius">borderRadius</option>
 		
-		<option value="//api/name/borderWidth">borderWidth</option>
+		<option value="//api/name/breadcrumbs">breadcrumbs</option>
 		
-		<option value="//api/name/centerInCategory">centerInCategory</option>
+		<option value="//api/name/cluster">cluster</option>
+		
+		<option value="//api/name/collapseButton">collapseButton</option>
 		
 		<option value="//api/name/colorByPoint">colorByPoint</option>
 		
 		<option value="//api/name/colors">colors</option>
 		
-		<option value="//api/name/depth">depth</option>
+		<option value="//api/name/ignoreHiddenPoint">ignoreHiddenPoint</option>
 		
-		<option value="//api/name/edgeColor">edgeColor</option>
+		<option value="//api/name/interactByLeaf">interactByLeaf</option>
 		
-		<option value="//api/name/edgeWidth">edgeWidth</option>
+		<option value="//api/name/jitter">jitter</option>
 		
-		<option value="//api/name/groupPadding">groupPadding</option>
+		<option value="//api/name/layoutAlgorithm">layoutAlgorithm</option>
 		
-		<option value="//api/name/groupZPadding">groupZPadding</option>
+		<option value="//api/name/layoutStartingDirection">layoutStartingDirection</option>
 		
-		<option value="//api/name/grouping">grouping</option>
+		<option value="//api/name/levelIsConstant">levelIsConstant</option>
 		
-		<option value="//api/name/maxPointWidth">maxPointWidth</option>
+		<option value="//api/name/levels">levels</option>
 		
-		<option value="//api/name/minPointLength">minPointLength</option>
+		<option value="//api/name/link">link</option>
 		
-		<option value="//api/name/pointPadding">pointPadding</option>
+		<option value="//api/name/reversed">reversed</option>
 		
-		<option value="//api/name/pointRange">pointRange</option>
-		
-		<option value="//api/name/pointWidth">pointWidth</option>
+		<option value="//api/name/sortIndex">sortIndex</option>
 		
 	</optgroup>
 	
@@ -130,7 +132,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIColumn Class Reference</h1>
+					<h1 class="title">HITreegraph Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -139,7 +141,7 @@
 	<td><a href="../Classes/HISeries.html">HISeries</a> : <a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIColumn.h</td>
+	<td>HITreegraph.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -149,13 +151,13 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A <code>column</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>.</p>
+						<p>A <code>treegraph</code> series. If the <code>type</code> option is not specified, it is inherited from <code>chart.type</code>.</p>
 
 <p>Configuration options for the series are given in three levels:</p>
 
 <ol>
 <li><p>Options for all series in a chart are defined in the <code>plotOptions.series</code> object.</p></li>
-<li><p>Options for all <code>column</code> series are defined in <code>plotOptions.column</code>.</p></li>
+<li><p>Options for all <code>treegraph</code> series are defined in <code>plotOptions.treegraph</code>.</p></li>
 <li><p>Options for one single series are given in <code>the series instance array</code>.</p></li>
 </ol>
 
@@ -166,13 +168,13 @@ Highcharts.chart(&lsquo;container&rsquo;, {
         series: {
             // general options for all series
         },
-        column: {
-            // shared options for all column series
+        treegraph: {
+            // shared options for all treegraph series
         }
     },
     series: [{
         // specific options for this series instance
-        type: &lsquo;column&rsquo;
+        type: &lsquo;treegraph&rsquo;
     }]
 });
 <pre></p>
@@ -191,8 +193,24 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/pointPadding" title="pointPadding"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointPadding">&nbsp;&nbsp;pointPadding</a></code>
+	<a name="//api/name/link" title="link"></a>
+	<h3 class="method-title"><code><a href="#//api/name/link">&nbsp;&nbsp;link</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILink *link</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/levels" title="levels"></a>
+	<h3 class="method-title"><code><a href="#//api/name/levels">&nbsp;&nbsp;levels</a></code>
 </h3>
 
 	<div class="method-info">
@@ -202,12 +220,12 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Padding between each column or bar, in x axis units.</p>
+				<p>Set options on specific levels. Takes precedence over series options, but not point options.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointPadding</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILevels *levels</code></div>
 
 		    
 			
@@ -219,14 +237,10 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>0.1</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-default/">0.1 by default</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-025/">0.25</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointpadding-none/">0 for tightly packed columns</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-treegraph/level-options">Treegraph chart with level options applied</a></li>
 </ul>
 
 			</div>
@@ -239,7 +253,147 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColumn.h</code></p>
+				<p><code class="declared-in-ref">HITreegraph.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/collapseButton" title="collapseButton"></a>
+	<h3 class="method-title"><code><a href="#//api/name/collapseButton">&nbsp;&nbsp;collapseButton</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options applied to collapse Button. The collape button is the small button which indicates, that the node is collapsable.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICollapseButton *collapseButton</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreegraph.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/reversed" title="reversed"></a>
+	<h3 class="method-title"><code><a href="#//api/name/reversed">&nbsp;&nbsp;reversed</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Flips the positions of the nodes of a treegraph along the horizontal axis (vertical if chart is inverted).</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *reversed</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>false</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-treegraph/reversed-nodes">Treegraph series with reversed nodes.</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreegraph.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/ignoreHiddenPoint" title="ignoreHiddenPoint"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ignoreHiddenPoint">&nbsp;&nbsp;ignoreHiddenPoint</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether to ignore hidden points when the layout algorithm runs. If <code>false</code>, hidden points will leave open spaces.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *ignoreHiddenPoint</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreegraph.h</code></p>
 			</div>
 			
 			
@@ -257,7 +411,7 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The corner radius of the border surrounding each column or bar.</p>
+				<p>The border radius for each treemap item.</p>
 			</div>
 			
 		    
@@ -272,16 +426,6 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderradius/">Rounded columns</a></li>
-</ul>
-
-			</div>
-			
 
 			
 
@@ -290,156 +434,7 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColumn.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/pointRange" title="pointRange"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointRange">&nbsp;&nbsp;pointRange</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The X axis range that each point is valid for. This determines the width of the column. On a categorized axis, the range will be 1 by default (one category unit). On linear and datetime axes, the range will be computed as the distance between the two closest data points. The default <code>null</code> means it is computed automatically, but this option can be used to override the automatic value. This option is set by default to 1 if data sorting is enabled.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointRange</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointrange/">Set the point range to one day on a data set with one week between the points</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColumn.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/minPointLength" title="minPointLength"></a>
-	<h3 class="method-title"><code><a href="#//api/name/minPointLength">&nbsp;&nbsp;minPointLength</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The minimal height for a column or width for a bar. By default, 0 values are not shown. To visualize a 0 (or close to zero) point, set the minimal point length to a pixel value like 3. In stacked column charts, minPointLength might not be respected for tightly packed values.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *minPointLength</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength/">Zero base value</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-minpointlength-pos-and-neg/">Positive and negative close to zero values</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColumn.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/groupZPadding" title="groupZPadding"></a>
-	<h3 class="method-title"><code><a href="#//api/name/groupZPadding">&nbsp;&nbsp;groupZPadding</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The spacing between columns on the Z Axis in a 3D chart.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *groupZPadding</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>1</code>.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColumn.h</code></p>
+				<p><code class="declared-in-ref">HITreegraph.h</code></p>
 			</div>
 			
 			
@@ -480,15 +475,15 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColumn.h</code></p>
+				<p><code class="declared-in-ref">HITreegraph.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/borderColor" title="borderColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
+	<a name="//api/name/sortIndex" title="sortIndex"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sortIndex">&nbsp;&nbsp;sortIndex</a></code>
 </h3>
 
 	<div class="method-info">
@@ -498,106 +493,12 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The color of the border surrounding each column or bar. In styled mode, the border stroke can be set with the <code>.highcharts-point</code> rule.</p>
+				<p>The sort index of the point inside the treemap level.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *borderColor</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>#ffffff</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-bordercolor/">Dark gray border</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColumn.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/edgeColor" title="edgeColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/edgeColor">&nbsp;&nbsp;edgeColor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>3D columns only. The color of the edges. Similar to <code>borderColor</code>, except it defaults to the same color as the column.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *edgeColor</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColumn.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/centerInCategory" title="centerInCategory"></a>
-	<h3 class="method-title"><code><a href="#//api/name/centerInCategory">&nbsp;&nbsp;centerInCategory</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>When <code>true</code>, the columns will center in the category, ignoring null or missing points. When <code>false</code>, space will be reserved for null or missing points.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *centerInCategory</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *sortIndex</code></div>
 
 		    
 			
@@ -612,7 +513,7 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-column/centerincategory/">Center in category</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-sortindex/">Sort by years</a></li>
 </ul>
 
 			</div>
@@ -625,109 +526,7 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColumn.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/maxPointWidth" title="maxPointWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/maxPointWidth">&nbsp;&nbsp;maxPointWidth</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The maximum allowed pixel width for a column, translated to the height of a bar in a bar chart. This prevents the columns from becoming too wide when there is a small number of points in the chart.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *maxPointWidth</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-maxpointwidth-20/">Limited to 50</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColumn.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/pointWidth" title="pointWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointWidth">&nbsp;&nbsp;pointWidth</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>A pixel value specifying a fixed width for each column or bar point. When set to <code>undefined</code>, the width is calculated from the <code>pointPadding</code> and <code>groupPadding</code>. The width effects the dimension that is not based on the point value. For column series it is the hoizontal length and for bar series it is the vertical length.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointWidth</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-pointwidth-20/">20px wide columns regardless of chart width or the amount of data points</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColumn.h</code></p>
+				<p><code class="declared-in-ref">HITreegraph.h</code></p>
 			</div>
 			
 			
@@ -745,7 +544,7 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>When using automatic point colors pulled from the global <code>colors</code> or series-specific <code>plotOptions.column.colors</code> collections, this option determines whether the chart should receive one color per series or one color per point. In styled mode, the <code>colors</code> or <code>series.colors</code> arrays are not supported, and instead this option gives the points individual color class names on the form <code>highcharts-color-{n}</code>.</p>
+				<p>When using automatic point colors pulled from the <code>options.colors</code> collection, this option determines whether the chart should receive one color per series or one color per point.</p>
 			</div>
 			
 		    
@@ -760,15 +559,94 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 
 			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreegraph.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/breadcrumbs" title="breadcrumbs"></a>
+	<h3 class="method-title"><code><a href="#//api/name/breadcrumbs">&nbsp;&nbsp;breadcrumbs</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for the breadcrumbs, the navigation at the top leading the way up through the traversed levels.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIBreadcrumbs *breadcrumbs</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreegraph.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/allowTraversingTree" title="allowTraversingTree"></a>
+	<h3 class="method-title"><code><a href="#//api/name/allowTraversingTree">&nbsp;&nbsp;allowTraversingTree</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When enabled the user can click on a point which is a parent and zoom in on its children.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *allowTraversingTree</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>false</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-false/">False by default</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-colorbypoint-true/">True</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-allowtraversingtree/">Enabled</a></li>
 </ul>
 
 			</div>
@@ -781,15 +659,15 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColumn.h</code></p>
+				<p><code class="declared-in-ref">HITreegraph.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/groupPadding" title="groupPadding"></a>
-	<h3 class="method-title"><code><a href="#//api/name/groupPadding">&nbsp;&nbsp;groupPadding</a></code>
+	<a name="//api/name/layoutStartingDirection" title="layoutStartingDirection"></a>
+	<h3 class="method-title"><code><a href="#//api/name/layoutStartingDirection">&nbsp;&nbsp;layoutStartingDirection</a></code>
 </h3>
 
 	<div class="method-info">
@@ -799,12 +677,12 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Padding between each value groups, in x axis units.</p>
+				<p>Defines which direction the layout algorithm will start drawing.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *groupPadding</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *layoutStartingDirection</code></div>
 
 		    
 			
@@ -816,13 +694,57 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>0.2</code>.</p>
+				<p><strong>Defaults to</strong> <code>vertical</code>.</p>
+			</div>
+			
 
-<p><strong>Try it</strong></p>
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreegraph.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/interactByLeaf" title="interactByLeaf"></a>
+	<h3 class="method-title"><code><a href="#//api/name/interactByLeaf">&nbsp;&nbsp;interactByLeaf</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This option decides if the user can interact with the parent nodes or just the leaf nodes. When this option is undefined, it will be true by default. However when allowTraversingTree is true, then it will be false by default.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *interactByLeaf</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-default/">0.2 by default</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouppadding-none/">No group padding - all columns are evenly spaced</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-interactbyleaf-false/">False</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-interactbyleaf-true-and-allowtraversingtree/">InteractByLeaf and allowTraversingTree is true</a></li>
 </ul>
 
 			</div>
@@ -835,15 +757,15 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColumn.h</code></p>
+				<p><code class="declared-in-ref">HITreegraph.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/edgeWidth" title="edgeWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/edgeWidth">&nbsp;&nbsp;edgeWidth</a></code>
+	<a name="//api/name/alternateStartingDirection" title="alternateStartingDirection"></a>
+	<h3 class="method-title"><code><a href="#//api/name/alternateStartingDirection">&nbsp;&nbsp;alternateStartingDirection</a></code>
 </h3>
 
 	<div class="method-info">
@@ -853,12 +775,12 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>3D columns only. The width of the colored edges.</p>
+				<p>Enabling this option will make the treemap alternate the drawing direction between vertical and horizontal. The next levels starting direction will always be the opposite of the previous.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *edgeWidth</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *alternateStartingDirection</code></div>
 
 		    
 			
@@ -870,104 +792,10 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>1</code>.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColumn.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/depth" title="depth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/depth">&nbsp;&nbsp;depth</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Depth of the columns in a 3D column chart.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *depth</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>25</code>.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColumn.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/borderWidth" title="borderWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/borderWidth">&nbsp;&nbsp;borderWidth</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The width of the border surrounding each column or bar. Defaults to <code>1</code> when there is room for a border, but to <code>0</code> when the columns are so dense that a border would cover the next column. In styled mode, the stroke width can be set with the <code>.highcharts-point</code> rule.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *borderWidth</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderwidth/">2px black border</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-alternatestartingdirection-true/">Enabled</a></li>
 </ul>
 
 			</div>
@@ -980,15 +808,15 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColumn.h</code></p>
+				<p><code class="declared-in-ref">HITreegraph.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/grouping" title="grouping"></a>
-	<h3 class="method-title"><code><a href="#//api/name/grouping">&nbsp;&nbsp;grouping</a></code>
+	<a name="//api/name/layoutAlgorithm" title="layoutAlgorithm"></a>
+	<h3 class="method-title"><code><a href="#//api/name/layoutAlgorithm">&nbsp;&nbsp;layoutAlgorithm</a></code>
 </h3>
 
 	<div class="method-info">
@@ -998,12 +826,12 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether to group non-stacked columns or to let them render independent of each other. Non-grouped columns will be laid out individually and overlap each other.</p>
+				<p>This option decides which algorithm is used for setting position and dimensions of the points.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *grouping</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *layoutAlgorithm</code></div>
 
 		    
 			
@@ -1015,12 +843,15 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>true</code>.</p>
+				<p><strong>Defaults to</strong> <code>sliceAndDice</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-grouping-false/">Grouping disabled</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-layoutalgorithm-sliceanddice/">SliceAndDice by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-layoutalgorithm-stripes/">Stripes</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-layoutalgorithm-squarified/">Squarified</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/treemap-layoutalgorithm-strip/">Strip</a></li>
 </ul>
 
 			</div>
@@ -1033,7 +864,158 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColumn.h</code></p>
+				<p><code class="declared-in-ref">HITreegraph.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/levelIsConstant" title="levelIsConstant"></a>
+	<h3 class="method-title"><code><a href="#//api/name/levelIsConstant">&nbsp;&nbsp;levelIsConstant</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Used together with the levels and allowTraversingTree options. When set to false the first level visible to be level one, which is dynamic when traversing the tree. Otherwise the level will be the same as the tree structure.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *levelIsConstant</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreegraph.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/jitter" title="jitter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/jitter">&nbsp;&nbsp;jitter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Apply a jitter effect for the rendered markers. When plotting discrete values, a little random noise may help telling the points apart. The jitter setting applies a random displacement of up to <code>n</code> axis units in either direction. So for example on a horizontal X axis, setting the <code>jitter.x</code> to 0.24 will render the point in a random position between 0.24 units to the left and 0.24 units to the right of the true axis position. On a category axis, setting it to 0.5 will fill up the bin and make the data appear continuous. When rendered on top of a box plot or a column series, a jitter value of 0.24 will correspond to the underlying series' default <a href="https://api.highcharts.com/highcharts/plotOptions.column.groupPadding">groupPadding</a> and <a href="https://api.highcharts.com/highcharts/plotOptions.column.pointPadding">pointPadding</a> settings.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIJitter *jitter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-scatter/jitter">Jitter on a scatter plot</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-scatter/jitter-boxplot">Jittered scatter plot on top of a box plot</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreegraph.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cluster" title="cluster"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cluster">&nbsp;&nbsp;cluster</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for marker clusters, the concept of sampling the data values into larger blocks in order to ease readability and increase performance of the JavaScript charts. Note: marker clusters module is not working with <code>boost</code> and <code>draggable-points</code> modules. The marker clusters feature requires the marker-clusters.js file to be loaded, found in the modules directory of the download package, or online at <code>https://code.highcharts.com/modules/marker-clusters.js</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICluster *cluster</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/marker-clusters/europe">Maps marker clusters</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/marker-clusters/basic">Scatter marker clusters</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/maps/marker-clusters/optimized-kmeans">Marker clusters with colorAxis</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreegraph.h</code></p>
 			</div>
 			
 			

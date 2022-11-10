@@ -81,11 +81,15 @@
 		
 		<option value="//api/name/angle">angle</option>
 		
+		<option value="//api/name/breaks">breaks</option>
+		
 		<option value="//api/name/categories">categories</option>
 		
 		<option value="//api/name/ceiling">ceiling</option>
 		
 		<option value="//api/name/className">className</option>
+		
+		<option value="//api/name/crosshair">crosshair</option>
 		
 		<option value="//api/name/dateTimeLabelFormats">dateTimeLabelFormats</option>
 		
@@ -105,9 +109,17 @@
 		
 		<option value="//api/name/gridZIndex">gridZIndex</option>
 		
+		<option value="//api/name/height">height</option>
+		
 		<option value="//api/name/id">id</option>
 		
 		<option value="//api/name/labels">labels</option>
+		
+		<option value="//api/name/left">left</option>
+		
+		<option value="//api/name/lineColor">lineColor</option>
+		
+		<option value="//api/name/lineWidth">lineWidth</option>
 		
 		<option value="//api/name/linkedTo">linkedTo</option>
 		
@@ -159,6 +171,8 @@
 		
 		<option value="//api/name/reversedStacks">reversedStacks</option>
 		
+		<option value="//api/name/showEmpty">showEmpty</option>
+		
 		<option value="//api/name/showFirstLabel">showFirstLabel</option>
 		
 		<option value="//api/name/showLastLabel">showLastLabel</option>
@@ -193,6 +207,8 @@
 		
 		<option value="//api/name/title">title</option>
 		
+		<option value="//api/name/top">top</option>
+		
 		<option value="//api/name/type">type</option>
 		
 		<option value="//api/name/uniqueNames">uniqueNames</option>
@@ -200,6 +216,8 @@
 		<option value="//api/name/units">units</option>
 		
 		<option value="//api/name/visible">visible</option>
+		
+		<option value="//api/name/width">width</option>
 		
 		<option value="//api/name/zIndex">zIndex</option>
 		
@@ -349,7 +367,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/zoomenabled/">Zoom enabled is false</a></li>
@@ -504,7 +524,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["on", "between"]</code>.</p>
+				<p><strong>Defaults to</strong> <code>between</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -652,7 +672,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>1</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/gridzindex/">A Z index of 4 renders the grid above the graph</a></li>
@@ -716,6 +738,88 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/height" title="height"></a>
+	<h3 class="method-title"><code><a href="#//api/name/height">&nbsp;&nbsp;height</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The height as the vertical axis. If it&rsquo;s a number, it is interpreted as pixels. Since Highcharts 2: If it&rsquo;s a percentage string, it is interpreted as percentages of the total plot height.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id height</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIZAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/top" title="top"></a>
+	<h3 class="method-title"><code><a href="#//api/name/top">&nbsp;&nbsp;top</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The top position as the vertical axis. If it&rsquo;s a number, it is interpreted as pixel position relative to the chart. Since Highcharts 2: If it&rsquo;s a percentage string, it is interpreted as percentages of the plot height, offset from plot area top.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id top</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIZAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/visible" title="visible"></a>
 	<h3 class="method-title"><code><a href="#//api/name/visible">&nbsp;&nbsp;visible</a></code>
 </h3>
@@ -741,6 +845,11 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
+			</div>
 			
 
 			
@@ -782,6 +891,11 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
+			</div>
 			
 
 			
@@ -867,7 +981,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>linear</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/type-linear/">Linear</a></li>
@@ -974,7 +1090,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/showfirstlabel-false/">Set to false on X axis</a></li>
@@ -1078,7 +1196,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>1</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/startofweek-monday/">Monday by default</a></li>
@@ -1600,13 +1720,56 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>Solid</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorgridlinedashstyle/">Long dashes on minor grid lines</a></li>
 </ul>
 
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIZAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/width" title="width"></a>
+	<h3 class="method-title"><code><a href="#//api/name/width">&nbsp;&nbsp;width</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The width as the horizontal axis. If it&rsquo;s a number, it is interpreted as pixels. Since Highcharts v5.0.13: If it&rsquo;s a percentage string, it is interpreted as percentages of the total plot width.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id width</code></div>
+
+		    
+			
+
+			
+
+			
+
 			
 
 			
@@ -1651,7 +1814,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>2</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorticklength/">10px on Y axis</a></li>
@@ -1896,6 +2061,11 @@
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
+			</div>
+			
 
 			
 
@@ -1939,9 +2109,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["circle", "polygon"]</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/polar-spider/">Polygon grid lines</a></li>
@@ -1994,7 +2162,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>10</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/ticklength/">20 px tick length on the X axis</a></li>
@@ -2068,6 +2238,59 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/showEmpty" title="showEmpty"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showEmpty">&nbsp;&nbsp;showEmpty</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether to show the axis line and title when the axis has no data.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *showEmpty</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/showempty/">When clicking the legend to hide series, one axis preserves line and title, the other doesn&rsquo;t</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIZAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/gridLineDashStyle" title="gridLineDashStyle"></a>
 	<h3 class="method-title"><code><a href="#//api/name/gridLineDashStyle">&nbsp;&nbsp;gridLineDashStyle</a></code>
 </h3>
@@ -2096,7 +2319,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>Solid</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/gridlinedashstyle/">Long dashes</a></li>
@@ -2198,7 +2423,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["inside", "outside"]</code>.</p>
+				<p><strong>Defaults to</strong> <code>outside</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -2257,6 +2482,58 @@
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/max-200/">Y axis max of 200</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/max-logarithmic/">Y axis max on logarithmic axis</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIZAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/breaks" title="breaks"></a>
+	<h3 class="method-title"><code><a href="#//api/name/breaks">&nbsp;&nbsp;breaks</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An array defining breaks in the axis, the sections defined will be left out and all the points shifted closer to each other.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIBreaks*&gt; *breaks</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-simple/">Simple break</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/axisbreak/break-visualized/">Advanced with callback</a></li>
 </ul>
 
 			</div>
@@ -2342,6 +2619,11 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>2</code>.</p>
+			</div>
 			
 
 			
@@ -2804,7 +3086,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["inside", "outside"]</code>.</p>
+				<p><strong>Defaults to</strong> <code>outside</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -2910,7 +3192,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>100</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/tickpixelinterval-50/">50 px on X axis</a></li>
@@ -3169,7 +3453,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/showlastlabel-true/">Set to true on X axis</a></li>
@@ -3272,7 +3558,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/uniquenames-true/">True by default</a></li>
@@ -3439,6 +3727,113 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/crosshair" title="crosshair"></a>
+	<h3 class="method-title"><code><a href="#//api/name/crosshair">&nbsp;&nbsp;crosshair</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Configure a crosshair that follows either the mouse pointer or the hovered point. In styled mode, the crosshairs are styled in the <code>.highcharts-crosshair</code>, <code>.highcharts-crosshair-thin</code> or <code>.highcharts-xaxis-category</code> classes.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HICrosshair *crosshair</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>false</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/crosshair-both/">Crosshair on both axes</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIZAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/lineColor" title="lineColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lineColor">&nbsp;&nbsp;lineColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The color of the line marking the axis itself. In styled mode, the line stroke is given in the <code>.highcharts-axis-line</code> or <code>.highcharts-xaxis-line</code> class.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *lineColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>#ccd6eb</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/linecolor/">A red line on Y axis</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis/">Axes in styled mode</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIZAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/minorGridLineWidth" title="minorGridLineWidth"></a>
 	<h3 class="method-title"><code><a href="#//api/name/minorGridLineWidth">&nbsp;&nbsp;minorGridLineWidth</a></code>
 </h3>
@@ -3467,7 +3862,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>1</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minorgridlinewidth/">2px lines from Y axis</a></li>
@@ -3586,6 +3983,60 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/lineWidth" title="lineWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lineWidth">&nbsp;&nbsp;lineWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The width of the line marking the axis itself. In styled mode, the stroke width is given in the <code>.highcharts-axis-line</code> or <code>.highcharts-xaxis-line</code> class.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *lineWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>1</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/linecolor/">A 1px line on Y axis</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/axis/">Axes in styled mode</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIZAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/margin" title="margin"></a>
 	<h3 class="method-title"><code><a href="#//api/name/margin">&nbsp;&nbsp;margin</a></code>
 </h3>
@@ -3644,6 +4095,47 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;HIPlotBands*&gt; *plotBands</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIZAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/left" title="left"></a>
+	<h3 class="method-title"><code><a href="#//api/name/left">&nbsp;&nbsp;left</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The left position as the horizontal axis. If it&rsquo;s a number, it is interpreted as pixel position relative to the chart. Since Highcharts v5.0.13: If it&rsquo;s a percentage string, it is interpreted as percentages of the plot width, offset from plot area left.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id left</code></div>
 
 		    
 			

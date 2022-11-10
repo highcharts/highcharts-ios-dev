@@ -149,6 +149,10 @@
 		
 		<option value="//api/name/useHTML">useHTML</option>
 		
+		<option value="//api/name/valueDecimals">valueDecimals</option>
+		
+		<option value="//api/name/valueSuffix">valueSuffix</option>
+		
 		<option value="//api/name/verticalAlign">verticalAlign</option>
 		
 		<option value="//api/name/width">width</option>
@@ -381,6 +385,52 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/valueSuffix" title="valueSuffix"></a>
+	<h3 class="method-title"><code><a href="#//api/name/valueSuffix">&nbsp;&nbsp;valueSuffix</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>For a color axis with data classes, a suffix for the range numbers in the legend.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *valueSuffix</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>''</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/accessibility" title="accessibility"></a>
 	<h3 class="method-title"><code><a href="#//api/name/accessibility">&nbsp;&nbsp;accessibility</a></code>
 </h3>
@@ -447,6 +497,11 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
+			</div>
 			
 
 			
@@ -543,7 +598,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>5</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/symbolpadding/">Greater symbol width and padding</a></li>
@@ -745,7 +802,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>#999999</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/bordercolor/">Brown border</a></li>
@@ -794,6 +853,11 @@
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>highcharts-no-tooltip</code>.</p>
+			</div>
+			
 
 			
 
@@ -837,7 +901,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["horizontal", "vertical", "proximate"]</code>.</p>
+				<p><strong>Defaults to</strong> <code>horizontal</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -1444,7 +1508,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>bottom</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/verticalalign/">Legend 100px from the top of the chart</a></li>
@@ -1693,7 +1759,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>center</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/align/">Legend at the right of the chart</a></li>
@@ -1744,7 +1812,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/enabled-false/">Legend disabled</a></li>
@@ -1886,6 +1956,11 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
+			</div>
 			
 
 			
@@ -2186,6 +2261,52 @@
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/margin-30/">30 pixels</a></li>
 </ul>
 
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/valueDecimals" title="valueDecimals"></a>
+	<h3 class="method-title"><code><a href="#//api/name/valueDecimals">&nbsp;&nbsp;valueDecimals</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>For a color axis with data classes, how many decimals to render in the legend. The default preserves the decimals of the range numbers.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *valueDecimals</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>-1</code>.</p>
 			</div>
 			
 

@@ -105,6 +105,8 @@
 		
 		<option value="//api/name/hideDelay">hideDelay</option>
 		
+		<option value="//api/name/linkFormat">linkFormat</option>
+		
 		<option value="//api/name/nodeFormat">nodeFormat</option>
 		
 		<option value="//api/name/nodeFormatter">nodeFormatter</option>
@@ -402,7 +404,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>3</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/">5px by default</a></li>
@@ -866,7 +870,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["callout", "square"]</code>.</p>
+				<p><strong>Defaults to</strong> <code>callout</code>.</p>
 			</div>
 			
 
@@ -1258,7 +1262,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Callback function to format the text of the tooltip from scratch. In case of single or <code>shared</code> tooltips, a string should be returned. In case of <code>split</code> tooltips, it should return an array where the first item is the header, and subsequent items are mapped to the points. Return <code>false</code> to disable tooltip for a specific point on series. A subset of HTML is supported. Unless <code>useHTML</code> is true, the HTML of the tooltip is parsed and converted to SVG, therefore this isn&rsquo;t a complete HTML renderer. The following HTML tags are supported: <code>b</code>, <code>br</code>, <code>em</code>, <code>i</code>, <code>span</code>, <code>strong</code>. Spans can be styled with a <code>style</code> attribute, but only text-related CSS, that is shared with SVG, is handled. The available data in the formatter differ a bit depending on whether the tooltip is shared or split, or belongs to a single point. In a shared/split tooltip, all properties except <code>x</code>, which is common for all points, are kept in an array, <code>this.points</code>. Available data are: - <strong>this.percentage (not shared) /</strong>  <strong>this.points[i].percentage (shared)</strong>:  Stacked series and pies only. The point&rsquo;s percentage of the total. - <strong>this.point (not shared) / this.points[i].point (shared)</strong>:  The point object. The point name, if defined, is available through  <code>this.point.name</code>. - <strong>this.points</strong>:  In a shared tooltip, this is an array containing all other  properties for each point. - <strong>this.series (not shared) / this.points[i].series (shared)</strong>:  The series object. The series name is available through  <code>this.series.name</code>. - <strong>this.total (not shared) / this.points[i].total (shared)</strong>:  Stacked series only. The total value at this point&rsquo;s x value. - <strong>this.x</strong>:  The x value. This property is the same regardless of the tooltip  being shared or not. - <strong>this.y (not shared) / this.points[i].y (shared)</strong>:  The y value.</p>
+				<p>Callback function to format the text of the tooltip from scratch. In case of single or <code>shared</code> tooltips, a string should be returned. In case of <code>split</code> tooltips, it should return an array where the first item is the header, and subsequent items are mapped to the points. Return <code>false</code> to disable tooltip for a specific point on series. A subset of HTML is supported. Unless <code>useHTML</code> is true, the HTML of the tooltip is parsed and converted to SVG, therefore this isn&rsquo;t a complete HTML renderer. The following HTML tags are supported: <code>b</code>, <code>br</code>, <code>em</code>, <code>i</code>, <code>span</code>, <code>strong</code>. Spans can be styled with a <code>style</code> attribute, but only text-related CSS, that is shared with SVG, is handled. The available data in the formatter differ a bit depending on whether the tooltip is shared or split, or belongs to a single point. In a shared/split tooltip, all properties except <code>x</code>, which is common for all points, are kept in an array, <code>this.points</code>. Available data are: - <strong>this.percentage (not shared) / </strong>this.points[i].percentage (shared)<strong>:  Stacked series and pies only. The point&rsquo;s percentage of the total. - </strong>this.point (not shared) / this.points[i].point (shared)<strong>:  The point object. The point name, if defined, is available through  <code>this.point.name</code>. - </strong>this.points<strong>:  In a shared tooltip, this is an array containing all other  properties for each point. - </strong>this.series (not shared) / this.points[i].series (shared)<strong>:  The series object. The series name is available through  <code>this.series.name</code>. - </strong>this.total (not shared) / this.points[i].total (shared)<strong>:  Stacked series only. The total value at this point&rsquo;s x value. - </strong>this.x<strong>:  The x value. This property is the same regardless of the tooltip  being shared or not. - </strong>this.y (not shared) / this.points[i].y (shared)**:  The y value.</p>
 			</div>
 			
 		    
@@ -1522,6 +1526,11 @@
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>8</code>.</p>
+			</div>
+			
 
 			
 
@@ -1565,7 +1574,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/">True by default</a></li>
@@ -1663,7 +1674,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/enabled/">Disabled</a></li>
@@ -1712,6 +1725,11 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>callout</code>.</p>
+			</div>
 			
 
 			
@@ -1838,7 +1856,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>1</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/">2px by default</a></li>
@@ -1930,6 +1950,11 @@
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>500</code>.</p>
+			</div>
+			
 
 			
 
@@ -1979,6 +2004,52 @@
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/valuedecimals/">Set decimals, prefix and suffix for the value</a></li>
 </ul>
 
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/linkFormat" title="linkFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/linkFormat">&nbsp;&nbsp;linkFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The HTML of the point&rsquo;s line in the tooltip. Variables are enclosed by curly brackets. Available variables are <code>point.id</code>, <code>point.fromNode.id</code>, <code>point.toNode.id</code>, <code>series.name</code>, <code>series.color</code> and other properties on the same form. Furthermore, This can also be overridden for each series, which makes it a good hook for displaying units. In styled mode, the dot is colored by a class name rather than the point color.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *linkFormat</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>{point.fromNode.id} â†’ {point.toNode.id}</code>.</p>
 			</div>
 			
 
