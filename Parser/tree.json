@@ -3393,9 +3393,7 @@
               "declare": "Highcharts.AnnotationMockPointOptionsObject",
               "type": {
                 "names": [
-                  "string",
-                  "Highcharts.AnnotationMockPointOptionsObject",
-                  "Highcharts.AnnotationMockPointFunction"
+                  "Highcharts.AnnotationMockPointOptionsObject"
                 ]
               },
               "requires": [
@@ -4568,9 +4566,7 @@
               "declare": "Highcharts.AnnotationMockPointOptionsObject",
               "type": {
                 "names": [
-                  "string",
-                  "Highcharts.AnnotationMockPointOptionsObject",
-                  "Highcharts.AnnotationMockPointFunction"
+                  "Highcharts.AnnotationMockPointOptionsObject"
                 ]
               },
               "extends": "annotations.labels.point",
@@ -26556,7 +26552,7 @@
           ],
           "type": {
             "names": [
-              "Highcharts.AnnotationsOptions"
+              "*"
             ]
           },
           "extends": "annotations",
@@ -50164,9 +50160,7 @@
                   "declare": "Highcharts.OrganizationLinkTypeValue",
                   "type": {
                     "names": [
-                      "'default'",
-                      "'curved'",
-                      "'straight'"
+                      "string"
                     ]
                   },
                   "defaultvalue": "'default'",
@@ -55760,7 +55754,7 @@
                   "description": "Options for the cluster data labels.",
                   "type": {
                     "names": [
-                      "Highcharts.DataLabelsOptions"
+                      "*"
                     ]
                   },
                   "since": "8.0.0"
@@ -56165,7 +56159,7 @@
                   ],
                   "type": {
                     "names": [
-                      "Highcharts.PointMarkerOptionsObject"
+                      "*"
                     ]
                   },
                   "since": "8.0.0"
@@ -68205,7 +68199,6 @@
                       "value": "highcharts/series-treegraph/link-text-path"
                     }
                   ],
-                  "extends": "plotOptions.treegraph.dataLabels.linkTextPath",
                   "since": "10.3.0"
                 },
                 "meta": {
@@ -75912,7 +75905,7 @@
             "children": {
               "dataLabels": {
                 "doclet": {
-                  "extends": "series.arearange.dataLabels",
+                  "extends": "plotOptions.arearange.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock"
@@ -77840,7 +77833,7 @@
             "children": {
               "dataLabels": {
                 "doclet": {
-                  "extends": "series.columnrange.dataLabels",
+                  "extends": "plotOptions.columnrange.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock"
@@ -80796,7 +80789,7 @@
                     }
                   ],
                   "declare": "Highcharts.DataLabelsOptions",
-                  "extends": "plotOptions.line.dataLabels",
+                  "extends": "plotOptions.series.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock",
@@ -83145,7 +83138,7 @@
                 "doclet": {
                   "type": {
                     "names": [
-                      "Highcharts.SeriesPieDataLabelsOptionsObject"
+                      "*"
                     ]
                   },
                   "products": [
