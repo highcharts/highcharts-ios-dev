@@ -20,7 +20,6 @@
 	copyTreemap.index = [self.index copyWithZone: zone];
 	copyTreemap.legendIndex = [self.legendIndex copyWithZone: zone];
 	copyTreemap.name = [self.name copyWithZone: zone];
-	copyTreemap.stack = [self.stack copyWithZone: zone];
 	copyTreemap.type = [self.type copyWithZone: zone];
 	copyTreemap.xAxis = [self.xAxis copyWithZone: zone];
 	copyTreemap.yAxis = [self.yAxis copyWithZone: zone];
@@ -47,10 +46,7 @@
 	copyTreemap.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyTreemap.levelIsConstant = [self.levelIsConstant copyWithZone: zone];
 	copyTreemap.showInLegend = [self.showInLegend copyWithZone: zone];
-	copyTreemap.jitter = [self.jitter copyWithZone: zone];
-	copyTreemap.cluster = [self.cluster copyWithZone: zone];
 	copyTreemap.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
-	copyTreemap.marker = [self.marker copyWithZone: zone];
 	copyTreemap.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyTreemap.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyTreemap.linecap = [self.linecap copyWithZone: zone];
@@ -61,15 +57,11 @@
 	copyTreemap.color = [self.color copyWithZone: zone];
 	copyTreemap.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyTreemap.softThreshold = [self.softThreshold copyWithZone: zone];
-	copyTreemap.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyTreemap.point = [self.point copyWithZone: zone];
-	copyTreemap.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyTreemap.label = [self.label copyWithZone: zone];
 	copyTreemap.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyTreemap.cursor = [self.cursor copyWithZone: zone];
 	copyTreemap.dashStyle = [self.dashStyle copyWithZone: zone];
-	copyTreemap.pointPlacement = [self.pointPlacement copyWithZone: zone];
-	copyTreemap.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyTreemap.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyTreemap.custom = [self.custom copyWithZone: zone];
 	copyTreemap.onPoint = [self.onPoint copyWithZone: zone];
@@ -87,7 +79,6 @@
 	copyTreemap.accessibility = [self.accessibility copyWithZone: zone];
 	copyTreemap.step = [self.step copyWithZone: zone];
 	copyTreemap.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyTreemap.shadow = [self.shadow copyWithZone: zone];
 	copyTreemap.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyTreemap.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyTreemap.zones = [self.zones copyWithZone: zone];
@@ -99,7 +90,6 @@
 	copyTreemap.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyTreemap.className = [self.className copyWithZone: zone];
 	copyTreemap.pointStart = [self.pointStart copyWithZone: zone];
-	copyTreemap.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyTreemap.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	return copyTreemap;
 }
@@ -158,12 +148,6 @@
 	}
 	if (self.levelIsConstant) {
 		params[@"levelIsConstant"] = self.levelIsConstant;
-	}
-	if (self.jitter) {
-		params[@"jitter"] = [self.jitter getParams];
-	}
-	if (self.cluster) {
-		params[@"cluster"] = [self.cluster getParams];
 	}
 	return params;
 }
@@ -246,18 +230,6 @@
 	NSNumber *oldValue = _levelIsConstant;
 	_levelIsConstant = levelIsConstant;
 	[self updateNSObject:oldValue newValue:levelIsConstant propertyName:@"levelIsConstant"];
-}
-
--(void)setJitter:(HIJitter *)jitter {
-	HIJitter *oldValue = _jitter;
-	_jitter = jitter;
-	[self updateHIObject:oldValue newValue:jitter propertyName:@"jitter"];
-}
-
--(void)setCluster:(HICluster *)cluster {
-	HICluster *oldValue = _cluster;
-	_cluster = cluster;
-	[self updateHIObject:oldValue newValue:cluster propertyName:@"cluster"];
 }
 
 @end

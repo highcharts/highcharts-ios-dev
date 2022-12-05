@@ -11,13 +11,13 @@
 	[super copyWithZone:zone];
 	HIAttributes *copyAttributes = [[HIAttributes allocWithZone: zone] init];
 	copyAttributes.startOffset = [self.startOffset copyWithZone: zone];
-	copyAttributes.zIndex = [self.zIndex copyWithZone: zone];
 	copyAttributes.refX = [self.refX copyWithZone: zone];
 	copyAttributes.markerWidth = [self.markerWidth copyWithZone: zone];
 	copyAttributes.refY = [self.refY copyWithZone: zone];
 	copyAttributes.id = [self.id copyWithZone: zone];
 	copyAttributes.markerHeight = [self.markerHeight copyWithZone: zone];
 	copyAttributes.dy = [self.dy copyWithZone: zone];
+	copyAttributes.zIndex = [self.zIndex copyWithZone: zone];
 	return copyAttributes;
 }
 
@@ -26,9 +26,6 @@
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.startOffset) {
 		params[@"startOffset"] = self.startOffset;
-	}
-	if (self.zIndex) {
-		params[@"zIndex"] = self.zIndex;
 	}
 	if (self.refX) {
 		params[@"refX"] = self.refX;
@@ -48,6 +45,9 @@
 	if (self.dy) {
 		params[@"dy"] = [self.dy getParams];
 	}
+	if (self.zIndex) {
+		params[@"zIndex"] = self.zIndex;
+	}
 	return params;
 }
 
@@ -57,12 +57,6 @@
 	NSNumber *oldValue = _startOffset;
 	_startOffset = startOffset;
 	[self updateNSObject:oldValue newValue:startOffset propertyName:@"startOffset"];
-}
-
--(void)setZIndex:(NSNumber *)zIndex {
-	NSNumber *oldValue = _zIndex;
-	_zIndex = zIndex;
-	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
 -(void)setRefX:(NSNumber *)refX {
@@ -99,6 +93,12 @@
 	HISVGAttributes *oldValue = _dy;
 	_dy = dy;
 	[self updateHIObject:oldValue newValue:dy propertyName:@"dy"];
+}
+
+-(void)setZIndex:(NSNumber *)zIndex {
+	NSNumber *oldValue = _zIndex;
+	_zIndex = zIndex;
+	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
 @end

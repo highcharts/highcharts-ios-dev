@@ -20,10 +20,7 @@
 	copyPyramid3d.index = [self.index copyWithZone: zone];
 	copyPyramid3d.legendIndex = [self.legendIndex copyWithZone: zone];
 	copyPyramid3d.name = [self.name copyWithZone: zone];
-	copyPyramid3d.stack = [self.stack copyWithZone: zone];
 	copyPyramid3d.type = [self.type copyWithZone: zone];
-	copyPyramid3d.xAxis = [self.xAxis copyWithZone: zone];
-	copyPyramid3d.yAxis = [self.yAxis copyWithZone: zone];
 	copyPyramid3d.zIndex = [self.zIndex copyWithZone: zone];
 	copyPyramid3d.reversed = [self.reversed copyWithZone: zone];
 	copyPyramid3d.neckWidth = [self.neckWidth copyWithZone: zone];
@@ -39,7 +36,6 @@
 	copyPyramid3d.point = [self.point copyWithZone: zone];
 	copyPyramid3d.color = [self.color copyWithZone: zone];
 	copyPyramid3d.colors = [self.colors copyWithZone: zone];
-	copyPyramid3d.size = [self.size copyWithZone: zone];
 	copyPyramid3d.borderColor = [self.borderColor copyWithZone: zone];
 	copyPyramid3d.tooltip = [self.tooltip copyWithZone: zone];
 	copyPyramid3d.thickness = [self.thickness copyWithZone: zone];
@@ -48,7 +44,6 @@
 	copyPyramid3d.startAngle = [self.startAngle copyWithZone: zone];
 	copyPyramid3d.events = [self.events copyWithZone: zone];
 	copyPyramid3d.endAngle = [self.endAngle copyWithZone: zone];
-	copyPyramid3d.innerSize = [self.innerSize copyWithZone: zone];
 	copyPyramid3d.slicedOffset = [self.slicedOffset copyWithZone: zone];
 	copyPyramid3d.depth = [self.depth copyWithZone: zone];
 	copyPyramid3d.borderWidth = [self.borderWidth copyWithZone: zone];
@@ -57,57 +52,27 @@
 	copyPyramid3d.linecap = [self.linecap copyWithZone: zone];
 	copyPyramid3d.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyPyramid3d.colorIndex = [self.colorIndex copyWithZone: zone];
-	copyPyramid3d.negativeColor = [self.negativeColor copyWithZone: zone];
-	copyPyramid3d.pointInterval = [self.pointInterval copyWithZone: zone];
-	copyPyramid3d.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyPyramid3d.colorKey = [self.colorKey copyWithZone: zone];
-	copyPyramid3d.softThreshold = [self.softThreshold copyWithZone: zone];
-	copyPyramid3d.dragDrop = [self.dragDrop copyWithZone: zone];
-	copyPyramid3d.dataSorting = [self.dataSorting copyWithZone: zone];
-	copyPyramid3d.marker = [self.marker copyWithZone: zone];
-	copyPyramid3d.label = [self.label copyWithZone: zone];
 	copyPyramid3d.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPyramid3d.cursor = [self.cursor copyWithZone: zone];
-	copyPyramid3d.dashStyle = [self.dashStyle copyWithZone: zone];
-	copyPyramid3d.pointPlacement = [self.pointPlacement copyWithZone: zone];
-	copyPyramid3d.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyPyramid3d.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPyramid3d.custom = [self.custom copyWithZone: zone];
 	copyPyramid3d.onPoint = [self.onPoint copyWithZone: zone];
-	copyPyramid3d.stacking = [self.stacking copyWithZone: zone];
-	copyPyramid3d.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyPyramid3d.relativeXValue = [self.relativeXValue copyWithZone: zone];
-	copyPyramid3d.threshold = [self.threshold copyWithZone: zone];
 	copyPyramid3d.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyPyramid3d.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyPyramid3d.opacity = [self.opacity copyWithZone: zone];
-	copyPyramid3d.animationLimit = [self.animationLimit copyWithZone: zone];
-	copyPyramid3d.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyPyramid3d.definition = [self.definition copyWithZone: zone];
 	copyPyramid3d.keys = [self.keys copyWithZone: zone];
 	copyPyramid3d.selected = [self.selected copyWithZone: zone];
 	copyPyramid3d.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPyramid3d.accessibility = [self.accessibility copyWithZone: zone];
-	copyPyramid3d.step = [self.step copyWithZone: zone];
-	copyPyramid3d.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyPyramid3d.shadow = [self.shadow copyWithZone: zone];
 	copyPyramid3d.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
-	copyPyramid3d.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyPyramid3d.zones = [self.zones copyWithZone: zone];
-	copyPyramid3d.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
-	copyPyramid3d.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyPyramid3d.crisp = [self.crisp copyWithZone: zone];
 	copyPyramid3d.visible = [self.visible copyWithZone: zone];
-	copyPyramid3d.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyPyramid3d.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyPyramid3d.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyPyramid3d.className = [self.className copyWithZone: zone];
-	copyPyramid3d.pointStart = [self.pointStart copyWithZone: zone];
-	copyPyramid3d.connectEnds = [self.connectEnds copyWithZone: zone];
-	copyPyramid3d.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyPyramid3d.reversed = [self.reversed copyWithZone: zone];
-	copyPyramid3d.neckWidth = [self.neckWidth copyWithZone: zone];
-	copyPyramid3d.neckHeight = [self.neckHeight copyWithZone: zone];
 	copyPyramid3d.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyPyramid3d.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyPyramid3d.height = [self.height copyWithZone: zone];
@@ -137,7 +102,6 @@
 	copyPyramid3d.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyPyramid3d.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyPyramid3d.grouping = [self.grouping copyWithZone: zone];
-	copyPyramid3d.linecap = [self.linecap copyWithZone: zone];
 	copyPyramid3d.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyPyramid3d.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyPyramid3d.clip = [self.clip copyWithZone: zone];
@@ -147,14 +111,11 @@
 	copyPyramid3d.colorKey = [self.colorKey copyWithZone: zone];
 	copyPyramid3d.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyPyramid3d.point = [self.point copyWithZone: zone];
-	copyPyramid3d.dataSorting = [self.dataSorting copyWithZone: zone];
-	copyPyramid3d.marker = [self.marker copyWithZone: zone];
 	copyPyramid3d.label = [self.label copyWithZone: zone];
 	copyPyramid3d.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPyramid3d.cursor = [self.cursor copyWithZone: zone];
 	copyPyramid3d.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyPyramid3d.pointPlacement = [self.pointPlacement copyWithZone: zone];
-	copyPyramid3d.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyPyramid3d.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPyramid3d.custom = [self.custom copyWithZone: zone];
 	copyPyramid3d.onPoint = [self.onPoint copyWithZone: zone];
@@ -162,7 +123,6 @@
 	copyPyramid3d.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyPyramid3d.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyPyramid3d.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyPyramid3d.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyPyramid3d.events = [self.events copyWithZone: zone];
 	copyPyramid3d.opacity = [self.opacity copyWithZone: zone];
 	copyPyramid3d.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -172,14 +132,11 @@
 	copyPyramid3d.selected = [self.selected copyWithZone: zone];
 	copyPyramid3d.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPyramid3d.accessibility = [self.accessibility copyWithZone: zone];
-	copyPyramid3d.step = [self.step copyWithZone: zone];
 	copyPyramid3d.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyPyramid3d.shadow = [self.shadow copyWithZone: zone];
 	copyPyramid3d.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
-	copyPyramid3d.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyPyramid3d.zones = [self.zones copyWithZone: zone];
 	copyPyramid3d.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
-	copyPyramid3d.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyPyramid3d.crisp = [self.crisp copyWithZone: zone];
 	copyPyramid3d.visible = [self.visible copyWithZone: zone];
 	copyPyramid3d.linkedTo = [self.linkedTo copyWithZone: zone];
@@ -187,8 +144,6 @@
 	copyPyramid3d.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyPyramid3d.className = [self.className copyWithZone: zone];
 	copyPyramid3d.pointStart = [self.pointStart copyWithZone: zone];
-	copyPyramid3d.connectEnds = [self.connectEnds copyWithZone: zone];
-	copyPyramid3d.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	return copyPyramid3d;
 }
 
@@ -232,9 +187,6 @@
 		}
 		params[@"colors"] = array;
 	}
-	if (self.size) {
-		params[@"size"] = self.size;
-	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
@@ -253,9 +205,6 @@
 	if (self.endAngle) {
 		params[@"endAngle"] = self.endAngle;
 	}
-	if (self.innerSize) {
-		params[@"innerSize"] = self.innerSize;
-	}
 	if (self.slicedOffset) {
 		params[@"slicedOffset"] = self.slicedOffset;
 	}
@@ -267,12 +216,6 @@
 	}
 	if (self.reversed) {
 		params[@"reversed"] = self.reversed;
-	}
-	if (self.neckWidth) {
-		params[@"neckWidth"] = self.neckWidth;
-	}
-	if (self.neckHeight) {
-		params[@"neckHeight"] = self.neckHeight;
 	}
 	if (self.colorByPoint) {
 		params[@"colorByPoint"] = self.colorByPoint;
@@ -391,12 +334,6 @@
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
 
--(void)setSize:(id)size {
-	id oldValue = _size;
-	_size = size;
-	[self updateNSObject:oldValue newValue:size propertyName:@"size"];
-}
-
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
 	_borderColor = borderColor;
@@ -433,12 +370,6 @@
 	[self updateNSObject:oldValue newValue:endAngle propertyName:@"endAngle"];
 }
 
--(void)setInnerSize:(id)innerSize {
-	id oldValue = _innerSize;
-	_innerSize = innerSize;
-	[self updateNSObject:oldValue newValue:innerSize propertyName:@"innerSize"];
-}
-
 -(void)setSlicedOffset:(NSNumber *)slicedOffset {
 	NSNumber *oldValue = _slicedOffset;
 	_slicedOffset = slicedOffset;
@@ -461,18 +392,6 @@
 	NSNumber *oldValue = _reversed;
 	_reversed = reversed;
 	[self updateNSObject:oldValue newValue:reversed propertyName:@"reversed"];
-}
-
--(void)setNeckWidth:(NSNumber *)neckWidth {
-	NSNumber *oldValue = _neckWidth;
-	_neckWidth = neckWidth;
-	[self updateNSObject:oldValue newValue:neckWidth propertyName:@"neckWidth"];
-}
-
--(void)setNeckHeight:(NSNumber *)neckHeight {
-	NSNumber *oldValue = _neckHeight;
-	_neckHeight = neckHeight;
-	[self updateNSObject:oldValue newValue:neckHeight propertyName:@"neckHeight"];
 }
 
 -(void)setColorByPoint:(NSNumber *)colorByPoint {

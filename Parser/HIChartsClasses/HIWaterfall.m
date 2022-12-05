@@ -44,7 +44,6 @@
 	copyWaterfall.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyWaterfall.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyWaterfall.grouping = [self.grouping copyWithZone: zone];
-	copyWaterfall.linecap = [self.linecap copyWithZone: zone];
 	copyWaterfall.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyWaterfall.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyWaterfall.clip = [self.clip copyWithZone: zone];
@@ -54,12 +53,10 @@
 	copyWaterfall.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyWaterfall.point = [self.point copyWithZone: zone];
 	copyWaterfall.dataSorting = [self.dataSorting copyWithZone: zone];
-	copyWaterfall.marker = [self.marker copyWithZone: zone];
 	copyWaterfall.label = [self.label copyWithZone: zone];
 	copyWaterfall.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyWaterfall.cursor = [self.cursor copyWithZone: zone];
 	copyWaterfall.pointPlacement = [self.pointPlacement copyWithZone: zone];
-	copyWaterfall.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyWaterfall.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyWaterfall.custom = [self.custom copyWithZone: zone];
 	copyWaterfall.onPoint = [self.onPoint copyWithZone: zone];
@@ -68,7 +65,6 @@
 	copyWaterfall.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyWaterfall.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyWaterfall.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyWaterfall.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyWaterfall.events = [self.events copyWithZone: zone];
 	copyWaterfall.opacity = [self.opacity copyWithZone: zone];
 	copyWaterfall.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -78,7 +74,6 @@
 	copyWaterfall.selected = [self.selected copyWithZone: zone];
 	copyWaterfall.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyWaterfall.accessibility = [self.accessibility copyWithZone: zone];
-	copyWaterfall.step = [self.step copyWithZone: zone];
 	copyWaterfall.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyWaterfall.shadow = [self.shadow copyWithZone: zone];
 	copyWaterfall.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
@@ -92,8 +87,6 @@
 	copyWaterfall.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyWaterfall.className = [self.className copyWithZone: zone];
 	copyWaterfall.pointStart = [self.pointStart copyWithZone: zone];
-	copyWaterfall.connectEnds = [self.connectEnds copyWithZone: zone];
-	copyWaterfall.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyWaterfall.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyWaterfall.data = [self.data copyWithZone: zone];
 	copyWaterfall.id = [self.id copyWithZone: zone];

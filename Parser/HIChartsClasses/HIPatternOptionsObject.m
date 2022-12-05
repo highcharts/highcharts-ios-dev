@@ -50,7 +50,7 @@
 		params[@"opacity"] = self.opacity;
 	}
 	if (self.path) {
-		params[@"path"] = [self.path getParams];
+		params[@"path"] = self.path;
 	}
 	if (self.patternTransform) {
 		params[@"patternTransform"] = self.patternTransform;
@@ -111,10 +111,10 @@
 	[self updateNSObject:oldValue newValue:opacity propertyName:@"opacity"];
 }
 
--(void)setPath:(HISVGAttributes *)path {
-	HISVGAttributes *oldValue = _path;
+-(void)setPath:(NSString *)path {
+	NSString *oldValue = _path;
 	_path = path;
-	[self updateHIObject:oldValue newValue:path propertyName:@"path"];
+	[self updateNSObject:oldValue newValue:path propertyName:@"path"];
 }
 
 -(void)setPatternTransform:(NSString *)patternTransform {
