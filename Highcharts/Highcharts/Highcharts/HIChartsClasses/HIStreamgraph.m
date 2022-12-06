@@ -62,7 +62,6 @@
 	copyStreamgraph.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyStreamgraph.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyStreamgraph.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyStreamgraph.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyStreamgraph.events = [self.events copyWithZone: zone];
 	copyStreamgraph.opacity = [self.opacity copyWithZone: zone];
 	copyStreamgraph.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -72,7 +71,6 @@
 	copyStreamgraph.selected = [self.selected copyWithZone: zone];
 	copyStreamgraph.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyStreamgraph.accessibility = [self.accessibility copyWithZone: zone];
-	copyStreamgraph.step = [self.step copyWithZone: zone];
 	copyStreamgraph.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyStreamgraph.shadow = [self.shadow copyWithZone: zone];
 	copyStreamgraph.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
@@ -89,7 +87,6 @@
 	copyStreamgraph.className = [self.className copyWithZone: zone];
 	copyStreamgraph.pointStart = [self.pointStart copyWithZone: zone];
 	copyStreamgraph.connectEnds = [self.connectEnds copyWithZone: zone];
-	copyStreamgraph.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyStreamgraph.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyStreamgraph;
 }

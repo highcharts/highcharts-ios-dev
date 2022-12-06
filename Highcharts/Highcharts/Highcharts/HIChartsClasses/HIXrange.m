@@ -28,55 +28,38 @@
 	copyXrange.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyXrange.partialFill = [self.partialFill copyWithZone: zone];
 	copyXrange.borderRadius = [self.borderRadius copyWithZone: zone];
-	copyXrange.pointRange = [self.pointRange copyWithZone: zone];
 	copyXrange.tooltip = [self.tooltip copyWithZone: zone];
 	copyXrange.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyXrange.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyXrange.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyXrange.minPointLength = [self.minPointLength copyWithZone: zone];
 	copyXrange.groupZPadding = [self.groupZPadding copyWithZone: zone];
-	copyXrange.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyXrange.states = [self.states copyWithZone: zone];
 	copyXrange.colors = [self.colors copyWithZone: zone];
-	copyXrange.threshold = [self.threshold copyWithZone: zone];
 	copyXrange.borderColor = [self.borderColor copyWithZone: zone];
-	copyXrange.edgeColor = [self.edgeColor copyWithZone: zone];
 	copyXrange.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyXrange.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyXrange.pointWidth = [self.pointWidth copyWithZone: zone];
 	copyXrange.groupPadding = [self.groupPadding copyWithZone: zone];
-	copyXrange.edgeWidth = [self.edgeWidth copyWithZone: zone];
-	copyXrange.depth = [self.depth copyWithZone: zone];
 	copyXrange.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyXrange.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyXrange.grouping = [self.grouping copyWithZone: zone];
-	copyXrange.linecap = [self.linecap copyWithZone: zone];
 	copyXrange.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyXrange.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyXrange.clip = [self.clip copyWithZone: zone];
-	copyXrange.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyXrange.color = [self.color copyWithZone: zone];
-	copyXrange.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyXrange.colorKey = [self.colorKey copyWithZone: zone];
-	copyXrange.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyXrange.point = [self.point copyWithZone: zone];
-	copyXrange.dataSorting = [self.dataSorting copyWithZone: zone];
-	copyXrange.marker = [self.marker copyWithZone: zone];
 	copyXrange.label = [self.label copyWithZone: zone];
 	copyXrange.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyXrange.cursor = [self.cursor copyWithZone: zone];
 	copyXrange.dashStyle = [self.dashStyle copyWithZone: zone];
-	copyXrange.pointPlacement = [self.pointPlacement copyWithZone: zone];
-	copyXrange.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyXrange.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyXrange.custom = [self.custom copyWithZone: zone];
 	copyXrange.onPoint = [self.onPoint copyWithZone: zone];
-	copyXrange.stacking = [self.stacking copyWithZone: zone];
 	copyXrange.animation = [self.animation copyWithZone: zone];
-	copyXrange.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyXrange.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyXrange.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyXrange.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyXrange.events = [self.events copyWithZone: zone];
 	copyXrange.opacity = [self.opacity copyWithZone: zone];
 	copyXrange.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -86,23 +69,15 @@
 	copyXrange.selected = [self.selected copyWithZone: zone];
 	copyXrange.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyXrange.accessibility = [self.accessibility copyWithZone: zone];
-	copyXrange.step = [self.step copyWithZone: zone];
-	copyXrange.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyXrange.shadow = [self.shadow copyWithZone: zone];
 	copyXrange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyXrange.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyXrange.zones = [self.zones copyWithZone: zone];
-	copyXrange.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
-	copyXrange.lineWidth = [self.lineWidth copyWithZone: zone];
-	copyXrange.crisp = [self.crisp copyWithZone: zone];
 	copyXrange.visible = [self.visible copyWithZone: zone];
 	copyXrange.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyXrange.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyXrange.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyXrange.className = [self.className copyWithZone: zone];
-	copyXrange.pointStart = [self.pointStart copyWithZone: zone];
-	copyXrange.connectEnds = [self.connectEnds copyWithZone: zone];
-	copyXrange.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyXrange.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyXrange;
 }
@@ -118,9 +93,6 @@
 	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
-	}
-	if (self.pointRange) {
-		params[@"pointRange"] = self.pointRange;
 	}
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
@@ -141,9 +113,6 @@
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
-	if (self.edgeColor) {
-		params[@"edgeColor"] = [self.edgeColor getData];
-	}
 	if (self.centerInCategory) {
 		params[@"centerInCategory"] = self.centerInCategory;
 	}
@@ -155,12 +124,6 @@
 	}
 	if (self.groupPadding) {
 		params[@"groupPadding"] = self.groupPadding;
-	}
-	if (self.edgeWidth) {
-		params[@"edgeWidth"] = self.edgeWidth;
-	}
-	if (self.depth) {
-		params[@"depth"] = self.depth;
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
@@ -189,12 +152,6 @@
 	NSNumber *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
 	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
-}
-
--(void)setPointRange:(NSNumber *)pointRange {
-	NSNumber *oldValue = _pointRange;
-	_pointRange = pointRange;
-	[self updateNSObject:oldValue newValue:pointRange propertyName:@"pointRange"];
 }
 
 -(void)setPointPadding:(NSNumber *)pointPadding {
@@ -227,12 +184,6 @@
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
--(void)setEdgeColor:(HIColor *)edgeColor {
-	HIColor *oldValue = _edgeColor;
-	_edgeColor = edgeColor;
-	[self updateHIObject:oldValue newValue:edgeColor propertyName:@"edgeColor"];
-}
-
 -(void)setCenterInCategory:(NSNumber *)centerInCategory {
 	NSNumber *oldValue = _centerInCategory;
 	_centerInCategory = centerInCategory;
@@ -255,18 +206,6 @@
 	NSNumber *oldValue = _groupPadding;
 	_groupPadding = groupPadding;
 	[self updateNSObject:oldValue newValue:groupPadding propertyName:@"groupPadding"];
-}
-
--(void)setEdgeWidth:(NSNumber *)edgeWidth {
-	NSNumber *oldValue = _edgeWidth;
-	_edgeWidth = edgeWidth;
-	[self updateNSObject:oldValue newValue:edgeWidth propertyName:@"edgeWidth"];
-}
-
--(void)setDepth:(NSNumber *)depth {
-	NSNumber *oldValue = _depth;
-	_depth = depth;
-	[self updateNSObject:oldValue newValue:depth propertyName:@"depth"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {

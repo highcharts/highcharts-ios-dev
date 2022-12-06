@@ -18,8 +18,6 @@
 	copyZAxis.labels = [self.labels copyWithZone: zone];
 	copyZAxis.gridZIndex = [self.gridZIndex copyWithZone: zone];
 	copyZAxis.accessibility = [self.accessibility copyWithZone: zone];
-	copyZAxis.height = [self.height copyWithZone: zone];
-	copyZAxis.top = [self.top copyWithZone: zone];
 	copyZAxis.visible = [self.visible copyWithZone: zone];
 	copyZAxis.alignTicks = [self.alignTicks copyWithZone: zone];
 	copyZAxis.minTickInterval = [self.minTickInterval copyWithZone: zone];
@@ -38,7 +36,6 @@
 	copyZAxis.tickPositioner = [self.tickPositioner copyWithZone: zone];
 	copyZAxis.reversed = [self.reversed copyWithZone: zone];
 	copyZAxis.minorGridLineDashStyle = [self.minorGridLineDashStyle copyWithZone: zone];
-	copyZAxis.width = [self.width copyWithZone: zone];
 	copyZAxis.minorTickLength = [self.minorTickLength copyWithZone: zone];
 	copyZAxis.endOnTick = [self.endOnTick copyWithZone: zone];
 	copyZAxis.plotLines = [self.plotLines copyWithZone: zone];
@@ -48,12 +45,10 @@
 	copyZAxis.gridLineInterpolation = [self.gridLineInterpolation copyWithZone: zone];
 	copyZAxis.tickLength = [self.tickLength copyWithZone: zone];
 	copyZAxis.ceiling = [self.ceiling copyWithZone: zone];
-	copyZAxis.showEmpty = [self.showEmpty copyWithZone: zone];
 	copyZAxis.gridLineDashStyle = [self.gridLineDashStyle copyWithZone: zone];
 	copyZAxis.opposite = [self.opposite copyWithZone: zone];
 	copyZAxis.minorTickPosition = [self.minorTickPosition copyWithZone: zone];
 	copyZAxis.max = [self.max copyWithZone: zone];
-	copyZAxis.breaks = [self.breaks copyWithZone: zone];
 	copyZAxis.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
 	copyZAxis.zIndex = [self.zIndex copyWithZone: zone];
 	copyZAxis.minorTicks = [self.minorTicks copyWithZone: zone];
@@ -77,15 +72,11 @@
 	copyZAxis.events = [self.events copyWithZone: zone];
 	copyZAxis.className = [self.className copyWithZone: zone];
 	copyZAxis.tickAmount = [self.tickAmount copyWithZone: zone];
-	copyZAxis.crosshair = [self.crosshair copyWithZone: zone];
-	copyZAxis.lineColor = [self.lineColor copyWithZone: zone];
 	copyZAxis.minorGridLineWidth = [self.minorGridLineWidth copyWithZone: zone];
 	copyZAxis.title = [self.title copyWithZone: zone];
 	copyZAxis.minorTickInterval = [self.minorTickInterval copyWithZone: zone];
-	copyZAxis.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyZAxis.margin = [self.margin copyWithZone: zone];
 	copyZAxis.plotBands = [self.plotBands copyWithZone: zone];
-	copyZAxis.left = [self.left copyWithZone: zone];
 	return copyZAxis;
 }
 
@@ -116,12 +107,6 @@
 	}
 	if (self.accessibility) {
 		params[@"accessibility"] = [self.accessibility getParams];
-	}
-	if (self.height) {
-		params[@"height"] = self.height;
-	}
-	if (self.top) {
-		params[@"top"] = self.top;
 	}
 	if (self.visible) {
 		params[@"visible"] = self.visible;
@@ -186,9 +171,6 @@
 	if (self.minorGridLineDashStyle) {
 		params[@"minorGridLineDashStyle"] = self.minorGridLineDashStyle;
 	}
-	if (self.width) {
-		params[@"width"] = self.width;
-	}
 	if (self.minorTickLength) {
 		params[@"minorTickLength"] = self.minorTickLength;
 	}
@@ -234,9 +216,6 @@
 	if (self.ceiling) {
 		params[@"ceiling"] = self.ceiling;
 	}
-	if (self.showEmpty) {
-		params[@"showEmpty"] = self.showEmpty;
-	}
 	if (self.gridLineDashStyle) {
 		params[@"gridLineDashStyle"] = self.gridLineDashStyle;
 	}
@@ -248,18 +227,6 @@
 	}
 	if (self.max) {
 		params[@"max"] = self.max;
-	}
-	if (self.breaks) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.breaks) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"breaks"] = array;
 	}
 	if (self.dateTimeLabelFormats) {
 		params[@"dateTimeLabelFormats"] = [self.dateTimeLabelFormats getParams];
@@ -339,12 +306,6 @@
 	if (self.tickAmount) {
 		params[@"tickAmount"] = self.tickAmount;
 	}
-	if (self.crosshair) {
-		params[@"crosshair"] = [self.crosshair getParams];
-	}
-	if (self.lineColor) {
-		params[@"lineColor"] = [self.lineColor getData];
-	}
 	if (self.minorGridLineWidth) {
 		params[@"minorGridLineWidth"] = self.minorGridLineWidth;
 	}
@@ -353,9 +314,6 @@
 	}
 	if (self.minorTickInterval) {
 		params[@"minorTickInterval"] = self.minorTickInterval;
-	}
-	if (self.lineWidth) {
-		params[@"lineWidth"] = self.lineWidth;
 	}
 	if (self.margin) {
 		params[@"margin"] = self.margin;
@@ -371,9 +329,6 @@
 			}
 		}
 		params[@"plotBands"] = array;
-	}
-	if (self.left) {
-		params[@"left"] = self.left;
 	}
 	return params;
 }
@@ -426,18 +381,6 @@
 	HIAccessibility *oldValue = _accessibility;
 	_accessibility = accessibility;
 	[self updateHIObject:oldValue newValue:accessibility propertyName:@"accessibility"];
-}
-
--(void)setHeight:(id)height {
-	id oldValue = _height;
-	_height = height;
-	[self updateNSObject:oldValue newValue:height propertyName:@"height"];
-}
-
--(void)setTop:(id)top {
-	id oldValue = _top;
-	_top = top;
-	[self updateNSObject:oldValue newValue:top propertyName:@"top"];
 }
 
 -(void)setVisible:(NSNumber *)visible {
@@ -548,12 +491,6 @@
 	[self updateNSObject:oldValue newValue:minorGridLineDashStyle propertyName:@"minorGridLineDashStyle"];
 }
 
--(void)setWidth:(id)width {
-	id oldValue = _width;
-	_width = width;
-	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
-}
-
 -(void)setMinorTickLength:(NSNumber *)minorTickLength {
 	NSNumber *oldValue = _minorTickLength;
 	_minorTickLength = minorTickLength;
@@ -608,12 +545,6 @@
 	[self updateNSObject:oldValue newValue:ceiling propertyName:@"ceiling"];
 }
 
--(void)setShowEmpty:(NSNumber *)showEmpty {
-	NSNumber *oldValue = _showEmpty;
-	_showEmpty = showEmpty;
-	[self updateNSObject:oldValue newValue:showEmpty propertyName:@"showEmpty"];
-}
-
 -(void)setGridLineDashStyle:(NSString *)gridLineDashStyle {
 	NSString *oldValue = _gridLineDashStyle;
 	_gridLineDashStyle = gridLineDashStyle;
@@ -636,12 +567,6 @@
 	NSNumber *oldValue = _max;
 	_max = max;
 	[self updateNSObject:oldValue newValue:max propertyName:@"max"];
-}
-
--(void)setBreaks:(NSArray <HIBreaks *> *)breaks {
-	NSArray <HIBreaks *> *oldValue = _breaks;
-	_breaks = breaks;
-	[self updateArrayObject:oldValue newValue:breaks propertyName:@"breaks"];
 }
 
 -(void)setDateTimeLabelFormats:(HIDateTimeLabelFormats *)dateTimeLabelFormats {
@@ -782,18 +707,6 @@
 	[self updateNSObject:oldValue newValue:tickAmount propertyName:@"tickAmount"];
 }
 
--(void)setCrosshair:(HICrosshair *)crosshair {
-	HICrosshair *oldValue = _crosshair;
-	_crosshair = crosshair;
-	[self updateHIObject:oldValue newValue:crosshair propertyName:@"crosshair"];
-}
-
--(void)setLineColor:(HIColor *)lineColor {
-	HIColor *oldValue = _lineColor;
-	_lineColor = lineColor;
-	[self updateHIObject:oldValue newValue:lineColor propertyName:@"lineColor"];
-}
-
 -(void)setMinorGridLineWidth:(NSNumber *)minorGridLineWidth {
 	NSNumber *oldValue = _minorGridLineWidth;
 	_minorGridLineWidth = minorGridLineWidth;
@@ -812,12 +725,6 @@
 	[self updateNSObject:oldValue newValue:minorTickInterval propertyName:@"minorTickInterval"];
 }
 
--(void)setLineWidth:(NSNumber *)lineWidth {
-	NSNumber *oldValue = _lineWidth;
-	_lineWidth = lineWidth;
-	[self updateNSObject:oldValue newValue:lineWidth propertyName:@"lineWidth"];
-}
-
 -(void)setMargin:(NSNumber *)margin {
 	NSNumber *oldValue = _margin;
 	_margin = margin;
@@ -828,12 +735,6 @@
 	NSArray <HIPlotBands *> *oldValue = _plotBands;
 	_plotBands = plotBands;
 	[self updateArrayObject:oldValue newValue:plotBands propertyName:@"plotBands"];
-}
-
--(void)setLeft:(id)left {
-	id oldValue = _left;
-	_left = left;
-	[self updateNSObject:oldValue newValue:left propertyName:@"left"];
 }
 
 - (void)addPlotBand:(HIPlotBands *)options {

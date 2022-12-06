@@ -27,12 +27,8 @@
 	copyDumbbell.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyDumbbell.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyDumbbell.colorKey = [self.colorKey copyWithZone: zone];
-	copyDumbbell.fillColor = [self.fillColor copyWithZone: zone];
-	copyDumbbell.trackByArea = [self.trackByArea copyWithZone: zone];
 	copyDumbbell.threshold = [self.threshold copyWithZone: zone];
 	copyDumbbell.shadow = [self.shadow copyWithZone: zone];
-	copyDumbbell.lineWidth = [self.lineWidth copyWithZone: zone];
-	copyDumbbell.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyDumbbell.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
 	copyDumbbell.lineColor = [self.lineColor copyWithZone: zone];
 	copyDumbbell.linecap = [self.linecap copyWithZone: zone];
@@ -56,12 +52,10 @@
 	copyDumbbell.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyDumbbell.custom = [self.custom copyWithZone: zone];
 	copyDumbbell.onPoint = [self.onPoint copyWithZone: zone];
-	copyDumbbell.stacking = [self.stacking copyWithZone: zone];
 	copyDumbbell.animation = [self.animation copyWithZone: zone];
 	copyDumbbell.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyDumbbell.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyDumbbell.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyDumbbell.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyDumbbell.events = [self.events copyWithZone: zone];
 	copyDumbbell.opacity = [self.opacity copyWithZone: zone];
 	copyDumbbell.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -75,7 +69,6 @@
 	copyDumbbell.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyDumbbell.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyDumbbell.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyDumbbell.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyDumbbell.zones = [self.zones copyWithZone: zone];
 	copyDumbbell.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyDumbbell.visible = [self.visible copyWithZone: zone];
@@ -85,7 +78,6 @@
 	copyDumbbell.className = [self.className copyWithZone: zone];
 	copyDumbbell.pointStart = [self.pointStart copyWithZone: zone];
 	copyDumbbell.connectEnds = [self.connectEnds copyWithZone: zone];
-	copyDumbbell.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyDumbbell.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyDumbbell.data = [self.data copyWithZone: zone];
 	copyDumbbell.id = [self.id copyWithZone: zone];
@@ -120,15 +112,6 @@
 	}
 	if (self.lowColor) {
 		params[@"lowColor"] = [self.lowColor getData];
-	}
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
-	}
-	if (self.trackByArea) {
-		params[@"trackByArea"] = self.trackByArea;
-	}
-	if (self.fillOpacity) {
-		params[@"fillOpacity"] = self.fillOpacity;
 	}
 	if (self.negativeFillColor) {
 		params[@"negativeFillColor"] = [self.negativeFillColor getData];
@@ -175,24 +158,6 @@
 	HIColor *oldValue = _lowColor;
 	_lowColor = lowColor;
 	[self updateHIObject:oldValue newValue:lowColor propertyName:@"lowColor"];
-}
-
--(void)setFillColor:(HIColor *)fillColor {
-	HIColor *oldValue = _fillColor;
-	_fillColor = fillColor;
-	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
-}
-
--(void)setTrackByArea:(NSNumber *)trackByArea {
-	NSNumber *oldValue = _trackByArea;
-	_trackByArea = trackByArea;
-	[self updateNSObject:oldValue newValue:trackByArea propertyName:@"trackByArea"];
-}
-
--(void)setFillOpacity:(NSNumber *)fillOpacity {
-	NSNumber *oldValue = _fillOpacity;
-	_fillOpacity = fillOpacity;
-	[self updateNSObject:oldValue newValue:fillOpacity propertyName:@"fillOpacity"];
 }
 
 -(void)setNegativeFillColor:(HIColor *)negativeFillColor {

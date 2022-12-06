@@ -19,8 +19,6 @@
 	copyPolygon.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyPolygon.trackByArea = [self.trackByArea copyWithZone: zone];
 	copyPolygon.tooltip = [self.tooltip copyWithZone: zone];
-	copyPolygon.jitter = [self.jitter copyWithZone: zone];
-	copyPolygon.cluster = [self.cluster copyWithZone: zone];
 	copyPolygon.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyPolygon.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyPolygon.linecap = [self.linecap copyWithZone: zone];
@@ -30,10 +28,8 @@
 	copyPolygon.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyPolygon.color = [self.color copyWithZone: zone];
 	copyPolygon.pointInterval = [self.pointInterval copyWithZone: zone];
-	copyPolygon.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyPolygon.states = [self.states copyWithZone: zone];
 	copyPolygon.colorKey = [self.colorKey copyWithZone: zone];
-	copyPolygon.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyPolygon.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyPolygon.point = [self.point copyWithZone: zone];
 	copyPolygon.dataSorting = [self.dataSorting copyWithZone: zone];
@@ -41,7 +37,6 @@
 	copyPolygon.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPolygon.cursor = [self.cursor copyWithZone: zone];
 	copyPolygon.dashStyle = [self.dashStyle copyWithZone: zone];
-	copyPolygon.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyPolygon.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyPolygon.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPolygon.custom = [self.custom copyWithZone: zone];
@@ -49,9 +44,7 @@
 	copyPolygon.stacking = [self.stacking copyWithZone: zone];
 	copyPolygon.animation = [self.animation copyWithZone: zone];
 	copyPolygon.relativeXValue = [self.relativeXValue copyWithZone: zone];
-	copyPolygon.threshold = [self.threshold copyWithZone: zone];
 	copyPolygon.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyPolygon.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyPolygon.events = [self.events copyWithZone: zone];
 	copyPolygon.opacity = [self.opacity copyWithZone: zone];
 	copyPolygon.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -63,7 +56,6 @@
 	copyPolygon.accessibility = [self.accessibility copyWithZone: zone];
 	copyPolygon.step = [self.step copyWithZone: zone];
 	copyPolygon.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyPolygon.shadow = [self.shadow copyWithZone: zone];
 	copyPolygon.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPolygon.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyPolygon.zones = [self.zones copyWithZone: zone];
@@ -77,14 +69,12 @@
 	copyPolygon.className = [self.className copyWithZone: zone];
 	copyPolygon.pointStart = [self.pointStart copyWithZone: zone];
 	copyPolygon.connectEnds = [self.connectEnds copyWithZone: zone];
-	copyPolygon.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyPolygon.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyPolygon.data = [self.data copyWithZone: zone];
 	copyPolygon.id = [self.id copyWithZone: zone];
 	copyPolygon.index = [self.index copyWithZone: zone];
 	copyPolygon.legendIndex = [self.legendIndex copyWithZone: zone];
 	copyPolygon.name = [self.name copyWithZone: zone];
-	copyPolygon.stack = [self.stack copyWithZone: zone];
 	copyPolygon.type = [self.type copyWithZone: zone];
 	copyPolygon.xAxis = [self.xAxis copyWithZone: zone];
 	copyPolygon.yAxis = [self.yAxis copyWithZone: zone];
@@ -98,12 +88,6 @@
 	if (self.trackByArea) {
 		params[@"trackByArea"] = self.trackByArea;
 	}
-	if (self.jitter) {
-		params[@"jitter"] = [self.jitter getParams];
-	}
-	if (self.cluster) {
-		params[@"cluster"] = [self.cluster getParams];
-	}
 	return params;
 }
 
@@ -113,18 +97,6 @@
 	NSNumber *oldValue = _trackByArea;
 	_trackByArea = trackByArea;
 	[self updateNSObject:oldValue newValue:trackByArea propertyName:@"trackByArea"];
-}
-
--(void)setJitter:(HIJitter *)jitter {
-	HIJitter *oldValue = _jitter;
-	_jitter = jitter;
-	[self updateHIObject:oldValue newValue:jitter propertyName:@"jitter"];
-}
-
--(void)setCluster:(HICluster *)cluster {
-	HICluster *oldValue = _cluster;
-	_cluster = cluster;
-	[self updateHIObject:oldValue newValue:cluster propertyName:@"cluster"];
 }
 
 @end

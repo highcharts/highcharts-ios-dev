@@ -27,46 +27,34 @@
 	copyColumnpyramid.yAxis = [self.yAxis copyWithZone: zone];
 	copyColumnpyramid.zIndex = [self.zIndex copyWithZone: zone];
 	copyColumnpyramid.pointPadding = [self.pointPadding copyWithZone: zone];
-	copyColumnpyramid.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyColumnpyramid.pointRange = [self.pointRange copyWithZone: zone];
 	copyColumnpyramid.minPointLength = [self.minPointLength copyWithZone: zone];
-	copyColumnpyramid.groupZPadding = [self.groupZPadding copyWithZone: zone];
 	copyColumnpyramid.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyColumnpyramid.colors = [self.colors copyWithZone: zone];
 	copyColumnpyramid.dragDrop = [self.dragDrop copyWithZone: zone];
-	copyColumnpyramid.threshold = [self.threshold copyWithZone: zone];
 	copyColumnpyramid.borderColor = [self.borderColor copyWithZone: zone];
-	copyColumnpyramid.edgeColor = [self.edgeColor copyWithZone: zone];
 	copyColumnpyramid.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyColumnpyramid.tooltip = [self.tooltip copyWithZone: zone];
 	copyColumnpyramid.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyColumnpyramid.pointWidth = [self.pointWidth copyWithZone: zone];
 	copyColumnpyramid.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyColumnpyramid.groupPadding = [self.groupPadding copyWithZone: zone];
-	copyColumnpyramid.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyColumnpyramid.dataLabels = [self.dataLabels copyWithZone: zone];
-	copyColumnpyramid.depth = [self.depth copyWithZone: zone];
 	copyColumnpyramid.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyColumnpyramid.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyColumnpyramid.grouping = [self.grouping copyWithZone: zone];
-	copyColumnpyramid.linecap = [self.linecap copyWithZone: zone];
 	copyColumnpyramid.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyColumnpyramid.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyColumnpyramid.clip = [self.clip copyWithZone: zone];
-	copyColumnpyramid.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyColumnpyramid.color = [self.color copyWithZone: zone];
 	copyColumnpyramid.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyColumnpyramid.colorKey = [self.colorKey copyWithZone: zone];
-	copyColumnpyramid.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyColumnpyramid.point = [self.point copyWithZone: zone];
 	copyColumnpyramid.dataSorting = [self.dataSorting copyWithZone: zone];
-	copyColumnpyramid.marker = [self.marker copyWithZone: zone];
 	copyColumnpyramid.label = [self.label copyWithZone: zone];
 	copyColumnpyramid.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyColumnpyramid.cursor = [self.cursor copyWithZone: zone];
-	copyColumnpyramid.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyColumnpyramid.pointPlacement = [self.pointPlacement copyWithZone: zone];
-	copyColumnpyramid.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyColumnpyramid.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyColumnpyramid.custom = [self.custom copyWithZone: zone];
 	copyColumnpyramid.onPoint = [self.onPoint copyWithZone: zone];
@@ -75,7 +63,6 @@
 	copyColumnpyramid.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyColumnpyramid.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyColumnpyramid.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyColumnpyramid.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyColumnpyramid.events = [self.events copyWithZone: zone];
 	copyColumnpyramid.opacity = [self.opacity copyWithZone: zone];
 	copyColumnpyramid.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -85,24 +72,18 @@
 	copyColumnpyramid.selected = [self.selected copyWithZone: zone];
 	copyColumnpyramid.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyColumnpyramid.accessibility = [self.accessibility copyWithZone: zone];
-	copyColumnpyramid.step = [self.step copyWithZone: zone];
 	copyColumnpyramid.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyColumnpyramid.shadow = [self.shadow copyWithZone: zone];
 	copyColumnpyramid.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyColumnpyramid.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyColumnpyramid.zones = [self.zones copyWithZone: zone];
 	copyColumnpyramid.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
-	copyColumnpyramid.lineWidth = [self.lineWidth copyWithZone: zone];
-	copyColumnpyramid.crisp = [self.crisp copyWithZone: zone];
 	copyColumnpyramid.visible = [self.visible copyWithZone: zone];
 	copyColumnpyramid.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyColumnpyramid.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyColumnpyramid.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyColumnpyramid.className = [self.className copyWithZone: zone];
 	copyColumnpyramid.pointStart = [self.pointStart copyWithZone: zone];
-	copyColumnpyramid.connectEnds = [self.connectEnds copyWithZone: zone];
-	copyColumnpyramid.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyColumnpyramid.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyColumnpyramid.dashStyle = [self.dashStyle copyWithZone: zone];
 	return copyColumnpyramid;
 }
 
@@ -112,17 +93,11 @@
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
 	}
-	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
-	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
 	}
 	if (self.minPointLength) {
 		params[@"minPointLength"] = self.minPointLength;
-	}
-	if (self.groupZPadding) {
-		params[@"groupZPadding"] = self.groupZPadding;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -133,9 +108,6 @@
 	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
-	}
-	if (self.edgeColor) {
-		params[@"edgeColor"] = [self.edgeColor getData];
 	}
 	if (self.centerInCategory) {
 		params[@"centerInCategory"] = self.centerInCategory;
@@ -151,12 +123,6 @@
 	}
 	if (self.groupPadding) {
 		params[@"groupPadding"] = self.groupPadding;
-	}
-	if (self.edgeWidth) {
-		params[@"edgeWidth"] = self.edgeWidth;
-	}
-	if (self.depth) {
-		params[@"depth"] = self.depth;
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
@@ -175,12 +141,6 @@
 	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
 }
 
--(void)setBorderRadius:(NSNumber *)borderRadius {
-	NSNumber *oldValue = _borderRadius;
-	_borderRadius = borderRadius;
-	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
-}
-
 -(void)setPointRange:(NSNumber *)pointRange {
 	NSNumber *oldValue = _pointRange;
 	_pointRange = pointRange;
@@ -193,12 +153,6 @@
 	[self updateNSObject:oldValue newValue:minPointLength propertyName:@"minPointLength"];
 }
 
--(void)setGroupZPadding:(NSNumber *)groupZPadding {
-	NSNumber *oldValue = _groupZPadding;
-	_groupZPadding = groupZPadding;
-	[self updateNSObject:oldValue newValue:groupZPadding propertyName:@"groupZPadding"];
-}
-
 -(void)setColors:(NSArray<HIColor *> *)colors {
 	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
@@ -209,12 +163,6 @@
 	HIColor *oldValue = _borderColor;
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
-}
-
--(void)setEdgeColor:(HIColor *)edgeColor {
-	HIColor *oldValue = _edgeColor;
-	_edgeColor = edgeColor;
-	[self updateHIObject:oldValue newValue:edgeColor propertyName:@"edgeColor"];
 }
 
 -(void)setCenterInCategory:(NSNumber *)centerInCategory {
@@ -245,18 +193,6 @@
 	NSNumber *oldValue = _groupPadding;
 	_groupPadding = groupPadding;
 	[self updateNSObject:oldValue newValue:groupPadding propertyName:@"groupPadding"];
-}
-
--(void)setEdgeWidth:(NSNumber *)edgeWidth {
-	NSNumber *oldValue = _edgeWidth;
-	_edgeWidth = edgeWidth;
-	[self updateNSObject:oldValue newValue:edgeWidth propertyName:@"edgeWidth"];
-}
-
--(void)setDepth:(NSNumber *)depth {
-	NSNumber *oldValue = _depth;
-	_depth = depth;
-	[self updateNSObject:oldValue newValue:depth propertyName:@"depth"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {

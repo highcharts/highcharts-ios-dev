@@ -55,7 +55,6 @@
 	copyData.accessibility = [self.accessibility copyWithZone: zone];
 	copyData.custom = [self.custom copyWithZone: zone];
 	copyData.className = [self.className copyWithZone: zone];
-	copyData.marker = [self.marker copyWithZone: zone];
 	copyData.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyData.id = [self.id copyWithZone: zone];
 	copyData.x = [self.x copyWithZone: zone];
@@ -63,10 +62,9 @@
 	copyData.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyData.events = [self.events copyWithZone: zone];
 	copyData.definition = [self.definition copyWithZone: zone];
-	copyData.sliced = [self.sliced copyWithZone: zone];
 	copyData.legendIndex = [self.legendIndex copyWithZone: zone];
+	copyData.marker = [self.marker copyWithZone: zone];
 	copyData.label = [self.label copyWithZone: zone];
-	copyData.outgoing = [self.outgoing copyWithZone: zone];
 	copyData.from = [self.from copyWithZone: zone];
 	copyData.weight = [self.weight copyWithZone: zone];
 	copyData.to = [self.to copyWithZone: zone];
@@ -80,15 +78,17 @@
 	copyData.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyData.connectorColor = [self.connectorColor copyWithZone: zone];
 	copyData.connectorWidth = [self.connectorWidth copyWithZone: zone];
-	copyData.lowColor = [self.lowColor copyWithZone: zone];
 	copyData.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyData.value = [self.value copyWithZone: zone];
 	copyData.isIntermediateSum = [self.isIntermediateSum copyWithZone: zone];
 	copyData.isSum = [self.isSum copyWithZone: zone];
+	copyData.sliced = [self.sliced copyWithZone: zone];
 	copyData.gradientForSides = [self.gradientForSides copyWithZone: zone];
 	copyData.innerRadius = [self.innerRadius copyWithZone: zone];
 	copyData.radius = [self.radius copyWithZone: zone];
+	copyData.outgoing = [self.outgoing copyWithZone: zone];
 	copyData.z = [self.z copyWithZone: zone];
+	copyData.lowColor = [self.lowColor copyWithZone: zone];
 	copyData.x2 = [self.x2 copyWithZone: zone];
 	copyData.partialFill = [self.partialFill copyWithZone: zone];
 	copyData.parent = [self.parent copyWithZone: zone];
@@ -264,9 +264,6 @@
 	if (self.className) {
 		params[@"className"] = self.className;
 	}
-	if (self.marker) {
-		params[@"marker"] = [self.marker getParams];
-	}
 	if (self.dragDrop) {
 		params[@"dragDrop"] = [self.dragDrop getParams];
 	}
@@ -288,17 +285,14 @@
 	if (self.definition) {
 		params[@"definition"] = self.definition;
 	}
-	if (self.sliced) {
-		params[@"sliced"] = self.sliced;
-	}
 	if (self.legendIndex) {
 		params[@"legendIndex"] = self.legendIndex;
 	}
+	if (self.marker) {
+		params[@"marker"] = [self.marker getParams];
+	}
 	if (self.label) {
 		params[@"label"] = self.label;
-	}
-	if (self.outgoing) {
-		params[@"outgoing"] = self.outgoing;
 	}
 	if (self.from) {
 		params[@"from"] = self.from;
@@ -339,9 +333,6 @@
 	if (self.connectorWidth) {
 		params[@"connectorWidth"] = self.connectorWidth;
 	}
-	if (self.lowColor) {
-		params[@"lowColor"] = [self.lowColor getData];
-	}
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
 	}
@@ -354,6 +345,9 @@
 	if (self.isSum) {
 		params[@"isSum"] = self.isSum;
 	}
+	if (self.sliced) {
+		params[@"sliced"] = self.sliced;
+	}
 	if (self.gradientForSides) {
 		params[@"gradientForSides"] = self.gradientForSides;
 	}
@@ -363,8 +357,14 @@
 	if (self.radius) {
 		params[@"radius"] = self.radius;
 	}
+	if (self.outgoing) {
+		params[@"outgoing"] = self.outgoing;
+	}
 	if (self.z) {
 		params[@"z"] = self.z;
+	}
+	if (self.lowColor) {
+		params[@"lowColor"] = [self.lowColor getData];
 	}
 	if (self.x2) {
 		params[@"x2"] = self.x2;
@@ -670,12 +670,6 @@
 	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
--(void)setMarker:(HIMarker *)marker {
-	HIMarker *oldValue = _marker;
-	_marker = marker;
-	[self updateHIObject:oldValue newValue:marker propertyName:@"marker"];
-}
-
 -(void)setDragDrop:(HIDragDrop *)dragDrop {
 	HIDragDrop *oldValue = _dragDrop;
 	_dragDrop = dragDrop;
@@ -718,28 +712,22 @@
 	[self updateNSObject:oldValue newValue:definition propertyName:@"definition"];
 }
 
--(void)setSliced:(NSNumber *)sliced {
-	NSNumber *oldValue = _sliced;
-	_sliced = sliced;
-	[self updateNSObject:oldValue newValue:sliced propertyName:@"sliced"];
-}
-
 -(void)setLegendIndex:(NSNumber *)legendIndex {
 	NSNumber *oldValue = _legendIndex;
 	_legendIndex = legendIndex;
 	[self updateNSObject:oldValue newValue:legendIndex propertyName:@"legendIndex"];
 }
 
+-(void)setMarker:(HIMarker *)marker {
+	HIMarker *oldValue = _marker;
+	_marker = marker;
+	[self updateHIObject:oldValue newValue:marker propertyName:@"marker"];
+}
+
 -(void)setLabel:(NSString *)label {
 	NSString *oldValue = _label;
 	_label = label;
 	[self updateNSObject:oldValue newValue:label propertyName:@"label"];
-}
-
--(void)setOutgoing:(NSNumber *)outgoing {
-	NSNumber *oldValue = _outgoing;
-	_outgoing = outgoing;
-	[self updateNSObject:oldValue newValue:outgoing propertyName:@"outgoing"];
 }
 
 -(void)setFrom:(NSString *)from {
@@ -820,12 +808,6 @@
 	[self updateNSObject:oldValue newValue:connectorWidth propertyName:@"connectorWidth"];
 }
 
--(void)setLowColor:(HIColor *)lowColor {
-	HIColor *oldValue = _lowColor;
-	_lowColor = lowColor;
-	[self updateHIObject:oldValue newValue:lowColor propertyName:@"lowColor"];
-}
-
 -(void)setPointPadding:(NSNumber *)pointPadding {
 	NSNumber *oldValue = _pointPadding;
 	_pointPadding = pointPadding;
@@ -850,6 +832,12 @@
 	[self updateNSObject:oldValue newValue:isSum propertyName:@"isSum"];
 }
 
+-(void)setSliced:(NSNumber *)sliced {
+	NSNumber *oldValue = _sliced;
+	_sliced = sliced;
+	[self updateNSObject:oldValue newValue:sliced propertyName:@"sliced"];
+}
+
 -(void)setGradientForSides:(NSNumber *)gradientForSides {
 	NSNumber *oldValue = _gradientForSides;
 	_gradientForSides = gradientForSides;
@@ -868,10 +856,22 @@
 	[self updateNSObject:oldValue newValue:radius propertyName:@"radius"];
 }
 
+-(void)setOutgoing:(NSNumber *)outgoing {
+	NSNumber *oldValue = _outgoing;
+	_outgoing = outgoing;
+	[self updateNSObject:oldValue newValue:outgoing propertyName:@"outgoing"];
+}
+
 -(void)setZ:(NSNumber *)z {
 	NSNumber *oldValue = _z;
 	_z = z;
 	[self updateNSObject:oldValue newValue:z propertyName:@"z"];
+}
+
+-(void)setLowColor:(HIColor *)lowColor {
+	HIColor *oldValue = _lowColor;
+	_lowColor = lowColor;
+	[self updateHIObject:oldValue newValue:lowColor propertyName:@"lowColor"];
 }
 
 -(void)setX2:(NSNumber *)x2 {

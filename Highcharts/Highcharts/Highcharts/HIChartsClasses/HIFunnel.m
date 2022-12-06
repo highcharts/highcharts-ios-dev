@@ -20,10 +20,7 @@
 	copyFunnel.index = [self.index copyWithZone: zone];
 	copyFunnel.legendIndex = [self.legendIndex copyWithZone: zone];
 	copyFunnel.name = [self.name copyWithZone: zone];
-	copyFunnel.stack = [self.stack copyWithZone: zone];
 	copyFunnel.type = [self.type copyWithZone: zone];
-	copyFunnel.xAxis = [self.xAxis copyWithZone: zone];
-	copyFunnel.yAxis = [self.yAxis copyWithZone: zone];
 	copyFunnel.zIndex = [self.zIndex copyWithZone: zone];
 	copyFunnel.center = [self.center copyWithZone: zone];
 	copyFunnel.reversed = [self.reversed copyWithZone: zone];
@@ -39,7 +36,6 @@
 	copyFunnel.point = [self.point copyWithZone: zone];
 	copyFunnel.color = [self.color copyWithZone: zone];
 	copyFunnel.colors = [self.colors copyWithZone: zone];
-	copyFunnel.size = [self.size copyWithZone: zone];
 	copyFunnel.borderColor = [self.borderColor copyWithZone: zone];
 	copyFunnel.tooltip = [self.tooltip copyWithZone: zone];
 	copyFunnel.thickness = [self.thickness copyWithZone: zone];
@@ -48,7 +44,6 @@
 	copyFunnel.startAngle = [self.startAngle copyWithZone: zone];
 	copyFunnel.events = [self.events copyWithZone: zone];
 	copyFunnel.endAngle = [self.endAngle copyWithZone: zone];
-	copyFunnel.innerSize = [self.innerSize copyWithZone: zone];
 	copyFunnel.slicedOffset = [self.slicedOffset copyWithZone: zone];
 	copyFunnel.depth = [self.depth copyWithZone: zone];
 	copyFunnel.borderWidth = [self.borderWidth copyWithZone: zone];
@@ -57,54 +52,27 @@
 	copyFunnel.linecap = [self.linecap copyWithZone: zone];
 	copyFunnel.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyFunnel.colorIndex = [self.colorIndex copyWithZone: zone];
-	copyFunnel.negativeColor = [self.negativeColor copyWithZone: zone];
-	copyFunnel.pointInterval = [self.pointInterval copyWithZone: zone];
-	copyFunnel.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyFunnel.colorKey = [self.colorKey copyWithZone: zone];
-	copyFunnel.softThreshold = [self.softThreshold copyWithZone: zone];
-	copyFunnel.dragDrop = [self.dragDrop copyWithZone: zone];
-	copyFunnel.dataSorting = [self.dataSorting copyWithZone: zone];
-	copyFunnel.marker = [self.marker copyWithZone: zone];
-	copyFunnel.label = [self.label copyWithZone: zone];
 	copyFunnel.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyFunnel.cursor = [self.cursor copyWithZone: zone];
-	copyFunnel.dashStyle = [self.dashStyle copyWithZone: zone];
-	copyFunnel.pointPlacement = [self.pointPlacement copyWithZone: zone];
-	copyFunnel.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyFunnel.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyFunnel.custom = [self.custom copyWithZone: zone];
 	copyFunnel.onPoint = [self.onPoint copyWithZone: zone];
-	copyFunnel.stacking = [self.stacking copyWithZone: zone];
-	copyFunnel.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyFunnel.relativeXValue = [self.relativeXValue copyWithZone: zone];
-	copyFunnel.threshold = [self.threshold copyWithZone: zone];
 	copyFunnel.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyFunnel.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyFunnel.opacity = [self.opacity copyWithZone: zone];
-	copyFunnel.animationLimit = [self.animationLimit copyWithZone: zone];
-	copyFunnel.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyFunnel.definition = [self.definition copyWithZone: zone];
 	copyFunnel.keys = [self.keys copyWithZone: zone];
 	copyFunnel.selected = [self.selected copyWithZone: zone];
 	copyFunnel.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyFunnel.accessibility = [self.accessibility copyWithZone: zone];
-	copyFunnel.step = [self.step copyWithZone: zone];
-	copyFunnel.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyFunnel.shadow = [self.shadow copyWithZone: zone];
 	copyFunnel.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyFunnel.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyFunnel.zones = [self.zones copyWithZone: zone];
-	copyFunnel.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
-	copyFunnel.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyFunnel.crisp = [self.crisp copyWithZone: zone];
 	copyFunnel.visible = [self.visible copyWithZone: zone];
-	copyFunnel.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyFunnel.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyFunnel.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyFunnel.className = [self.className copyWithZone: zone];
-	copyFunnel.pointStart = [self.pointStart copyWithZone: zone];
-	copyFunnel.connectEnds = [self.connectEnds copyWithZone: zone];
-	copyFunnel.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	return copyFunnel;
 }
 
@@ -148,9 +116,6 @@
 		}
 		params[@"colors"] = array;
 	}
-	if (self.size) {
-		params[@"size"] = self.size;
-	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
@@ -168,9 +133,6 @@
 	}
 	if (self.endAngle) {
 		params[@"endAngle"] = self.endAngle;
-	}
-	if (self.innerSize) {
-		params[@"innerSize"] = self.innerSize;
 	}
 	if (self.slicedOffset) {
 		params[@"slicedOffset"] = self.slicedOffset;
@@ -234,12 +196,6 @@
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
 
--(void)setSize:(id)size {
-	id oldValue = _size;
-	_size = size;
-	[self updateNSObject:oldValue newValue:size propertyName:@"size"];
-}
-
 -(void)setBorderColor:(HIColor *)borderColor {
 	HIColor *oldValue = _borderColor;
 	_borderColor = borderColor;
@@ -274,12 +230,6 @@
 	NSNumber *oldValue = _endAngle;
 	_endAngle = endAngle;
 	[self updateNSObject:oldValue newValue:endAngle propertyName:@"endAngle"];
-}
-
--(void)setInnerSize:(id)innerSize {
-	id oldValue = _innerSize;
-	_innerSize = innerSize;
-	[self updateNSObject:oldValue newValue:innerSize propertyName:@"innerSize"];
 }
 
 -(void)setSlicedOffset:(NSNumber *)slicedOffset {
