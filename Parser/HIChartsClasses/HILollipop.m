@@ -32,17 +32,12 @@
 	copyLollipop.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyLollipop.pointRange = [self.pointRange copyWithZone: zone];
 	copyLollipop.groupPadding = [self.groupPadding copyWithZone: zone];
-	copyLollipop.lowColor = [self.lowColor copyWithZone: zone];
 	copyLollipop.color = [self.color copyWithZone: zone];
 	copyLollipop.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyLollipop.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyLollipop.colorKey = [self.colorKey copyWithZone: zone];
-	copyLollipop.fillColor = [self.fillColor copyWithZone: zone];
-	copyLollipop.trackByArea = [self.trackByArea copyWithZone: zone];
 	copyLollipop.threshold = [self.threshold copyWithZone: zone];
 	copyLollipop.shadow = [self.shadow copyWithZone: zone];
-	copyLollipop.lineWidth = [self.lineWidth copyWithZone: zone];
-	copyLollipop.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyLollipop.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
 	copyLollipop.lineColor = [self.lineColor copyWithZone: zone];
 	copyLollipop.linecap = [self.linecap copyWithZone: zone];
@@ -66,12 +61,10 @@
 	copyLollipop.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyLollipop.custom = [self.custom copyWithZone: zone];
 	copyLollipop.onPoint = [self.onPoint copyWithZone: zone];
-	copyLollipop.stacking = [self.stacking copyWithZone: zone];
 	copyLollipop.animation = [self.animation copyWithZone: zone];
 	copyLollipop.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyLollipop.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyLollipop.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyLollipop.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyLollipop.events = [self.events copyWithZone: zone];
 	copyLollipop.opacity = [self.opacity copyWithZone: zone];
 	copyLollipop.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -85,7 +78,6 @@
 	copyLollipop.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyLollipop.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyLollipop.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyLollipop.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyLollipop.zones = [self.zones copyWithZone: zone];
 	copyLollipop.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyLollipop.visible = [self.visible copyWithZone: zone];
@@ -95,7 +87,6 @@
 	copyLollipop.className = [self.className copyWithZone: zone];
 	copyLollipop.pointStart = [self.pointStart copyWithZone: zone];
 	copyLollipop.connectEnds = [self.connectEnds copyWithZone: zone];
-	copyLollipop.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyLollipop.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyLollipop;
 }
@@ -117,18 +108,6 @@
 	}
 	if (self.groupPadding) {
 		params[@"groupPadding"] = self.groupPadding;
-	}
-	if (self.lowColor) {
-		params[@"lowColor"] = [self.lowColor getData];
-	}
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
-	}
-	if (self.trackByArea) {
-		params[@"trackByArea"] = self.trackByArea;
-	}
-	if (self.fillOpacity) {
-		params[@"fillOpacity"] = self.fillOpacity;
 	}
 	if (self.negativeFillColor) {
 		params[@"negativeFillColor"] = [self.negativeFillColor getData];
@@ -169,30 +148,6 @@
 	NSNumber *oldValue = _groupPadding;
 	_groupPadding = groupPadding;
 	[self updateNSObject:oldValue newValue:groupPadding propertyName:@"groupPadding"];
-}
-
--(void)setLowColor:(HIColor *)lowColor {
-	HIColor *oldValue = _lowColor;
-	_lowColor = lowColor;
-	[self updateHIObject:oldValue newValue:lowColor propertyName:@"lowColor"];
-}
-
--(void)setFillColor:(HIColor *)fillColor {
-	HIColor *oldValue = _fillColor;
-	_fillColor = fillColor;
-	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
-}
-
--(void)setTrackByArea:(NSNumber *)trackByArea {
-	NSNumber *oldValue = _trackByArea;
-	_trackByArea = trackByArea;
-	[self updateNSObject:oldValue newValue:trackByArea propertyName:@"trackByArea"];
-}
-
--(void)setFillOpacity:(NSNumber *)fillOpacity {
-	NSNumber *oldValue = _fillOpacity;
-	_fillOpacity = fillOpacity;
-	[self updateNSObject:oldValue newValue:fillOpacity propertyName:@"fillOpacity"];
 }
 
 -(void)setNegativeFillColor:(HIColor *)negativeFillColor {

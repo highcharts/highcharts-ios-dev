@@ -20,26 +20,21 @@
 	copyVariwide.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyVariwide.pointRange = [self.pointRange copyWithZone: zone];
 	copyVariwide.minPointLength = [self.minPointLength copyWithZone: zone];
-	copyVariwide.groupZPadding = [self.groupZPadding copyWithZone: zone];
 	copyVariwide.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyVariwide.states = [self.states copyWithZone: zone];
 	copyVariwide.colors = [self.colors copyWithZone: zone];
 	copyVariwide.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyVariwide.threshold = [self.threshold copyWithZone: zone];
 	copyVariwide.borderColor = [self.borderColor copyWithZone: zone];
-	copyVariwide.edgeColor = [self.edgeColor copyWithZone: zone];
 	copyVariwide.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyVariwide.tooltip = [self.tooltip copyWithZone: zone];
 	copyVariwide.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
 	copyVariwide.pointWidth = [self.pointWidth copyWithZone: zone];
 	copyVariwide.colorByPoint = [self.colorByPoint copyWithZone: zone];
-	copyVariwide.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyVariwide.dataLabels = [self.dataLabels copyWithZone: zone];
-	copyVariwide.depth = [self.depth copyWithZone: zone];
 	copyVariwide.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyVariwide.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyVariwide.grouping = [self.grouping copyWithZone: zone];
-	copyVariwide.linecap = [self.linecap copyWithZone: zone];
 	copyVariwide.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyVariwide.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyVariwide.clip = [self.clip copyWithZone: zone];
@@ -50,13 +45,11 @@
 	copyVariwide.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyVariwide.point = [self.point copyWithZone: zone];
 	copyVariwide.dataSorting = [self.dataSorting copyWithZone: zone];
-	copyVariwide.marker = [self.marker copyWithZone: zone];
 	copyVariwide.label = [self.label copyWithZone: zone];
 	copyVariwide.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyVariwide.cursor = [self.cursor copyWithZone: zone];
 	copyVariwide.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyVariwide.pointPlacement = [self.pointPlacement copyWithZone: zone];
-	copyVariwide.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyVariwide.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyVariwide.custom = [self.custom copyWithZone: zone];
 	copyVariwide.onPoint = [self.onPoint copyWithZone: zone];
@@ -65,7 +58,6 @@
 	copyVariwide.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyVariwide.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyVariwide.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyVariwide.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyVariwide.events = [self.events copyWithZone: zone];
 	copyVariwide.opacity = [self.opacity copyWithZone: zone];
 	copyVariwide.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -75,23 +67,18 @@
 	copyVariwide.selected = [self.selected copyWithZone: zone];
 	copyVariwide.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyVariwide.accessibility = [self.accessibility copyWithZone: zone];
-	copyVariwide.step = [self.step copyWithZone: zone];
 	copyVariwide.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyVariwide.shadow = [self.shadow copyWithZone: zone];
 	copyVariwide.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyVariwide.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyVariwide.zones = [self.zones copyWithZone: zone];
 	copyVariwide.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
-	copyVariwide.lineWidth = [self.lineWidth copyWithZone: zone];
-	copyVariwide.crisp = [self.crisp copyWithZone: zone];
 	copyVariwide.visible = [self.visible copyWithZone: zone];
 	copyVariwide.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyVariwide.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyVariwide.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyVariwide.className = [self.className copyWithZone: zone];
 	copyVariwide.pointStart = [self.pointStart copyWithZone: zone];
-	copyVariwide.connectEnds = [self.connectEnds copyWithZone: zone];
-	copyVariwide.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyVariwide.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyVariwide.data = [self.data copyWithZone: zone];
 	copyVariwide.id = [self.id copyWithZone: zone];
@@ -124,9 +111,6 @@
 	if (self.minPointLength) {
 		params[@"minPointLength"] = self.minPointLength;
 	}
-	if (self.groupZPadding) {
-		params[@"groupZPadding"] = self.groupZPadding;
-	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
@@ -136,9 +120,6 @@
 	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
-	}
-	if (self.edgeColor) {
-		params[@"edgeColor"] = [self.edgeColor getData];
 	}
 	if (self.centerInCategory) {
 		params[@"centerInCategory"] = self.centerInCategory;
@@ -151,12 +132,6 @@
 	}
 	if (self.colorByPoint) {
 		params[@"colorByPoint"] = self.colorByPoint;
-	}
-	if (self.edgeWidth) {
-		params[@"edgeWidth"] = self.edgeWidth;
-	}
-	if (self.depth) {
-		params[@"depth"] = self.depth;
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
@@ -199,12 +174,6 @@
 	[self updateNSObject:oldValue newValue:minPointLength propertyName:@"minPointLength"];
 }
 
--(void)setGroupZPadding:(NSNumber *)groupZPadding {
-	NSNumber *oldValue = _groupZPadding;
-	_groupZPadding = groupZPadding;
-	[self updateNSObject:oldValue newValue:groupZPadding propertyName:@"groupZPadding"];
-}
-
 -(void)setColors:(NSArray<HIColor *> *)colors {
 	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
@@ -215,12 +184,6 @@
 	HIColor *oldValue = _borderColor;
 	_borderColor = borderColor;
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
-}
-
--(void)setEdgeColor:(HIColor *)edgeColor {
-	HIColor *oldValue = _edgeColor;
-	_edgeColor = edgeColor;
-	[self updateHIObject:oldValue newValue:edgeColor propertyName:@"edgeColor"];
 }
 
 -(void)setCenterInCategory:(NSNumber *)centerInCategory {
@@ -245,18 +208,6 @@
 	NSNumber *oldValue = _colorByPoint;
 	_colorByPoint = colorByPoint;
 	[self updateNSObject:oldValue newValue:colorByPoint propertyName:@"colorByPoint"];
-}
-
--(void)setEdgeWidth:(NSNumber *)edgeWidth {
-	NSNumber *oldValue = _edgeWidth;
-	_edgeWidth = edgeWidth;
-	[self updateNSObject:oldValue newValue:edgeWidth propertyName:@"edgeWidth"];
-}
-
--(void)setDepth:(NSNumber *)depth {
-	NSNumber *oldValue = _depth;
-	_depth = depth;
-	[self updateNSObject:oldValue newValue:depth propertyName:@"depth"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {

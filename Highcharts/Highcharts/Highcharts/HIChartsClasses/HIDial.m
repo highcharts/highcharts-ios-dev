@@ -47,7 +47,16 @@
 		params[@"topWidth"] = self.topWidth;
 	}
 	if (self.path) {
-		params[@"path"] = self.path;
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.path) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"path"] = array;
 	}
 	if (self.baseWidth) {
 		params[@"baseWidth"] = self.baseWidth;
@@ -99,10 +108,10 @@
 	[self updateNSObject:oldValue newValue:topWidth propertyName:@"topWidth"];
 }
 
--(void)setPath:(id)path {
-	id oldValue = _path;
+-(void)setPath:(NSArray<NSString *> *)path {
+	NSArray<NSString *> *oldValue = _path;
 	_path = path;
-	[self updateNSObject:oldValue newValue:path propertyName:@"path"];
+	[self updateArrayObject:oldValue newValue:path propertyName:@"path"];
 }
 
 -(void)setBaseWidth:(NSNumber *)baseWidth {

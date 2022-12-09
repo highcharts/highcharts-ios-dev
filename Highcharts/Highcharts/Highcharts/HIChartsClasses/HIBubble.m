@@ -21,7 +21,6 @@
 	copyBubble.index = [self.index copyWithZone: zone];
 	copyBubble.legendIndex = [self.legendIndex copyWithZone: zone];
 	copyBubble.name = [self.name copyWithZone: zone];
-	copyBubble.stack = [self.stack copyWithZone: zone];
 	copyBubble.type = [self.type copyWithZone: zone];
 	copyBubble.xAxis = [self.xAxis copyWithZone: zone];
 	copyBubble.yAxis = [self.yAxis copyWithZone: zone];
@@ -44,7 +43,6 @@
 	copyBubble.sizeByAbsoluteValue = [self.sizeByAbsoluteValue copyWithZone: zone];
 	copyBubble.states = [self.states copyWithZone: zone];
 	copyBubble.jitter = [self.jitter copyWithZone: zone];
-	copyBubble.cluster = [self.cluster copyWithZone: zone];
 	copyBubble.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyBubble.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyBubble.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -54,7 +52,6 @@
 	copyBubble.clip = [self.clip copyWithZone: zone];
 	copyBubble.color = [self.color copyWithZone: zone];
 	copyBubble.pointInterval = [self.pointInterval copyWithZone: zone];
-	copyBubble.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyBubble.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyBubble.point = [self.point copyWithZone: zone];
 	copyBubble.dataSorting = [self.dataSorting copyWithZone: zone];
@@ -62,7 +59,6 @@
 	copyBubble.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyBubble.cursor = [self.cursor copyWithZone: zone];
 	copyBubble.dashStyle = [self.dashStyle copyWithZone: zone];
-	copyBubble.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyBubble.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyBubble.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBubble.custom = [self.custom copyWithZone: zone];
@@ -82,7 +78,6 @@
 	copyBubble.accessibility = [self.accessibility copyWithZone: zone];
 	copyBubble.step = [self.step copyWithZone: zone];
 	copyBubble.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
-	copyBubble.shadow = [self.shadow copyWithZone: zone];
 	copyBubble.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyBubble.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyBubble.zones = [self.zones copyWithZone: zone];
@@ -128,9 +123,6 @@
 	}
 	if (self.jitter) {
 		params[@"jitter"] = [self.jitter getParams];
-	}
-	if (self.cluster) {
-		params[@"cluster"] = [self.cluster getParams];
 	}
 	return params;
 }
@@ -189,12 +181,6 @@
 	HIJitter *oldValue = _jitter;
 	_jitter = jitter;
 	[self updateHIObject:oldValue newValue:jitter propertyName:@"jitter"];
-}
-
--(void)setCluster:(HICluster *)cluster {
-	HICluster *oldValue = _cluster;
-	_cluster = cluster;
-	[self updateHIObject:oldValue newValue:cluster propertyName:@"cluster"];
 }
 
 @end

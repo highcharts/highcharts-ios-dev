@@ -43,8 +43,8 @@
 	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
 }
 
--(void)setXAxis:(NSNumber *)xAxis {
-  NSNumber *oldValue = _xAxis;
+-(void)setXAxis:(id)xAxis {
+	id oldValue = _xAxis;
 	_xAxis = xAxis;
 	[self updateNSObject:oldValue newValue:xAxis propertyName:@"xAxis"];
 }
@@ -55,8 +55,8 @@
 	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }
 
--(void)setYAxis:(NSNumber *)yAxis {
-  NSNumber *oldValue = _yAxis;
+-(void)setYAxis:(id)yAxis {
+	id oldValue = _yAxis;
 	_yAxis = yAxis;
 	[self updateNSObject:oldValue newValue:yAxis propertyName:@"yAxis"];
 }

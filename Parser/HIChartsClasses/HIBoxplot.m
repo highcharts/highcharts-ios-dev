@@ -20,7 +20,6 @@
 	copyBoxplot.index = [self.index copyWithZone: zone];
 	copyBoxplot.legendIndex = [self.legendIndex copyWithZone: zone];
 	copyBoxplot.name = [self.name copyWithZone: zone];
-	copyBoxplot.stack = [self.stack copyWithZone: zone];
 	copyBoxplot.type = [self.type copyWithZone: zone];
 	copyBoxplot.xAxis = [self.xAxis copyWithZone: zone];
 	copyBoxplot.yAxis = [self.yAxis copyWithZone: zone];
@@ -42,14 +41,10 @@
 	copyBoxplot.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyBoxplot.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyBoxplot.pointPadding = [self.pointPadding copyWithZone: zone];
-	copyBoxplot.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyBoxplot.pointRange = [self.pointRange copyWithZone: zone];
 	copyBoxplot.minPointLength = [self.minPointLength copyWithZone: zone];
-	copyBoxplot.groupZPadding = [self.groupZPadding copyWithZone: zone];
 	copyBoxplot.cropThreshold = [self.cropThreshold copyWithZone: zone];
-	copyBoxplot.states = [self.states copyWithZone: zone];
 	copyBoxplot.colors = [self.colors copyWithZone: zone];
-	copyBoxplot.borderColor = [self.borderColor copyWithZone: zone];
 	copyBoxplot.edgeColor = [self.edgeColor copyWithZone: zone];
 	copyBoxplot.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyBoxplot.maxPointWidth = [self.maxPointWidth copyWithZone: zone];
@@ -59,10 +54,8 @@
 	copyBoxplot.edgeWidth = [self.edgeWidth copyWithZone: zone];
 	copyBoxplot.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyBoxplot.depth = [self.depth copyWithZone: zone];
-	copyBoxplot.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyBoxplot.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyBoxplot.grouping = [self.grouping copyWithZone: zone];
-	copyBoxplot.linecap = [self.linecap copyWithZone: zone];
 	copyBoxplot.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyBoxplot.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyBoxplot.clip = [self.clip copyWithZone: zone];
@@ -72,22 +65,18 @@
 	copyBoxplot.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyBoxplot.point = [self.point copyWithZone: zone];
 	copyBoxplot.dataSorting = [self.dataSorting copyWithZone: zone];
-	copyBoxplot.marker = [self.marker copyWithZone: zone];
 	copyBoxplot.label = [self.label copyWithZone: zone];
 	copyBoxplot.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyBoxplot.cursor = [self.cursor copyWithZone: zone];
 	copyBoxplot.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyBoxplot.pointPlacement = [self.pointPlacement copyWithZone: zone];
-	copyBoxplot.connectNulls = [self.connectNulls copyWithZone: zone];
 	copyBoxplot.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBoxplot.custom = [self.custom copyWithZone: zone];
 	copyBoxplot.onPoint = [self.onPoint copyWithZone: zone];
-	copyBoxplot.stacking = [self.stacking copyWithZone: zone];
 	copyBoxplot.animation = [self.animation copyWithZone: zone];
 	copyBoxplot.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyBoxplot.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyBoxplot.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyBoxplot.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyBoxplot.events = [self.events copyWithZone: zone];
 	copyBoxplot.opacity = [self.opacity copyWithZone: zone];
 	copyBoxplot.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -97,7 +86,6 @@
 	copyBoxplot.selected = [self.selected copyWithZone: zone];
 	copyBoxplot.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyBoxplot.accessibility = [self.accessibility copyWithZone: zone];
-	copyBoxplot.step = [self.step copyWithZone: zone];
 	copyBoxplot.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyBoxplot.shadow = [self.shadow copyWithZone: zone];
 	copyBoxplot.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
@@ -111,9 +99,8 @@
 	copyBoxplot.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBoxplot.className = [self.className copyWithZone: zone];
 	copyBoxplot.pointStart = [self.pointStart copyWithZone: zone];
-	copyBoxplot.connectEnds = [self.connectEnds copyWithZone: zone];
-	copyBoxplot.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyBoxplot.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyBoxplot.stacking = [self.stacking copyWithZone: zone];
 	return copyBoxplot;
 }
 
@@ -156,17 +143,11 @@
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
 	}
-	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
-	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
 	}
 	if (self.minPointLength) {
 		params[@"minPointLength"] = self.minPointLength;
-	}
-	if (self.groupZPadding) {
-		params[@"groupZPadding"] = self.groupZPadding;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -174,9 +155,6 @@
 			[array addObject:[obj getData]];
 		}
 		params[@"colors"] = array;
-	}
-	if (self.borderColor) {
-		params[@"borderColor"] = [self.borderColor getData];
 	}
 	if (self.edgeColor) {
 		params[@"edgeColor"] = [self.edgeColor getData];
@@ -201,9 +179,6 @@
 	}
 	if (self.depth) {
 		params[@"depth"] = self.depth;
-	}
-	if (self.borderWidth) {
-		params[@"borderWidth"] = self.borderWidth;
 	}
 	if (self.grouping) {
 		params[@"grouping"] = self.grouping;
@@ -285,12 +260,6 @@
 	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
 }
 
--(void)setBorderRadius:(NSNumber *)borderRadius {
-	NSNumber *oldValue = _borderRadius;
-	_borderRadius = borderRadius;
-	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
-}
-
 -(void)setPointRange:(NSNumber *)pointRange {
 	NSNumber *oldValue = _pointRange;
 	_pointRange = pointRange;
@@ -303,22 +272,10 @@
 	[self updateNSObject:oldValue newValue:minPointLength propertyName:@"minPointLength"];
 }
 
--(void)setGroupZPadding:(NSNumber *)groupZPadding {
-	NSNumber *oldValue = _groupZPadding;
-	_groupZPadding = groupZPadding;
-	[self updateNSObject:oldValue newValue:groupZPadding propertyName:@"groupZPadding"];
-}
-
 -(void)setColors:(NSArray<HIColor *> *)colors {
 	NSArray<HIColor *> *oldValue = _colors;
 	_colors = colors;
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
-}
-
--(void)setBorderColor:(HIColor *)borderColor {
-	HIColor *oldValue = _borderColor;
-	_borderColor = borderColor;
-	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
 -(void)setEdgeColor:(HIColor *)edgeColor {
@@ -367,12 +324,6 @@
 	NSNumber *oldValue = _depth;
 	_depth = depth;
 	[self updateNSObject:oldValue newValue:depth propertyName:@"depth"];
-}
-
--(void)setBorderWidth:(NSNumber *)borderWidth {
-	NSNumber *oldValue = _borderWidth;
-	_borderWidth = borderWidth;
-	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
 -(void)setGrouping:(NSNumber *)grouping {
