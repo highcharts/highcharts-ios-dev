@@ -24,7 +24,7 @@
 	copyBoxplot.xAxis = [self.xAxis copyWithZone: zone];
 	copyBoxplot.yAxis = [self.yAxis copyWithZone: zone];
 	copyBoxplot.zIndex = [self.zIndex copyWithZone: zone];
-	copyBoxplot.stemWidth = [self.stemWidth copyWithZone: zone];
+	copyBoxplot.stemColor = [self.stemColor copyWithZone: zone];
 	copyBoxplot.whiskerLength = [self.whiskerLength copyWithZone: zone];
 	copyBoxplot.medianWidth = [self.medianWidth copyWithZone: zone];
 	copyBoxplot.whiskerColor = [self.whiskerColor copyWithZone: zone];
@@ -39,6 +39,7 @@
 	copyBoxplot.threshold = [self.threshold copyWithZone: zone];
 	copyBoxplot.boxDashStyle = [self.boxDashStyle copyWithZone: zone];
 	copyBoxplot.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyBoxplot.stemWidth = [self.stemWidth copyWithZone: zone];
 	copyBoxplot.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyBoxplot.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyBoxplot.pointRange = [self.pointRange copyWithZone: zone];
@@ -90,13 +91,12 @@
 	copyBoxplot.shadow = [self.shadow copyWithZone: zone];
 	copyBoxplot.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyBoxplot.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyBoxplot.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBoxplot.zones = [self.zones copyWithZone: zone];
 	copyBoxplot.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyBoxplot.crisp = [self.crisp copyWithZone: zone];
 	copyBoxplot.visible = [self.visible copyWithZone: zone];
 	copyBoxplot.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyBoxplot.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyBoxplot.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBoxplot.className = [self.className copyWithZone: zone];
 	copyBoxplot.pointStart = [self.pointStart copyWithZone: zone];
 	copyBoxplot.showInLegend = [self.showInLegend copyWithZone: zone];
@@ -107,8 +107,8 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
-	if (self.stemWidth) {
-		params[@"stemWidth"] = self.stemWidth;
+	if (self.stemColor) {
+		params[@"stemColor"] = [self.stemColor getData];
 	}
 	if (self.whiskerLength) {
 		params[@"whiskerLength"] = self.whiskerLength;
@@ -139,6 +139,9 @@
 	}
 	if (self.boxDashStyle) {
 		params[@"boxDashStyle"] = self.boxDashStyle;
+	}
+	if (self.stemWidth) {
+		params[@"stemWidth"] = self.stemWidth;
 	}
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
@@ -188,10 +191,10 @@
 
 # pragma mark - Setters
 
--(void)setStemWidth:(NSNumber *)stemWidth {
-	NSNumber *oldValue = _stemWidth;
-	_stemWidth = stemWidth;
-	[self updateNSObject:oldValue newValue:stemWidth propertyName:@"stemWidth"];
+-(void)setStemColor:(HIColor *)stemColor {
+	HIColor *oldValue = _stemColor;
+	_stemColor = stemColor;
+	[self updateHIObject:oldValue newValue:stemColor propertyName:@"stemColor"];
 }
 
 -(void)setWhiskerLength:(id)whiskerLength {
@@ -252,6 +255,12 @@
 	NSString *oldValue = _boxDashStyle;
 	_boxDashStyle = boxDashStyle;
 	[self updateNSObject:oldValue newValue:boxDashStyle propertyName:@"boxDashStyle"];
+}
+
+-(void)setStemWidth:(NSNumber *)stemWidth {
+	NSNumber *oldValue = _stemWidth;
+	_stemWidth = stemWidth;
+	[self updateNSObject:oldValue newValue:stemWidth propertyName:@"stemWidth"];
 }
 
 -(void)setPointPadding:(NSNumber *)pointPadding {

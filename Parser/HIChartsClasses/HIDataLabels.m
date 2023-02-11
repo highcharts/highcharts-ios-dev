@@ -14,16 +14,13 @@
 	copyDataLabels.defer = [self.defer copyWithZone: zone];
 	copyDataLabels.style = [self.style copyWithZone: zone];
 	copyDataLabels.rotationMode = [self.rotationMode copyWithZone: zone];
-	copyDataLabels.verticalAlign = [self.verticalAlign copyWithZone: zone];
-	copyDataLabels.format = [self.format copyWithZone: zone];
-	copyDataLabels.align = [self.align copyWithZone: zone];
-	copyDataLabels.enabled = [self.enabled copyWithZone: zone];
-	copyDataLabels.inside = [self.inside copyWithZone: zone];
 	copyDataLabels.connectorColor = [self.connectorColor copyWithZone: zone];
 	copyDataLabels.crookDistance = [self.crookDistance copyWithZone: zone];
 	copyDataLabels.alignTo = [self.alignTo copyWithZone: zone];
 	copyDataLabels.connectorWidth = [self.connectorWidth copyWithZone: zone];
 	copyDataLabels.softConnector = [self.softConnector copyWithZone: zone];
+	copyDataLabels.format = [self.format copyWithZone: zone];
+	copyDataLabels.enabled = [self.enabled copyWithZone: zone];
 	copyDataLabels.connectorPadding = [self.connectorPadding copyWithZone: zone];
 	copyDataLabels.connectorShape = [self.connectorShape copyWithZone: zone];
 	copyDataLabels.formatter = [self.formatter copyWithZone: zone];
@@ -44,11 +41,14 @@
 	copyDataLabels.x = [self.x copyWithZone: zone];
 	copyDataLabels.rotation = [self.rotation copyWithZone: zone];
 	copyDataLabels.zIndex = [self.zIndex copyWithZone: zone];
+	copyDataLabels.verticalAlign = [self.verticalAlign copyWithZone: zone];
 	copyDataLabels.className = [self.className copyWithZone: zone];
 	copyDataLabels.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyDataLabels.y = [self.y copyWithZone: zone];
 	copyDataLabels.position = [self.position copyWithZone: zone];
 	copyDataLabels.textPath = [self.textPath copyWithZone: zone];
+	copyDataLabels.align = [self.align copyWithZone: zone];
+	copyDataLabels.inside = [self.inside copyWithZone: zone];
 	copyDataLabels.yHigh = [self.yHigh copyWithZone: zone];
 	copyDataLabels.xHigh = [self.xHigh copyWithZone: zone];
 	copyDataLabels.xLow = [self.xLow copyWithZone: zone];
@@ -83,21 +83,6 @@
 	if (self.rotationMode) {
 		params[@"rotationMode"] = self.rotationMode;
 	}
-	if (self.verticalAlign) {
-		params[@"verticalAlign"] = self.verticalAlign;
-	}
-	if (self.format) {
-		params[@"format"] = self.format;
-	}
-	if (self.align) {
-		params[@"align"] = self.align;
-	}
-	if (self.enabled) {
-		params[@"enabled"] = self.enabled;
-	}
-	if (self.inside) {
-		params[@"inside"] = self.inside;
-	}
 	if (self.connectorColor) {
 		params[@"connectorColor"] = [self.connectorColor getData];
 	}
@@ -112,6 +97,12 @@
 	}
 	if (self.softConnector) {
 		params[@"softConnector"] = self.softConnector;
+	}
+	if (self.format) {
+		params[@"format"] = self.format;
+	}
+	if (self.enabled) {
+		params[@"enabled"] = self.enabled;
 	}
 	if (self.connectorPadding) {
 		params[@"connectorPadding"] = self.connectorPadding;
@@ -173,6 +164,9 @@
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
 	}
+	if (self.verticalAlign) {
+		params[@"verticalAlign"] = self.verticalAlign;
+	}
 	if (self.className) {
 		params[@"className"] = self.className;
 	}
@@ -187,6 +181,12 @@
 	}
 	if (self.textPath) {
 		params[@"textPath"] = [self.textPath getParams];
+	}
+	if (self.align) {
+		params[@"align"] = self.align;
+	}
+	if (self.inside) {
+		params[@"inside"] = self.inside;
 	}
 	if (self.yHigh) {
 		params[@"yHigh"] = self.yHigh;
@@ -265,36 +265,6 @@
 	[self updateNSObject:oldValue newValue:rotationMode propertyName:@"rotationMode"];
 }
 
--(void)setVerticalAlign:(NSString *)verticalAlign {
-	NSString *oldValue = _verticalAlign;
-	_verticalAlign = verticalAlign;
-	[self updateNSObject:oldValue newValue:verticalAlign propertyName:@"verticalAlign"];
-}
-
--(void)setFormat:(NSString *)format {
-	NSString *oldValue = _format;
-	_format = format;
-	[self updateNSObject:oldValue newValue:format propertyName:@"format"];
-}
-
--(void)setAlign:(NSString *)align {
-	NSString *oldValue = _align;
-	_align = align;
-	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
-}
-
--(void)setEnabled:(NSNumber *)enabled {
-	NSNumber *oldValue = _enabled;
-	_enabled = enabled;
-	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
-}
-
--(void)setInside:(NSNumber *)inside {
-	NSNumber *oldValue = _inside;
-	_inside = inside;
-	[self updateNSObject:oldValue newValue:inside propertyName:@"inside"];
-}
-
 -(void)setConnectorColor:(HIColor *)connectorColor {
 	HIColor *oldValue = _connectorColor;
 	_connectorColor = connectorColor;
@@ -323,6 +293,18 @@
 	NSNumber *oldValue = _softConnector;
 	_softConnector = softConnector;
 	[self updateNSObject:oldValue newValue:softConnector propertyName:@"softConnector"];
+}
+
+-(void)setFormat:(NSString *)format {
+	NSString *oldValue = _format;
+	_format = format;
+	[self updateNSObject:oldValue newValue:format propertyName:@"format"];
+}
+
+-(void)setEnabled:(NSNumber *)enabled {
+	NSNumber *oldValue = _enabled;
+	_enabled = enabled;
+	[self updateNSObject:oldValue newValue:enabled propertyName:@"enabled"];
 }
 
 -(void)setConnectorPadding:(NSNumber *)connectorPadding {
@@ -445,6 +427,12 @@
 	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
+-(void)setVerticalAlign:(NSString *)verticalAlign {
+	NSString *oldValue = _verticalAlign;
+	_verticalAlign = verticalAlign;
+	[self updateNSObject:oldValue newValue:verticalAlign propertyName:@"verticalAlign"];
+}
+
 -(void)setClassName:(NSString *)className {
 	NSString *oldValue = _className;
 	_className = className;
@@ -473,6 +461,18 @@
 	HITextPath *oldValue = _textPath;
 	_textPath = textPath;
 	[self updateHIObject:oldValue newValue:textPath propertyName:@"textPath"];
+}
+
+-(void)setAlign:(NSString *)align {
+	NSString *oldValue = _align;
+	_align = align;
+	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
+}
+
+-(void)setInside:(NSNumber *)inside {
+	NSNumber *oldValue = _inside;
+	_inside = inside;
+	[self updateNSObject:oldValue newValue:inside propertyName:@"inside"];
 }
 
 -(void)setYHigh:(NSNumber *)yHigh {

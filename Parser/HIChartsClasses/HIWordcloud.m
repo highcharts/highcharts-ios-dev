@@ -58,7 +58,6 @@
 	copyWordcloud.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyWordcloud.visible = [self.visible copyWithZone: zone];
 	copyWordcloud.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyWordcloud.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyWordcloud.className = [self.className copyWithZone: zone];
 	copyWordcloud.data = [self.data copyWithZone: zone];
 	copyWordcloud.id = [self.id copyWithZone: zone];

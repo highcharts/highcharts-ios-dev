@@ -67,14 +67,13 @@
 	copyArearange.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyArearange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyArearange.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyArearange.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyArearange.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyArearange.zones = [self.zones copyWithZone: zone];
 	copyArearange.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyArearange.crisp = [self.crisp copyWithZone: zone];
 	copyArearange.visible = [self.visible copyWithZone: zone];
 	copyArearange.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyArearange.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyArearange.zoneAxis = [self.zoneAxis copyWithZone: zone];
+	copyArearange.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyArearange.className = [self.className copyWithZone: zone];
 	copyArearange.pointStart = [self.pointStart copyWithZone: zone];
 	copyArearange.connectEnds = [self.connectEnds copyWithZone: zone];

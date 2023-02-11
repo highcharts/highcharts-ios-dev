@@ -52,12 +52,11 @@
 	copyTilemap.accessibility = [self.accessibility copyWithZone: zone];
 	copyTilemap.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyTilemap.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyTilemap.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyTilemap.zones = [self.zones copyWithZone: zone];
 	copyTilemap.crisp = [self.crisp copyWithZone: zone];
 	copyTilemap.visible = [self.visible copyWithZone: zone];
 	copyTilemap.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyTilemap.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyTilemap.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyTilemap.className = [self.className copyWithZone: zone];
 	copyTilemap.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyTilemap.data = [self.data copyWithZone: zone];

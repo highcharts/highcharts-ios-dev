@@ -29,7 +29,7 @@
 	copyErrorbar.whiskerWidth = [self.whiskerWidth copyWithZone: zone];
 	copyErrorbar.tooltip = [self.tooltip copyWithZone: zone];
 	copyErrorbar.grouping = [self.grouping copyWithZone: zone];
-	copyErrorbar.stemWidth = [self.stemWidth copyWithZone: zone];
+	copyErrorbar.stemColor = [self.stemColor copyWithZone: zone];
 	copyErrorbar.whiskerLength = [self.whiskerLength copyWithZone: zone];
 	copyErrorbar.medianWidth = [self.medianWidth copyWithZone: zone];
 	copyErrorbar.whiskerColor = [self.whiskerColor copyWithZone: zone];
@@ -42,6 +42,7 @@
 	copyErrorbar.threshold = [self.threshold copyWithZone: zone];
 	copyErrorbar.boxDashStyle = [self.boxDashStyle copyWithZone: zone];
 	copyErrorbar.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyErrorbar.stemWidth = [self.stemWidth copyWithZone: zone];
 	copyErrorbar.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyErrorbar.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyErrorbar.pointRange = [self.pointRange copyWithZone: zone];
@@ -91,12 +92,11 @@
 	copyErrorbar.shadow = [self.shadow copyWithZone: zone];
 	copyErrorbar.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyErrorbar.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyErrorbar.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyErrorbar.zones = [self.zones copyWithZone: zone];
 	copyErrorbar.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyErrorbar.crisp = [self.crisp copyWithZone: zone];
 	copyErrorbar.visible = [self.visible copyWithZone: zone];
-	copyErrorbar.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyErrorbar.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyErrorbar.className = [self.className copyWithZone: zone];
 	copyErrorbar.pointStart = [self.pointStart copyWithZone: zone];
 	copyErrorbar.showInLegend = [self.showInLegend copyWithZone: zone];
@@ -113,8 +113,8 @@
 	if (self.grouping) {
 		params[@"grouping"] = self.grouping;
 	}
-	if (self.stemWidth) {
-		params[@"stemWidth"] = self.stemWidth;
+	if (self.stemColor) {
+		params[@"stemColor"] = [self.stemColor getData];
 	}
 	if (self.whiskerLength) {
 		params[@"whiskerLength"] = self.whiskerLength;
@@ -142,6 +142,9 @@
 	}
 	if (self.boxDashStyle) {
 		params[@"boxDashStyle"] = self.boxDashStyle;
+	}
+	if (self.stemWidth) {
+		params[@"stemWidth"] = self.stemWidth;
 	}
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
@@ -200,10 +203,10 @@
 	[self updateNSObject:oldValue newValue:grouping propertyName:@"grouping"];
 }
 
--(void)setStemWidth:(NSNumber *)stemWidth {
-	NSNumber *oldValue = _stemWidth;
-	_stemWidth = stemWidth;
-	[self updateNSObject:oldValue newValue:stemWidth propertyName:@"stemWidth"];
+-(void)setStemColor:(HIColor *)stemColor {
+	HIColor *oldValue = _stemColor;
+	_stemColor = stemColor;
+	[self updateHIObject:oldValue newValue:stemColor propertyName:@"stemColor"];
 }
 
 -(void)setWhiskerLength:(id)whiskerLength {
@@ -258,6 +261,12 @@
 	NSString *oldValue = _boxDashStyle;
 	_boxDashStyle = boxDashStyle;
 	[self updateNSObject:oldValue newValue:boxDashStyle propertyName:@"boxDashStyle"];
+}
+
+-(void)setStemWidth:(NSNumber *)stemWidth {
+	NSNumber *oldValue = _stemWidth;
+	_stemWidth = stemWidth;
+	[self updateNSObject:oldValue newValue:stemWidth propertyName:@"stemWidth"];
 }
 
 -(void)setPointPadding:(NSNumber *)pointPadding {

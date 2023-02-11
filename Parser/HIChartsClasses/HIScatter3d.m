@@ -69,13 +69,12 @@
 	copyScatter3d.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyScatter3d.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyScatter3d.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyScatter3d.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyScatter3d.zones = [self.zones copyWithZone: zone];
 	copyScatter3d.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyScatter3d.crisp = [self.crisp copyWithZone: zone];
 	copyScatter3d.visible = [self.visible copyWithZone: zone];
 	copyScatter3d.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyScatter3d.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyScatter3d.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyScatter3d.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyScatter3d.className = [self.className copyWithZone: zone];
 	copyScatter3d.pointStart = [self.pointStart copyWithZone: zone];

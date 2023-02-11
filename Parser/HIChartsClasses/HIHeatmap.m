@@ -63,12 +63,11 @@
 	copyHeatmap.accessibility = [self.accessibility copyWithZone: zone];
 	copyHeatmap.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyHeatmap.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyHeatmap.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyHeatmap.zones = [self.zones copyWithZone: zone];
 	copyHeatmap.crisp = [self.crisp copyWithZone: zone];
 	copyHeatmap.visible = [self.visible copyWithZone: zone];
 	copyHeatmap.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyHeatmap.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyHeatmap.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyHeatmap.className = [self.className copyWithZone: zone];
 	copyHeatmap.boostThreshold = [self.boostThreshold copyWithZone: zone];
 	copyHeatmap.showInLegend = [self.showInLegend copyWithZone: zone];

@@ -72,7 +72,6 @@
 	copyDependencywheel.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyDependencywheel.visible = [self.visible copyWithZone: zone];
 	copyDependencywheel.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyDependencywheel.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyDependencywheel.className = [self.className copyWithZone: zone];
 	return copyDependencywheel;
 }

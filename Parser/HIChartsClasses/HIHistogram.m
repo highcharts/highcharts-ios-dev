@@ -84,12 +84,11 @@
 	copyHistogram.shadow = [self.shadow copyWithZone: zone];
 	copyHistogram.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyHistogram.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyHistogram.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyHistogram.zones = [self.zones copyWithZone: zone];
 	copyHistogram.crisp = [self.crisp copyWithZone: zone];
 	copyHistogram.visible = [self.visible copyWithZone: zone];
 	copyHistogram.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyHistogram.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyHistogram.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyHistogram.className = [self.className copyWithZone: zone];
 	copyHistogram.pointStart = [self.pointStart copyWithZone: zone];
 	copyHistogram.showInLegend = [self.showInLegend copyWithZone: zone];
