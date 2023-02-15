@@ -75,6 +75,8 @@
 		
 		<option value="//api/name/allowHTML">allowHTML</option>
 		
+		<option value="//api/name/allowTableSorting">allowTableSorting</option>
+		
 		<option value="//api/name/buttons">buttons</option>
 		
 		<option value="//api/name/chartMenuLabel">chartMenuLabel</option>
@@ -258,6 +260,57 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/menuitemdefinitions/">Menu item definitions</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIExporting.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/chartOptions" title="chartOptions"></a>
+	<h3 class="method-title"><code><a href="#//api/name/chartOptions">&nbsp;&nbsp;chartOptions</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Additional chart options to be merged into the chart before exporting to an image format. This does not apply to printing the chart via the export menu. For example, a common use case is to add data labels to improve readability of the exported chart, or to add a printer-friendly color scheme to exported PDFs.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSDictionary *chartOptions</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/chartoptions-data-labels/">Added data labels</a></li>
 </ul>
 
 			</div>
@@ -1204,8 +1257,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/chartOptions" title="chartOptions"></a>
-	<h3 class="method-title"><code><a href="#//api/name/chartOptions">&nbsp;&nbsp;chartOptions</a></code>
+	<a name="//api/name/allowTableSorting" title="allowTableSorting"></a>
+	<h3 class="method-title"><code><a href="#//api/name/allowTableSorting">&nbsp;&nbsp;allowTableSorting</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1215,12 +1268,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Additional chart options to be merged into the chart before exporting to an image format. This does not apply to printing the chart via the export menu. For example, a common use case is to add data labels to improve readability of the exported chart, or to add a printer-friendly color scheme to exported PDFs.</p>
+				<p>Allows the end user to sort the data table by clicking on column headers.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSDictionary *chartOptions</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *allowTableSorting</code></div>
 
 		    
 			
@@ -1232,12 +1285,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/chartoptions-data-labels/">Added data labels</a></li>
-</ul>
-
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
 			</div>
 			
 
@@ -1401,7 +1449,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2022 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2023 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>
