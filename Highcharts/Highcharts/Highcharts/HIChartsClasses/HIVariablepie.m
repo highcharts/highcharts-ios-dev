@@ -73,7 +73,6 @@
 	copyVariablepie.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyVariablepie.crisp = [self.crisp copyWithZone: zone];
 	copyVariablepie.visible = [self.visible copyWithZone: zone];
-	copyVariablepie.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyVariablepie.className = [self.className copyWithZone: zone];
 	return copyVariablepie;
 }

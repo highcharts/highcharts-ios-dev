@@ -61,7 +61,6 @@
 	copyTreegraph.crisp = [self.crisp copyWithZone: zone];
 	copyTreegraph.visible = [self.visible copyWithZone: zone];
 	copyTreegraph.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyTreegraph.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyTreegraph.className = [self.className copyWithZone: zone];
 	copyTreegraph.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyTreegraph.pointInterval = [self.pointInterval copyWithZone: zone];

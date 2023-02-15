@@ -12,6 +12,7 @@
 	HIExporting *copyExporting = [[HIExporting allocWithZone: zone] init];
 	copyExporting.accessibility = [self.accessibility copyWithZone: zone];
 	copyExporting.menuItemDefinitions = [self.menuItemDefinitions copyWithZone: zone];
+	copyExporting.chartOptions = [self.chartOptions copyWithZone: zone];
 	copyExporting.sourceHeight = [self.sourceHeight copyWithZone: zone];
 	copyExporting.sourceWidth = [self.sourceWidth copyWithZone: zone];
 	copyExporting.scale = [self.scale copyWithZone: zone];
@@ -31,7 +32,7 @@
 	copyExporting.enabled = [self.enabled copyWithZone: zone];
 	copyExporting.allowHTML = [self.allowHTML copyWithZone: zone];
 	copyExporting.pdfFont = [self.pdfFont copyWithZone: zone];
-	copyExporting.chartOptions = [self.chartOptions copyWithZone: zone];
+	copyExporting.allowTableSorting = [self.allowTableSorting copyWithZone: zone];
 	copyExporting.error = [self.error copyWithZone: zone];
 	copyExporting.libURL = [self.libURL copyWithZone: zone];
 	copyExporting.menuButtonLabel = [self.menuButtonLabel copyWithZone: zone];
@@ -47,6 +48,9 @@
 	}
 	if (self.menuItemDefinitions) {
 		params[@"menuItemDefinitions"] = self.menuItemDefinitions;
+	}
+	if (self.chartOptions) {
+		params[@"chartOptions"] = self.chartOptions;
 	}
 	if (self.sourceHeight) {
 		params[@"sourceHeight"] = self.sourceHeight;
@@ -105,8 +109,8 @@
 	if (self.pdfFont) {
 		params[@"pdfFont"] = [self.pdfFont getParams];
 	}
-	if (self.chartOptions) {
-		params[@"chartOptions"] = self.chartOptions;
+	if (self.allowTableSorting) {
+		params[@"allowTableSorting"] = self.allowTableSorting;
 	}
 	if (self.error) {
 		params[@"error"] = [self.error getFunction];
@@ -135,6 +139,12 @@
 	id oldValue = _menuItemDefinitions;
 	_menuItemDefinitions = menuItemDefinitions;
 	[self updateNSObject:oldValue newValue:menuItemDefinitions propertyName:@"menuItemDefinitions"];
+}
+
+-(void)setChartOptions:(NSDictionary *)chartOptions {
+	NSDictionary *oldValue = _chartOptions;
+	_chartOptions = chartOptions;
+	[self updateNSObject:oldValue newValue:chartOptions propertyName:@"chartOptions"];
 }
 
 -(void)setSourceHeight:(NSNumber *)sourceHeight {
@@ -251,10 +261,10 @@
 	[self updateHIObject:oldValue newValue:pdfFont propertyName:@"pdfFont"];
 }
 
--(void)setChartOptions:(NSDictionary *)chartOptions {
-	NSDictionary *oldValue = _chartOptions;
-	_chartOptions = chartOptions;
-	[self updateNSObject:oldValue newValue:chartOptions propertyName:@"chartOptions"];
+-(void)setAllowTableSorting:(NSNumber *)allowTableSorting {
+	NSNumber *oldValue = _allowTableSorting;
+	_allowTableSorting = allowTableSorting;
+	[self updateNSObject:oldValue newValue:allowTableSorting propertyName:@"allowTableSorting"];
 }
 
 -(void)setError:(HIFunction *)error {

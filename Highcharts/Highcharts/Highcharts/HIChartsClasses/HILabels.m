@@ -44,6 +44,7 @@
 	copyLabels.verticalAlign = [self.verticalAlign copyWithZone: zone];
 	copyLabels.className = [self.className copyWithZone: zone];
 	copyLabels.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyLabels.clip = [self.clip copyWithZone: zone];
 	return copyLabels;
 }
 
@@ -160,6 +161,9 @@
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
+	}
+	if (self.clip) {
+		params[@"clip"] = self.clip;
 	}
 	return params;
 }
@@ -368,6 +372,12 @@
 	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
 	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
+}
+
+-(void)setClip:(NSNumber *)clip {
+	NSNumber *oldValue = _clip;
+	_clip = clip;
+	[self updateNSObject:oldValue newValue:clip propertyName:@"clip"];
 }
 
 @end

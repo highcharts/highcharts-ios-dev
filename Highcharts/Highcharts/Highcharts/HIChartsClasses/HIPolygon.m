@@ -58,13 +58,12 @@
 	copyPolygon.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyPolygon.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPolygon.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyPolygon.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyPolygon.zones = [self.zones copyWithZone: zone];
 	copyPolygon.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyPolygon.crisp = [self.crisp copyWithZone: zone];
 	copyPolygon.visible = [self.visible copyWithZone: zone];
 	copyPolygon.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyPolygon.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyPolygon.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyPolygon.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyPolygon.className = [self.className copyWithZone: zone];
 	copyPolygon.pointStart = [self.pointStart copyWithZone: zone];

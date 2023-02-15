@@ -80,13 +80,12 @@
 	copyFunnel3d.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyFunnel3d.shadow = [self.shadow copyWithZone: zone];
 	copyFunnel3d.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
+	copyFunnel3d.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyFunnel3d.zones = [self.zones copyWithZone: zone];
 	copyFunnel3d.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyFunnel3d.crisp = [self.crisp copyWithZone: zone];
 	copyFunnel3d.visible = [self.visible copyWithZone: zone];
 	copyFunnel3d.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyFunnel3d.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyFunnel3d.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyFunnel3d.className = [self.className copyWithZone: zone];
 	copyFunnel3d.pointStart = [self.pointStart copyWithZone: zone];
 	copyFunnel3d.data = [self.data copyWithZone: zone];
@@ -94,17 +93,11 @@
 	copyFunnel3d.index = [self.index copyWithZone: zone];
 	copyFunnel3d.legendIndex = [self.legendIndex copyWithZone: zone];
 	copyFunnel3d.name = [self.name copyWithZone: zone];
+	copyFunnel3d.stack = [self.stack copyWithZone: zone];
 	copyFunnel3d.type = [self.type copyWithZone: zone];
+	copyFunnel3d.xAxis = [self.xAxis copyWithZone: zone];
+	copyFunnel3d.yAxis = [self.yAxis copyWithZone: zone];
 	copyFunnel3d.zIndex = [self.zIndex copyWithZone: zone];
-	copyFunnel3d.center = [self.center copyWithZone: zone];
-	copyFunnel3d.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
-	copyFunnel3d.thickness = [self.thickness copyWithZone: zone];
-	copyFunnel3d.minSize = [self.minSize copyWithZone: zone];
-	copyFunnel3d.fillColor = [self.fillColor copyWithZone: zone];
-	copyFunnel3d.startAngle = [self.startAngle copyWithZone: zone];
-	copyFunnel3d.endAngle = [self.endAngle copyWithZone: zone];
-	copyFunnel3d.slicedOffset = [self.slicedOffset copyWithZone: zone];
-	copyFunnel3d.linecap = [self.linecap copyWithZone: zone];
 	return copyFunnel3d;
 }
 
@@ -183,39 +176,6 @@
 	}
 	if (self.grouping) {
 		params[@"grouping"] = self.grouping;
-	}
-	if (self.center) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		for (id obj in self.center) {
-			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
-				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
-			}
-			else {
-				[array addObject: obj];
-			}
-		}
-		params[@"center"] = array;
-	}
-	if (self.ignoreHiddenPoint) {
-		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
-	}
-	if (self.thickness) {
-		params[@"thickness"] = self.thickness;
-	}
-	if (self.minSize) {
-		params[@"minSize"] = self.minSize;
-	}
-	if (self.fillColor) {
-		params[@"fillColor"] = [self.fillColor getData];
-	}
-	if (self.startAngle) {
-		params[@"startAngle"] = self.startAngle;
-	}
-	if (self.endAngle) {
-		params[@"endAngle"] = self.endAngle;
-	}
-	if (self.slicedOffset) {
-		params[@"slicedOffset"] = self.slicedOffset;
 	}
 	return params;
 }
@@ -358,54 +318,6 @@
 	NSNumber *oldValue = _grouping;
 	_grouping = grouping;
 	[self updateNSObject:oldValue newValue:grouping propertyName:@"grouping"];
-}
-
--(void)setCenter:(NSArray *)center {
-	NSArray *oldValue = _center;
-	_center = center;
-	[self updateArrayObject:oldValue newValue:center propertyName:@"center"];
-}
-
--(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {
-	NSNumber *oldValue = _ignoreHiddenPoint;
-	_ignoreHiddenPoint = ignoreHiddenPoint;
-	[self updateNSObject:oldValue newValue:ignoreHiddenPoint propertyName:@"ignoreHiddenPoint"];
-}
-
--(void)setThickness:(NSNumber *)thickness {
-	NSNumber *oldValue = _thickness;
-	_thickness = thickness;
-	[self updateNSObject:oldValue newValue:thickness propertyName:@"thickness"];
-}
-
--(void)setMinSize:(id)minSize {
-	id oldValue = _minSize;
-	_minSize = minSize;
-	[self updateNSObject:oldValue newValue:minSize propertyName:@"minSize"];
-}
-
--(void)setFillColor:(HIColor *)fillColor {
-	HIColor *oldValue = _fillColor;
-	_fillColor = fillColor;
-	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
-}
-
--(void)setStartAngle:(NSNumber *)startAngle {
-	NSNumber *oldValue = _startAngle;
-	_startAngle = startAngle;
-	[self updateNSObject:oldValue newValue:startAngle propertyName:@"startAngle"];
-}
-
--(void)setEndAngle:(NSNumber *)endAngle {
-	NSNumber *oldValue = _endAngle;
-	_endAngle = endAngle;
-	[self updateNSObject:oldValue newValue:endAngle propertyName:@"endAngle"];
-}
-
--(void)setSlicedOffset:(NSNumber *)slicedOffset {
-	NSNumber *oldValue = _slicedOffset;
-	_slicedOffset = slicedOffset;
-	[self updateNSObject:oldValue newValue:slicedOffset propertyName:@"slicedOffset"];
 }
 
 @end
