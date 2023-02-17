@@ -61,7 +61,6 @@
 	copyPie.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyPie.crisp = [self.crisp copyWithZone: zone];
 	copyPie.visible = [self.visible copyWithZone: zone];
-	copyPie.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyPie.className = [self.className copyWithZone: zone];
 	copyPie.data = [self.data copyWithZone: zone];
 	copyPie.id = [self.id copyWithZone: zone];

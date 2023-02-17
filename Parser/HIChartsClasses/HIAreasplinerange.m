@@ -74,14 +74,13 @@
 	copyAreasplinerange.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyAreasplinerange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyAreasplinerange.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyAreasplinerange.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyAreasplinerange.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyAreasplinerange.zones = [self.zones copyWithZone: zone];
 	copyAreasplinerange.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyAreasplinerange.crisp = [self.crisp copyWithZone: zone];
 	copyAreasplinerange.visible = [self.visible copyWithZone: zone];
 	copyAreasplinerange.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyAreasplinerange.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyAreasplinerange.zoneAxis = [self.zoneAxis copyWithZone: zone];
+	copyAreasplinerange.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyAreasplinerange.className = [self.className copyWithZone: zone];
 	copyAreasplinerange.pointStart = [self.pointStart copyWithZone: zone];
 	copyAreasplinerange.connectEnds = [self.connectEnds copyWithZone: zone];

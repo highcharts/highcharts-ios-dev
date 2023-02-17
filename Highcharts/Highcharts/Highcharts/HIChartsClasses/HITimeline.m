@@ -63,7 +63,6 @@
 	copyTimeline.crisp = [self.crisp copyWithZone: zone];
 	copyTimeline.visible = [self.visible copyWithZone: zone];
 	copyTimeline.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyTimeline.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyTimeline.className = [self.className copyWithZone: zone];
 	return copyTimeline;
 }

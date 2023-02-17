@@ -72,13 +72,12 @@
 	copyColumnrange.shadow = [self.shadow copyWithZone: zone];
 	copyColumnrange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyColumnrange.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyColumnrange.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyColumnrange.zones = [self.zones copyWithZone: zone];
 	copyColumnrange.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyColumnrange.crisp = [self.crisp copyWithZone: zone];
 	copyColumnrange.visible = [self.visible copyWithZone: zone];
 	copyColumnrange.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyColumnrange.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyColumnrange.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyColumnrange.className = [self.className copyWithZone: zone];
 	copyColumnrange.pointStart = [self.pointStart copyWithZone: zone];
 	copyColumnrange.boostThreshold = [self.boostThreshold copyWithZone: zone];

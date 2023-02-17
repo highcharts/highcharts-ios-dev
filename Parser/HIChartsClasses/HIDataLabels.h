@@ -38,11 +38,6 @@ Decides how the data label will be rotated relative to the perimeter of the sunb
 * [Circular rotation mode](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sunburst-datalabels-rotationmode-circular/)
 */
 @property(nonatomic, readwrite) NSString *rotationMode;
-@property(nonatomic, readwrite) NSString *verticalAlign;
-@property(nonatomic, readwrite) NSString *format;
-@property(nonatomic, readwrite) NSString *align;
-@property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
-@property(nonatomic, readwrite) NSNumber /* Bool */ *inside;
 /**
 The color of the line connecting the data label to the pie slice. The default color is the same as the point's color. In styled mode, the connector stroke is given in the `.highcharts-data-label-connector` class.
 
@@ -91,6 +86,26 @@ Whether to render the connector as a soft arc or a line with sharp break. Works 
 * [Non soft](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-softconnector-false/)
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *softConnector;
+/**
+A [format string](https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting) for the data label. Available variables are the same as for `formatter`.
+
+**Defaults to** `undefined`.
+
+**Try it**
+
+* [Add a unit](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-format/)
+*/
+@property(nonatomic, readwrite) NSString *format;
+/**
+Enable or disable the data labels.
+
+**Defaults to** `True`.
+
+**Try it**
+
+* [Data labels enabled](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-enabled/)
+*/
+@property(nonatomic, readwrite) NSNumber /* Bool */ *enabled;
 /**
 The distance from the data label to the connector. Note that data labels also have a default `padding`, so in order for the connector to touch the text, the `padding` must also be 0.
 
@@ -169,7 +184,7 @@ How to handle data labels that flow outside the plot area. The default is `"just
 */
 @property(nonatomic, readwrite) NSString *overflow;
 /**
-The border color for the data label. Defaults to `undefined`.
+The border color for the data label. Setting it to `auto` will use the point's color. Defaults to `undefined`.
 
 **Try it**
 
@@ -199,7 +214,7 @@ Enable or disable the initial animation when a series is displayed for the `data
 */
 @property(nonatomic, readwrite) HIAnimationOptionsObject *animation;
 /**
-The background color or gradient for the data label.
+The background color or gradient for the data label. Setting it to `auto` will use the point's color.
 
 **Try it**
 
@@ -260,6 +275,10 @@ The z index of the data labels. Use a `zIndex` of 6 to display it above the seri
 */
 @property(nonatomic, readwrite) NSNumber *zIndex;
 /**
+The vertical alignment of a data label. Can be one of `top`, `middle` or `bottom`. The default value depends on the data, for instance in a column chart, the label is above positive values and below negative values.
+*/
+@property(nonatomic, readwrite) NSString *verticalAlign;
+/**
 A class name for the data label. Particularly in styled mode, this can be used to give each series' or point's data label unique styling. In addition to this option, a default color class name is added so that we can give the labels a contrast text shadow.
 
 **Try it**
@@ -296,6 +315,8 @@ Aligns data labels relative to points. If `center` alignment is not possible, it
 Options for a label text which should follow marker's shape. Border and background are disabled for a label that follows a path. **Note:** Only SVG-based renderer supports this option. Setting `useHTML` to true will disable this option.
 */
 @property(nonatomic, readwrite) HITextPath *textPath;
+@property(nonatomic, readwrite) NSString *align;
+@property(nonatomic, readwrite) NSNumber /* Bool */ *inside;
 /**
 Y offset of the higher data labels relative to the point value.
 

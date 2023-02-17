@@ -68,7 +68,6 @@
 	copyArcdiagram.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyArcdiagram.visible = [self.visible copyWithZone: zone];
 	copyArcdiagram.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyArcdiagram.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyArcdiagram.className = [self.className copyWithZone: zone];
 	return copyArcdiagram;
 }

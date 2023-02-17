@@ -72,11 +72,10 @@
 	copyXrange.shadow = [self.shadow copyWithZone: zone];
 	copyXrange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyXrange.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyXrange.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyXrange.zones = [self.zones copyWithZone: zone];
 	copyXrange.visible = [self.visible copyWithZone: zone];
 	copyXrange.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyXrange.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyXrange.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyXrange.className = [self.className copyWithZone: zone];
 	copyXrange.showInLegend = [self.showInLegend copyWithZone: zone];
 	return copyXrange;

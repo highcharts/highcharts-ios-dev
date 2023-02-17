@@ -71,12 +71,11 @@
 	copyVariwide.shadow = [self.shadow copyWithZone: zone];
 	copyVariwide.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyVariwide.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyVariwide.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyVariwide.zones = [self.zones copyWithZone: zone];
 	copyVariwide.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyVariwide.visible = [self.visible copyWithZone: zone];
 	copyVariwide.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyVariwide.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyVariwide.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyVariwide.className = [self.className copyWithZone: zone];
 	copyVariwide.pointStart = [self.pointStart copyWithZone: zone];
 	copyVariwide.showInLegend = [self.showInLegend copyWithZone: zone];

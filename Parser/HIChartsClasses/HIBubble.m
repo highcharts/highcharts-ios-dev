@@ -85,7 +85,6 @@
 	copyBubble.crisp = [self.crisp copyWithZone: zone];
 	copyBubble.visible = [self.visible copyWithZone: zone];
 	copyBubble.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyBubble.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyBubble.className = [self.className copyWithZone: zone];
 	copyBubble.pointStart = [self.pointStart copyWithZone: zone];
 	copyBubble.connectEnds = [self.connectEnds copyWithZone: zone];

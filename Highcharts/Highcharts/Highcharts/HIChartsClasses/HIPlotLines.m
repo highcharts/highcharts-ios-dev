@@ -13,6 +13,7 @@
 	copyPlotLines.zIndex = [self.zIndex copyWithZone: zone];
 	copyPlotLines.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyPlotLines.color = [self.color copyWithZone: zone];
+	copyPlotLines.labels = [self.labels copyWithZone: zone];
 	copyPlotLines.label = [self.label copyWithZone: zone];
 	copyPlotLines.value = [self.value copyWithZone: zone];
 	copyPlotLines.events = [self.events copyWithZone: zone];
@@ -34,6 +35,9 @@
 	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
+	}
+	if (self.labels) {
+		params[@"labels"] = [self.labels getParams];
 	}
 	if (self.label) {
 		params[@"label"] = [self.label getParams];
@@ -74,6 +78,12 @@
 	HIColor *oldValue = _color;
 	_color = color;
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
+}
+
+-(void)setLabels:(HILabels *)labels {
+	HILabels *oldValue = _labels;
+	_labels = labels;
+	[self updateHIObject:oldValue newValue:labels propertyName:@"labels"];
 }
 
 -(void)setLabel:(HILabel *)label {

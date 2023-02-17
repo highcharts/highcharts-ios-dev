@@ -76,13 +76,12 @@
 	copyWindbarb.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyWindbarb.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyWindbarb.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyWindbarb.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyWindbarb.zones = [self.zones copyWithZone: zone];
 	copyWindbarb.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyWindbarb.crisp = [self.crisp copyWithZone: zone];
 	copyWindbarb.visible = [self.visible copyWithZone: zone];
 	copyWindbarb.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyWindbarb.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyWindbarb.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyWindbarb.className = [self.className copyWithZone: zone];
 	copyWindbarb.pointStart = [self.pointStart copyWithZone: zone];
 	copyWindbarb.showInLegend = [self.showInLegend copyWithZone: zone];

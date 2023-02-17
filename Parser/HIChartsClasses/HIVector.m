@@ -53,13 +53,12 @@
 	copyVector.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyVector.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyVector.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyVector.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyVector.zones = [self.zones copyWithZone: zone];
 	copyVector.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyVector.crisp = [self.crisp copyWithZone: zone];
 	copyVector.visible = [self.visible copyWithZone: zone];
 	copyVector.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyVector.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyVector.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyVector.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyVector.className = [self.className copyWithZone: zone];
 	copyVector.pointStart = [self.pointStart copyWithZone: zone];

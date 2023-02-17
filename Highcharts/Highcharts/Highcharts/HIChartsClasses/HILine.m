@@ -61,15 +61,14 @@
 	copyLine.shadow = [self.shadow copyWithZone: zone];
 	copyLine.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyLine.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyLine.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyLine.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyLine.zones = [self.zones copyWithZone: zone];
 	copyLine.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyLine.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyLine.crisp = [self.crisp copyWithZone: zone];
 	copyLine.visible = [self.visible copyWithZone: zone];
 	copyLine.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyLine.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyLine.zoneAxis = [self.zoneAxis copyWithZone: zone];
+	copyLine.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyLine.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyLine.className = [self.className copyWithZone: zone];
 	copyLine.pointStart = [self.pointStart copyWithZone: zone];

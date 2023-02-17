@@ -71,7 +71,6 @@
 	copyPyramid.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyPyramid.crisp = [self.crisp copyWithZone: zone];
 	copyPyramid.visible = [self.visible copyWithZone: zone];
-	copyPyramid.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyPyramid.className = [self.className copyWithZone: zone];
 	return copyPyramid;
 }

@@ -25,15 +25,15 @@
 	copyLollipop.xAxis = [self.xAxis copyWithZone: zone];
 	copyLollipop.yAxis = [self.yAxis copyWithZone: zone];
 	copyLollipop.zIndex = [self.zIndex copyWithZone: zone];
-	copyLollipop.tooltip = [self.tooltip copyWithZone: zone];
+	copyLollipop.pointRange = [self.pointRange copyWithZone: zone];
+	copyLollipop.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyLollipop.connectorColor = [self.connectorColor copyWithZone: zone];
 	copyLollipop.connectorWidth = [self.connectorWidth copyWithZone: zone];
 	copyLollipop.crisp = [self.crisp copyWithZone: zone];
 	copyLollipop.pointPadding = [self.pointPadding copyWithZone: zone];
-	copyLollipop.pointRange = [self.pointRange copyWithZone: zone];
 	copyLollipop.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyLollipop.color = [self.color copyWithZone: zone];
-	copyLollipop.dataLabels = [self.dataLabels copyWithZone: zone];
+	copyLollipop.tooltip = [self.tooltip copyWithZone: zone];
 	copyLollipop.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyLollipop.colorKey = [self.colorKey copyWithZone: zone];
 	copyLollipop.threshold = [self.threshold copyWithZone: zone];
@@ -78,12 +78,11 @@
 	copyLollipop.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyLollipop.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyLollipop.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyLollipop.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyLollipop.zones = [self.zones copyWithZone: zone];
 	copyLollipop.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyLollipop.visible = [self.visible copyWithZone: zone];
 	copyLollipop.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyLollipop.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyLollipop.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyLollipop.className = [self.className copyWithZone: zone];
 	copyLollipop.pointStart = [self.pointStart copyWithZone: zone];
 	copyLollipop.connectEnds = [self.connectEnds copyWithZone: zone];
@@ -94,6 +93,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
+	if (self.pointRange) {
+		params[@"pointRange"] = self.pointRange;
+	}
 	if (self.connectorColor) {
 		params[@"connectorColor"] = self.connectorColor;
 	}
@@ -102,9 +104,6 @@
 	}
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
-	}
-	if (self.pointRange) {
-		params[@"pointRange"] = self.pointRange;
 	}
 	if (self.groupPadding) {
 		params[@"groupPadding"] = self.groupPadding;
@@ -119,6 +118,12 @@
 }
 
 # pragma mark - Setters
+
+-(void)setPointRange:(NSNumber *)pointRange {
+	NSNumber *oldValue = _pointRange;
+	_pointRange = pointRange;
+	[self updateNSObject:oldValue newValue:pointRange propertyName:@"pointRange"];
+}
 
 -(void)setConnectorColor:(NSString *)connectorColor {
 	NSString *oldValue = _connectorColor;
@@ -136,12 +141,6 @@
 	NSNumber *oldValue = _pointPadding;
 	_pointPadding = pointPadding;
 	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
-}
-
--(void)setPointRange:(NSNumber *)pointRange {
-	NSNumber *oldValue = _pointRange;
-	_pointRange = pointRange;
-	[self updateNSObject:oldValue newValue:pointRange propertyName:@"pointRange"];
 }
 
 -(void)setGroupPadding:(NSNumber *)groupPadding {

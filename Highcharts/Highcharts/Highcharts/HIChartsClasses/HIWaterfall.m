@@ -78,13 +78,12 @@
 	copyWaterfall.shadow = [self.shadow copyWithZone: zone];
 	copyWaterfall.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyWaterfall.colorAxis = [self.colorAxis copyWithZone: zone];
+	copyWaterfall.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyWaterfall.zones = [self.zones copyWithZone: zone];
 	copyWaterfall.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyWaterfall.crisp = [self.crisp copyWithZone: zone];
 	copyWaterfall.visible = [self.visible copyWithZone: zone];
 	copyWaterfall.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyWaterfall.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyWaterfall.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyWaterfall.className = [self.className copyWithZone: zone];
 	copyWaterfall.pointStart = [self.pointStart copyWithZone: zone];
 	copyWaterfall.showInLegend = [self.showInLegend copyWithZone: zone];

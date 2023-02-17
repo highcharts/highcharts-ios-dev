@@ -377,7 +377,7 @@ static NSBundle *highchartsBundle = nil;
   if ([url.scheme isEqualToString:@"http"] || [url.scheme isEqualToString:@"https"]) {
     BOOL openExternalPage = navigationAction.navigationType == WKNavigationTypeOther;
     if (openExternalPage) {
-      [[UIApplication sharedApplication] openURL:url];
+      [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
     }
 
     decisionHandler(WKNavigationActionPolicyAllow, preferences);
@@ -407,7 +407,7 @@ static NSBundle *highchartsBundle = nil;
     if ([url.scheme isEqualToString:@"http"] || [url.scheme isEqualToString:@"https"]) {
       BOOL openExternalPage = navigationAction.navigationType == WKNavigationTypeOther;
       if (openExternalPage) {
-        [[UIApplication sharedApplication] openURL:url];
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
       }
 
       decisionHandler(WKNavigationActionPolicyAllow);

@@ -64,15 +64,14 @@
 	copyAreaspline.shadow = [self.shadow copyWithZone: zone];
 	copyAreaspline.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyAreaspline.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyAreaspline.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyAreaspline.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyAreaspline.zones = [self.zones copyWithZone: zone];
 	copyAreaspline.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyAreaspline.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyAreaspline.crisp = [self.crisp copyWithZone: zone];
 	copyAreaspline.visible = [self.visible copyWithZone: zone];
 	copyAreaspline.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyAreaspline.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyAreaspline.zoneAxis = [self.zoneAxis copyWithZone: zone];
+	copyAreaspline.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyAreaspline.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyAreaspline.className = [self.className copyWithZone: zone];
 	copyAreaspline.pointStart = [self.pointStart copyWithZone: zone];

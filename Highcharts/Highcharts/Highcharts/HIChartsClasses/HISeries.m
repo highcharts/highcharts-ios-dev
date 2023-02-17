@@ -78,15 +78,14 @@
 	copySeries.shadow = [self.shadow copyWithZone: zone];
 	copySeries.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copySeries.colorAxis = [self.colorAxis copyWithZone: zone];
-	copySeries.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copySeries.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copySeries.zones = [self.zones copyWithZone: zone];
 	copySeries.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copySeries.lineWidth = [self.lineWidth copyWithZone: zone];
 	copySeries.crisp = [self.crisp copyWithZone: zone];
 	copySeries.visible = [self.visible copyWithZone: zone];
 	copySeries.linkedTo = [self.linkedTo copyWithZone: zone];
-	copySeries.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copySeries.zoneAxis = [self.zoneAxis copyWithZone: zone];
+	copySeries.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copySeries.dataLabels = [self.dataLabels copyWithZone: zone];
 	copySeries.className = [self.className copyWithZone: zone];
 	copySeries.pointStart = [self.pointStart copyWithZone: zone];
@@ -311,8 +310,8 @@
 	if (self.colorAxis) {
 		params[@"colorAxis"] = self.colorAxis;
 	}
-	if (self.stickyTracking) {
-		params[@"stickyTracking"] = self.stickyTracking;
+	if (self.zoneAxis) {
+		params[@"zoneAxis"] = self.zoneAxis;
 	}
 	if (self.zones) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -341,11 +340,8 @@
 	if (self.linkedTo) {
 		params[@"linkedTo"] = self.linkedTo;
 	}
-	if (self.dataAsColumns) {
-		params[@"dataAsColumns"] = self.dataAsColumns;
-	}
-	if (self.zoneAxis) {
-		params[@"zoneAxis"] = self.zoneAxis;
+	if (self.stickyTracking) {
+		params[@"stickyTracking"] = self.stickyTracking;
 	}
   if (self.dataLabels) {
     if ([self isKindOfClass:[HIPie class]] || [self isKindOfClass:[HIItem class]] || [self isKindOfClass:[HIFunnel class]] || [self isKindOfClass:[HIVariablepie class]]) {
@@ -772,10 +768,10 @@
 	[self updateNSObject:oldValue newValue:colorAxis propertyName:@"colorAxis"];
 }
 
--(void)setStickyTracking:(NSNumber *)stickyTracking {
-	NSNumber *oldValue = _stickyTracking;
-	_stickyTracking = stickyTracking;
-	[self updateNSObject:oldValue newValue:stickyTracking propertyName:@"stickyTracking"];
+-(void)setZoneAxis:(NSString *)zoneAxis {
+	NSString *oldValue = _zoneAxis;
+	_zoneAxis = zoneAxis;
+	[self updateNSObject:oldValue newValue:zoneAxis propertyName:@"zoneAxis"];
 }
 
 -(void)setZones:(NSArray <HIZones *> *)zones {
@@ -814,16 +810,10 @@
 	[self updateNSObject:oldValue newValue:linkedTo propertyName:@"linkedTo"];
 }
 
--(void)setDataAsColumns:(NSNumber *)dataAsColumns {
-	NSNumber *oldValue = _dataAsColumns;
-	_dataAsColumns = dataAsColumns;
-	[self updateNSObject:oldValue newValue:dataAsColumns propertyName:@"dataAsColumns"];
-}
-
--(void)setZoneAxis:(NSString *)zoneAxis {
-	NSString *oldValue = _zoneAxis;
-	_zoneAxis = zoneAxis;
-	[self updateNSObject:oldValue newValue:zoneAxis propertyName:@"zoneAxis"];
+-(void)setStickyTracking:(NSNumber *)stickyTracking {
+	NSNumber *oldValue = _stickyTracking;
+	_stickyTracking = stickyTracking;
+	[self updateNSObject:oldValue newValue:stickyTracking propertyName:@"stickyTracking"];
 }
 
 -(void)setDataLabels:(NSArray <HIDataLabels *> *)dataLabels {

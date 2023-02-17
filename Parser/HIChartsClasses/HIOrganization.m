@@ -72,7 +72,6 @@
 	copyOrganization.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
 	copyOrganization.visible = [self.visible copyWithZone: zone];
 	copyOrganization.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyOrganization.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
 	copyOrganization.className = [self.className copyWithZone: zone];
 	return copyOrganization;
 }

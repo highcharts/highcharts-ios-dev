@@ -72,14 +72,13 @@
 	copyBellcurve.shadow = [self.shadow copyWithZone: zone];
 	copyBellcurve.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyBellcurve.colorAxis = [self.colorAxis copyWithZone: zone];
-	copyBellcurve.stickyTracking = [self.stickyTracking copyWithZone: zone];
+	copyBellcurve.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyBellcurve.zones = [self.zones copyWithZone: zone];
 	copyBellcurve.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyBellcurve.crisp = [self.crisp copyWithZone: zone];
 	copyBellcurve.visible = [self.visible copyWithZone: zone];
 	copyBellcurve.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyBellcurve.dataAsColumns = [self.dataAsColumns copyWithZone: zone];
-	copyBellcurve.zoneAxis = [self.zoneAxis copyWithZone: zone];
+	copyBellcurve.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyBellcurve.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyBellcurve.className = [self.className copyWithZone: zone];
 	copyBellcurve.pointStart = [self.pointStart copyWithZone: zone];
