@@ -43,17 +43,26 @@
 	copyEvents.select = [self.select copyWithZone: zone];
 	copyEvents.dragStart = [self.dragStart copyWithZone: zone];
 	copyEvents.drillToCluster = [self.drillToCluster copyWithZone: zone];
+	copyEvents.afterSimulation = [self.afterSimulation copyWithZone: zone];
 	copyEvents.setRootNode = [self.setRootNode copyWithZone: zone];
 	copyEvents.closePopup = [self.closePopup copyWithZone: zone];
 	copyEvents.selectButton = [self.selectButton copyWithZone: zone];
 	copyEvents.showPopup = [self.showPopup copyWithZone: zone];
 	copyEvents.deselectButton = [self.deselectButton copyWithZone: zone];
+	copyEvents.onStop = [self.onStop copyWithZone: zone];
+	copyEvents.beforeUpdate = [self.beforeUpdate copyWithZone: zone];
+	copyEvents.onPlay = [self.onPlay copyWithZone: zone];
+	copyEvents.onSeriesEnd = [self.onSeriesEnd copyWithZone: zone];
+	copyEvents.onBoundaryHit = [self.onBoundaryHit copyWithZone: zone];
+	copyEvents.afterUpdate = [self.afterUpdate copyWithZone: zone];
+	copyEvents.beforePlay = [self.beforePlay copyWithZone: zone];
+	copyEvents.onSeriesStart = [self.onSeriesStart copyWithZone: zone];
+	copyEvents.onEnd = [self.onEnd copyWithZone: zone];
 	copyEvents.legendItemClick = [self.legendItemClick copyWithZone: zone];
 	copyEvents.hide = [self.hide copyWithZone: zone];
 	copyEvents.show = [self.show copyWithZone: zone];
 	copyEvents.afterAnimate = [self.afterAnimate copyWithZone: zone];
 	copyEvents.add = [self.add copyWithZone: zone];
-	copyEvents.afterUpdate = [self.afterUpdate copyWithZone: zone];
 	return copyEvents;
 }
 
@@ -159,6 +168,9 @@
 	if (self.drillToCluster) {
 		params[@"drillToCluster"] = [self.drillToCluster getFunction];
 	}
+	if (self.afterSimulation) {
+		params[@"afterSimulation"] = [self.afterSimulation getFunction];
+	}
 	if (self.setRootNode) {
 		params[@"setRootNode"] = [self.setRootNode getFunction];
 	}
@@ -174,6 +186,33 @@
 	if (self.deselectButton) {
 		params[@"deselectButton"] = [self.deselectButton getFunction];
 	}
+	if (self.onStop) {
+		params[@"onStop"] = [self.onStop getFunction];
+	}
+	if (self.beforeUpdate) {
+		params[@"beforeUpdate"] = [self.beforeUpdate getFunction];
+	}
+	if (self.onPlay) {
+		params[@"onPlay"] = [self.onPlay getFunction];
+	}
+	if (self.onSeriesEnd) {
+		params[@"onSeriesEnd"] = [self.onSeriesEnd getFunction];
+	}
+	if (self.onBoundaryHit) {
+		params[@"onBoundaryHit"] = [self.onBoundaryHit getFunction];
+	}
+	if (self.afterUpdate) {
+		params[@"afterUpdate"] = [self.afterUpdate getFunction];
+	}
+	if (self.beforePlay) {
+		params[@"beforePlay"] = [self.beforePlay getFunction];
+	}
+	if (self.onSeriesStart) {
+		params[@"onSeriesStart"] = [self.onSeriesStart getFunction];
+	}
+	if (self.onEnd) {
+		params[@"onEnd"] = [self.onEnd getFunction];
+	}
 	if (self.legendItemClick) {
 		params[@"legendItemClick"] = [self.legendItemClick getFunction];
 	}
@@ -188,9 +227,6 @@
 	}
 	if (self.add) {
 		params[@"add"] = [self.add getFunction];
-	}
-	if (self.afterUpdate) {
-		params[@"afterUpdate"] = [self.afterUpdate getFunction];
 	}
 	return params;
 }
@@ -395,6 +431,12 @@
 	[self updateHIObject:oldValue newValue:drillToCluster propertyName:@"drillToCluster"];
 }
 
+-(void)setAfterSimulation:(HIFunction *)afterSimulation {
+	HIFunction *oldValue = _afterSimulation;
+	_afterSimulation = afterSimulation;
+	[self updateHIObject:oldValue newValue:afterSimulation propertyName:@"afterSimulation"];
+}
+
 -(void)setSetRootNode:(HIFunction *)setRootNode {
 	HIFunction *oldValue = _setRootNode;
 	_setRootNode = setRootNode;
@@ -425,6 +467,60 @@
 	[self updateHIObject:oldValue newValue:deselectButton propertyName:@"deselectButton"];
 }
 
+-(void)setOnStop:(HIFunction *)onStop {
+	HIFunction *oldValue = _onStop;
+	_onStop = onStop;
+	[self updateHIObject:oldValue newValue:onStop propertyName:@"onStop"];
+}
+
+-(void)setBeforeUpdate:(HIFunction *)beforeUpdate {
+	HIFunction *oldValue = _beforeUpdate;
+	_beforeUpdate = beforeUpdate;
+	[self updateHIObject:oldValue newValue:beforeUpdate propertyName:@"beforeUpdate"];
+}
+
+-(void)setOnPlay:(HIFunction *)onPlay {
+	HIFunction *oldValue = _onPlay;
+	_onPlay = onPlay;
+	[self updateHIObject:oldValue newValue:onPlay propertyName:@"onPlay"];
+}
+
+-(void)setOnSeriesEnd:(HIFunction *)onSeriesEnd {
+	HIFunction *oldValue = _onSeriesEnd;
+	_onSeriesEnd = onSeriesEnd;
+	[self updateHIObject:oldValue newValue:onSeriesEnd propertyName:@"onSeriesEnd"];
+}
+
+-(void)setOnBoundaryHit:(HIFunction *)onBoundaryHit {
+	HIFunction *oldValue = _onBoundaryHit;
+	_onBoundaryHit = onBoundaryHit;
+	[self updateHIObject:oldValue newValue:onBoundaryHit propertyName:@"onBoundaryHit"];
+}
+
+-(void)setAfterUpdate:(HIFunction *)afterUpdate {
+	HIFunction *oldValue = _afterUpdate;
+	_afterUpdate = afterUpdate;
+	[self updateHIObject:oldValue newValue:afterUpdate propertyName:@"afterUpdate"];
+}
+
+-(void)setBeforePlay:(HIFunction *)beforePlay {
+	HIFunction *oldValue = _beforePlay;
+	_beforePlay = beforePlay;
+	[self updateHIObject:oldValue newValue:beforePlay propertyName:@"beforePlay"];
+}
+
+-(void)setOnSeriesStart:(HIFunction *)onSeriesStart {
+	HIFunction *oldValue = _onSeriesStart;
+	_onSeriesStart = onSeriesStart;
+	[self updateHIObject:oldValue newValue:onSeriesStart propertyName:@"onSeriesStart"];
+}
+
+-(void)setOnEnd:(HIFunction *)onEnd {
+	HIFunction *oldValue = _onEnd;
+	_onEnd = onEnd;
+	[self updateHIObject:oldValue newValue:onEnd propertyName:@"onEnd"];
+}
+
 -(void)setLegendItemClick:(HIFunction *)legendItemClick {
 	HIFunction *oldValue = _legendItemClick;
 	_legendItemClick = legendItemClick;
@@ -453,12 +549,6 @@
 	HIFunction *oldValue = _add;
 	_add = add;
 	[self updateHIObject:oldValue newValue:add propertyName:@"add"];
-}
-
--(void)setAfterUpdate:(HIFunction *)afterUpdate {
-	HIFunction *oldValue = _afterUpdate;
-	_afterUpdate = afterUpdate;
-	[self updateHIObject:oldValue newValue:afterUpdate propertyName:@"afterUpdate"];
 }
 
 @end

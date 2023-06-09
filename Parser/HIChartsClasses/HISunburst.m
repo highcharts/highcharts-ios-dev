@@ -26,13 +26,14 @@
 	copySunburst.levelIsConstant = [self.levelIsConstant copyWithZone: zone];
 	copySunburst.allowTraversingTree = [self.allowTraversingTree copyWithZone: zone];
 	copySunburst.point = [self.point copyWithZone: zone];
-	copySunburst.color = [self.color copyWithZone: zone];
+	copySunburst.borderRadius = [self.borderRadius copyWithZone: zone];
 	copySunburst.states = [self.states copyWithZone: zone];
 	copySunburst.colors = [self.colors copyWithZone: zone];
 	copySunburst.size = [self.size copyWithZone: zone];
 	copySunburst.borderColor = [self.borderColor copyWithZone: zone];
 	copySunburst.tooltip = [self.tooltip copyWithZone: zone];
 	copySunburst.thickness = [self.thickness copyWithZone: zone];
+	copySunburst.color = [self.color copyWithZone: zone];
 	copySunburst.fillColor = [self.fillColor copyWithZone: zone];
 	copySunburst.startAngle = [self.startAngle copyWithZone: zone];
 	copySunburst.events = [self.events copyWithZone: zone];
@@ -49,12 +50,15 @@
 	copySunburst.animation = [self.animation copyWithZone: zone];
 	copySunburst.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copySunburst.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copySunburst.legendSymbol = [self.legendSymbol copyWithZone: zone];
+	copySunburst.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copySunburst.opacity = [self.opacity copyWithZone: zone];
 	copySunburst.definition = [self.definition copyWithZone: zone];
 	copySunburst.keys = [self.keys copyWithZone: zone];
 	copySunburst.selected = [self.selected copyWithZone: zone];
 	copySunburst.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copySunburst.accessibility = [self.accessibility copyWithZone: zone];
+	copySunburst.sonification = [self.sonification copyWithZone: zone];
 	copySunburst.shadow = [self.shadow copyWithZone: zone];
 	copySunburst.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copySunburst.crisp = [self.crisp copyWithZone: zone];
@@ -119,6 +123,9 @@
 	}
 	if (self.allowTraversingTree) {
 		params[@"allowTraversingTree"] = self.allowTraversingTree;
+	}
+	if (self.borderRadius) {
+		params[@"borderRadius"] = [self.borderRadius getParams];
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -202,6 +209,12 @@
 	NSNumber *oldValue = _allowTraversingTree;
 	_allowTraversingTree = allowTraversingTree;
 	[self updateNSObject:oldValue newValue:allowTraversingTree propertyName:@"allowTraversingTree"];
+}
+
+-(void)setBorderRadius:(HIBorderRadiusOptionsObject *)borderRadius {
+	HIBorderRadiusOptionsObject *oldValue = _borderRadius;
+	_borderRadius = borderRadius;
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {

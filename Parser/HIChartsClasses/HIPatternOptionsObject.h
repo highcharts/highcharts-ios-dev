@@ -6,7 +6,7 @@
 * In case of questions, please contact sales@highsoft.com
 */
 
-#import "HIChartsJSONSerializable.h"
+#import "HISVGAttributes.h"
 
 
 /**
@@ -45,7 +45,7 @@ Opacity of the pattern as a float value from 0 to 1.
 /**
 Either an SVG path as string, or an object. As an object, supply the path string in the `path.d` property. Other supported properties are standard SVG attributes like `path.stroke` and `path.fill`. If a path is supplied for the pattern, the `image` property is ignored.
 */
-@property(nonatomic, readwrite) NSString *path;
+@property(nonatomic, readwrite) HISVGAttributes *path;
 /**
 SVG `patternTransform` to apply to the entire pattern.
 */

@@ -58,7 +58,9 @@
 	copyVariwide.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyVariwide.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyVariwide.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyVariwide.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyVariwide.events = [self.events copyWithZone: zone];
+	copyVariwide.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyVariwide.opacity = [self.opacity copyWithZone: zone];
 	copyVariwide.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyVariwide.turboThreshold = [self.turboThreshold copyWithZone: zone];
@@ -68,6 +70,7 @@
 	copyVariwide.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyVariwide.accessibility = [self.accessibility copyWithZone: zone];
 	copyVariwide.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyVariwide.sonification = [self.sonification copyWithZone: zone];
 	copyVariwide.shadow = [self.shadow copyWithZone: zone];
 	copyVariwide.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyVariwide.colorAxis = [self.colorAxis copyWithZone: zone];
@@ -102,7 +105,7 @@
 		params[@"groupPadding"] = self.groupPadding;
 	}
 	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
+		params[@"borderRadius"] = [self.borderRadius getParams];
 	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
@@ -155,10 +158,10 @@
 	[self updateNSObject:oldValue newValue:groupPadding propertyName:@"groupPadding"];
 }
 
--(void)setBorderRadius:(NSNumber *)borderRadius {
-	NSNumber *oldValue = _borderRadius;
+-(void)setBorderRadius:(HIBorderRadiusOptionsObject *)borderRadius {
+	HIBorderRadiusOptionsObject *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setPointRange:(NSNumber *)pointRange {

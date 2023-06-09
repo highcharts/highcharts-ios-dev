@@ -18,7 +18,7 @@
 	copyPie.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
 	copyPie.clip = [self.clip copyWithZone: zone];
 	copyPie.point = [self.point copyWithZone: zone];
-	copyPie.color = [self.color copyWithZone: zone];
+	copyPie.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyPie.states = [self.states copyWithZone: zone];
 	copyPie.colors = [self.colors copyWithZone: zone];
 	copyPie.size = [self.size copyWithZone: zone];
@@ -26,6 +26,7 @@
 	copyPie.tooltip = [self.tooltip copyWithZone: zone];
 	copyPie.thickness = [self.thickness copyWithZone: zone];
 	copyPie.minSize = [self.minSize copyWithZone: zone];
+	copyPie.color = [self.color copyWithZone: zone];
 	copyPie.fillColor = [self.fillColor copyWithZone: zone];
 	copyPie.startAngle = [self.startAngle copyWithZone: zone];
 	copyPie.events = [self.events copyWithZone: zone];
@@ -50,12 +51,15 @@
 	copyPie.animation = [self.animation copyWithZone: zone];
 	copyPie.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyPie.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyPie.legendSymbol = [self.legendSymbol copyWithZone: zone];
+	copyPie.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyPie.opacity = [self.opacity copyWithZone: zone];
 	copyPie.definition = [self.definition copyWithZone: zone];
 	copyPie.keys = [self.keys copyWithZone: zone];
 	copyPie.selected = [self.selected copyWithZone: zone];
 	copyPie.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPie.accessibility = [self.accessibility copyWithZone: zone];
+	copyPie.sonification = [self.sonification copyWithZone: zone];
 	copyPie.shadow = [self.shadow copyWithZone: zone];
 	copyPie.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPie.colorAxis = [self.colorAxis copyWithZone: zone];
@@ -77,6 +81,9 @@
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
 	if (self.ignoreHiddenPoint) {
 		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
+	}
+	if (self.borderRadius) {
+		params[@"borderRadius"] = [self.borderRadius getParams];
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -139,6 +146,12 @@
 	NSNumber *oldValue = _ignoreHiddenPoint;
 	_ignoreHiddenPoint = ignoreHiddenPoint;
 	[self updateNSObject:oldValue newValue:ignoreHiddenPoint propertyName:@"ignoreHiddenPoint"];
+}
+
+-(void)setBorderRadius:(HIBorderRadiusOptionsObject *)borderRadius {
+	HIBorderRadiusOptionsObject *oldValue = _borderRadius;
+	_borderRadius = borderRadius;
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {

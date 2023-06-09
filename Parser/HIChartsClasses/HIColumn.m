@@ -63,7 +63,9 @@
 	copyColumn.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyColumn.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyColumn.boostBlending = [self.boostBlending copyWithZone: zone];
+	copyColumn.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyColumn.events = [self.events copyWithZone: zone];
+	copyColumn.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyColumn.opacity = [self.opacity copyWithZone: zone];
 	copyColumn.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyColumn.turboThreshold = [self.turboThreshold copyWithZone: zone];
@@ -73,6 +75,7 @@
 	copyColumn.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyColumn.accessibility = [self.accessibility copyWithZone: zone];
 	copyColumn.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyColumn.sonification = [self.sonification copyWithZone: zone];
 	copyColumn.shadow = [self.shadow copyWithZone: zone];
 	copyColumn.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyColumn.colorAxis = [self.colorAxis copyWithZone: zone];
@@ -106,7 +109,7 @@
 		params[@"pointPadding"] = self.pointPadding;
 	}
 	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
+		params[@"borderRadius"] = [self.borderRadius getParams];
 	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
@@ -168,10 +171,10 @@
 	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
 }
 
--(void)setBorderRadius:(NSNumber *)borderRadius {
-	NSNumber *oldValue = _borderRadius;
+-(void)setBorderRadius:(HIBorderRadiusOptionsObject *)borderRadius {
+	HIBorderRadiusOptionsObject *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setPointRange:(NSNumber *)pointRange {

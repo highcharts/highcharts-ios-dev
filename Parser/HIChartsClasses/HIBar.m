@@ -72,7 +72,9 @@
 	copyBar.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyBar.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyBar.boostBlending = [self.boostBlending copyWithZone: zone];
+	copyBar.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyBar.events = [self.events copyWithZone: zone];
+	copyBar.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyBar.opacity = [self.opacity copyWithZone: zone];
 	copyBar.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyBar.turboThreshold = [self.turboThreshold copyWithZone: zone];
@@ -82,6 +84,7 @@
 	copyBar.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyBar.accessibility = [self.accessibility copyWithZone: zone];
 	copyBar.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyBar.sonification = [self.sonification copyWithZone: zone];
 	copyBar.shadow = [self.shadow copyWithZone: zone];
 	copyBar.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyBar.colorAxis = [self.colorAxis copyWithZone: zone];
@@ -106,7 +109,7 @@
 		params[@"pointPadding"] = self.pointPadding;
 	}
 	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
+		params[@"borderRadius"] = [self.borderRadius getParams];
 	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
@@ -168,10 +171,10 @@
 	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
 }
 
--(void)setBorderRadius:(NSNumber *)borderRadius {
-	NSNumber *oldValue = _borderRadius;
+-(void)setBorderRadius:(HIBorderRadiusOptionsObject *)borderRadius {
+	HIBorderRadiusOptionsObject *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setPointRange:(NSNumber *)pointRange {

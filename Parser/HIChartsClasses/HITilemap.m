@@ -22,17 +22,18 @@
 	copyTilemap.tileShape = [self.tileShape copyWithZone: zone];
 	copyTilemap.clip = [self.clip copyWithZone: zone];
 	copyTilemap.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyTilemap.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyTilemap.tooltip = [self.tooltip copyWithZone: zone];
 	copyTilemap.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyTilemap.color = [self.color copyWithZone: zone];
 	copyTilemap.colorKey = [self.colorKey copyWithZone: zone];
 	copyTilemap.animation = [self.animation copyWithZone: zone];
 	copyTilemap.nullColor = [self.nullColor copyWithZone: zone];
+	copyTilemap.interpolation = [self.interpolation copyWithZone: zone];
 	copyTilemap.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyTilemap.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyTilemap.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyTilemap.negativeColor = [self.negativeColor copyWithZone: zone];
-	copyTilemap.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyTilemap.point = [self.point copyWithZone: zone];
 	copyTilemap.label = [self.label copyWithZone: zone];
 	copyTilemap.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
@@ -43,6 +44,7 @@
 	copyTilemap.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyTilemap.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyTilemap.events = [self.events copyWithZone: zone];
+	copyTilemap.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyTilemap.opacity = [self.opacity copyWithZone: zone];
 	copyTilemap.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyTilemap.definition = [self.definition copyWithZone: zone];
@@ -50,6 +52,7 @@
 	copyTilemap.selected = [self.selected copyWithZone: zone];
 	copyTilemap.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyTilemap.accessibility = [self.accessibility copyWithZone: zone];
+	copyTilemap.sonification = [self.sonification copyWithZone: zone];
 	copyTilemap.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyTilemap.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyTilemap.zoneAxis = [self.zoneAxis copyWithZone: zone];
@@ -92,6 +95,9 @@
 	if (self.nullColor) {
 		params[@"nullColor"] = [self.nullColor getData];
 	}
+	if (self.interpolation) {
+		params[@"interpolation"] = self.interpolation;
+	}
 	return params;
 }
 
@@ -131,6 +137,12 @@
 	HIColor *oldValue = _nullColor;
 	_nullColor = nullColor;
 	[self updateHIObject:oldValue newValue:nullColor propertyName:@"nullColor"];
+}
+
+-(void)setInterpolation:(NSNumber *)interpolation {
+	NSNumber *oldValue = _interpolation;
+	_interpolation = interpolation;
+	[self updateNSObject:oldValue newValue:interpolation propertyName:@"interpolation"];
 }
 
 @end

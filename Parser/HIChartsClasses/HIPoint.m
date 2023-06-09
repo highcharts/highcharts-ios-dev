@@ -17,6 +17,7 @@
 	copyPoint.dateFormat = [self.dateFormat copyWithZone: zone];
 	copyPoint.dateFormatter = [self.dateFormatter copyWithZone: zone];
 	copyPoint.valuePrefix = [self.valuePrefix copyWithZone: zone];
+	copyPoint.descriptionFormat = [self.descriptionFormat copyWithZone: zone];
 	copyPoint.valueDecimals = [self.valueDecimals copyWithZone: zone];
 	copyPoint.category = [self.category copyWithZone: zone];
 	copyPoint.color = [self.color copyWithZone: zone];
@@ -59,6 +60,9 @@
 	}
 	if (self.valuePrefix) {
 		params[@"valuePrefix"] = self.valuePrefix;
+	}
+	if (self.descriptionFormat) {
+		params[@"descriptionFormat"] = self.descriptionFormat;
 	}
 	if (self.valueDecimals) {
 		params[@"valueDecimals"] = self.valueDecimals;
@@ -150,6 +154,12 @@
 	NSString *oldValue = _valuePrefix;
 	_valuePrefix = valuePrefix;
 	[self updateNSObject:oldValue newValue:valuePrefix propertyName:@"valuePrefix"];
+}
+
+-(void)setDescriptionFormat:(NSString *)descriptionFormat {
+	NSString *oldValue = _descriptionFormat;
+	_descriptionFormat = descriptionFormat;
+	[self updateNSObject:oldValue newValue:descriptionFormat propertyName:@"descriptionFormat"];
 }
 
 -(void)setValueDecimals:(NSNumber *)valueDecimals {

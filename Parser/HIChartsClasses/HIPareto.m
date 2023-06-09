@@ -38,7 +38,9 @@
 	copyPareto.animation = [self.animation copyWithZone: zone];
 	copyPareto.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyPareto.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyPareto.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyPareto.events = [self.events copyWithZone: zone];
+	copyPareto.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyPareto.opacity = [self.opacity copyWithZone: zone];
 	copyPareto.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyPareto.turboThreshold = [self.turboThreshold copyWithZone: zone];
@@ -47,6 +49,7 @@
 	copyPareto.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPareto.accessibility = [self.accessibility copyWithZone: zone];
 	copyPareto.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyPareto.sonification = [self.sonification copyWithZone: zone];
 	copyPareto.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPareto.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyPareto.visible = [self.visible copyWithZone: zone];

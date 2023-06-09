@@ -40,13 +40,16 @@
 	copySolidgauge.animation = [self.animation copyWithZone: zone];
 	copySolidgauge.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copySolidgauge.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copySolidgauge.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copySolidgauge.events = [self.events copyWithZone: zone];
+	copySolidgauge.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copySolidgauge.opacity = [self.opacity copyWithZone: zone];
 	copySolidgauge.definition = [self.definition copyWithZone: zone];
 	copySolidgauge.keys = [self.keys copyWithZone: zone];
 	copySolidgauge.selected = [self.selected copyWithZone: zone];
 	copySolidgauge.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copySolidgauge.accessibility = [self.accessibility copyWithZone: zone];
+	copySolidgauge.sonification = [self.sonification copyWithZone: zone];
 	copySolidgauge.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copySolidgauge.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copySolidgauge.lineWidth = [self.lineWidth copyWithZone: zone];

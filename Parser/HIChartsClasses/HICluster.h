@@ -9,9 +9,9 @@
 #import "HIStates.h"
 #import "HIZones.h"
 #import "HILayoutAlgorithm.h"
-#import "HIDataLabels.h"
-#import "HIMarker.h"
 #import "HIEvents.h"
+#import "HIPointMarkerOptionsObject.h"
+#import "HIDataLabelsOptions.h"
 #import "HIAnimationOptionsObject.h"
 
 
@@ -62,7 +62,7 @@ Options for layout algorithm. Inside there are options to change the type of the
 /**
 Options for the cluster data labels.
 */
-@property(nonatomic, readwrite) HIDataLabels *dataLabels;
+@property(nonatomic, readwrite) HIDataLabelsOptions *dataLabels;
 /**
 Zoom the plot area to the cluster points range when a cluster is clicked.
 
@@ -78,7 +78,7 @@ Options for the cluster marker animation.
 /**
 Options for the cluster marker.
 */
-@property(nonatomic, readwrite) HIMarker *marker;
+@property(nonatomic, readwrite) HIPointMarkerOptionsObject *marker;
 /**
 The minimum amount of points to be combined into a cluster. This value has to be greater or equal to 2.
 

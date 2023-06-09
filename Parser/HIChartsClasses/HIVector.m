@@ -41,7 +41,9 @@
 	copyVector.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyVector.threshold = [self.threshold copyWithZone: zone];
 	copyVector.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyVector.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyVector.events = [self.events copyWithZone: zone];
+	copyVector.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyVector.opacity = [self.opacity copyWithZone: zone];
 	copyVector.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyVector.turboThreshold = [self.turboThreshold copyWithZone: zone];
@@ -51,6 +53,7 @@
 	copyVector.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyVector.accessibility = [self.accessibility copyWithZone: zone];
 	copyVector.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyVector.sonification = [self.sonification copyWithZone: zone];
 	copyVector.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyVector.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyVector.zoneAxis = [self.zoneAxis copyWithZone: zone];

@@ -72,7 +72,9 @@
 	copyBullet.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyBullet.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyBullet.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyBullet.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyBullet.events = [self.events copyWithZone: zone];
+	copyBullet.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyBullet.opacity = [self.opacity copyWithZone: zone];
 	copyBullet.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyBullet.turboThreshold = [self.turboThreshold copyWithZone: zone];
@@ -82,6 +84,7 @@
 	copyBullet.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyBullet.accessibility = [self.accessibility copyWithZone: zone];
 	copyBullet.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyBullet.sonification = [self.sonification copyWithZone: zone];
 	copyBullet.shadow = [self.shadow copyWithZone: zone];
 	copyBullet.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyBullet.zoneAxis = [self.zoneAxis copyWithZone: zone];
@@ -106,7 +109,7 @@
 		params[@"pointPadding"] = self.pointPadding;
 	}
 	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
+		params[@"borderRadius"] = [self.borderRadius getParams];
 	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
@@ -174,10 +177,10 @@
 	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
 }
 
--(void)setBorderRadius:(NSNumber *)borderRadius {
-	NSNumber *oldValue = _borderRadius;
+-(void)setBorderRadius:(HIBorderRadiusOptionsObject *)borderRadius {
+	HIBorderRadiusOptionsObject *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setPointRange:(NSNumber *)pointRange {
