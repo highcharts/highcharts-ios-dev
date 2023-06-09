@@ -22,6 +22,7 @@
 	copyTilemap.tileShape = [self.tileShape copyWithZone: zone];
 	copyTilemap.clip = [self.clip copyWithZone: zone];
 	copyTilemap.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyTilemap.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyTilemap.tooltip = [self.tooltip copyWithZone: zone];
 	copyTilemap.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyTilemap.color = [self.color copyWithZone: zone];
@@ -32,7 +33,6 @@
 	copyTilemap.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyTilemap.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyTilemap.negativeColor = [self.negativeColor copyWithZone: zone];
-	copyTilemap.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyTilemap.point = [self.point copyWithZone: zone];
 	copyTilemap.label = [self.label copyWithZone: zone];
 	copyTilemap.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
@@ -50,6 +50,7 @@
 	copyTilemap.selected = [self.selected copyWithZone: zone];
 	copyTilemap.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyTilemap.accessibility = [self.accessibility copyWithZone: zone];
+	copyTilemap.sonification = [self.sonification copyWithZone: zone];
 	copyTilemap.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyTilemap.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyTilemap.zoneAxis = [self.zoneAxis copyWithZone: zone];

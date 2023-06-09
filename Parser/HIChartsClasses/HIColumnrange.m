@@ -15,12 +15,12 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIColumnrange *copyColumnrange = [[HIColumnrange allocWithZone: zone] init];
+	copyColumnrange.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyColumnrange.states = [self.states copyWithZone: zone];
 	copyColumnrange.pointRange = [self.pointRange copyWithZone: zone];
 	copyColumnrange.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyColumnrange.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyColumnrange.pointPadding = [self.pointPadding copyWithZone: zone];
-	copyColumnrange.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyColumnrange.minPointLength = [self.minPointLength copyWithZone: zone];
 	copyColumnrange.groupZPadding = [self.groupZPadding copyWithZone: zone];
 	copyColumnrange.cropThreshold = [self.cropThreshold copyWithZone: zone];
@@ -59,6 +59,7 @@
 	copyColumnrange.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyColumnrange.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyColumnrange.boostBlending = [self.boostBlending copyWithZone: zone];
+	copyColumnrange.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyColumnrange.events = [self.events copyWithZone: zone];
 	copyColumnrange.opacity = [self.opacity copyWithZone: zone];
 	copyColumnrange.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -69,6 +70,7 @@
 	copyColumnrange.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyColumnrange.accessibility = [self.accessibility copyWithZone: zone];
 	copyColumnrange.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyColumnrange.sonification = [self.sonification copyWithZone: zone];
 	copyColumnrange.shadow = [self.shadow copyWithZone: zone];
 	copyColumnrange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyColumnrange.colorAxis = [self.colorAxis copyWithZone: zone];
@@ -97,14 +99,14 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
+	if (self.borderRadius) {
+		params[@"borderRadius"] = [self.borderRadius getParams];
+	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
 	}
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
-	}
-	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
 	}
 	if (self.minPointLength) {
 		params[@"minPointLength"] = self.minPointLength;
@@ -157,6 +159,12 @@
 
 # pragma mark - Setters
 
+-(void)setBorderRadius:(HIBorderRadius *)borderRadius {
+	HIBorderRadius *oldValue = _borderRadius;
+	_borderRadius = borderRadius;
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+}
+
 -(void)setPointRange:(id)pointRange {
 	id oldValue = _pointRange;
 	_pointRange = pointRange;
@@ -167,12 +175,6 @@
 	NSNumber *oldValue = _pointPadding;
 	_pointPadding = pointPadding;
 	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
-}
-
--(void)setBorderRadius:(NSNumber *)borderRadius {
-	NSNumber *oldValue = _borderRadius;
-	_borderRadius = borderRadius;
-	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setMinPointLength:(NSNumber *)minPointLength {

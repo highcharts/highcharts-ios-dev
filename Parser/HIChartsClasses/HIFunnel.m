@@ -34,12 +34,13 @@
 	copyFunnel.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
 	copyFunnel.clip = [self.clip copyWithZone: zone];
 	copyFunnel.point = [self.point copyWithZone: zone];
-	copyFunnel.color = [self.color copyWithZone: zone];
+	copyFunnel.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyFunnel.colors = [self.colors copyWithZone: zone];
 	copyFunnel.borderColor = [self.borderColor copyWithZone: zone];
 	copyFunnel.tooltip = [self.tooltip copyWithZone: zone];
 	copyFunnel.thickness = [self.thickness copyWithZone: zone];
 	copyFunnel.minSize = [self.minSize copyWithZone: zone];
+	copyFunnel.color = [self.color copyWithZone: zone];
 	copyFunnel.fillColor = [self.fillColor copyWithZone: zone];
 	copyFunnel.startAngle = [self.startAngle copyWithZone: zone];
 	copyFunnel.events = [self.events copyWithZone: zone];
@@ -60,12 +61,14 @@
 	copyFunnel.onPoint = [self.onPoint copyWithZone: zone];
 	copyFunnel.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyFunnel.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyFunnel.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyFunnel.opacity = [self.opacity copyWithZone: zone];
 	copyFunnel.definition = [self.definition copyWithZone: zone];
 	copyFunnel.keys = [self.keys copyWithZone: zone];
 	copyFunnel.selected = [self.selected copyWithZone: zone];
 	copyFunnel.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyFunnel.accessibility = [self.accessibility copyWithZone: zone];
+	copyFunnel.sonification = [self.sonification copyWithZone: zone];
 	copyFunnel.shadow = [self.shadow copyWithZone: zone];
 	copyFunnel.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyFunnel.colorAxis = [self.colorAxis copyWithZone: zone];
@@ -107,6 +110,9 @@
 	}
 	if (self.ignoreHiddenPoint) {
 		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
+	}
+	if (self.borderRadius) {
+		params[@"borderRadius"] = [self.borderRadius getParams];
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -187,6 +193,12 @@
 	NSNumber *oldValue = _ignoreHiddenPoint;
 	_ignoreHiddenPoint = ignoreHiddenPoint;
 	[self updateNSObject:oldValue newValue:ignoreHiddenPoint propertyName:@"ignoreHiddenPoint"];
+}
+
+-(void)setBorderRadius:(HIBorderRadiusOptionsObject *)borderRadius {
+	HIBorderRadiusOptionsObject *oldValue = _borderRadius;
+	_borderRadius = borderRadius;
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {

@@ -36,6 +36,7 @@
 	copyAreasplinerange.shadow = [self.shadow copyWithZone: zone];
 	copyAreasplinerange.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyAreasplinerange.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
+	copyAreasplinerange.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyAreasplinerange.lineColor = [self.lineColor copyWithZone: zone];
 	copyAreasplinerange.linecap = [self.linecap copyWithZone: zone];
 	copyAreasplinerange.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
@@ -72,6 +73,7 @@
 	copyAreasplinerange.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyAreasplinerange.accessibility = [self.accessibility copyWithZone: zone];
 	copyAreasplinerange.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyAreasplinerange.sonification = [self.sonification copyWithZone: zone];
 	copyAreasplinerange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyAreasplinerange.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyAreasplinerange.zoneAxis = [self.zoneAxis copyWithZone: zone];

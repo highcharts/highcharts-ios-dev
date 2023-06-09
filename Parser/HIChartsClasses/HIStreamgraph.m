@@ -33,6 +33,7 @@
 	copyStreamgraph.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyStreamgraph.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
 	copyStreamgraph.trackByArea = [self.trackByArea copyWithZone: zone];
+	copyStreamgraph.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyStreamgraph.lineColor = [self.lineColor copyWithZone: zone];
 	copyStreamgraph.threshold = [self.threshold copyWithZone: zone];
 	copyStreamgraph.linecap = [self.linecap copyWithZone: zone];
@@ -72,6 +73,7 @@
 	copyStreamgraph.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyStreamgraph.accessibility = [self.accessibility copyWithZone: zone];
 	copyStreamgraph.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyStreamgraph.sonification = [self.sonification copyWithZone: zone];
 	copyStreamgraph.shadow = [self.shadow copyWithZone: zone];
 	copyStreamgraph.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyStreamgraph.colorAxis = [self.colorAxis copyWithZone: zone];

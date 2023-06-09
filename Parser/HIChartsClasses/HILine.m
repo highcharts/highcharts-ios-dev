@@ -47,6 +47,7 @@
 	copyLine.threshold = [self.threshold copyWithZone: zone];
 	copyLine.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyLine.boostBlending = [self.boostBlending copyWithZone: zone];
+	copyLine.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyLine.events = [self.events copyWithZone: zone];
 	copyLine.opacity = [self.opacity copyWithZone: zone];
 	copyLine.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -58,6 +59,7 @@
 	copyLine.accessibility = [self.accessibility copyWithZone: zone];
 	copyLine.step = [self.step copyWithZone: zone];
 	copyLine.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyLine.sonification = [self.sonification copyWithZone: zone];
 	copyLine.shadow = [self.shadow copyWithZone: zone];
 	copyLine.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyLine.colorAxis = [self.colorAxis copyWithZone: zone];

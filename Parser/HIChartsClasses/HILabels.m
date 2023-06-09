@@ -10,10 +10,9 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HILabels *copyLabels = [[HILabels allocWithZone: zone] init];
-	copyLabels.distance = [self.distance copyWithZone: zone];
-	copyLabels.align = [self.align copyWithZone: zone];
 	copyLabels.y = [self.y copyWithZone: zone];
 	copyLabels.x = [self.x copyWithZone: zone];
+	copyLabels.align = [self.align copyWithZone: zone];
 	copyLabels.staggerLines = [self.staggerLines copyWithZone: zone];
 	copyLabels.autoRotationLimit = [self.autoRotationLimit copyWithZone: zone];
 	copyLabels.position3d = [self.position3d copyWithZone: zone];
@@ -30,6 +29,7 @@
 	copyLabels.padding = [self.padding copyWithZone: zone];
 	copyLabels.step = [self.step copyWithZone: zone];
 	copyLabels.overflow = [self.overflow copyWithZone: zone];
+	copyLabels.distance = [self.distance copyWithZone: zone];
 	copyLabels.enabled = [self.enabled copyWithZone: zone];
 	copyLabels.point = [self.point copyWithZone: zone];
 	copyLabels.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
@@ -51,17 +51,14 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.distance) {
-		params[@"distance"] = self.distance;
-	}
-	if (self.align) {
-		params[@"align"] = self.align;
-	}
 	if (self.y) {
 		params[@"y"] = self.y;
 	}
 	if (self.x) {
 		params[@"x"] = self.x;
+	}
+	if (self.align) {
+		params[@"align"] = self.align;
 	}
 	if (self.staggerLines) {
 		params[@"staggerLines"] = self.staggerLines;
@@ -120,6 +117,9 @@
 	if (self.overflow) {
 		params[@"overflow"] = self.overflow;
 	}
+	if (self.distance) {
+		params[@"distance"] = self.distance;
+	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
@@ -170,18 +170,6 @@
 
 # pragma mark - Setters
 
--(void)setDistance:(id)distance {
-	id oldValue = _distance;
-	_distance = distance;
-	[self updateNSObject:oldValue newValue:distance propertyName:@"distance"];
-}
-
--(void)setAlign:(NSString *)align {
-	NSString *oldValue = _align;
-	_align = align;
-	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
-}
-
 -(void)setY:(NSNumber *)y {
 	NSNumber *oldValue = _y;
 	_y = y;
@@ -192,6 +180,12 @@
 	NSNumber *oldValue = _x;
 	_x = x;
 	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
+}
+
+-(void)setAlign:(NSString *)align {
+	NSString *oldValue = _align;
+	_align = align;
+	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
 }
 
 -(void)setStaggerLines:(NSNumber *)staggerLines {
@@ -288,6 +282,12 @@
 	NSString *oldValue = _overflow;
 	_overflow = overflow;
 	[self updateNSObject:oldValue newValue:overflow propertyName:@"overflow"];
+}
+
+-(void)setDistance:(NSNumber *)distance {
+	NSNumber *oldValue = _distance;
+	_distance = distance;
+	[self updateNSObject:oldValue newValue:distance propertyName:@"distance"];
 }
 
 -(void)setEnabled:(NSNumber *)enabled {

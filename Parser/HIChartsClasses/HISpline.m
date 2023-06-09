@@ -55,6 +55,7 @@
 	copySpline.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copySpline.threshold = [self.threshold copyWithZone: zone];
 	copySpline.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copySpline.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copySpline.events = [self.events copyWithZone: zone];
 	copySpline.opacity = [self.opacity copyWithZone: zone];
 	copySpline.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -65,6 +66,7 @@
 	copySpline.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copySpline.accessibility = [self.accessibility copyWithZone: zone];
 	copySpline.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copySpline.sonification = [self.sonification copyWithZone: zone];
 	copySpline.shadow = [self.shadow copyWithZone: zone];
 	copySpline.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copySpline.colorAxis = [self.colorAxis copyWithZone: zone];

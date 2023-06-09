@@ -27,6 +27,7 @@
 	copyArearange.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyArearange.fillOpacity = [self.fillOpacity copyWithZone: zone];
 	copyArearange.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
+	copyArearange.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyArearange.lineColor = [self.lineColor copyWithZone: zone];
 	copyArearange.linecap = [self.linecap copyWithZone: zone];
 	copyArearange.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
@@ -65,6 +66,7 @@
 	copyArearange.accessibility = [self.accessibility copyWithZone: zone];
 	copyArearange.step = [self.step copyWithZone: zone];
 	copyArearange.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyArearange.sonification = [self.sonification copyWithZone: zone];
 	copyArearange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyArearange.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyArearange.zoneAxis = [self.zoneAxis copyWithZone: zone];

@@ -33,6 +33,7 @@
 	copyTreegraph.states = [self.states copyWithZone: zone];
 	copyTreegraph.colors = [self.colors copyWithZone: zone];
 	copyTreegraph.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyTreegraph.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyTreegraph.events = [self.events copyWithZone: zone];
 	copyTreegraph.opacity = [self.opacity copyWithZone: zone];
 	copyTreegraph.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -57,6 +58,7 @@
 	copyTreegraph.selected = [self.selected copyWithZone: zone];
 	copyTreegraph.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyTreegraph.accessibility = [self.accessibility copyWithZone: zone];
+	copyTreegraph.sonification = [self.sonification copyWithZone: zone];
 	copyTreegraph.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyTreegraph.crisp = [self.crisp copyWithZone: zone];
 	copyTreegraph.visible = [self.visible copyWithZone: zone];

@@ -34,12 +34,13 @@
 	copyPyramid.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
 	copyPyramid.clip = [self.clip copyWithZone: zone];
 	copyPyramid.point = [self.point copyWithZone: zone];
-	copyPyramid.color = [self.color copyWithZone: zone];
+	copyPyramid.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyPyramid.colors = [self.colors copyWithZone: zone];
 	copyPyramid.borderColor = [self.borderColor copyWithZone: zone];
 	copyPyramid.tooltip = [self.tooltip copyWithZone: zone];
 	copyPyramid.thickness = [self.thickness copyWithZone: zone];
 	copyPyramid.minSize = [self.minSize copyWithZone: zone];
+	copyPyramid.color = [self.color copyWithZone: zone];
 	copyPyramid.fillColor = [self.fillColor copyWithZone: zone];
 	copyPyramid.startAngle = [self.startAngle copyWithZone: zone];
 	copyPyramid.events = [self.events copyWithZone: zone];
@@ -60,12 +61,14 @@
 	copyPyramid.onPoint = [self.onPoint copyWithZone: zone];
 	copyPyramid.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyPyramid.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyPyramid.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyPyramid.opacity = [self.opacity copyWithZone: zone];
 	copyPyramid.definition = [self.definition copyWithZone: zone];
 	copyPyramid.keys = [self.keys copyWithZone: zone];
 	copyPyramid.selected = [self.selected copyWithZone: zone];
 	copyPyramid.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPyramid.accessibility = [self.accessibility copyWithZone: zone];
+	copyPyramid.sonification = [self.sonification copyWithZone: zone];
 	copyPyramid.shadow = [self.shadow copyWithZone: zone];
 	copyPyramid.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPyramid.colorAxis = [self.colorAxis copyWithZone: zone];
@@ -107,6 +110,9 @@
 	}
 	if (self.ignoreHiddenPoint) {
 		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
+	}
+	if (self.borderRadius) {
+		params[@"borderRadius"] = [self.borderRadius getParams];
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -187,6 +193,12 @@
 	NSNumber *oldValue = _ignoreHiddenPoint;
 	_ignoreHiddenPoint = ignoreHiddenPoint;
 	[self updateNSObject:oldValue newValue:ignoreHiddenPoint propertyName:@"ignoreHiddenPoint"];
+}
+
+-(void)setBorderRadius:(HIBorderRadiusOptionsObject *)borderRadius {
+	HIBorderRadiusOptionsObject *oldValue = _borderRadius;
+	_borderRadius = borderRadius;
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {

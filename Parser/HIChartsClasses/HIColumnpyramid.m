@@ -63,6 +63,7 @@
 	copyColumnpyramid.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyColumnpyramid.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyColumnpyramid.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyColumnpyramid.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyColumnpyramid.events = [self.events copyWithZone: zone];
 	copyColumnpyramid.opacity = [self.opacity copyWithZone: zone];
 	copyColumnpyramid.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -73,6 +74,7 @@
 	copyColumnpyramid.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyColumnpyramid.accessibility = [self.accessibility copyWithZone: zone];
 	copyColumnpyramid.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyColumnpyramid.sonification = [self.sonification copyWithZone: zone];
 	copyColumnpyramid.shadow = [self.shadow copyWithZone: zone];
 	copyColumnpyramid.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyColumnpyramid.colorAxis = [self.colorAxis copyWithZone: zone];

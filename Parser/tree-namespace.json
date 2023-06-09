@@ -15385,9 +15385,7 @@
 								"description": "Either an SVG path as string, or an object. As an object, supply the path\nstring in the `path.d` property. Other supported properties are standard SVG\nattributes like `path.stroke` and `path.fill`. If a path is supplied for the\npattern, the `image` property is ignored.",
 								"kind": "member",
 								"types": [
-									"string",
-									"Highcharts.SVGAttributes",
-									"undefined"
+									"string"
 								]
 							},
 							"meta": {
@@ -19164,9 +19162,7 @@
 								"description": "",
 								"kind": "member",
 								"types": [
-									"string",
-									"Highcharts.SVGPathArray",
-									"undefined"
+									"Highcharts.SVGPathArray"
 								]
 							},
 							"meta": {
@@ -20380,7 +20376,7 @@
 						"description": "Array of path commands, that will go into the `d` attribute of an SVG\nelement.",
 						"kind": "typedef",
 						"types": [
-							"Array.<(Array.<Highcharts.SVGPathCommand>|Array.<Highcharts.SVGPathCommand, number>|Array.<Highcharts.SVGPathCommand, number, number>|Array.<Highcharts.SVGPathCommand, number, number, number, number>|Array.<Highcharts.SVGPathCommand, number, number, number, number, number, number>|Array.<Highcharts.SVGPathCommand, number, number, number, number, number, number, number>)>"
+							"Array.<Highcharts.SVGPathCommand>"
 						]
 					},
 					"meta": {

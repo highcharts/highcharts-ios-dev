@@ -61,6 +61,7 @@
 	copyDependencywheel.animation = [self.animation copyWithZone: zone];
 	copyDependencywheel.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyDependencywheel.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyDependencywheel.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyDependencywheel.events = [self.events copyWithZone: zone];
 	copyDependencywheel.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyDependencywheel.definition = [self.definition copyWithZone: zone];
@@ -69,6 +70,7 @@
 	copyDependencywheel.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyDependencywheel.accessibility = [self.accessibility copyWithZone: zone];
 	copyDependencywheel.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyDependencywheel.sonification = [self.sonification copyWithZone: zone];
 	copyDependencywheel.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyDependencywheel.visible = [self.visible copyWithZone: zone];
 	copyDependencywheel.linkedTo = [self.linkedTo copyWithZone: zone];

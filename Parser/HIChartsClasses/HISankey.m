@@ -47,6 +47,7 @@
 	copySankey.animation = [self.animation copyWithZone: zone];
 	copySankey.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copySankey.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copySankey.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copySankey.events = [self.events copyWithZone: zone];
 	copySankey.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copySankey.definition = [self.definition copyWithZone: zone];
@@ -55,6 +56,7 @@
 	copySankey.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copySankey.accessibility = [self.accessibility copyWithZone: zone];
 	copySankey.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copySankey.sonification = [self.sonification copyWithZone: zone];
 	copySankey.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copySankey.visible = [self.visible copyWithZone: zone];
 	copySankey.linkedTo = [self.linkedTo copyWithZone: zone];

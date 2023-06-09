@@ -61,6 +61,7 @@
 	copySeries.threshold = [self.threshold copyWithZone: zone];
 	copySeries.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copySeries.boostBlending = [self.boostBlending copyWithZone: zone];
+	copySeries.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copySeries.events = [self.events copyWithZone: zone];
 	copySeries.opacity = [self.opacity copyWithZone: zone];
 	copySeries.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -71,6 +72,7 @@
 	copySeries.accessibility = [self.accessibility copyWithZone: zone];
 	copySeries.step = [self.step copyWithZone: zone];
 	copySeries.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copySeries.sonification = [self.sonification copyWithZone: zone];
 	copySeries.shadow = [self.shadow copyWithZone: zone];
 	copySeries.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copySeries.colorAxis = [self.colorAxis copyWithZone: zone];
@@ -258,6 +260,9 @@
 	if (self.boostBlending) {
 		params[@"boostBlending"] = self.boostBlending;
 	}
+	if (self.legendSymbol) {
+		params[@"legendSymbol"] = self.legendSymbol;
+	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
 	}
@@ -296,6 +301,9 @@
 	}
 	if (self.getExtremesFromAll) {
 		params[@"getExtremesFromAll"] = self.getExtremesFromAll;
+	}
+	if (self.sonification) {
+		params[@"sonification"] = [self.sonification getParams];
 	}
 	if (self.shadow) {
 		params[@"shadow"] = [self.shadow getParams];
@@ -680,6 +688,12 @@
 	[self updateNSObject:oldValue newValue:boostBlending propertyName:@"boostBlending"];
 }
 
+-(void)setLegendSymbol:(NSString *)legendSymbol {
+	NSString *oldValue = _legendSymbol;
+	_legendSymbol = legendSymbol;
+	[self updateNSObject:oldValue newValue:legendSymbol propertyName:@"legendSymbol"];
+}
+
 -(void)setEvents:(HIEvents *)events {
 	HIEvents *oldValue = _events;
 	_events = events;
@@ -738,6 +752,12 @@
 	NSNumber *oldValue = _getExtremesFromAll;
 	_getExtremesFromAll = getExtremesFromAll;
 	[self updateNSObject:oldValue newValue:getExtremesFromAll propertyName:@"getExtremesFromAll"];
+}
+
+-(void)setSonification:(HISonification *)sonification {
+	HISonification *oldValue = _sonification;
+	_sonification = sonification;
+	[self updateHIObject:oldValue newValue:sonification propertyName:@"sonification"];
 }
 
 -(void)setShadow:(HIShadowOptionsObject *)shadow {

@@ -38,6 +38,7 @@
 	copyGauge.animation = [self.animation copyWithZone: zone];
 	copyGauge.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyGauge.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyGauge.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyGauge.events = [self.events copyWithZone: zone];
 	copyGauge.opacity = [self.opacity copyWithZone: zone];
 	copyGauge.definition = [self.definition copyWithZone: zone];
@@ -45,6 +46,7 @@
 	copyGauge.selected = [self.selected copyWithZone: zone];
 	copyGauge.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyGauge.accessibility = [self.accessibility copyWithZone: zone];
+	copyGauge.sonification = [self.sonification copyWithZone: zone];
 	copyGauge.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyGauge.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
 	copyGauge.lineWidth = [self.lineWidth copyWithZone: zone];

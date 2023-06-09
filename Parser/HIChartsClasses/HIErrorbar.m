@@ -79,6 +79,7 @@
 	copyErrorbar.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyErrorbar.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyErrorbar.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyErrorbar.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyErrorbar.events = [self.events copyWithZone: zone];
 	copyErrorbar.opacity = [self.opacity copyWithZone: zone];
 	copyErrorbar.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -89,6 +90,7 @@
 	copyErrorbar.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyErrorbar.accessibility = [self.accessibility copyWithZone: zone];
 	copyErrorbar.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyErrorbar.sonification = [self.sonification copyWithZone: zone];
 	copyErrorbar.shadow = [self.shadow copyWithZone: zone];
 	copyErrorbar.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyErrorbar.colorAxis = [self.colorAxis copyWithZone: zone];

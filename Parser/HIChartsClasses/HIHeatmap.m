@@ -30,6 +30,7 @@
 	copyHeatmap.colsize = [self.colsize copyWithZone: zone];
 	copyHeatmap.clip = [self.clip copyWithZone: zone];
 	copyHeatmap.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyHeatmap.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyHeatmap.tooltip = [self.tooltip copyWithZone: zone];
 	copyHeatmap.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyHeatmap.states = [self.states copyWithZone: zone];
@@ -41,7 +42,6 @@
 	copyHeatmap.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyHeatmap.colorIndex = [self.colorIndex copyWithZone: zone];
 	copyHeatmap.negativeColor = [self.negativeColor copyWithZone: zone];
-	copyHeatmap.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyHeatmap.point = [self.point copyWithZone: zone];
 	copyHeatmap.dataSorting = [self.dataSorting copyWithZone: zone];
 	copyHeatmap.label = [self.label copyWithZone: zone];
@@ -61,6 +61,7 @@
 	copyHeatmap.selected = [self.selected copyWithZone: zone];
 	copyHeatmap.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyHeatmap.accessibility = [self.accessibility copyWithZone: zone];
+	copyHeatmap.sonification = [self.sonification copyWithZone: zone];
 	copyHeatmap.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyHeatmap.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyHeatmap.zoneAxis = [self.zoneAxis copyWithZone: zone];

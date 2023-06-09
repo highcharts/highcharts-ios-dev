@@ -30,6 +30,7 @@
 	copyArea.zIndex = [self.zIndex copyWithZone: zone];
 	copyArea.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
 	copyArea.trackByArea = [self.trackByArea copyWithZone: zone];
+	copyArea.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyArea.lineColor = [self.lineColor copyWithZone: zone];
 	copyArea.threshold = [self.threshold copyWithZone: zone];
 	copyArea.linecap = [self.linecap copyWithZone: zone];
@@ -73,6 +74,7 @@
 	copyArea.accessibility = [self.accessibility copyWithZone: zone];
 	copyArea.step = [self.step copyWithZone: zone];
 	copyArea.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyArea.sonification = [self.sonification copyWithZone: zone];
 	copyArea.shadow = [self.shadow copyWithZone: zone];
 	copyArea.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyArea.colorAxis = [self.colorAxis copyWithZone: zone];

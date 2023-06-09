@@ -27,7 +27,7 @@ Adjustment made to the title width, normally to reserve space for the exporting 
 /**
 CSS styles for the title. Use this for font styling, but use `align`, `x` and `y` for text alignment. In styled mode, the title style is given in the `.highcharts-title` class.
 
-**Defaults to** `{ "color": "#333333", "fontSize": "18px" }`.
+**Defaults to** `{ "color": "#333333", "fontSize": "1.125em" }`.
 
 **Try it**
 

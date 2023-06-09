@@ -78,6 +78,7 @@
 	copyBoxplot.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyBoxplot.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyBoxplot.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyBoxplot.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyBoxplot.events = [self.events copyWithZone: zone];
 	copyBoxplot.opacity = [self.opacity copyWithZone: zone];
 	copyBoxplot.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -88,6 +89,7 @@
 	copyBoxplot.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyBoxplot.accessibility = [self.accessibility copyWithZone: zone];
 	copyBoxplot.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyBoxplot.sonification = [self.sonification copyWithZone: zone];
 	copyBoxplot.shadow = [self.shadow copyWithZone: zone];
 	copyBoxplot.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyBoxplot.colorAxis = [self.colorAxis copyWithZone: zone];

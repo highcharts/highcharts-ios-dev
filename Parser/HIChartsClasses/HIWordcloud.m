@@ -46,6 +46,7 @@
 	copyWordcloud.custom = [self.custom copyWithZone: zone];
 	copyWordcloud.onPoint = [self.onPoint copyWithZone: zone];
 	copyWordcloud.relativeXValue = [self.relativeXValue copyWithZone: zone];
+	copyWordcloud.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyWordcloud.events = [self.events copyWithZone: zone];
 	copyWordcloud.opacity = [self.opacity copyWithZone: zone];
 	copyWordcloud.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -55,6 +56,7 @@
 	copyWordcloud.selected = [self.selected copyWithZone: zone];
 	copyWordcloud.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyWordcloud.accessibility = [self.accessibility copyWithZone: zone];
+	copyWordcloud.sonification = [self.sonification copyWithZone: zone];
 	copyWordcloud.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyWordcloud.visible = [self.visible copyWithZone: zone];
 	copyWordcloud.linkedTo = [self.linkedTo copyWithZone: zone];
@@ -100,7 +102,7 @@
 		params[@"placementStrategy"] = self.placementStrategy;
 	}
 	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
+		params[@"borderRadius"] = [self.borderRadius getParams];
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -171,10 +173,10 @@
 	[self updateNSObject:oldValue newValue:placementStrategy propertyName:@"placementStrategy"];
 }
 
--(void)setBorderRadius:(NSNumber *)borderRadius {
-	NSNumber *oldValue = _borderRadius;
+-(void)setBorderRadius:(HIBorderRadiusOptionsObject *)borderRadius {
+	HIBorderRadiusOptionsObject *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {

@@ -370,8 +370,8 @@
 	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
--(void)setBorderWidth:(NSNumber *)borderWidth {
-	NSNumber *oldValue = _borderWidth;
+-(void)setBorderWidth:(NSString *)borderWidth {
+	NSString *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
 	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }

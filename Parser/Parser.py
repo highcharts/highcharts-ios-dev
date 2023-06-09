@@ -326,7 +326,12 @@ hc_types = {
         "Highcharts.FormatterCallbackFunction.<Series>": 'HIFunction',
         #8.2.0
         "string|Array.<(Array.<string>|Array.<string, number>|Array.<string, number, number>|Array.<string, number, number, number, number>|Array.<string, number, number, number, number, number, number>|Array.<string, number, number, number, number, number, number, number>)>|undefined": 'NSArray /* <NSString, NSNumber> */',
-        "Array.<Array.<number, string|Highcharts.GradientColorObject|Highcharts.PatternObject>>": 'NSArray'
+        "Array.<Array.<number, string|Highcharts.GradientColorObject|Highcharts.PatternObject>>": 'NSArray',
+        #11.0.1
+        "function|object": 'HIFunction',
+        "number|string|Highcharts.BorderRadiusOptionsObject": 'HIBorderRadiusOptionsObject',
+        "string|Highcharts.SynthPatchOptionsObject": "string",
+        "Array.<string>|undefined": 'NSArray<NSString *>'
     }
 
 def get_type(x):
@@ -471,6 +476,7 @@ def format_to_h(name, source):
         if field.comment:
             htext += "{0}".format(field.comment) if field.name != 'series.data' else series_data_description
         if field.data_type:
+            print field.name
             if "id" in str(get_type(field.data_type)) and "NSArray" not in str(get_type(field.data_type)) and not \
                     structure[
                         field.name].properties:

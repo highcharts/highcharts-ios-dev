@@ -3467,9 +3467,7 @@
               "declare": "Highcharts.AnnotationMockPointOptionsObject",
               "type": {
                 "names": [
-                  "string",
-                  "Highcharts.AnnotationMockPointOptionsObject",
-                  "Highcharts.AnnotationMockPointFunction"
+                  "Highcharts.AnnotationMockPointOptionsObject"
                 ]
               },
               "requires": [
@@ -4642,9 +4640,7 @@
               "declare": "Highcharts.AnnotationMockPointOptionsObject",
               "type": {
                 "names": [
-                  "string",
-                  "Highcharts.AnnotationMockPointOptionsObject",
-                  "Highcharts.AnnotationMockPointFunction"
+                  "Highcharts.AnnotationMockPointOptionsObject"
                 ]
               },
               "extends": "annotations.labels.point",
@@ -4668,7 +4664,7 @@
               ],
               "type": {
                 "names": [
-                  "Array.<Highcharts.AnnotationShapePointOptions>"
+                  "Array.<Highcharts.AnnotationMockPointOptionsObject>"
                 ]
               },
               "extends": "annotations.labels.point",
@@ -26726,7 +26722,7 @@
           ],
           "type": {
             "names": [
-              "Highcharts.AnnotationsOptions"
+              "*"
             ]
           },
           "extends": "annotations",
@@ -51445,9 +51441,7 @@
                   "declare": "Highcharts.OrganizationLinkTypeValue",
                   "type": {
                     "names": [
-                      "'default'",
-                      "'curved'",
-                      "'straight'"
+                      "string"
                     ]
                   },
                   "defaultvalue": "'default'",
@@ -57162,7 +57156,7 @@
                   "description": "Options for the cluster data labels.",
                   "type": {
                     "names": [
-                      "Highcharts.DataLabelsOptions"
+                      "*"
                     ]
                   },
                   "since": "8.0.0"
@@ -57562,7 +57556,7 @@
                   "description": "Options for the cluster marker.",
                   "type": {
                     "names": [
-                      "Highcharts.PointMarkerOptionsObject"
+                      "*"
                     ]
                   },
                   "extends": "plotOptions.series.marker",
@@ -69974,7 +69968,6 @@
                       "value": "highcharts/series-treegraph/link-text-path"
                     }
                   ],
-                  "extends": "plotOptions.treegraph.dataLabels.textPath",
                   "since": "10.3.0"
                 },
                 "meta": {
@@ -77792,7 +77785,7 @@
             "children": {
               "dataLabels": {
                 "doclet": {
-                  "extends": "series.arearange.dataLabels",
+                  "extends": "plotOptions.arearange.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock"
@@ -79720,7 +79713,7 @@
             "children": {
               "dataLabels": {
                 "doclet": {
-                  "extends": "series.columnrange.dataLabels",
+                  "extends": "plotOptions.columnrange.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock"
@@ -83131,7 +83124,7 @@
                     }
                   ],
                   "declare": "Highcharts.DataLabelsOptions",
-                  "extends": "plotOptions.line.dataLabels",
+                  "extends": "plotOptions.series.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock",
@@ -85061,7 +85054,7 @@
                   "description": "Callback to format data labels for _links_ in the\norganization chart. The `linkFormat` option takes\nprecedence over the `linkFormatter`.",
                   "type": {
                     "names": [
-                      "OrganizationDataLabelsFormatterCallbackFunction"
+                      "*"
                     ]
                   },
                   "products": [
@@ -85086,7 +85079,7 @@
                   ],
                   "type": {
                     "names": [
-                      "DataLabelTextPathOptions"
+                      "*"
                     ]
                   },
                   "products": [
@@ -85824,7 +85817,7 @@
                 "doclet": {
                   "type": {
                     "names": [
-                      "Highcharts.SeriesPieDataLabelsOptionsObject"
+                      "*"
                     ]
                   },
                   "products": [
@@ -90283,11 +90276,7 @@
                   "extends": "sonification.defaultInstrumentOptions.mapping.time",
                   "type": {
                     "names": [
-                      "string",
-                      "number",
-                      "function",
-                      "object",
-                      "Array.<(string|number)>"
+                      "*"
                     ]
                   },
                   "since": "11.0.0"
@@ -90431,10 +90420,7 @@
                   "defaultvalue": "\"x\"",
                   "type": {
                     "names": [
-                      "string",
-                      "number",
-                      "function",
-                      "object"
+                      "*"
                     ]
                   },
                   "since": "11.0.0"
@@ -90822,10 +90808,7 @@
                   "defaultvalue": "1",
                   "type": {
                     "names": [
-                      "string",
-                      "number",
-                      "function",
-                      "object"
+                      "*"
                     ]
                   },
                   "extends": "sonification.defaultInstrumentOptions.mapping.time",
