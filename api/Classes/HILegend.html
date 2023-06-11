@@ -240,7 +240,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The border radius of the symbol for series types that use a rectangle in the legend. Defaults to half the <code>symbolHeight</code>.</p>
+				<p>The border radius of the symbol for series types that use a rectangle in the legend. Defaults to half the <code>symbolHeight</code>, effectively creating a circle. For color axis scales, it defaults to 3.</p>
 			</div>
 			
 		    
@@ -1061,7 +1061,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>0</code>.</p>
+				<p><strong>Defaults to</strong> <code>2</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -1165,7 +1165,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>0</code>.</p>
+				<p><strong>Defaults to</strong> <code>2</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -1305,7 +1305,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>{"color": "#333333", "cursor": "pointer", "fontSize": "12px", "fontWeight": "bold", "textOverflow": "ellipsis"}</code>.</p>
+				<p><strong>Defaults to</strong> <code>{"color": "#333333", "cursor": "pointer", "fontSize": "0.75em", "fontWeight": "bold", "textOverflow": "ellipsis"}</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -2335,10 +2335,40 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>Accessible label for the legend, for charts where there is a legend title defined. <code>{legendTitle}</code> refers to the visual text in the legend title.</p>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *legendLabel</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>Chart legend: {legendTitle}</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -2351,10 +2381,40 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>Accessible label for the legend, for charts where there is no legend title defined.</p>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *legendLabelNoTitle</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>Toggle series visibility, {chartTitle}</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -2367,10 +2427,40 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>Accessible label for individual legend items. <code>{itemName}</code> refers to the visual text in the legend for that item.</p>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *legendItem</code></div>
 
 		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>Show {itemName}</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILegend.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">

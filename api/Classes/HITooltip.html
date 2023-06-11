@@ -97,6 +97,8 @@
 		
 		<option value="//api/name/footerFormat">footerFormat</option>
 		
+		<option value="//api/name/format">format</option>
+		
 		<option value="//api/name/formatter">formatter</option>
 		
 		<option value="//api/name/headerFormat">headerFormat</option>
@@ -409,7 +411,7 @@
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/">5px by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/">Default border radius</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/borderradius-0/">Square borders</a></li>
 </ul>
 
@@ -1051,7 +1053,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Split the tooltip into one label per series, with the header close to the axis. This is recommended over <code>shared</code> tooltips for charts with multiple line series, generally making them easier to read. This option takes precedence over <code>tooltip.shared</code>.</p>
+				<p>Split the tooltip into one label per series, with the header close to the axis. This is recommended over <code>shared</code> tooltips for charts with multiple line series, generally making them easier to read. This option takes precedence over <code>tooltip.shared</code>. Not supported for <code>polar</code> and <code>inverted</code> charts.</p>
 			</div>
 			
 		    
@@ -1120,7 +1122,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>#ffffff</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/backgroundcolor-solid/">Yellowish background</a></li>
@@ -1339,6 +1343,59 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-nullformat">Format data label and tooltip for null point.</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITooltip.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/format" title="format"></a>
+	<h3 class="method-title"><code><a href="#//api/name/format">&nbsp;&nbsp;format</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A <a href="https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> for the whole tooltip. When format strings are a requirement, it is usually more convenient to use <code>headerFormat</code>, <code>pointFormat</code> and <code>footerFormat</code>, but the <code>format</code> option allows combining them into one setting. The context of the format string is the same as that of the <code>formatter</code> callback.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *format</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/format-shared/">Format for shared tooltip</a></li>
 </ul>
 
 			</div>
@@ -1841,7 +1898,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The pixel width of the tooltip border. In styled mode, the stroke width is set in the <code>.highcharts-tooltip-box</code> class.</p>
+				<p>The pixel width of the tooltip border. Defaults to 0 for single tooltips and 1 for split tooltips. In styled mode, the stroke width is set in the <code>.highcharts-tooltip-box</code> class.</p>
 			</div>
 			
 		    
@@ -1858,12 +1915,10 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>1</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/">2px by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/bordercolor-default/">2 pixels</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/borderwidth/">No border (shadow only)</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/tooltip-border-background/">Tooltip in styled mode</a></li>
 </ul>
@@ -1910,6 +1965,16 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/tooltip/followpointer/">Tooltip follow pointer comparison</a></li>
+</ul>
+
+			</div>
 			
 
 			

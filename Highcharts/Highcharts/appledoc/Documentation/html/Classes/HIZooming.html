@@ -73,6 +73,8 @@
 		
 		<option value="//api/name/key">key</option>
 		
+		<option value="//api/name/mouseWheel">mouseWheel</option>
+		
 		<option value="//api/name/pinchType">pinchType</option>
 		
 		<option value="//api/name/resetButton">resetButton</option>
@@ -141,6 +143,105 @@
 
 						<div class="task-list">
 							<div class="section-method">
+	<a name="//api/name/mouseWheel" title="mouseWheel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mouseWheel">&nbsp;&nbsp;mouseWheel</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The mouse wheel zoom is a feature included in Highcharts Stock, but is also available for Highcharts Core as a module. Zooming with the mouse wheel is enabled by default. It can be disabled by setting this option to <code>false</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIMouseWheel *mouseWheel</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/mouse-wheel-zoom/enabled">Enable or disable</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIZooming.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pinchType" title="pinchType"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pinchType">&nbsp;&nbsp;pinchType</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Equivalent to <code>type</code>, but for multitouch gestures only. By default, the <code>pinchType</code> is the same as the <code>type</code> setting. However, pinching can be enabled separately in some cases, for example in stock charts where a mouse drag pans the chart, while pinching is enabled. When <code>tooltip.followTouchMove</code> is true, pinchType only applies to two-finger touches.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *pinchType</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Accepted values:</strong> <code>["x", "y", "xy"]</code>.</p>
+
+<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIZooming.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/resetButton" title="resetButton"></a>
 	<h3 class="method-title"><code><a href="#//api/name/resetButton">&nbsp;&nbsp;resetButton</a></code>
 </h3>
@@ -166,6 +267,54 @@
 
 			
 
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIZooming.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/key" title="key"></a>
+	<h3 class="method-title"><code><a href="#//api/name/key">&nbsp;&nbsp;key</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set a key to hold when dragging to zoom the chart. This is useful to avoid zooming while moving points. Should be set different than <code>chart.panKey</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *key</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Accepted values:</strong> <code>["alt", "ctrl", "meta", "shift"]</code>.</p>
+
+<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+			</div>
 			
 
 			
@@ -262,102 +411,6 @@
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Accepted values:</strong> <code>["x", "y", "xy"]</code>.</p>
-
-<p><strong>Defaults to</strong> <code>undefined</code>.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIZooming.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/pinchType" title="pinchType"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pinchType">&nbsp;&nbsp;pinchType</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Equivalent to <code>type</code>, but for multitouch gestures only. By default, the <code>pinchType</code> is the same as the <code>type</code> setting. However, pinching can be enabled separately in some cases, for example in stock charts where a mouse drag pans the chart, while pinching is enabled. When <code>tooltip.followTouchMove</code> is true, pinchType only applies to two-finger touches.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *pinchType</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["x", "y", "xy"]</code>.</p>
-
-<p><strong>Defaults to</strong> <code>undefined</code>.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIZooming.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/key" title="key"></a>
-	<h3 class="method-title"><code><a href="#//api/name/key">&nbsp;&nbsp;key</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Set a key to hold when dragging to zoom the chart. This is useful to avoid zooming while moving points. Should be set different than <code>chart.panKey</code>.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *key</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["alt", "ctrl", "meta", "shift"]</code>.</p>
 
 <p><strong>Defaults to</strong> <code>undefined</code>.</p>
 			</div>

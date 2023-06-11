@@ -145,6 +145,8 @@
 		
 		<option value="//api/name/legendIndex">legendIndex</option>
 		
+		<option value="//api/name/legendSymbol">legendSymbol</option>
+		
 		<option value="//api/name/lineWidth">lineWidth</option>
 		
 		<option value="//api/name/linecap">linecap</option>
@@ -169,6 +171,8 @@
 		
 		<option value="//api/name/pointDescriptionEnabledThreshold">pointDescriptionEnabledThreshold</option>
 		
+		<option value="//api/name/pointDescriptionFormat">pointDescriptionFormat</option>
+		
 		<option value="//api/name/pointDescriptionFormatter">pointDescriptionFormatter</option>
 		
 		<option value="//api/name/pointInterval">pointInterval</option>
@@ -192,6 +196,8 @@
 		<option value="//api/name/skipKeyboardNavigation">skipKeyboardNavigation</option>
 		
 		<option value="//api/name/softThreshold">softThreshold</option>
+		
+		<option value="//api/name/sonification">sonification</option>
 		
 		<option value="//api/name/stack">stack</option>
 		
@@ -1077,7 +1083,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>User supplied description text. This is added in the point comment description by default if present.</p>
+				<p>User supplied description text. This is added in the point comment description by default if present. <code>{description}</code> refers to the value given in <code>point.accessibility.description</code>.</p>
 			</div>
 			
 		    
@@ -1232,7 +1238,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>{Annotation: #each(annotations). }</code>.</p>
+				<p><strong>Defaults to</strong> <code>{#each annotations}Annotation: {this}{/each}</code>.</p>
 			</div>
 			
 
@@ -1389,7 +1395,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Styled mode only. A specific color index to use for the series, so its graphic representations are given the class name <code>highcharts-color-{n}</code>.</p>
+				<p>Styled mode only. A specific color index to use for the series, so its graphic representations are given the class name <code>highcharts-color-{n}</code>. Since v11, CSS variables on the form <code>--highcharts-color-{n}</code> make changing the color scheme very convenient.</p>
 			</div>
 			
 		    
@@ -2289,7 +2295,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether to connect a graph line across null points, or render a gap between the two points on either side of the null.</p>
+				<p>Whether to connect a graph line across null points, or render a gap between the two points on either side of the null. In stacked area chart, if <code>connectNulls</code> is set to true, null points are interpreted as 0.</p>
 			</div>
 			
 		    
@@ -2857,6 +2863,61 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/legendSymbol" title="legendSymbol"></a>
+	<h3 class="method-title"><code><a href="#//api/name/legendSymbol">&nbsp;&nbsp;legendSymbol</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>What type of legend symbol to render for this series. Can be one of <code>lineMarker</code> or <code>rectangle</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *legendSymbol</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Accepted values:</strong> <code>["lineMarker", "rectangle"]</code>.</p>
+
+<p><strong>Defaults to</strong> <code>rectangle</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/legend-symbol/">Change the legend symbol</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/events" title="events"></a>
 	<h3 class="method-title"><code><a href="#//api/name/events">&nbsp;&nbsp;events</a></code>
 </h3>
@@ -2874,6 +2935,47 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIEvents *events</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pointDescriptionFormat" title="pointDescriptionFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointDescriptionFormat">&nbsp;&nbsp;pointDescriptionFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Same as <code>accessibility.point.descriptionFormat</code>, but for an individual series. Overrides the chart wide configuration.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *pointDescriptionFormat</code></div>
 
 		    
 			
@@ -3328,6 +3430,47 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/sonification" title="sonification"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sonification">&nbsp;&nbsp;sonification</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sonification/audio chart options for a series.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HISonification *sonification</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/shadow" title="shadow"></a>
 	<h3 class="method-title"><code><a href="#//api/name/shadow">&nbsp;&nbsp;shadow</a></code>
 </h3>
@@ -3339,7 +3482,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>.</p>
+				<p>Whether to apply a drop shadow to the graph line. Since 2.3 the shadow can be an object configuration containing <code>color</code>, <code>offsetX</code>, <code>offsetY</code>, <code>opacity</code> and <code>width</code>. Note that in some cases, like stacked columns or other dense layouts, the series may cast shadows on each other. In that case, the <code>chart.seriesGroupShadow</code> allows applying a common drop shadow to the whole series group.</p>
 			</div>
 			
 		    
@@ -3674,7 +3817,7 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>2</code>.</p>
+				<p><strong>Defaults to</strong> <code>1</code>.</p>
 
 <p><strong>Try it</strong></p>
 
