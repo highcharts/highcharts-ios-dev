@@ -32,6 +32,7 @@
 	copyTooltip.shared = [self.shared copyWithZone: zone];
 	copyTooltip.formatter = [self.formatter copyWithZone: zone];
 	copyTooltip.nullFormat = [self.nullFormat copyWithZone: zone];
+	copyTooltip.format = [self.format copyWithZone: zone];
 	copyTooltip.pointFormat = [self.pointFormat copyWithZone: zone];
 	copyTooltip.xDateFormat = [self.xDateFormat copyWithZone: zone];
 	copyTooltip.dateTimeLabelFormats = [self.dateTimeLabelFormats copyWithZone: zone];
@@ -121,6 +122,9 @@
 	}
 	if (self.nullFormat) {
 		params[@"nullFormat"] = self.nullFormat;
+	}
+	if (self.format) {
+		params[@"format"] = self.format;
 	}
 	if (self.pointFormat) {
 		params[@"pointFormat"] = self.pointFormat;
@@ -308,6 +312,12 @@
 	NSString *oldValue = _nullFormat;
 	_nullFormat = nullFormat;
 	[self updateNSObject:oldValue newValue:nullFormat propertyName:@"nullFormat"];
+}
+
+-(void)setFormat:(NSString *)format {
+	NSString *oldValue = _format;
+	_format = format;
+	[self updateNSObject:oldValue newValue:format propertyName:@"format"];
 }
 
 -(void)setPointFormat:(NSString *)pointFormat {

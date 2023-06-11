@@ -66,13 +66,16 @@
 	copyPackedbubble.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyPackedbubble.threshold = [self.threshold copyWithZone: zone];
 	copyPackedbubble.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyPackedbubble.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyPackedbubble.events = [self.events copyWithZone: zone];
+	copyPackedbubble.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyPackedbubble.opacity = [self.opacity copyWithZone: zone];
 	copyPackedbubble.definition = [self.definition copyWithZone: zone];
 	copyPackedbubble.selected = [self.selected copyWithZone: zone];
 	copyPackedbubble.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPackedbubble.accessibility = [self.accessibility copyWithZone: zone];
 	copyPackedbubble.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyPackedbubble.sonification = [self.sonification copyWithZone: zone];
 	copyPackedbubble.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPackedbubble.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyPackedbubble.zones = [self.zones copyWithZone: zone];

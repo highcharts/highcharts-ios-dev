@@ -17,6 +17,7 @@
 	HIOrganization *copyOrganization = [[HIOrganization allocWithZone: zone] init];
 	copyOrganization.link = [self.link copyWithZone: zone];
 	copyOrganization.nodes = [self.nodes copyWithZone: zone];
+	copyOrganization.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyOrganization.data = [self.data copyWithZone: zone];
 	copyOrganization.id = [self.id copyWithZone: zone];
 	copyOrganization.index = [self.index copyWithZone: zone];
@@ -32,7 +33,6 @@
 	copyOrganization.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyOrganization.hangingIndentTranslation = [self.hangingIndentTranslation copyWithZone: zone];
 	copyOrganization.tooltip = [self.tooltip copyWithZone: zone];
-	copyOrganization.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyOrganization.minNodeLength = [self.minNodeLength copyWithZone: zone];
 	copyOrganization.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyOrganization.hangingIndent = [self.hangingIndent copyWithZone: zone];
@@ -62,7 +62,9 @@
 	copyOrganization.animation = [self.animation copyWithZone: zone];
 	copyOrganization.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyOrganization.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyOrganization.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyOrganization.events = [self.events copyWithZone: zone];
+	copyOrganization.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyOrganization.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyOrganization.definition = [self.definition copyWithZone: zone];
 	copyOrganization.keys = [self.keys copyWithZone: zone];
@@ -70,6 +72,7 @@
 	copyOrganization.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyOrganization.accessibility = [self.accessibility copyWithZone: zone];
 	copyOrganization.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyOrganization.sonification = [self.sonification copyWithZone: zone];
 	copyOrganization.visible = [self.visible copyWithZone: zone];
 	copyOrganization.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyOrganization.className = [self.className copyWithZone: zone];

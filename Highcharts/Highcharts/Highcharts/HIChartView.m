@@ -203,11 +203,7 @@ static NSBundle *highchartsBundle = nil;
     if (!self.lang) {
         self.lang = [[HILang alloc] init];
     }
-    
-    if (!self.global) {
-        self.global = [[HIGlobal alloc] init];
-    }
-    
+
     // Load Highchart main scripts.
     [self.HTML prepareScripts];
     [self.HTML prepareJavaScript:@"highcharts" prefix:@"js/" suffix:@".js"];
@@ -230,7 +226,7 @@ static NSBundle *highchartsBundle = nil;
     
     // Load theme js, only one.
     [self.HTML prepareJavaScript:self.theme?:nil prefix:@"js/themes/" suffix:@".js"];
-    [self.HTML prepareLang:[self.lang getParams] Global:[self.global getParams]];
+    [self.HTML prepareLang:[self.lang getParams]];
     [self.HTML prepareOptions:options];
     [self.HTML injectJavaScriptToHTML];
 }
@@ -343,12 +339,6 @@ static NSBundle *highchartsBundle = nil;
     [self willChangeValueForKey:@"lang"];
     _lang = lang;
     [self didChangeValueForKey:@"lang"];
-}
-
-- (void)setGlobal:(HIGlobal *)global {
-    [self willChangeValueForKey:@"global"];
-    _global = global;
-    [self didChangeValueForKey:@"global"];
 }
 
 + (NSNumber *)synced {

@@ -49,6 +49,9 @@
 	copyDataLabels.textPath = [self.textPath copyWithZone: zone];
 	copyDataLabels.align = [self.align copyWithZone: zone];
 	copyDataLabels.inside = [self.inside copyWithZone: zone];
+	copyDataLabels.linkFormat = [self.linkFormat copyWithZone: zone];
+	copyDataLabels.linkTextPath = [self.linkTextPath copyWithZone: zone];
+	copyDataLabels.linkFormatter = [self.linkFormatter copyWithZone: zone];
 	copyDataLabels.yHigh = [self.yHigh copyWithZone: zone];
 	copyDataLabels.xHigh = [self.xHigh copyWithZone: zone];
 	copyDataLabels.xLow = [self.xLow copyWithZone: zone];
@@ -62,9 +65,6 @@
 	copyDataLabels.alternate = [self.alternate copyWithZone: zone];
 	copyDataLabels.color = [self.color copyWithZone: zone];
 	copyDataLabels.width = [self.width copyWithZone: zone];
-	copyDataLabels.linkTextPath = [self.linkTextPath copyWithZone: zone];
-	copyDataLabels.linkFormat = [self.linkFormat copyWithZone: zone];
-	copyDataLabels.linkFormatter = [self.linkFormatter copyWithZone: zone];
 	return copyDataLabels;
 }
 
@@ -188,6 +188,15 @@
 	if (self.inside) {
 		params[@"inside"] = self.inside;
 	}
+	if (self.linkFormat) {
+		params[@"linkFormat"] = self.linkFormat;
+	}
+	if (self.linkTextPath) {
+		params[@"linkTextPath"] = [self.linkTextPath getParams];
+	}
+	if (self.linkFormatter) {
+		params[@"linkFormatter"] = [self.linkFormatter getFunction];
+	}
 	if (self.yHigh) {
 		params[@"yHigh"] = self.yHigh;
 	}
@@ -227,15 +236,6 @@
 	if (self.width) {
 		params[@"width"] = self.width;
 	}
-	if (self.linkTextPath) {
-		params[@"linkTextPath"] = [self.linkTextPath getParams];
-	}
-	if (self.linkFormat) {
-		params[@"linkFormat"] = self.linkFormat;
-	}
-	if (self.linkFormatter) {
-		params[@"linkFormatter"] = [self.linkFormatter getFunction];
-	}
 	return params;
 }
 
@@ -271,8 +271,8 @@
 	[self updateHIObject:oldValue newValue:connectorColor propertyName:@"connectorColor"];
 }
 
--(void)setCrookDistance:(NSNumber *)crookDistance {
-	NSNumber *oldValue = _crookDistance;
+-(void)setCrookDistance:(NSString *)crookDistance {
+	NSString *oldValue = _crookDistance;
 	_crookDistance = crookDistance;
 	[self updateNSObject:oldValue newValue:crookDistance propertyName:@"crookDistance"];
 }
@@ -475,6 +475,24 @@
 	[self updateNSObject:oldValue newValue:inside propertyName:@"inside"];
 }
 
+-(void)setLinkFormat:(NSString *)linkFormat {
+	NSString *oldValue = _linkFormat;
+	_linkFormat = linkFormat;
+	[self updateNSObject:oldValue newValue:linkFormat propertyName:@"linkFormat"];
+}
+
+-(void)setLinkTextPath:(HILinkTextPath *)linkTextPath {
+  HILinkTextPath *oldValue = _linkTextPath;
+	_linkTextPath = linkTextPath;
+	[self updateHIObject:oldValue newValue:linkTextPath propertyName:@"linkTextPath"];
+}
+
+-(void)setLinkFormatter:(HIFunction *)linkFormatter {
+	HIFunction *oldValue = _linkFormatter;
+	_linkFormatter = linkFormatter;
+	[self updateHIObject:oldValue newValue:linkFormatter propertyName:@"linkFormatter"];
+}
+
 -(void)setYHigh:(NSNumber *)yHigh {
 	NSNumber *oldValue = _yHigh;
 	_yHigh = yHigh;
@@ -551,24 +569,6 @@
 	NSNumber *oldValue = _width;
 	_width = width;
 	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
-}
-
--(void)setLinkTextPath:(HILinkTextPath *)linkTextPath {
-	HILinkTextPath *oldValue = _linkTextPath;
-	_linkTextPath = linkTextPath;
-	[self updateHIObject:oldValue newValue:linkTextPath propertyName:@"linkTextPath"];
-}
-
--(void)setLinkFormat:(NSString *)linkFormat {
-	NSString *oldValue = _linkFormat;
-	_linkFormat = linkFormat;
-	[self updateNSObject:oldValue newValue:linkFormat propertyName:@"linkFormat"];
-}
-
--(void)setLinkFormatter:(HIFunction *)linkFormatter {
-	HIFunction *oldValue = _linkFormatter;
-	_linkFormatter = linkFormatter;
-	[self updateHIObject:oldValue newValue:linkFormatter propertyName:@"linkFormatter"];
 }
 
 @end

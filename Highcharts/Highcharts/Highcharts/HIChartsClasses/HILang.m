@@ -29,6 +29,7 @@
 	copyLang.viewData = [self.viewData copyWithZone: zone];
 	copyLang.contextButtonTitle = [self.contextButtonTitle copyWithZone: zone];
 	copyLang.invalidDate = [self.invalidDate copyWithZone: zone];
+	copyLang.playAsSound = [self.playAsSound copyWithZone: zone];
 	copyLang.exitFullscreen = [self.exitFullscreen copyWithZone: zone];
 	copyLang.resetZoom = [self.resetZoom copyWithZone: zone];
 	copyLang.downloadPDF = [self.downloadPDF copyWithZone: zone];
@@ -37,8 +38,9 @@
 	copyLang.shortMonths = [self.shortMonths copyWithZone: zone];
 	copyLang.downloadJPEG = [self.downloadJPEG copyWithZone: zone];
 	copyLang.decimalPoint = [self.decimalPoint copyWithZone: zone];
-	copyLang.navigation = [self.navigation copyWithZone: zone];
 	copyLang.thousandsSep = [self.thousandsSep copyWithZone: zone];
+	copyLang.navigation = [self.navigation copyWithZone: zone];
+	copyLang.downloadMIDI = [self.downloadMIDI copyWithZone: zone];
 	return copyLang;
 }
 
@@ -129,6 +131,9 @@
 	if (self.invalidDate) {
 		params[@"invalidDate"] = self.invalidDate;
 	}
+	if (self.playAsSound) {
+		params[@"playAsSound"] = self.playAsSound;
+	}
 	if (self.exitFullscreen) {
 		params[@"exitFullscreen"] = self.exitFullscreen;
 	}
@@ -171,11 +176,14 @@
 	if (self.decimalPoint) {
 		params[@"decimalPoint"] = self.decimalPoint;
 	}
+	if (self.thousandsSep) {
+		params[@"thousandsSep"] = self.thousandsSep;
+	}
 	if (self.navigation) {
 		params[@"navigation"] = [self.navigation getParams];
 	}
-	if (self.thousandsSep) {
-		params[@"thousandsSep"] = self.thousandsSep;
+	if (self.downloadMIDI) {
+		params[@"downloadMIDI"] = self.downloadMIDI;
 	}
 	return params;
 }
@@ -296,6 +304,12 @@
 	[self updateNSObject:oldValue newValue:invalidDate propertyName:@"invalidDate"];
 }
 
+-(void)setPlayAsSound:(NSString *)playAsSound {
+	NSString *oldValue = _playAsSound;
+	_playAsSound = playAsSound;
+	[self updateNSObject:oldValue newValue:playAsSound propertyName:@"playAsSound"];
+}
+
 -(void)setExitFullscreen:(NSString *)exitFullscreen {
 	NSString *oldValue = _exitFullscreen;
 	_exitFullscreen = exitFullscreen;
@@ -344,16 +358,22 @@
 	[self updateNSObject:oldValue newValue:decimalPoint propertyName:@"decimalPoint"];
 }
 
+-(void)setThousandsSep:(NSString *)thousandsSep {
+	NSString *oldValue = _thousandsSep;
+	_thousandsSep = thousandsSep;
+	[self updateNSObject:oldValue newValue:thousandsSep propertyName:@"thousandsSep"];
+}
+
 -(void)setNavigation:(HINavigation *)navigation {
 	HINavigation *oldValue = _navigation;
 	_navigation = navigation;
 	[self updateHIObject:oldValue newValue:navigation propertyName:@"navigation"];
 }
 
--(void)setThousandsSep:(NSString *)thousandsSep {
-	NSString *oldValue = _thousandsSep;
-	_thousandsSep = thousandsSep;
-	[self updateNSObject:oldValue newValue:thousandsSep propertyName:@"thousandsSep"];
+-(void)setDownloadMIDI:(NSString *)downloadMIDI {
+	NSString *oldValue = _downloadMIDI;
+	_downloadMIDI = downloadMIDI;
+	[self updateNSObject:oldValue newValue:downloadMIDI propertyName:@"downloadMIDI"];
 }
 
 @end

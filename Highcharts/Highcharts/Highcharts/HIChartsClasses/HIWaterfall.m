@@ -15,6 +15,16 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIWaterfall *copyWaterfall = [[HIWaterfall allocWithZone: zone] init];
+	copyWaterfall.data = [self.data copyWithZone: zone];
+	copyWaterfall.id = [self.id copyWithZone: zone];
+	copyWaterfall.index = [self.index copyWithZone: zone];
+	copyWaterfall.legendIndex = [self.legendIndex copyWithZone: zone];
+	copyWaterfall.name = [self.name copyWithZone: zone];
+	copyWaterfall.stack = [self.stack copyWithZone: zone];
+	copyWaterfall.type = [self.type copyWithZone: zone];
+	copyWaterfall.xAxis = [self.xAxis copyWithZone: zone];
+	copyWaterfall.yAxis = [self.yAxis copyWithZone: zone];
+	copyWaterfall.zIndex = [self.zIndex copyWithZone: zone];
 	copyWaterfall.borderColor = [self.borderColor copyWithZone: zone];
 	copyWaterfall.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyWaterfall.upColor = [self.upColor copyWithZone: zone];
@@ -65,7 +75,9 @@
 	copyWaterfall.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyWaterfall.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyWaterfall.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyWaterfall.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyWaterfall.events = [self.events copyWithZone: zone];
+	copyWaterfall.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyWaterfall.opacity = [self.opacity copyWithZone: zone];
 	copyWaterfall.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyWaterfall.turboThreshold = [self.turboThreshold copyWithZone: zone];
@@ -75,6 +87,7 @@
 	copyWaterfall.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyWaterfall.accessibility = [self.accessibility copyWithZone: zone];
 	copyWaterfall.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyWaterfall.sonification = [self.sonification copyWithZone: zone];
 	copyWaterfall.shadow = [self.shadow copyWithZone: zone];
 	copyWaterfall.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyWaterfall.colorAxis = [self.colorAxis copyWithZone: zone];
@@ -87,16 +100,6 @@
 	copyWaterfall.className = [self.className copyWithZone: zone];
 	copyWaterfall.pointStart = [self.pointStart copyWithZone: zone];
 	copyWaterfall.showInLegend = [self.showInLegend copyWithZone: zone];
-	copyWaterfall.data = [self.data copyWithZone: zone];
-	copyWaterfall.id = [self.id copyWithZone: zone];
-	copyWaterfall.index = [self.index copyWithZone: zone];
-	copyWaterfall.legendIndex = [self.legendIndex copyWithZone: zone];
-	copyWaterfall.name = [self.name copyWithZone: zone];
-	copyWaterfall.stack = [self.stack copyWithZone: zone];
-	copyWaterfall.type = [self.type copyWithZone: zone];
-	copyWaterfall.xAxis = [self.xAxis copyWithZone: zone];
-	copyWaterfall.yAxis = [self.yAxis copyWithZone: zone];
-	copyWaterfall.zIndex = [self.zIndex copyWithZone: zone];
 	return copyWaterfall;
 }
 

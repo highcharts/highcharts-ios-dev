@@ -10,6 +10,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HICollapseButton *copyCollapseButton = [[HICollapseButton allocWithZone: zone] init];
+	copyCollapseButton.style = [self.style copyWithZone: zone];
 	copyCollapseButton.enabled = [self.enabled copyWithZone: zone];
 	copyCollapseButton.shape = [self.shape copyWithZone: zone];
 	copyCollapseButton.height = [self.height copyWithZone: zone];
@@ -17,12 +18,16 @@
 	copyCollapseButton.onlyOnHover = [self.onlyOnHover copyWithZone: zone];
 	copyCollapseButton.y = [self.y copyWithZone: zone];
 	copyCollapseButton.x = [self.x copyWithZone: zone];
+	copyCollapseButton.lineWidth = [self.lineWidth copyWithZone: zone];
 	return copyCollapseButton;
 }
 
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.style) {
+		params[@"style"] = [self.style getParams];
+	}
 	if (self.enabled) {
 		params[@"enabled"] = self.enabled;
 	}
@@ -44,10 +49,19 @@
 	if (self.x) {
 		params[@"x"] = self.x;
 	}
+	if (self.lineWidth) {
+		params[@"lineWidth"] = self.lineWidth;
+	}
 	return params;
 }
 
 # pragma mark - Setters
+
+-(void)setStyle:(HIStyle *)style {
+	HIStyle *oldValue = _style;
+	_style = style;
+	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
+}
 
 -(void)setEnabled:(NSNumber *)enabled {
 	NSNumber *oldValue = _enabled;
@@ -89,6 +103,12 @@
 	NSNumber *oldValue = _x;
 	_x = x;
 	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
+}
+
+-(void)setLineWidth:(NSNumber *)lineWidth {
+	NSNumber *oldValue = _lineWidth;
+	_lineWidth = lineWidth;
+	[self updateNSObject:oldValue newValue:lineWidth propertyName:@"lineWidth"];
 }
 
 @end

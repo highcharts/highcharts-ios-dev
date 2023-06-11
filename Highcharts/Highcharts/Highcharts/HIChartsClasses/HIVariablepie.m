@@ -31,13 +31,14 @@
 	copyVariablepie.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
 	copyVariablepie.clip = [self.clip copyWithZone: zone];
 	copyVariablepie.point = [self.point copyWithZone: zone];
-	copyVariablepie.color = [self.color copyWithZone: zone];
+	copyVariablepie.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyVariablepie.states = [self.states copyWithZone: zone];
 	copyVariablepie.colors = [self.colors copyWithZone: zone];
 	copyVariablepie.size = [self.size copyWithZone: zone];
 	copyVariablepie.borderColor = [self.borderColor copyWithZone: zone];
 	copyVariablepie.thickness = [self.thickness copyWithZone: zone];
 	copyVariablepie.minSize = [self.minSize copyWithZone: zone];
+	copyVariablepie.color = [self.color copyWithZone: zone];
 	copyVariablepie.fillColor = [self.fillColor copyWithZone: zone];
 	copyVariablepie.startAngle = [self.startAngle copyWithZone: zone];
 	copyVariablepie.events = [self.events copyWithZone: zone];
@@ -62,12 +63,15 @@
 	copyVariablepie.animation = [self.animation copyWithZone: zone];
 	copyVariablepie.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyVariablepie.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyVariablepie.legendSymbol = [self.legendSymbol copyWithZone: zone];
+	copyVariablepie.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyVariablepie.opacity = [self.opacity copyWithZone: zone];
 	copyVariablepie.definition = [self.definition copyWithZone: zone];
 	copyVariablepie.keys = [self.keys copyWithZone: zone];
 	copyVariablepie.selected = [self.selected copyWithZone: zone];
 	copyVariablepie.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyVariablepie.accessibility = [self.accessibility copyWithZone: zone];
+	copyVariablepie.sonification = [self.sonification copyWithZone: zone];
 	copyVariablepie.shadow = [self.shadow copyWithZone: zone];
 	copyVariablepie.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyVariablepie.colorAxis = [self.colorAxis copyWithZone: zone];
@@ -97,6 +101,9 @@
 	}
 	if (self.ignoreHiddenPoint) {
 		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
+	}
+	if (self.borderRadius) {
+		params[@"borderRadius"] = self.borderRadius;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -189,6 +196,12 @@
 	NSNumber *oldValue = _ignoreHiddenPoint;
 	_ignoreHiddenPoint = ignoreHiddenPoint;
 	[self updateNSObject:oldValue newValue:ignoreHiddenPoint propertyName:@"ignoreHiddenPoint"];
+}
+
+-(void)setBorderRadius:(NSNumber *)borderRadius {
+  NSNumber *oldValue = _borderRadius;
+	_borderRadius = borderRadius;
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {
