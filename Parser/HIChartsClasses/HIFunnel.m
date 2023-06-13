@@ -23,23 +23,24 @@
 	copyFunnel.type = [self.type copyWithZone: zone];
 	copyFunnel.zIndex = [self.zIndex copyWithZone: zone];
 	copyFunnel.center = [self.center copyWithZone: zone];
+	copyFunnel.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyFunnel.reversed = [self.reversed copyWithZone: zone];
-	copyFunnel.neckWidth = [self.neckWidth copyWithZone: zone];
+	copyFunnel.neckHeight = [self.neckHeight copyWithZone: zone];
 	copyFunnel.height = [self.height copyWithZone: zone];
 	copyFunnel.states = [self.states copyWithZone: zone];
 	copyFunnel.width = [self.width copyWithZone: zone];
 	copyFunnel.animation = [self.animation copyWithZone: zone];
-	copyFunnel.neckHeight = [self.neckHeight copyWithZone: zone];
+	copyFunnel.neckWidth = [self.neckWidth copyWithZone: zone];
 	copyFunnel.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyFunnel.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
 	copyFunnel.clip = [self.clip copyWithZone: zone];
 	copyFunnel.point = [self.point copyWithZone: zone];
-	copyFunnel.color = [self.color copyWithZone: zone];
 	copyFunnel.colors = [self.colors copyWithZone: zone];
 	copyFunnel.borderColor = [self.borderColor copyWithZone: zone];
 	copyFunnel.tooltip = [self.tooltip copyWithZone: zone];
 	copyFunnel.thickness = [self.thickness copyWithZone: zone];
 	copyFunnel.minSize = [self.minSize copyWithZone: zone];
+	copyFunnel.color = [self.color copyWithZone: zone];
 	copyFunnel.fillColor = [self.fillColor copyWithZone: zone];
 	copyFunnel.startAngle = [self.startAngle copyWithZone: zone];
 	copyFunnel.events = [self.events copyWithZone: zone];
@@ -60,12 +61,15 @@
 	copyFunnel.onPoint = [self.onPoint copyWithZone: zone];
 	copyFunnel.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyFunnel.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyFunnel.legendSymbol = [self.legendSymbol copyWithZone: zone];
+	copyFunnel.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyFunnel.opacity = [self.opacity copyWithZone: zone];
 	copyFunnel.definition = [self.definition copyWithZone: zone];
 	copyFunnel.keys = [self.keys copyWithZone: zone];
 	copyFunnel.selected = [self.selected copyWithZone: zone];
 	copyFunnel.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyFunnel.accessibility = [self.accessibility copyWithZone: zone];
+	copyFunnel.sonification = [self.sonification copyWithZone: zone];
 	copyFunnel.shadow = [self.shadow copyWithZone: zone];
 	copyFunnel.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyFunnel.colorAxis = [self.colorAxis copyWithZone: zone];
@@ -90,11 +94,14 @@
 		}
 		params[@"center"] = array;
 	}
+	if (self.borderRadius) {
+		params[@"borderRadius"] = self.borderRadius;
+	}
 	if (self.reversed) {
 		params[@"reversed"] = self.reversed;
 	}
-	if (self.neckWidth) {
-		params[@"neckWidth"] = self.neckWidth;
+	if (self.neckHeight) {
+		params[@"neckHeight"] = self.neckHeight;
 	}
 	if (self.height) {
 		params[@"height"] = self.height;
@@ -102,8 +109,8 @@
 	if (self.width) {
 		params[@"width"] = self.width;
 	}
-	if (self.neckHeight) {
-		params[@"neckHeight"] = self.neckHeight;
+	if (self.neckWidth) {
+		params[@"neckWidth"] = self.neckWidth;
 	}
 	if (self.ignoreHiddenPoint) {
 		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
@@ -153,16 +160,22 @@
 	[self updateArrayObject:oldValue newValue:center propertyName:@"center"];
 }
 
+-(void)setBorderRadius:(NSNumber *)borderRadius {
+	NSNumber *oldValue = _borderRadius;
+	_borderRadius = borderRadius;
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+}
+
 -(void)setReversed:(NSNumber *)reversed {
 	NSNumber *oldValue = _reversed;
 	_reversed = reversed;
 	[self updateNSObject:oldValue newValue:reversed propertyName:@"reversed"];
 }
 
--(void)setNeckWidth:(id)neckWidth {
-	id oldValue = _neckWidth;
-	_neckWidth = neckWidth;
-	[self updateNSObject:oldValue newValue:neckWidth propertyName:@"neckWidth"];
+-(void)setNeckHeight:(id)neckHeight {
+	id oldValue = _neckHeight;
+	_neckHeight = neckHeight;
+	[self updateNSObject:oldValue newValue:neckHeight propertyName:@"neckHeight"];
 }
 
 -(void)setHeight:(id)height {
@@ -177,10 +190,10 @@
 	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
 }
 
--(void)setNeckHeight:(id)neckHeight {
-	id oldValue = _neckHeight;
-	_neckHeight = neckHeight;
-	[self updateNSObject:oldValue newValue:neckHeight propertyName:@"neckHeight"];
+-(void)setNeckWidth:(id)neckWidth {
+	id oldValue = _neckWidth;
+	_neckWidth = neckWidth;
+	[self updateNSObject:oldValue newValue:neckWidth propertyName:@"neckWidth"];
 }
 
 -(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {

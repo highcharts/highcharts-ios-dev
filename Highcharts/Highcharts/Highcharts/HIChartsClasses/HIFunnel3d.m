@@ -68,7 +68,9 @@
 	copyFunnel3d.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyFunnel3d.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyFunnel3d.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyFunnel3d.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyFunnel3d.events = [self.events copyWithZone: zone];
+	copyFunnel3d.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyFunnel3d.opacity = [self.opacity copyWithZone: zone];
 	copyFunnel3d.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyFunnel3d.turboThreshold = [self.turboThreshold copyWithZone: zone];
@@ -78,6 +80,7 @@
 	copyFunnel3d.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyFunnel3d.accessibility = [self.accessibility copyWithZone: zone];
 	copyFunnel3d.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyFunnel3d.sonification = [self.sonification copyWithZone: zone];
 	copyFunnel3d.shadow = [self.shadow copyWithZone: zone];
 	copyFunnel3d.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyFunnel3d.zoneAxis = [self.zoneAxis copyWithZone: zone];

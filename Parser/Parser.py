@@ -326,7 +326,25 @@ hc_types = {
         "Highcharts.FormatterCallbackFunction.<Series>": 'HIFunction',
         #8.2.0
         "string|Array.<(Array.<string>|Array.<string, number>|Array.<string, number, number>|Array.<string, number, number, number, number>|Array.<string, number, number, number, number, number, number>|Array.<string, number, number, number, number, number, number, number>)>|undefined": 'NSArray /* <NSString, NSNumber> */',
-        "Array.<Array.<number, string|Highcharts.GradientColorObject|Highcharts.PatternObject>>": 'NSArray'
+        "Array.<Array.<number, string|Highcharts.GradientColorObject|Highcharts.PatternObject>>": 'NSArray',
+        #11.1.0
+        "'default'|'curved'|'straight'": 'NSString',
+        "Highcharts.SeriesPieDataLabelsOptionsObject": 'id',
+        "function|object": 'id',
+        "number|string|Highcharts.BorderRadiusOptionsObject": 'HIBorderRadiusOptionsObject',
+        "string|Highcharts.SynthPatchOptionsObject": 'HISynthPatchOptionsObject',
+        "DataLabelTextPathOptions": 'HIDataLabelTextPathOptions',
+        "OrganizationDataLabelsFormatterCallbackFunction": 'HIFunction',
+        "Array.<string|Highcharts.AnnotationMockPointOptionsObject|function>": 'NSArray<HIAnnotationMockPointOptionsObject *>',
+        "string|Highcharts.AnnotationMockPointOptionsObject|function": 'HIAnnotationMockPointOptionsObject',
+        "Highcharts.AnnotationsOptions": 'HIAnnotationsOptions',
+        "boolean|object": 'id',
+        "Array.<string>|undefined": 'NSArray<NSString *>',
+        "string|number|function|object": 'id',
+        "string|Highcharts.SVGAttributes|undefined": 'HISVGAttributes',
+        "Highcharts.DataLabelsOptions": 'HIDataLabelsOptions',
+        "Highcharts.PointMarkerOptionsObject": 'HIPointMarkerOptionsObject',
+        "Array.<(Array.<string>|Array.<string, number>|Array.<string, number, number>|Array.<string, number, number, number, number>|Array.<string, number, number, number, number, number, number>|Array.<string, number, number, number, number, number, number, number>)>": 'NSArray'
     }
 
 def get_type(x):

@@ -17,6 +17,7 @@
 	HINetworkgraph *copyNetworkgraph = [[HINetworkgraph allocWithZone: zone] init];
 	copyNetworkgraph.nodes = [self.nodes copyWithZone: zone];
 	copyNetworkgraph.data = [self.data copyWithZone: zone];
+	copyNetworkgraph.events = [self.events copyWithZone: zone];
 	copyNetworkgraph.id = [self.id copyWithZone: zone];
 	copyNetworkgraph.index = [self.index copyWithZone: zone];
 	copyNetworkgraph.legendIndex = [self.legendIndex copyWithZone: zone];
@@ -46,7 +47,8 @@
 	copyNetworkgraph.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyNetworkgraph.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyNetworkgraph.showCheckbox = [self.showCheckbox copyWithZone: zone];
-	copyNetworkgraph.events = [self.events copyWithZone: zone];
+	copyNetworkgraph.legendSymbol = [self.legendSymbol copyWithZone: zone];
+	copyNetworkgraph.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyNetworkgraph.opacity = [self.opacity copyWithZone: zone];
 	copyNetworkgraph.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyNetworkgraph.definition = [self.definition copyWithZone: zone];
@@ -54,6 +56,7 @@
 	copyNetworkgraph.selected = [self.selected copyWithZone: zone];
 	copyNetworkgraph.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyNetworkgraph.accessibility = [self.accessibility copyWithZone: zone];
+	copyNetworkgraph.sonification = [self.sonification copyWithZone: zone];
 	copyNetworkgraph.shadow = [self.shadow copyWithZone: zone];
 	copyNetworkgraph.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyNetworkgraph.zones = [self.zones copyWithZone: zone];

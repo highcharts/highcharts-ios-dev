@@ -73,6 +73,8 @@
 		
 		<option value="//api/name/borderColor">borderColor</option>
 		
+		<option value="//api/name/borderRadius">borderRadius</option>
+		
 		<option value="//api/name/borderWidth">borderWidth</option>
 		
 		<option value="//api/name/center">center</option>
@@ -244,6 +246,57 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/borderRadius" title="borderRadius"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderRadius">&nbsp;&nbsp;borderRadius</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The corner radius of the border surrounding all points or series. A number signifies pixels. A percentage string, like for example <code>50%</code>, signifies a size relative to the series width.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *borderRadius</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/funnel-border-radius">Funnel and pyramid with rounded border</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIFunnel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/reversed" title="reversed"></a>
 	<h3 class="method-title"><code><a href="#//api/name/reversed">&nbsp;&nbsp;reversed</a></code>
 </h3>
@@ -285,8 +338,8 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/neckWidth" title="neckWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/neckWidth">&nbsp;&nbsp;neckWidth</a></code>
+	<a name="//api/name/neckHeight" title="neckHeight"></a>
+	<h3 class="method-title"><code><a href="#//api/name/neckHeight">&nbsp;&nbsp;neckHeight</a></code>
 </h3>
 
 	<div class="method-info">
@@ -296,12 +349,12 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The width of the neck, the lower part of the funnel. A number defines pixel width, a percentage string defines a percentage of the plot area width.</p>
+				<p>The height of the neck, the lower part of the funnel. A number defines pixel width, a percentage string defines a percentage of the plot area height.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id neckWidth</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id neckHeight</code></div>
 
 		    
 			
@@ -313,14 +366,7 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>30%</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/funnel/">Funnel demo</a></li>
-</ul>
-
+				<p><strong>Defaults to</strong> <code>25%</code>.</p>
 			</div>
 			
 
@@ -437,8 +483,8 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/neckHeight" title="neckHeight"></a>
-	<h3 class="method-title"><code><a href="#//api/name/neckHeight">&nbsp;&nbsp;neckHeight</a></code>
+	<a name="//api/name/neckWidth" title="neckWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/neckWidth">&nbsp;&nbsp;neckWidth</a></code>
 </h3>
 
 	<div class="method-info">
@@ -448,12 +494,12 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The height of the neck, the lower part of the funnel. A number defines pixel width, a percentage string defines a percentage of the plot area height.</p>
+				<p>The width of the neck, the lower part of the funnel. A number defines pixel width, a percentage string defines a percentage of the plot area width.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id neckHeight</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id neckWidth</code></div>
 
 		    
 			
@@ -465,7 +511,14 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>25%</code>.</p>
+				<p><strong>Defaults to</strong> <code>30%</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/funnel/">Funnel demo</a></li>
+</ul>
+
 			</div>
 			
 

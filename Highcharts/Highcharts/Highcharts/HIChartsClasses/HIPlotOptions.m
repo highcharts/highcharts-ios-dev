@@ -18,7 +18,6 @@
 	copyPlotOptions.networkgraph = [self.networkgraph copyWithZone: zone];
 	copyPlotOptions.bar = [self.bar copyWithZone: zone];
 	copyPlotOptions.variwide = [self.variwide copyWithZone: zone];
-	copyPlotOptions.arcdiagram = [self.arcdiagram copyWithZone: zone];
 	copyPlotOptions.areasplinerange = [self.areasplinerange copyWithZone: zone];
 	copyPlotOptions.item = [self.item copyWithZone: zone];
 	copyPlotOptions.vector = [self.vector copyWithZone: zone];
@@ -26,7 +25,9 @@
 	copyPlotOptions.arearange = [self.arearange copyWithZone: zone];
 	copyPlotOptions.bellcurve = [self.bellcurve copyWithZone: zone];
 	copyPlotOptions.series = [self.series copyWithZone: zone];
+	copyPlotOptions.arcdiagram = [self.arcdiagram copyWithZone: zone];
 	copyPlotOptions.pyramid3d = [self.pyramid3d copyWithZone: zone];
+	copyPlotOptions.sankey = [self.sankey copyWithZone: zone];
 	copyPlotOptions.pareto = [self.pareto copyWithZone: zone];
 	copyPlotOptions.dependencywheel = [self.dependencywheel copyWithZone: zone];
 	copyPlotOptions.heatmap = [self.heatmap copyWithZone: zone];
@@ -37,7 +38,9 @@
 	copyPlotOptions.column = [self.column copyWithZone: zone];
 	copyPlotOptions.treemap = [self.treemap copyWithZone: zone];
 	copyPlotOptions.waterfall = [self.waterfall copyWithZone: zone];
+	copyPlotOptions.pictorial = [self.pictorial copyWithZone: zone];
 	copyPlotOptions.columnrange = [self.columnrange copyWithZone: zone];
+	copyPlotOptions.pyramid = [self.pyramid copyWithZone: zone];
 	copyPlotOptions.venn = [self.venn copyWithZone: zone];
 	copyPlotOptions.spline = [self.spline copyWithZone: zone];
 	copyPlotOptions.area = [self.area copyWithZone: zone];
@@ -49,9 +52,7 @@
 	copyPlotOptions.line = [self.line copyWithZone: zone];
 	copyPlotOptions.wordcloud = [self.wordcloud copyWithZone: zone];
 	copyPlotOptions.scatter = [self.scatter copyWithZone: zone];
-	copyPlotOptions.sankey = [self.sankey copyWithZone: zone];
 	copyPlotOptions.cylinder = [self.cylinder copyWithZone: zone];
-	copyPlotOptions.pyramid = [self.pyramid copyWithZone: zone];
 	copyPlotOptions.tilemap = [self.tilemap copyWithZone: zone];
 	copyPlotOptions.pie = [self.pie copyWithZone: zone];
 	copyPlotOptions.areaspline = [self.areaspline copyWithZone: zone];
@@ -93,9 +94,6 @@
 	if (self.variwide) {
 		params[@"variwide"] = [self.variwide getParams];
 	}
-	if (self.arcdiagram) {
-		params[@"arcdiagram"] = [self.arcdiagram getParams];
-	}
 	if (self.areasplinerange) {
 		params[@"areasplinerange"] = [self.areasplinerange getParams];
 	}
@@ -117,8 +115,14 @@
 	if (self.series) {
 		params[@"series"] = [self.series getParams];
 	}
+	if (self.arcdiagram) {
+		params[@"arcdiagram"] = [self.arcdiagram getParams];
+	}
 	if (self.pyramid3d) {
 		params[@"pyramid3d"] = [self.pyramid3d getParams];
+	}
+	if (self.sankey) {
+		params[@"sankey"] = [self.sankey getParams];
 	}
 	if (self.pareto) {
 		params[@"pareto"] = [self.pareto getParams];
@@ -150,8 +154,14 @@
 	if (self.waterfall) {
 		params[@"waterfall"] = [self.waterfall getParams];
 	}
+	if (self.pictorial) {
+		params[@"pictorial"] = [self.pictorial getParams];
+	}
 	if (self.columnrange) {
 		params[@"columnrange"] = [self.columnrange getParams];
+	}
+	if (self.pyramid) {
+		params[@"pyramid"] = [self.pyramid getParams];
 	}
 	if (self.venn) {
 		params[@"venn"] = [self.venn getParams];
@@ -186,14 +196,8 @@
 	if (self.scatter) {
 		params[@"scatter"] = [self.scatter getParams];
 	}
-	if (self.sankey) {
-		params[@"sankey"] = [self.sankey getParams];
-	}
 	if (self.cylinder) {
 		params[@"cylinder"] = [self.cylinder getParams];
-	}
-	if (self.pyramid) {
-		params[@"pyramid"] = [self.pyramid getParams];
 	}
 	if (self.tilemap) {
 		params[@"tilemap"] = [self.tilemap getParams];
@@ -281,12 +285,6 @@
 	[self updateHIObject:oldValue newValue:variwide propertyName:@"variwide"];
 }
 
--(void)setArcdiagram:(HIArcdiagram *)arcdiagram {
-	HIArcdiagram *oldValue = _arcdiagram;
-	_arcdiagram = arcdiagram;
-	[self updateHIObject:oldValue newValue:arcdiagram propertyName:@"arcdiagram"];
-}
-
 -(void)setAreasplinerange:(HIAreasplinerange *)areasplinerange {
 	HIAreasplinerange *oldValue = _areasplinerange;
 	_areasplinerange = areasplinerange;
@@ -329,10 +327,22 @@
 	[self updateHIObject:oldValue newValue:series propertyName:@"series"];
 }
 
+-(void)setArcdiagram:(HIArcdiagram *)arcdiagram {
+	HIArcdiagram *oldValue = _arcdiagram;
+	_arcdiagram = arcdiagram;
+	[self updateHIObject:oldValue newValue:arcdiagram propertyName:@"arcdiagram"];
+}
+
 -(void)setPyramid3d:(HIPyramid3d *)pyramid3d {
 	HIPyramid3d *oldValue = _pyramid3d;
 	_pyramid3d = pyramid3d;
 	[self updateHIObject:oldValue newValue:pyramid3d propertyName:@"pyramid3d"];
+}
+
+-(void)setSankey:(HISankey *)sankey {
+	HISankey *oldValue = _sankey;
+	_sankey = sankey;
+	[self updateHIObject:oldValue newValue:sankey propertyName:@"sankey"];
 }
 
 -(void)setPareto:(HIPareto *)pareto {
@@ -395,10 +405,22 @@
 	[self updateHIObject:oldValue newValue:waterfall propertyName:@"waterfall"];
 }
 
+-(void)setPictorial:(HIPictorial *)pictorial {
+	HIPictorial *oldValue = _pictorial;
+	_pictorial = pictorial;
+	[self updateHIObject:oldValue newValue:pictorial propertyName:@"pictorial"];
+}
+
 -(void)setColumnrange:(HIColumnrange *)columnrange {
 	HIColumnrange *oldValue = _columnrange;
 	_columnrange = columnrange;
 	[self updateHIObject:oldValue newValue:columnrange propertyName:@"columnrange"];
+}
+
+-(void)setPyramid:(HIPyramid *)pyramid {
+	HIPyramid *oldValue = _pyramid;
+	_pyramid = pyramid;
+	[self updateHIObject:oldValue newValue:pyramid propertyName:@"pyramid"];
 }
 
 -(void)setVenn:(HIVenn *)venn {
@@ -467,22 +489,10 @@
 	[self updateHIObject:oldValue newValue:scatter propertyName:@"scatter"];
 }
 
--(void)setSankey:(HISankey *)sankey {
-	HISankey *oldValue = _sankey;
-	_sankey = sankey;
-	[self updateHIObject:oldValue newValue:sankey propertyName:@"sankey"];
-}
-
 -(void)setCylinder:(HICylinder *)cylinder {
 	HICylinder *oldValue = _cylinder;
 	_cylinder = cylinder;
 	[self updateHIObject:oldValue newValue:cylinder propertyName:@"cylinder"];
-}
-
--(void)setPyramid:(HIPyramid *)pyramid {
-	HIPyramid *oldValue = _pyramid;
-	_pyramid = pyramid;
-	[self updateHIObject:oldValue newValue:pyramid propertyName:@"pyramid"];
 }
 
 -(void)setTilemap:(HITilemap *)tilemap {

@@ -26,6 +26,7 @@
 	copyTimeline.zIndex = [self.zIndex copyWithZone: zone];
 	copyTimeline.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyTimeline.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
+	copyTimeline.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyTimeline.tooltip = [self.tooltip copyWithZone: zone];
 	copyTimeline.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyTimeline.states = [self.states copyWithZone: zone];
@@ -51,12 +52,14 @@
 	copyTimeline.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyTimeline.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyTimeline.events = [self.events copyWithZone: zone];
+	copyTimeline.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyTimeline.opacity = [self.opacity copyWithZone: zone];
 	copyTimeline.definition = [self.definition copyWithZone: zone];
 	copyTimeline.keys = [self.keys copyWithZone: zone];
 	copyTimeline.selected = [self.selected copyWithZone: zone];
 	copyTimeline.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyTimeline.accessibility = [self.accessibility copyWithZone: zone];
+	copyTimeline.sonification = [self.sonification copyWithZone: zone];
 	copyTimeline.shadow = [self.shadow copyWithZone: zone];
 	copyTimeline.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyTimeline.colorAxis = [self.colorAxis copyWithZone: zone];

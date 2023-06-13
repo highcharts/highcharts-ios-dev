@@ -30,6 +30,7 @@
 	copyDumbbell.threshold = [self.threshold copyWithZone: zone];
 	copyDumbbell.shadow = [self.shadow copyWithZone: zone];
 	copyDumbbell.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
+	copyDumbbell.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyDumbbell.lineColor = [self.lineColor copyWithZone: zone];
 	copyDumbbell.linecap = [self.linecap copyWithZone: zone];
 	copyDumbbell.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
@@ -57,6 +58,7 @@
 	copyDumbbell.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyDumbbell.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyDumbbell.events = [self.events copyWithZone: zone];
+	copyDumbbell.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyDumbbell.opacity = [self.opacity copyWithZone: zone];
 	copyDumbbell.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyDumbbell.turboThreshold = [self.turboThreshold copyWithZone: zone];
@@ -67,6 +69,7 @@
 	copyDumbbell.accessibility = [self.accessibility copyWithZone: zone];
 	copyDumbbell.step = [self.step copyWithZone: zone];
 	copyDumbbell.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyDumbbell.sonification = [self.sonification copyWithZone: zone];
 	copyDumbbell.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyDumbbell.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyDumbbell.zoneAxis = [self.zoneAxis copyWithZone: zone];

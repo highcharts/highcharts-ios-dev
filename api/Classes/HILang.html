@@ -83,6 +83,8 @@
 		
 		<option value="//api/name/downloadJPEG">downloadJPEG</option>
 		
+		<option value="//api/name/downloadMIDI">downloadMIDI</option>
+		
 		<option value="//api/name/downloadPDF">downloadPDF</option>
 		
 		<option value="//api/name/downloadPNG">downloadPNG</option>
@@ -112,6 +114,8 @@
 		<option value="//api/name/numericSymbolMagnitude">numericSymbolMagnitude</option>
 		
 		<option value="//api/name/numericSymbols">numericSymbols</option>
+		
+		<option value="//api/name/playAsSound">playAsSound</option>
 		
 		<option value="//api/name/printChart">printChart</option>
 		
@@ -342,7 +346,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Configure the accessibility strings in the chart. Requires the <a href="https://code.highcharts.com/modules/accessibility.js">accessibility module</a> to be loaded. For a description of the module and information on its features, see <a href="https://www.highcharts.com/docs/chart-concepts/accessibility">Highcharts Accessibility</a>. For more dynamic control over the accessibility functionality, see <code>accessibility.point.descriptionFormatter</code>, <code>accessibility.series.descriptionFormatter</code>, and <code>accessibility.screenReaderSection.beforeChartFormatter</code>.</p>
+				<p>Configure the accessibility strings in the chart. Requires the <a href="https://code.highcharts.com/modules/accessibility.js">accessibility module</a> to be loaded. For a description of the module and information on its features, see <a href="https://www.highcharts.com/docs/chart-concepts/accessibility">Highcharts Accessibility</a>. The lang options use <a href="https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#format-strings">Format Strings</a> with variables that are replaced at run time. These variables should be used when available, to avoid duplicating text that is defined elsewhere. For more dynamic control over the accessibility functionality, see <code>accessibility.point.descriptionFormatter</code>, <code>accessibility.series.descriptionFormatter</code>, and <code>accessibility.screenReaderSection.beforeChartFormatter</code>.</p>
 			</div>
 			
 		    
@@ -1095,6 +1099,52 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/playAsSound" title="playAsSound"></a>
+	<h3 class="method-title"><code><a href="#//api/name/playAsSound">&nbsp;&nbsp;playAsSound</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The text for the Play as sound menu item in the export menu.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *playAsSound</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>Play as sound</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/exitFullscreen" title="exitFullscreen"></a>
 	<h3 class="method-title"><code><a href="#//api/name/exitFullscreen">&nbsp;&nbsp;exitFullscreen</a></code>
 </h3>
@@ -1466,6 +1516,52 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/thousandsSep" title="thousandsSep"></a>
+	<h3 class="method-title"><code><a href="#//api/name/thousandsSep">&nbsp;&nbsp;thousandsSep</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The default thousands separator used in the <code>Highcharts.numberFormat</code> method unless otherwise specified in the function arguments. Defaults to a single space character, which is recommended in <a href="https://en.wikipedia.org/wiki/ISO_31-0#Numbers">ISO 31-0</a> and works across Anglo-American and continental European languages.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *thousandsSep</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>\u0020</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/navigation" title="navigation"></a>
 	<h3 class="method-title"><code><a href="#//api/name/navigation">&nbsp;&nbsp;navigation</a></code>
 </h3>
@@ -1507,8 +1603,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/thousandsSep" title="thousandsSep"></a>
-	<h3 class="method-title"><code><a href="#//api/name/thousandsSep">&nbsp;&nbsp;thousandsSep</a></code>
+	<a name="//api/name/downloadMIDI" title="downloadMIDI"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadMIDI">&nbsp;&nbsp;downloadMIDI</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1518,12 +1614,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The default thousands separator used in the <code>Highcharts.numberFormat</code> method unless otherwise specified in the function arguments. Defaults to a single space character, which is recommended in <a href="https://en.wikipedia.org/wiki/ISO_31-0#Numbers">ISO 31-0</a> and works across Anglo-American and continental European languages.</p>
+				<p>The text for the MIDI download menu item in the export menu.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *thousandsSep</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *downloadMIDI</code></div>
 
 		    
 			
@@ -1535,7 +1631,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>\u0020</code>.</p>
+				<p><strong>Defaults to</strong> <code>Download MIDI</code>.</p>
 			</div>
 			
 

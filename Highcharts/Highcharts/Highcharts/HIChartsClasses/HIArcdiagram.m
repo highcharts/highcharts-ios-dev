@@ -58,13 +58,16 @@
 	copyArcdiagram.onPoint = [self.onPoint copyWithZone: zone];
 	copyArcdiagram.animation = [self.animation copyWithZone: zone];
 	copyArcdiagram.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyArcdiagram.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyArcdiagram.events = [self.events copyWithZone: zone];
+	copyArcdiagram.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyArcdiagram.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyArcdiagram.definition = [self.definition copyWithZone: zone];
 	copyArcdiagram.keys = [self.keys copyWithZone: zone];
 	copyArcdiagram.selected = [self.selected copyWithZone: zone];
 	copyArcdiagram.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyArcdiagram.accessibility = [self.accessibility copyWithZone: zone];
+	copyArcdiagram.sonification = [self.sonification copyWithZone: zone];
 	copyArcdiagram.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyArcdiagram.visible = [self.visible copyWithZone: zone];
 	copyArcdiagram.linkedTo = [self.linkedTo copyWithZone: zone];

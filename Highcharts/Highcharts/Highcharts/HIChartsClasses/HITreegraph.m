@@ -29,10 +29,12 @@
 	copyTreegraph.reversed = [self.reversed copyWithZone: zone];
 	copyTreegraph.tooltip = [self.tooltip copyWithZone: zone];
 	copyTreegraph.dataLabels = [self.dataLabels copyWithZone: zone];
+	copyTreegraph.fillSpace = [self.fillSpace copyWithZone: zone];
 	copyTreegraph.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyTreegraph.states = [self.states copyWithZone: zone];
 	copyTreegraph.colors = [self.colors copyWithZone: zone];
 	copyTreegraph.colorByPoint = [self.colorByPoint copyWithZone: zone];
+	copyTreegraph.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyTreegraph.events = [self.events copyWithZone: zone];
 	copyTreegraph.opacity = [self.opacity copyWithZone: zone];
 	copyTreegraph.animationLimit = [self.animationLimit copyWithZone: zone];
@@ -51,12 +53,14 @@
 	copyTreegraph.onPoint = [self.onPoint copyWithZone: zone];
 	copyTreegraph.animation = [self.animation copyWithZone: zone];
 	copyTreegraph.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyTreegraph.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyTreegraph.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyTreegraph.definition = [self.definition copyWithZone: zone];
 	copyTreegraph.keys = [self.keys copyWithZone: zone];
 	copyTreegraph.selected = [self.selected copyWithZone: zone];
 	copyTreegraph.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyTreegraph.accessibility = [self.accessibility copyWithZone: zone];
+	copyTreegraph.sonification = [self.sonification copyWithZone: zone];
 	copyTreegraph.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyTreegraph.crisp = [self.crisp copyWithZone: zone];
 	copyTreegraph.visible = [self.visible copyWithZone: zone];
@@ -90,6 +94,9 @@
 	}
 	if (self.reversed) {
 		params[@"reversed"] = self.reversed;
+	}
+	if (self.fillSpace) {
+		params[@"fillSpace"] = self.fillSpace;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -128,6 +135,12 @@
 	NSNumber *oldValue = _reversed;
 	_reversed = reversed;
 	[self updateNSObject:oldValue newValue:reversed propertyName:@"reversed"];
+}
+
+-(void)setFillSpace:(NSNumber *)fillSpace {
+	NSNumber *oldValue = _fillSpace;
+	_fillSpace = fillSpace;
+	[self updateNSObject:oldValue newValue:fillSpace propertyName:@"fillSpace"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {

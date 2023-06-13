@@ -212,7 +212,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Angular gauges and solid gauges only. The label&rsquo;s pixel distance from the perimeter of the plot area. Since v7.1.2: If it&rsquo;s a percentage string, it is interpreted the same as <code>series.radius</code>, so label can be aligned under the gauge&rsquo;s shape.</p>
+				<p>The label&rsquo;s pixel distance from the perimeter of the plot area. On cartesian charts, this is overridden if the <code>labels.y</code> setting is set. On polar charts, if it&rsquo;s a percentage string, it is interpreted the same as <code>series.radius</code>, so the label can be aligned under the gauge&rsquo;s shape.</p>
 			</div>
 			
 		    
@@ -229,12 +229,12 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>-25</code>.</p>
+				<p><strong>Defaults to</strong> <code>15</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/labels-distance/">Labels centered under the arc</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/labels-distance/">Polar chart, labels centered under the arc</a></li>
 </ul>
 
 			</div>
@@ -387,9 +387,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>-8</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/labels-x/">Y axis labels placed on grid lines</a></li>

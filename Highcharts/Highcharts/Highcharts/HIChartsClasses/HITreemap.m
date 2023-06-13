@@ -32,6 +32,7 @@
 	copyTreemap.sortIndex = [self.sortIndex copyWithZone: zone];
 	copyTreemap.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyTreemap.breadcrumbs = [self.breadcrumbs copyWithZone: zone];
+	copyTreemap.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyTreemap.tooltip = [self.tooltip copyWithZone: zone];
 	copyTreemap.allowTraversingTree = [self.allowTraversingTree copyWithZone: zone];
 	copyTreemap.events = [self.events copyWithZone: zone];
@@ -71,6 +72,7 @@
 	copyTreemap.threshold = [self.threshold copyWithZone: zone];
 	copyTreemap.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyTreemap.boostBlending = [self.boostBlending copyWithZone: zone];
+	copyTreemap.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyTreemap.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyTreemap.definition = [self.definition copyWithZone: zone];
 	copyTreemap.keys = [self.keys copyWithZone: zone];
@@ -79,6 +81,7 @@
 	copyTreemap.accessibility = [self.accessibility copyWithZone: zone];
 	copyTreemap.step = [self.step copyWithZone: zone];
 	copyTreemap.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyTreemap.sonification = [self.sonification copyWithZone: zone];
 	copyTreemap.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyTreemap.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyTreemap.zoneAxis = [self.zoneAxis copyWithZone: zone];

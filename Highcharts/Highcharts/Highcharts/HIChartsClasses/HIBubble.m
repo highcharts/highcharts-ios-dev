@@ -69,7 +69,9 @@
 	copyBubble.threshold = [self.threshold copyWithZone: zone];
 	copyBubble.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyBubble.boostBlending = [self.boostBlending copyWithZone: zone];
+	copyBubble.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyBubble.events = [self.events copyWithZone: zone];
+	copyBubble.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyBubble.opacity = [self.opacity copyWithZone: zone];
 	copyBubble.definition = [self.definition copyWithZone: zone];
 	copyBubble.keys = [self.keys copyWithZone: zone];
@@ -78,6 +80,7 @@
 	copyBubble.accessibility = [self.accessibility copyWithZone: zone];
 	copyBubble.step = [self.step copyWithZone: zone];
 	copyBubble.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyBubble.sonification = [self.sonification copyWithZone: zone];
 	copyBubble.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyBubble.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyBubble.zones = [self.zones copyWithZone: zone];

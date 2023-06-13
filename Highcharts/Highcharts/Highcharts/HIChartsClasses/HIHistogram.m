@@ -71,7 +71,9 @@
 	copyHistogram.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyHistogram.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyHistogram.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyHistogram.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyHistogram.events = [self.events copyWithZone: zone];
+	copyHistogram.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyHistogram.opacity = [self.opacity copyWithZone: zone];
 	copyHistogram.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyHistogram.turboThreshold = [self.turboThreshold copyWithZone: zone];
@@ -81,6 +83,7 @@
 	copyHistogram.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyHistogram.accessibility = [self.accessibility copyWithZone: zone];
 	copyHistogram.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyHistogram.sonification = [self.sonification copyWithZone: zone];
 	copyHistogram.shadow = [self.shadow copyWithZone: zone];
 	copyHistogram.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyHistogram.colorAxis = [self.colorAxis copyWithZone: zone];

@@ -64,7 +64,9 @@
 	copyWindbarb.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyWindbarb.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyWindbarb.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyWindbarb.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyWindbarb.events = [self.events copyWithZone: zone];
+	copyWindbarb.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyWindbarb.opacity = [self.opacity copyWithZone: zone];
 	copyWindbarb.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyWindbarb.turboThreshold = [self.turboThreshold copyWithZone: zone];
@@ -74,6 +76,7 @@
 	copyWindbarb.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyWindbarb.accessibility = [self.accessibility copyWithZone: zone];
 	copyWindbarb.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyWindbarb.sonification = [self.sonification copyWithZone: zone];
 	copyWindbarb.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyWindbarb.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyWindbarb.zoneAxis = [self.zoneAxis copyWithZone: zone];

@@ -15,12 +15,12 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIColumnrange *copyColumnrange = [[HIColumnrange allocWithZone: zone] init];
+	copyColumnrange.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyColumnrange.states = [self.states copyWithZone: zone];
 	copyColumnrange.pointRange = [self.pointRange copyWithZone: zone];
 	copyColumnrange.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyColumnrange.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyColumnrange.pointPadding = [self.pointPadding copyWithZone: zone];
-	copyColumnrange.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyColumnrange.minPointLength = [self.minPointLength copyWithZone: zone];
 	copyColumnrange.groupZPadding = [self.groupZPadding copyWithZone: zone];
 	copyColumnrange.cropThreshold = [self.cropThreshold copyWithZone: zone];
@@ -59,7 +59,9 @@
 	copyColumnrange.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyColumnrange.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyColumnrange.boostBlending = [self.boostBlending copyWithZone: zone];
+	copyColumnrange.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyColumnrange.events = [self.events copyWithZone: zone];
+	copyColumnrange.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyColumnrange.opacity = [self.opacity copyWithZone: zone];
 	copyColumnrange.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyColumnrange.turboThreshold = [self.turboThreshold copyWithZone: zone];
@@ -69,6 +71,7 @@
 	copyColumnrange.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyColumnrange.accessibility = [self.accessibility copyWithZone: zone];
 	copyColumnrange.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyColumnrange.sonification = [self.sonification copyWithZone: zone];
 	copyColumnrange.shadow = [self.shadow copyWithZone: zone];
 	copyColumnrange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyColumnrange.colorAxis = [self.colorAxis copyWithZone: zone];

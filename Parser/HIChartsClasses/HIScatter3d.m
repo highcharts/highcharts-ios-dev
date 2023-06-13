@@ -56,7 +56,9 @@
 	copyScatter3d.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyScatter3d.threshold = [self.threshold copyWithZone: zone];
 	copyScatter3d.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyScatter3d.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyScatter3d.events = [self.events copyWithZone: zone];
+	copyScatter3d.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyScatter3d.opacity = [self.opacity copyWithZone: zone];
 	copyScatter3d.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyScatter3d.turboThreshold = [self.turboThreshold copyWithZone: zone];
@@ -67,6 +69,7 @@
 	copyScatter3d.accessibility = [self.accessibility copyWithZone: zone];
 	copyScatter3d.step = [self.step copyWithZone: zone];
 	copyScatter3d.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyScatter3d.sonification = [self.sonification copyWithZone: zone];
 	copyScatter3d.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyScatter3d.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyScatter3d.zoneAxis = [self.zoneAxis copyWithZone: zone];

@@ -11,12 +11,13 @@
 	[super copyWithZone:zone];
 	HIAttributes *copyAttributes = [[HIAttributes allocWithZone: zone] init];
 	copyAttributes.startOffset = [self.startOffset copyWithZone: zone];
+	copyAttributes.dy = [self.dy copyWithZone: zone];
 	copyAttributes.refX = [self.refX copyWithZone: zone];
 	copyAttributes.markerWidth = [self.markerWidth copyWithZone: zone];
 	copyAttributes.refY = [self.refY copyWithZone: zone];
 	copyAttributes.id = [self.id copyWithZone: zone];
 	copyAttributes.markerHeight = [self.markerHeight copyWithZone: zone];
-	copyAttributes.dy = [self.dy copyWithZone: zone];
+	copyAttributes.textAnchor = [self.textAnchor copyWithZone: zone];
 	copyAttributes.zIndex = [self.zIndex copyWithZone: zone];
 	return copyAttributes;
 }
@@ -26,6 +27,9 @@
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.startOffset) {
 		params[@"startOffset"] = self.startOffset;
+	}
+	if (self.dy) {
+		params[@"dy"] = [self.dy getParams];
 	}
 	if (self.refX) {
 		params[@"refX"] = self.refX;
@@ -42,8 +46,8 @@
 	if (self.markerHeight) {
 		params[@"markerHeight"] = self.markerHeight;
 	}
-	if (self.dy) {
-		params[@"dy"] = [self.dy getParams];
+	if (self.textAnchor) {
+		params[@"textAnchor"] = self.textAnchor;
 	}
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
@@ -57,6 +61,12 @@
 	NSNumber *oldValue = _startOffset;
 	_startOffset = startOffset;
 	[self updateNSObject:oldValue newValue:startOffset propertyName:@"startOffset"];
+}
+
+-(void)setDy:(HISVGAttributes *)dy {
+	HISVGAttributes *oldValue = _dy;
+	_dy = dy;
+	[self updateHIObject:oldValue newValue:dy propertyName:@"dy"];
 }
 
 -(void)setRefX:(NSNumber *)refX {
@@ -89,10 +99,10 @@
 	[self updateNSObject:oldValue newValue:markerHeight propertyName:@"markerHeight"];
 }
 
--(void)setDy:(HISVGAttributes *)dy {
-	HISVGAttributes *oldValue = _dy;
-	_dy = dy;
-	[self updateHIObject:oldValue newValue:dy propertyName:@"dy"];
+-(void)setTextAnchor:(NSString *)textAnchor {
+	NSString *oldValue = _textAnchor;
+	_textAnchor = textAnchor;
+	[self updateNSObject:oldValue newValue:textAnchor propertyName:@"textAnchor"];
 }
 
 -(void)setZIndex:(NSNumber *)zIndex {

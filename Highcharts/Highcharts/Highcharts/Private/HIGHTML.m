@@ -71,10 +71,9 @@
     self.options = [self.js JSObject:options];
 }
 
-- (void)prepareLang:(NSDictionary*)lang Global:(NSDictionary*)global;
+- (void)prepareLang:(NSDictionary*)lang;
 {
     self.lang = [self.js JSObject:lang];
-    self.global = [self.js JSObject:global];
 }
 
 - (void)prepareViewWidth:(float)width height:(float)height
@@ -93,9 +92,7 @@
     self.html = [self.html stringByReplacingOccurrencesOfString:@"{{options}}" withString:self.options?:@""];
     
     self.html = [self.html stringByReplacingOccurrencesOfString:@"{{lang}}" withString:self.lang?:@""];
-    
-    self.html = [self.html stringByReplacingOccurrencesOfString:@"{{global}}" withString:self.global?:@""];
-    
+
 }
 
 @end

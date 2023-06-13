@@ -356,7 +356,7 @@
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Accepted values:</strong> <code>["auto", "perpendicular", "parallel", "circular"]</code>.</p>
 
-<p><strong>Defaults to</strong> <code>auto</code>.</p>
+<p><strong>Defaults to</strong> <code>circular</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -444,12 +444,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Works only if <code>connectorShape</code> is <code>'crookedLine'</code>. It defines how far from the vertical plot edge the coonnector path should be crooked.</p>
+				<p>Works only if <code>connectorShape</code> is <code>'crookedLine'</code>. It defines how far from the vertical plot edge the coonnector path should be crooked. With the default, <code>undefined</code>, the crook is placed so that the horizontal line from the label intersects with the radial line extending through the center of the pie slice.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *crookDistance</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *crookDistance</code></div>
 
 		    
 			
@@ -461,7 +461,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/pie-datalabels-crookdistance/">crookDistance set to 90%</a></li>
@@ -601,7 +603,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Whether to render the connector as a soft arc or a line with sharp break. Works only if <code>connectorShape</code> equals to <code>fixedOffset</code>.</p>
+				<p>Whether to render the connector as a soft arc or a line with a sharp break. Works only if <code>connectorShape</code> equals to <code>fixedOffset</code>.</p>
 			</div>
 			
 		    
@@ -814,7 +816,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Specifies the method that is used to generate the connector path. Highcharts provides 3 built-in connector shapes: <code>'fixedOffset'</code> (default), <code>'straight'</code> and <code>'crookedLine'</code>. Using <code>'crookedLine'</code> has the most sense (in most of the cases) when <code>'alignTo'</code> is set. Users can provide their own method by passing a function instead of a String. 3 arguments are passed to the callback: - Object that holds the information about the coordinates of the  label (<code>x</code> &amp; <code>y</code> properties) and how the label is located in  relation to the pie (<code>alignment</code> property). <code>alignment</code> can by  one of the following:  <code>'left'</code> (pie on the left side of the data label),  <code>'right'</code> (pie on the right side of the data label) or  <code>'center'</code> (data label overlaps the pie). - Object that holds the information about the position of the  connector. Its <code>touchingSliceAt</code> porperty tells the position  of the place where the connector touches the slice. - Data label options The function has to return an SVG path definition in array form (see the example).</p>
+				<p>Specifies the method that is used to generate the connector path. Highcharts provides 3 built-in connector shapes: <code>'crookedLine'</code> (default since v11), <code>'fixedOffset'</code> and <code>'straight'</code>. Users can provide their own method by passing a function instead of a string. Three arguments are passed to the callback: - An object that holds the information about the coordinates of the  label (<code>x</code> &amp; <code>y</code> properties) and how the label is located in  relation to the pie (<code>alignment</code> property). <code>alignment</code> can by one  of the following: <code>'left'</code> (pie on the left side of the data  label), <code>'right'</code> (pie on the right side of the data label) or  <code>'center'</code> (data label overlaps the pie). - An object that holds the information about the position of the  connector. Its <code>touchingSliceAt</code> porperty tells the position of  the place where the connector touches the slice. - Data label options The function has to return an SVG path definition in array form (see the example).</p>
 			</div>
 			
 		    
@@ -831,7 +833,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>fixedOffset</code>.</p>
+				<p><strong>Defaults to</strong> <code>crookedLine</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -2079,6 +2081,149 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/linkFormat" title="linkFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/linkFormat">&nbsp;&nbsp;linkFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The format string specifying what to show for <em>links</em> in the organization chart. Best to use with <code>linkTextPath</code> enabled.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *linkFormat</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-organization/link-labels">Organization chart with link labels</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/linkTextPath" title="linkTextPath"></a>
+	<h3 class="method-title"><code><a href="#//api/name/linkTextPath">&nbsp;&nbsp;linkTextPath</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for a <em>link</em> label text which should follow link connection.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILinkTextPath *linkTextPath</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-organization/link-labels">Organization chart with link labels</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/linkFormatter" title="linkFormatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/linkFormatter">&nbsp;&nbsp;linkFormatter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Callback to format data labels for <em>links</em> in the organization chart. The <code>linkFormat</code> option takes precedence over the <code>linkFormatter</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *linkFormatter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDataLabels.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/yHigh" title="yHigh"></a>
 	<h3 class="method-title"><code><a href="#//api/name/yHigh">&nbsp;&nbsp;yHigh</a></code>
 </h3>
@@ -2549,129 +2694,6 @@
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *width</code></div>
 
 		    
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/linkTextPath" title="linkTextPath"></a>
-	<h3 class="method-title"><code><a href="#//api/name/linkTextPath">&nbsp;&nbsp;linkTextPath</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Options for a <em>link</em> label text which should follow link connection. Border and background are disabled for a label that follows a path. <strong>Note:</strong> Only SVG-based renderer supports this option. Setting <code>useHTML</code> to true will disable this option.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HILinkTextPath *linkTextPath</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDataLabels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/linkFormat" title="linkFormat"></a>
-	<h3 class="method-title"><code><a href="#//api/name/linkFormat">&nbsp;&nbsp;linkFormat</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The <a href="https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">format string</a> specifying what to show for <em>links</em> in the networkgraph. (Default: <code>undefined</code>)</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *linkFormat</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDataLabels.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/linkFormatter" title="linkFormatter"></a>
-	<h3 class="method-title"><code><a href="#//api/name/linkFormatter">&nbsp;&nbsp;linkFormatter</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Callback to format data labels for <em>links</em> in the sankey diagram. The <code>linkFormat</code> option takes precedence over the <code>linkFormatter</code>.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *linkFormatter</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDataLabels.h</code></p>
-			</div>
-			
-			
 		</div>
 	</div>
 </div><div class="section-method">

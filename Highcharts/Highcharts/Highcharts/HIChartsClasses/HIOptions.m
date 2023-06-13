@@ -69,6 +69,9 @@
 	if (self.title) {
 		params[@"title"] = [self.title getParams];
 	}
+	if (self.sonification) {
+		params[@"sonification"] = [self.sonification getParams];
+	}
 	if (self.tooltip) {
 		params[@"tooltip"] = [self.tooltip getParams];
 	}
@@ -176,6 +179,7 @@
 	copyOptions.noData = [self.noData copyWithZone: zone];
 	copyOptions.loading = [self.loading copyWithZone: zone];
 	copyOptions.title = [self.title copyWithZone: zone];
+	copyOptions.sonification = [self.sonification copyWithZone: zone];
 	copyOptions.tooltip = [self.tooltip copyWithZone: zone];
 	copyOptions.plotOptions = [self.plotOptions copyWithZone: zone];
 	copyOptions.exporting = [self.exporting copyWithZone: zone];
@@ -256,6 +260,12 @@
 	HITitle *oldValue = _title;
 	_title = title;
 	[self updateHIObject:oldValue newValue:title propertyName:@"title"];
+}
+
+-(void)setSonification:(HISonification *)sonification {
+	HISonification *oldValue = _sonification;
+	_sonification = sonification;
+	[self updateHIObject:oldValue newValue:sonification propertyName:@"sonification"];
 }
 
 -(void)setTooltip:(HITooltip *)tooltip {

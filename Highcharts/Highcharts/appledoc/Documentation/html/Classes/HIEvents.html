@@ -83,9 +83,15 @@
 		
 		<option value="//api/name/afterSetExtremes">afterSetExtremes</option>
 		
+		<option value="//api/name/afterSimulation">afterSimulation</option>
+		
 		<option value="//api/name/afterUpdate">afterUpdate</option>
 		
+		<option value="//api/name/beforePlay">beforePlay</option>
+		
 		<option value="//api/name/beforePrint">beforePrint</option>
+		
+		<option value="//api/name/beforeUpdate">beforeUpdate</option>
 		
 		<option value="//api/name/checkboxClick">checkboxClick</option>
 		
@@ -130,6 +136,18 @@
 		<option value="//api/name/mouseout">mouseout</option>
 		
 		<option value="//api/name/mouseover">mouseover</option>
+		
+		<option value="//api/name/onBoundaryHit">onBoundaryHit</option>
+		
+		<option value="//api/name/onEnd">onEnd</option>
+		
+		<option value="//api/name/onPlay">onPlay</option>
+		
+		<option value="//api/name/onSeriesEnd">onSeriesEnd</option>
+		
+		<option value="//api/name/onSeriesStart">onSeriesStart</option>
+		
+		<option value="//api/name/onStop">onStop</option>
 		
 		<option value="//api/name/pointBreak">pointBreak</option>
 		
@@ -691,6 +709,7 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-load/">Alert on chart load</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-render/">Load vs Redraw vs Render</a></li>
 </ul>
 
 			</div>
@@ -838,6 +857,16 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-render/">Load vs Redraw vs Render</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -1213,6 +1242,7 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-redraw/">Alert on chart redraw</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/events-render/">Load vs Redraw vs Render</a></li>
 </ul>
 
 			</div>
@@ -1783,6 +1813,47 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/afterSimulation" title="afterSimulation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/afterSimulation">&nbsp;&nbsp;afterSimulation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fires after the simulation is ended and the layout is stable.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *afterSimulation</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/setRootNode" title="setRootNode"></a>
 	<h3 class="method-title"><code><a href="#//api/name/setRootNode">&nbsp;&nbsp;setRootNode</a></code>
 </h3>
@@ -2022,6 +2093,375 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/onStop" title="onStop"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onStop">&nbsp;&nbsp;onStop</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called on pause, cancel, or if play is completed. A context object is passed to the function, with properties <code>chart</code>, <code>timeline</code> and <code>pointsPlayed</code>. <code>pointsPlayed</code> is an array of <code>Point</code> objects, referencing data points that were related to the audio events played.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *onStop</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/beforeUpdate" title="beforeUpdate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/beforeUpdate">&nbsp;&nbsp;beforeUpdate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called before updating the sonification. A context object is passed to the function, with properties <code>chart</code> and <code>timeline</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *beforeUpdate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onPlay" title="onPlay"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onPlay">&nbsp;&nbsp;onPlay</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called on play. A context object is passed to the function, with properties <code>chart</code> and <code>timeline</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *onPlay</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onSeriesEnd" title="onSeriesEnd"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onSeriesEnd">&nbsp;&nbsp;onSeriesEnd</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called when finished playing a series. A context object is passed to the function, with properties <code>series</code> and <code>timeline</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *onSeriesEnd</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onBoundaryHit" title="onBoundaryHit"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onBoundaryHit">&nbsp;&nbsp;onBoundaryHit</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called when attempting to play an adjacent point or series, and there is none. By default a percussive sound is played. A context object is passed to the function, with properties <code>chart</code>, <code>timeline</code>, and <code>attemptedNext</code>. <code>attemptedNext</code> is a boolean property that is <code>true</code> if the boundary hit was from trying to play the next series/point, and <code>false</code> if it was from trying to play the previous.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *onBoundaryHit</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/afterUpdate" title="afterUpdate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/afterUpdate">&nbsp;&nbsp;afterUpdate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called after updating the sonification. A context object is passed to the function, with properties <code>chart</code> and <code>timeline</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *afterUpdate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/beforePlay" title="beforePlay"></a>
+	<h3 class="method-title"><code><a href="#//api/name/beforePlay">&nbsp;&nbsp;beforePlay</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called immediately when a play is requested. A context object is passed to the function, with properties <code>chart</code> and <code>timeline</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *beforePlay</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onSeriesStart" title="onSeriesStart"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onSeriesStart">&nbsp;&nbsp;onSeriesStart</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called on the beginning of playing a series. A context object is passed to the function, with properties <code>series</code> and <code>timeline</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *onSeriesStart</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/onEnd" title="onEnd"></a>
+	<h3 class="method-title"><code><a href="#//api/name/onEnd">&nbsp;&nbsp;onEnd</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called when play is completed. A context object is passed to the function, with properties <code>chart</code>, <code>timeline</code> and <code>pointsPlayed</code>. <code>pointsPlayed</code> is an array of <code>Point</code> objects, referencing data points that were related to the audio events played.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *onEnd</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/legendItemClick" title="legendItemClick"></a>
 	<h3 class="method-title"><code><a href="#//api/name/legendItemClick">&nbsp;&nbsp;legendItemClick</a></code>
 </h3>
@@ -2233,47 +2673,6 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *add</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIEvents.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/afterUpdate" title="afterUpdate"></a>
-	<h3 class="method-title"><code><a href="#//api/name/afterUpdate">&nbsp;&nbsp;afterUpdate</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Event callback when annotation is updated (e.g.draganddropppedorresizedbycontrolpoints).</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *afterUpdate</code></div>
 
 		    
 			

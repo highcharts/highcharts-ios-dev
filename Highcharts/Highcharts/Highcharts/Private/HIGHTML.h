@@ -40,11 +40,6 @@
 @property (strong, nonatomic) NSString *lang;
 
 /**
- *  This is global object injected to WebView.
- */
-@property (strong, nonatomic) NSString *global;
-
-/**
  *  Prepare scripts before injecting to HTML.
  */
 - (void)prepareScripts;
@@ -73,11 +68,11 @@
 - (void)prepareOptions:(NSDictionary*)options;
 
 /**
- *  Prepare lang and global objective-c objects to JS representation.
+ *  Prepare lang objective-c object to JS representation.
  *
- *  @params lang and global are NSDictionary objects.
+ *  @params lang is NSDictionary objects.
  */
-- (void)prepareLang:(NSDictionary*)lang Global:(NSDictionary*)global;
+- (void)prepareLang:(NSDictionary*)lang;
 
 /**
  *  Prepare width and height in htm for proper display.

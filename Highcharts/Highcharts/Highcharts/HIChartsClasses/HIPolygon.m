@@ -16,6 +16,7 @@
 	[super copyWithZone:zone];
 	HIPolygon *copyPolygon = [[HIPolygon allocWithZone: zone] init];
 	copyPolygon.marker = [self.marker copyWithZone: zone];
+	copyPolygon.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyPolygon.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyPolygon.trackByArea = [self.trackByArea copyWithZone: zone];
 	copyPolygon.tooltip = [self.tooltip copyWithZone: zone];
@@ -46,6 +47,7 @@
 	copyPolygon.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyPolygon.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyPolygon.events = [self.events copyWithZone: zone];
+	copyPolygon.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyPolygon.opacity = [self.opacity copyWithZone: zone];
 	copyPolygon.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyPolygon.turboThreshold = [self.turboThreshold copyWithZone: zone];
@@ -56,6 +58,7 @@
 	copyPolygon.accessibility = [self.accessibility copyWithZone: zone];
 	copyPolygon.step = [self.step copyWithZone: zone];
 	copyPolygon.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyPolygon.sonification = [self.sonification copyWithZone: zone];
 	copyPolygon.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPolygon.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyPolygon.zoneAxis = [self.zoneAxis copyWithZone: zone];

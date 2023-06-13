@@ -11,11 +11,11 @@
 	[super copyWithZone:zone];
 	HIChart *copyChart = [[HIChart allocWithZone: zone] init];
 	copyChart.parallelAxes = [self.parallelAxes copyWithZone: zone];
+	copyChart.polar = [self.polar copyWithZone: zone];
 	copyChart.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyChart.spacingBottom = [self.spacingBottom copyWithZone: zone];
 	copyChart.plotShadow = [self.plotShadow copyWithZone: zone];
 	copyChart.height = [self.height copyWithZone: zone];
-	copyChart.style = [self.style copyWithZone: zone];
 	copyChart.alignTicks = [self.alignTicks copyWithZone: zone];
 	copyChart.displayErrors = [self.displayErrors copyWithZone: zone];
 	copyChart.marginRight = [self.marginRight copyWithZone: zone];
@@ -24,7 +24,7 @@
 	copyChart.spacingRight = [self.spacingRight copyWithZone: zone];
 	copyChart.borderColor = [self.borderColor copyWithZone: zone];
 	copyChart.className = [self.className copyWithZone: zone];
-	copyChart.polar = [self.polar copyWithZone: zone];
+	copyChart.style = [self.style copyWithZone: zone];
 	copyChart.renderTo = [self.renderTo copyWithZone: zone];
 	copyChart.reflow = [self.reflow copyWithZone: zone];
 	copyChart.spacingTop = [self.spacingTop copyWithZone: zone];
@@ -67,6 +67,9 @@
 	if (self.parallelAxes) {
 		params[@"parallelAxes"] = [self.parallelAxes getParams];
 	}
+	if (self.polar) {
+		params[@"polar"] = self.polar;
+	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
 	}
@@ -78,9 +81,6 @@
 	}
 	if (self.height) {
 		params[@"height"] = self.height;
-	}
-	if (self.style) {
-		params[@"style"] = [self.style getParams];
 	}
 	if (self.alignTicks) {
 		params[@"alignTicks"] = self.alignTicks;
@@ -106,8 +106,8 @@
 	if (self.className) {
 		params[@"className"] = self.className;
 	}
-	if (self.polar) {
-		params[@"polar"] = self.polar;
+	if (self.style) {
+		params[@"style"] = [self.style getParams];
 	}
 	if (self.renderTo) {
 		params[@"renderTo"] = self.renderTo;
@@ -237,6 +237,12 @@
 	[self updateHIObject:oldValue newValue:parallelAxes propertyName:@"parallelAxes"];
 }
 
+-(void)setPolar:(NSNumber *)polar {
+	NSNumber *oldValue = _polar;
+	_polar = polar;
+	[self updateNSObject:oldValue newValue:polar propertyName:@"polar"];
+}
+
 -(void)setBorderRadius:(NSNumber *)borderRadius {
 	NSNumber *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
@@ -249,8 +255,8 @@
 	[self updateNSObject:oldValue newValue:spacingBottom propertyName:@"spacingBottom"];
 }
 
--(void)setPlotShadow:(HICSSObject *)plotShadow {
-	HICSSObject *oldValue = _plotShadow;
+-(void)setPlotShadow:(HIShadowOptionsObject *)plotShadow {
+	HIShadowOptionsObject *oldValue = _plotShadow;
 	_plotShadow = plotShadow;
 	[self updateHIObject:oldValue newValue:plotShadow propertyName:@"plotShadow"];
 }
@@ -259,12 +265,6 @@
 	id oldValue = _height;
 	_height = height;
 	[self updateNSObject:oldValue newValue:height propertyName:@"height"];
-}
-
--(void)setStyle:(HICSSObject *)style {
-	HICSSObject *oldValue = _style;
-	_style = style;
-	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setAlignTicks:(NSNumber *)alignTicks {
@@ -315,10 +315,10 @@
 	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
--(void)setPolar:(NSNumber *)polar {
-	NSNumber *oldValue = _polar;
-	_polar = polar;
-	[self updateNSObject:oldValue newValue:polar propertyName:@"polar"];
+-(void)setStyle:(HICSSObject *)style {
+	HICSSObject *oldValue = _style;
+	_style = style;
+	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
 
 -(void)setRenderTo:(NSString *)renderTo {
@@ -429,8 +429,8 @@
 	[self updateHIObject:oldValue newValue:scrollablePlotArea propertyName:@"scrollablePlotArea"];
 }
 
--(void)setShadow:(HICSSObject *)shadow {
-	HICSSObject *oldValue = _shadow;
+-(void)setShadow:(HIShadowOptionsObject *)shadow {
+	HIShadowOptionsObject *oldValue = _shadow;
 	_shadow = shadow;
 	[self updateHIObject:oldValue newValue:shadow propertyName:@"shadow"];
 }

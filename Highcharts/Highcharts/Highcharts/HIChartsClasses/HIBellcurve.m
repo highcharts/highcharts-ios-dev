@@ -33,6 +33,7 @@
 	copyBellcurve.marker = [self.marker copyWithZone: zone];
 	copyBellcurve.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
 	copyBellcurve.trackByArea = [self.trackByArea copyWithZone: zone];
+	copyBellcurve.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyBellcurve.lineColor = [self.lineColor copyWithZone: zone];
 	copyBellcurve.threshold = [self.threshold copyWithZone: zone];
 	copyBellcurve.linecap = [self.linecap copyWithZone: zone];
@@ -60,6 +61,7 @@
 	copyBellcurve.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyBellcurve.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyBellcurve.events = [self.events copyWithZone: zone];
+	copyBellcurve.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyBellcurve.opacity = [self.opacity copyWithZone: zone];
 	copyBellcurve.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyBellcurve.turboThreshold = [self.turboThreshold copyWithZone: zone];
@@ -69,6 +71,7 @@
 	copyBellcurve.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyBellcurve.accessibility = [self.accessibility copyWithZone: zone];
 	copyBellcurve.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyBellcurve.sonification = [self.sonification copyWithZone: zone];
 	copyBellcurve.shadow = [self.shadow copyWithZone: zone];
 	copyBellcurve.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyBellcurve.colorAxis = [self.colorAxis copyWithZone: zone];

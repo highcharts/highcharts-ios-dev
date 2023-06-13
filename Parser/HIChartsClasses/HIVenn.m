@@ -27,6 +27,7 @@
 	copyVenn.opacity = [self.opacity copyWithZone: zone];
 	copyVenn.borderDashStyle = [self.borderDashStyle copyWithZone: zone];
 	copyVenn.clip = [self.clip copyWithZone: zone];
+	copyVenn.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyVenn.brighten = [self.brighten copyWithZone: zone];
 	copyVenn.tooltip = [self.tooltip copyWithZone: zone];
 	copyVenn.dataLabels = [self.dataLabels copyWithZone: zone];
@@ -48,6 +49,7 @@
 	copyVenn.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyVenn.showCheckbox = [self.showCheckbox copyWithZone: zone];
 	copyVenn.events = [self.events copyWithZone: zone];
+	copyVenn.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyVenn.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyVenn.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyVenn.definition = [self.definition copyWithZone: zone];
@@ -56,6 +58,7 @@
 	copyVenn.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyVenn.accessibility = [self.accessibility copyWithZone: zone];
 	copyVenn.step = [self.step copyWithZone: zone];
+	copyVenn.sonification = [self.sonification copyWithZone: zone];
 	copyVenn.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyVenn.colorAxis = [self.colorAxis copyWithZone: zone];
 	copyVenn.crisp = [self.crisp copyWithZone: zone];

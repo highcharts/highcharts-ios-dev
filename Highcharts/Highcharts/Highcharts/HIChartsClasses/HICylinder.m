@@ -61,7 +61,9 @@
 	copyCylinder.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyCylinder.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyCylinder.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyCylinder.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyCylinder.events = [self.events copyWithZone: zone];
+	copyCylinder.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyCylinder.opacity = [self.opacity copyWithZone: zone];
 	copyCylinder.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyCylinder.turboThreshold = [self.turboThreshold copyWithZone: zone];
@@ -71,6 +73,7 @@
 	copyCylinder.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyCylinder.accessibility = [self.accessibility copyWithZone: zone];
 	copyCylinder.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyCylinder.sonification = [self.sonification copyWithZone: zone];
 	copyCylinder.shadow = [self.shadow copyWithZone: zone];
 	copyCylinder.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyCylinder.zoneAxis = [self.zoneAxis copyWithZone: zone];

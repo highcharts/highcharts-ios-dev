@@ -19,7 +19,6 @@
 	copyStyle.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyStyle.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyStyle.textOverflow = [self.textOverflow copyWithZone: zone];
-	copyStyle.whiteSpace = [self.whiteSpace copyWithZone: zone];
 	copyStyle.stroke = [self.stroke copyWithZone: zone];
 	copyStyle.stroke-width = [self.stroke-width copyWithZone: zone];
 	copyStyle.fill = [self.fill copyWithZone: zone];
@@ -55,9 +54,6 @@
 	}
 	if (self.textOverflow) {
 		params[@"textOverflow"] = self.textOverflow;
-	}
-	if (self.whiteSpace) {
-		params[@"whiteSpace"] = self.whiteSpace;
 	}
 	if (self.stroke) {
 		params[@"stroke"] = self.stroke;
@@ -97,8 +93,8 @@
 	[self updateNSObject:oldValue newValue:color propertyName:@"color"];
 }
 
--(void)setTextOutline:(NSString *)textOutline {
-	NSString *oldValue = _textOutline;
+-(void)setTextOutline:(NSNumber *)textOutline {
+	NSNumber *oldValue = _textOutline;
 	_textOutline = textOutline;
 	[self updateNSObject:oldValue newValue:textOutline propertyName:@"textOutline"];
 }
@@ -125,12 +121,6 @@
 	NSString *oldValue = _textOverflow;
 	_textOverflow = textOverflow;
 	[self updateNSObject:oldValue newValue:textOverflow propertyName:@"textOverflow"];
-}
-
--(void)setWhiteSpace:(NSString *)whiteSpace {
-	NSString *oldValue = _whiteSpace;
-	_whiteSpace = whiteSpace;
-	[self updateNSObject:oldValue newValue:whiteSpace propertyName:@"whiteSpace"];
 }
 
 -(void)setStroke:(NSString *)stroke {

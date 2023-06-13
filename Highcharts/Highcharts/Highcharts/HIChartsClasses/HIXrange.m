@@ -60,7 +60,9 @@
 	copyXrange.animation = [self.animation copyWithZone: zone];
 	copyXrange.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyXrange.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyXrange.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyXrange.events = [self.events copyWithZone: zone];
+	copyXrange.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyXrange.opacity = [self.opacity copyWithZone: zone];
 	copyXrange.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyXrange.turboThreshold = [self.turboThreshold copyWithZone: zone];
@@ -69,6 +71,7 @@
 	copyXrange.selected = [self.selected copyWithZone: zone];
 	copyXrange.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyXrange.accessibility = [self.accessibility copyWithZone: zone];
+	copyXrange.sonification = [self.sonification copyWithZone: zone];
 	copyXrange.shadow = [self.shadow copyWithZone: zone];
 	copyXrange.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyXrange.colorAxis = [self.colorAxis copyWithZone: zone];
