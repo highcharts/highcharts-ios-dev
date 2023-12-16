@@ -9,13 +9,13 @@
 #import "HIStyle.h"
 #import "HIFilter.h"
 #import "HITextPath.h"
+#import "HILinkTextPath.h"
 #import "HIParentNodeTextPath.h"
-#import "HIColor.h"
 #import "HISVGAttributes.h"
+#import "HIColor.h"
 #import "HIFunction.h"
-#import "HIDataLabelTextPathOptions.h"
-#import "HIShadowOptionsObject.h"
 #import "HIAnimationOptionsObject.h"
+#import "HIShadowOptionsObject.h"
 
 
 /**
@@ -332,7 +332,7 @@ Options for a _link_ label text which should follow link connection.
 
 * [Organization chart with link labels](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-organization/link-labels)
 */
-@property(nonatomic, readwrite) HIDataLabelTextPathOptions *linkTextPath;
+@property(nonatomic, readwrite) HILinkTextPath *linkTextPath;
 /**
 Callback to format data labels for _links_ in the organization chart. The `linkFormat` option takes precedence over the `linkFormatter`.
 */

@@ -58037,7 +58037,7 @@
                   "description": "Options for the cluster marker.",
                   "type": {
                     "names": [
-                      "Highcharts.PointMarkerOptionsObject"
+                      "*"
                     ]
                   },
                   "extends": "plotOptions.series.marker",
@@ -84888,7 +84888,7 @@
                   ],
                   "type": {
                     "names": [
-                      "Highcharts.DataLabelsOptions"
+                      "*"
                     ]
                   },
                   "products": [
@@ -86318,7 +86318,7 @@
                   ],
                   "type": {
                     "names": [
-                      "DataLabelTextPathOptions"
+                      "*"
                     ]
                   },
                   "products": [
