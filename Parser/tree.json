@@ -57077,9 +57077,7 @@
               ],
               "type": {
                 "names": [
-                  "'from'",
-                  "'gradient'",
-                  "'to'"
+                  "string"
                 ]
               },
               "since": "6.0.0",
@@ -57153,9 +57151,7 @@
               ],
               "type": {
                 "names": [
-                  "'top'",
-                  "'center'",
-                  "'bottom'"
+                  "string"
                 ]
               },
               "since": "6.0.0"
@@ -70960,7 +70956,6 @@
                       "value": "highcharts/series-treegraph/link-text-path"
                     }
                   ],
-                  "extends": "plotOptions.treegraph.dataLabels.textPath",
                   "since": "10.3.0"
                 },
                 "meta": {
@@ -78997,7 +78992,7 @@
             "children": {
               "dataLabels": {
                 "doclet": {
-                  "extends": "series.arearange.dataLabels",
+                  "extends": "plotOptions.arearange.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock"
@@ -80925,7 +80920,7 @@
             "children": {
               "dataLabels": {
                 "doclet": {
-                  "extends": "series.columnrange.dataLabels",
+                  "extends": "plotOptions.columnrange.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock"
@@ -84355,7 +84350,7 @@
                     ]
                   },
                   "declare": "Highcharts.DataLabelsOptions",
-                  "extends": "plotOptions.line.dataLabels",
+                  "extends": "plotOptions.series.dataLabels",
                   "products": [
                     "highcharts",
                     "highstock",
