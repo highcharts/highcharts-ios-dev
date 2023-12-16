@@ -38,6 +38,7 @@
 	copyTilemap.label = [self.label copyWithZone: zone];
 	copyTilemap.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyTilemap.cursor = [self.cursor copyWithZone: zone];
+	copyTilemap.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyTilemap.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyTilemap.custom = [self.custom copyWithZone: zone];
 	copyTilemap.onPoint = [self.onPoint copyWithZone: zone];

@@ -36,6 +36,7 @@
 	copyVariablepie.colors = [self.colors copyWithZone: zone];
 	copyVariablepie.size = [self.size copyWithZone: zone];
 	copyVariablepie.borderColor = [self.borderColor copyWithZone: zone];
+	copyVariablepie.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyVariablepie.thickness = [self.thickness copyWithZone: zone];
 	copyVariablepie.minSize = [self.minSize copyWithZone: zone];
 	copyVariablepie.color = [self.color copyWithZone: zone];
@@ -103,7 +104,7 @@
 		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
 	}
 	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
+		params[@"borderRadius"] = [self.borderRadius getParams];
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -198,10 +199,10 @@
 	[self updateNSObject:oldValue newValue:ignoreHiddenPoint propertyName:@"ignoreHiddenPoint"];
 }
 
--(void)setBorderRadius:(NSNumber *)borderRadius {
-  NSNumber *oldValue = _borderRadius;
+-(void)setBorderRadius:(HIBorderRadiusOptionsObject *)borderRadius {
+	HIBorderRadiusOptionsObject *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {

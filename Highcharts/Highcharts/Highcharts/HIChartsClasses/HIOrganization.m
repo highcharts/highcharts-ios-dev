@@ -40,10 +40,13 @@
 	copyOrganization.opacity = [self.opacity copyWithZone: zone];
 	copyOrganization.minLinkWidth = [self.minLinkWidth copyWithZone: zone];
 	copyOrganization.nodePadding = [self.nodePadding copyWithZone: zone];
+	copyOrganization.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyOrganization.states = [self.states copyWithZone: zone];
-	copyOrganization.levels = [self.levels copyWithZone: zone];
-	copyOrganization.linkOpacity = [self.linkOpacity copyWithZone: zone];
 	copyOrganization.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyOrganization.levels = [self.levels copyWithZone: zone];
+	copyOrganization.nodeAlignment = [self.nodeAlignment copyWithZone: zone];
+	copyOrganization.linkOpacity = [self.linkOpacity copyWithZone: zone];
+	copyOrganization.linkColorMode = [self.linkColorMode copyWithZone: zone];
 	copyOrganization.colors = [self.colors copyWithZone: zone];
 	copyOrganization.centerInCategory = [self.centerInCategory copyWithZone: zone];
 	copyOrganization.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -139,8 +142,14 @@
 		}
 		params[@"levels"] = array;
 	}
+	if (self.nodeAlignment) {
+		params[@"nodeAlignment"] = self.nodeAlignment;
+	}
 	if (self.linkOpacity) {
 		params[@"linkOpacity"] = self.linkOpacity;
+	}
+	if (self.linkColorMode) {
+		params[@"linkColorMode"] = self.linkColorMode;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -235,10 +244,22 @@
 	[self updateArrayObject:oldValue newValue:levels propertyName:@"levels"];
 }
 
+-(void)setNodeAlignment:(NSString *)nodeAlignment {
+	NSString *oldValue = _nodeAlignment;
+	_nodeAlignment = nodeAlignment;
+	[self updateNSObject:oldValue newValue:nodeAlignment propertyName:@"nodeAlignment"];
+}
+
 -(void)setLinkOpacity:(NSNumber *)linkOpacity {
 	NSNumber *oldValue = _linkOpacity;
 	_linkOpacity = linkOpacity;
 	[self updateNSObject:oldValue newValue:linkOpacity propertyName:@"linkOpacity"];
+}
+
+-(void)setLinkColorMode:(NSString *)linkColorMode {
+	NSString *oldValue = _linkColorMode;
+	_linkColorMode = linkColorMode;
+	[self updateNSObject:oldValue newValue:linkColorMode propertyName:@"linkColorMode"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {

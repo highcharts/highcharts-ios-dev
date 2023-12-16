@@ -48,6 +48,7 @@
 	copyScatter3d.cursor = [self.cursor copyWithZone: zone];
 	copyScatter3d.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyScatter3d.connectNulls = [self.connectNulls copyWithZone: zone];
+	copyScatter3d.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyScatter3d.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyScatter3d.custom = [self.custom copyWithZone: zone];
 	copyScatter3d.onPoint = [self.onPoint copyWithZone: zone];

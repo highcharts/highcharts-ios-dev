@@ -108,8 +108,8 @@
 	[self updateNSObject:oldValue newValue:topWidth propertyName:@"topWidth"];
 }
 
--(void)setPath:(NSArray<NSString *> *)path {
-	NSArray<NSString *> *oldValue = _path;
+-(void)setPath:(NSArray *)path {
+	NSArray *oldValue = _path;
 	_path = path;
 	[self updateArrayObject:oldValue newValue:path propertyName:@"path"];
 }

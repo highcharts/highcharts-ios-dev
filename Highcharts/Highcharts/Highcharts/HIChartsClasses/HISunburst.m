@@ -31,6 +31,7 @@
 	copySunburst.colors = [self.colors copyWithZone: zone];
 	copySunburst.size = [self.size copyWithZone: zone];
 	copySunburst.borderColor = [self.borderColor copyWithZone: zone];
+	copySunburst.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copySunburst.tooltip = [self.tooltip copyWithZone: zone];
 	copySunburst.thickness = [self.thickness copyWithZone: zone];
 	copySunburst.color = [self.color copyWithZone: zone];
@@ -124,6 +125,9 @@
 	if (self.allowTraversingTree) {
 		params[@"allowTraversingTree"] = self.allowTraversingTree;
 	}
+	if (self.borderRadius) {
+		params[@"borderRadius"] = [self.borderRadius getParams];
+	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
@@ -206,6 +210,12 @@
 	NSNumber *oldValue = _allowTraversingTree;
 	_allowTraversingTree = allowTraversingTree;
 	[self updateNSObject:oldValue newValue:allowTraversingTree propertyName:@"allowTraversingTree"];
+}
+
+-(void)setBorderRadius:(HIBorderRadiusOptionsObject *)borderRadius {
+	HIBorderRadiusOptionsObject *oldValue = _borderRadius;
+	_borderRadius = borderRadius;
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {
