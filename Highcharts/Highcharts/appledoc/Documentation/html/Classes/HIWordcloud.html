@@ -584,12 +584,12 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The corner radius of the border surrounding each column or bar.</p>
+				<p>The corner radius of the border surrounding each column or bar. A number signifies pixels. A percentage string, like for example <code>50%</code>, signifies a relative size. For columns this is relative to the column width, for pies it is relative to the radius and the inner radius.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *borderRadius</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIBorderRadiusOptionsObject *borderRadius</code></div>
 
 		    
 			
@@ -601,10 +601,13 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>3</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderradius/">Rounded columns</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-border-radius">Column and pie with rounded border</a></li>
 </ul>
 
 			</div>

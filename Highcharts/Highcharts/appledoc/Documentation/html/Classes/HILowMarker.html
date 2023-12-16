@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIDial Class Reference</title>
+	<title>HILowMarker Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -71,23 +71,25 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/backgroundColor">backgroundColor</option>
+		<option value="//api/name/enabled">enabled</option>
 		
-		<option value="//api/name/baseLength">baseLength</option>
+		<option value="//api/name/enabledThreshold">enabledThreshold</option>
 		
-		<option value="//api/name/baseWidth">baseWidth</option>
+		<option value="//api/name/fillColor">fillColor</option>
 		
-		<option value="//api/name/borderColor">borderColor</option>
+		<option value="//api/name/height">height</option>
 		
-		<option value="//api/name/borderWidth">borderWidth</option>
+		<option value="//api/name/lineColor">lineColor</option>
 		
-		<option value="//api/name/path">path</option>
+		<option value="//api/name/lineWidth">lineWidth</option>
 		
 		<option value="//api/name/radius">radius</option>
 		
-		<option value="//api/name/rearLength">rearLength</option>
+		<option value="//api/name/states">states</option>
 		
-		<option value="//api/name/topWidth">topWidth</option>
+		<option value="//api/name/symbol">symbol</option>
+		
+		<option value="//api/name/width">width</option>
 		
 	</optgroup>
 	
@@ -114,7 +116,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIDial Class Reference</h1>
+					<h1 class="title">HILowMarker Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -123,7 +125,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIDial.h</td>
+	<td>HILowMarker.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -133,14 +135,9 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Options for the dial or arrow pointer of the gauge. In styled mode, the dial is styled with the <code>.highcharts-gauge-series .highcharts-dial</code> rule.</p>
+						<p>Options for the lower markers of the arearange-like series. When <code>lowMarker</code> is not defined, options inherit form the marker.</p>
 
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/gauge/">Styled mode</a></li>
-</ul>
-
+<p><strong>Defaults to</strong> <code>undefined</code>.</p>
 					</div>
 					
 					
@@ -156,8 +153,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/borderColor" title="borderColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/borderColor">&nbsp;&nbsp;borderColor</a></code>
+	<a name="//api/name/symbol" title="symbol"></a>
+	<h3 class="method-title"><code><a href="#//api/name/symbol">&nbsp;&nbsp;symbol</a></code>
 </h3>
 
 	<div class="method-info">
@@ -167,12 +164,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The border color or stroke of the gauge&rsquo;s dial. By default, the borderWidth is 0, so this must be set in addition to a custom border color.</p>
+				<p>A predefined shape or symbol for the marker. When undefined, the symbol is pulled from options.symbols. Other possible values are <code>'circle'</code>, <code>'square'</code>,<code>'diamond'</code>, <code>'triangle'</code> and <code>'triangle-down'</code>. Additionally, the URL to a graphic can be given on this form: <code>'url(graphic.png)'</code>. Note that for the image to be applied to exported charts, its URL needs to be accessible by the export server. Custom callbacks for symbol path generation can also be added to <code>Highcharts.SVGRenderer.prototype.symbols</code>. The callback is then used by its method name, as shown in the demo.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *borderColor</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *symbol</code></div>
 
 		    
 			
@@ -184,12 +181,10 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>#cccccc</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">Dial options demonstrated</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-arearange/lowmarker/">Area range chart with <code>lowMarker</code> option</a></li>
 </ul>
 
 			</div>
@@ -202,15 +197,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDial.h</code></p>
+				<p><code class="declared-in-ref">HILowMarker.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/rearLength" title="rearLength"></a>
-	<h3 class="method-title"><code><a href="#//api/name/rearLength">&nbsp;&nbsp;rearLength</a></code>
+	<a name="//api/name/enabled" title="enabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
 </h3>
 
 	<div class="method-info">
@@ -220,12 +215,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The length of the dial&rsquo;s rear end, the part that extends out on the other side of the pivot. Relative to the dial&rsquo;s length.</p>
+				<p>Enable or disable the point marker. If <code>undefined</code>, the markers are hidden when the data is dense, and shown for more widespread data points.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *rearLength</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
 
 		    
 			
@@ -237,12 +232,13 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>10%</code>.</p>
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">Dial options demonstrated</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-enabled/">Disabled markers</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-enabled-false/">Disabled in normal state but enabled on hover</a></li>
 </ul>
 
 			</div>
@@ -255,15 +251,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDial.h</code></p>
+				<p><code class="declared-in-ref">HILowMarker.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/baseLength" title="baseLength"></a>
-	<h3 class="method-title"><code><a href="#//api/name/baseLength">&nbsp;&nbsp;baseLength</a></code>
+	<a name="//api/name/height" title="height"></a>
+	<h3 class="method-title"><code><a href="#//api/name/height">&nbsp;&nbsp;height</a></code>
 </h3>
 
 	<div class="method-info">
@@ -273,12 +269,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The length of the dial&rsquo;s base part, relative to the total radius or length of the dial.</p>
+				<p>Image markers only. Set the image width explicitly. When using this option, a <code>width</code> must also be set.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *baseLength</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *height</code></div>
 
 		    
 			
@@ -290,12 +286,10 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>70%</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">Dial options demonstrated</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-width-height/">Fixed width and height</a></li>
 </ul>
 
 			</div>
@@ -308,7 +302,99 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDial.h</code></p>
+				<p><code class="declared-in-ref">HILowMarker.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/states" title="states"></a>
+	<h3 class="method-title"><code><a href="#//api/name/states">&nbsp;&nbsp;states</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>States for a single point marker.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIStates *states</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILowMarker.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/width" title="width"></a>
+	<h3 class="method-title"><code><a href="#//api/name/width">&nbsp;&nbsp;width</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Image markers only. Set the image width explicitly. When using this option, a <code>height</code> must also be set.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *width</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-width-height/">Fixed width and height</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILowMarker.h</code></p>
 			</div>
 			
 			
@@ -326,12 +412,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The radius or length of the dial, in percentages relative to the radius of the gauge itself.</p>
+				<p>The radius of the point marker.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *radius</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *radius</code></div>
 
 		    
 			
@@ -343,12 +429,12 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>80%</code>.</p>
+				<p><strong>Defaults to</strong> <code>4</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">Dial options demonstrated</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-radius/">Bigger markers</a></li>
 </ul>
 
 			</div>
@@ -361,15 +447,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDial.h</code></p>
+				<p><code class="declared-in-ref">HILowMarker.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/borderWidth" title="borderWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/borderWidth">&nbsp;&nbsp;borderWidth</a></code>
+	<a name="//api/name/fillColor" title="fillColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fillColor">&nbsp;&nbsp;fillColor</a></code>
 </h3>
 
 	<div class="method-info">
@@ -379,171 +465,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The width of the gauge dial border in pixels.</p>
+				<p>The fill color of the point marker. When <code>undefined</code>, the series' or point&rsquo;s color is used.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *borderWidth</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>0</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">Dial options demonstrated</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDial.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/backgroundColor" title="backgroundColor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/backgroundColor">&nbsp;&nbsp;backgroundColor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The background or fill color of the gauge&rsquo;s dial.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *backgroundColor</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>#000000</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">Dial options demonstrated</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDial.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/topWidth" title="topWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/topWidth">&nbsp;&nbsp;topWidth</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The width of the top of the dial, closest to the perimeter. The pivot narrows in from the base to the top.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *topWidth</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>1</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">Dial options demonstrated</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDial.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/path" title="path"></a>
-	<h3 class="method-title"><code><a href="#//api/name/path">&nbsp;&nbsp;path</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>An array with an SVG path for the custom dial.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray *path</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *fillColor</code></div>
 
 		    
 			
@@ -558,7 +485,7 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-path/">Dial options demonstrated</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/">White fill</a></li>
 </ul>
 
 			</div>
@@ -571,15 +498,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDial.h</code></p>
+				<p><code class="declared-in-ref">HILowMarker.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/baseWidth" title="baseWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/baseWidth">&nbsp;&nbsp;baseWidth</a></code>
+	<a name="//api/name/lineColor" title="lineColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lineColor">&nbsp;&nbsp;lineColor</a></code>
 </h3>
 
 	<div class="method-info">
@@ -589,12 +516,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The pixel width of the base of the gauge dial. The base is the part closest to the pivot, defined by baseLength.</p>
+				<p>The color of the point marker&rsquo;s outline. When <code>undefined</code>, the series' or point&rsquo;s color is used.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *baseWidth</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *lineColor</code></div>
 
 		    
 			
@@ -606,12 +533,12 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>3</code>.</p>
+				<p><strong>Defaults to</strong> <code>#ffffff</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/gauge-dial/">Dial options demonstrated</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/">Inherit from series color (undefined)</a></li>
 </ul>
 
 			</div>
@@ -624,7 +551,111 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIDial.h</code></p>
+				<p><code class="declared-in-ref">HILowMarker.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/lineWidth" title="lineWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lineWidth">&nbsp;&nbsp;lineWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The width of the point marker&rsquo;s outline.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *lineWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-fillcolor/">2px blue marker</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILowMarker.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/enabledThreshold" title="enabledThreshold"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enabledThreshold">&nbsp;&nbsp;enabledThreshold</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The threshold for how dense the point markers should be before they are hidden, given that <code>enabled</code> is not defined. The number indicates the horizontal distance between the two closest points in the series, as multiples of the <code>marker.radius</code>. In other words, the default value of 2 means points are hidden if overlapping horizontally.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabledThreshold</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>2</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-marker-enabledthreshold">A higher threshold</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILowMarker.h</code></p>
 			</div>
 			
 			

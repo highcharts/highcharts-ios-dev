@@ -73,6 +73,10 @@
 		
 		<option value="//api/name/cluster">cluster</option>
 		
+		<option value="//api/name/rotationOrigin">rotationOrigin</option>
+		
+		<option value="//api/name/vectorLength">vectorLength</option>
+		
 	</optgroup>
 	
 
@@ -159,6 +163,107 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 
 						<div class="task-list">
 							<div class="section-method">
+	<a name="//api/name/vectorLength" title="vectorLength"></a>
+	<h3 class="method-title"><code><a href="#//api/name/vectorLength">&nbsp;&nbsp;vectorLength</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Maximum length of the arrows in the vector plot. The individual arrow length is computed between 0 and this value.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *vectorLength</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>20</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIVector.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/rotationOrigin" title="rotationOrigin"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rotationOrigin">&nbsp;&nbsp;rotationOrigin</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>What part of the vector it should be rotated around. Can be one of <code>start</code>, <code>center</code> and <code>end</code>. When <code>start</code>, the vectors will start from the given [x, y] position, and when <code>end</code> the vectors will end in the [x, y] position.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *rotationOrigin</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Accepted values:</strong> <code>["start", "center", "end"]</code>.</p>
+
+<p><strong>Defaults to</strong> <code>center</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/vector-rotationorigin-start/">Rotate from start</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIVector.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/cluster" title="cluster"></a>
 	<h3 class="method-title"><code><a href="#//api/name/cluster">&nbsp;&nbsp;cluster</a></code>
 </h3>

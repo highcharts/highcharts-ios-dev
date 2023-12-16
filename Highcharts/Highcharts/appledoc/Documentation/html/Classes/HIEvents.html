@@ -151,6 +151,8 @@
 		
 		<option value="//api/name/pointBreak">pointBreak</option>
 		
+		<option value="//api/name/pointBreakOut">pointBreakOut</option>
+		
 		<option value="//api/name/pointInBreak">pointInBreak</option>
 		
 		<option value="//api/name/redraw">redraw</option>
@@ -288,8 +290,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/pointInBreak" title="pointInBreak"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointInBreak">&nbsp;&nbsp;pointInBreak</a></code>
+	<a name="//api/name/setExtremes" title="setExtremes"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setExtremes">&nbsp;&nbsp;setExtremes</a></code>
 </h3>
 
 	<div class="method-info">
@@ -299,12 +301,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>An event fired when a point falls inside a break from this axis.</p>
+				<p>Fires when the minimum and maximum is set for the axis, either by calling the <code>.setExtremes()</code> method or by selecting an area in the chart. One parameter, <code>event</code>, is passed to the function, containing common event information. The new user set minimum and maximum values can be found by <code>event.min</code> and <code>event.max</code>. These reflect the axis minimum and maximum in data values. When an axis is zoomed all the way out from the &ldquo;Reset zoom&rdquo; button, <code>event.min</code> and <code>event.max</code> are null, and the new extremes are set based on <code>this.dataMin</code> and <code>this.dataMax</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *pointInBreak</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *setExtremes</code></div>
 
 		    
 			
@@ -380,6 +382,47 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/pointBreakOut" title="pointBreakOut"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointBreakOut">&nbsp;&nbsp;pointBreakOut</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An event fired when a point is outside a break after zoom.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *pointBreakOut</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/pointBreak" title="pointBreak"></a>
 	<h3 class="method-title"><code><a href="#//api/name/pointBreak">&nbsp;&nbsp;pointBreak</a></code>
 </h3>
@@ -431,8 +474,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/setExtremes" title="setExtremes"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setExtremes">&nbsp;&nbsp;setExtremes</a></code>
+	<a name="//api/name/pointInBreak" title="pointInBreak"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointInBreak">&nbsp;&nbsp;pointInBreak</a></code>
 </h3>
 
 	<div class="method-info">
@@ -442,12 +485,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Fires when the minimum and maximum is set for the axis, either by calling the <code>.setExtremes()</code> method or by selecting an area in the chart. One parameter, <code>event</code>, is passed to the function, containing common event information. The new user set minimum and maximum values can be found by <code>event.min</code> and <code>event.max</code>. These reflect the axis minimum and maximum in data values. When an axis is zoomed all the way out from the &ldquo;Reset zoom&rdquo; button, <code>event.min</code> and <code>event.max</code> are null, and the new extremes are set based on <code>this.dataMin</code> and <code>this.dataMax</code>.</p>
+				<p>An event fired when a point falls inside a break from this axis.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *setExtremes</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *pointInBreak</code></div>
 
 		    
 			
@@ -1396,6 +1439,7 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/dragdrop/drag-xrange">Drag events</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/dragdrop/undraggable-points">Dragging disabled for specific points</a></li>
 </ul>
 
 			</div>
@@ -1549,6 +1593,7 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/dragdrop/drag-xrange">Drag events</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/dragdrop/undraggable-points">Dragging disabled for specific points</a></li>
 </ul>
 
 			</div>

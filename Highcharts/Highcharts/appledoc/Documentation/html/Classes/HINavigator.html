@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HISeriesNavigation Class Reference</title>
+	<title>HINavigator Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -71,13 +71,11 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/mode">mode</option>
+		<option value="//api/name/changeAnnouncement">changeAnnouncement</option>
 		
-		<option value="//api/name/pointNavigationEnabledThreshold">pointNavigationEnabledThreshold</option>
+		<option value="//api/name/groupLabel">groupLabel</option>
 		
-		<option value="//api/name/rememberPointFocus">rememberPointFocus</option>
-		
-		<option value="//api/name/skipNullPoints">skipNullPoints</option>
+		<option value="//api/name/handleLabel">handleLabel</option>
 		
 	</optgroup>
 	
@@ -104,7 +102,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HISeriesNavigation Class Reference</h1>
+					<h1 class="title">HINavigator Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -113,7 +111,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HISeriesNavigation.h</td>
+	<td>HINavigator.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -123,7 +121,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Options for the keyboard navigation of data points and series.</p>
+						<p>Navigator language options for accessibility.</p>
 					</div>
 					
 					
@@ -139,8 +137,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/rememberPointFocus" title="rememberPointFocus"></a>
-	<h3 class="method-title"><code><a href="#//api/name/rememberPointFocus">&nbsp;&nbsp;rememberPointFocus</a></code>
+	<a name="//api/name/groupLabel" title="groupLabel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupLabel">&nbsp;&nbsp;groupLabel</a></code>
 </h3>
 
 	<div class="method-info">
@@ -150,53 +148,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Remember which point was focused even after navigating away from the series, so that when navigating back to the series you start at the last focused point.</p>
+				<p>Label for the navigator region. Receives <code>chart</code> as context.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *rememberPointFocus</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesNavigation.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/skipNullPoints" title="skipNullPoints"></a>
-	<h3 class="method-title"><code><a href="#//api/name/skipNullPoints">&nbsp;&nbsp;skipNullPoints</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Skip null points when navigating through points with the keyboard.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *skipNullPoints</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *groupLabel</code></div>
 
 		    
 			
@@ -208,7 +165,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>True</code>.</p>
+				<p><strong>Defaults to</strong> <code>Axis zoom</code>.</p>
 			</div>
 			
 
@@ -219,15 +176,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesNavigation.h</code></p>
+				<p><code class="declared-in-ref">HINavigator.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/mode" title="mode"></a>
-	<h3 class="method-title"><code><a href="#//api/name/mode">&nbsp;&nbsp;mode</a></code>
+	<a name="//api/name/handleLabel" title="handleLabel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/handleLabel">&nbsp;&nbsp;handleLabel</a></code>
 </h3>
 
 	<div class="method-info">
@@ -237,12 +194,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Set the keyboard navigation mode for the chart. Can be &ldquo;normal&rdquo; or &ldquo;serialize&rdquo;. In normal mode, left/right arrow keys move between points in a series, while up/down arrow keys move between series. Up/down navigation acts intelligently to figure out which series makes sense to move to from any given point. In &ldquo;serialize&rdquo; mode, points are instead navigated as a single list. Left/right behaves as in &ldquo;normal&rdquo; mode. Up/down arrow keys will behave like left/right. This can be useful for unifying navigation behavior with/without screen readers enabled.</p>
+				<p>Label for the navigator handles. Receives <code>handleIx</code> and <code>chart</code> as context. <code>handleIx</code> refers to the index of the navigator handle.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *mode</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *handleLabel</code></div>
 
 		    
 			
@@ -254,7 +211,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>normal</code>.</p>
+				<p><strong>Defaults to</strong> <code>{#eq handleIx 0}Start, percent{else}End, percent{/eq}</code>.</p>
 			</div>
 			
 
@@ -265,15 +222,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesNavigation.h</code></p>
+				<p><code class="declared-in-ref">HINavigator.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/pointNavigationEnabledThreshold" title="pointNavigationEnabledThreshold"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pointNavigationEnabledThreshold">&nbsp;&nbsp;pointNavigationEnabledThreshold</a></code>
+	<a name="//api/name/changeAnnouncement" title="changeAnnouncement"></a>
+	<h3 class="method-title"><code><a href="#//api/name/changeAnnouncement">&nbsp;&nbsp;changeAnnouncement</a></code>
 </h3>
 
 	<div class="method-info">
@@ -283,12 +240,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>When a series contains more points than this, we no longer allow keyboard navigation for it. Set to <code>false</code> to disable.</p>
+				<p>Announcement for assistive technology when navigator values are changed. Receives <code>axisRangeDescription</code> and <code>chart</code> as context. <code>axisRangeDescription</code> corresponds to the range description defined in <code>lang.accessibility.axis</code></p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointNavigationEnabledThreshold</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *changeAnnouncement</code></div>
 
 		    
 			
@@ -297,6 +254,11 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>{axisRangeDescription}</code>.</p>
+			</div>
 			
 
 			
@@ -306,7 +268,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HISeriesNavigation.h</code></p>
+				<p><code class="declared-in-ref">HINavigator.h</code></p>
 			</div>
 			
 			

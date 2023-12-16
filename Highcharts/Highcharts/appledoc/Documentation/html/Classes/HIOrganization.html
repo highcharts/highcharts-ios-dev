@@ -91,11 +91,15 @@
 		
 		<option value="//api/name/link">link</option>
 		
+		<option value="//api/name/linkColorMode">linkColorMode</option>
+		
 		<option value="//api/name/linkOpacity">linkOpacity</option>
 		
 		<option value="//api/name/minLinkWidth">minLinkWidth</option>
 		
 		<option value="//api/name/minNodeLength">minNodeLength</option>
+		
+		<option value="//api/name/nodeAlignment">nodeAlignment</option>
 		
 		<option value="//api/name/nodePadding">nodePadding</option>
 		
@@ -819,6 +823,57 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/nodeAlignment" title="nodeAlignment"></a>
+	<h3 class="method-title"><code><a href="#//api/name/nodeAlignment">&nbsp;&nbsp;nodeAlignment</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines which side of the chart the nodes are to be aligned to. When the chart is inverted, <code>top</code> aligns to the left and <code>bottom</code> to the right.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *nodeAlignment</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/sankey-nodealignment">Node alignment demonstrated</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOrganization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/linkOpacity" title="linkOpacity"></a>
 	<h3 class="method-title"><code><a href="#//api/name/linkOpacity">&nbsp;&nbsp;linkOpacity</a></code>
 </h3>
@@ -848,6 +903,60 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
 				<p><strong>Defaults to</strong> <code>0.5</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIOrganization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/linkColorMode" title="linkColorMode"></a>
+	<h3 class="method-title"><code><a href="#//api/name/linkColorMode">&nbsp;&nbsp;linkColorMode</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines color mode for sankey links. Available options: - <code>from</code> color of the sankey link will be the same as the &lsquo;from node&rsquo; - <code>gradient</code> color of the sankey link will be set to gradient between colors of &lsquo;from node&rsquo; and &lsquo;to node&rsquo; - <code>to</code> color of the sankey link will be same as the &lsquo;to node&rsquo;.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *linkColorMode</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>from</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/vertical-sankey">Vertical sankey diagram with gradients</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-sankey/link-color-mode">Sankey diagram with gradients and explanation</a></li>
+</ul>
+
 			</div>
 			
 
