@@ -11,10 +11,11 @@
 	[super copyWithZone:zone];
 	HIEvents *copyEvents = [[HIEvents allocWithZone: zone] init];
 	copyEvents.checkboxClick = [self.checkboxClick copyWithZone: zone];
-	copyEvents.pointInBreak = [self.pointInBreak copyWithZone: zone];
-	copyEvents.afterBreaks = [self.afterBreaks copyWithZone: zone];
-	copyEvents.pointBreak = [self.pointBreak copyWithZone: zone];
 	copyEvents.setExtremes = [self.setExtremes copyWithZone: zone];
+	copyEvents.afterBreaks = [self.afterBreaks copyWithZone: zone];
+	copyEvents.pointBreakOut = [self.pointBreakOut copyWithZone: zone];
+	copyEvents.pointBreak = [self.pointBreak copyWithZone: zone];
+	copyEvents.pointInBreak = [self.pointInBreak copyWithZone: zone];
 	copyEvents.afterSetExtremes = [self.afterSetExtremes copyWithZone: zone];
 	copyEvents.mouseover = [self.mouseover copyWithZone: zone];
 	copyEvents.mouseout = [self.mouseout copyWithZone: zone];
@@ -72,17 +73,20 @@
 	if (self.checkboxClick) {
 		params[@"checkboxClick"] = [self.checkboxClick getFunction];
 	}
-	if (self.pointInBreak) {
-		params[@"pointInBreak"] = [self.pointInBreak getFunction];
+	if (self.setExtremes) {
+		params[@"setExtremes"] = [self.setExtremes getFunction];
 	}
 	if (self.afterBreaks) {
 		params[@"afterBreaks"] = [self.afterBreaks getFunction];
 	}
+	if (self.pointBreakOut) {
+		params[@"pointBreakOut"] = [self.pointBreakOut getFunction];
+	}
 	if (self.pointBreak) {
 		params[@"pointBreak"] = [self.pointBreak getFunction];
 	}
-	if (self.setExtremes) {
-		params[@"setExtremes"] = [self.setExtremes getFunction];
+	if (self.pointInBreak) {
+		params[@"pointInBreak"] = [self.pointInBreak getFunction];
 	}
 	if (self.afterSetExtremes) {
 		params[@"afterSetExtremes"] = [self.afterSetExtremes getFunction];
@@ -239,10 +243,10 @@
 	[self updateHIObject:oldValue newValue:checkboxClick propertyName:@"checkboxClick"];
 }
 
--(void)setPointInBreak:(HIFunction *)pointInBreak {
-	HIFunction *oldValue = _pointInBreak;
-	_pointInBreak = pointInBreak;
-	[self updateHIObject:oldValue newValue:pointInBreak propertyName:@"pointInBreak"];
+-(void)setSetExtremes:(HIFunction *)setExtremes {
+	HIFunction *oldValue = _setExtremes;
+	_setExtremes = setExtremes;
+	[self updateHIObject:oldValue newValue:setExtremes propertyName:@"setExtremes"];
 }
 
 -(void)setAfterBreaks:(HIFunction *)afterBreaks {
@@ -251,16 +255,22 @@
 	[self updateHIObject:oldValue newValue:afterBreaks propertyName:@"afterBreaks"];
 }
 
+-(void)setPointBreakOut:(HIFunction *)pointBreakOut {
+	HIFunction *oldValue = _pointBreakOut;
+	_pointBreakOut = pointBreakOut;
+	[self updateHIObject:oldValue newValue:pointBreakOut propertyName:@"pointBreakOut"];
+}
+
 -(void)setPointBreak:(HIFunction *)pointBreak {
 	HIFunction *oldValue = _pointBreak;
 	_pointBreak = pointBreak;
 	[self updateHIObject:oldValue newValue:pointBreak propertyName:@"pointBreak"];
 }
 
--(void)setSetExtremes:(HIFunction *)setExtremes {
-	HIFunction *oldValue = _setExtremes;
-	_setExtremes = setExtremes;
-	[self updateHIObject:oldValue newValue:setExtremes propertyName:@"setExtremes"];
+-(void)setPointInBreak:(HIFunction *)pointInBreak {
+	HIFunction *oldValue = _pointInBreak;
+	_pointInBreak = pointInBreak;
+	[self updateHIObject:oldValue newValue:pointInBreak propertyName:@"pointInBreak"];
 }
 
 -(void)setAfterSetExtremes:(HIFunction *)afterSetExtremes {

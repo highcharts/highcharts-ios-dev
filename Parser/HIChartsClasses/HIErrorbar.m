@@ -72,6 +72,7 @@
 	copyErrorbar.cursor = [self.cursor copyWithZone: zone];
 	copyErrorbar.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyErrorbar.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyErrorbar.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyErrorbar.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyErrorbar.custom = [self.custom copyWithZone: zone];
 	copyErrorbar.onPoint = [self.onPoint copyWithZone: zone];

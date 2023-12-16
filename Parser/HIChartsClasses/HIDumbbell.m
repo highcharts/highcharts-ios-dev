@@ -16,12 +16,7 @@
 	[super copyWithZone:zone];
 	HIDumbbell *copyDumbbell = [[HIDumbbell allocWithZone: zone] init];
 	copyDumbbell.connectorColor = [self.connectorColor copyWithZone: zone];
-	copyDumbbell.connectorWidth = [self.connectorWidth copyWithZone: zone];
-	copyDumbbell.crisp = [self.crisp copyWithZone: zone];
-	copyDumbbell.pointPadding = [self.pointPadding copyWithZone: zone];
-	copyDumbbell.pointRange = [self.pointRange copyWithZone: zone];
-	copyDumbbell.groupPadding = [self.groupPadding copyWithZone: zone];
-	copyDumbbell.lowColor = [self.lowColor copyWithZone: zone];
+	copyDumbbell.lowMarker = [self.lowMarker copyWithZone: zone];
 	copyDumbbell.color = [self.color copyWithZone: zone];
 	copyDumbbell.tooltip = [self.tooltip copyWithZone: zone];
 	copyDumbbell.dataLabels = [self.dataLabels copyWithZone: zone];
@@ -50,6 +45,7 @@
 	copyDumbbell.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyDumbbell.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyDumbbell.connectNulls = [self.connectNulls copyWithZone: zone];
+	copyDumbbell.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyDumbbell.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyDumbbell.custom = [self.custom copyWithZone: zone];
 	copyDumbbell.onPoint = [self.onPoint copyWithZone: zone];
@@ -75,6 +71,7 @@
 	copyDumbbell.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyDumbbell.zones = [self.zones copyWithZone: zone];
 	copyDumbbell.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyDumbbell.crisp = [self.crisp copyWithZone: zone];
 	copyDumbbell.visible = [self.visible copyWithZone: zone];
 	copyDumbbell.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyDumbbell.className = [self.className copyWithZone: zone];
@@ -100,20 +97,8 @@
 	if (self.connectorColor) {
 		params[@"connectorColor"] = self.connectorColor;
 	}
-	if (self.connectorWidth) {
-		params[@"connectorWidth"] = self.connectorWidth;
-	}
-	if (self.pointPadding) {
-		params[@"pointPadding"] = self.pointPadding;
-	}
-	if (self.pointRange) {
-		params[@"pointRange"] = self.pointRange;
-	}
-	if (self.groupPadding) {
-		params[@"groupPadding"] = self.groupPadding;
-	}
-	if (self.lowColor) {
-		params[@"lowColor"] = [self.lowColor getData];
+	if (self.lowMarker) {
+		params[@"lowMarker"] = [self.lowMarker getParams];
 	}
 	if (self.negativeFillColor) {
 		params[@"negativeFillColor"] = [self.negativeFillColor getData];
@@ -132,34 +117,10 @@
 	[self updateNSObject:oldValue newValue:connectorColor propertyName:@"connectorColor"];
 }
 
--(void)setConnectorWidth:(NSNumber *)connectorWidth {
-	NSNumber *oldValue = _connectorWidth;
-	_connectorWidth = connectorWidth;
-	[self updateNSObject:oldValue newValue:connectorWidth propertyName:@"connectorWidth"];
-}
-
--(void)setPointPadding:(NSNumber *)pointPadding {
-	NSNumber *oldValue = _pointPadding;
-	_pointPadding = pointPadding;
-	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
-}
-
--(void)setPointRange:(NSNumber *)pointRange {
-	NSNumber *oldValue = _pointRange;
-	_pointRange = pointRange;
-	[self updateNSObject:oldValue newValue:pointRange propertyName:@"pointRange"];
-}
-
--(void)setGroupPadding:(NSNumber *)groupPadding {
-	NSNumber *oldValue = _groupPadding;
-	_groupPadding = groupPadding;
-	[self updateNSObject:oldValue newValue:groupPadding propertyName:@"groupPadding"];
-}
-
--(void)setLowColor:(HIColor *)lowColor {
-	HIColor *oldValue = _lowColor;
-	_lowColor = lowColor;
-	[self updateHIObject:oldValue newValue:lowColor propertyName:@"lowColor"];
+-(void)setLowMarker:(HILowMarker *)lowMarker {
+	HILowMarker *oldValue = _lowMarker;
+	_lowMarker = lowMarker;
+	[self updateHIObject:oldValue newValue:lowMarker propertyName:@"lowMarker"];
 }
 
 -(void)setNegativeFillColor:(HIColor *)negativeFillColor {

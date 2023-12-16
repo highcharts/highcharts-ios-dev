@@ -55,6 +55,7 @@
 	copyColumnpyramid.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyColumnpyramid.cursor = [self.cursor copyWithZone: zone];
 	copyColumnpyramid.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyColumnpyramid.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyColumnpyramid.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyColumnpyramid.custom = [self.custom copyWithZone: zone];
 	copyColumnpyramid.onPoint = [self.onPoint copyWithZone: zone];

@@ -32,6 +32,7 @@
 	copyGauge.label = [self.label copyWithZone: zone];
 	copyGauge.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyGauge.cursor = [self.cursor copyWithZone: zone];
+	copyGauge.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyGauge.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyGauge.custom = [self.custom copyWithZone: zone];
 	copyGauge.onPoint = [self.onPoint copyWithZone: zone];

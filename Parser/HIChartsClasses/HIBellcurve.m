@@ -53,6 +53,7 @@
 	copyBellcurve.cursor = [self.cursor copyWithZone: zone];
 	copyBellcurve.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyBellcurve.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyBellcurve.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyBellcurve.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBellcurve.custom = [self.custom copyWithZone: zone];
 	copyBellcurve.onPoint = [self.onPoint copyWithZone: zone];

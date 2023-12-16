@@ -57,6 +57,7 @@
 	copyWindbarb.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyWindbarb.cursor = [self.cursor copyWithZone: zone];
 	copyWindbarb.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyWindbarb.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyWindbarb.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyWindbarb.custom = [self.custom copyWithZone: zone];
 	copyWindbarb.onPoint = [self.onPoint copyWithZone: zone];

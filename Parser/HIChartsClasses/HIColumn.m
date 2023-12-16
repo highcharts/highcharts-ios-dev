@@ -54,6 +54,7 @@
 	copyColumn.cursor = [self.cursor copyWithZone: zone];
 	copyColumn.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyColumn.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyColumn.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyColumn.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyColumn.custom = [self.custom copyWithZone: zone];
 	copyColumn.onPoint = [self.onPoint copyWithZone: zone];

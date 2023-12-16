@@ -54,6 +54,7 @@
 	copyXrange.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyXrange.cursor = [self.cursor copyWithZone: zone];
 	copyXrange.dashStyle = [self.dashStyle copyWithZone: zone];
+	copyXrange.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyXrange.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyXrange.custom = [self.custom copyWithZone: zone];
 	copyXrange.onPoint = [self.onPoint copyWithZone: zone];

@@ -35,13 +35,15 @@
 	copyDependencywheel.opacity = [self.opacity copyWithZone: zone];
 	copyDependencywheel.minLinkWidth = [self.minLinkWidth copyWithZone: zone];
 	copyDependencywheel.nodePadding = [self.nodePadding copyWithZone: zone];
+	copyDependencywheel.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyDependencywheel.tooltip = [self.tooltip copyWithZone: zone];
 	copyDependencywheel.states = [self.states copyWithZone: zone];
 	copyDependencywheel.nodeWidth = [self.nodeWidth copyWithZone: zone];
+	copyDependencywheel.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyDependencywheel.levels = [self.levels copyWithZone: zone];
 	copyDependencywheel.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyDependencywheel.linkOpacity = [self.linkOpacity copyWithZone: zone];
-	copyDependencywheel.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyDependencywheel.linkColorMode = [self.linkColorMode copyWithZone: zone];
 	copyDependencywheel.colors = [self.colors copyWithZone: zone];
 	copyDependencywheel.borderColor = [self.borderColor copyWithZone: zone];
 	copyDependencywheel.centerInCategory = [self.centerInCategory copyWithZone: zone];
@@ -145,6 +147,9 @@
 	if (self.linkOpacity) {
 		params[@"linkOpacity"] = self.linkOpacity;
 	}
+	if (self.linkColorMode) {
+		params[@"linkColorMode"] = self.linkColorMode;
+	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
@@ -233,6 +238,12 @@
 	NSNumber *oldValue = _linkOpacity;
 	_linkOpacity = linkOpacity;
 	[self updateNSObject:oldValue newValue:linkOpacity propertyName:@"linkOpacity"];
+}
+
+-(void)setLinkColorMode:(NSString *)linkColorMode {
+	NSString *oldValue = _linkColorMode;
+	_linkColorMode = linkColorMode;
+	[self updateNSObject:oldValue newValue:linkColorMode propertyName:@"linkColorMode"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {

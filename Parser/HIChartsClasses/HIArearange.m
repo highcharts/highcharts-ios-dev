@@ -15,6 +15,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIArearange *copyArearange = [[HIArearange allocWithZone: zone] init];
+	copyArearange.lowMarker = [self.lowMarker copyWithZone: zone];
 	copyArearange.color = [self.color copyWithZone: zone];
 	copyArearange.tooltip = [self.tooltip copyWithZone: zone];
 	copyArearange.dataLabels = [self.dataLabels copyWithZone: zone];
@@ -47,6 +48,7 @@
 	copyArearange.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyArearange.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyArearange.connectNulls = [self.connectNulls copyWithZone: zone];
+	copyArearange.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyArearange.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyArearange.custom = [self.custom copyWithZone: zone];
 	copyArearange.onPoint = [self.onPoint copyWithZone: zone];
@@ -97,6 +99,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
+	if (self.lowMarker) {
+		params[@"lowMarker"] = [self.lowMarker getParams];
+	}
 	if (self.fillColor) {
 		params[@"fillColor"] = [self.fillColor getData];
 	}
@@ -116,6 +121,12 @@
 }
 
 # pragma mark - Setters
+
+-(void)setLowMarker:(HILowMarker *)lowMarker {
+	HILowMarker *oldValue = _lowMarker;
+	_lowMarker = lowMarker;
+	[self updateHIObject:oldValue newValue:lowMarker propertyName:@"lowMarker"];
+}
 
 -(void)setFillColor:(HIColor *)fillColor {
 	HIColor *oldValue = _fillColor;

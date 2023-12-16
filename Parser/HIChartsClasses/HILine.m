@@ -37,6 +37,7 @@
 	copyLine.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyLine.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyLine.connectNulls = [self.connectNulls copyWithZone: zone];
+	copyLine.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyLine.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyLine.custom = [self.custom copyWithZone: zone];
 	copyLine.onPoint = [self.onPoint copyWithZone: zone];

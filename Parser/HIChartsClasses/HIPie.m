@@ -23,6 +23,7 @@
 	copyPie.colors = [self.colors copyWithZone: zone];
 	copyPie.size = [self.size copyWithZone: zone];
 	copyPie.borderColor = [self.borderColor copyWithZone: zone];
+	copyPie.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyPie.tooltip = [self.tooltip copyWithZone: zone];
 	copyPie.thickness = [self.thickness copyWithZone: zone];
 	copyPie.minSize = [self.minSize copyWithZone: zone];

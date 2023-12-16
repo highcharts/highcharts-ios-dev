@@ -60,6 +60,7 @@
 	copyBubble.cursor = [self.cursor copyWithZone: zone];
 	copyBubble.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyBubble.connectNulls = [self.connectNulls copyWithZone: zone];
+	copyBubble.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyBubble.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBubble.custom = [self.custom copyWithZone: zone];
 	copyBubble.onPoint = [self.onPoint copyWithZone: zone];

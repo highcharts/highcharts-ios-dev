@@ -54,6 +54,7 @@
 	copyArea.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyArea.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyArea.connectNulls = [self.connectNulls copyWithZone: zone];
+	copyArea.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyArea.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyArea.custom = [self.custom copyWithZone: zone];
 	copyArea.onPoint = [self.onPoint copyWithZone: zone];

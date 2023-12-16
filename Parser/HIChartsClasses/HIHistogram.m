@@ -64,6 +64,7 @@
 	copyHistogram.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyHistogram.cursor = [self.cursor copyWithZone: zone];
 	copyHistogram.dashStyle = [self.dashStyle copyWithZone: zone];
+	copyHistogram.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyHistogram.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyHistogram.custom = [self.custom copyWithZone: zone];
 	copyHistogram.onPoint = [self.onPoint copyWithZone: zone];

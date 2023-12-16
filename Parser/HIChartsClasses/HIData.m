@@ -68,8 +68,6 @@
 	copyData.from = [self.from copyWithZone: zone];
 	copyData.weight = [self.weight copyWithZone: zone];
 	copyData.to = [self.to copyWithZone: zone];
-	copyData.direction = [self.direction copyWithZone: zone];
-	copyData.length = [self.length copyWithZone: zone];
 	copyData.target = [self.target copyWithZone: zone];
 	copyData.targetOptions = [self.targetOptions copyWithZone: zone];
 	copyData.borderColor = [self.borderColor copyWithZone: zone];
@@ -84,6 +82,8 @@
 	copyData.isSum = [self.isSum copyWithZone: zone];
 	copyData.sliced = [self.sliced copyWithZone: zone];
 	copyData.gradientForSides = [self.gradientForSides copyWithZone: zone];
+	copyData.direction = [self.direction copyWithZone: zone];
+	copyData.length = [self.length copyWithZone: zone];
 	copyData.innerRadius = [self.innerRadius copyWithZone: zone];
 	copyData.radius = [self.radius copyWithZone: zone];
 	copyData.outgoing = [self.outgoing copyWithZone: zone];
@@ -277,7 +277,16 @@
 		params[@"drilldown"] = self.drilldown;
 	}
 	if (self.dataLabels) {
-		params[@"dataLabels"] = [self.dataLabels getParams];
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.dataLabels) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"dataLabels"] = array;
 	}
 	if (self.events) {
 		params[@"events"] = [self.events getParams];
@@ -302,12 +311,6 @@
 	}
 	if (self.to) {
 		params[@"to"] = self.to;
-	}
-	if (self.direction) {
-		params[@"direction"] = self.direction;
-	}
-	if (self.length) {
-		params[@"length"] = self.length;
 	}
 	if (self.target) {
 		params[@"target"] = self.target;
@@ -350,6 +353,12 @@
 	}
 	if (self.gradientForSides) {
 		params[@"gradientForSides"] = self.gradientForSides;
+	}
+	if (self.direction) {
+		params[@"direction"] = self.direction;
+	}
+	if (self.length) {
+		params[@"length"] = self.length;
 	}
 	if (self.innerRadius) {
 		params[@"innerRadius"] = self.innerRadius;
@@ -694,10 +703,10 @@
 	[self updateNSObject:oldValue newValue:drilldown propertyName:@"drilldown"];
 }
 
--(void)setDataLabels:(HIDataLabels *)dataLabels {
-	HIDataLabels *oldValue = _dataLabels;
+-(void)setDataLabels:(NSArray <HIDataLabels *> *)dataLabels {
+	NSArray <HIDataLabels *> *oldValue = _dataLabels;
 	_dataLabels = dataLabels;
-	[self updateHIObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
+	[self updateArrayObject:oldValue newValue:dataLabels propertyName:@"dataLabels"];
 }
 
 -(void)setEvents:(HIEvents *)events {
@@ -746,18 +755,6 @@
 	NSString *oldValue = _to;
 	_to = to;
 	[self updateNSObject:oldValue newValue:to propertyName:@"to"];
-}
-
--(void)setDirection:(NSNumber *)direction {
-	NSNumber *oldValue = _direction;
-	_direction = direction;
-	[self updateNSObject:oldValue newValue:direction propertyName:@"direction"];
-}
-
--(void)setLength:(NSNumber *)length {
-	NSNumber *oldValue = _length;
-	_length = length;
-	[self updateNSObject:oldValue newValue:length propertyName:@"length"];
 }
 
 -(void)setTarget:(NSNumber *)target {
@@ -842,6 +839,18 @@
 	NSNumber *oldValue = _gradientForSides;
 	_gradientForSides = gradientForSides;
 	[self updateNSObject:oldValue newValue:gradientForSides propertyName:@"gradientForSides"];
+}
+
+-(void)setDirection:(NSNumber *)direction {
+	NSNumber *oldValue = _direction;
+	_direction = direction;
+	[self updateNSObject:oldValue newValue:direction propertyName:@"direction"];
+}
+
+-(void)setLength:(NSNumber *)length {
+	NSNumber *oldValue = _length;
+	_length = length;
+	[self updateNSObject:oldValue newValue:length propertyName:@"length"];
 }
 
 -(void)setInnerRadius:(NSString *)innerRadius {

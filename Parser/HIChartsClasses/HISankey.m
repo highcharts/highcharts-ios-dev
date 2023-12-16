@@ -20,14 +20,17 @@
 	copySankey.minLinkWidth = [self.minLinkWidth copyWithZone: zone];
 	copySankey.curveFactor = [self.curveFactor copyWithZone: zone];
 	copySankey.nodePadding = [self.nodePadding copyWithZone: zone];
+	copySankey.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copySankey.tooltip = [self.tooltip copyWithZone: zone];
 	copySankey.dataLabels = [self.dataLabels copyWithZone: zone];
 	copySankey.states = [self.states copyWithZone: zone];
 	copySankey.nodeWidth = [self.nodeWidth copyWithZone: zone];
+	copySankey.showInLegend = [self.showInLegend copyWithZone: zone];
 	copySankey.levels = [self.levels copyWithZone: zone];
 	copySankey.borderWidth = [self.borderWidth copyWithZone: zone];
+	copySankey.nodeAlignment = [self.nodeAlignment copyWithZone: zone];
 	copySankey.linkOpacity = [self.linkOpacity copyWithZone: zone];
-	copySankey.showInLegend = [self.showInLegend copyWithZone: zone];
+	copySankey.linkColorMode = [self.linkColorMode copyWithZone: zone];
 	copySankey.colors = [self.colors copyWithZone: zone];
 	copySankey.borderColor = [self.borderColor copyWithZone: zone];
 	copySankey.centerInCategory = [self.centerInCategory copyWithZone: zone];
@@ -109,8 +112,14 @@
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
 	}
+	if (self.nodeAlignment) {
+		params[@"nodeAlignment"] = self.nodeAlignment;
+	}
 	if (self.linkOpacity) {
 		params[@"linkOpacity"] = self.linkOpacity;
+	}
+	if (self.linkColorMode) {
+		params[@"linkColorMode"] = self.linkColorMode;
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -184,10 +193,22 @@
 	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
 }
 
+-(void)setNodeAlignment:(NSString *)nodeAlignment {
+	NSString *oldValue = _nodeAlignment;
+	_nodeAlignment = nodeAlignment;
+	[self updateNSObject:oldValue newValue:nodeAlignment propertyName:@"nodeAlignment"];
+}
+
 -(void)setLinkOpacity:(NSNumber *)linkOpacity {
 	NSNumber *oldValue = _linkOpacity;
 	_linkOpacity = linkOpacity;
 	[self updateNSObject:oldValue newValue:linkOpacity propertyName:@"linkOpacity"];
+}
+
+-(void)setLinkColorMode:(NSString *)linkColorMode {
+	NSString *oldValue = _linkColorMode;
+	_linkColorMode = linkColorMode;
+	[self updateNSObject:oldValue newValue:linkColorMode propertyName:@"linkColorMode"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {

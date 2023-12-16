@@ -46,6 +46,7 @@
 	copySpline.dashStyle = [self.dashStyle copyWithZone: zone];
 	copySpline.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copySpline.connectNulls = [self.connectNulls copyWithZone: zone];
+	copySpline.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copySpline.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copySpline.custom = [self.custom copyWithZone: zone];
 	copySpline.onPoint = [self.onPoint copyWithZone: zone];

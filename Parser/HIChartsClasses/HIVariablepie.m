@@ -36,6 +36,7 @@
 	copyVariablepie.colors = [self.colors copyWithZone: zone];
 	copyVariablepie.size = [self.size copyWithZone: zone];
 	copyVariablepie.borderColor = [self.borderColor copyWithZone: zone];
+	copyVariablepie.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyVariablepie.thickness = [self.thickness copyWithZone: zone];
 	copyVariablepie.minSize = [self.minSize copyWithZone: zone];
 	copyVariablepie.color = [self.color copyWithZone: zone];
