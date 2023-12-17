@@ -3,7 +3,7 @@
 //  HighFit
 //
 //  License: www.highcharts.com/license
-//  Copyright © 2022 Highsoft AS. All rights reserved.
+//  Copyright © 2023 Highsoft AS. All rights reserved.
 //
 
 import UIKit
@@ -151,7 +151,8 @@ class OptionsProvider {
             let plotOptions = HIPlotOptions()
             plotOptions.column = HIColumn()
             plotOptions.column.color = HIColor(rgba: 255, green: 255, blue: 255, alpha: 0.6)
-            plotOptions.column.borderRadius = 2
+            plotOptions.column.borderRadius = HIBorderRadiusOptionsObject()
+            plotOptions.column.borderRadius.radius = 2
             plotOptions.column.borderWidth = 0
             hioptions.plotOptions = plotOptions
             
