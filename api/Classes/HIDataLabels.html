@@ -337,7 +337,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Decides how the data label will be rotated relative to the perimeter of the sunburst. Valid values are <code>auto</code>, <code>circular</code>, <code>parallel</code> and <code>perpendicular</code>. When <code>auto</code>, the best fit will be computed for the point. The <code>circular</code> option works similiar to <code>auto</code>, but uses the <code>textPath</code> feature - labels are curved, resulting in a better layout, however multiple lines and <code>textOutline</code> are not supported. The <code>series.rotation</code> option takes precedence over <code>rotationMode</code>.</p>
+				<p>Decides how the data label will be rotated relative to the perimeter of the sunburst. Valid values are <code>circular</code>, <code>auto</code>, <code>parallel</code> and <code>perpendicular</code>. When <code>circular</code>, the best fit will be computed for the point, so that the label is curved around the center when there is room for it, otherwise perpendicular. The legacy <code>auto</code> option works similiar to <code>circular</code>, but instead of curving the labels they are tangent to the perimiter. The <code>rotation</code> option takes precedence over <code>rotationMode</code>.</p>
 			</div>
 			
 		    
@@ -354,9 +354,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["auto", "perpendicular", "parallel", "circular"]</code>.</p>
-
-<p><strong>Defaults to</strong> <code>circular</code>.</p>
+				<p><strong>Defaults to</strong> <code>circular</code>.</p>
 
 <p><strong>Try it</strong></p>
 

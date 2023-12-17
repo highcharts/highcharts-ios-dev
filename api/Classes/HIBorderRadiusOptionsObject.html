@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIGlobal Class Reference</title>
+	<title>HIBorderRadiusOptionsObject Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -71,7 +71,11 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/VMLRadialGradientURL">VMLRadialGradientURL</option>
+		<option value="//api/name/radius">radius</option>
+		
+		<option value="//api/name/scope">scope</option>
+		
+		<option value="//api/name/where">where</option>
 		
 	</optgroup>
 	
@@ -98,7 +102,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIGlobal Class Reference</h1>
+					<h1 class="title">HIBorderRadiusOptionsObject Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -107,12 +111,18 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIGlobal.h</td>
+	<td>HIBorderRadiusOptionsObject.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Detailed options for border radius.</p>
+					</div>
 					
 					
 
@@ -127,8 +137,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/VMLRadialGradientURL" title="VMLRadialGradientURL"></a>
-	<h3 class="method-title"><code><a href="#//api/name/VMLRadialGradientURL">&nbsp;&nbsp;VMLRadialGradientURL</a></code>
+	<a name="//api/name/radius" title="radius"></a>
+	<h3 class="method-title"><code><a href="#//api/name/radius">&nbsp;&nbsp;radius</a></code>
 </h3>
 
 	<div class="method-info">
@@ -138,12 +148,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Path to the pattern image required by VML browsers in order to draw radial gradients.</p>
+				<p>The border radius. A number signifies pixels. A percentage string, like for example <code>50%</code>, signifies a relative size. For columns this is relative to the column width, for pies it is relative to the radius and the inner radius.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *VMLRadialGradientURL</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id radius</code></div>
 
 		    
 			
@@ -161,7 +171,99 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIGlobal.h</code></p>
+				<p><code class="declared-in-ref">HIBorderRadiusOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/scope" title="scope"></a>
+	<h3 class="method-title"><code><a href="#//api/name/scope">&nbsp;&nbsp;scope</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The scope of the rounding for column charts. In a stacked column chart, the value <code>point</code> means each single point will get rounded corners. The value <code>stack</code> means the rounding will apply to the full stack, so that only points close to the top or bottom will receive rounding.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *scope</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Accepted values:</strong> <code>["point", "stack"]</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIBorderRadiusOptionsObject.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/where" title="where"></a>
+	<h3 class="method-title"><code><a href="#//api/name/where">&nbsp;&nbsp;where</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>For column charts, where in the point or stack to apply rounding. The <code>end</code> value means only those corners at the point value will be rounded, leaving the corners at the base or threshold unrounded. This is the most intuitive behaviour. The <code>all</code> value means also the base will be rounded.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *where</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Accepted values:</strong> <code>["all", "end"]</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIBorderRadiusOptionsObject.h</code></p>
 			</div>
 			
 			

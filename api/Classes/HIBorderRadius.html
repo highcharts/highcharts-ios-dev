@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIColorVariation Class Reference</title>
+	<title>HIBorderRadius Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -71,9 +71,7 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/key">key</option>
-		
-		<option value="//api/name/to">to</option>
+		<option value="//api/name/where">where</option>
 		
 	</optgroup>
 	
@@ -100,7 +98,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIColorVariation Class Reference</h1>
+					<h1 class="title">HIBorderRadius Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -109,7 +107,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIColorVariation.h</td>
+	<td>HIBorderRadius.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -119,13 +117,15 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A configuration object to define how the color of a child varies from the parent&rsquo;s color. The variation is distributed among the children of node. For example when setting brightness, the brightness change will range from the parent&rsquo;s original brightness on the first child, to the amount set in the <code>to</code> setting on the last node. This allows a gradient-like color scheme that sets children out from each other while highlighting the grouping on treemaps and sectors on sunburst charts.</p>
+						<p>The corner radius of the border surrounding each column or bar. A number signifies pixels. A percentage string, like for example <code>50%</code>, signifies a relative size. For columns this is relative to the column width, for pies it is relative to the radius and the inner radius.</p>
+
+<p><strong>Defaults to</strong> <code>3</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/sunburst/">Sunburst with color variation</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-treegraph/color-variation">Treegraph nodes with color variation</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderradius/">Rounded columns</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-border-radius">Column and pie with rounded border</a></li>
 </ul>
 
 					</div>
@@ -143,8 +143,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/to" title="to"></a>
-	<h3 class="method-title"><code><a href="#//api/name/to">&nbsp;&nbsp;to</a></code>
+	<a name="//api/name/where" title="where"></a>
+	<h3 class="method-title"><code><a href="#//api/name/where">&nbsp;&nbsp;where</a></code>
 </h3>
 
 	<div class="method-info">
@@ -152,76 +152,10 @@
 
 		<div class="method-info-container">
 			
-			
-			<div class="method-subsection brief-description">
-				<p>The ending value of a color variation. The last sibling will receive this value.</p>
-			</div>
-			
-		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *to</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *where</code></div>
 
 		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColorVariation.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/key" title="key"></a>
-	<h3 class="method-title"><code><a href="#//api/name/key">&nbsp;&nbsp;key</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The key of a color variation. Currently supports <code>brightness</code> only.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *key</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIColorVariation.h</code></p>
-			</div>
-			
-			
 		</div>
 	</div>
 </div><div class="section-method">
