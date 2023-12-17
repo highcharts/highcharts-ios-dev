@@ -50,6 +50,7 @@
 	copyVariwide.cursor = [self.cursor copyWithZone: zone];
 	copyVariwide.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyVariwide.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyVariwide.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyVariwide.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyVariwide.custom = [self.custom copyWithZone: zone];
 	copyVariwide.onPoint = [self.onPoint copyWithZone: zone];
@@ -105,7 +106,7 @@
 		params[@"groupPadding"] = self.groupPadding;
 	}
 	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
+		params[@"borderRadius"] = [self.borderRadius getParams];
 	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
@@ -158,10 +159,10 @@
 	[self updateNSObject:oldValue newValue:groupPadding propertyName:@"groupPadding"];
 }
 
--(void)setBorderRadius:(NSNumber *)borderRadius {
-	NSNumber *oldValue = _borderRadius;
+-(void)setBorderRadius:(HIBorderRadiusOptionsObject *)borderRadius {
+	HIBorderRadiusOptionsObject *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setPointRange:(NSNumber *)pointRange {

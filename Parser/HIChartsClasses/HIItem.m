@@ -31,6 +31,7 @@
 	copyItem.states = [self.states copyWithZone: zone];
 	copyItem.colors = [self.colors copyWithZone: zone];
 	copyItem.size = [self.size copyWithZone: zone];
+	copyItem.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyItem.tooltip = [self.tooltip copyWithZone: zone];
 	copyItem.thickness = [self.thickness copyWithZone: zone];
 	copyItem.minSize = [self.minSize copyWithZone: zone];

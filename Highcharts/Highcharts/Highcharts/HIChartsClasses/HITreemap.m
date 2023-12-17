@@ -63,6 +63,7 @@
 	copyTreemap.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyTreemap.cursor = [self.cursor copyWithZone: zone];
 	copyTreemap.dashStyle = [self.dashStyle copyWithZone: zone];
+	copyTreemap.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyTreemap.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyTreemap.custom = [self.custom copyWithZone: zone];
 	copyTreemap.onPoint = [self.onPoint copyWithZone: zone];

@@ -9,13 +9,13 @@
 #import "HIStyle.h"
 #import "HIFilter.h"
 #import "HITextPath.h"
+#import "HILinkTextPath.h"
 #import "HIParentNodeTextPath.h"
-#import "HIColor.h"
 #import "HISVGAttributes.h"
+#import "HIColor.h"
 #import "HIFunction.h"
-#import "HIDataLabelTextPathOptions.h"
-#import "HIShadowOptionsObject.h"
 #import "HIAnimationOptionsObject.h"
+#import "HIShadowOptionsObject.h"
 
 
 /**
@@ -28,8 +28,6 @@ Can set `dataLabels` on all points which lies on the same level.
 @property(nonatomic, readwrite) HIStyle *style;
 /**
 Decides how the data label will be rotated relative to the perimeter of the sunburst. Valid values are `circular`, `auto`, `parallel` and `perpendicular`. When `circular`, the best fit will be computed for the point, so that the label is curved around the center when there is room for it, otherwise perpendicular. The legacy `auto` option works similiar to `circular`, but instead of curving the labels they are tangent to the perimiter. The `rotation` option takes precedence over `rotationMode`.
-
-**Accepted values:** `["auto", "perpendicular", "parallel", "circular"]`.
 
 **Defaults to** `circular`.
 
@@ -334,7 +332,7 @@ Options for a _link_ label text which should follow link connection.
 
 * [Organization chart with link labels](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-organization/link-labels)
 */
-@property(nonatomic, readwrite) HIDataLabelTextPathOptions *linkTextPath;
+@property(nonatomic, readwrite) HILinkTextPath *linkTextPath;
 /**
 Callback to format data labels for _links_ in the organization chart. The `linkFormat` option takes precedence over the `linkFormatter`.
 */

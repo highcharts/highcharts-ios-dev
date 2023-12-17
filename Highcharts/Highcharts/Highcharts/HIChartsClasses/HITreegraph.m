@@ -48,6 +48,7 @@
 	copyTreegraph.label = [self.label copyWithZone: zone];
 	copyTreegraph.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyTreegraph.cursor = [self.cursor copyWithZone: zone];
+	copyTreegraph.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyTreegraph.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyTreegraph.custom = [self.custom copyWithZone: zone];
 	copyTreegraph.onPoint = [self.onPoint copyWithZone: zone];
@@ -87,7 +88,16 @@
 		params[@"link"] = [self.link getParams];
 	}
 	if (self.levels) {
-		params[@"levels"] = [self.levels getParams];
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.levels) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"levels"] = array;
 	}
 	if (self.collapseButton) {
 		params[@"collapseButton"] = [self.collapseButton getParams];
@@ -119,10 +129,10 @@
 	[self updateHIObject:oldValue newValue:link propertyName:@"link"];
 }
 
--(void)setLevels:(HILevels *)levels {
-	HILevels *oldValue = _levels;
+-(void)setLevels:(NSArray <HILevels *> *)levels {
+	NSArray <HILevels *> *oldValue = _levels;
 	_levels = levels;
-	[self updateHIObject:oldValue newValue:levels propertyName:@"levels"];
+	[self updateArrayObject:oldValue newValue:levels propertyName:@"levels"];
 }
 
 -(void)setCollapseButton:(HICollapseButton *)collapseButton {

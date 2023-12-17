@@ -45,6 +45,7 @@
 	copyTimeline.label = [self.label copyWithZone: zone];
 	copyTimeline.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyTimeline.cursor = [self.cursor copyWithZone: zone];
+	copyTimeline.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyTimeline.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyTimeline.custom = [self.custom copyWithZone: zone];
 	copyTimeline.onPoint = [self.onPoint copyWithZone: zone];

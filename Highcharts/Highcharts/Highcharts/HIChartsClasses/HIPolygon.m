@@ -39,6 +39,7 @@
 	copyPolygon.cursor = [self.cursor copyWithZone: zone];
 	copyPolygon.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyPolygon.connectNulls = [self.connectNulls copyWithZone: zone];
+	copyPolygon.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyPolygon.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPolygon.custom = [self.custom copyWithZone: zone];
 	copyPolygon.onPoint = [self.onPoint copyWithZone: zone];

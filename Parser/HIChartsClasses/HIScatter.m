@@ -40,6 +40,7 @@
 	copyScatter.cursor = [self.cursor copyWithZone: zone];
 	copyScatter.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyScatter.connectNulls = [self.connectNulls copyWithZone: zone];
+	copyScatter.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyScatter.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyScatter.custom = [self.custom copyWithZone: zone];
 	copyScatter.onPoint = [self.onPoint copyWithZone: zone];

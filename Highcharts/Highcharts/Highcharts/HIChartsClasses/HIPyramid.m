@@ -22,21 +22,22 @@
 	copyPyramid.name = [self.name copyWithZone: zone];
 	copyPyramid.type = [self.type copyWithZone: zone];
 	copyPyramid.zIndex = [self.zIndex copyWithZone: zone];
-	copyPyramid.reversed = [self.reversed copyWithZone: zone];
-	copyPyramid.neckWidth = [self.neckWidth copyWithZone: zone];
-	copyPyramid.neckHeight = [self.neckHeight copyWithZone: zone];
 	copyPyramid.center = [self.center copyWithZone: zone];
 	copyPyramid.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyPyramid.reversed = [self.reversed copyWithZone: zone];
+	copyPyramid.neckHeight = [self.neckHeight copyWithZone: zone];
 	copyPyramid.height = [self.height copyWithZone: zone];
 	copyPyramid.states = [self.states copyWithZone: zone];
 	copyPyramid.width = [self.width copyWithZone: zone];
 	copyPyramid.animation = [self.animation copyWithZone: zone];
+	copyPyramid.neckWidth = [self.neckWidth copyWithZone: zone];
 	copyPyramid.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyPyramid.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
 	copyPyramid.clip = [self.clip copyWithZone: zone];
 	copyPyramid.point = [self.point copyWithZone: zone];
 	copyPyramid.colors = [self.colors copyWithZone: zone];
 	copyPyramid.borderColor = [self.borderColor copyWithZone: zone];
+	copyPyramid.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyPyramid.tooltip = [self.tooltip copyWithZone: zone];
 	copyPyramid.thickness = [self.thickness copyWithZone: zone];
 	copyPyramid.minSize = [self.minSize copyWithZone: zone];
@@ -82,15 +83,6 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
-	if (self.reversed) {
-		params[@"reversed"] = self.reversed;
-	}
-	if (self.neckWidth) {
-		params[@"neckWidth"] = self.neckWidth;
-	}
-	if (self.neckHeight) {
-		params[@"neckHeight"] = self.neckHeight;
-	}
 	if (self.center) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.center) {
@@ -106,11 +98,20 @@
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
 	}
+	if (self.reversed) {
+		params[@"reversed"] = self.reversed;
+	}
+	if (self.neckHeight) {
+		params[@"neckHeight"] = self.neckHeight;
+	}
 	if (self.height) {
 		params[@"height"] = self.height;
 	}
 	if (self.width) {
 		params[@"width"] = self.width;
+	}
+	if (self.neckWidth) {
+		params[@"neckWidth"] = self.neckWidth;
 	}
 	if (self.ignoreHiddenPoint) {
 		params[@"ignoreHiddenPoint"] = self.ignoreHiddenPoint;
@@ -154,24 +155,6 @@
 
 # pragma mark - Setters
 
--(void)setReversed:(NSNumber *)reversed {
-	NSNumber *oldValue = _reversed;
-	_reversed = reversed;
-	[self updateNSObject:oldValue newValue:reversed propertyName:@"reversed"];
-}
-
--(void)setNeckWidth:(NSNumber *)neckWidth {
-	NSNumber *oldValue = _neckWidth;
-	_neckWidth = neckWidth;
-	[self updateNSObject:oldValue newValue:neckWidth propertyName:@"neckWidth"];
-}
-
--(void)setNeckHeight:(NSNumber *)neckHeight {
-	NSNumber *oldValue = _neckHeight;
-	_neckHeight = neckHeight;
-	[self updateNSObject:oldValue newValue:neckHeight propertyName:@"neckHeight"];
-}
-
 -(void)setCenter:(NSArray *)center {
 	NSArray *oldValue = _center;
 	_center = center;
@@ -184,6 +167,18 @@
 	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
+-(void)setReversed:(NSNumber *)reversed {
+	NSNumber *oldValue = _reversed;
+	_reversed = reversed;
+	[self updateNSObject:oldValue newValue:reversed propertyName:@"reversed"];
+}
+
+-(void)setNeckHeight:(id)neckHeight {
+	id oldValue = _neckHeight;
+	_neckHeight = neckHeight;
+	[self updateNSObject:oldValue newValue:neckHeight propertyName:@"neckHeight"];
+}
+
 -(void)setHeight:(id)height {
 	id oldValue = _height;
 	_height = height;
@@ -194,6 +189,12 @@
 	id oldValue = _width;
 	_width = width;
 	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
+}
+
+-(void)setNeckWidth:(id)neckWidth {
+	id oldValue = _neckWidth;
+	_neckWidth = neckWidth;
+	[self updateNSObject:oldValue newValue:neckWidth propertyName:@"neckWidth"];
 }
 
 -(void)setIgnoreHiddenPoint:(NSNumber *)ignoreHiddenPoint {

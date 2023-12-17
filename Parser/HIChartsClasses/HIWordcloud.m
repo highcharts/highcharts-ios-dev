@@ -42,6 +42,7 @@
 	copyWordcloud.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyWordcloud.cursor = [self.cursor copyWithZone: zone];
 	copyWordcloud.dashStyle = [self.dashStyle copyWithZone: zone];
+	copyWordcloud.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyWordcloud.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyWordcloud.custom = [self.custom copyWithZone: zone];
 	copyWordcloud.onPoint = [self.onPoint copyWithZone: zone];

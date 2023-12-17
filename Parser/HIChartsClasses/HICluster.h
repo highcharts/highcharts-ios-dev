@@ -9,8 +9,8 @@
 #import "HIStates.h"
 #import "HIZones.h"
 #import "HILayoutAlgorithm.h"
+#import "HIMarker.h"
 #import "HIEvents.h"
-#import "HIPointMarkerOptionsObject.h"
 #import "HIDataLabelsOptions.h"
 #import "HIAnimationOptionsObject.h"
 
@@ -78,7 +78,7 @@ Options for the cluster marker animation.
 /**
 Options for the cluster marker.
 */
-@property(nonatomic, readwrite) HIPointMarkerOptionsObject *marker;
+@property(nonatomic, readwrite) HIMarker *marker;
 /**
 The minimum amount of points to be combined into a cluster. This value has to be greater or equal to 2.
 

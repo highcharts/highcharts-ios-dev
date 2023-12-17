@@ -51,6 +51,7 @@
 	copyColumnrange.cursor = [self.cursor copyWithZone: zone];
 	copyColumnrange.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyColumnrange.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyColumnrange.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyColumnrange.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyColumnrange.custom = [self.custom copyWithZone: zone];
 	copyColumnrange.onPoint = [self.onPoint copyWithZone: zone];
@@ -100,14 +101,14 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
+	if (self.borderRadius) {
+		params[@"borderRadius"] = [self.borderRadius getParams];
+	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
 	}
 	if (self.pointPadding) {
 		params[@"pointPadding"] = self.pointPadding;
-	}
-	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
 	}
 	if (self.minPointLength) {
 		params[@"minPointLength"] = self.minPointLength;
@@ -160,6 +161,12 @@
 
 # pragma mark - Setters
 
+-(void)setBorderRadius:(HIBorderRadius *)borderRadius {
+	HIBorderRadius *oldValue = _borderRadius;
+	_borderRadius = borderRadius;
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+}
+
 -(void)setPointRange:(id)pointRange {
 	id oldValue = _pointRange;
 	_pointRange = pointRange;
@@ -170,12 +177,6 @@
 	NSNumber *oldValue = _pointPadding;
 	_pointPadding = pointPadding;
 	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
-}
-
--(void)setBorderRadius:(NSNumber *)borderRadius {
-	NSNumber *oldValue = _borderRadius;
-	_borderRadius = borderRadius;
-	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setMinPointLength:(NSNumber *)minPointLength {

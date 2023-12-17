@@ -63,6 +63,7 @@
 	copyBar.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyBar.cursor = [self.cursor copyWithZone: zone];
 	copyBar.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyBar.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyBar.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBar.custom = [self.custom copyWithZone: zone];
 	copyBar.onPoint = [self.onPoint copyWithZone: zone];

@@ -67,6 +67,7 @@
 	copyWaterfall.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyWaterfall.cursor = [self.cursor copyWithZone: zone];
 	copyWaterfall.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyWaterfall.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyWaterfall.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyWaterfall.custom = [self.custom copyWithZone: zone];
 	copyWaterfall.onPoint = [self.onPoint copyWithZone: zone];

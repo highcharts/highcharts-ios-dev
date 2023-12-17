@@ -25,23 +25,24 @@
 	copyAccessibility.exposeAsGroupOnly = [self.exposeAsGroupOnly copyWithZone: zone];
 	copyAccessibility.descriptionFormat = [self.descriptionFormat copyWithZone: zone];
 	copyAccessibility.rangeDescription = [self.rangeDescription copyWithZone: zone];
-	copyAccessibility.defaultChartTitle = [self.defaultChartTitle copyWithZone: zone];
-	copyAccessibility.svgContainerLabel = [self.svgContainerLabel copyWithZone: zone];
-	copyAccessibility.thousandsSep = [self.thousandsSep copyWithZone: zone];
-	copyAccessibility.chartTypes = [self.chartTypes copyWithZone: zone];
-	copyAccessibility.seriesTypeDescriptions = [self.seriesTypeDescriptions copyWithZone: zone];
-	copyAccessibility.table = [self.table copyWithZone: zone];
-	copyAccessibility.zoom = [self.zoom copyWithZone: zone];
-	copyAccessibility.credits = [self.credits copyWithZone: zone];
 	copyAccessibility.drillUpButton = [self.drillUpButton copyWithZone: zone];
-	copyAccessibility.exporting = [self.exporting copyWithZone: zone];
-	copyAccessibility.rangeSelector = [self.rangeSelector copyWithZone: zone];
-	copyAccessibility.svgContainerTitle = [self.svgContainerTitle copyWithZone: zone];
-	copyAccessibility.sonification = [self.sonification copyWithZone: zone];
+	copyAccessibility.table = [self.table copyWithZone: zone];
+	copyAccessibility.navigator = [self.navigator copyWithZone: zone];
 	copyAccessibility.graphicContainerLabel = [self.graphicContainerLabel copyWithZone: zone];
-	copyAccessibility.legend = [self.legend copyWithZone: zone];
 	copyAccessibility.chartContainerLabel = [self.chartContainerLabel copyWithZone: zone];
 	copyAccessibility.axis = [self.axis copyWithZone: zone];
+	copyAccessibility.sonification = [self.sonification copyWithZone: zone];
+	copyAccessibility.chartTypes = [self.chartTypes copyWithZone: zone];
+	copyAccessibility.svgContainerLabel = [self.svgContainerLabel copyWithZone: zone];
+	copyAccessibility.exporting = [self.exporting copyWithZone: zone];
+	copyAccessibility.credits = [self.credits copyWithZone: zone];
+	copyAccessibility.rangeSelector = [self.rangeSelector copyWithZone: zone];
+	copyAccessibility.legend = [self.legend copyWithZone: zone];
+	copyAccessibility.defaultChartTitle = [self.defaultChartTitle copyWithZone: zone];
+	copyAccessibility.zoom = [self.zoom copyWithZone: zone];
+	copyAccessibility.svgContainerTitle = [self.svgContainerTitle copyWithZone: zone];
+	copyAccessibility.seriesTypeDescriptions = [self.seriesTypeDescriptions copyWithZone: zone];
+	copyAccessibility.thousandsSep = [self.thousandsSep copyWithZone: zone];
 	return copyAccessibility;
 }
 
@@ -93,56 +94,59 @@
 	if (self.rangeDescription) {
 		params[@"rangeDescription"] = self.rangeDescription;
 	}
-	if (self.defaultChartTitle) {
-		params[@"defaultChartTitle"] = self.defaultChartTitle;
-	}
-	if (self.svgContainerLabel) {
-		params[@"svgContainerLabel"] = self.svgContainerLabel;
-	}
-	if (self.thousandsSep) {
-		params[@"thousandsSep"] = self.thousandsSep;
-	}
-	if (self.chartTypes) {
-		params[@"chartTypes"] = [self.chartTypes getParams];
-	}
-	if (self.seriesTypeDescriptions) {
-		params[@"seriesTypeDescriptions"] = [self.seriesTypeDescriptions getParams];
+	if (self.drillUpButton) {
+		params[@"drillUpButton"] = self.drillUpButton;
 	}
 	if (self.table) {
 		params[@"table"] = [self.table getParams];
 	}
-	if (self.zoom) {
-		params[@"zoom"] = [self.zoom getParams];
-	}
-	if (self.credits) {
-		params[@"credits"] = self.credits;
-	}
-	if (self.drillUpButton) {
-		params[@"drillUpButton"] = self.drillUpButton;
-	}
-	if (self.exporting) {
-		params[@"exporting"] = [self.exporting getParams];
-	}
-	if (self.rangeSelector) {
-		params[@"rangeSelector"] = [self.rangeSelector getParams];
-	}
-	if (self.svgContainerTitle) {
-		params[@"svgContainerTitle"] = self.svgContainerTitle;
-	}
-	if (self.sonification) {
-		params[@"sonification"] = [self.sonification getParams];
+	if (self.navigator) {
+		params[@"navigator"] = [self.navigator getParams];
 	}
 	if (self.graphicContainerLabel) {
 		params[@"graphicContainerLabel"] = self.graphicContainerLabel;
-	}
-	if (self.legend) {
-		params[@"legend"] = [self.legend getParams];
 	}
 	if (self.chartContainerLabel) {
 		params[@"chartContainerLabel"] = self.chartContainerLabel;
 	}
 	if (self.axis) {
 		params[@"axis"] = [self.axis getParams];
+	}
+	if (self.sonification) {
+		params[@"sonification"] = [self.sonification getParams];
+	}
+	if (self.chartTypes) {
+		params[@"chartTypes"] = [self.chartTypes getParams];
+	}
+	if (self.svgContainerLabel) {
+		params[@"svgContainerLabel"] = self.svgContainerLabel;
+	}
+	if (self.exporting) {
+		params[@"exporting"] = [self.exporting getParams];
+	}
+	if (self.credits) {
+		params[@"credits"] = self.credits;
+	}
+	if (self.rangeSelector) {
+		params[@"rangeSelector"] = [self.rangeSelector getParams];
+	}
+	if (self.legend) {
+		params[@"legend"] = [self.legend getParams];
+	}
+	if (self.defaultChartTitle) {
+		params[@"defaultChartTitle"] = self.defaultChartTitle;
+	}
+	if (self.zoom) {
+		params[@"zoom"] = [self.zoom getParams];
+	}
+	if (self.svgContainerTitle) {
+		params[@"svgContainerTitle"] = self.svgContainerTitle;
+	}
+	if (self.seriesTypeDescriptions) {
+		params[@"seriesTypeDescriptions"] = [self.seriesTypeDescriptions getParams];
+	}
+	if (self.thousandsSep) {
+		params[@"thousandsSep"] = self.thousandsSep;
 	}
 	return params;
 }
@@ -239,34 +243,10 @@
 	[self updateNSObject:oldValue newValue:rangeDescription propertyName:@"rangeDescription"];
 }
 
--(void)setDefaultChartTitle:(NSString *)defaultChartTitle {
-	NSString *oldValue = _defaultChartTitle;
-	_defaultChartTitle = defaultChartTitle;
-	[self updateNSObject:oldValue newValue:defaultChartTitle propertyName:@"defaultChartTitle"];
-}
-
--(void)setSvgContainerLabel:(NSString *)svgContainerLabel {
-	NSString *oldValue = _svgContainerLabel;
-	_svgContainerLabel = svgContainerLabel;
-	[self updateNSObject:oldValue newValue:svgContainerLabel propertyName:@"svgContainerLabel"];
-}
-
--(void)setThousandsSep:(NSString *)thousandsSep {
-	NSString *oldValue = _thousandsSep;
-	_thousandsSep = thousandsSep;
-	[self updateNSObject:oldValue newValue:thousandsSep propertyName:@"thousandsSep"];
-}
-
--(void)setChartTypes:(HIChartTypes *)chartTypes {
-	HIChartTypes *oldValue = _chartTypes;
-	_chartTypes = chartTypes;
-	[self updateHIObject:oldValue newValue:chartTypes propertyName:@"chartTypes"];
-}
-
--(void)setSeriesTypeDescriptions:(HISeriesTypeDescriptions *)seriesTypeDescriptions {
-	HISeriesTypeDescriptions *oldValue = _seriesTypeDescriptions;
-	_seriesTypeDescriptions = seriesTypeDescriptions;
-	[self updateHIObject:oldValue newValue:seriesTypeDescriptions propertyName:@"seriesTypeDescriptions"];
+-(void)setDrillUpButton:(NSString *)drillUpButton {
+	NSString *oldValue = _drillUpButton;
+	_drillUpButton = drillUpButton;
+	[self updateNSObject:oldValue newValue:drillUpButton propertyName:@"drillUpButton"];
 }
 
 -(void)setTable:(HITable *)table {
@@ -275,58 +255,16 @@
 	[self updateHIObject:oldValue newValue:table propertyName:@"table"];
 }
 
--(void)setZoom:(HIZoom *)zoom {
-	HIZoom *oldValue = _zoom;
-	_zoom = zoom;
-	[self updateHIObject:oldValue newValue:zoom propertyName:@"zoom"];
-}
-
--(void)setCredits:(NSString *)credits {
-	NSString *oldValue = _credits;
-	_credits = credits;
-	[self updateNSObject:oldValue newValue:credits propertyName:@"credits"];
-}
-
--(void)setDrillUpButton:(NSString *)drillUpButton {
-	NSString *oldValue = _drillUpButton;
-	_drillUpButton = drillUpButton;
-	[self updateNSObject:oldValue newValue:drillUpButton propertyName:@"drillUpButton"];
-}
-
--(void)setExporting:(HIAccessibilityExporting *)exporting {
-	HIAccessibilityExporting *oldValue = _exporting;
-	_exporting = exporting;
-	[self updateHIObject:oldValue newValue:exporting propertyName:@"exporting"];
-}
-
--(void)setRangeSelector:(HIRangeSelector *)rangeSelector {
-	HIRangeSelector *oldValue = _rangeSelector;
-	_rangeSelector = rangeSelector;
-	[self updateHIObject:oldValue newValue:rangeSelector propertyName:@"rangeSelector"];
-}
-
--(void)setSvgContainerTitle:(NSString *)svgContainerTitle {
-	NSString *oldValue = _svgContainerTitle;
-	_svgContainerTitle = svgContainerTitle;
-	[self updateNSObject:oldValue newValue:svgContainerTitle propertyName:@"svgContainerTitle"];
-}
-
--(void)setSonification:(HISonification *)sonification {
-	HISonification *oldValue = _sonification;
-	_sonification = sonification;
-	[self updateHIObject:oldValue newValue:sonification propertyName:@"sonification"];
+-(void)setNavigator:(HINavigator *)navigator {
+	HINavigator *oldValue = _navigator;
+	_navigator = navigator;
+	[self updateHIObject:oldValue newValue:navigator propertyName:@"navigator"];
 }
 
 -(void)setGraphicContainerLabel:(NSString *)graphicContainerLabel {
 	NSString *oldValue = _graphicContainerLabel;
 	_graphicContainerLabel = graphicContainerLabel;
 	[self updateNSObject:oldValue newValue:graphicContainerLabel propertyName:@"graphicContainerLabel"];
-}
-
--(void)setLegend:(HIAccessibilityLegend *)legend {
-	HIAccessibilityLegend *oldValue = _legend;
-	_legend = legend;
-	[self updateHIObject:oldValue newValue:legend propertyName:@"legend"];
 }
 
 -(void)setChartContainerLabel:(NSString *)chartContainerLabel {
@@ -339,6 +277,78 @@
 	HIAxis *oldValue = _axis;
 	_axis = axis;
 	[self updateHIObject:oldValue newValue:axis propertyName:@"axis"];
+}
+
+-(void)setSonification:(HISonification *)sonification {
+	HISonification *oldValue = _sonification;
+	_sonification = sonification;
+	[self updateHIObject:oldValue newValue:sonification propertyName:@"sonification"];
+}
+
+-(void)setChartTypes:(HIChartTypes *)chartTypes {
+	HIChartTypes *oldValue = _chartTypes;
+	_chartTypes = chartTypes;
+	[self updateHIObject:oldValue newValue:chartTypes propertyName:@"chartTypes"];
+}
+
+-(void)setSvgContainerLabel:(NSString *)svgContainerLabel {
+	NSString *oldValue = _svgContainerLabel;
+	_svgContainerLabel = svgContainerLabel;
+	[self updateNSObject:oldValue newValue:svgContainerLabel propertyName:@"svgContainerLabel"];
+}
+
+-(void)setExporting:(HIAccessibilityExporting *)exporting {
+	HIAccessibilityExporting *oldValue = _exporting;
+	_exporting = exporting;
+	[self updateHIObject:oldValue newValue:exporting propertyName:@"exporting"];
+}
+
+-(void)setCredits:(NSString *)credits {
+	NSString *oldValue = _credits;
+	_credits = credits;
+	[self updateNSObject:oldValue newValue:credits propertyName:@"credits"];
+}
+
+-(void)setRangeSelector:(HIRangeSelector *)rangeSelector {
+	HIRangeSelector *oldValue = _rangeSelector;
+	_rangeSelector = rangeSelector;
+	[self updateHIObject:oldValue newValue:rangeSelector propertyName:@"rangeSelector"];
+}
+
+-(void)setLegend:(HIAccessibilityLegend *)legend {
+  HIAccessibilityLegend *oldValue = _legend;
+	_legend = legend;
+	[self updateHIObject:oldValue newValue:legend propertyName:@"legend"];
+}
+
+-(void)setDefaultChartTitle:(NSString *)defaultChartTitle {
+	NSString *oldValue = _defaultChartTitle;
+	_defaultChartTitle = defaultChartTitle;
+	[self updateNSObject:oldValue newValue:defaultChartTitle propertyName:@"defaultChartTitle"];
+}
+
+-(void)setZoom:(HIZoom *)zoom {
+	HIZoom *oldValue = _zoom;
+	_zoom = zoom;
+	[self updateHIObject:oldValue newValue:zoom propertyName:@"zoom"];
+}
+
+-(void)setSvgContainerTitle:(NSString *)svgContainerTitle {
+	NSString *oldValue = _svgContainerTitle;
+	_svgContainerTitle = svgContainerTitle;
+	[self updateNSObject:oldValue newValue:svgContainerTitle propertyName:@"svgContainerTitle"];
+}
+
+-(void)setSeriesTypeDescriptions:(HISeriesTypeDescriptions *)seriesTypeDescriptions {
+	HISeriesTypeDescriptions *oldValue = _seriesTypeDescriptions;
+	_seriesTypeDescriptions = seriesTypeDescriptions;
+	[self updateHIObject:oldValue newValue:seriesTypeDescriptions propertyName:@"seriesTypeDescriptions"];
+}
+
+-(void)setThousandsSep:(NSString *)thousandsSep {
+	NSString *oldValue = _thousandsSep;
+	_thousandsSep = thousandsSep;
+	[self updateNSObject:oldValue newValue:thousandsSep propertyName:@"thousandsSep"];
 }
 
 @end

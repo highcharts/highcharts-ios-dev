@@ -54,6 +54,7 @@
 	copyColumn.cursor = [self.cursor copyWithZone: zone];
 	copyColumn.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyColumn.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyColumn.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyColumn.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyColumn.custom = [self.custom copyWithZone: zone];
 	copyColumn.onPoint = [self.onPoint copyWithZone: zone];
@@ -109,7 +110,7 @@
 		params[@"pointPadding"] = self.pointPadding;
 	}
 	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
+		params[@"borderRadius"] = [self.borderRadius getParams];
 	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
@@ -171,10 +172,10 @@
 	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
 }
 
--(void)setBorderRadius:(NSNumber *)borderRadius {
-	NSNumber *oldValue = _borderRadius;
+-(void)setBorderRadius:(HIBorderRadiusOptionsObject *)borderRadius {
+	HIBorderRadiusOptionsObject *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setPointRange:(NSNumber *)pointRange {

@@ -58,6 +58,7 @@
 	copyPackedbubble.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPackedbubble.cursor = [self.cursor copyWithZone: zone];
 	copyPackedbubble.dashStyle = [self.dashStyle copyWithZone: zone];
+	copyPackedbubble.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyPackedbubble.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPackedbubble.custom = [self.custom copyWithZone: zone];
 	copyPackedbubble.onPoint = [self.onPoint copyWithZone: zone];

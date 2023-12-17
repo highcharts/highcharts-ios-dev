@@ -49,6 +49,7 @@
 	copyPictorial.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyPictorial.cursor = [self.cursor copyWithZone: zone];
 	copyPictorial.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyPictorial.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyPictorial.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPictorial.custom = [self.custom copyWithZone: zone];
 	copyPictorial.stacking = [self.stacking copyWithZone: zone];

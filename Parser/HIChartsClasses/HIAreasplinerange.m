@@ -27,6 +27,7 @@
 	copyAreasplinerange.xAxis = [self.xAxis copyWithZone: zone];
 	copyAreasplinerange.yAxis = [self.yAxis copyWithZone: zone];
 	copyAreasplinerange.zIndex = [self.zIndex copyWithZone: zone];
+	copyAreasplinerange.lowMarker = [self.lowMarker copyWithZone: zone];
 	copyAreasplinerange.tooltip = [self.tooltip copyWithZone: zone];
 	copyAreasplinerange.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyAreasplinerange.dragDrop = [self.dragDrop copyWithZone: zone];
@@ -56,6 +57,7 @@
 	copyAreasplinerange.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyAreasplinerange.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyAreasplinerange.connectNulls = [self.connectNulls copyWithZone: zone];
+	copyAreasplinerange.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyAreasplinerange.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyAreasplinerange.custom = [self.custom copyWithZone: zone];
 	copyAreasplinerange.onPoint = [self.onPoint copyWithZone: zone];
@@ -100,6 +102,9 @@
 	if (self.fillOpacity) {
 		params[@"fillOpacity"] = self.fillOpacity;
 	}
+	if (self.lowMarker) {
+		params[@"lowMarker"] = [self.lowMarker getParams];
+	}
 	if (self.trackByArea) {
 		params[@"trackByArea"] = self.trackByArea;
 	}
@@ -124,6 +129,12 @@
 	NSNumber *oldValue = _fillOpacity;
 	_fillOpacity = fillOpacity;
 	[self updateNSObject:oldValue newValue:fillOpacity propertyName:@"fillOpacity"];
+}
+
+-(void)setLowMarker:(HILowMarker *)lowMarker {
+	HILowMarker *oldValue = _lowMarker;
+	_lowMarker = lowMarker;
+	[self updateHIObject:oldValue newValue:lowMarker propertyName:@"lowMarker"];
 }
 
 -(void)setTrackByArea:(NSNumber *)trackByArea {

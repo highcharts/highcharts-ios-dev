@@ -25,13 +25,11 @@
 	copyLollipop.xAxis = [self.xAxis copyWithZone: zone];
 	copyLollipop.yAxis = [self.yAxis copyWithZone: zone];
 	copyLollipop.zIndex = [self.zIndex copyWithZone: zone];
+	copyLollipop.grouping = [self.grouping copyWithZone: zone];
 	copyLollipop.pointRange = [self.pointRange copyWithZone: zone];
 	copyLollipop.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyLollipop.connectorColor = [self.connectorColor copyWithZone: zone];
-	copyLollipop.connectorWidth = [self.connectorWidth copyWithZone: zone];
-	copyLollipop.crisp = [self.crisp copyWithZone: zone];
-	copyLollipop.pointPadding = [self.pointPadding copyWithZone: zone];
-	copyLollipop.groupPadding = [self.groupPadding copyWithZone: zone];
+	copyLollipop.lowMarker = [self.lowMarker copyWithZone: zone];
 	copyLollipop.color = [self.color copyWithZone: zone];
 	copyLollipop.tooltip = [self.tooltip copyWithZone: zone];
 	copyLollipop.dragDrop = [self.dragDrop copyWithZone: zone];
@@ -59,6 +57,7 @@
 	copyLollipop.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyLollipop.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyLollipop.connectNulls = [self.connectNulls copyWithZone: zone];
+	copyLollipop.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyLollipop.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyLollipop.custom = [self.custom copyWithZone: zone];
 	copyLollipop.onPoint = [self.onPoint copyWithZone: zone];
@@ -84,6 +83,7 @@
 	copyLollipop.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyLollipop.zones = [self.zones copyWithZone: zone];
 	copyLollipop.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
+	copyLollipop.crisp = [self.crisp copyWithZone: zone];
 	copyLollipop.visible = [self.visible copyWithZone: zone];
 	copyLollipop.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyLollipop.className = [self.className copyWithZone: zone];
@@ -96,20 +96,17 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
+	if (self.grouping) {
+		params[@"grouping"] = self.grouping;
+	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
 	}
 	if (self.connectorColor) {
 		params[@"connectorColor"] = self.connectorColor;
 	}
-	if (self.connectorWidth) {
-		params[@"connectorWidth"] = self.connectorWidth;
-	}
-	if (self.pointPadding) {
-		params[@"pointPadding"] = self.pointPadding;
-	}
-	if (self.groupPadding) {
-		params[@"groupPadding"] = self.groupPadding;
+	if (self.lowMarker) {
+		params[@"lowMarker"] = [self.lowMarker getParams];
 	}
 	if (self.negativeFillColor) {
 		params[@"negativeFillColor"] = [self.negativeFillColor getData];
@@ -121,6 +118,12 @@
 }
 
 # pragma mark - Setters
+
+-(void)setGrouping:(NSNumber *)grouping {
+	NSNumber *oldValue = _grouping;
+	_grouping = grouping;
+	[self updateNSObject:oldValue newValue:grouping propertyName:@"grouping"];
+}
 
 -(void)setPointRange:(NSNumber *)pointRange {
 	NSNumber *oldValue = _pointRange;
@@ -134,22 +137,10 @@
 	[self updateNSObject:oldValue newValue:connectorColor propertyName:@"connectorColor"];
 }
 
--(void)setConnectorWidth:(NSNumber *)connectorWidth {
-	NSNumber *oldValue = _connectorWidth;
-	_connectorWidth = connectorWidth;
-	[self updateNSObject:oldValue newValue:connectorWidth propertyName:@"connectorWidth"];
-}
-
--(void)setPointPadding:(NSNumber *)pointPadding {
-	NSNumber *oldValue = _pointPadding;
-	_pointPadding = pointPadding;
-	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
-}
-
--(void)setGroupPadding:(NSNumber *)groupPadding {
-	NSNumber *oldValue = _groupPadding;
-	_groupPadding = groupPadding;
-	[self updateNSObject:oldValue newValue:groupPadding propertyName:@"groupPadding"];
+-(void)setLowMarker:(HILowMarker *)lowMarker {
+	HILowMarker *oldValue = _lowMarker;
+	_lowMarker = lowMarker;
+	[self updateHIObject:oldValue newValue:lowMarker propertyName:@"lowMarker"];
 }
 
 -(void)setNegativeFillColor:(HIColor *)negativeFillColor {

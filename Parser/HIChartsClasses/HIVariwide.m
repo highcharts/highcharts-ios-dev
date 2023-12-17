@@ -50,6 +50,7 @@
 	copyVariwide.cursor = [self.cursor copyWithZone: zone];
 	copyVariwide.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyVariwide.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyVariwide.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyVariwide.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyVariwide.custom = [self.custom copyWithZone: zone];
 	copyVariwide.onPoint = [self.onPoint copyWithZone: zone];

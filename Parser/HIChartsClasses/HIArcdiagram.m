@@ -34,13 +34,15 @@
 	copyArcdiagram.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyArcdiagram.opacity = [self.opacity copyWithZone: zone];
 	copyArcdiagram.minLinkWidth = [self.minLinkWidth copyWithZone: zone];
+	copyArcdiagram.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyArcdiagram.tooltip = [self.tooltip copyWithZone: zone];
 	copyArcdiagram.states = [self.states copyWithZone: zone];
 	copyArcdiagram.nodeWidth = [self.nodeWidth copyWithZone: zone];
+	copyArcdiagram.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyArcdiagram.levels = [self.levels copyWithZone: zone];
 	copyArcdiagram.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyArcdiagram.linkOpacity = [self.linkOpacity copyWithZone: zone];
-	copyArcdiagram.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyArcdiagram.linkColorMode = [self.linkColorMode copyWithZone: zone];
 	copyArcdiagram.colors = [self.colors copyWithZone: zone];
 	copyArcdiagram.borderColor = [self.borderColor copyWithZone: zone];
 	copyArcdiagram.stickyTracking = [self.stickyTracking copyWithZone: zone];
@@ -135,6 +137,9 @@
 	if (self.linkOpacity) {
 		params[@"linkOpacity"] = self.linkOpacity;
 	}
+	if (self.linkColorMode) {
+		params[@"linkColorMode"] = self.linkColorMode;
+	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
@@ -226,6 +231,12 @@
 	NSNumber *oldValue = _linkOpacity;
 	_linkOpacity = linkOpacity;
 	[self updateNSObject:oldValue newValue:linkOpacity propertyName:@"linkOpacity"];
+}
+
+-(void)setLinkColorMode:(NSString *)linkColorMode {
+	NSString *oldValue = _linkColorMode;
+	_linkColorMode = linkColorMode;
+	[self updateNSObject:oldValue newValue:linkColorMode propertyName:@"linkColorMode"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {

@@ -10,6 +10,7 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HILevels *copyLevels = [[HILevels allocWithZone: zone] init];
+	copyLevels.marker = [self.marker copyWithZone: zone];
 	copyLevels.collapsed = [self.collapsed copyWithZone: zone];
 	copyLevels.borderColor = [self.borderColor copyWithZone: zone];
 	copyLevels.colorByPoint = [self.colorByPoint copyWithZone: zone];
@@ -30,6 +31,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.marker) {
+		params[@"marker"] = [self.marker getParams];
+	}
 	if (self.collapsed) {
 		params[@"collapsed"] = self.collapsed;
 	}
@@ -76,6 +80,12 @@
 }
 
 # pragma mark - Setters
+
+-(void)setMarker:(HIMarker *)marker {
+	HIMarker *oldValue = _marker;
+	_marker = marker;
+	[self updateHIObject:oldValue newValue:marker propertyName:@"marker"];
+}
 
 -(void)setCollapsed:(NSNumber *)collapsed {
 	NSNumber *oldValue = _collapsed;

@@ -53,6 +53,7 @@
 	copyCylinder.cursor = [self.cursor copyWithZone: zone];
 	copyCylinder.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyCylinder.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyCylinder.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyCylinder.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyCylinder.custom = [self.custom copyWithZone: zone];
 	copyCylinder.onPoint = [self.onPoint copyWithZone: zone];

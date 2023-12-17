@@ -32,6 +32,7 @@
 	copyVenn.tooltip = [self.tooltip copyWithZone: zone];
 	copyVenn.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyVenn.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyVenn.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyVenn.cluster = [self.cluster copyWithZone: zone];
 	copyVenn.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyVenn.includeInDataExport = [self.includeInDataExport copyWithZone: zone];

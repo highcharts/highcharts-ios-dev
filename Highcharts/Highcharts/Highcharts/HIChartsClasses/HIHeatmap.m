@@ -48,6 +48,7 @@
 	copyHeatmap.label = [self.label copyWithZone: zone];
 	copyHeatmap.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyHeatmap.cursor = [self.cursor copyWithZone: zone];
+	copyHeatmap.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyHeatmap.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyHeatmap.custom = [self.custom copyWithZone: zone];
 	copyHeatmap.onPoint = [self.onPoint copyWithZone: zone];

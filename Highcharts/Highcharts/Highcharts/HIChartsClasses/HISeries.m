@@ -55,6 +55,7 @@
 	copySeries.dashStyle = [self.dashStyle copyWithZone: zone];
 	copySeries.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copySeries.connectNulls = [self.connectNulls copyWithZone: zone];
+	copySeries.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copySeries.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copySeries.custom = [self.custom copyWithZone: zone];
 	copySeries.onPoint = [self.onPoint copyWithZone: zone];
@@ -234,6 +235,9 @@
 	}
 	if (self.connectNulls) {
 		params[@"connectNulls"] = self.connectNulls;
+	}
+	if (self.inactiveOtherPoints) {
+		params[@"inactiveOtherPoints"] = self.inactiveOtherPoints;
 	}
 	if (self.enableMouseTracking) {
 		params[@"enableMouseTracking"] = self.enableMouseTracking;
@@ -640,6 +644,12 @@
 	NSNumber *oldValue = _connectNulls;
 	_connectNulls = connectNulls;
 	[self updateNSObject:oldValue newValue:connectNulls propertyName:@"connectNulls"];
+}
+
+-(void)setInactiveOtherPoints:(NSNumber *)inactiveOtherPoints {
+	NSNumber *oldValue = _inactiveOtherPoints;
+	_inactiveOtherPoints = inactiveOtherPoints;
+	[self updateNSObject:oldValue newValue:inactiveOtherPoints propertyName:@"inactiveOtherPoints"];
 }
 
 -(void)setEnableMouseTracking:(NSNumber *)enableMouseTracking {

@@ -64,6 +64,7 @@
 	copyHistogram.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyHistogram.cursor = [self.cursor copyWithZone: zone];
 	copyHistogram.dashStyle = [self.dashStyle copyWithZone: zone];
+	copyHistogram.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyHistogram.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyHistogram.custom = [self.custom copyWithZone: zone];
 	copyHistogram.onPoint = [self.onPoint copyWithZone: zone];
@@ -120,7 +121,7 @@
 		params[@"grouping"] = self.grouping;
 	}
 	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
+		params[@"borderRadius"] = [self.borderRadius getParams];
 	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
@@ -206,10 +207,10 @@
 	[self updateNSObject:oldValue newValue:grouping propertyName:@"grouping"];
 }
 
--(void)setBorderRadius:(NSNumber *)borderRadius {
-	NSNumber *oldValue = _borderRadius;
+-(void)setBorderRadius:(HIBorderRadiusOptionsObject *)borderRadius {
+	HIBorderRadiusOptionsObject *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setPointRange:(NSNumber *)pointRange {

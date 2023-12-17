@@ -61,6 +61,7 @@
 	copyFunnel3d.cursor = [self.cursor copyWithZone: zone];
 	copyFunnel3d.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyFunnel3d.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyFunnel3d.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyFunnel3d.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyFunnel3d.custom = [self.custom copyWithZone: zone];
 	copyFunnel3d.onPoint = [self.onPoint copyWithZone: zone];
@@ -135,7 +136,7 @@
 		params[@"pointPadding"] = self.pointPadding;
 	}
 	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
+		params[@"borderRadius"] = [self.borderRadius getParams];
 	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
@@ -239,10 +240,10 @@
 	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
 }
 
--(void)setBorderRadius:(NSNumber *)borderRadius {
-	NSNumber *oldValue = _borderRadius;
+-(void)setBorderRadius:(HIBorderRadiusOptionsObject *)borderRadius {
+	HIBorderRadiusOptionsObject *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setPointRange:(NSNumber *)pointRange {

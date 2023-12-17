@@ -42,6 +42,7 @@
 	copyWordcloud.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyWordcloud.cursor = [self.cursor copyWithZone: zone];
 	copyWordcloud.dashStyle = [self.dashStyle copyWithZone: zone];
+	copyWordcloud.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyWordcloud.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyWordcloud.custom = [self.custom copyWithZone: zone];
 	copyWordcloud.onPoint = [self.onPoint copyWithZone: zone];
@@ -103,7 +104,7 @@
 		params[@"placementStrategy"] = self.placementStrategy;
 	}
 	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
+		params[@"borderRadius"] = [self.borderRadius getParams];
 	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -174,10 +175,10 @@
 	[self updateNSObject:oldValue newValue:placementStrategy propertyName:@"placementStrategy"];
 }
 
--(void)setBorderRadius:(NSNumber *)borderRadius {
-	NSNumber *oldValue = _borderRadius;
+-(void)setBorderRadius:(HIBorderRadiusOptionsObject *)borderRadius {
+	HIBorderRadiusOptionsObject *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {

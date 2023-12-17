@@ -482,7 +482,7 @@
 }
 
 -(void)setLinkTextPath:(HILinkTextPath *)linkTextPath {
-  HILinkTextPath *oldValue = _linkTextPath;
+	HILinkTextPath *oldValue = _linkTextPath;
 	_linkTextPath = linkTextPath;
 	[self updateHIObject:oldValue newValue:linkTextPath propertyName:@"linkTextPath"];
 }

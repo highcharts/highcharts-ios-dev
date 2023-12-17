@@ -64,6 +64,7 @@
 	copyBullet.cursor = [self.cursor copyWithZone: zone];
 	copyBullet.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyBullet.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyBullet.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyBullet.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBullet.custom = [self.custom copyWithZone: zone];
 	copyBullet.onPoint = [self.onPoint copyWithZone: zone];
@@ -109,7 +110,7 @@
 		params[@"pointPadding"] = self.pointPadding;
 	}
 	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
+		params[@"borderRadius"] = [self.borderRadius getParams];
 	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
@@ -177,10 +178,10 @@
 	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
 }
 
--(void)setBorderRadius:(NSNumber *)borderRadius {
-	NSNumber *oldValue = _borderRadius;
+-(void)setBorderRadius:(HIBorderRadiusOptionsObject *)borderRadius {
+	HIBorderRadiusOptionsObject *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setPointRange:(NSNumber *)pointRange {

@@ -69,6 +69,7 @@
 	copyPyramid3d.cursor = [self.cursor copyWithZone: zone];
 	copyPyramid3d.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyPyramid3d.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyPyramid3d.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyPyramid3d.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPyramid3d.custom = [self.custom copyWithZone: zone];
 	copyPyramid3d.onPoint = [self.onPoint copyWithZone: zone];
@@ -76,7 +77,9 @@
 	copyPyramid3d.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyPyramid3d.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyPyramid3d.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyPyramid3d.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyPyramid3d.events = [self.events copyWithZone: zone];
+	copyPyramid3d.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyPyramid3d.opacity = [self.opacity copyWithZone: zone];
 	copyPyramid3d.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyPyramid3d.turboThreshold = [self.turboThreshold copyWithZone: zone];
@@ -86,6 +89,7 @@
 	copyPyramid3d.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPyramid3d.accessibility = [self.accessibility copyWithZone: zone];
 	copyPyramid3d.getExtremesFromAll = [self.getExtremesFromAll copyWithZone: zone];
+	copyPyramid3d.sonification = [self.sonification copyWithZone: zone];
 	copyPyramid3d.shadow = [self.shadow copyWithZone: zone];
 	copyPyramid3d.allowPointSelect = [self.allowPointSelect copyWithZone: zone];
 	copyPyramid3d.zoneAxis = [self.zoneAxis copyWithZone: zone];
@@ -124,7 +128,7 @@
 		params[@"pointPadding"] = self.pointPadding;
 	}
 	if (self.borderRadius) {
-		params[@"borderRadius"] = self.borderRadius;
+		params[@"borderRadius"] = [self.borderRadius getParams];
 	}
 	if (self.pointRange) {
 		params[@"pointRange"] = self.pointRange;
@@ -216,10 +220,10 @@
 	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
 }
 
--(void)setBorderRadius:(NSNumber *)borderRadius {
-	NSNumber *oldValue = _borderRadius;
+-(void)setBorderRadius:(HIBorderRadiusOptionsObject *)borderRadius {
+	HIBorderRadiusOptionsObject *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
-	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setPointRange:(NSNumber *)pointRange {

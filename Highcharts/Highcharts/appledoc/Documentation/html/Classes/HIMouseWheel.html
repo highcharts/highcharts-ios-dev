@@ -121,7 +121,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The mouse wheel zoom is a feature included in Highcharts Stock, but is also available for Highcharts Core as a module. Zooming with the mouse wheel is enabled by default. It can be disabled by setting this option to <code>false</code>.</p>
+						<p>The mouse wheel zoom is a feature included in Highcharts Stock, but is also available for Highcharts Core as a module. Zooming with the mouse wheel is enabled by default in Highcharts Stock. In Highcharts Core it is enabled if <code>chart.zooming.type</code> is set. It can be disabled by setting this option to <code>false</code>.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -155,7 +155,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Decides in what dimensions the user can zoom scrolling the wheel. Can be one of <code>x</code>, <code>y</code> or <code>xy</code>. If not specified here, it will inherit the type from <code>chart.zooming.type</code>. Note that particularly with mouse wheel in the y direction, the zoom is affected by the default <code>yAxis.startOnTick</code> and <code>endOnTick</code>) settings. In order to respect these settings, the zoom level will adjust after the user has stopped zooming. To prevent this, consider setting <code>startOnTick</code> and <code>endOnTick</code> to <code>false</code>.</p>
+				<p>Decides in what dimensions the user can zoom scrolling the wheel. Can be one of <code>x</code>, <code>y</code> or <code>xy</code>. In Highcharts Core, if not specified here, it will inherit the type from <code>chart.zooming.type</code>. In Highcharts Stock, it defaults to <code>x</code>. Note that particularly with mouse wheel in the y direction, the zoom is affected by the default <code>yAxis.startOnTick</code> and <code>endOnTick</code>) settings. In order to respect these settings, the zoom level will adjust after the user has stopped zooming. To prevent this, consider setting <code>startOnTick</code> and <code>endOnTick</code> to <code>false</code>.</p>
 			</div>
 			
 		    
@@ -172,9 +172,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Accepted values:</strong> <code>["x", "y", "xy"]</code>.</p>
-
-<p><strong>Defaults to</strong> <code>x</code>.</p>
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
 			</div>
 			
 

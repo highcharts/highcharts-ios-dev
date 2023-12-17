@@ -25,6 +25,7 @@
 	copyNetworkgraph.type = [self.type copyWithZone: zone];
 	copyNetworkgraph.zIndex = [self.zIndex copyWithZone: zone];
 	copyNetworkgraph.states = [self.states copyWithZone: zone];
+	copyNetworkgraph.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyNetworkgraph.layoutAlgorithm = [self.layoutAlgorithm copyWithZone: zone];
 	copyNetworkgraph.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyNetworkgraph.draggable = [self.draggable copyWithZone: zone];

@@ -32,6 +32,7 @@
 	copyPareto.cursor = [self.cursor copyWithZone: zone];
 	copyPareto.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyPareto.connectNulls = [self.connectNulls copyWithZone: zone];
+	copyPareto.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyPareto.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPareto.custom = [self.custom copyWithZone: zone];
 	copyPareto.onPoint = [self.onPoint copyWithZone: zone];

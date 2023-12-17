@@ -31,6 +31,7 @@
 	copySunburst.colors = [self.colors copyWithZone: zone];
 	copySunburst.size = [self.size copyWithZone: zone];
 	copySunburst.borderColor = [self.borderColor copyWithZone: zone];
+	copySunburst.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copySunburst.tooltip = [self.tooltip copyWithZone: zone];
 	copySunburst.thickness = [self.thickness copyWithZone: zone];
 	copySunburst.color = [self.color copyWithZone: zone];

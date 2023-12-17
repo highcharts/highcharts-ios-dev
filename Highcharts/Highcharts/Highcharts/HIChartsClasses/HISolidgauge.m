@@ -34,6 +34,7 @@
 	copySolidgauge.label = [self.label copyWithZone: zone];
 	copySolidgauge.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copySolidgauge.cursor = [self.cursor copyWithZone: zone];
+	copySolidgauge.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copySolidgauge.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copySolidgauge.custom = [self.custom copyWithZone: zone];
 	copySolidgauge.onPoint = [self.onPoint copyWithZone: zone];

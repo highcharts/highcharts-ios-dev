@@ -64,6 +64,7 @@
 	copyBullet.cursor = [self.cursor copyWithZone: zone];
 	copyBullet.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyBullet.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyBullet.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyBullet.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBullet.custom = [self.custom copyWithZone: zone];
 	copyBullet.onPoint = [self.onPoint copyWithZone: zone];

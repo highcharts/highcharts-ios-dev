@@ -56,6 +56,7 @@
 	copyStreamgraph.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyStreamgraph.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyStreamgraph.connectNulls = [self.connectNulls copyWithZone: zone];
+	copyStreamgraph.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyStreamgraph.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyStreamgraph.custom = [self.custom copyWithZone: zone];
 	copyStreamgraph.onPoint = [self.onPoint copyWithZone: zone];

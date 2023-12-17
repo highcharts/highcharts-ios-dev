@@ -69,6 +69,7 @@
 	copyPyramid3d.cursor = [self.cursor copyWithZone: zone];
 	copyPyramid3d.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyPyramid3d.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyPyramid3d.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyPyramid3d.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyPyramid3d.custom = [self.custom copyWithZone: zone];
 	copyPyramid3d.onPoint = [self.onPoint copyWithZone: zone];

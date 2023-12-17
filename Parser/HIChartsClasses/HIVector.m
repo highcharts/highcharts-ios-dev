@@ -15,10 +15,13 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIVector *copyVector = [[HIVector allocWithZone: zone] init];
+	copyVector.vectorLength = [self.vectorLength copyWithZone: zone];
 	copyVector.tooltip = [self.tooltip copyWithZone: zone];
+	copyVector.states = [self.states copyWithZone: zone];
+	copyVector.lineWidth = [self.lineWidth copyWithZone: zone];
+	copyVector.rotationOrigin = [self.rotationOrigin copyWithZone: zone];
 	copyVector.cluster = [self.cluster copyWithZone: zone];
 	copyVector.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
-	copyVector.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyVector.stickyTracking = [self.stickyTracking copyWithZone: zone];
 	copyVector.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
 	copyVector.colorIndex = [self.colorIndex copyWithZone: zone];
@@ -26,7 +29,6 @@
 	copyVector.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyVector.color = [self.color copyWithZone: zone];
 	copyVector.pointInterval = [self.pointInterval copyWithZone: zone];
-	copyVector.states = [self.states copyWithZone: zone];
 	copyVector.colorKey = [self.colorKey copyWithZone: zone];
 	copyVector.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyVector.point = [self.point copyWithZone: zone];
@@ -34,6 +36,7 @@
 	copyVector.label = [self.label copyWithZone: zone];
 	copyVector.pointDescriptionFormatter = [self.pointDescriptionFormatter copyWithZone: zone];
 	copyVector.cursor = [self.cursor copyWithZone: zone];
+	copyVector.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyVector.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyVector.custom = [self.custom copyWithZone: zone];
 	copyVector.onPoint = [self.onPoint copyWithZone: zone];
@@ -82,6 +85,12 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
+	if (self.vectorLength) {
+		params[@"vectorLength"] = self.vectorLength;
+	}
+	if (self.rotationOrigin) {
+		params[@"rotationOrigin"] = self.rotationOrigin;
+	}
 	if (self.cluster) {
 		params[@"cluster"] = [self.cluster getParams];
 	}
@@ -89,6 +98,18 @@
 }
 
 # pragma mark - Setters
+
+-(void)setVectorLength:(NSNumber *)vectorLength {
+	NSNumber *oldValue = _vectorLength;
+	_vectorLength = vectorLength;
+	[self updateNSObject:oldValue newValue:vectorLength propertyName:@"vectorLength"];
+}
+
+-(void)setRotationOrigin:(NSString *)rotationOrigin {
+	NSString *oldValue = _rotationOrigin;
+	_rotationOrigin = rotationOrigin;
+	[self updateNSObject:oldValue newValue:rotationOrigin propertyName:@"rotationOrigin"];
+}
 
 -(void)setCluster:(HICluster *)cluster {
 	HICluster *oldValue = _cluster;

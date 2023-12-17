@@ -71,6 +71,7 @@
 	copyBoxplot.cursor = [self.cursor copyWithZone: zone];
 	copyBoxplot.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyBoxplot.pointPlacement = [self.pointPlacement copyWithZone: zone];
+	copyBoxplot.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyBoxplot.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyBoxplot.custom = [self.custom copyWithZone: zone];
 	copyBoxplot.onPoint = [self.onPoint copyWithZone: zone];

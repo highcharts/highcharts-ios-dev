@@ -44,6 +44,7 @@
 	copyAreaspline.dashStyle = [self.dashStyle copyWithZone: zone];
 	copyAreaspline.pointPlacement = [self.pointPlacement copyWithZone: zone];
 	copyAreaspline.connectNulls = [self.connectNulls copyWithZone: zone];
+	copyAreaspline.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyAreaspline.enableMouseTracking = [self.enableMouseTracking copyWithZone: zone];
 	copyAreaspline.custom = [self.custom copyWithZone: zone];
 	copyAreaspline.onPoint = [self.onPoint copyWithZone: zone];

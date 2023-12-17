@@ -37,6 +37,7 @@
 	copyFunnel.point = [self.point copyWithZone: zone];
 	copyFunnel.colors = [self.colors copyWithZone: zone];
 	copyFunnel.borderColor = [self.borderColor copyWithZone: zone];
+	copyFunnel.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyFunnel.tooltip = [self.tooltip copyWithZone: zone];
 	copyFunnel.thickness = [self.thickness copyWithZone: zone];
 	copyFunnel.minSize = [self.minSize copyWithZone: zone];

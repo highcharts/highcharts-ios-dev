@@ -481,8 +481,8 @@
 	[self updateNSObject:oldValue newValue:linkFormat propertyName:@"linkFormat"];
 }
 
--(void)setLinkTextPath:(HIDataLabelTextPathOptions *)linkTextPath {
-	HIDataLabelTextPathOptions *oldValue = _linkTextPath;
+-(void)setLinkTextPath:(HILinkTextPath *)linkTextPath {
+	HILinkTextPath *oldValue = _linkTextPath;
 	_linkTextPath = linkTextPath;
 	[self updateHIObject:oldValue newValue:linkTextPath propertyName:@"linkTextPath"];
 }
