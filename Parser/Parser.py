@@ -344,7 +344,11 @@ hc_types = {
         "string|Highcharts.SVGAttributes|undefined": 'HISVGAttributes',
         "Highcharts.DataLabelsOptions": 'HIDataLabelsOptions',
         "Highcharts.PointMarkerOptionsObject": 'HIPointMarkerOptionsObject',
-        "Array.<(Array.<string>|Array.<string, number>|Array.<string, number, number>|Array.<string, number, number, number, number>|Array.<string, number, number, number, number, number, number>|Array.<string, number, number, number, number, number, number, number>)>": 'NSArray'
+        "Array.<(Array.<string>|Array.<string, number>|Array.<string, number, number>|Array.<string, number, number, number, number>|Array.<string, number, number, number, number, number, number>|Array.<string, number, number, number, number, number, number, number>)>": 'NSArray',
+        "Array.<('string'|'number'|'float'|'date')>": 'NSArray',
+        "'from'|'gradient'|'to'": 'NSString',
+        "number|'auto'": 'id /* NSNumber, NSString */',
+        "'top'|'center'|'bottom'": 'NSString'
     }
 
 def get_type(x):
