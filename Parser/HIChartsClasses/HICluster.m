@@ -122,8 +122,8 @@
 	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
--(void)setMarker:(HIMarker *)marker {
-	HIMarker *oldValue = _marker;
+-(void)setMarker:(HIPointMarkerOptionsObject *)marker {
+	HIPointMarkerOptionsObject *oldValue = _marker;
 	_marker = marker;
 	[self updateHIObject:oldValue newValue:marker propertyName:@"marker"];
 }

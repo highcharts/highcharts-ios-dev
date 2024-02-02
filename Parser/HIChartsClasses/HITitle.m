@@ -20,11 +20,11 @@
 	copyTitle.floating = [self.floating copyWithZone: zone];
 	copyTitle.margin = [self.margin copyWithZone: zone];
 	copyTitle.useHTML = [self.useHTML copyWithZone: zone];
-	copyTitle.rotation = [self.rotation copyWithZone: zone];
 	copyTitle.reserveSpace = [self.reserveSpace copyWithZone: zone];
 	copyTitle.skew3d = [self.skew3d copyWithZone: zone];
 	copyTitle.position3d = [self.position3d copyWithZone: zone];
 	copyTitle.offset = [self.offset copyWithZone: zone];
+	copyTitle.rotation = [self.rotation copyWithZone: zone];
 	copyTitle.textAlign = [self.textAlign copyWithZone: zone];
 	return copyTitle;
 }
@@ -62,9 +62,6 @@
 	if (self.useHTML) {
 		params[@"useHTML"] = self.useHTML;
 	}
-	if (self.rotation) {
-		params[@"rotation"] = self.rotation;
-	}
 	if (self.reserveSpace) {
 		params[@"reserveSpace"] = self.reserveSpace;
 	}
@@ -76,6 +73,9 @@
 	}
 	if (self.offset) {
 		params[@"offset"] = self.offset;
+	}
+	if (self.rotation) {
+		params[@"rotation"] = self.rotation;
 	}
 	if (self.textAlign) {
 		params[@"textAlign"] = self.textAlign;
@@ -145,12 +145,6 @@
 	[self updateNSObject:oldValue newValue:useHTML propertyName:@"useHTML"];
 }
 
--(void)setRotation:(NSNumber *)rotation {
-	NSNumber *oldValue = _rotation;
-	_rotation = rotation;
-	[self updateNSObject:oldValue newValue:rotation propertyName:@"rotation"];
-}
-
 -(void)setReserveSpace:(NSNumber *)reserveSpace {
 	NSNumber *oldValue = _reserveSpace;
 	_reserveSpace = reserveSpace;
@@ -173,6 +167,12 @@
 	NSNumber *oldValue = _offset;
 	_offset = offset;
 	[self updateNSObject:oldValue newValue:offset propertyName:@"offset"];
+}
+
+-(void)setRotation:(NSNumber *)rotation {
+	NSNumber *oldValue = _rotation;
+	_rotation = rotation;
+	[self updateNSObject:oldValue newValue:rotation propertyName:@"rotation"];
 }
 
 -(void)setTextAlign:(NSString *)textAlign {

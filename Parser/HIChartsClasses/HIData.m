@@ -35,6 +35,7 @@
 	copyData.googleAPIKey = [self.googleAPIKey copyWithZone: zone];
 	copyData.googleSpreadsheetKey = [self.googleSpreadsheetKey copyWithZone: zone];
 	copyData.switchRowsAndColumns = [self.switchRowsAndColumns copyWithZone: zone];
+	copyData.columnTypes = [self.columnTypes copyWithZone: zone];
 	copyData.decimalPoint = [self.decimalPoint copyWithZone: zone];
 	copyData.columnsURL = [self.columnsURL copyWithZone: zone];
 	copyData.q1 = [self.q1 copyWithZone: zone];
@@ -203,6 +204,18 @@
 	}
 	if (self.switchRowsAndColumns) {
 		params[@"switchRowsAndColumns"] = self.switchRowsAndColumns;
+	}
+	if (self.columnTypes) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.columnTypes) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"columnTypes"] = array;
 	}
 	if (self.decimalPoint) {
 		params[@"decimalPoint"] = self.decimalPoint;
@@ -557,6 +570,12 @@
 	NSNumber *oldValue = _switchRowsAndColumns;
 	_switchRowsAndColumns = switchRowsAndColumns;
 	[self updateNSObject:oldValue newValue:switchRowsAndColumns propertyName:@"switchRowsAndColumns"];
+}
+
+-(void)setColumnTypes:(NSArray *)columnTypes {
+	NSArray *oldValue = _columnTypes;
+	_columnTypes = columnTypes;
+	[self updateArrayObject:oldValue newValue:columnTypes propertyName:@"columnTypes"];
 }
 
 -(void)setDecimalPoint:(NSString *)decimalPoint {
