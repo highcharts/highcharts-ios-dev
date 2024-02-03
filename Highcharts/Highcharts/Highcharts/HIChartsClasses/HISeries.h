@@ -469,9 +469,9 @@ Sets the color blending in the boost module.
 */
 @property(nonatomic, readwrite) NSString *boostBlending;
 /**
-What type of legend symbol to render for this series. Can be one of `lineMarker` or `rectangle`.
+What type of legend symbol to render for this series. Can be one of `areaMarker`, `lineMarker` or `rectangle`.
 
-**Accepted values:** `["lineMarker", "rectangle"]`.
+**Accepted values:** `["areaMarker", "lineMarker", "rectangle"]`.
 
 **Defaults to** `rectangle`.
 

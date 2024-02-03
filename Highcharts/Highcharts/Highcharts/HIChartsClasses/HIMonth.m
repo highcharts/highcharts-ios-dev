@@ -11,6 +11,7 @@
 	[super copyWithZone:zone];
 	HIMonth *copyMonth = [[HIMonth allocWithZone: zone] init];
 	copyMonth.main = [self.main copyWithZone: zone];
+	copyMonth.list = [self.list copyWithZone: zone];
 	return copyMonth;
 }
 
@@ -19,6 +20,18 @@
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.main) {
 		params[@"main"] = self.main;
+	}
+	if (self.list) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.list) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"list"] = array;
 	}
 	return params;
 }
@@ -29,6 +42,12 @@
 	NSString *oldValue = _main;
 	_main = main;
 	[self updateNSObject:oldValue newValue:main propertyName:@"main"];
+}
+
+-(void)setList:(NSArray<NSString *> *)list {
+	NSArray<NSString *> *oldValue = _list;
+	_list = list;
+	[self updateArrayObject:oldValue newValue:list propertyName:@"list"];
 }
 
 @end

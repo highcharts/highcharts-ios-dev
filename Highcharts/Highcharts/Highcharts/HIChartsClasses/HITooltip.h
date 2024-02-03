@@ -107,7 +107,7 @@ Use HTML to render the contents of the tooltip instead of SVG. Using HTML allows
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *useHTML;
 /**
-The color of the tooltip border. When `undefined`, the border takes the color of the corresponding series or point.
+The color of the tooltip border. When `undefined`, the border takes the color of the corresponding series or point. Note that the `borderWidth` is usually 0 by default, so the border color may not be visible until a border width is set.
 
 **Try it**
 

@@ -16,6 +16,7 @@
 	copyStyle.color = [self.color copyWithZone: zone];
 	copyStyle.textOutline = [self.textOutline copyWithZone: zone];
 	copyStyle.cursor = [self.cursor copyWithZone: zone];
+	copyStyle.whiteSpace = [self.whiteSpace copyWithZone: zone];
 	copyStyle.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyStyle.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyStyle.textOverflow = [self.textOverflow copyWithZone: zone];
@@ -45,6 +46,9 @@
 	}
 	if (self.cursor) {
 		params[@"cursor"] = self.cursor;
+	}
+	if (self.whiteSpace) {
+		params[@"whiteSpace"] = self.whiteSpace;
 	}
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
@@ -103,6 +107,12 @@
 	NSString *oldValue = _cursor;
 	_cursor = cursor;
 	[self updateNSObject:oldValue newValue:cursor propertyName:@"cursor"];
+}
+
+-(void)setWhiteSpace:(NSString *)whiteSpace {
+	NSString *oldValue = _whiteSpace;
+	_whiteSpace = whiteSpace;
+	[self updateNSObject:oldValue newValue:whiteSpace propertyName:@"whiteSpace"];
 }
 
 -(void)setBorderRadius:(NSNumber *)borderRadius {

@@ -13,11 +13,13 @@
 	copyColorAxis.dataClasses = [self.dataClasses copyWithZone: zone];
 	copyColorAxis.minPadding = [self.minPadding copyWithZone: zone];
 	copyColorAxis.labels = [self.labels copyWithZone: zone];
+	copyColorAxis.height = [self.height copyWithZone: zone];
 	copyColorAxis.maxColor = [self.maxColor copyWithZone: zone];
 	copyColorAxis.marker = [self.marker copyWithZone: zone];
 	copyColorAxis.layout = [self.layout copyWithZone: zone];
 	copyColorAxis.startOnTick = [self.startOnTick copyWithZone: zone];
 	copyColorAxis.stops = [self.stops copyWithZone: zone];
+	copyColorAxis.width = [self.width copyWithZone: zone];
 	copyColorAxis.dataClassColor = [self.dataClassColor copyWithZone: zone];
 	copyColorAxis.endOnTick = [self.endOnTick copyWithZone: zone];
 	copyColorAxis.type = [self.type copyWithZone: zone];
@@ -96,6 +98,9 @@
 	if (self.labels) {
 		params[@"labels"] = [self.labels getParams];
 	}
+	if (self.height) {
+		params[@"height"] = self.height;
+	}
 	if (self.maxColor) {
 		params[@"maxColor"] = [self.maxColor getData];
 	}
@@ -119,6 +124,9 @@
 			}
 		}
 		params[@"stops"] = array;
+	}
+	if (self.width) {
+		params[@"width"] = self.width;
 	}
 	if (self.dataClassColor) {
 		params[@"dataClassColor"] = self.dataClassColor;
@@ -323,6 +331,12 @@
 	[self updateHIObject:oldValue newValue:labels propertyName:@"labels"];
 }
 
+-(void)setHeight:(id)height {
+	id oldValue = _height;
+	_height = height;
+	[self updateNSObject:oldValue newValue:height propertyName:@"height"];
+}
+
 -(void)setMaxColor:(HIColor *)maxColor {
 	HIColor *oldValue = _maxColor;
 	_maxColor = maxColor;
@@ -351,6 +365,12 @@
 	NSArray<NSArray *> *oldValue = _stops;
 	_stops = stops;
 	[self updateArrayObject:oldValue newValue:stops propertyName:@"stops"];
+}
+
+-(void)setWidth:(id)width {
+	id oldValue = _width;
+	_width = width;
+	[self updateNSObject:oldValue newValue:width propertyName:@"width"];
 }
 
 -(void)setDataClassColor:(NSString *)dataClassColor {
