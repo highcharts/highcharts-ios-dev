@@ -101,6 +101,8 @@
 		
 		<option value="//api/name/gridZIndex">gridZIndex</option>
 		
+		<option value="//api/name/height">height</option>
+		
 		<option value="//api/name/id">id</option>
 		
 		<option value="//api/name/labels">labels</option>
@@ -192,6 +194,8 @@
 		<option value="//api/name/units">units</option>
 		
 		<option value="//api/name/visible">visible</option>
+		
+		<option value="//api/name/width">width</option>
 		
 		<option value="//api/name/zIndex">zIndex</option>
 		
@@ -380,6 +384,57 @@
 
 			
 
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIColorAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/height" title="height"></a>
+	<h3 class="method-title"><code><a href="#//api/name/height">&nbsp;&nbsp;height</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The height of the color axis. If it&rsquo;s a number, it is interpreted as pixels. If it&rsquo;s a percentage string, it is interpreted as percentages of the total plot height.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id height</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/coloraxis/width-and-height">Percentage width and pixel height for color axis</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -621,6 +676,57 @@
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/coloraxis/coloraxis-stops/">Color axis stops</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/coloraxis/color-key-with-stops/">Color axis stops with custom colorKey</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIColorAxis.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/width" title="width"></a>
+	<h3 class="method-title"><code><a href="#//api/name/width">&nbsp;&nbsp;width</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The width of the color axis. If it&rsquo;s a number, it is interpreted as pixels. If it&rsquo;s a percentage string, it is interpreted as percentages of the total plot width.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id width</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/coloraxis/width-and-height">Percentage width and pixel height for color axis</a></li>
 </ul>
 
 			</div>
@@ -2052,7 +2158,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Specific tick interval in axis units for the minor ticks. On a linear axis, if <code>"auto"</code>, the minor tick interval is calculated as a fifth of the tickInterval. If <code>null</code> or <code>undefined</code>, minor ticks are not shown. On logarithmic axes, the unit is the power of the value. For example, setting the minorTickInterval to 1 puts one tick on each of 0.1, 1, 10, 100 etc. Setting the minorTickInterval to 0.1 produces 9 ticks between 1 and 10, 10 and 100 etc. If user settings dictate minor ticks to become too dense, they don&rsquo;t make sense, and will be ignored to prevent performance problems.</p>
+				<p>Specific tick interval in axis units for the minor ticks. On a linear axis, if <code>"auto"</code>, the minor tick interval is calculated as a fifth of the tickInterval. If <code>undefined</code>, minor ticks are not shown. On logarithmic axes, the unit is the power of the value. For example, setting the minorTickInterval to 1 puts one tick on each of 0.1, 1, 10, 100 etc. Setting the minorTickInterval to 0.1 produces 9 ticks between 1 and 10, 10 and 100 etc. If user settings dictate minor ticks to become too dense, they don&rsquo;t make sense, and will be ignored to prevent performance problems.</p>
 			</div>
 			
 		    
@@ -2072,7 +2178,7 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-null/">Null by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-null/">Undefined by default</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-5/">5 units</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-log-auto/">&ldquo;auto&rdquo;</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-log/">0.1</a></li>
@@ -2259,7 +2365,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>For categorized axes only. If <code>on</code> the tick mark is placed in the center of the category, if <code>between</code> the tick mark is placed between categories. The default is <code>between</code> if the <code>tickInterval</code> is 1, else <code>on</code>.</p>
+				<p>For categorized axes only. If <code>on</code> the tick mark is placed in the center of the category, if <code>between</code> the tick mark is placed between categories. The default is <code>between</code> if the <code>tickInterval</code> is 1, else <code>on</code>. In order to render tick marks on a category axis it is necessary to provide a <code>tickWidth</code>.</p>
 			</div>
 			
 		    
@@ -3454,7 +3560,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2023 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2024 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>
