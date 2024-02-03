@@ -32,7 +32,7 @@ series_description = ""
 series_data_description = ""
 class_methods = dict()
 
-filelicense = "/**\n* (c) 2009-2021 Highsoft AS\n*\n* License: www.highcharts.com/license\n" \
+filelicense = "/**\n* (c) 2009-2024 Highsoft AS\n*\n* License: www.highcharts.com/license\n" \
               "* For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/\n" \
               "* In case of questions, please contact sales@highsoft.com\n*/\n\n"
 
