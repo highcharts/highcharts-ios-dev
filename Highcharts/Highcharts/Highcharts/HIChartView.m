@@ -78,7 +78,7 @@ static NSBundle *highchartsBundle = nil;
     return self;
 }
 
-- (void) setupWithFrame: (CGRect) frame
+- (void)setupWithFrame: (CGRect) frame
 {
     self.layoutMargins = UIEdgeInsetsZero;
     self.preservesSuperviewLayoutMargins = NO;
@@ -239,17 +239,17 @@ static NSBundle *highchartsBundle = nil;
     [self.webView evaluateJavaScript:modificationString completionHandler:nil];
 }
 
-- (void) resize {
+- (void)resize {
     NSString *modificationString = [NSString stringWithFormat:@"modifySize(%f, %f);", CGRectGetWidth(self.webView.bounds), CGRectGetHeight(self.webView.bounds)];
     [self.webView evaluateJavaScript:modificationString completionHandler:nil];
 }
 
-- (void) loadChartInternal {
+- (void)loadChartInternal {
     if(self.reloadTimer) return;
     self.reloadTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(loadChartWorker) userInfo:nil repeats:NO];
 }
 
-- (void) loadChartWorker {
+- (void)loadChartWorker {
     if (!self.options) {
         return;
     }
@@ -267,24 +267,24 @@ static NSBundle *highchartsBundle = nil;
     if ([_synced boolValue]) CFRunLoopRunInMode((CFStringRef)NSDefaultRunLoopMode, 1, NO);
 }
 
-- (void) loadJSONOptions:(NSDictionary *)jsonOptions {
-    if (!jsonOptions) {
+- (void)loadJSONOptions:(NSDictionary *)options {
+    if (!options) {
         return;
     }
     
-    NSMutableDictionary *options = [self recursiveMutableCopy:jsonOptions];
+    NSMutableDictionary *jsonOptions = [self recursiveMutableCopy:options];
     
     // Prepare HI objects from options.
-    [self prepareHIObjects:options];
+    [self prepareHIObjects:jsonOptions];
     
     // Prepare HTML with options.
-    [self prepareHTML:options];
+    [self prepareHTML:jsonOptions];
     
     // Load HTML
     [self.webView loadHTMLString:self.HTML.html baseURL:[highchartsBundle bundleURL]];
 }
 
-- (void) callJSMethod:(NSDictionary *)dict {
+- (void)callJSMethod:(NSDictionary *)dict {
     NSString *jsMethod = [HIClassJSMethods getJSClassMethodString:dict];
     
     if (jsMethod.length) {
@@ -767,10 +767,30 @@ static NSBundle *highchartsBundle = nil;
     [self callJSMethod:chartMethod];
 }
 
+- (void)updateJSONOptions:(NSDictionary *)options {
+    if (!options) { return; }
+    NSMutableDictionary *jsonOptions = [self recursiveMutableCopy:options];
+    // Prepare HI objects from JSON options.
+    [self prepareHIObjects:jsonOptions];
+    // Call update method from JS
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"update0", @"params" : @[jsonOptions] };
+    [self callJSMethod:chartMethod];
+}
+
 - (void)update:(HIOptions *)options redraw:(NSNumber *)redraw {
     NSMutableDictionary *mutableOptions = [[options getParams] mutableCopy];
     [self prepareHIObjects:mutableOptions];
     NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"update1", @"params" : @[mutableOptions, redraw] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)updateJSONOptions:(NSDictionary *)options redraw:(NSNumber *)redraw {
+    if (!options) { return; }
+    NSMutableDictionary *jsonOptions = [self recursiveMutableCopy:options];
+    // Prepare HI objects from JSON options.
+    [self prepareHIObjects:jsonOptions];
+    // Call update method from JS
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"update1", @"params" : @[jsonOptions, redraw] };
     [self callJSMethod:chartMethod];
 }
 
@@ -781,10 +801,30 @@ static NSBundle *highchartsBundle = nil;
     [self callJSMethod:chartMethod];
 }
 
+- (void)updateJSONOptions:(NSDictionary *)options redraw:(NSNumber *)redraw oneToOne:(NSNumber *)oneToOne {
+    if (!options) { return; }
+    NSMutableDictionary *jsonOptions = [self recursiveMutableCopy:options];
+    // Prepare HI objects from JSON options.
+    [self prepareHIObjects:jsonOptions];
+    // Call update method from JS
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"update2", @"params" : @[jsonOptions, redraw, oneToOne] };
+    [self callJSMethod:chartMethod];
+}
+
 - (void)update:(HIOptions *)options redraw:(NSNumber *)redraw oneToOne:(NSNumber *)oneToOne animation:(HIAnimationOptionsObject *)animation {
     NSMutableDictionary *mutableOptions = [[options getParams] mutableCopy];
     [self prepareHIObjects:mutableOptions];
     NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"update3", @"params" : @[mutableOptions, redraw, oneToOne, [animation getParams]] };
+    [self callJSMethod:chartMethod];
+}
+
+- (void)updateJSONOptions:(NSDictionary *)options redraw:(NSNumber *)redraw oneToOne:(NSNumber *)oneToOne animation:(NSDictionary *)animation {
+    if (!options) { return; }
+    NSMutableDictionary *jsonOptions = [self recursiveMutableCopy:options];
+    // Prepare HI objects from JSON options.
+    [self prepareHIObjects:jsonOptions];
+    // Call update method from JS
+    NSDictionary *chartMethod = @{ @"class" : @"Chart", @"method" : @"update3", @"params" : @[jsonOptions, redraw, oneToOne, animation] };
     [self callJSMethod:chartMethod];
 }
 
