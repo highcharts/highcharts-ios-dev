@@ -19,7 +19,7 @@ A declarative filter to control of which data labels to display. The declarative
 @interface HIFilter: HIChartsJSONSerializable
 
 /**
-The operator to compare by. Can be one of `>`, `<`, `>=`, `<=`, `==`, and `===`.
+The operator to compare by. Can be one of `>`, `<`, `>=`, `<=`, `==`, `===`, `!=` and `!==`.
 */
 @property(nonatomic, readwrite) NSString *operator;
 /**

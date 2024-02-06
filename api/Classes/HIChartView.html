@@ -203,6 +203,14 @@
 		
 		<option value="//api/name/update:redraw:oneToOne:animation:">- update:redraw:oneToOne:animation:</option>
 		
+		<option value="//api/name/updateJSONOptions:">- updateJSONOptions:</option>
+		
+		<option value="//api/name/updateJSONOptions:redraw:">- updateJSONOptions:redraw:</option>
+		
+		<option value="//api/name/updateJSONOptions:redraw:oneToOne:">- updateJSONOptions:redraw:oneToOne:</option>
+		
+		<option value="//api/name/updateJSONOptions:redraw:oneToOne:animation:">- updateJSONOptions:redraw:oneToOne:animation:</option>
+		
 		<option value="//api/name/updateOptions">- updateOptions</option>
 		
 		<option value="//api/name/viewData">- viewData</option>
@@ -3373,6 +3381,81 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/updateJSONOptions:" title="updateJSONOptions:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateJSONOptions:">&ndash;&nbsp;updateJSONOptions:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A generic function to update any element of the chart. Elements can be enabled and disabled, moved, re-styled, re-formatted etc.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateJSONOptions:(NSDictionary *)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>A configuration object for the new chart options in JSON format.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p>A special case is configuration objects that take arrays, for example <a href="https://api.highcharts.com/highcharts/xAxis">xAxis</a>, <a href="https://api.highcharts.com/highcharts/yAxis">yAxis</a> or <a href="https://api.highcharts.com/highcharts/series">series</a>. For these collections, an <code>id</code> option is used to map the new option set to an existing object. If an existing object of the same id is not found, the corresponding item is updated. So for example, running <code>chart.update</code> with a series item without an id, will cause the existing chart&rsquo;s series with the same index in the series array to be updated. When the <code>oneToOne</code> parameter is true, <code>chart.update</code> will also take care of adding and removing items from the collection. Read more under the parameter description below.</p>
+
+<p>See also the <a href="https://api.highcharts.com/highcharts/responsive">responsive option set</a>. Switching between <code>responsive.rules</code> basically runs <code>chart.update</code> under the hood.</p>
+
+<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Chart#event:update</li>
+<li>Highcharts.Chart#event:afterUpdate</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-update/">Update chart geometry</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/update:redraw:" title="update:redraw:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/update:redraw:">&ndash;&nbsp;update:redraw:</a></code>
 </h3>
@@ -3399,7 +3482,87 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>options</code></th>
-						<td><p>A configuration object for the new chart options.</p></td>
+						<td><p>A configuration object for the new chart options</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p>A special case is configuration objects that take arrays, for example <a href="https://api.highcharts.com/highcharts/xAxis">xAxis</a>, <a href="https://api.highcharts.com/highcharts/yAxis">yAxis</a> or <a href="https://api.highcharts.com/highcharts/series">series</a>. For these collections, an <code>id</code> option is used to map the new option set to an existing object. If an existing object of the same id is not found, the corresponding item is updated. So for example, running <code>chart.update</code> with a series item without an id, will cause the existing chart&rsquo;s series with the same index in the series array to be updated. When the <code>oneToOne</code> parameter is true, <code>chart.update</code> will also take care of adding and removing items from the collection. Read more under the parameter description below.</p>
+
+<p>See also the <a href="https://api.highcharts.com/highcharts/responsive">responsive option set</a>. Switching between <code>responsive.rules</code> basically runs <code>chart.update</code> under the hood.</p>
+
+<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Chart#event:update</li>
+<li>Highcharts.Chart#event:afterUpdate</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-update/">Update chart geometry</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateJSONOptions:redraw:" title="updateJSONOptions:redraw:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateJSONOptions:redraw:">&ndash;&nbsp;updateJSONOptions:redraw:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A generic function to update any element of the chart. Elements can be enabled and disabled, moved, re-styled, re-formatted etc.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateJSONOptions:(NSDictionary *)<em>options</em> redraw:(NSNumber *)<em>redraw</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>A configuration object for the new chart options in JSON format.</p></td>
 					</tr>
 				
 					<tr>
@@ -3538,6 +3701,91 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/updateJSONOptions:redraw:oneToOne:" title="updateJSONOptions:redraw:oneToOne:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateJSONOptions:redraw:oneToOne:">&ndash;&nbsp;updateJSONOptions:redraw:oneToOne:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A generic function to update any element of the chart. Elements can be enabled and disabled, moved, re-styled, re-formatted etc.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateJSONOptions:(NSDictionary *)<em>options</em> redraw:(NSNumber *)<em>redraw</em> oneToOne:(NSNumber *)<em>oneToOne</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>A configuration object for the new chart options in JSON format.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>oneToOne</code></th>
+						<td><p>When <code>true</code>, the <code>series</code>, <code>xAxis</code> and <code>yAxis</code> collections will be updated one to one, and items will be either added or removed to match the new updated options. For example, if the chart has two series and we call <code>chart.update</code> with a configuration containing three series, one will be added. If we call <code>chart.update</code> with one series, one will be removed. Setting an empty <code>series</code> array will remove all series, but leaving out the <code>series</code> property will leave all series untouched. If the series have id&rsquo;s, the new series options will be matched by id, and the remaining ones removed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p>A special case is configuration objects that take arrays, for example <a href="https://api.highcharts.com/highcharts/xAxis">xAxis</a>, <a href="https://api.highcharts.com/highcharts/yAxis">yAxis</a> or <a href="https://api.highcharts.com/highcharts/series">series</a>. For these collections, an <code>id</code> option is used to map the new option set to an existing object. If an existing object of the same id is not found, the corresponding item is updated. So for example, running <code>chart.update</code> with a series item without an id, will cause the existing chart&rsquo;s series with the same index in the series array to be updated. When the <code>oneToOne</code> parameter is true, <code>chart.update</code> will also take care of adding and removing items from the collection. Read more under the parameter description below.</p>
+
+<p>See also the <a href="https://api.highcharts.com/highcharts/responsive">responsive option set</a>. Switching between <code>responsive.rules</code> basically runs <code>chart.update</code> under the hood.</p>
+
+<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Chart#event:update</li>
+<li>Highcharts.Chart#event:afterUpdate</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-update/">Update chart geometry</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/update:redraw:oneToOne:animation:" title="update:redraw:oneToOne:animation:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/update:redraw:oneToOne:animation:">&ndash;&nbsp;update:redraw:oneToOne:animation:</a></code>
 </h3>
@@ -3565,6 +3813,96 @@
 					<tr>
 						<th scope="row" class="argument-name"><code>options</code></th>
 						<td><p>A configuration object for the new chart options.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redraw</code></th>
+						<td><p>Whether to redraw the chart.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>oneToOne</code></th>
+						<td><p>When <code>true</code>, the <code>series</code>, <code>xAxis</code> and <code>yAxis</code> collections will be updated one to one, and items will be either added or removed to match the new updated options. For example, if the chart has two series and we call <code>chart.update</code> with a configuration containing three series, one will be added. If we call <code>chart.update</code> with one series, one will be removed. Setting an empty <code>series</code> array will remove all series, but leaving out the <code>series</code> property will leave all series untouched. If the series have id&rsquo;s, the new series options will be matched by id, and the remaining ones removed.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>animation</code></th>
+						<td><p>Whether to apply animation, and optionally animation configuration.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p>A special case is configuration objects that take arrays, for example <a href="https://api.highcharts.com/highcharts/xAxis">xAxis</a>, <a href="https://api.highcharts.com/highcharts/yAxis">yAxis</a> or <a href="https://api.highcharts.com/highcharts/series">series</a>. For these collections, an <code>id</code> option is used to map the new option set to an existing object. If an existing object of the same id is not found, the corresponding item is updated. So for example, running <code>chart.update</code> with a series item without an id, will cause the existing chart&rsquo;s series with the same index in the series array to be updated. When the <code>oneToOne</code> parameter is true, <code>chart.update</code> will also take care of adding and removing items from the collection. Read more under the parameter description below.</p>
+
+<p>See also the <a href="https://api.highcharts.com/highcharts/responsive">responsive option set</a>. Switching between <code>responsive.rules</code> basically runs <code>chart.update</code> under the hood.</p>
+
+<p><strong>Fires:</strong></p>
+
+<ul>
+<li>Highcharts.Chart#event:update</li>
+<li>Highcharts.Chart#event:afterUpdate</li>
+</ul>
+
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/chart-update/">Update chart geometry</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIChartView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateJSONOptions:redraw:oneToOne:animation:" title="updateJSONOptions:redraw:oneToOne:animation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateJSONOptions:redraw:oneToOne:animation:">&ndash;&nbsp;updateJSONOptions:redraw:oneToOne:animation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A generic function to update any element of the chart. Elements can be enabled and disabled, moved, re-styled, re-formatted etc.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateJSONOptions:(NSDictionary *)<em>options</em> redraw:(NSNumber *)<em>redraw</em> oneToOne:(NSNumber *)<em>oneToOne</em> animation:(NSDictionary *)<em>animation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>A configuration object for the new chart options in JSON format.</p></td>
 					</tr>
 				
 					<tr>
@@ -3809,7 +4147,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2023 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2024 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>

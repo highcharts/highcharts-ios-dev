@@ -14,6 +14,7 @@
 @interface HIMonth: HIChartsJSONSerializable
 
 @property(nonatomic, readwrite) NSString *main;
+@property(nonatomic, readwrite) NSArray<NSString *> *list;
 
 -(NSDictionary *)getParams;
 

@@ -1,4 +1,7 @@
 # iOS devices
+
+rm -rf ./XCFramework/*
+
 xcodebuild archive \
     -scheme Highcharts \
     -archivePath "./XCFramework/Archive-iOS.xcarchive" \

@@ -97,6 +97,8 @@
 		
 		<option value="//api/name/exportData">exportData</option>
 		
+		<option value="//api/name/exportInProgress">exportInProgress</option>
+		
 		<option value="//api/name/hideData">hideData</option>
 		
 		<option value="//api/name/invalidDate">invalidDate</option>
@@ -289,8 +291,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/downloadPNG" title="downloadPNG"></a>
-	<h3 class="method-title"><code><a href="#//api/name/downloadPNG">&nbsp;&nbsp;downloadPNG</a></code>
+	<a name="//api/name/exportInProgress" title="exportInProgress"></a>
+	<h3 class="method-title"><code><a href="#//api/name/exportInProgress">&nbsp;&nbsp;exportInProgress</a></code>
 </h3>
 
 	<div class="method-info">
@@ -300,12 +302,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Exporting module only. The text for the PNG download menu item.</p>
+				<p>Text to show when export is in progress.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *downloadPNG</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *exportInProgress</code></div>
 
 		    
 			
@@ -317,7 +319,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>Share image</code>.</p>
+				<p><strong>Defaults to</strong> <code>Exporting...</code>.</p>
 			</div>
 			
 
@@ -675,6 +677,52 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/downloadPNG" title="downloadPNG"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadPNG">&nbsp;&nbsp;downloadPNG</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Exporting module only. The text for the PNG download menu item.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *downloadPNG</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>Share image</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/numericSymbols" title="numericSymbols"></a>
 	<h3 class="method-title"><code><a href="#//api/name/numericSymbols">&nbsp;&nbsp;numericSymbols</a></code>
 </h3>
@@ -686,7 +734,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p><a href="https://en.wikipedia.org/wiki/Metric_prefix">Metric prefixes</a> used to shorten high numbers in axis labels. Replacing any of the positions with <code>null</code> causes the full number to be written. Setting <code>numericSymbols</code> to <code>null</code> disables shortening altogether.</p>
+				<p><a href="https://en.wikipedia.org/wiki/Metric_prefix">Metric prefixes</a> used to shorten high numbers in axis labels. Replacing any of the positions with <code>null</code> causes the full number to be written. Setting <code>numericSymbols</code> to <code>undefined</code> disables shortening altogether.</p>
 			</div>
 			
 		    
@@ -1681,7 +1729,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2023 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2024 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>

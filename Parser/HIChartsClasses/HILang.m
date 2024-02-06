@@ -12,7 +12,7 @@
 	HILang *copyLang = [[HILang allocWithZone: zone] init];
 	copyLang.downloadCSV = [self.downloadCSV copyWithZone: zone];
 	copyLang.downloadXLS = [self.downloadXLS copyWithZone: zone];
-	copyLang.downloadPNG = [self.downloadPNG copyWithZone: zone];
+	copyLang.exportInProgress = [self.exportInProgress copyWithZone: zone];
 	copyLang.accessibility = [self.accessibility copyWithZone: zone];
 	copyLang.hideData = [self.hideData copyWithZone: zone];
 	copyLang.shortWeekdays = [self.shortWeekdays copyWithZone: zone];
@@ -21,6 +21,7 @@
 	copyLang.noData = [self.noData copyWithZone: zone];
 	copyLang.mainBreadcrumb = [self.mainBreadcrumb copyWithZone: zone];
 	copyLang.loading = [self.loading copyWithZone: zone];
+	copyLang.downloadPNG = [self.downloadPNG copyWithZone: zone];
 	copyLang.numericSymbols = [self.numericSymbols copyWithZone: zone];
 	copyLang.printChart = [self.printChart copyWithZone: zone];
 	copyLang.numericSymbolMagnitude = [self.numericSymbolMagnitude copyWithZone: zone];
@@ -53,8 +54,8 @@
 	if (self.downloadXLS) {
 		params[@"downloadXLS"] = self.downloadXLS;
 	}
-	if (self.downloadPNG) {
-		params[@"downloadPNG"] = self.downloadPNG;
+	if (self.exportInProgress) {
+		params[@"exportInProgress"] = self.exportInProgress;
 	}
 	if (self.accessibility) {
 		params[@"accessibility"] = [self.accessibility getParams];
@@ -88,6 +89,9 @@
 	}
 	if (self.loading) {
 		params[@"loading"] = self.loading;
+	}
+	if (self.downloadPNG) {
+		params[@"downloadPNG"] = self.downloadPNG;
 	}
 	if (self.numericSymbols) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -202,10 +206,10 @@
 	[self updateNSObject:oldValue newValue:downloadXLS propertyName:@"downloadXLS"];
 }
 
--(void)setDownloadPNG:(NSString *)downloadPNG {
-	NSString *oldValue = _downloadPNG;
-	_downloadPNG = downloadPNG;
-	[self updateNSObject:oldValue newValue:downloadPNG propertyName:@"downloadPNG"];
+-(void)setExportInProgress:(NSString *)exportInProgress {
+	NSString *oldValue = _exportInProgress;
+	_exportInProgress = exportInProgress;
+	[self updateNSObject:oldValue newValue:exportInProgress propertyName:@"exportInProgress"];
 }
 
 -(void)setAccessibility:(HIAccessibility *)accessibility {
@@ -254,6 +258,12 @@
 	NSString *oldValue = _loading;
 	_loading = loading;
 	[self updateNSObject:oldValue newValue:loading propertyName:@"loading"];
+}
+
+-(void)setDownloadPNG:(NSString *)downloadPNG {
+	NSString *oldValue = _downloadPNG;
+	_downloadPNG = downloadPNG;
+	[self updateNSObject:oldValue newValue:downloadPNG propertyName:@"downloadPNG"];
 }
 
 -(void)setNumericSymbols:(NSArray<NSString *> *)numericSymbols {

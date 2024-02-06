@@ -2818,7 +2818,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Specific tick interval in axis units for the minor ticks. On a linear axis, if <code>"auto"</code>, the minor tick interval is calculated as a fifth of the tickInterval. If <code>null</code> or <code>undefined</code>, minor ticks are not shown. On logarithmic axes, the unit is the power of the value. For example, setting the minorTickInterval to 1 puts one tick on each of 0.1, 1, 10, 100 etc. Setting the minorTickInterval to 0.1 produces 9 ticks between 1 and 10, 10 and 100 etc. If user settings dictate minor ticks to become too dense, they don&rsquo;t make sense, and will be ignored to prevent performance problems.</p>
+				<p>Specific tick interval in axis units for the minor ticks. On a linear axis, if <code>"auto"</code>, the minor tick interval is calculated as a fifth of the tickInterval. If <code>undefined</code>, minor ticks are not shown. On logarithmic axes, the unit is the power of the value. For example, setting the minorTickInterval to 1 puts one tick on each of 0.1, 1, 10, 100 etc. Setting the minorTickInterval to 0.1 produces 9 ticks between 1 and 10, 10 and 100 etc. If user settings dictate minor ticks to become too dense, they don&rsquo;t make sense, and will be ignored to prevent performance problems.</p>
 			</div>
 			
 		    
@@ -2838,7 +2838,7 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-null/">Null by default</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-null/">Undefined by default</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-5/">5 units</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-log-auto/">&ldquo;auto&rdquo;</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/yaxis/minortickinterval-log/">0.1</a></li>
@@ -3118,7 +3118,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>For categorized axes only. If <code>on</code> the tick mark is placed in the center of the category, if <code>between</code> the tick mark is placed between categories. The default is <code>between</code> if the <code>tickInterval</code> is 1, else <code>on</code>.</p>
+				<p>For categorized axes only. If <code>on</code> the tick mark is placed in the center of the category, if <code>between</code> the tick mark is placed between categories. The default is <code>between</code> if the <code>tickInterval</code> is 1, else <code>on</code>. In order to render tick marks on a category axis it is necessary to provide a <code>tickWidth</code>.</p>
 			</div>
 			
 		    
@@ -6117,7 +6117,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2023 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2024 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>

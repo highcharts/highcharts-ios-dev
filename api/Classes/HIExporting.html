@@ -91,9 +91,9 @@
 		
 		<option value="//api/name/fallbackToExportServer">fallbackToExportServer</option>
 		
-		<option value="//api/name/filename">filename</option>
+		<option value="//api/name/fetchOptions">fetchOptions</option>
 		
-		<option value="//api/name/formAttributes">formAttributes</option>
+		<option value="//api/name/filename">filename</option>
 		
 		<option value="//api/name/libURL">libURL</option>
 		
@@ -106,6 +106,8 @@
 		<option value="//api/name/printMaxWidth">printMaxWidth</option>
 		
 		<option value="//api/name/scale">scale</option>
+		
+		<option value="//api/name/showExportInProgress">showExportInProgress</option>
 		
 		<option value="//api/name/showTable">showTable</option>
 		
@@ -868,47 +870,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/formAttributes" title="formAttributes"></a>
-	<h3 class="method-title"><code><a href="#//api/name/formAttributes">&nbsp;&nbsp;formAttributes</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>An object containing additional key value data for the POST form that sends the SVG to the export server. For example, a <code>target</code> can be set to make sure the generated image is received in another frame, or a custom <code>enctype</code> or <code>encoding</code> can be set.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSDictionary *formAttributes</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIExporting.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/useMultiLevelHeaders" title="useMultiLevelHeaders"></a>
 	<h3 class="method-title"><code><a href="#//api/name/useMultiLevelHeaders">&nbsp;&nbsp;useMultiLevelHeaders</a></code>
 </h3>
@@ -1206,6 +1167,93 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/fetchOptions" title="fetchOptions"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchOptions">&nbsp;&nbsp;fetchOptions</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for the fetch request used when sending the SVG to the export server. See <a href="https://developer.mozilla.org/en-US/docs/Web/API/fetch">MDN</a> for more information</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id fetchOptions</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIExporting.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/showExportInProgress" title="showExportInProgress"></a>
+	<h3 class="method-title"><code><a href="#//api/name/showExportInProgress">&nbsp;&nbsp;showExportInProgress</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Display a message when export is in progress. Uses <code>Chart.setLoading()</code> The message can be altered by changing <a href="#lang.exporting.exportInProgress"></a></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *showExportInProgress</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>True</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIExporting.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/pdfFont" title="pdfFont"></a>
 	<h3 class="method-title"><code><a href="#//api/name/pdfFont">&nbsp;&nbsp;pdfFont</a></code>
 </h3>
@@ -1449,7 +1497,7 @@
 	<footer>
 		<div class="footerMain">
 	       
-			<p class="copyright">Copyright &copy; 2023 Highsoft AS. All rights reserved.</p>
+			<p class="copyright">Copyright &copy; 2024 Highsoft AS. All rights reserved.</p>
 			
 	        <div id="footer-social" class="footer-social">
 	            <a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon" target="_blank"><i class="fa fa-facebook"></i></a>

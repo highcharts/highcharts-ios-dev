@@ -16,7 +16,7 @@ The button that appears after a selection zoom, allowing the user to reset zoom.
 @interface HIResetButton: HIChartsJSONSerializable
 
 /**
-The position of the button.
+The position of the button. Note: Adjusting position values might cause overlap with chart elements. Ensure coordinates do not obstruct other components or data visibility.
 
 **Try it**
 

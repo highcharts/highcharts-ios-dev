@@ -163,7 +163,7 @@ Whether to group non-stacked columns or to let them render independent of each o
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *grouping;
 /**
-The paths include options describing the point image.
+The paths include options describing the series image. For further details on preparing the SVG image, please refer to the [pictorial documentation](https://www.highcharts.com/docs/chart-and-series-types/pictorial).
 
 **Try it**
 

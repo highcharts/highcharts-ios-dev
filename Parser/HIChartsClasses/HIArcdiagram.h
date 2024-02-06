@@ -55,9 +55,13 @@ The offset of an arc diagram nodes column in relation to the `plotArea`. The off
 */
 @property(nonatomic, readwrite) NSString *offset;
 /**
-The global link weight. If not set, width is calculated per link, depending on the weight value.
+The global link weight, in pixels. If not set, width is calculated per link, depending on the weight value.
 
 **Defaults to** `undefined`.
+
+**Try it**
+
+* [Link weight](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-arcdiagram/link-weight)
 */
 @property(nonatomic, readwrite) NSNumber *linkWeight;
 /**

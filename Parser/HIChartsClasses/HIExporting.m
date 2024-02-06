@@ -24,13 +24,14 @@
 	copyExporting.csv = [self.csv copyWithZone: zone];
 	copyExporting.type = [self.type copyWithZone: zone];
 	copyExporting.tableCaption = [self.tableCaption copyWithZone: zone];
-	copyExporting.formAttributes = [self.formAttributes copyWithZone: zone];
 	copyExporting.useMultiLevelHeaders = [self.useMultiLevelHeaders copyWithZone: zone];
 	copyExporting.useRowspanHeaders = [self.useRowspanHeaders copyWithZone: zone];
 	copyExporting.fallbackToExportServer = [self.fallbackToExportServer copyWithZone: zone];
 	copyExporting.url = [self.url copyWithZone: zone];
 	copyExporting.enabled = [self.enabled copyWithZone: zone];
 	copyExporting.allowHTML = [self.allowHTML copyWithZone: zone];
+	copyExporting.fetchOptions = [self.fetchOptions copyWithZone: zone];
+	copyExporting.showExportInProgress = [self.showExportInProgress copyWithZone: zone];
 	copyExporting.pdfFont = [self.pdfFont copyWithZone: zone];
 	copyExporting.allowTableSorting = [self.allowTableSorting copyWithZone: zone];
 	copyExporting.error = [self.error copyWithZone: zone];
@@ -85,9 +86,6 @@
 	if (self.tableCaption) {
 		params[@"tableCaption"] = self.tableCaption;
 	}
-	if (self.formAttributes) {
-		params[@"formAttributes"] = [self.formAttributes getParams];
-	}
 	if (self.useMultiLevelHeaders) {
 		params[@"useMultiLevelHeaders"] = self.useMultiLevelHeaders;
 	}
@@ -105,6 +103,12 @@
 	}
 	if (self.allowHTML) {
 		params[@"allowHTML"] = self.allowHTML;
+	}
+	if (self.fetchOptions) {
+		params[@"fetchOptions"] = self.fetchOptions;
+	}
+	if (self.showExportInProgress) {
+		params[@"showExportInProgress"] = self.showExportInProgress;
 	}
 	if (self.pdfFont) {
 		params[@"pdfFont"] = [self.pdfFont getParams];
@@ -213,12 +217,6 @@
 	[self updateNSObject:oldValue newValue:tableCaption propertyName:@"tableCaption"];
 }
 
--(void)setFormAttributes:(HIHTMLAttributes *)formAttributes {
-	HIHTMLAttributes *oldValue = _formAttributes;
-	_formAttributes = formAttributes;
-	[self updateHIObject:oldValue newValue:formAttributes propertyName:@"formAttributes"];
-}
-
 -(void)setUseMultiLevelHeaders:(NSNumber *)useMultiLevelHeaders {
 	NSNumber *oldValue = _useMultiLevelHeaders;
 	_useMultiLevelHeaders = useMultiLevelHeaders;
@@ -253,6 +251,18 @@
 	NSNumber *oldValue = _allowHTML;
 	_allowHTML = allowHTML;
 	[self updateNSObject:oldValue newValue:allowHTML propertyName:@"allowHTML"];
+}
+
+-(void)setFetchOptions:(id)fetchOptions {
+	id oldValue = _fetchOptions;
+	_fetchOptions = fetchOptions;
+	[self updateNSObject:oldValue newValue:fetchOptions propertyName:@"fetchOptions"];
+}
+
+-(void)setShowExportInProgress:(NSNumber *)showExportInProgress {
+	NSNumber *oldValue = _showExportInProgress;
+	_showExportInProgress = showExportInProgress;
+	[self updateNSObject:oldValue newValue:showExportInProgress propertyName:@"showExportInProgress"];
 }
 
 -(void)setPdfFont:(HIPdfFont *)pdfFont {
