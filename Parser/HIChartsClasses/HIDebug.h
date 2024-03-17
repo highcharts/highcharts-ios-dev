@@ -1,5 +1,5 @@
 /**
-* (c) 2009-2021 Highsoft AS
+* (c) 2009-2024 Highsoft AS
 *
 * License: www.highcharts.com/license
 * For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
@@ -33,7 +33,7 @@ Time the WebGL to SVG buffer copy After rendering, the result is copied to an im
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *timeBufferCopy;
 /**
-Time the the WebGL setup. This outputs the time spent on setting up the WebGL context, creating shaders, and textures.
+Time the WebGL setup. This outputs the time spent on setting up the WebGL context, creating shaders, and textures.
 
 **Defaults to** `false`.
 */

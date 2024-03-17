@@ -10,10 +10,11 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HIAccessibility *copyAccessibility = [[HIAccessibility allocWithZone: zone] init];
+	copyAccessibility.point = [self.point copyWithZone: zone];
 	copyAccessibility.landmarkVerbosity = [self.landmarkVerbosity copyWithZone: zone];
 	copyAccessibility.customComponents = [self.customComponents copyWithZone: zone];
 	copyAccessibility.linkedDescription = [self.linkedDescription copyWithZone: zone];
-	copyAccessibility.point = [self.point copyWithZone: zone];
+	copyAccessibility.highContrastMode = [self.highContrastMode copyWithZone: zone];
 	copyAccessibility.series = [self.series copyWithZone: zone];
 	copyAccessibility.keyboardNavigation = [self.keyboardNavigation copyWithZone: zone];
 	copyAccessibility.enabled = [self.enabled copyWithZone: zone];
@@ -49,6 +50,9 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
+	if (self.point) {
+		params[@"point"] = [self.point getParams];
+	}
 	if (self.landmarkVerbosity) {
 		params[@"landmarkVerbosity"] = self.landmarkVerbosity;
 	}
@@ -58,8 +62,8 @@
 	if (self.linkedDescription) {
 		params[@"linkedDescription"] = self.linkedDescription;
 	}
-	if (self.point) {
-		params[@"point"] = [self.point getParams];
+	if (self.highContrastMode) {
+		params[@"highContrastMode"] = self.highContrastMode;
 	}
 	if (self.series) {
 		params[@"series"] = [self.series getParams];
@@ -153,6 +157,12 @@
 
 # pragma mark - Setters
 
+-(void)setPoint:(HIPoint *)point {
+	HIPoint *oldValue = _point;
+	_point = point;
+	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
+}
+
 -(void)setLandmarkVerbosity:(NSString *)landmarkVerbosity {
 	NSString *oldValue = _landmarkVerbosity;
 	_landmarkVerbosity = landmarkVerbosity;
@@ -171,10 +181,10 @@
 	[self updateNSObject:oldValue newValue:linkedDescription propertyName:@"linkedDescription"];
 }
 
--(void)setPoint:(HIPoint *)point {
-	HIPoint *oldValue = _point;
-	_point = point;
-	[self updateHIObject:oldValue newValue:point propertyName:@"point"];
+-(void)setHighContrastMode:(NSString *)highContrastMode {
+	NSString *oldValue = _highContrastMode;
+	_highContrastMode = highContrastMode;
+	[self updateNSObject:oldValue newValue:highContrastMode propertyName:@"highContrastMode"];
 }
 
 -(void)setSeries:(HISeries *)series {
