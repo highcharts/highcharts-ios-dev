@@ -26,9 +26,11 @@
 	copyTreegraph.type = [self.type copyWithZone: zone];
 	copyTreegraph.zIndex = [self.zIndex copyWithZone: zone];
 	copyTreegraph.collapseButton = [self.collapseButton copyWithZone: zone];
+	copyTreegraph.nodeWidth = [self.nodeWidth copyWithZone: zone];
 	copyTreegraph.reversed = [self.reversed copyWithZone: zone];
 	copyTreegraph.tooltip = [self.tooltip copyWithZone: zone];
 	copyTreegraph.dataLabels = [self.dataLabels copyWithZone: zone];
+	copyTreegraph.nodeDistance = [self.nodeDistance copyWithZone: zone];
 	copyTreegraph.fillSpace = [self.fillSpace copyWithZone: zone];
 	copyTreegraph.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyTreegraph.states = [self.states copyWithZone: zone];
@@ -102,8 +104,14 @@
 	if (self.collapseButton) {
 		params[@"collapseButton"] = [self.collapseButton getParams];
 	}
+	if (self.nodeWidth) {
+		params[@"nodeWidth"] = self.nodeWidth;
+	}
 	if (self.reversed) {
 		params[@"reversed"] = self.reversed;
+	}
+	if (self.nodeDistance) {
+		params[@"nodeDistance"] = self.nodeDistance;
 	}
 	if (self.fillSpace) {
 		params[@"fillSpace"] = self.fillSpace;
@@ -141,10 +149,22 @@
 	[self updateHIObject:oldValue newValue:collapseButton propertyName:@"collapseButton"];
 }
 
+-(void)setNodeWidth:(id)nodeWidth {
+	id oldValue = _nodeWidth;
+	_nodeWidth = nodeWidth;
+	[self updateNSObject:oldValue newValue:nodeWidth propertyName:@"nodeWidth"];
+}
+
 -(void)setReversed:(NSNumber *)reversed {
 	NSNumber *oldValue = _reversed;
 	_reversed = reversed;
 	[self updateNSObject:oldValue newValue:reversed propertyName:@"reversed"];
+}
+
+-(void)setNodeDistance:(id)nodeDistance {
+	id oldValue = _nodeDistance;
+	_nodeDistance = nodeDistance;
+	[self updateNSObject:oldValue newValue:nodeDistance propertyName:@"nodeDistance"];
 }
 
 -(void)setFillSpace:(NSNumber *)fillSpace {

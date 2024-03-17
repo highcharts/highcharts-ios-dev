@@ -29,6 +29,7 @@
 	copyOrganization.yAxis = [self.yAxis copyWithZone: zone];
 	copyOrganization.zIndex = [self.zIndex copyWithZone: zone];
 	copyOrganization.borderColor = [self.borderColor copyWithZone: zone];
+	copyOrganization.hangingSide = [self.hangingSide copyWithZone: zone];
 	copyOrganization.nodeWidth = [self.nodeWidth copyWithZone: zone];
 	copyOrganization.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyOrganization.hangingIndentTranslation = [self.hangingIndentTranslation copyWithZone: zone];
@@ -42,6 +43,7 @@
 	copyOrganization.nodePadding = [self.nodePadding copyWithZone: zone];
 	copyOrganization.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyOrganization.states = [self.states copyWithZone: zone];
+	copyOrganization.nodeDistance = [self.nodeDistance copyWithZone: zone];
 	copyOrganization.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyOrganization.levels = [self.levels copyWithZone: zone];
 	copyOrganization.nodeAlignment = [self.nodeAlignment copyWithZone: zone];
@@ -103,6 +105,9 @@
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
 	}
+	if (self.hangingSide) {
+		params[@"hangingSide"] = self.hangingSide;
+	}
 	if (self.nodeWidth) {
 		params[@"nodeWidth"] = self.nodeWidth;
 	}
@@ -129,6 +134,9 @@
 	}
 	if (self.nodePadding) {
 		params[@"nodePadding"] = self.nodePadding;
+	}
+	if (self.nodeDistance) {
+		params[@"nodeDistance"] = self.nodeDistance;
 	}
 	if (self.levels) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -184,6 +192,12 @@
 	[self updateHIObject:oldValue newValue:borderColor propertyName:@"borderColor"];
 }
 
+-(void)setHangingSide:(NSString *)hangingSide {
+	NSString *oldValue = _hangingSide;
+	_hangingSide = hangingSide;
+	[self updateNSObject:oldValue newValue:hangingSide propertyName:@"hangingSide"];
+}
+
 -(void)setNodeWidth:(NSNumber *)nodeWidth {
 	NSNumber *oldValue = _nodeWidth;
 	_nodeWidth = nodeWidth;
@@ -236,6 +250,12 @@
 	NSNumber *oldValue = _nodePadding;
 	_nodePadding = nodePadding;
 	[self updateNSObject:oldValue newValue:nodePadding propertyName:@"nodePadding"];
+}
+
+-(void)setNodeDistance:(id)nodeDistance {
+	id oldValue = _nodeDistance;
+	_nodeDistance = nodeDistance;
+	[self updateNSObject:oldValue newValue:nodeDistance propertyName:@"nodeDistance"];
 }
 
 -(void)setLevels:(NSArray <HILevels *> *)levels {

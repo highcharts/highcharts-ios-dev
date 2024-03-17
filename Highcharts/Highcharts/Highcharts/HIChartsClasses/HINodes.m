@@ -20,6 +20,7 @@
 	copyNodes.offsetVertical = [self.offsetVertical copyWithZone: zone];
 	copyNodes.level = [self.level copyWithZone: zone];
 	copyNodes.offsetHorizontal = [self.offsetHorizontal copyWithZone: zone];
+	copyNodes.height = [self.height copyWithZone: zone];
 	copyNodes.column = [self.column copyWithZone: zone];
 	copyNodes.image = [self.image copyWithZone: zone];
 	copyNodes.title = [self.title copyWithZone: zone];
@@ -69,6 +70,9 @@
 	}
 	if (self.offsetHorizontal) {
 		params[@"offsetHorizontal"] = self.offsetHorizontal;
+	}
+	if (self.height) {
+		params[@"height"] = self.height;
 	}
 	if (self.column) {
 		params[@"column"] = self.column;
@@ -148,6 +152,12 @@
 	id oldValue = _offsetHorizontal;
 	_offsetHorizontal = offsetHorizontal;
 	[self updateNSObject:oldValue newValue:offsetHorizontal propertyName:@"offsetHorizontal"];
+}
+
+-(void)setHeight:(NSNumber *)height {
+	NSNumber *oldValue = _height;
+	_height = height;
+	[self updateNSObject:oldValue newValue:height propertyName:@"height"];
 }
 
 -(void)setColumn:(NSNumber *)column {
