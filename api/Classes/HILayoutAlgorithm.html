@@ -811,7 +811,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Integration type. Available options are <code>'euler'</code> and <code>'verlet'</code>. Integration determines how forces are applied on particles. In Euler integration, force is applied direct as <code>newPosition += velocity;</code>. In Verlet integration, new position is based on a previous posittion without velocity: <code>newPosition += previousPosition - newPosition</code>. Note that different integrations give different results as forces are different. In Highcharts v7.0.x only <code>'euler'</code> integration was supported.</p>
+				<p>Integration type. Available options are <code>'euler'</code> and <code>'verlet'</code>. Integration determines how forces are applied on particles. In Euler integration, force is applied direct as <code>newPosition += velocity;</code>. In Verlet integration, new position is based on a previous position without velocity: <code>newPosition += previousPosition - newPosition</code>. Note that different integrations give different results as forces are different. In Highcharts v7.0.x only <code>'euler'</code> integration was supported.</p>
 			</div>
 			
 		    
@@ -1140,7 +1140,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Approximation used to calculate repulsive forces affecting nodes. By default, when calculateing net force, nodes are compared against each other, which gives O(N<sup>2</sup>) complexity. Using Barnes-Hut approximation, we decrease this to O(N log N), but the resulting graph will have different layout. Barnes-Hut approximation divides space into rectangles via quad tree, where forces exerted on nodes are calculated directly for nearby cells, and for all others, cells are treated as a separate node with center of mass.</p>
+				<p>Approximation used to calculate repulsive forces affecting nodes. By default, when calculating net force, nodes are compared against each other, which gives O(N<sup>2</sup>) complexity. Using Barnes-Hut approximation, we decrease this to O(N log N), but the resulting graph will have different layout. Barnes-Hut approximation divides space into rectangles via quad tree, where forces exerted on nodes are calculated directly for nearby cells, and for all others, cells are treated as a separate node with center of mass.</p>
 			</div>
 			
 		    
@@ -1247,7 +1247,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Barnes-Hut approximation only. Deteremines when distance between cell and node is small enough to caculate forces. Value of <code>theta</code> is compared directly with quotient <code>s / d</code>, where <code>s</code> is the size of the cell, and <code>d</code> is distance between center of cell&rsquo;s mass and currently compared node.</p>
+				<p>Barnes-Hut approximation only. Deteremines when distance between cell and node is small enough to calculate forces. Value of <code>theta</code> is compared directly with quotient <code>s / d</code>, where <code>s</code> is the size of the cell, and <code>d</code> is distance between center of cell&rsquo;s mass and currently compared node.</p>
 			</div>
 			
 		    

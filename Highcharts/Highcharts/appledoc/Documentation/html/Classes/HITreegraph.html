@@ -83,6 +83,10 @@
 		
 		<option value="//api/name/link">link</option>
 		
+		<option value="//api/name/nodeDistance">nodeDistance</option>
+		
+		<option value="//api/name/nodeWidth">nodeWidth</option>
+		
 		<option value="//api/name/reversed">reversed</option>
 		
 	</optgroup>
@@ -279,6 +283,59 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/nodeWidth" title="nodeWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/nodeWidth">&nbsp;&nbsp;nodeWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The pixel width of each node in a, or the height in case the chart is inverted. For tree graphs, the node width is only applied if the marker symbol is <code>rect</code>, otherwise the <code>marker</code> sizing options apply. Can be a number or a percentage string, or <code>auto</code>. If <code>auto</code>, the nodes are sized to fill up the plot area in the longitudinal direction, regardless of the number of levels.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id nodeWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-treegraph/node-distance">Node width is auto and combined with node distance</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreegraph.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/reversed" title="reversed"></a>
 	<h3 class="method-title"><code><a href="#//api/name/reversed">&nbsp;&nbsp;reversed</a></code>
 </h3>
@@ -313,6 +370,59 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-treegraph/reversed-nodes">Treegraph series with reversed nodes.</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HITreegraph.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/nodeDistance" title="nodeDistance"></a>
+	<h3 class="method-title"><code><a href="#//api/name/nodeDistance">&nbsp;&nbsp;nodeDistance</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The distance between nodes in a tree graph in the longitudinal direction. The longitudinal direction means the direction that the chart flows - in a horizontal chart the distance is horizontal, in an inverted chart (vertical), the distance is vertical. If a number is given, it denotes pixels. If a percentage string is given, the distance is a percentage of the rendered node width. A <code>nodeDistance</code> of <code>100%</code> will render equal widths for the nodes and the gaps between them. This option applies only when the <code>nodeWidth</code> option is <code>auto</code>, making the node width respond to the number of columns.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id nodeDistance</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>30</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-treegraph/node-distance">Node distance of 100% means equal to node width</a></li>
 </ul>
 
 			</div>

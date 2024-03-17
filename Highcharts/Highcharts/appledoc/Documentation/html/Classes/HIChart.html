@@ -500,7 +500,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Additional CSS styles to apply inline to the container <code>div</code> and the root SVG. Since v11, the root font size is 1rem by default, and all child element are given a relative <code>em</code> font size by default. This allows implementers to control all the chart&rsquo;s font sizes by only setting the root level.</p>
+				<p>Additional CSS styles to apply inline to the container <code>div</code> and the root SVG. According to the CSS syntax documentation, it is recommended to quote font family names that contain white space, digits, or punctuation characters other than hyphens. In such cases, wrap the fontFamily name as follows: <code>fontFamily: '"Font name"'</code>. Since v11, the root font size is 1rem by default, and all child element are given a relative <code>em</code> font size by default. This allows implementers to control all the chart&rsquo;s font sizes by only setting the root level.</p>
 			</div>
 			
 		    
@@ -523,6 +523,7 @@
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/style-serif-font/">Using a serif type font</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/chart/style-special-font/">Using a font with special character in name</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/relative-font-size/">Relative font sizes</a></li>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/css/em/">Styled mode with relative font sizes</a></li>
 </ul>
