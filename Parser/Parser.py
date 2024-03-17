@@ -348,7 +348,9 @@ hc_types = {
         "Array.<('string'|'number'|'float'|'date')>": 'NSArray',
         "'from'|'gradient'|'to'": 'NSString',
         "number|'auto'": 'id /* NSNumber, NSString */',
-        "'top'|'center'|'bottom'": 'NSString'
+        "'top'|'center'|'bottom'": 'NSString',
+        #11.4.0
+        "'left'|'right'": 'NSString'
     }
 
 def get_type(x):
