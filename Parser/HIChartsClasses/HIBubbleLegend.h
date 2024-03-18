@@ -1,5 +1,5 @@
 /**
-* (c) 2009-2021 Highsoft AS
+* (c) 2009-2024 Highsoft AS
 *
 * License: www.highcharts.com/license
 * For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
@@ -110,7 +110,7 @@ Options for specific range. One range consists of bubble, label and connector.
 */
 @property(nonatomic, readwrite) NSArray <HIRanges *> *ranges;
 /**
-Miximum bubble legend range size. If values for ranges are not specified, the `minSize` and the `maxSize` are calculated from bubble series.
+Maximum bubble legend range size. If values for ranges are not specified, the `minSize` and the `maxSize` are calculated from bubble series.
 
 **Defaults to** `60`.
 */
@@ -138,7 +138,7 @@ An additional class name to apply to the bubble legend's connector graphical ele
 */
 @property(nonatomic, readwrite) NSString *connectorClassName;
 /**
-Ranges with with lower value than zThreshold, are skipped.
+Ranges with lower value than zThreshold are skipped.
 */
 @property(nonatomic, readwrite) NSNumber *zThreshold;
 /**

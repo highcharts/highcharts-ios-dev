@@ -1,5 +1,5 @@
 /**
-* (c) 2009-2021 Highsoft AS
+* (c) 2009-2024 Highsoft AS
 *
 * License: www.highcharts.com/license
 * For commercial usage, a valid license is required. To purchase a license for Highcharts iOS, please see our website: https://shop.highsoft.com/
@@ -29,7 +29,7 @@ Whether the annotation is visible in the exported data table.
 */
 @property(nonatomic, readwrite) NSNumber /* Bool */ *includeInDataExport;
 /**
-The border radius in pixels for the annotaiton's label.
+The border radius in pixels for the annotation's label.
 
 **Defaults to** `3`.
 

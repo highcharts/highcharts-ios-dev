@@ -99,6 +99,8 @@
 		
 		<option value="//api/name/graphicContainerLabel">graphicContainerLabel</option>
 		
+		<option value="//api/name/highContrastMode">highContrastMode</option>
+		
 		<option value="//api/name/highContrastTheme">highContrastTheme</option>
 		
 		<option value="//api/name/keyboardNavigation">keyboardNavigation</option>
@@ -197,6 +199,47 @@
 
 						<div class="task-list">
 							<div class="section-method">
+	<a name="//api/name/point" title="point"></a>
+	<h3 class="method-title"><code><a href="#//api/name/point">&nbsp;&nbsp;point</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Options for descriptions of individual data points.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPoint *point</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIAccessibility.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/landmarkVerbosity" title="landmarkVerbosity"></a>
 	<h3 class="method-title"><code><a href="#//api/name/landmarkVerbosity">&nbsp;&nbsp;landmarkVerbosity</a></code>
 </h3>
@@ -349,8 +392,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/point" title="point"></a>
-	<h3 class="method-title"><code><a href="#//api/name/point">&nbsp;&nbsp;point</a></code>
+	<a name="//api/name/highContrastMode" title="highContrastMode"></a>
+	<h3 class="method-title"><code><a href="#//api/name/highContrastMode">&nbsp;&nbsp;highContrastMode</a></code>
 </h3>
 
 	<div class="method-info">
@@ -360,12 +403,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Options for descriptions of individual data points.</p>
+				<p>Controls how <code>highContrastTheme</code> is applied. The default option is <code>auto</code>, which applies the high contrast theme the user&rsquo;s system has a high contrast theme active.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIPoint *point</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *highContrastMode</code></div>
 
 		    
 			
@@ -374,6 +417,11 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>auto</code>.</p>
+			</div>
 			
 
 			
@@ -652,7 +700,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Theme to apply to the chart when Windows High Contrast Mode is detected. By default, a high contrast theme matching the high contrast system system colors is used.</p>
+				<p>Theme to apply to the chart when Windows High Contrast Mode is detected. By default, a high contrast theme matching the high contrast system colors is used.</p>
 			</div>
 			
 		    

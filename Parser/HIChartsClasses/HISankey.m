@@ -24,11 +24,12 @@
 	copySankey.tooltip = [self.tooltip copyWithZone: zone];
 	copySankey.dataLabels = [self.dataLabels copyWithZone: zone];
 	copySankey.states = [self.states copyWithZone: zone];
-	copySankey.nodeWidth = [self.nodeWidth copyWithZone: zone];
+	copySankey.nodeDistance = [self.nodeDistance copyWithZone: zone];
 	copySankey.showInLegend = [self.showInLegend copyWithZone: zone];
 	copySankey.levels = [self.levels copyWithZone: zone];
 	copySankey.borderWidth = [self.borderWidth copyWithZone: zone];
 	copySankey.nodeAlignment = [self.nodeAlignment copyWithZone: zone];
+	copySankey.nodeWidth = [self.nodeWidth copyWithZone: zone];
 	copySankey.linkOpacity = [self.linkOpacity copyWithZone: zone];
 	copySankey.linkColorMode = [self.linkColorMode copyWithZone: zone];
 	copySankey.colors = [self.colors copyWithZone: zone];
@@ -94,8 +95,8 @@
 	if (self.nodePadding) {
 		params[@"nodePadding"] = self.nodePadding;
 	}
-	if (self.nodeWidth) {
-		params[@"nodeWidth"] = self.nodeWidth;
+	if (self.nodeDistance) {
+		params[@"nodeDistance"] = self.nodeDistance;
 	}
 	if (self.levels) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -114,6 +115,9 @@
 	}
 	if (self.nodeAlignment) {
 		params[@"nodeAlignment"] = self.nodeAlignment;
+	}
+	if (self.nodeWidth) {
+		params[@"nodeWidth"] = self.nodeWidth;
 	}
 	if (self.linkOpacity) {
 		params[@"linkOpacity"] = self.linkOpacity;
@@ -175,10 +179,10 @@
 	[self updateNSObject:oldValue newValue:nodePadding propertyName:@"nodePadding"];
 }
 
--(void)setNodeWidth:(NSNumber *)nodeWidth {
-	NSNumber *oldValue = _nodeWidth;
-	_nodeWidth = nodeWidth;
-	[self updateNSObject:oldValue newValue:nodeWidth propertyName:@"nodeWidth"];
+-(void)setNodeDistance:(id)nodeDistance {
+	id oldValue = _nodeDistance;
+	_nodeDistance = nodeDistance;
+	[self updateNSObject:oldValue newValue:nodeDistance propertyName:@"nodeDistance"];
 }
 
 -(void)setLevels:(NSArray <HILevels *> *)levels {
@@ -197,6 +201,12 @@
 	NSString *oldValue = _nodeAlignment;
 	_nodeAlignment = nodeAlignment;
 	[self updateNSObject:oldValue newValue:nodeAlignment propertyName:@"nodeAlignment"];
+}
+
+-(void)setNodeWidth:(id)nodeWidth {
+	id oldValue = _nodeWidth;
+	_nodeWidth = nodeWidth;
+	[self updateNSObject:oldValue newValue:nodeWidth propertyName:@"nodeWidth"];
 }
 
 -(void)setLinkOpacity:(NSNumber *)linkOpacity {

@@ -95,6 +95,8 @@
 		
 		<option value="//api/name/minLinkWidth">minLinkWidth</option>
 		
+		<option value="//api/name/nodeDistance">nodeDistance</option>
+		
 		<option value="//api/name/nodeWidth">nodeWidth</option>
 		
 		<option value="//api/name/nodes">nodes</option>
@@ -620,8 +622,8 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/nodeWidth" title="nodeWidth"></a>
-	<h3 class="method-title"><code><a href="#//api/name/nodeWidth">&nbsp;&nbsp;nodeWidth</a></code>
+	<a name="//api/name/nodeDistance" title="nodeDistance"></a>
+	<h3 class="method-title"><code><a href="#//api/name/nodeDistance">&nbsp;&nbsp;nodeDistance</a></code>
 </h3>
 
 	<div class="method-info">
@@ -631,12 +633,12 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The pixel width of each node in a sankey diagram or dependency wheel, or the height in case the chart is inverted.</p>
+				<p>The distance between nodes in a sankey diagram in the longitudinal direction. The longitudinal direction means the direction that the chart flows - in a horizontal chart the distance is horizontal, in an inverted chart (vertical), the distance is vertical. If a number is given, it denotes pixels. If a percentage string is given, the distance is a percentage of the rendered node width. A <code>nodeDistance</code> of <code>100%</code> will render equal widths for the nodes and the gaps between them. This option applies only when the <code>nodeWidth</code> option is <code>auto</code>, making the node width respond to the number of columns.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *nodeWidth</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id nodeDistance</code></div>
 
 		    
 			
@@ -648,7 +650,15 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>20</code>.</p>
+				<p><strong>Defaults to</strong> <code>30</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-sankey/node-distance">Sankey with dnode distance of 100% means equal to node width</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-organization/node-distance">Organization chart with node distance of 50%</a></li>
+</ul>
+
 			</div>
 			
 
@@ -749,6 +759,60 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/column-borderwidth/">2px black border</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIArcdiagram.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/nodeWidth" title="nodeWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/nodeWidth">&nbsp;&nbsp;nodeWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The pixel width of each node in a sankey diagram or dependency wheel, or the height in case the chart is inverted. Can be a number or a percentage string. Sankey series also support setting it to <code>auto</code>. With this setting, the nodes are sized to fill up the plot area in the longitudinal direction, regardless of the number of levels.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id nodeWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>20</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-sankey/node-distance">Sankey with auto node width combined with node distance</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series-organization/node-distance">Organization chart with node distance of 50%</a></li>
 </ul>
 
 			</div>

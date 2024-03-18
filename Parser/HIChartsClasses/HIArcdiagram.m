@@ -37,10 +37,11 @@
 	copyArcdiagram.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyArcdiagram.tooltip = [self.tooltip copyWithZone: zone];
 	copyArcdiagram.states = [self.states copyWithZone: zone];
-	copyArcdiagram.nodeWidth = [self.nodeWidth copyWithZone: zone];
+	copyArcdiagram.nodeDistance = [self.nodeDistance copyWithZone: zone];
 	copyArcdiagram.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyArcdiagram.levels = [self.levels copyWithZone: zone];
 	copyArcdiagram.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyArcdiagram.nodeWidth = [self.nodeWidth copyWithZone: zone];
 	copyArcdiagram.linkOpacity = [self.linkOpacity copyWithZone: zone];
 	copyArcdiagram.linkColorMode = [self.linkColorMode copyWithZone: zone];
 	copyArcdiagram.colors = [self.colors copyWithZone: zone];
@@ -116,8 +117,8 @@
 	if (self.minLinkWidth) {
 		params[@"minLinkWidth"] = self.minLinkWidth;
 	}
-	if (self.nodeWidth) {
-		params[@"nodeWidth"] = self.nodeWidth;
+	if (self.nodeDistance) {
+		params[@"nodeDistance"] = self.nodeDistance;
 	}
 	if (self.levels) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -133,6 +134,9 @@
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
+	}
+	if (self.nodeWidth) {
+		params[@"nodeWidth"] = self.nodeWidth;
 	}
 	if (self.linkOpacity) {
 		params[@"linkOpacity"] = self.linkOpacity;
@@ -209,10 +213,10 @@
 	[self updateNSObject:oldValue newValue:minLinkWidth propertyName:@"minLinkWidth"];
 }
 
--(void)setNodeWidth:(NSNumber *)nodeWidth {
-	NSNumber *oldValue = _nodeWidth;
-	_nodeWidth = nodeWidth;
-	[self updateNSObject:oldValue newValue:nodeWidth propertyName:@"nodeWidth"];
+-(void)setNodeDistance:(id)nodeDistance {
+	id oldValue = _nodeDistance;
+	_nodeDistance = nodeDistance;
+	[self updateNSObject:oldValue newValue:nodeDistance propertyName:@"nodeDistance"];
 }
 
 -(void)setLevels:(NSArray <HILevels *> *)levels {
@@ -225,6 +229,12 @@
 	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
 	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
+}
+
+-(void)setNodeWidth:(id)nodeWidth {
+	id oldValue = _nodeWidth;
+	_nodeWidth = nodeWidth;
+	[self updateNSObject:oldValue newValue:nodeWidth propertyName:@"nodeWidth"];
 }
 
 -(void)setLinkOpacity:(NSNumber *)linkOpacity {

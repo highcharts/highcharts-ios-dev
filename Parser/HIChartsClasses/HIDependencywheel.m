@@ -38,10 +38,10 @@
 	copyDependencywheel.inactiveOtherPoints = [self.inactiveOtherPoints copyWithZone: zone];
 	copyDependencywheel.tooltip = [self.tooltip copyWithZone: zone];
 	copyDependencywheel.states = [self.states copyWithZone: zone];
-	copyDependencywheel.nodeWidth = [self.nodeWidth copyWithZone: zone];
 	copyDependencywheel.showInLegend = [self.showInLegend copyWithZone: zone];
 	copyDependencywheel.levels = [self.levels copyWithZone: zone];
 	copyDependencywheel.borderWidth = [self.borderWidth copyWithZone: zone];
+	copyDependencywheel.nodeWidth = [self.nodeWidth copyWithZone: zone];
 	copyDependencywheel.linkOpacity = [self.linkOpacity copyWithZone: zone];
 	copyDependencywheel.linkColorMode = [self.linkColorMode copyWithZone: zone];
 	copyDependencywheel.colors = [self.colors copyWithZone: zone];
@@ -126,9 +126,6 @@
 	if (self.nodePadding) {
 		params[@"nodePadding"] = self.nodePadding;
 	}
-	if (self.nodeWidth) {
-		params[@"nodeWidth"] = self.nodeWidth;
-	}
 	if (self.levels) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.levels) {
@@ -143,6 +140,9 @@
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
+	}
+	if (self.nodeWidth) {
+		params[@"nodeWidth"] = self.nodeWidth;
 	}
 	if (self.linkOpacity) {
 		params[@"linkOpacity"] = self.linkOpacity;
@@ -216,12 +216,6 @@
 	[self updateNSObject:oldValue newValue:nodePadding propertyName:@"nodePadding"];
 }
 
--(void)setNodeWidth:(NSNumber *)nodeWidth {
-	NSNumber *oldValue = _nodeWidth;
-	_nodeWidth = nodeWidth;
-	[self updateNSObject:oldValue newValue:nodeWidth propertyName:@"nodeWidth"];
-}
-
 -(void)setLevels:(NSArray <HILevels *> *)levels {
 	NSArray <HILevels *> *oldValue = _levels;
 	_levels = levels;
@@ -232,6 +226,12 @@
 	NSNumber *oldValue = _borderWidth;
 	_borderWidth = borderWidth;
 	[self updateNSObject:oldValue newValue:borderWidth propertyName:@"borderWidth"];
+}
+
+-(void)setNodeWidth:(id)nodeWidth {
+	id oldValue = _nodeWidth;
+	_nodeWidth = nodeWidth;
+	[self updateNSObject:oldValue newValue:nodeWidth propertyName:@"nodeWidth"];
 }
 
 -(void)setLinkOpacity:(NSNumber *)linkOpacity {
