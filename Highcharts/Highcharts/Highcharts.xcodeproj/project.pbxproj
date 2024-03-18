@@ -109,6 +109,7 @@
 		5B6C0C952A36523200BA3913 /* HIPointGrouping.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B6C0C5D2A36523100BA3913 /* HIPointGrouping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B6C0C962A36523200BA3913 /* HIGlobalTracks.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6C0C5E2A36523100BA3913 /* HIGlobalTracks.m */; };
 		5B6C0C972A36523200BA3913 /* HIPlayDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6C0C5F2A36523100BA3913 /* HIPlayDelay.m */; };
+		5B848C172BA7887D00A07FB1 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 5B848C162BA7887D00A07FB1 /* PrivacyInfo.xcprivacy */; };
 		5BBCF73E2B2E240E00350D44 /* HIBorderRadiusOptionsObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BBCF73A2B2E240E00350D44 /* HIBorderRadiusOptionsObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BBCF73F2B2E240E00350D44 /* HIBorderRadius.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BBCF73B2B2E240E00350D44 /* HIBorderRadius.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BBCF7402B2E240E00350D44 /* HIBorderRadiusOptionsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BBCF73C2B2E240E00350D44 /* HIBorderRadiusOptionsObject.m */; };
@@ -669,6 +670,7 @@
 		5B6C0C5D2A36523100BA3913 /* HIPointGrouping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIPointGrouping.h; sourceTree = "<group>"; };
 		5B6C0C5E2A36523100BA3913 /* HIGlobalTracks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGlobalTracks.m; sourceTree = "<group>"; };
 		5B6C0C5F2A36523100BA3913 /* HIPlayDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIPlayDelay.m; sourceTree = "<group>"; };
+		5B848C162BA7887D00A07FB1 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		5BBCF73A2B2E240E00350D44 /* HIBorderRadiusOptionsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIBorderRadiusOptionsObject.h; sourceTree = "<group>"; };
 		5BBCF73B2B2E240E00350D44 /* HIBorderRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIBorderRadius.h; sourceTree = "<group>"; };
 		5BBCF73C2B2E240E00350D44 /* HIBorderRadiusOptionsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIBorderRadiusOptionsObject.m; sourceTree = "<group>"; };
@@ -1652,6 +1654,7 @@
 			isa = PBXGroup;
 			children = (
 				343E138F1C38513D006DDD68 /* Info.plist */,
+				5B848C162BA7887D00A07FB1 /* PrivacyInfo.xcprivacy */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -2124,6 +2127,7 @@
 			files = (
 				34D519251C54459D0067ED47 /* com.highcharts.charts.bundle in Resources */,
 				348675461CF5BB0300FB5E54 /* Plugins.plist in Resources */,
+				5B848C172BA7887D00A07FB1 /* PrivacyInfo.xcprivacy in Resources */,
 				342B40E81CF8821400B09FA1 /* Charts.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
