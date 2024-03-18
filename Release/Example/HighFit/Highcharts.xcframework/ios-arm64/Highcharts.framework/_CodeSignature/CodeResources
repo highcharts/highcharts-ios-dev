@@ -6892,6 +6892,14 @@
 		<data>
 		2AcHRuX42uXR5RHzIy1pnEpCfpA=
 		</data>
+		<key>com.highcharts.charts.bundle/js/modules/moment-timezone-with-data.js</key>
+		<data>
+		Z69mMlwtWf4L467bzm2vDRX5GV4=
+		</data>
+		<key>com.highcharts.charts.bundle/js/modules/moment.js</key>
+		<data>
+		GFHW9+eaGgRjUH1qtm82Ktc6z+4=
+		</data>
 		<key>com.highcharts.charts.bundle/js/modules/mouse-wheel-zoom.js</key>
 		<data>
 		KX/jSubaHgs4TGVJJPSg1A8z4q4=
@@ -19152,6 +19160,20 @@
 			<key>hash2</key>
 			<data>
 			uDzXMAYCfatuuz+Y1QIqCAgkXt/aFQ3havdmtlL767c=
+			</data>
+		</dict>
+		<key>com.highcharts.charts.bundle/js/modules/moment-timezone-with-data.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4Hra/yjA0muDYg+K2pehalw4b0oGxou6bQBOo9F5LaM=
+			</data>
+		</dict>
+		<key>com.highcharts.charts.bundle/js/modules/moment.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tvVzNkUbIQdgLa2e8r+IVtkDV8nZu3DQBqy/CXaH0+Q=
 			</data>
 		</dict>
 		<key>com.highcharts.charts.bundle/js/modules/mouse-wheel-zoom.js</key>
