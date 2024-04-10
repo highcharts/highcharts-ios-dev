@@ -89,7 +89,7 @@ class DashboardViewController: UITableViewController, HIChartViewDelegate {
         if cell == nil {
             cell = UITableViewCell(style: .default, reuseIdentifier: cellReuseIdentifier)
             
-            cell!.selectionStyle = .none
+            cell!.selectionStyle = UITableViewCell.SelectionStyle.none
             
             let chartView = HIChartView(frame: CGRect(x: 5.0, y: 5.0, width: self.view.bounds.size.width - 20, height: 240.0))
             chartView.backgroundColor = UIColor.clear
@@ -118,7 +118,7 @@ class DashboardViewController: UITableViewController, HIChartViewDelegate {
             button.tag = indexPath.row
             button.addTarget(self, action: #selector(self.showDetailData), for: .touchUpInside)
             
-            chartView.addSubview(button)
+            cell!.contentView.addSubview(button)
             
             return cell!
         }
@@ -219,7 +219,7 @@ class DashboardViewController: UITableViewController, HIChartViewDelegate {
         
         self.charts = [HIChartView]()
         
-        self.sources = (UserDefaults.standard.value(forKey: "sources") as! [[String:Any]])
+        self.sources = (UserDefaults.standard.value(forKey: "sources") as! [[String: Any]])
         
         var tmpData = [Any]()
         for source in self.sources {

@@ -23,18 +23,18 @@
 		45DAC0C51F56A9210004F0B1 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAC0C31F56A9210004F0B1 /* DataViewController.swift */; };
 		45DAC0C61F56A9210004F0B1 /* DataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45DAC0C41F56A9210004F0B1 /* DataViewController.xib */; };
 		45DAC0C81F56A9960004F0B1 /* OptionsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DAC0C71F56A9960004F0B1 /* OptionsProvider.swift */; };
-		CD073A8B2646FA8200D6EF30 /* Highcharts.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD073A872646FA7900D6EF30 /* Highcharts.xcframework */; };
-		CD073A8C2646FA8200D6EF30 /* Highcharts.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD073A872646FA7900D6EF30 /* Highcharts.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD4D8D3E25CECF8C00DDF837 /* Highcharts.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD4D8D3C25CECF8400DDF837 /* Highcharts.xcframework */; };
+		CD4D8D3F25CECF8C00DDF837 /* Highcharts.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD4D8D3C25CECF8400DDF837 /* Highcharts.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CD073A8D2646FA8200D6EF30 /* Embed Frameworks */ = {
+		45DAC0AA1F56A6FB0004F0B1 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CD073A8C2646FA8200D6EF30 /* Highcharts.xcframework in Embed Frameworks */,
+				CD4D8D3F25CECF8C00DDF837 /* Highcharts.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,7 +60,7 @@
 		45DAC0C31F56A9210004F0B1 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		45DAC0C41F56A9210004F0B1 /* DataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataViewController.xib; sourceTree = "<group>"; };
 		45DAC0C71F56A9960004F0B1 /* OptionsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsProvider.swift; sourceTree = "<group>"; };
-		CD073A872646FA7900D6EF30 /* Highcharts.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Highcharts.xcframework; sourceTree = "<group>"; };
+		CD4D8D3C25CECF8400DDF837 /* Highcharts.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Highcharts.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD073A8B2646FA8200D6EF30 /* Highcharts.xcframework in Frameworks */,
+				CD4D8D3E25CECF8C00DDF837 /* Highcharts.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +107,7 @@
 		45DAC0A31F56A6870004F0B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CD073A872646FA7900D6EF30 /* Highcharts.xcframework */,
+				CD4D8D3C25CECF8400DDF837 /* Highcharts.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 				45DAC08A1F56A5680004F0B1 /* Sources */,
 				45DAC08B1F56A5680004F0B1 /* Frameworks */,
 				45DAC08C1F56A5680004F0B1 /* Resources */,
-				CD073A8D2646FA8200D6EF30 /* Embed Frameworks */,
+				45DAC0AA1F56A6FB0004F0B1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,7 +190,7 @@
 					45DAC08D1F56A5680004F0B1 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = FYYW4F45T7;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1100;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -265,6 +265,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -324,6 +325,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -377,7 +379,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FYYW4F45T7;
@@ -403,10 +404,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FYYW4F45T7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
