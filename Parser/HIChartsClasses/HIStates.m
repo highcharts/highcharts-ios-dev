@@ -14,6 +14,7 @@
 	copyStates.inactive = [self.inactive copyWithZone: zone];
 	copyStates.select = [self.select copyWithZone: zone];
 	copyStates.normal = [self.normal copyWithZone: zone];
+	copyStates.disabled = [self.disabled copyWithZone: zone];
 	return copyStates;
 }
 
@@ -31,6 +32,9 @@
 	}
 	if (self.normal) {
 		params[@"normal"] = [self.normal getParams];
+	}
+	if (self.disabled) {
+		params[@"disabled"] = [self.disabled getParams];
 	}
 	return params;
 }
@@ -59,6 +63,12 @@
 	HINormal *oldValue = _normal;
 	_normal = normal;
 	[self updateHIObject:oldValue newValue:normal propertyName:@"normal"];
+}
+
+-(void)setDisabled:(HIDisabled *)disabled {
+	HIDisabled *oldValue = _disabled;
+	_disabled = disabled;
+	[self updateHIObject:oldValue newValue:disabled propertyName:@"disabled"];
 }
 
 @end

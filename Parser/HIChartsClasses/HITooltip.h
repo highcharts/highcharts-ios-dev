@@ -8,10 +8,11 @@
 
 #import "HIDateTimeLabelFormats.h"
 #import "HIColor.h"
-#import "HIFunction.h"
-#import "HICSSObject.h"
-#import "HIPoint.h"
 #import "HIShadowOptionsObject.h"
+#import "HIFunction.h"
+#import "HIPoint.h"
+#import "HICSSObject.h"
+#import "HIAnimationOptionsObject.h"
 
 
 /**
@@ -151,10 +152,8 @@ Whether to allow the tooltip to render outside the chart's SVG element box. By d
 @property(nonatomic, readwrite) NSNumber /* Bool */ *outside;
 /**
 Enable or disable animation of the tooltip.
-
-**Defaults to** `true`.
 */
-@property(nonatomic, readwrite) NSNumber /* Bool */ *animation;
+@property(nonatomic, readwrite) HIAnimationOptionsObject *animation;
 /**
 Split the tooltip into one label per series, with the header close to the axis. This is recommended over `shared` tooltips for charts with multiple line series, generally making them easier to read. This option takes precedence over `tooltip.shared`. Not supported for `polar` and `inverted` charts.
 
@@ -218,7 +217,7 @@ The HTML of the null point's line in the tooltip. Works analogously to `pointFor
 */
 @property(nonatomic, readwrite) NSString *nullFormat;
 /**
-A [format string](https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting) for the whole tooltip. When format strings are a requirement, it is usually more convenient to use `headerFormat`, `pointFormat` and `footerFormat`, but the `format` option allows combining them into one setting. The context of the format string is the same as that of the `formatter` callback.
+A [format string](https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting) for the whole shared tooltip. When format strings are a requirement, it is usually more convenient to use `headerFormat`, `pointFormat` and `footerFormat`, but the `format` option allows combining them into one setting. The context of the format string is the same as that of the `tooltip.formatter` callback.
 
 **Defaults to** `undefined`.
 
@@ -331,7 +330,7 @@ How many decimals to show in each series' y value. This is overridable in each s
 /**
 The HTML of the point's line in the tooltip. Variables are enclosed by curly brackets. Available variables are `point.id`, `point.fromNode.id`, `point.toNode.id`, `series.name`, `series.color` and other properties on the same form. Furthermore, This can also be overridden for each series, which makes it a good hook for displaying units. In styled mode, the dot is colored by a class name rather than the point color.
 
-**Defaults to** `{point.fromNode.id} â†’ {point.toNode.id}`.
+**Defaults to** `{point.fromNode.id} → {point.toNode.id}`.
 */
 @property(nonatomic, readwrite) NSString *linkFormat;
 @property(nonatomic, readwrite) NSString *nodeFormat;

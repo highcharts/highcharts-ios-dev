@@ -42,7 +42,7 @@
 		params[@"showPlayMarker"] = self.showPlayMarker;
 	}
 	if (self.activeWhen) {
-		params[@"activeWhen"] = [self.activeWhen getParams];
+		params[@"activeWhen"] = [self.activeWhen getFunction];
 	}
 	return params;
 }
@@ -85,8 +85,8 @@
 	[self updateNSObject:oldValue newValue:showPlayMarker propertyName:@"showPlayMarker"];
 }
 
--(void)setActiveWhen:(HIActiveWhen *)activeWhen {
-	HIActiveWhen *oldValue = _activeWhen;
+-(void)setActiveWhen:(HIFunction *)activeWhen {
+	HIFunction *oldValue = _activeWhen;
 	_activeWhen = activeWhen;
 	[self updateHIObject:oldValue newValue:activeWhen propertyName:@"activeWhen"];
 }

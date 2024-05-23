@@ -26,9 +26,11 @@
 	copyHover.animation = [self.animation copyWithZone: zone];
 	copyHover.halo = [self.halo copyWithZone: zone];
 	copyHover.brightness = [self.brightness copyWithZone: zone];
+	copyHover.fill = [self.fill copyWithZone: zone];
 	copyHover.linkOpacity = [self.linkOpacity copyWithZone: zone];
 	copyHover.shadow = [self.shadow copyWithZone: zone];
 	copyHover.color = [self.color copyWithZone: zone];
+	copyHover.connectorWidthPlus = [self.connectorWidthPlus copyWithZone: zone];
 	return copyHover;
 }
 
@@ -83,6 +85,9 @@
 	if (self.brightness) {
 		params[@"brightness"] = self.brightness;
 	}
+	if (self.fill) {
+		params[@"fill"] = self.fill;
+	}
 	if (self.linkOpacity) {
 		params[@"linkOpacity"] = self.linkOpacity;
 	}
@@ -91,6 +96,9 @@
 	}
 	if (self.color) {
 		params[@"color"] = [self.color getData];
+	}
+	if (self.connectorWidthPlus) {
+		params[@"connectorWidthPlus"] = self.connectorWidthPlus;
 	}
 	return params;
 }
@@ -193,6 +201,12 @@
 	[self updateNSObject:oldValue newValue:brightness propertyName:@"brightness"];
 }
 
+-(void)setFill:(NSString *)fill {
+	NSString *oldValue = _fill;
+	_fill = fill;
+	[self updateNSObject:oldValue newValue:fill propertyName:@"fill"];
+}
+
 -(void)setLinkOpacity:(NSNumber *)linkOpacity {
 	NSNumber *oldValue = _linkOpacity;
 	_linkOpacity = linkOpacity;
@@ -209,6 +223,12 @@
 	HIColor *oldValue = _color;
 	_color = color;
 	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
+}
+
+-(void)setConnectorWidthPlus:(NSNumber *)connectorWidthPlus {
+	NSNumber *oldValue = _connectorWidthPlus;
+	_connectorWidthPlus = connectorWidthPlus;
+	[self updateNSObject:oldValue newValue:connectorWidthPlus propertyName:@"connectorWidthPlus"];
 }
 
 @end

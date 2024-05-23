@@ -25,10 +25,11 @@
 	copyErrorbar.yAxis = [self.yAxis copyWithZone: zone];
 	copyErrorbar.zIndex = [self.zIndex copyWithZone: zone];
 	copyErrorbar.color = [self.color copyWithZone: zone];
-	copyErrorbar.linkedTo = [self.linkedTo copyWithZone: zone];
-	copyErrorbar.whiskerWidth = [self.whiskerWidth copyWithZone: zone];
 	copyErrorbar.tooltip = [self.tooltip copyWithZone: zone];
+	copyErrorbar.linkedTo = [self.linkedTo copyWithZone: zone];
+	copyErrorbar.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyErrorbar.grouping = [self.grouping copyWithZone: zone];
+	copyErrorbar.whiskerWidth = [self.whiskerWidth copyWithZone: zone];
 	copyErrorbar.stemColor = [self.stemColor copyWithZone: zone];
 	copyErrorbar.whiskerLength = [self.whiskerLength copyWithZone: zone];
 	copyErrorbar.medianWidth = [self.medianWidth copyWithZone: zone];
@@ -43,7 +44,6 @@
 	copyErrorbar.boxDashStyle = [self.boxDashStyle copyWithZone: zone];
 	copyErrorbar.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyErrorbar.stemWidth = [self.stemWidth copyWithZone: zone];
-	copyErrorbar.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyErrorbar.pointPadding = [self.pointPadding copyWithZone: zone];
 	copyErrorbar.pointRange = [self.pointRange copyWithZone: zone];
 	copyErrorbar.minPointLength = [self.minPointLength copyWithZone: zone];
@@ -111,11 +111,11 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: [super getParams]];
-	if (self.whiskerWidth) {
-		params[@"whiskerWidth"] = self.whiskerWidth;
-	}
 	if (self.grouping) {
 		params[@"grouping"] = self.grouping;
+	}
+	if (self.whiskerWidth) {
+		params[@"whiskerWidth"] = self.whiskerWidth;
 	}
 	if (self.stemColor) {
 		params[@"stemColor"] = [self.stemColor getData];
@@ -195,16 +195,16 @@
 
 # pragma mark - Setters
 
--(void)setWhiskerWidth:(NSNumber *)whiskerWidth {
-	NSNumber *oldValue = _whiskerWidth;
-	_whiskerWidth = whiskerWidth;
-	[self updateNSObject:oldValue newValue:whiskerWidth propertyName:@"whiskerWidth"];
-}
-
 -(void)setGrouping:(NSNumber *)grouping {
 	NSNumber *oldValue = _grouping;
 	_grouping = grouping;
 	[self updateNSObject:oldValue newValue:grouping propertyName:@"grouping"];
+}
+
+-(void)setWhiskerWidth:(NSNumber *)whiskerWidth {
+	NSNumber *oldValue = _whiskerWidth;
+	_whiskerWidth = whiskerWidth;
+	[self updateNSObject:oldValue newValue:whiskerWidth propertyName:@"whiskerWidth"];
 }
 
 -(void)setStemColor:(HIColor *)stemColor {
