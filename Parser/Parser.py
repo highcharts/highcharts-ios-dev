@@ -350,7 +350,10 @@ hc_types = {
         "number|'auto'": 'id /* NSNumber, NSString */',
         "'top'|'center'|'bottom'": 'NSString',
         #11.4.0
-        "'left'|'right'": 'NSString'
+        "'left'|'right'": 'NSString',
+        #11.4.3
+        "function|*": 'HIFunction',
+        "string|number|function|*": 'id'
     }
 
 def get_type(x):
