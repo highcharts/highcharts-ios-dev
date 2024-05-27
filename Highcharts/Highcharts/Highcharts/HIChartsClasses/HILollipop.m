@@ -29,7 +29,13 @@
 	copyLollipop.pointRange = [self.pointRange copyWithZone: zone];
 	copyLollipop.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyLollipop.connectorColor = [self.connectorColor copyWithZone: zone];
+	copyLollipop.connectorWidth = [self.connectorWidth copyWithZone: zone];
+	copyLollipop.pointPadding = [self.pointPadding copyWithZone: zone];
+	copyLollipop.crisp = [self.crisp copyWithZone: zone];
 	copyLollipop.lowMarker = [self.lowMarker copyWithZone: zone];
+	copyLollipop.legendSymbol = [self.legendSymbol copyWithZone: zone];
+	copyLollipop.states = [self.states copyWithZone: zone];
+	copyLollipop.groupPadding = [self.groupPadding copyWithZone: zone];
 	copyLollipop.color = [self.color copyWithZone: zone];
 	copyLollipop.tooltip = [self.tooltip copyWithZone: zone];
 	copyLollipop.dragDrop = [self.dragDrop copyWithZone: zone];
@@ -37,7 +43,6 @@
 	copyLollipop.threshold = [self.threshold copyWithZone: zone];
 	copyLollipop.shadow = [self.shadow copyWithZone: zone];
 	copyLollipop.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
-	copyLollipop.legendSymbol = [self.legendSymbol copyWithZone: zone];
 	copyLollipop.lineColor = [self.lineColor copyWithZone: zone];
 	copyLollipop.linecap = [self.linecap copyWithZone: zone];
 	copyLollipop.includeInDataExport = [self.includeInDataExport copyWithZone: zone];
@@ -46,7 +51,6 @@
 	copyLollipop.negativeColor = [self.negativeColor copyWithZone: zone];
 	copyLollipop.pointInterval = [self.pointInterval copyWithZone: zone];
 	copyLollipop.cropThreshold = [self.cropThreshold copyWithZone: zone];
-	copyLollipop.states = [self.states copyWithZone: zone];
 	copyLollipop.softThreshold = [self.softThreshold copyWithZone: zone];
 	copyLollipop.point = [self.point copyWithZone: zone];
 	copyLollipop.dataSorting = [self.dataSorting copyWithZone: zone];
@@ -83,7 +87,6 @@
 	copyLollipop.zoneAxis = [self.zoneAxis copyWithZone: zone];
 	copyLollipop.zones = [self.zones copyWithZone: zone];
 	copyLollipop.pointIntervalUnit = [self.pointIntervalUnit copyWithZone: zone];
-	copyLollipop.crisp = [self.crisp copyWithZone: zone];
 	copyLollipop.visible = [self.visible copyWithZone: zone];
 	copyLollipop.linkedTo = [self.linkedTo copyWithZone: zone];
 	copyLollipop.className = [self.className copyWithZone: zone];
@@ -105,8 +108,17 @@
 	if (self.connectorColor) {
 		params[@"connectorColor"] = self.connectorColor;
 	}
+	if (self.connectorWidth) {
+		params[@"connectorWidth"] = self.connectorWidth;
+	}
+	if (self.pointPadding) {
+		params[@"pointPadding"] = self.pointPadding;
+	}
 	if (self.lowMarker) {
 		params[@"lowMarker"] = [self.lowMarker getParams];
+	}
+	if (self.groupPadding) {
+		params[@"groupPadding"] = self.groupPadding;
 	}
 	if (self.negativeFillColor) {
 		params[@"negativeFillColor"] = [self.negativeFillColor getData];
@@ -137,10 +149,28 @@
 	[self updateNSObject:oldValue newValue:connectorColor propertyName:@"connectorColor"];
 }
 
+-(void)setConnectorWidth:(NSNumber *)connectorWidth {
+	NSNumber *oldValue = _connectorWidth;
+	_connectorWidth = connectorWidth;
+	[self updateNSObject:oldValue newValue:connectorWidth propertyName:@"connectorWidth"];
+}
+
+-(void)setPointPadding:(NSNumber *)pointPadding {
+	NSNumber *oldValue = _pointPadding;
+	_pointPadding = pointPadding;
+	[self updateNSObject:oldValue newValue:pointPadding propertyName:@"pointPadding"];
+}
+
 -(void)setLowMarker:(HILowMarker *)lowMarker {
 	HILowMarker *oldValue = _lowMarker;
 	_lowMarker = lowMarker;
 	[self updateHIObject:oldValue newValue:lowMarker propertyName:@"lowMarker"];
+}
+
+-(void)setGroupPadding:(NSNumber *)groupPadding {
+	NSNumber *oldValue = _groupPadding;
+	_groupPadding = groupPadding;
+	[self updateNSObject:oldValue newValue:groupPadding propertyName:@"groupPadding"];
 }
 
 -(void)setNegativeFillColor:(HIColor *)negativeFillColor {

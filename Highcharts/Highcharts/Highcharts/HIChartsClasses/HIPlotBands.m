@@ -16,9 +16,10 @@
 	copyPlotBands.borderColor = [self.borderColor copyWithZone: zone];
 	copyPlotBands.zIndex = [self.zIndex copyWithZone: zone];
 	copyPlotBands.from = [self.from copyWithZone: zone];
-	copyPlotBands.color = [self.color copyWithZone: zone];
-	copyPlotBands.className = [self.className copyWithZone: zone];
 	copyPlotBands.to = [self.to copyWithZone: zone];
+	copyPlotBands.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyPlotBands.className = [self.className copyWithZone: zone];
+	copyPlotBands.color = [self.color copyWithZone: zone];
 	copyPlotBands.borderWidth = [self.borderWidth copyWithZone: zone];
 	copyPlotBands.id = [self.id copyWithZone: zone];
 	copyPlotBands.label = [self.label copyWithZone: zone];
@@ -48,14 +49,17 @@
 	if (self.from) {
 		params[@"from"] = self.from;
 	}
-	if (self.color) {
-		params[@"color"] = [self.color getData];
+	if (self.to) {
+		params[@"to"] = self.to;
+	}
+	if (self.borderRadius) {
+		params[@"borderRadius"] = self.borderRadius;
 	}
 	if (self.className) {
 		params[@"className"] = self.className;
 	}
-	if (self.to) {
-		params[@"to"] = self.to;
+	if (self.color) {
+		params[@"color"] = [self.color getData];
 	}
 	if (self.borderWidth) {
 		params[@"borderWidth"] = self.borderWidth;
@@ -110,10 +114,16 @@
 	[self updateNSObject:oldValue newValue:from propertyName:@"from"];
 }
 
--(void)setColor:(HIColor *)color {
-	HIColor *oldValue = _color;
-	_color = color;
-	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
+-(void)setTo:(NSNumber *)to {
+	NSNumber *oldValue = _to;
+	_to = to;
+	[self updateNSObject:oldValue newValue:to propertyName:@"to"];
+}
+
+-(void)setBorderRadius:(id)borderRadius {
+	id oldValue = _borderRadius;
+	_borderRadius = borderRadius;
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setClassName:(NSString *)className {
@@ -122,10 +132,10 @@
 	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
--(void)setTo:(NSNumber *)to {
-	NSNumber *oldValue = _to;
-	_to = to;
-	[self updateNSObject:oldValue newValue:to propertyName:@"to"];
+-(void)setColor:(HIColor *)color {
+	HIColor *oldValue = _color;
+	_color = color;
+	[self updateHIObject:oldValue newValue:color propertyName:@"color"];
 }
 
 -(void)setBorderWidth:(NSNumber *)borderWidth {

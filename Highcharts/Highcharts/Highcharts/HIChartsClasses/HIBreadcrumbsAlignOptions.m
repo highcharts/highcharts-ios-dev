@@ -37,14 +37,14 @@
 
 # pragma mark - Setters
 
--(void)setAlign:(NSString *)align {
-  NSString * oldValue = _align;
+-(void)setAlign:(id)align {
+	id oldValue = _align;
 	_align = align;
 	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
 }
 
--(void)setVerticalAlign:(NSString *)verticalAlign {
-  NSString * oldValue = _verticalAlign;
+-(void)setVerticalAlign:(id)verticalAlign {
+	id oldValue = _verticalAlign;
 	_verticalAlign = verticalAlign;
 	[self updateNSObject:oldValue newValue:verticalAlign propertyName:@"verticalAlign"];
 }
