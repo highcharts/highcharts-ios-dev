@@ -1159,8 +1159,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/overflow" title="overflow"></a>
-	<h3 class="method-title"><code><a href="#//api/name/overflow">&nbsp;&nbsp;overflow</a></code>
+	<a name="//api/name/rotation" title="rotation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rotation">&nbsp;&nbsp;rotation</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1170,12 +1170,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>How to handle data labels that flow outside the plot area. The default is <code>"justify"</code>, which aligns them inside the plot area. For columns and bars, this means it will be moved inside the bar. To display data labels outside the plot area, set <code>crop</code> to <code>false</code> and <code>overflow</code> to <code>"allow"</code>.</p>
+				<p>Text rotation in degrees. Note that due to a more complex structure, backgrounds, borders and padding will be lost on a rotated data label.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *overflow</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *rotation</code></div>
 
 		    
 			
@@ -1187,7 +1187,14 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>justify</code>.</p>
+				<p><strong>Defaults to</strong> <code>0</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/">Vertical labels</a></li>
+</ul>
+
 			</div>
 			
 
@@ -1664,8 +1671,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/rotation" title="rotation"></a>
-	<h3 class="method-title"><code><a href="#//api/name/rotation">&nbsp;&nbsp;rotation</a></code>
+	<a name="//api/name/overflow" title="overflow"></a>
+	<h3 class="method-title"><code><a href="#//api/name/overflow">&nbsp;&nbsp;overflow</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1675,12 +1682,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Text rotation in degrees. Note that due to a more complex structure, backgrounds, borders and padding will be lost on a rotated data label.</p>
+				<p>How to handle data labels that flow outside the plot area. The default is <code>"justify"</code>, which aligns them inside the plot area. For columns and bars, this means it will be moved inside the bar. To display data labels outside the plot area, set <code>crop</code> to <code>false</code> and <code>overflow</code> to <code>"allow"</code>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *rotation</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSString *overflow</code></div>
 
 		    
 			
@@ -1692,14 +1699,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>0</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-datalabels-rotation/">Vertical labels</a></li>
-</ul>
-
+				<p><strong>Defaults to</strong> <code>justify</code>.</p>
 			</div>
 			
 

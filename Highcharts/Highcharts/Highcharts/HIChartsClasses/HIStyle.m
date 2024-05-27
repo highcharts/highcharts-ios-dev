@@ -63,7 +63,7 @@
 		params[@"stroke"] = self.stroke;
 	}
 	if (self.strokeWidth) {
-		params[@"stroke-width"] = self.strokeWidth;
+		params[@"strokeWidth"] = self.strokeWidth;
 	}
 	if (self.fill) {
 		params[@"fill"] = self.fill;

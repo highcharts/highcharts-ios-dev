@@ -103,7 +103,7 @@
 		params[@"outside"] = self.outside;
 	}
 	if (self.animation) {
-		params[@"animation"] = self.animation;
+		params[@"animation"] = [self.animation getParams];
 	}
 	if (self.split) {
 		params[@"split"] = self.split;
@@ -272,10 +272,10 @@
 	[self updateNSObject:oldValue newValue:outside propertyName:@"outside"];
 }
 
--(void)setAnimation:(NSNumber *)animation {
-	NSNumber *oldValue = _animation;
+-(void)setAnimation:(HIAnimationOptionsObject *)animation {
+	HIAnimationOptionsObject *oldValue = _animation;
 	_animation = animation;
-	[self updateNSObject:oldValue newValue:animation propertyName:@"animation"];
+	[self updateHIObject:oldValue newValue:animation propertyName:@"animation"];
 }
 
 -(void)setSplit:(NSNumber *)split {

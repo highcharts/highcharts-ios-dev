@@ -12,6 +12,7 @@
 	HIBackground *copyBackground = [[HIBackground allocWithZone: zone] init];
 	copyBackground.borderColor = [self.borderColor copyWithZone: zone];
 	copyBackground.outerRadius = [self.outerRadius copyWithZone: zone];
+	copyBackground.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyBackground.innerRadius = [self.innerRadius copyWithZone: zone];
 	copyBackground.className = [self.className copyWithZone: zone];
 	copyBackground.shape = [self.shape copyWithZone: zone];
@@ -28,6 +29,9 @@
 	}
 	if (self.outerRadius) {
 		params[@"outerRadius"] = self.outerRadius;
+	}
+	if (self.borderRadius) {
+		params[@"borderRadius"] = self.borderRadius;
 	}
 	if (self.innerRadius) {
 		params[@"innerRadius"] = self.innerRadius;
@@ -59,6 +63,12 @@
 	id oldValue = _outerRadius;
 	_outerRadius = outerRadius;
 	[self updateNSObject:oldValue newValue:outerRadius propertyName:@"outerRadius"];
+}
+
+-(void)setBorderRadius:(id)borderRadius {
+	id oldValue = _borderRadius;
+	_borderRadius = borderRadius;
+	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
 }
 
 -(void)setInnerRadius:(id)innerRadius {

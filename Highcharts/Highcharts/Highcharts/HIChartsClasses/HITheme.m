@@ -12,6 +12,7 @@
 	HITheme *copyTheme = [[HITheme allocWithZone: zone] init];
 	copyTheme.padding = [self.padding copyWithZone: zone];
 	copyTheme.stroke = [self.stroke copyWithZone: zone];
+	copyTheme.strokeLinecap = [self.strokeLinecap copyWithZone: zone];
 	copyTheme.fill = [self.fill copyWithZone: zone];
 	copyTheme.zIndex = [self.zIndex copyWithZone: zone];
 	return copyTheme;
@@ -25,6 +26,9 @@
 	}
 	if (self.stroke) {
 		params[@"stroke"] = [self.stroke getData];
+	}
+	if (self.strokeLinecap) {
+		params[@"strokeLinecap"] = self.strokeLinecap;
 	}
 	if (self.fill) {
 		params[@"fill"] = [self.fill getData];
@@ -47,6 +51,12 @@
 	HIColor *oldValue = _stroke;
 	_stroke = stroke;
 	[self updateHIObject:oldValue newValue:stroke propertyName:@"stroke"];
+}
+
+-(void)setStrokeLinecap:(NSString *)strokeLinecap {
+	NSString *oldValue = _strokeLinecap;
+	_strokeLinecap = strokeLinecap;
+	[self updateNSObject:oldValue newValue:strokeLinecap propertyName:@"strokeLinecap"];
 }
 
 -(void)setFill:(HIColor *)fill {

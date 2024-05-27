@@ -29,7 +29,7 @@
 	copyDataLabels.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyDataLabels.crop = [self.crop copyWithZone: zone];
 	copyDataLabels.shape = [self.shape copyWithZone: zone];
-	copyDataLabels.overflow = [self.overflow copyWithZone: zone];
+	copyDataLabels.rotation = [self.rotation copyWithZone: zone];
 	copyDataLabels.borderColor = [self.borderColor copyWithZone: zone];
 	copyDataLabels.filter = [self.filter copyWithZone: zone];
 	copyDataLabels.useHTML = [self.useHTML copyWithZone: zone];
@@ -39,7 +39,7 @@
 	copyDataLabels.padding = [self.padding copyWithZone: zone];
 	copyDataLabels.shadow = [self.shadow copyWithZone: zone];
 	copyDataLabels.x = [self.x copyWithZone: zone];
-	copyDataLabels.rotation = [self.rotation copyWithZone: zone];
+	copyDataLabels.overflow = [self.overflow copyWithZone: zone];
 	copyDataLabels.zIndex = [self.zIndex copyWithZone: zone];
 	copyDataLabels.verticalAlign = [self.verticalAlign copyWithZone: zone];
 	copyDataLabels.className = [self.className copyWithZone: zone];
@@ -128,8 +128,8 @@
 	if (self.shape) {
 		params[@"shape"] = self.shape;
 	}
-	if (self.overflow) {
-		params[@"overflow"] = self.overflow;
+	if (self.rotation) {
+		params[@"rotation"] = self.rotation;
 	}
 	if (self.borderColor) {
 		params[@"borderColor"] = [self.borderColor getData];
@@ -158,8 +158,8 @@
 	if (self.x) {
 		params[@"x"] = self.x;
 	}
-	if (self.rotation) {
-		params[@"rotation"] = self.rotation;
+	if (self.overflow) {
+		params[@"overflow"] = self.overflow;
 	}
 	if (self.zIndex) {
 		params[@"zIndex"] = self.zIndex;
@@ -355,10 +355,10 @@
 	[self updateNSObject:oldValue newValue:shape propertyName:@"shape"];
 }
 
--(void)setOverflow:(NSString *)overflow {
-	NSString *oldValue = _overflow;
-	_overflow = overflow;
-	[self updateNSObject:oldValue newValue:overflow propertyName:@"overflow"];
+-(void)setRotation:(NSNumber *)rotation {
+	NSNumber *oldValue = _rotation;
+	_rotation = rotation;
+	[self updateNSObject:oldValue newValue:rotation propertyName:@"rotation"];
 }
 
 -(void)setBorderColor:(HIColor *)borderColor {
@@ -415,10 +415,10 @@
 	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
 }
 
--(void)setRotation:(NSNumber *)rotation {
-	NSNumber *oldValue = _rotation;
-	_rotation = rotation;
-	[self updateNSObject:oldValue newValue:rotation propertyName:@"rotation"];
+-(void)setOverflow:(NSString *)overflow {
+	NSString *oldValue = _overflow;
+	_overflow = overflow;
+	[self updateNSObject:oldValue newValue:overflow propertyName:@"overflow"];
 }
 
 -(void)setZIndex:(NSNumber *)zIndex {
