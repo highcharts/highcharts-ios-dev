@@ -73,11 +73,21 @@
 		
 		<option value="//api/name/connectorColor">connectorColor</option>
 		
+		<option value="//api/name/connectorWidth">connectorWidth</option>
+		
+		<option value="//api/name/groupPadding">groupPadding</option>
+		
 		<option value="//api/name/lineColor">lineColor</option>
+		
+		<option value="//api/name/lowColor">lowColor</option>
 		
 		<option value="//api/name/lowMarker">lowMarker</option>
 		
 		<option value="//api/name/negativeFillColor">negativeFillColor</option>
+		
+		<option value="//api/name/pointPadding">pointPadding</option>
+		
+		<option value="//api/name/pointRange">pointRange</option>
 		
 	</optgroup>
 	
@@ -206,6 +216,84 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/connectorWidth" title="connectorWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/connectorWidth">&nbsp;&nbsp;connectorWidth</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Pixel width of the line that connects the dumbbell point&rsquo;s values.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *connectorWidth</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>1</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDumbbell.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pointPadding" title="pointPadding"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointPadding">&nbsp;&nbsp;pointPadding</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointPadding</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pointRange" title="pointRange"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pointRange">&nbsp;&nbsp;pointRange</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointRange</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/lowMarker" title="lowMarker"></a>
 	<h3 class="method-title"><code><a href="#//api/name/lowMarker">&nbsp;&nbsp;lowMarker</a></code>
 </h3>
@@ -252,6 +340,68 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/groupPadding" title="groupPadding"></a>
+	<h3 class="method-title"><code><a href="#//api/name/groupPadding">&nbsp;&nbsp;groupPadding</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *groupPadding</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/lowColor" title="lowColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lowColor">&nbsp;&nbsp;lowColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Color of the start markers in a dumbbell graph. This option takes priority over the series color. To avoid this, set <code>lowColor</code> to <code>undefined</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *lowColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>#333333</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIDumbbell.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/negativeFillColor" title="negativeFillColor"></a>
 	<h3 class="method-title"><code><a href="#//api/name/negativeFillColor">&nbsp;&nbsp;negativeFillColor</a></code>
 </h3>
@@ -263,7 +413,7 @@ Highcharts.chart(&lsquo;container&rsquo;, {
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A separate color for the negative part of the area. In styled mode, a negative color is set with the <code>.highcharts-negative</code> class name.</p>
+				<p>A separate color for the negative part of the area. Note that <code>zones</code> takes precedence over the negative fill color. In styled mode, a negative color is set with the <code>.highcharts-negative</code> class name.</p>
 			</div>
 			
 		    

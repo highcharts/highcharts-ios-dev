@@ -73,6 +73,8 @@
 		
 		<option value="//api/name/borderColor">borderColor</option>
 		
+		<option value="//api/name/borderRadius">borderRadius</option>
+		
 		<option value="//api/name/borderWidth">borderWidth</option>
 		
 		<option value="//api/name/className">className</option>
@@ -462,8 +464,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/color" title="color"></a>
-	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
+	<a name="//api/name/to" title="to"></a>
+	<h3 class="method-title"><code><a href="#//api/name/to">&nbsp;&nbsp;to</a></code>
 </h3>
 
 	<div class="method-info">
@@ -473,12 +475,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The color of the plot band.</p>
+				<p>The end position of the plot band in axis units.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *color</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *to</code></div>
 
 		    
 			
@@ -490,12 +492,62 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>#e6e9ff</code>.</p>
-
-<p><strong>Try it</strong></p>
+				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-color/">Color band</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-color/">Datetime axis</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-from/">Categorized axis</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIPlotBands.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/borderRadius" title="borderRadius"></a>
+	<h3 class="method-title"><code><a href="#//api/name/borderRadius">&nbsp;&nbsp;borderRadius</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Border radius for the plot band. Applies only to gauges. Can be a pixel value or a percentage, for example <code>50%</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id borderRadius</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-gauge-borderradius">Angular gauge with rounded plot bands</a></li>
 </ul>
 
 			</div>
@@ -556,8 +608,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/to" title="to"></a>
-	<h3 class="method-title"><code><a href="#//api/name/to">&nbsp;&nbsp;to</a></code>
+	<a name="//api/name/color" title="color"></a>
+	<h3 class="method-title"><code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
 </h3>
 
 	<div class="method-info">
@@ -567,12 +619,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The end position of the plot band in axis units.</p>
+				<p>The color of the plot band.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *to</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *color</code></div>
 
 		    
 			
@@ -584,11 +636,12 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
+				<p><strong>Defaults to</strong> <code>#e6e9ff</code>.</p>
+
+<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-color/">Datetime axis</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-from/">Categorized axis</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/xaxis/plotbands-color/">Color band</a></li>
 </ul>
 
 			</div>

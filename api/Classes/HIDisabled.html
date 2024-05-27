@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>HIInactive Class Reference</title>
+	<title>HIDisabled Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -71,13 +71,7 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/animation">animation</option>
-		
-		<option value="//api/name/enabled">enabled</option>
-		
-		<option value="//api/name/linkOpacity">linkOpacity</option>
-		
-		<option value="//api/name/opacity">opacity</option>
+		<option value="//api/name/style">style</option>
 		
 	</optgroup>
 	
@@ -104,7 +98,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">HIInactive Class Reference</h1>
+					<h1 class="title">HIDisabled Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -113,7 +107,7 @@
 	<td><a href="../Classes/HIChartsJSONSerializable.html">HIChartsJSONSerializable</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>HIInactive.h</td>
+	<td>HIDisabled.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -123,14 +117,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The opposite state of a hover for series.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-inactive-disabled">Disabled inactive state</a></li>
-</ul>
-
+						<p>Disabled state overrides for the buttons are applied in addition to the normal state options</p>
 					</div>
 					
 					
@@ -146,8 +133,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/opacity" title="opacity"></a>
-	<h3 class="method-title"><code><a href="#//api/name/opacity">&nbsp;&nbsp;opacity</a></code>
+	<a name="//api/name/style" title="style"></a>
+	<h3 class="method-title"><code><a href="#//api/name/style">&nbsp;&nbsp;style</a></code>
 </h3>
 
 	<div class="method-info">
@@ -157,58 +144,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Opacity of series elements (dataLabels, line, area).</p>
+				<p>Disabled state CSS style overrides for the buttons' text</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *opacity</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>0.2</code>.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIInactive.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/animation" title="animation"></a>
-	<h3 class="method-title"><code><a href="#//api/name/animation">&nbsp;&nbsp;animation</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Animation when not hovering over the marker.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIAnimationOptionsObject *animation</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIStyle *style</code></div>
 
 		    
 			
@@ -226,106 +167,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIInactive.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/enabled" title="enabled"></a>
-	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Enable or disable the inactive state for a series</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *enabled</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>true</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/series-states-inactive-disabled">Disabled inactive state</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIInactive.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/linkOpacity" title="linkOpacity"></a>
-	<h3 class="method-title"><code><a href="#//api/name/linkOpacity">&nbsp;&nbsp;linkOpacity</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Opacity for the links between nodes in the sankey diagram in inactive mode.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *linkOpacity</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>0.1</code>.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIInactive.h</code></p>
+				<p><code class="declared-in-ref">HIDisabled.h</code></p>
 			</div>
 			
 			
