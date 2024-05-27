@@ -340,6 +340,10 @@
 		<data>
 		ahJWktALEC5Rsee6mU0Aq+SLQSA=
 		</data>
+		<key>Headers/HIDisabled.h</key>
+		<data>
+		Ux0hl3ToRz1f040hHffcAIFM3bg=
+		</data>
 		<key>Headers/HIDragDrop.h</key>
 		<data>
 		8R7GPlQwhpXUXl4eFFdZrbhP7Do=
@@ -419,6 +423,10 @@
 		<key>Headers/HIGeoJSON.h</key>
 		<data>
 		8bpfVUcTjEJWnrCWSvHELA2se3I=
+		</data>
+		<key>Headers/HIGlobal.h</key>
+		<data>
+		7AD3MayJ5TPAcSPMFlD5Wi5D2C8=
 		</data>
 		<key>Headers/HIGlobalContextTracks.h</key>
 		<data>
@@ -6835,6 +6843,13 @@
 			LfpWJMSnXr0vrk2X5nRkG3H/j8QFnSAJH6T3avD6IOM=
 			</data>
 		</dict>
+		<key>Headers/HIDisabled.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NjhjkVjOjVdwpIR0Xhuo5fUeeAG0AoVrjS8i9aTykS8=
+			</data>
+		</dict>
 		<key>Headers/HIDragDrop.h</key>
 		<dict>
 			<key>hash2</key>
@@ -6973,6 +6988,13 @@
 			<key>hash2</key>
 			<data>
 			DvVE8ucnsXJ2ggsZnkquSqbnsLb+JDEaR6NiGPLprqc=
+			</data>
+		</dict>
+		<key>Headers/HIGlobal.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			EWk1Aa9fU5Vl7OIS3pILJg3cRrcbPRM2YF4BgYea5NY=
 			</data>
 		</dict>
 		<key>Headers/HIGlobalContextTracks.h</key>

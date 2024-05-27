@@ -571,10 +571,10 @@
 		CDE0D0D825CE83CA0055467B /* HIAccessibilitySeries.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE0D0D625CE83CA0055467B /* HIAccessibilitySeries.m */; };
 		CDE0D0E025CE83D80055467B /* HIAccessibilityLegend.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE0D0DE25CE83D80055467B /* HIAccessibilityLegend.m */; };
 		CDE0D0E925CE83EC0055467B /* HIAccessibilityExporting.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE0D0E725CE83EC0055467B /* HIAccessibilityExporting.m */; };
-		D090FF6E2C049A610050DCB6 /* HIGlobal.h in Headers */ = {isa = PBXBuildFile; fileRef = D090FF6C2C049A610050DCB6 /* HIGlobal.h */; };
+		D090FF6E2C049A610050DCB6 /* HIGlobal.h in Headers */ = {isa = PBXBuildFile; fileRef = D090FF6C2C049A610050DCB6 /* HIGlobal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D090FF6F2C049A610050DCB6 /* HIGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = D090FF6D2C049A610050DCB6 /* HIGlobal.m */; };
 		D0A2E31C2C0487F6001AAD93 /* HIDisabled.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A2E31A2C0487F6001AAD93 /* HIDisabled.m */; };
-		D0A2E31D2C0487F6001AAD93 /* HIDisabled.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A2E31B2C0487F6001AAD93 /* HIDisabled.h */; };
+		D0A2E31D2C0487F6001AAD93 /* HIDisabled.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A2E31B2C0487F6001AAD93 /* HIDisabled.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC1449381F4A854900612B1C /* HIChartViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = EC1449371F4A854900612B1C /* HIChartViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 

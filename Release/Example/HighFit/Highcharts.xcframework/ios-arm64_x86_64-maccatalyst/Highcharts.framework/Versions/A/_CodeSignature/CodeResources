@@ -5796,6 +5796,13 @@
 			LfpWJMSnXr0vrk2X5nRkG3H/j8QFnSAJH6T3avD6IOM=
 			</data>
 		</dict>
+		<key>Headers/HIDisabled.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NjhjkVjOjVdwpIR0Xhuo5fUeeAG0AoVrjS8i9aTykS8=
+			</data>
+		</dict>
 		<key>Headers/HIDragDrop.h</key>
 		<dict>
 			<key>hash2</key>
@@ -5934,6 +5941,13 @@
 			<key>hash2</key>
 			<data>
 			DvVE8ucnsXJ2ggsZnkquSqbnsLb+JDEaR6NiGPLprqc=
+			</data>
+		</dict>
+		<key>Headers/HIGlobal.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			EWk1Aa9fU5Vl7OIS3pILJg3cRrcbPRM2YF4BgYea5NY=
 			</data>
 		</dict>
 		<key>Headers/HIGlobalContextTracks.h</key>
