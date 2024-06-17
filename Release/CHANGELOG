@@ -6,12 +6,6 @@
 
 ## Framework:
 
-1. No changes, just covering a bad npm upload for v11.4.2.
-
-# Version 11.4.2
-
-## Framework:
-
 1. Fixed #21109, tooltip animation was not smooth. Added the option to set tooltip.animation as an animation object, not just a boolean as previously.
 2. Added new options pane.background.borderRadius, and plotBands.borderRadius for gauges.
 
