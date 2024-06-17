@@ -103,6 +103,9 @@ static NSBundle *highchartsBundle = nil;
     self.closures = [[NSMutableDictionary alloc] init];
     self.webView = [[_synced boolValue] ? [HIWKSyncedWebView alloc] : [WKWebView alloc] initWithFrame:frame configuration:configuration];
     self.webView.scrollView.scrollEnabled = NO;
+    if (@available(iOS 16.4, *)) {
+        self.webView.inspectable = YES;
+    }
     self.webView.multipleTouchEnabled = NO;
     self.webView.navigationDelegate = self;
     [self addSubview:self.webView];
