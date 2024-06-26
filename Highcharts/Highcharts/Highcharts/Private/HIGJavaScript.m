@@ -12,6 +12,11 @@
 
 - (NSString*)JSObject:(id)object
 {
+    if (![NSJSONSerialization isValidJSONObject:object]) {
+        NSAssert(NO, @"Highcharts options was not a valid JSON!");
+        return nil;
+    }
+    
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:object
                                                        options:0
