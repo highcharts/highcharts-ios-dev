@@ -123,7 +123,7 @@
 		
 		<option value="//api/name/hide">hide</option>
 		
-		<option value="//api/name/legendItemClick">legendItemClick</option>
+		<option value="//api/name/itemClick">itemClick</option>
 		
 		<option value="//api/name/load">load</option>
 		
@@ -1356,6 +1356,58 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/itemClick" title="itemClick"></a>
+	<h3 class="method-title"><code><a href="#//api/name/itemClick">&nbsp;&nbsp;itemClick</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Fires when the legend item belonging to the series is clicked. One parameter, <code>event</code>, is passed to the function. The default action is to toggle the visibility of the series, point or data class. This can be prevented by returning <code>false</code> or calling <code>event.preventDefault()</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *itemClick</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/series-legend-itemclick/">Confirm hiding and showing</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/pie-legend-itemclick/">Confirm toggle visibility of pie slices</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIEvents.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/unselect" title="unselect"></a>
 	<h3 class="method-title"><code><a href="#//api/name/unselect">&nbsp;&nbsp;unselect</a></code>
 </h3>
@@ -2483,47 +2535,6 @@
 		    
 
 			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *onEnd</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIEvents.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/legendItemClick" title="legendItemClick"></a>
-	<h3 class="method-title"><code><a href="#//api/name/legendItemClick">&nbsp;&nbsp;legendItemClick</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Fires when the legend item belonging to the colorAxis is clicked. One parameter, <code>event</code>, is passed to the function.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIFunction *legendItemClick</code></div>
 
 		    
 			

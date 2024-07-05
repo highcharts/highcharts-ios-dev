@@ -138,7 +138,7 @@
 		params[@"type"] = self.type;
 	}
 	if (self.events) {
-		params[@"events"] = [self.events getParams];
+		params[@"events"] = self.events;
 	}
 	if (self.tickPixelInterval) {
 		params[@"tickPixelInterval"] = self.tickPixelInterval;
@@ -391,10 +391,10 @@
 	[self updateNSObject:oldValue newValue:type propertyName:@"type"];
 }
 
--(void)setEvents:(HIEvents *)events {
-	HIEvents *oldValue = _events;
+-(void)setEvents:(id)events {
+	id oldValue = _events;
 	_events = events;
-	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
+	[self updateNSObject:oldValue newValue:events propertyName:@"events"];
 }
 
 -(void)setTickPixelInterval:(NSNumber *)tickPixelInterval {

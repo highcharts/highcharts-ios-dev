@@ -28,6 +28,7 @@
 	copyLegend.width = [self.width copyWithZone: zone];
 	copyLegend.itemMarginBottom = [self.itemMarginBottom copyWithZone: zone];
 	copyLegend.backgroundColor = [self.backgroundColor copyWithZone: zone];
+	copyLegend.events = [self.events copyWithZone: zone];
 	copyLegend.itemMarginTop = [self.itemMarginTop copyWithZone: zone];
 	copyLegend.bubbleLegend = [self.bubbleLegend copyWithZone: zone];
 	copyLegend.labelFormat = [self.labelFormat copyWithZone: zone];
@@ -115,6 +116,9 @@
 	}
 	if (self.backgroundColor) {
 		params[@"backgroundColor"] = [self.backgroundColor getData];
+	}
+	if (self.events) {
+		params[@"events"] = [self.events getParams];
 	}
 	if (self.itemMarginTop) {
 		params[@"itemMarginTop"] = self.itemMarginTop;
@@ -308,6 +312,12 @@
 	HIColor *oldValue = _backgroundColor;
 	_backgroundColor = backgroundColor;
 	[self updateHIObject:oldValue newValue:backgroundColor propertyName:@"backgroundColor"];
+}
+
+-(void)setEvents:(HIEvents *)events {
+	HIEvents *oldValue = _events;
+	_events = events;
+	[self updateHIObject:oldValue newValue:events propertyName:@"events"];
 }
 
 -(void)setItemMarginTop:(NSNumber *)itemMarginTop {

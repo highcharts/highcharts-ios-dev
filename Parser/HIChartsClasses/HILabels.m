@@ -272,8 +272,8 @@
 	[self updateNSObject:oldValue newValue:format propertyName:@"format"];
 }
 
--(void)setPadding:(NSString *)padding {
-	NSString *oldValue = _padding;
+-(void)setPadding:(NSNumber *)padding {
+	NSNumber *oldValue = _padding;
 	_padding = padding;
 	[self updateNSObject:oldValue newValue:padding propertyName:@"padding"];
 }
