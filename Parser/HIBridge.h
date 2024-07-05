@@ -99,7 +99,6 @@
 #import "HIDataGrouping.h"
 #import "HIData.h"
 #import "HIPosition.h"
-#import "HIDumbell.h"
 #import "HIButtonOptions.h"
 #import "HIGlobalTracks.h"
 #import "HILink.h"
