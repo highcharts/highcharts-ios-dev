@@ -26,6 +26,7 @@
 	copyTreemap.zIndex = [self.zIndex copyWithZone: zone];
 	copyTreemap.ignoreHiddenPoint = [self.ignoreHiddenPoint copyWithZone: zone];
 	copyTreemap.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyTreemap.traverseToLeaf = [self.traverseToLeaf copyWithZone: zone];
 	copyTreemap.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyTreemap.states = [self.states copyWithZone: zone];
 	copyTreemap.colors = [self.colors copyWithZone: zone];
@@ -106,6 +107,9 @@
 	if (self.borderRadius) {
 		params[@"borderRadius"] = self.borderRadius;
 	}
+	if (self.traverseToLeaf) {
+		params[@"traverseToLeaf"] = self.traverseToLeaf;
+	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
@@ -167,6 +171,12 @@
 	NSNumber *oldValue = _borderRadius;
 	_borderRadius = borderRadius;
 	[self updateNSObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+}
+
+-(void)setTraverseToLeaf:(NSNumber *)traverseToLeaf {
+	NSNumber *oldValue = _traverseToLeaf;
+	_traverseToLeaf = traverseToLeaf;
+	[self updateNSObject:oldValue newValue:traverseToLeaf propertyName:@"traverseToLeaf"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {

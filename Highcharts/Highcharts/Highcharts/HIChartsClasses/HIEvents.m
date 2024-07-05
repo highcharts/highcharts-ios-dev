@@ -34,6 +34,7 @@
 	copyEvents.drilldown = [self.drilldown copyWithZone: zone];
 	copyEvents.redraw = [self.redraw copyWithZone: zone];
 	copyEvents.afterPrint = [self.afterPrint copyWithZone: zone];
+	copyEvents.itemClick = [self.itemClick copyWithZone: zone];
 	copyEvents.unselect = [self.unselect copyWithZone: zone];
 	copyEvents.drop = [self.drop copyWithZone: zone];
 	copyEvents.update = [self.update copyWithZone: zone];
@@ -59,7 +60,6 @@
 	copyEvents.beforePlay = [self.beforePlay copyWithZone: zone];
 	copyEvents.onSeriesStart = [self.onSeriesStart copyWithZone: zone];
 	copyEvents.onEnd = [self.onEnd copyWithZone: zone];
-	copyEvents.legendItemClick = [self.legendItemClick copyWithZone: zone];
 	copyEvents.hide = [self.hide copyWithZone: zone];
 	copyEvents.show = [self.show copyWithZone: zone];
 	copyEvents.afterAnimate = [self.afterAnimate copyWithZone: zone];
@@ -142,6 +142,9 @@
 	if (self.afterPrint) {
 		params[@"afterPrint"] = [self.afterPrint getFunction];
 	}
+	if (self.itemClick) {
+		params[@"itemClick"] = [self.itemClick getFunction];
+	}
 	if (self.unselect) {
 		params[@"unselect"] = [self.unselect getFunction];
 	}
@@ -216,9 +219,6 @@
 	}
 	if (self.onEnd) {
 		params[@"onEnd"] = [self.onEnd getFunction];
-	}
-	if (self.legendItemClick) {
-		params[@"legendItemClick"] = [self.legendItemClick getFunction];
 	}
 	if (self.hide) {
 		params[@"hide"] = [self.hide getFunction];
@@ -381,6 +381,12 @@
 	[self updateHIObject:oldValue newValue:afterPrint propertyName:@"afterPrint"];
 }
 
+-(void)setItemClick:(HIFunction *)itemClick {
+	HIFunction *oldValue = _itemClick;
+	_itemClick = itemClick;
+	[self updateHIObject:oldValue newValue:itemClick propertyName:@"itemClick"];
+}
+
 -(void)setUnselect:(HIFunction *)unselect {
 	HIFunction *oldValue = _unselect;
 	_unselect = unselect;
@@ -529,12 +535,6 @@
 	HIFunction *oldValue = _onEnd;
 	_onEnd = onEnd;
 	[self updateHIObject:oldValue newValue:onEnd propertyName:@"onEnd"];
-}
-
--(void)setLegendItemClick:(HIFunction *)legendItemClick {
-	HIFunction *oldValue = _legendItemClick;
-	_legendItemClick = legendItemClick;
-	[self updateHIObject:oldValue newValue:legendItemClick propertyName:@"legendItemClick"];
 }
 
 -(void)setHide:(HIFunction *)hide {

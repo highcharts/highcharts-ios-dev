@@ -55,7 +55,16 @@
 		params[@"colors"] = array;
 	}
 	if (self.pane) {
-		params[@"pane"] = [self.pane getParams];
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.pane) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"pane"] = array;
 	}
 	if (self.responsive) {
 		params[@"responsive"] = [self.responsive getParams];
@@ -232,10 +241,10 @@
 	[self updateArrayObject:oldValue newValue:colors propertyName:@"colors"];
 }
 
--(void)setPane:(HIPane *)pane {
-	HIPane *oldValue = _pane;
+-(void)setPane:(NSArray<HIPane *> *)pane {
+	NSArray<HIPane *> *oldValue = _pane;
 	_pane = pane;
-	[self updateHIObject:oldValue newValue:pane propertyName:@"pane"];
+	[self updateArrayObject:oldValue newValue:pane propertyName:@"pane"];
 }
 
 -(void)setResponsive:(HIResponsive *)responsive {

@@ -32,6 +32,7 @@
 	copyTreegraph.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyTreegraph.nodeDistance = [self.nodeDistance copyWithZone: zone];
 	copyTreegraph.fillSpace = [self.fillSpace copyWithZone: zone];
+	copyTreegraph.traverseToLeaf = [self.traverseToLeaf copyWithZone: zone];
 	copyTreegraph.cropThreshold = [self.cropThreshold copyWithZone: zone];
 	copyTreegraph.states = [self.states copyWithZone: zone];
 	copyTreegraph.colors = [self.colors copyWithZone: zone];
@@ -116,6 +117,9 @@
 	if (self.fillSpace) {
 		params[@"fillSpace"] = self.fillSpace;
 	}
+	if (self.traverseToLeaf) {
+		params[@"traverseToLeaf"] = self.traverseToLeaf;
+	}
 	if (self.colors) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (HIColor *obj in self.colors) {
@@ -171,6 +175,12 @@
 	NSNumber *oldValue = _fillSpace;
 	_fillSpace = fillSpace;
 	[self updateNSObject:oldValue newValue:fillSpace propertyName:@"fillSpace"];
+}
+
+-(void)setTraverseToLeaf:(NSNumber *)traverseToLeaf {
+	NSNumber *oldValue = _traverseToLeaf;
+	_traverseToLeaf = traverseToLeaf;
+	[self updateNSObject:oldValue newValue:traverseToLeaf propertyName:@"traverseToLeaf"];
 }
 
 -(void)setColors:(NSArray<HIColor *> *)colors {
