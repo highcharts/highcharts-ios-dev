@@ -28,6 +28,8 @@
 	copyLabel.x = [self.x copyWithZone: zone];
 	copyLabel.rotation = [self.rotation copyWithZone: zone];
 	copyLabel.textAlign = [self.textAlign copyWithZone: zone];
+	copyLabel.allowOverlap = [self.allowOverlap copyWithZone: zone];
+	copyLabel.inside = [self.inside copyWithZone: zone];
 	return copyLabel;
 }
 
@@ -96,6 +98,12 @@
 	}
 	if (self.textAlign) {
 		params[@"textAlign"] = self.textAlign;
+	}
+	if (self.allowOverlap) {
+		params[@"allowOverlap"] = self.allowOverlap;
+	}
+	if (self.inside) {
+		params[@"inside"] = self.inside;
 	}
 	return params;
 }
@@ -208,6 +216,18 @@
 	NSString *oldValue = _textAlign;
 	_textAlign = textAlign;
 	[self updateNSObject:oldValue newValue:textAlign propertyName:@"textAlign"];
+}
+
+-(void)setAllowOverlap:(NSNumber *)allowOverlap {
+	NSNumber *oldValue = _allowOverlap;
+	_allowOverlap = allowOverlap;
+	[self updateNSObject:oldValue newValue:allowOverlap propertyName:@"allowOverlap"];
+}
+
+-(void)setInside:(NSNumber *)inside {
+	NSNumber *oldValue = _inside;
+	_inside = inside;
+	[self updateNSObject:oldValue newValue:inside propertyName:@"inside"];
 }
 
 @end
