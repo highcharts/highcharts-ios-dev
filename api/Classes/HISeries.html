@@ -149,6 +149,8 @@
 		
 		<option value="//api/name/legendSymbol">legendSymbol</option>
 		
+		<option value="//api/name/legendSymbolColor">legendSymbolColor</option>
+		
 		<option value="//api/name/lineWidth">lineWidth</option>
 		
 		<option value="//api/name/linecap">linecap</option>
@@ -3247,6 +3249,59 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/legendSymbolColor" title="legendSymbolColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/legendSymbolColor">&nbsp;&nbsp;legendSymbolColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Defines the color of the legend symbol for this series. Defaults to undefined, in which case the series color is used. Does not work with styled mode.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) HIColor *legendSymbolColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/legend-symbol-color/">Change the legend symbol color</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HISeries.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/selected" title="selected"></a>
 	<h3 class="method-title"><code><a href="#//api/name/selected">&nbsp;&nbsp;selected</a></code>
 </h3>
@@ -4217,12 +4272,12 @@ scatter or spline. From version 2.3, arearange, areasplinerange and columnrange 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>If no x values are given for the points in a series, pointStart defines on what value to start. For example, if a series contains one yearly value starting from 1945, set pointStart to 1945. If combined with <code>relativeXValue</code>, an x value can be set on each point. The x value from the point options is multiplied by <code>pointInterval</code> and added to <code>pointStart</code> to produce a modified x value.</p>
+				<p>If no x values are given for the points in a series, <code>pointStart</code> defines on what value to start. For example, if a series contains one yearly value starting from 1945, set <code>pointStart</code> to 1945. The <code>pointStart</code> setting can be a number, or a datetime string that is parsed according to the <code>time.timezone</code> setting. If combined with <code>relativeXValue</code>, an x value can be set on each point. The x value from the point options is multiplied by <code>pointInterval</code> and added to <code>pointStart</code> to produce a modified x value.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *pointStart</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id pointStart</code></div>
 
 		    
 			

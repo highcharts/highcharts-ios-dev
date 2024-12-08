@@ -2699,12 +2699,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The x value of the point. For datetime axes, the X value is the timestamp in milliseconds since 1970.</p>
+				<p>The x value of the point. For datetime axes, a number value is the timestamp in milliseconds since 1970, while a date string is parsed according to the [current time zone] (https://api.highcharts.com/highcharts/time.timezone) of the chart. Date strings are supported since v12.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *x</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id x</code></div>
 
 		    
 			
