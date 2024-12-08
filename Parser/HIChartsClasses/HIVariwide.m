@@ -67,6 +67,7 @@
 	copyVariwide.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyVariwide.definition = [self.definition copyWithZone: zone];
 	copyVariwide.keys = [self.keys copyWithZone: zone];
+	copyVariwide.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyVariwide.selected = [self.selected copyWithZone: zone];
 	copyVariwide.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyVariwide.accessibility = [self.accessibility copyWithZone: zone];

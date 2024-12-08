@@ -710,8 +710,8 @@
 	[self updateNSObject:oldValue newValue:id propertyName:@"id"];
 }
 
--(void)setX:(NSNumber *)x {
-	NSNumber *oldValue = _x;
+-(void)setX:(id)x {
+	id oldValue = _x;
 	_x = x;
 	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
 }

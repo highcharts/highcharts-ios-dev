@@ -57,6 +57,7 @@
 	copyTimeline.opacity = [self.opacity copyWithZone: zone];
 	copyTimeline.definition = [self.definition copyWithZone: zone];
 	copyTimeline.keys = [self.keys copyWithZone: zone];
+	copyTimeline.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyTimeline.selected = [self.selected copyWithZone: zone];
 	copyTimeline.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyTimeline.accessibility = [self.accessibility copyWithZone: zone];

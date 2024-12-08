@@ -67,6 +67,7 @@
 	copyFunnel.opacity = [self.opacity copyWithZone: zone];
 	copyFunnel.definition = [self.definition copyWithZone: zone];
 	copyFunnel.keys = [self.keys copyWithZone: zone];
+	copyFunnel.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyFunnel.selected = [self.selected copyWithZone: zone];
 	copyFunnel.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyFunnel.accessibility = [self.accessibility copyWithZone: zone];

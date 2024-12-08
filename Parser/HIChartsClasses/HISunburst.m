@@ -56,6 +56,7 @@
 	copySunburst.opacity = [self.opacity copyWithZone: zone];
 	copySunburst.definition = [self.definition copyWithZone: zone];
 	copySunburst.keys = [self.keys copyWithZone: zone];
+	copySunburst.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copySunburst.selected = [self.selected copyWithZone: zone];
 	copySunburst.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copySunburst.accessibility = [self.accessibility copyWithZone: zone];

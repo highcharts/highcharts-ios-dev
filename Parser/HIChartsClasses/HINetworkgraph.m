@@ -54,6 +54,7 @@
 	copyNetworkgraph.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyNetworkgraph.definition = [self.definition copyWithZone: zone];
 	copyNetworkgraph.keys = [self.keys copyWithZone: zone];
+	copyNetworkgraph.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyNetworkgraph.selected = [self.selected copyWithZone: zone];
 	copyNetworkgraph.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyNetworkgraph.accessibility = [self.accessibility copyWithZone: zone];

@@ -55,6 +55,7 @@
 	copyWordcloud.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyWordcloud.definition = [self.definition copyWithZone: zone];
 	copyWordcloud.keys = [self.keys copyWithZone: zone];
+	copyWordcloud.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyWordcloud.selected = [self.selected copyWithZone: zone];
 	copyWordcloud.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyWordcloud.accessibility = [self.accessibility copyWithZone: zone];

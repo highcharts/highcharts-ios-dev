@@ -26,11 +26,12 @@
 	copyDependencywheel.xAxis = [self.xAxis copyWithZone: zone];
 	copyDependencywheel.yAxis = [self.yAxis copyWithZone: zone];
 	copyDependencywheel.zIndex = [self.zIndex copyWithZone: zone];
-	copyDependencywheel.size = [self.size copyWithZone: zone];
-	copyDependencywheel.dataLabels = [self.dataLabels copyWithZone: zone];
-	copyDependencywheel.startAngle = [self.startAngle copyWithZone: zone];
 	copyDependencywheel.center = [self.center copyWithZone: zone];
 	copyDependencywheel.curveFactor = [self.curveFactor copyWithZone: zone];
+	copyDependencywheel.borderRadius = [self.borderRadius copyWithZone: zone];
+	copyDependencywheel.dataLabels = [self.dataLabels copyWithZone: zone];
+	copyDependencywheel.startAngle = [self.startAngle copyWithZone: zone];
+	copyDependencywheel.size = [self.size copyWithZone: zone];
 	copyDependencywheel.colorByPoint = [self.colorByPoint copyWithZone: zone];
 	copyDependencywheel.opacity = [self.opacity copyWithZone: zone];
 	copyDependencywheel.minLinkWidth = [self.minLinkWidth copyWithZone: zone];
@@ -96,12 +97,6 @@
 		}
 		params[@"nodes"] = array;
 	}
-	if (self.size) {
-		params[@"size"] = self.size;
-	}
-	if (self.startAngle) {
-		params[@"startAngle"] = self.startAngle;
-	}
 	if (self.center) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
 		for (id obj in self.center) {
@@ -116,6 +111,15 @@
 	}
 	if (self.curveFactor) {
 		params[@"curveFactor"] = self.curveFactor;
+	}
+	if (self.borderRadius) {
+		params[@"borderRadius"] = [self.borderRadius getParams];
+	}
+	if (self.startAngle) {
+		params[@"startAngle"] = self.startAngle;
+	}
+	if (self.size) {
+		params[@"size"] = self.size;
 	}
 	if (self.colorByPoint) {
 		params[@"colorByPoint"] = self.colorByPoint;
@@ -174,18 +178,6 @@
 	[self updateArrayObject:oldValue newValue:nodes propertyName:@"nodes"];
 }
 
--(void)setSize:(id)size {
-	id oldValue = _size;
-	_size = size;
-	[self updateNSObject:oldValue newValue:size propertyName:@"size"];
-}
-
--(void)setStartAngle:(NSNumber *)startAngle {
-	NSNumber *oldValue = _startAngle;
-	_startAngle = startAngle;
-	[self updateNSObject:oldValue newValue:startAngle propertyName:@"startAngle"];
-}
-
 -(void)setCenter:(NSArray *)center {
 	NSArray *oldValue = _center;
 	_center = center;
@@ -196,6 +188,24 @@
 	NSNumber *oldValue = _curveFactor;
 	_curveFactor = curveFactor;
 	[self updateNSObject:oldValue newValue:curveFactor propertyName:@"curveFactor"];
+}
+
+-(void)setBorderRadius:(HIBorderRadiusOptionsObject *)borderRadius {
+	HIBorderRadiusOptionsObject *oldValue = _borderRadius;
+	_borderRadius = borderRadius;
+	[self updateHIObject:oldValue newValue:borderRadius propertyName:@"borderRadius"];
+}
+
+-(void)setStartAngle:(NSNumber *)startAngle {
+	NSNumber *oldValue = _startAngle;
+	_startAngle = startAngle;
+	[self updateNSObject:oldValue newValue:startAngle propertyName:@"startAngle"];
+}
+
+-(void)setSize:(id)size {
+	id oldValue = _size;
+	_size = size;
+	[self updateNSObject:oldValue newValue:size propertyName:@"size"];
 }
 
 -(void)setColorByPoint:(NSNumber *)colorByPoint {

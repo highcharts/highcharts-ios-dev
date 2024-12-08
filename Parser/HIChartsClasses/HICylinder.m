@@ -70,6 +70,7 @@
 	copyCylinder.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyCylinder.definition = [self.definition copyWithZone: zone];
 	copyCylinder.keys = [self.keys copyWithZone: zone];
+	copyCylinder.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyCylinder.selected = [self.selected copyWithZone: zone];
 	copyCylinder.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyCylinder.accessibility = [self.accessibility copyWithZone: zone];

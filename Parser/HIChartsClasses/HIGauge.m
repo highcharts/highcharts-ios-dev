@@ -45,6 +45,7 @@
 	copyGauge.opacity = [self.opacity copyWithZone: zone];
 	copyGauge.definition = [self.definition copyWithZone: zone];
 	copyGauge.keys = [self.keys copyWithZone: zone];
+	copyGauge.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyGauge.selected = [self.selected copyWithZone: zone];
 	copyGauge.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyGauge.accessibility = [self.accessibility copyWithZone: zone];

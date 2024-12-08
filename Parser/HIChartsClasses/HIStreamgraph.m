@@ -71,6 +71,7 @@
 	copyStreamgraph.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyStreamgraph.definition = [self.definition copyWithZone: zone];
 	copyStreamgraph.keys = [self.keys copyWithZone: zone];
+	copyStreamgraph.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyStreamgraph.selected = [self.selected copyWithZone: zone];
 	copyStreamgraph.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyStreamgraph.accessibility = [self.accessibility copyWithZone: zone];

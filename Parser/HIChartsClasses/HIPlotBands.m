@@ -108,14 +108,14 @@
 	[self updateNSObject:oldValue newValue:zIndex propertyName:@"zIndex"];
 }
 
--(void)setFrom:(NSNumber *)from {
-	NSNumber *oldValue = _from;
+-(void)setFrom:(id)from {
+	id oldValue = _from;
 	_from = from;
 	[self updateNSObject:oldValue newValue:from propertyName:@"from"];
 }
 
--(void)setTo:(NSNumber *)to {
-	NSNumber *oldValue = _to;
+-(void)setTo:(id)to {
+	id oldValue = _to;
 	_to = to;
 	[self updateNSObject:oldValue newValue:to propertyName:@"to"];
 }

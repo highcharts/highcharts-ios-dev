@@ -13,6 +13,7 @@
 	copyLang.downloadCSV = [self.downloadCSV copyWithZone: zone];
 	copyLang.downloadXLS = [self.downloadXLS copyWithZone: zone];
 	copyLang.exportInProgress = [self.exportInProgress copyWithZone: zone];
+	copyLang.locale = [self.locale copyWithZone: zone];
 	copyLang.accessibility = [self.accessibility copyWithZone: zone];
 	copyLang.hideData = [self.hideData copyWithZone: zone];
 	copyLang.shortWeekdays = [self.shortWeekdays copyWithZone: zone];
@@ -56,6 +57,18 @@
 	}
 	if (self.exportInProgress) {
 		params[@"exportInProgress"] = self.exportInProgress;
+	}
+	if (self.locale) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		for (id obj in self.locale) {
+			if ([obj isKindOfClass: [HIChartsJSONSerializable class]]) {
+				[array addObject:[(HIChartsJSONSerializable *)obj getParams]];
+			}
+			else {
+				[array addObject: obj];
+			}
+		}
+		params[@"locale"] = array;
 	}
 	if (self.accessibility) {
 		params[@"accessibility"] = [self.accessibility getParams];
@@ -210,6 +223,12 @@
 	NSString *oldValue = _exportInProgress;
 	_exportInProgress = exportInProgress;
 	[self updateNSObject:oldValue newValue:exportInProgress propertyName:@"exportInProgress"];
+}
+
+-(void)setLocale:(NSArray<NSString *> *)locale {
+	NSArray<NSString *> *oldValue = _locale;
+	_locale = locale;
+	[self updateArrayObject:oldValue newValue:locale propertyName:@"locale"];
 }
 
 -(void)setAccessibility:(HIAccessibility *)accessibility {

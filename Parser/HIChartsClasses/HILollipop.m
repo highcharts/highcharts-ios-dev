@@ -93,6 +93,7 @@
 	copyLollipop.pointStart = [self.pointStart copyWithZone: zone];
 	copyLollipop.connectEnds = [self.connectEnds copyWithZone: zone];
 	copyLollipop.showInLegend = [self.showInLegend copyWithZone: zone];
+	copyLollipop.boostBlending = [self.boostBlending copyWithZone: zone];
 	return copyLollipop;
 }
 

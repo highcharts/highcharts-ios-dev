@@ -16,10 +16,10 @@
 	copyStyle.color = [self.color copyWithZone: zone];
 	copyStyle.textOutline = [self.textOutline copyWithZone: zone];
 	copyStyle.cursor = [self.cursor copyWithZone: zone];
+	copyStyle.textOverflow = [self.textOverflow copyWithZone: zone];
 	copyStyle.whiteSpace = [self.whiteSpace copyWithZone: zone];
 	copyStyle.borderRadius = [self.borderRadius copyWithZone: zone];
 	copyStyle.lineWidth = [self.lineWidth copyWithZone: zone];
-	copyStyle.textOverflow = [self.textOverflow copyWithZone: zone];
 	copyStyle.stroke = [self.stroke copyWithZone: zone];
 	copyStyle.stroke-width = [self.stroke-width copyWithZone: zone];
 	copyStyle.fill = [self.fill copyWithZone: zone];
@@ -47,6 +47,9 @@
 	if (self.cursor) {
 		params[@"cursor"] = self.cursor;
 	}
+	if (self.textOverflow) {
+		params[@"textOverflow"] = self.textOverflow;
+	}
 	if (self.whiteSpace) {
 		params[@"whiteSpace"] = self.whiteSpace;
 	}
@@ -55,9 +58,6 @@
 	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
-	}
-	if (self.textOverflow) {
-		params[@"textOverflow"] = self.textOverflow;
 	}
 	if (self.stroke) {
 		params[@"stroke"] = self.stroke;
@@ -109,6 +109,12 @@
 	[self updateNSObject:oldValue newValue:cursor propertyName:@"cursor"];
 }
 
+-(void)setTextOverflow:(NSString *)textOverflow {
+	NSString *oldValue = _textOverflow;
+	_textOverflow = textOverflow;
+	[self updateNSObject:oldValue newValue:textOverflow propertyName:@"textOverflow"];
+}
+
 -(void)setWhiteSpace:(NSString *)whiteSpace {
 	NSString *oldValue = _whiteSpace;
 	_whiteSpace = whiteSpace;
@@ -125,12 +131,6 @@
 	NSNumber *oldValue = _lineWidth;
 	_lineWidth = lineWidth;
 	[self updateNSObject:oldValue newValue:lineWidth propertyName:@"lineWidth"];
-}
-
--(void)setTextOverflow:(NSString *)textOverflow {
-	NSString *oldValue = _textOverflow;
-	_textOverflow = textOverflow;
-	[self updateNSObject:oldValue newValue:textOverflow propertyName:@"textOverflow"];
 }
 
 -(void)setStroke:(NSString *)stroke {
