@@ -575,6 +575,8 @@
 		D090FF6F2C049A610050DCB6 /* HIGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = D090FF6D2C049A610050DCB6 /* HIGlobal.m */; };
 		D0A2E31C2C0487F6001AAD93 /* HIDisabled.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A2E31A2C0487F6001AAD93 /* HIDisabled.m */; };
 		D0A2E31D2C0487F6001AAD93 /* HIDisabled.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A2E31B2C0487F6001AAD93 /* HIDisabled.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0CAA2AA2D06488F00455CA3 /* HIDateTimeFormatOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = D0CAA2A92D06488F00455CA3 /* HIDateTimeFormatOptions.h */; };
+		D0CAA2AC2D06489900455CA3 /* HIDateTimeFormatOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CAA2AB2D06489800455CA3 /* HIDateTimeFormatOptions.m */; };
 		EC1449381F4A854900612B1C /* HIChartViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = EC1449371F4A854900612B1C /* HIChartViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -1135,6 +1137,8 @@
 		D090FF6D2C049A610050DCB6 /* HIGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIGlobal.m; sourceTree = "<group>"; };
 		D0A2E31A2C0487F6001AAD93 /* HIDisabled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDisabled.m; sourceTree = "<group>"; };
 		D0A2E31B2C0487F6001AAD93 /* HIDisabled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDisabled.h; sourceTree = "<group>"; };
+		D0CAA2A92D06488F00455CA3 /* HIDateTimeFormatOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDateTimeFormatOptions.h; sourceTree = "<group>"; };
+		D0CAA2AB2D06489800455CA3 /* HIDateTimeFormatOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIDateTimeFormatOptions.m; sourceTree = "<group>"; };
 		EC1449371F4A854900612B1C /* HIChartViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIChartViewDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1160,6 +1164,8 @@
 		2011ABB31E7013F30027DA10 /* HIChartsClasses */ = {
 			isa = PBXGroup;
 			children = (
+				D0CAA2AB2D06489800455CA3 /* HIDateTimeFormatOptions.m */,
+				D0CAA2A92D06488F00455CA3 /* HIDateTimeFormatOptions.h */,
 				D090FF6C2C049A610050DCB6 /* HIGlobal.h */,
 				D090FF6D2C049A610050DCB6 /* HIGlobal.m */,
 				D0A2E31B2C0487F6001AAD93 /* HIDisabled.h */,
@@ -1943,6 +1949,7 @@
 				CD07399A264479BA00D6EF30 /* HIArrow.h in Headers */,
 				CD0739A4264479BA00D6EF30 /* HIControlPointOptions.h in Headers */,
 				CD07386B264479B900D6EF30 /* HIResponsive.h in Headers */,
+				D0CAA2AA2D06488F00455CA3 /* HIDateTimeFormatOptions.h in Headers */,
 				CD073895264479BA00D6EF30 /* HIVariablepie.h in Headers */,
 				CD5AF2E9272DA03E00287289 /* HIAnnotationMockPointOptionsObject.h in Headers */,
 				5B6C0C8D2A36523200BA3913 /* HIDepth.h in Headers */,
@@ -2271,6 +2278,7 @@
 				CD073879264479BA00D6EF30 /* HISolidgauge.m in Sources */,
 				D090FF6F2C049A610050DCB6 /* HIGlobal.m in Sources */,
 				5B6C0C902A36523200BA3913 /* HIVolume.m in Sources */,
+				D0CAA2AC2D06489900455CA3 /* HIDateTimeFormatOptions.m in Sources */,
 				CD0739CC264479BA00D6EF30 /* HIYear.m in Sources */,
 				CD073922264479BA00D6EF30 /* HIMinute.m in Sources */,
 				CD0738C1264479BA00D6EF30 /* HITheme.m in Sources */,

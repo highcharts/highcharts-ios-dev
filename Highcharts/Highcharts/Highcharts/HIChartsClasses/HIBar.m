@@ -72,6 +72,7 @@
 	copyBar.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyBar.definition = [self.definition copyWithZone: zone];
 	copyBar.keys = [self.keys copyWithZone: zone];
+	copyBar.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyBar.selected = [self.selected copyWithZone: zone];
 	copyBar.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyBar.accessibility = [self.accessibility copyWithZone: zone];

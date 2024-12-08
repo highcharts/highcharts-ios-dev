@@ -30,6 +30,7 @@
 	copyDumbbell.dataLabels = [self.dataLabels copyWithZone: zone];
 	copyDumbbell.dragDrop = [self.dragDrop copyWithZone: zone];
 	copyDumbbell.colorKey = [self.colorKey copyWithZone: zone];
+	copyDumbbell.fillColor = [self.fillColor copyWithZone: zone];
 	copyDumbbell.threshold = [self.threshold copyWithZone: zone];
 	copyDumbbell.shadow = [self.shadow copyWithZone: zone];
 	copyDumbbell.negativeFillColor = [self.negativeFillColor copyWithZone: zone];
@@ -59,6 +60,7 @@
 	copyDumbbell.findNearestPointBy = [self.findNearestPointBy copyWithZone: zone];
 	copyDumbbell.relativeXValue = [self.relativeXValue copyWithZone: zone];
 	copyDumbbell.showCheckbox = [self.showCheckbox copyWithZone: zone];
+	copyDumbbell.boostBlending = [self.boostBlending copyWithZone: zone];
 	copyDumbbell.events = [self.events copyWithZone: zone];
 	copyDumbbell.pointDescriptionFormat = [self.pointDescriptionFormat copyWithZone: zone];
 	copyDumbbell.opacity = [self.opacity copyWithZone: zone];
@@ -120,6 +122,9 @@
 	if (self.lowColor) {
 		params[@"lowColor"] = [self.lowColor getData];
 	}
+	if (self.fillColor) {
+		params[@"fillColor"] = [self.fillColor getData];
+	}
 	if (self.negativeFillColor) {
 		params[@"negativeFillColor"] = [self.negativeFillColor getData];
 	}
@@ -171,6 +176,12 @@
 	HIColor *oldValue = _lowColor;
 	_lowColor = lowColor;
 	[self updateHIObject:oldValue newValue:lowColor propertyName:@"lowColor"];
+}
+
+-(void)setFillColor:(HIColor *)fillColor {
+	HIColor *oldValue = _fillColor;
+	_fillColor = fillColor;
+	[self updateHIObject:oldValue newValue:fillColor propertyName:@"fillColor"];
 }
 
 -(void)setNegativeFillColor:(HIColor *)negativeFillColor {

@@ -64,6 +64,7 @@
 	copySpline.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copySpline.definition = [self.definition copyWithZone: zone];
 	copySpline.keys = [self.keys copyWithZone: zone];
+	copySpline.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copySpline.selected = [self.selected copyWithZone: zone];
 	copySpline.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copySpline.accessibility = [self.accessibility copyWithZone: zone];

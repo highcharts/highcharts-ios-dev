@@ -57,6 +57,7 @@
 	copyPie.opacity = [self.opacity copyWithZone: zone];
 	copyPie.definition = [self.definition copyWithZone: zone];
 	copyPie.keys = [self.keys copyWithZone: zone];
+	copyPie.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyPie.selected = [self.selected copyWithZone: zone];
 	copyPie.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPie.accessibility = [self.accessibility copyWithZone: zone];

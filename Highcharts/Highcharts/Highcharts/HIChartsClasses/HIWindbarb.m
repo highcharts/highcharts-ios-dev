@@ -73,6 +73,7 @@
 	copyWindbarb.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyWindbarb.definition = [self.definition copyWithZone: zone];
 	copyWindbarb.keys = [self.keys copyWithZone: zone];
+	copyWindbarb.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyWindbarb.selected = [self.selected copyWithZone: zone];
 	copyWindbarb.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyWindbarb.accessibility = [self.accessibility copyWithZone: zone];

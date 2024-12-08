@@ -80,6 +80,7 @@
 	copyHistogram.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyHistogram.definition = [self.definition copyWithZone: zone];
 	copyHistogram.keys = [self.keys copyWithZone: zone];
+	copyHistogram.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyHistogram.selected = [self.selected copyWithZone: zone];
 	copyHistogram.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyHistogram.accessibility = [self.accessibility copyWithZone: zone];

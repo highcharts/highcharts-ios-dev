@@ -67,6 +67,7 @@
 	copyPyramid.opacity = [self.opacity copyWithZone: zone];
 	copyPyramid.definition = [self.definition copyWithZone: zone];
 	copyPyramid.keys = [self.keys copyWithZone: zone];
+	copyPyramid.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyPyramid.selected = [self.selected copyWithZone: zone];
 	copyPyramid.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPyramid.accessibility = [self.accessibility copyWithZone: zone];

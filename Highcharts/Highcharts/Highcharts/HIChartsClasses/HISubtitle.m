@@ -13,11 +13,9 @@
 	copySubtitle.style = [self.style copyWithZone: zone];
 	copySubtitle.verticalAlign = [self.verticalAlign copyWithZone: zone];
 	copySubtitle.text = [self.text copyWithZone: zone];
-	copySubtitle.align = [self.align copyWithZone: zone];
 	copySubtitle.y = [self.y copyWithZone: zone];
 	copySubtitle.x = [self.x copyWithZone: zone];
 	copySubtitle.floating = [self.floating copyWithZone: zone];
-	copySubtitle.widthAdjust = [self.widthAdjust copyWithZone: zone];
 	copySubtitle.useHTML = [self.useHTML copyWithZone: zone];
 	return copySubtitle;
 }
@@ -34,9 +32,6 @@
 	if (self.text) {
 		params[@"text"] = self.text;
 	}
-	if (self.align) {
-		params[@"align"] = self.align;
-	}
 	if (self.y) {
 		params[@"y"] = self.y;
 	}
@@ -45,9 +40,6 @@
 	}
 	if (self.floating) {
 		params[@"floating"] = self.floating;
-	}
-	if (self.widthAdjust) {
-		params[@"widthAdjust"] = self.widthAdjust;
 	}
 	if (self.useHTML) {
 		params[@"useHTML"] = self.useHTML;
@@ -75,12 +67,6 @@
 	[self updateNSObject:oldValue newValue:text propertyName:@"text"];
 }
 
--(void)setAlign:(NSString *)align {
-	NSString *oldValue = _align;
-	_align = align;
-	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
-}
-
 -(void)setY:(NSNumber *)y {
 	NSNumber *oldValue = _y;
 	_y = y;
@@ -97,12 +83,6 @@
 	NSNumber *oldValue = _floating;
 	_floating = floating;
 	[self updateNSObject:oldValue newValue:floating propertyName:@"floating"];
-}
-
--(void)setWidthAdjust:(NSNumber *)widthAdjust {
-	NSNumber *oldValue = _widthAdjust;
-	_widthAdjust = widthAdjust;
-	[self updateNSObject:oldValue newValue:widthAdjust propertyName:@"widthAdjust"];
 }
 
 -(void)setUseHTML:(NSNumber *)useHTML {

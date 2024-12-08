@@ -84,6 +84,7 @@
 	copyWaterfall.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyWaterfall.definition = [self.definition copyWithZone: zone];
 	copyWaterfall.keys = [self.keys copyWithZone: zone];
+	copyWaterfall.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyWaterfall.selected = [self.selected copyWithZone: zone];
 	copyWaterfall.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyWaterfall.accessibility = [self.accessibility copyWithZone: zone];

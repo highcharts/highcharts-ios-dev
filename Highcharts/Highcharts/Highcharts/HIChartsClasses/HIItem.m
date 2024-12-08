@@ -57,6 +57,7 @@
 	copyItem.opacity = [self.opacity copyWithZone: zone];
 	copyItem.definition = [self.definition copyWithZone: zone];
 	copyItem.keys = [self.keys copyWithZone: zone];
+	copyItem.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyItem.selected = [self.selected copyWithZone: zone];
 	copyItem.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyItem.accessibility = [self.accessibility copyWithZone: zone];

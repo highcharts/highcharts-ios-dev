@@ -71,6 +71,7 @@
 	copyArea.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyArea.definition = [self.definition copyWithZone: zone];
 	copyArea.keys = [self.keys copyWithZone: zone];
+	copyArea.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyArea.selected = [self.selected copyWithZone: zone];
 	copyArea.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyArea.accessibility = [self.accessibility copyWithZone: zone];
