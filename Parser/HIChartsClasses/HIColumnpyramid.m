@@ -72,6 +72,7 @@
 	copyColumnpyramid.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyColumnpyramid.definition = [self.definition copyWithZone: zone];
 	copyColumnpyramid.keys = [self.keys copyWithZone: zone];
+	copyColumnpyramid.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyColumnpyramid.selected = [self.selected copyWithZone: zone];
 	copyColumnpyramid.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyColumnpyramid.accessibility = [self.accessibility copyWithZone: zone];

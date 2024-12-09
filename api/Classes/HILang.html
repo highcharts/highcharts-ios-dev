@@ -105,6 +105,8 @@
 		
 		<option value="//api/name/loading">loading</option>
 		
+		<option value="//api/name/locale">locale</option>
+		
 		<option value="//api/name/mainBreadcrumb">mainBreadcrumb</option>
 		
 		<option value="//api/name/months">months</option>
@@ -181,7 +183,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Language object. The language object is global and it can&rsquo;t be set on each chart initialization. Instead, use <code>Highcharts.setOptions</code> to set it before any chart is initialized. <code>js Highcharts.setOptions({   lang: {     months: [       'Janvier', 'Février', 'Mars', 'Avril',       'Mai', 'Juin', 'Juillet', 'Août',       'Septembre', 'Octobre', 'Novembre', 'Décembre'     ],     weekdays: [       'Dimanche', 'Lundi', 'Mardi', 'Mercredi',       'Jeudi', 'Vendredi', 'Samedi'     ]   } });</code></p>
+						<p>An object containing language-related strings and settings. A typical setup uses <code>Highcharts.setOptions</code> to make the options apply to all charts in the same page. <code>js Highcharts.setOptions({   lang: {     locale: 'fr'   } });</code></p>
 					</div>
 					
 					
@@ -337,6 +339,61 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/locale" title="locale"></a>
+	<h3 class="method-title"><code><a href="#//api/name/locale">&nbsp;&nbsp;locale</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The browser locale to use for date and number formatting. The actual locale used for each chart is determined in three steps: 1. If this <code>lang.locale</code> option is specified, it is used. 2. Else, look for the closest ancestor HTML element with a <code>lang</code>  attribute, typically the <code>&lt;html&gt;</code> element. 3. If no &lsquo;lang&rsquo; attribute is found, use the default browser locale. Use <code>en-GB</code>, British English, for approximate consistency with Highcharts v &lt; 12.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSArray&lt;NSString*&gt; *locale</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/lang/locale/">Set the locale using the <code>lang.locale</code> option</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/lang/locale-attribute/">Pick up the locale from the HTML <code>lang</code> attribute</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/members/highcharts-numberformat">Arabic locale with digits and dates *</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HILang.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/accessibility" title="accessibility"></a>
 	<h3 class="method-title"><code><a href="#//api/name/accessibility">&nbsp;&nbsp;accessibility</a></code>
 </h3>
@@ -435,7 +492,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Short week days, starting Sunday. If not specified, Highcharts uses the first three letters of the <code>lang.weekdays</code> option.</p>
+				<p>Short week days, starting Sunday. Defaults to &lsquo;undefined&rsquo;, meaning the default short weekday names are used according to the <code>lang.locale</code> setting.</p>
 			</div>
 			
 		    
@@ -886,7 +943,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>An array containing the weekday names.</p>
+				<p>An array containing the weekday names. Defaults to &lsquo;undefined&rsquo;, meaning the default weekday names are used according to the <code>lang.locale</code> setting.</p>
 			</div>
 			
 		    
@@ -903,8 +960,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
-         "Friday", "Saturday"]</code>.</p>
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
 			</div>
 			
 
@@ -1388,7 +1444,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>An array containing the months names. Corresponds to the <code>%B</code> format in <code>Highcharts.dateFormat()</code>.</p>
+				<p>An array containing the months names. Corresponds to the <code>%B</code> format in <code>Highcharts.dateFormat()</code>. Defaults to &lsquo;undefined&rsquo;, meaning the default month names are used according to the <code>lang.locale</code> setting.</p>
 			</div>
 			
 		    
@@ -1405,9 +1461,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>["January", "February", "March", "April", "May", "June",
-         "July", "August", "September", "October", "November",
-         "December"]</code>.</p>
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
 			</div>
 			
 
@@ -1436,7 +1490,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>An array containing the months names in abbreviated form. Corresponds to the <code>%b</code> format in <code>Highcharts.dateFormat()</code>.</p>
+				<p>An array containing the months names in abbreviated form. Corresponds to the <code>%b</code> format in <code>Highcharts.dateFormat()</code>. Defaults to &lsquo;undefined&rsquo;, meaning the default short month names are used according to the <code>lang.locale</code> setting.</p>
 			</div>
 			
 		    
@@ -1453,8 +1507,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]</code>.</p>
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
 			</div>
 			
 
@@ -1529,7 +1582,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The default decimal point used in the <code>Highcharts.numberFormat</code> method unless otherwise specified in the function arguments.</p>
+				<p>The default decimal point used in the <code>Highcharts.numberFormat</code> method unless otherwise specified in the function arguments. Defaults to the locale decimal point as determined by <code>lang.locale</code>.</p>
 			</div>
 			
 		    
@@ -1546,7 +1599,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>.</code>.</p>
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
 			</div>
 			
 
@@ -1575,7 +1628,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The default thousands separator used in the <code>Highcharts.numberFormat</code> method unless otherwise specified in the function arguments. Defaults to a single space character, which is recommended in <a href="https://en.wikipedia.org/wiki/ISO_31-0#Numbers">ISO 31-0</a> and works across Anglo-American and continental European languages.</p>
+				<p>The default thousands separator used in the <code>Highcharts.numberFormat</code> method unless otherwise specified in the function arguments. Defaults to the locale thousands separator as determined by <code>lang.locale</code>.</p>
 			</div>
 			
 		    
@@ -1592,7 +1645,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>\u0020</code>.</p>
+				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
 			</div>
 			
 

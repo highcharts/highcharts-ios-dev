@@ -83,8 +83,6 @@
 		
 		<option value="//api/name/timezone">timezone</option>
 		
-		<option value="//api/name/useUTC">useUTC</option>
-		
 		<option value="//api/name/value">value</option>
 		
 		<option value="//api/name/within">within</option>
@@ -133,7 +131,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Time options that can apply globally or to individual charts. These settings affect how <code>datetime</code> axes are laid out, how tooltips are formatted, how series <code>pointIntervalUnit</code> works and how the Highcharts Stock range selector handles time. The common use case is that all charts in the same Highcharts object share the same time settings, in which case the global settings are set using <code>setOptions</code>. <code>js // Apply time settings globally Highcharts.setOptions({   time: {     timezone: 'Europe/London'   } }); // Apply time settings by instance let chart = Highcharts.chart('container', {   time: {     timezone: 'America/New_York'   },   series: [{     data: [1, 4, 3, 5]   }] }); // Use the Time object console.log(    'Current time in New York',    chart.time.dateFormat('%Y-%m-%d %H:%M:%S', Date.now()) );</code> Since v6.0.5, the time options were moved from the <code>global</code> object to the <code>time</code> object, and time options can be set on each individual chart.</p>
+						<p>Time options that can apply globally or to individual charts. These settings affect how <code>datetime</code> axes are laid out, how tooltips are formatted, how series <code>pointIntervalUnit</code> works and how the Highcharts Stock range selector handles time. The common use case is that all charts in the same Highcharts object share the same time settings, in which case the global settings are set using <code>setOptions</code>. <code>js // Apply time settings globally Highcharts.setOptions({   time: {     timezone: 'Europe/London'   } }); // Apply time settings by instance const chart = Highcharts.chart('container', {   time: {     timezone: 'America/New_York'   },   series: [{     data: [1, 4, 3, 5]   }] }); // Use the Time object console.log(    'Current time in New York',    chart.time.dateFormat('%Y-%m-%d %H:%M:%S', Date.now()) );</code> Since v6.0.5, the time options were moved from the <code>global</code> object to the <code>time</code> object, and time options can be set on each individual chart.</p>
 
 <p><strong>Try it</strong></p>
 
@@ -214,7 +212,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A named time zone. Supported time zone names rely on the browser implementations, as described in the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#timezone">mdn docs</a>. If the given time zone is not recognized by the browser, Highcharts provides a warning and falls back to returning a 0 offset, corresponding to the UTC time zone. Until v11.2.0, this option depended on moment.js.</p>
+				<p>A named time zone. Supported time zone names rely on the browser implementations, as described in the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#timezone">mdn docs</a>. If the given time zone is not recognized by the browser, Highcharts provides a warning and falls back to returning a 0 offset, corresponding to the UTC time zone. The time zone affects axis scaling, tickmark placement and time display in <code>Highcharts.dateFormat</code>. Setting <code>timezone</code> to <code>undefined</code> falls back to the default browser timezone setting. Until v11.2.0, this option depended on moment.js.</p>
 			</div>
 			
 		    
@@ -231,66 +229,12 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>undefined</code>.</p>
+				<p><strong>Defaults to</strong> <code>UTC</code>.</p>
 
 <p><strong>Try it</strong></p>
 
 <ul>
 <li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/timezone/">Europe/Oslo</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HITime.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/useUTC" title="useUTC"></a>
-	<h3 class="method-title"><code><a href="#//api/name/useUTC">&nbsp;&nbsp;useUTC</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Whether to use UTC time for axis scaling, tickmark placement and time display in <code>Highcharts.dateFormat</code>. Advantages of using UTC is that the time displays equally regardless of the user agent&rsquo;s time zone settings. Local time can be used when the data is loaded in real time or when correct Daylight Saving Time transitions are required.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *useUTC</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>True</code>.</p>
-
-<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/useutc-true/">True by default</a></li>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/time/useutc-false/">False</a></li>
 </ul>
 
 			</div>

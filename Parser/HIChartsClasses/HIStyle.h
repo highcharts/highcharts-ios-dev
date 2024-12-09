@@ -24,10 +24,10 @@ CSS styles for the label. In styled mode, the styles are set in the `.highcharts
 @property(nonatomic, readwrite) NSString *color;
 @property(nonatomic, readwrite) NSNumber *textOutline;
 @property(nonatomic, readwrite) NSString *cursor;
+@property(nonatomic, readwrite) NSString *textOverflow;
 @property(nonatomic, readwrite) NSString *whiteSpace;
 @property(nonatomic, readwrite) NSNumber *borderRadius;
 @property(nonatomic, readwrite) NSNumber *lineWidth;
-@property(nonatomic, readwrite) NSString *textOverflow;
 @property(nonatomic, readwrite) NSString *stroke;
 @property(nonatomic, readwrite) NSNumber *stroke-width;
 @property(nonatomic, readwrite) NSString *fill;

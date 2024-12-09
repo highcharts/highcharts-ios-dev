@@ -87,6 +87,7 @@
 	copyBoxplot.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyBoxplot.definition = [self.definition copyWithZone: zone];
 	copyBoxplot.keys = [self.keys copyWithZone: zone];
+	copyBoxplot.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyBoxplot.selected = [self.selected copyWithZone: zone];
 	copyBoxplot.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyBoxplot.accessibility = [self.accessibility copyWithZone: zone];

@@ -92,8 +92,8 @@
 	[self updateHIObject:oldValue newValue:label propertyName:@"label"];
 }
 
--(void)setValue:(NSNumber *)value {
-	NSNumber *oldValue = _value;
+-(void)setValue:(id)value {
+	id oldValue = _value;
 	_value = value;
 	[self updateNSObject:oldValue newValue:value propertyName:@"value"];
 }

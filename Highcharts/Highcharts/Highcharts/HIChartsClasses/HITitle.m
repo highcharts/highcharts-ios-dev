@@ -10,16 +10,16 @@
 -(id)copyWithZone:(NSZone *)zone {
 	[super copyWithZone:zone];
 	HITitle *copyTitle = [[HITitle allocWithZone: zone] init];
-	copyTitle.widthAdjust = [self.widthAdjust copyWithZone: zone];
 	copyTitle.style = [self.style copyWithZone: zone];
 	copyTitle.verticalAlign = [self.verticalAlign copyWithZone: zone];
 	copyTitle.text = [self.text copyWithZone: zone];
 	copyTitle.align = [self.align copyWithZone: zone];
+	copyTitle.useHTML = [self.useHTML copyWithZone: zone];
 	copyTitle.y = [self.y copyWithZone: zone];
 	copyTitle.x = [self.x copyWithZone: zone];
-	copyTitle.floating = [self.floating copyWithZone: zone];
+	copyTitle.minScale = [self.minScale copyWithZone: zone];
 	copyTitle.margin = [self.margin copyWithZone: zone];
-	copyTitle.useHTML = [self.useHTML copyWithZone: zone];
+	copyTitle.floating = [self.floating copyWithZone: zone];
 	copyTitle.reserveSpace = [self.reserveSpace copyWithZone: zone];
 	copyTitle.skew3d = [self.skew3d copyWithZone: zone];
 	copyTitle.position3d = [self.position3d copyWithZone: zone];
@@ -32,9 +32,6 @@
 -(NSDictionary *)getParams
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
-	if (self.widthAdjust) {
-		params[@"widthAdjust"] = self.widthAdjust;
-	}
 	if (self.style) {
 		params[@"style"] = [self.style getParams];
 	}
@@ -47,20 +44,23 @@
 	if (self.align) {
 		params[@"align"] = self.align;
 	}
+	if (self.useHTML) {
+		params[@"useHTML"] = self.useHTML;
+	}
 	if (self.y) {
 		params[@"y"] = self.y;
 	}
 	if (self.x) {
 		params[@"x"] = self.x;
 	}
-	if (self.floating) {
-		params[@"floating"] = self.floating;
+	if (self.minScale) {
+		params[@"minScale"] = self.minScale;
 	}
 	if (self.margin) {
 		params[@"margin"] = self.margin;
 	}
-	if (self.useHTML) {
-		params[@"useHTML"] = self.useHTML;
+	if (self.floating) {
+		params[@"floating"] = self.floating;
 	}
 	if (self.reserveSpace) {
 		params[@"reserveSpace"] = self.reserveSpace;
@@ -84,12 +84,6 @@
 }
 
 # pragma mark - Setters
-
--(void)setWidthAdjust:(NSNumber *)widthAdjust {
-	NSNumber *oldValue = _widthAdjust;
-	_widthAdjust = widthAdjust;
-	[self updateNSObject:oldValue newValue:widthAdjust propertyName:@"widthAdjust"];
-}
 
 -(void)setStyle:(HICSSObject *)style {
 	HICSSObject *oldValue = _style;
@@ -115,6 +109,12 @@
 	[self updateNSObject:oldValue newValue:align propertyName:@"align"];
 }
 
+-(void)setUseHTML:(NSNumber *)useHTML {
+	NSNumber *oldValue = _useHTML;
+	_useHTML = useHTML;
+	[self updateNSObject:oldValue newValue:useHTML propertyName:@"useHTML"];
+}
+
 -(void)setY:(NSNumber *)y {
 	NSNumber *oldValue = _y;
 	_y = y;
@@ -127,10 +127,10 @@
 	[self updateNSObject:oldValue newValue:x propertyName:@"x"];
 }
 
--(void)setFloating:(NSNumber *)floating {
-	NSNumber *oldValue = _floating;
-	_floating = floating;
-	[self updateNSObject:oldValue newValue:floating propertyName:@"floating"];
+-(void)setMinScale:(NSNumber *)minScale {
+	NSNumber *oldValue = _minScale;
+	_minScale = minScale;
+	[self updateNSObject:oldValue newValue:minScale propertyName:@"minScale"];
 }
 
 -(void)setMargin:(NSNumber *)margin {
@@ -139,10 +139,10 @@
 	[self updateNSObject:oldValue newValue:margin propertyName:@"margin"];
 }
 
--(void)setUseHTML:(NSNumber *)useHTML {
-	NSNumber *oldValue = _useHTML;
-	_useHTML = useHTML;
-	[self updateNSObject:oldValue newValue:useHTML propertyName:@"useHTML"];
+-(void)setFloating:(NSNumber *)floating {
+	NSNumber *oldValue = _floating;
+	_floating = floating;
+	[self updateNSObject:oldValue newValue:floating propertyName:@"floating"];
 }
 
 -(void)setReserveSpace:(NSNumber *)reserveSpace {

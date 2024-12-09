@@ -155,8 +155,8 @@
 	[self updateHIObject:oldValue newValue:guideBox propertyName:@"guideBox"];
 }
 
--(void)setDragMaxX:(NSNumber *)dragMaxX {
-	NSNumber *oldValue = _dragMaxX;
+-(void)setDragMaxX:(id)dragMaxX {
+	id oldValue = _dragMaxX;
 	_dragMaxX = dragMaxX;
 	[self updateNSObject:oldValue newValue:dragMaxX propertyName:@"dragMaxX"];
 }
@@ -179,8 +179,8 @@
 	[self updateNSObject:oldValue newValue:dragPrecisionY propertyName:@"dragPrecisionY"];
 }
 
--(void)setDragMinX:(NSNumber *)dragMinX {
-	NSNumber *oldValue = _dragMinX;
+-(void)setDragMinX:(id)dragMinX {
+	id oldValue = _dragMinX;
 	_dragMinX = dragMinX;
 	[self updateNSObject:oldValue newValue:dragMinX propertyName:@"dragMinX"];
 }

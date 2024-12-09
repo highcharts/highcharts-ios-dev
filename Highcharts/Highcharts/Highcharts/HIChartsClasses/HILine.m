@@ -56,6 +56,7 @@
 	copyLine.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyLine.definition = [self.definition copyWithZone: zone];
 	copyLine.keys = [self.keys copyWithZone: zone];
+	copyLine.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyLine.selected = [self.selected copyWithZone: zone];
 	copyLine.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyLine.accessibility = [self.accessibility copyWithZone: zone];

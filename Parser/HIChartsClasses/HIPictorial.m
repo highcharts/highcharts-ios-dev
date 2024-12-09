@@ -66,6 +66,7 @@
 	copyPictorial.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyPictorial.definition = [self.definition copyWithZone: zone];
 	copyPictorial.keys = [self.keys copyWithZone: zone];
+	copyPictorial.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyPictorial.selected = [self.selected copyWithZone: zone];
 	copyPictorial.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPictorial.accessibility = [self.accessibility copyWithZone: zone];

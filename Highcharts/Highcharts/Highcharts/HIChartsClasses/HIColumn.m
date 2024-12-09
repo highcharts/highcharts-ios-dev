@@ -72,6 +72,7 @@
 	copyColumn.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyColumn.definition = [self.definition copyWithZone: zone];
 	copyColumn.keys = [self.keys copyWithZone: zone];
+	copyColumn.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyColumn.selected = [self.selected copyWithZone: zone];
 	copyColumn.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyColumn.accessibility = [self.accessibility copyWithZone: zone];

@@ -12,7 +12,6 @@
 	HITime *copyTime = [[HITime allocWithZone: zone] init];
 	copyTime.Date = [self.Date copyWithZone: zone];
 	copyTime.timezone = [self.timezone copyWithZone: zone];
-	copyTime.useUTC = [self.useUTC copyWithZone: zone];
 	copyTime.mapFunction = [self.mapFunction copyWithZone: zone];
 	copyTime.min = [self.min copyWithZone: zone];
 	copyTime.max = [self.max copyWithZone: zone];
@@ -30,9 +29,6 @@
 	}
 	if (self.timezone) {
 		params[@"timezone"] = self.timezone;
-	}
-	if (self.useUTC) {
-		params[@"useUTC"] = self.useUTC;
 	}
 	if (self.mapFunction) {
 		params[@"mapFunction"] = self.mapFunction;
@@ -67,12 +63,6 @@
 	NSString *oldValue = _timezone;
 	_timezone = timezone;
 	[self updateNSObject:oldValue newValue:timezone propertyName:@"timezone"];
-}
-
--(void)setUseUTC:(NSNumber *)useUTC {
-	NSNumber *oldValue = _useUTC;
-	_useUTC = useUTC;
-	[self updateNSObject:oldValue newValue:useUTC propertyName:@"useUTC"];
 }
 
 -(void)setMapFunction:(NSString *)mapFunction {

@@ -47,6 +47,7 @@
 	copySolidgauge.opacity = [self.opacity copyWithZone: zone];
 	copySolidgauge.definition = [self.definition copyWithZone: zone];
 	copySolidgauge.keys = [self.keys copyWithZone: zone];
+	copySolidgauge.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copySolidgauge.selected = [self.selected copyWithZone: zone];
 	copySolidgauge.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copySolidgauge.accessibility = [self.accessibility copyWithZone: zone];

@@ -19,7 +19,7 @@
 {
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary: @{}];
 	if (self.main) {
-		params[@"main"] = self.main;
+		params[@"main"] = [self.main getParams];
 	}
 	if (self.list) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -38,14 +38,14 @@
 
 # pragma mark - Setters
 
--(void)setMain:(NSString *)main {
-	NSString *oldValue = _main;
+-(void)setMain:(HIDateTimeFormatOptions *)main {
+	HIDateTimeFormatOptions *oldValue = _main;
 	_main = main;
-	[self updateNSObject:oldValue newValue:main propertyName:@"main"];
+	[self updateHIObject:oldValue newValue:main propertyName:@"main"];
 }
 
--(void)setList:(NSArray<NSString *> *)list {
-	NSArray<NSString *> *oldValue = _list;
+-(void)setList:(NSArray *)list {
+	NSArray *oldValue = _list;
 	_list = list;
 	[self updateArrayObject:oldValue newValue:list propertyName:@"list"];
 }

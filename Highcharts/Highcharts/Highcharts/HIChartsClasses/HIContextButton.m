@@ -15,6 +15,7 @@
 	copyContextButton.className = [self.className copyWithZone: zone];
 	copyContextButton.onclick = [self.onclick copyWithZone: zone];
 	copyContextButton.titleKey = [self.titleKey copyWithZone: zone];
+	copyContextButton.y = [self.y copyWithZone: zone];
 	copyContextButton.x = [self.x copyWithZone: zone];
 	copyContextButton.menuClassName = [self.menuClassName copyWithZone: zone];
 	copyContextButton.symbol = [self.symbol copyWithZone: zone];
@@ -27,7 +28,6 @@
 	copyContextButton.width = [self.width copyWithZone: zone];
 	copyContextButton.buttonSpacing = [self.buttonSpacing copyWithZone: zone];
 	copyContextButton.symbolSize = [self.symbolSize copyWithZone: zone];
-	copyContextButton.y = [self.y copyWithZone: zone];
 	copyContextButton.verticalAlign = [self.verticalAlign copyWithZone: zone];
 	copyContextButton.symbolY = [self.symbolY copyWithZone: zone];
 	copyContextButton.symbolX = [self.symbolX copyWithZone: zone];
@@ -62,6 +62,9 @@
 	}
 	if (self.titleKey) {
 		params[@"titleKey"] = self.titleKey;
+	}
+	if (self.y) {
+		params[@"y"] = self.y;
 	}
 	if (self.x) {
 		params[@"x"] = self.x;
@@ -98,9 +101,6 @@
 	}
 	if (self.symbolSize) {
 		params[@"symbolSize"] = self.symbolSize;
-	}
-	if (self.y) {
-		params[@"y"] = self.y;
 	}
 	if (self.verticalAlign) {
 		params[@"verticalAlign"] = self.verticalAlign;
@@ -150,6 +150,12 @@
 	NSString *oldValue = _titleKey;
 	_titleKey = titleKey;
 	[self updateNSObject:oldValue newValue:titleKey propertyName:@"titleKey"];
+}
+
+-(void)setY:(NSNumber *)y {
+	NSNumber *oldValue = _y;
+	_y = y;
+	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }
 
 -(void)setX:(NSNumber *)x {
@@ -222,12 +228,6 @@
 	NSNumber *oldValue = _symbolSize;
 	_symbolSize = symbolSize;
 	[self updateNSObject:oldValue newValue:symbolSize propertyName:@"symbolSize"];
-}
-
--(void)setY:(NSNumber *)y {
-	NSNumber *oldValue = _y;
-	_y = y;
-	[self updateNSObject:oldValue newValue:y propertyName:@"y"];
 }
 
 -(void)setVerticalAlign:(NSString *)verticalAlign {

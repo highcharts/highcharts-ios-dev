@@ -60,6 +60,7 @@
 	copyAreaspline.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyAreaspline.definition = [self.definition copyWithZone: zone];
 	copyAreaspline.keys = [self.keys copyWithZone: zone];
+	copyAreaspline.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyAreaspline.selected = [self.selected copyWithZone: zone];
 	copyAreaspline.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyAreaspline.accessibility = [self.accessibility copyWithZone: zone];

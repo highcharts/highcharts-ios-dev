@@ -77,6 +77,8 @@
 		
 		<option value="//api/name/allowTableSorting">allowTableSorting</option>
 		
+		<option value="//api/name/applyStyleSheets">applyStyleSheets</option>
+		
 		<option value="//api/name/buttons">buttons</option>
 		
 		<option value="//api/name/chartMenuLabel">chartMenuLabel</option>
@@ -171,7 +173,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Options for the exporting module. For an overview on the matter, see <a href="https://www.highcharts.com/docs/export-module/export-module-overview">the docs</a>.</p>
+						<p>Options for the exporting module. For an overview on the matter, see <a href="https://www.highcharts.com/docs/export-module/export-module-overview">the docs</a> and read our <a href="https://www.highcharts.com/docs/export-module/privacy-disclaimer-export">Fair Usage Policy</a>.</p>
 					</div>
 					
 					
@@ -281,57 +283,6 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/chartOptions" title="chartOptions"></a>
-	<h3 class="method-title"><code><a href="#//api/name/chartOptions">&nbsp;&nbsp;chartOptions</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Additional chart options to be merged into the chart before exporting to an image format. This does not apply to printing the chart via the export menu. For example, a common use case is to add data labels to improve readability of the exported chart, or to add a printer-friendly color scheme to exported PDFs.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSDictionary *chartOptions</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Try it</strong></p>
-
-<ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/chartoptions-data-labels/">Added data labels</a></li>
-</ul>
-
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">HIExporting.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/sourceHeight" title="sourceHeight"></a>
 	<h3 class="method-title"><code><a href="#//api/name/sourceHeight">&nbsp;&nbsp;sourceHeight</a></code>
 </h3>
@@ -357,6 +308,57 @@
 
 			
 
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIExporting.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/tableCaption" title="tableCaption"></a>
+	<h3 class="method-title"><code><a href="#//api/name/tableCaption">&nbsp;&nbsp;tableCaption</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Caption for the data table. Same as chart title by default. Set to <code>false</code> to disable.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id tableCaption</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/multilevel-table">Multiple table headers</a></li>
+</ul>
+
+			</div>
 			
 
 			
@@ -819,8 +821,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/tableCaption" title="tableCaption"></a>
-	<h3 class="method-title"><code><a href="#//api/name/tableCaption">&nbsp;&nbsp;tableCaption</a></code>
+	<a name="//api/name/chartOptions" title="chartOptions"></a>
+	<h3 class="method-title"><code><a href="#//api/name/chartOptions">&nbsp;&nbsp;chartOptions</a></code>
 </h3>
 
 	<div class="method-info">
@@ -830,12 +832,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Caption for the data table. Same as chart title by default. Set to <code>false</code> to disable.</p>
+				<p>Additional chart options to be merged into the chart before exporting to an image format. This does not apply to printing the chart via the export menu. For example, a common use case is to add data labels to improve readability of the exported chart, or to add a printer-friendly color scheme to exported PDFs.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) id tableCaption</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSDictionary *chartOptions</code></div>
 
 		    
 			
@@ -850,7 +852,7 @@
 				<p><strong>Try it</strong></p>
 
 <ul>
-<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/export-data/multilevel-table">Multiple table headers</a></li>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/exporting/chartoptions-data-labels/">Added data labels</a></li>
 </ul>
 
 			</div>
@@ -976,6 +978,59 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/applyStyleSheets" title="applyStyleSheets"></a>
+	<h3 class="method-title"><code><a href="#//api/name/applyStyleSheets">&nbsp;&nbsp;applyStyleSheets</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Allow exporting a chart retaining any user-applied CSS. Note that this is is default behavior in <code>styledMode</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) NSNumber *applyStyleSheets</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Defaults to</strong> <code>false</code>.</p>
+
+<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/">/</a></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">HIExporting.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/fallbackToExportServer" title="fallbackToExportServer"></a>
 	<h3 class="method-title"><code><a href="#//api/name/fallbackToExportServer">&nbsp;&nbsp;fallbackToExportServer</a></code>
 </h3>
@@ -1050,7 +1105,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<!-- <h4 class="method-subtitle">Discussion</h4> -->
-				<p><strong>Defaults to</strong> <code>https://export.highcharts.com/</code>.</p>
+				<p><strong>Defaults to</strong> <code>https://export-svg.highcharts.com/</code>.</p>
 			</div>
 			
 

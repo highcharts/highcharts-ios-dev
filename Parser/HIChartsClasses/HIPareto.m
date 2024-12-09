@@ -46,6 +46,7 @@
 	copyPareto.animationLimit = [self.animationLimit copyWithZone: zone];
 	copyPareto.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyPareto.definition = [self.definition copyWithZone: zone];
+	copyPareto.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyPareto.selected = [self.selected copyWithZone: zone];
 	copyPareto.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyPareto.accessibility = [self.accessibility copyWithZone: zone];

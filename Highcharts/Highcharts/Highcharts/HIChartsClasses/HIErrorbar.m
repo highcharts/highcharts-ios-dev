@@ -88,6 +88,7 @@
 	copyErrorbar.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyErrorbar.definition = [self.definition copyWithZone: zone];
 	copyErrorbar.keys = [self.keys copyWithZone: zone];
+	copyErrorbar.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyErrorbar.selected = [self.selected copyWithZone: zone];
 	copyErrorbar.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyErrorbar.accessibility = [self.accessibility copyWithZone: zone];

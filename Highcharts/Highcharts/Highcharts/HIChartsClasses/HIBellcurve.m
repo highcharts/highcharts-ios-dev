@@ -68,6 +68,7 @@
 	copyBellcurve.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyBellcurve.definition = [self.definition copyWithZone: zone];
 	copyBellcurve.keys = [self.keys copyWithZone: zone];
+	copyBellcurve.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyBellcurve.selected = [self.selected copyWithZone: zone];
 	copyBellcurve.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyBellcurve.accessibility = [self.accessibility copyWithZone: zone];

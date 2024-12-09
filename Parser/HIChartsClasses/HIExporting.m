@@ -12,8 +12,8 @@
 	HIExporting *copyExporting = [[HIExporting allocWithZone: zone] init];
 	copyExporting.accessibility = [self.accessibility copyWithZone: zone];
 	copyExporting.menuItemDefinitions = [self.menuItemDefinitions copyWithZone: zone];
-	copyExporting.chartOptions = [self.chartOptions copyWithZone: zone];
 	copyExporting.sourceHeight = [self.sourceHeight copyWithZone: zone];
+	copyExporting.tableCaption = [self.tableCaption copyWithZone: zone];
 	copyExporting.sourceWidth = [self.sourceWidth copyWithZone: zone];
 	copyExporting.scale = [self.scale copyWithZone: zone];
 	copyExporting.showTable = [self.showTable copyWithZone: zone];
@@ -23,9 +23,10 @@
 	copyExporting.printMaxWidth = [self.printMaxWidth copyWithZone: zone];
 	copyExporting.csv = [self.csv copyWithZone: zone];
 	copyExporting.type = [self.type copyWithZone: zone];
-	copyExporting.tableCaption = [self.tableCaption copyWithZone: zone];
+	copyExporting.chartOptions = [self.chartOptions copyWithZone: zone];
 	copyExporting.useMultiLevelHeaders = [self.useMultiLevelHeaders copyWithZone: zone];
 	copyExporting.useRowspanHeaders = [self.useRowspanHeaders copyWithZone: zone];
+	copyExporting.applyStyleSheets = [self.applyStyleSheets copyWithZone: zone];
 	copyExporting.fallbackToExportServer = [self.fallbackToExportServer copyWithZone: zone];
 	copyExporting.url = [self.url copyWithZone: zone];
 	copyExporting.enabled = [self.enabled copyWithZone: zone];
@@ -50,11 +51,11 @@
 	if (self.menuItemDefinitions) {
 		params[@"menuItemDefinitions"] = self.menuItemDefinitions;
 	}
-	if (self.chartOptions) {
-		params[@"chartOptions"] = self.chartOptions;
-	}
 	if (self.sourceHeight) {
 		params[@"sourceHeight"] = self.sourceHeight;
+	}
+	if (self.tableCaption) {
+		params[@"tableCaption"] = self.tableCaption;
 	}
 	if (self.sourceWidth) {
 		params[@"sourceWidth"] = self.sourceWidth;
@@ -83,14 +84,17 @@
 	if (self.type) {
 		params[@"type"] = self.type;
 	}
-	if (self.tableCaption) {
-		params[@"tableCaption"] = self.tableCaption;
+	if (self.chartOptions) {
+		params[@"chartOptions"] = self.chartOptions;
 	}
 	if (self.useMultiLevelHeaders) {
 		params[@"useMultiLevelHeaders"] = self.useMultiLevelHeaders;
 	}
 	if (self.useRowspanHeaders) {
 		params[@"useRowspanHeaders"] = self.useRowspanHeaders;
+	}
+	if (self.applyStyleSheets) {
+		params[@"applyStyleSheets"] = self.applyStyleSheets;
 	}
 	if (self.fallbackToExportServer) {
 		params[@"fallbackToExportServer"] = self.fallbackToExportServer;
@@ -145,16 +149,16 @@
 	[self updateNSObject:oldValue newValue:menuItemDefinitions propertyName:@"menuItemDefinitions"];
 }
 
--(void)setChartOptions:(NSDictionary *)chartOptions {
-	NSDictionary *oldValue = _chartOptions;
-	_chartOptions = chartOptions;
-	[self updateNSObject:oldValue newValue:chartOptions propertyName:@"chartOptions"];
-}
-
 -(void)setSourceHeight:(NSNumber *)sourceHeight {
 	NSNumber *oldValue = _sourceHeight;
 	_sourceHeight = sourceHeight;
 	[self updateNSObject:oldValue newValue:sourceHeight propertyName:@"sourceHeight"];
+}
+
+-(void)setTableCaption:(id)tableCaption {
+	id oldValue = _tableCaption;
+	_tableCaption = tableCaption;
+	[self updateNSObject:oldValue newValue:tableCaption propertyName:@"tableCaption"];
 }
 
 -(void)setSourceWidth:(NSNumber *)sourceWidth {
@@ -211,10 +215,10 @@
 	[self updateNSObject:oldValue newValue:type propertyName:@"type"];
 }
 
--(void)setTableCaption:(id)tableCaption {
-	id oldValue = _tableCaption;
-	_tableCaption = tableCaption;
-	[self updateNSObject:oldValue newValue:tableCaption propertyName:@"tableCaption"];
+-(void)setChartOptions:(NSDictionary *)chartOptions {
+	NSDictionary *oldValue = _chartOptions;
+	_chartOptions = chartOptions;
+	[self updateNSObject:oldValue newValue:chartOptions propertyName:@"chartOptions"];
 }
 
 -(void)setUseMultiLevelHeaders:(NSNumber *)useMultiLevelHeaders {
@@ -227,6 +231,12 @@
 	NSNumber *oldValue = _useRowspanHeaders;
 	_useRowspanHeaders = useRowspanHeaders;
 	[self updateNSObject:oldValue newValue:useRowspanHeaders propertyName:@"useRowspanHeaders"];
+}
+
+-(void)setApplyStyleSheets:(NSNumber *)applyStyleSheets {
+	NSNumber *oldValue = _applyStyleSheets;
+	_applyStyleSheets = applyStyleSheets;
+	[self updateNSObject:oldValue newValue:applyStyleSheets propertyName:@"applyStyleSheets"];
 }
 
 -(void)setFallbackToExportServer:(NSNumber *)fallbackToExportServer {

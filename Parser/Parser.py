@@ -353,7 +353,11 @@ hc_types = {
         "'left'|'right'": 'NSString',
         #11.4.3
         "function|*": 'HIFunction',
-        "string|number|function|*": 'id'
+        "string|number|function|*": 'id',
+        #12.0.2
+        "string|Highcharts.DateTimeFormatOptions": 'HIDateTimeFormatOptions',
+        "Highcharts.Dictionary.<(string|Highcharts.DateTimeFormatOptions)>": 'NSDictionary',
+        "Array.<(string|Highcharts.DateTimeFormatOptions)>": 'NSArray'
     }
 
 def get_type(x):

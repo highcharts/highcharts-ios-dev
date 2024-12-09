@@ -81,6 +81,7 @@
 	copyBullet.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyBullet.definition = [self.definition copyWithZone: zone];
 	copyBullet.keys = [self.keys copyWithZone: zone];
+	copyBullet.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyBullet.selected = [self.selected copyWithZone: zone];
 	copyBullet.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyBullet.accessibility = [self.accessibility copyWithZone: zone];

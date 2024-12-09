@@ -222,7 +222,6 @@
 		params[@"parentNodeTextPath"] = [self.parentNodeTextPath getParams];
 	}
 	if (self.parentNodeFormatter) {
-		params[@"parentNodeFormatter"] = [self.parentNodeFormatter getFunction];
 	}
 	if (self.attributes) {
 		params[@"attributes"] = [self.attributes getParams];
@@ -253,8 +252,8 @@
 	[self updateNSObject:oldValue newValue:defer propertyName:@"defer"];
 }
 
--(void)setStyle:(HICSSObject *)style {
-	HICSSObject *oldValue = _style;
+-(void)setStyle:(HIStyle *)style {
+	HIStyle *oldValue = _style;
 	_style = style;
 	[self updateHIObject:oldValue newValue:style propertyName:@"style"];
 }
@@ -541,10 +540,10 @@
 	[self updateHIObject:oldValue newValue:parentNodeTextPath propertyName:@"parentNodeTextPath"];
 }
 
--(void)setParentNodeFormatter:(HIFunction *)parentNodeFormatter {
-	HIFunction *oldValue = _parentNodeFormatter;
+-(void)setParentNodeFormatter:(id)parentNodeFormatter {
+	id oldValue = _parentNodeFormatter;
 	_parentNodeFormatter = parentNodeFormatter;
-	[self updateHIObject:oldValue newValue:parentNodeFormatter propertyName:@"parentNodeFormatter"];
+	[self updateNSObject:oldValue newValue:parentNodeFormatter propertyName:@"parentNodeFormatter"];
 }
 
 -(void)setAttributes:(HISVGAttributes *)attributes {

@@ -20,6 +20,7 @@
 	copyCSSObject.fontSize = [self.fontSize copyWithZone: zone];
 	copyCSSObject.fontWeight = [self.fontWeight copyWithZone: zone];
 	copyCSSObject.height = [self.height copyWithZone: zone];
+	copyCSSObject.lineClamp = [self.lineClamp copyWithZone: zone];
 	copyCSSObject.lineWidth = [self.lineWidth copyWithZone: zone];
 	copyCSSObject.opacity = [self.opacity copyWithZone: zone];
 	copyCSSObject.padding = [self.padding copyWithZone: zone];
@@ -68,6 +69,9 @@
 	}
 	if (self.height) {
 		params[@"height"] = self.height;
+	}
+	if (self.lineClamp) {
+		params[@"lineClamp"] = self.lineClamp;
 	}
 	if (self.lineWidth) {
 		params[@"lineWidth"] = self.lineWidth;
@@ -171,6 +175,12 @@
 	NSNumber *oldValue = _height;
 	_height = height;
 	[self updateNSObject:oldValue newValue:height propertyName:@"height"];
+}
+
+-(void)setLineClamp:(NSNumber *)lineClamp {
+	NSNumber *oldValue = _lineClamp;
+	_lineClamp = lineClamp;
+	[self updateNSObject:oldValue newValue:lineClamp propertyName:@"lineClamp"];
 }
 
 -(void)setLineWidth:(NSNumber *)lineWidth {

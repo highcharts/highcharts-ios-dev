@@ -209,6 +209,16 @@
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/align-auto/">Default title alignment</a></li>
+</ul>
+
+			</div>
+			
 
 			
 
@@ -625,6 +635,16 @@
 			
 
 			
+			<div class="method-subsection discussion-section">
+				<!-- <h4 class="method-subtitle">Discussion</h4> -->
+				<p><strong>Try it</strong></p>
+
+<ul>
+<li><a href="https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/title/align-auto/">Default title alignment</a></li>
+</ul>
+
+			</div>
+			
 
 			
 
@@ -787,7 +807,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Options for the exporting module. For an overview on the matter, see <a href="https://www.highcharts.com/docs/export-module/export-module-overview">the docs</a>.</p>
+				<p>Options for the exporting module. For an overview on the matter, see <a href="https://www.highcharts.com/docs/export-module/export-module-overview">the docs</a> and read our <a href="https://www.highcharts.com/docs/export-module/privacy-disclaimer-export">Fair Usage Policy</a>.</p>
 			</div>
 			
 		    
@@ -1416,7 +1436,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Time options that can apply globally or to individual charts. These settings affect how <code>datetime</code> axes are laid out, how tooltips are formatted, how series <code>pointIntervalUnit</code> works and how the Highcharts Stock range selector handles time. The common use case is that all charts in the same Highcharts object share the same time settings, in which case the global settings are set using <code>setOptions</code>. <code>js // Apply time settings globally Highcharts.setOptions({   time: {     timezone: 'Europe/London'   } }); // Apply time settings by instance let chart = Highcharts.chart('container', {   time: {     timezone: 'America/New_York'   },   series: [{     data: [1, 4, 3, 5]   }] }); // Use the Time object console.log(    'Current time in New York',    chart.time.dateFormat('%Y-%m-%d %H:%M:%S', Date.now()) );</code> Since v6.0.5, the time options were moved from the <code>global</code> object to the <code>time</code> object, and time options can be set on each individual chart.</p>
+				<p>Time options that can apply globally or to individual charts. These settings affect how <code>datetime</code> axes are laid out, how tooltips are formatted, how series <code>pointIntervalUnit</code> works and how the Highcharts Stock range selector handles time. The common use case is that all charts in the same Highcharts object share the same time settings, in which case the global settings are set using <code>setOptions</code>. <code>js // Apply time settings globally Highcharts.setOptions({   time: {     timezone: 'Europe/London'   } }); // Apply time settings by instance const chart = Highcharts.chart('container', {   time: {     timezone: 'America/New_York'   },   series: [{     data: [1, 4, 3, 5]   }] }); // Use the Time object console.log(    'Current time in New York',    chart.time.dateFormat('%Y-%m-%d %H:%M:%S', Date.now()) );</code> Since v6.0.5, the time options were moved from the <code>global</code> object to the <code>time</code> object, and time options can be set on each individual chart.</p>
 			</div>
 			
 		    

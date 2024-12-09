@@ -130,7 +130,7 @@
 		params[@"pointFormat"] = self.pointFormat;
 	}
 	if (self.xDateFormat) {
-		params[@"xDateFormat"] = self.xDateFormat;
+		params[@"xDateFormat"] = [self.xDateFormat getParams];
 	}
 	if (self.dateTimeLabelFormats) {
 		params[@"dateTimeLabelFormats"] = [self.dateTimeLabelFormats getParams];
@@ -326,10 +326,10 @@
 	[self updateNSObject:oldValue newValue:pointFormat propertyName:@"pointFormat"];
 }
 
--(void)setXDateFormat:(NSString *)xDateFormat {
-	NSString *oldValue = _xDateFormat;
+-(void)setXDateFormat:(HIDateTimeFormatOptions *)xDateFormat {
+	HIDateTimeFormatOptions *oldValue = _xDateFormat;
 	_xDateFormat = xDateFormat;
-	[self updateNSObject:oldValue newValue:xDateFormat propertyName:@"xDateFormat"];
+	[self updateHIObject:oldValue newValue:xDateFormat propertyName:@"xDateFormat"];
 }
 
 -(void)setDateTimeLabelFormats:(HIDateTimeLabelFormats *)dateTimeLabelFormats {

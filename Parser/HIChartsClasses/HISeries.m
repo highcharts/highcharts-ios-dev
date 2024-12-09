@@ -69,6 +69,7 @@
 	copySeries.animationLimit = [self.animationLimit copyWithZone: zone];
 	copySeries.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copySeries.keys = [self.keys copyWithZone: zone];
+	copySeries.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copySeries.selected = [self.selected copyWithZone: zone];
 	copySeries.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copySeries.accessibility = [self.accessibility copyWithZone: zone];
@@ -294,6 +295,9 @@
 			}
 		}
 		params[@"keys"] = array;
+	}
+	if (self.legendSymbolColor) {
+		params[@"legendSymbolColor"] = [self.legendSymbolColor getData];
 	}
 	if (self.selected) {
 		params[@"selected"] = self.selected;
@@ -744,6 +748,12 @@
 	[self updateArrayObject:oldValue newValue:keys propertyName:@"keys"];
 }
 
+-(void)setLegendSymbolColor:(HIColor *)legendSymbolColor {
+	HIColor *oldValue = _legendSymbolColor;
+	_legendSymbolColor = legendSymbolColor;
+	[self updateHIObject:oldValue newValue:legendSymbolColor propertyName:@"legendSymbolColor"];
+}
+
 -(void)setSelected:(NSNumber *)selected {
 	NSNumber *oldValue = _selected;
 	_selected = selected;
@@ -858,8 +868,8 @@
 	[self updateNSObject:oldValue newValue:className propertyName:@"className"];
 }
 
--(void)setPointStart:(NSNumber *)pointStart {
-	NSNumber *oldValue = _pointStart;
+-(void)setPointStart:(id)pointStart {
+	id oldValue = _pointStart;
 	_pointStart = pointStart;
 	[self updateNSObject:oldValue newValue:pointStart propertyName:@"pointStart"];
 }

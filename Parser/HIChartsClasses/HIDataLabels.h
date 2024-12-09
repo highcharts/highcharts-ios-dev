@@ -386,7 +386,7 @@ The [format string](https://www.highcharts.com/docs/chart-concepts/labels-and-st
 @property(nonatomic, readwrite) NSString *nodeFormat;
 @property(nonatomic, readwrite) NSString *parentNodeFormat;
 @property(nonatomic, readwrite) HIParentNodeTextPath *parentNodeTextPath;
-@property(nonatomic, readwrite) HIFunction *parentNodeFormatter;
+@property(nonatomic, readwrite) id parentNodeFormatter;
 /**
 Presentation attributes for the text path.
 */

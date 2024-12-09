@@ -77,6 +77,7 @@
 	copyFunnel3d.turboThreshold = [self.turboThreshold copyWithZone: zone];
 	copyFunnel3d.definition = [self.definition copyWithZone: zone];
 	copyFunnel3d.keys = [self.keys copyWithZone: zone];
+	copyFunnel3d.legendSymbolColor = [self.legendSymbolColor copyWithZone: zone];
 	copyFunnel3d.selected = [self.selected copyWithZone: zone];
 	copyFunnel3d.skipKeyboardNavigation = [self.skipKeyboardNavigation copyWithZone: zone];
 	copyFunnel3d.accessibility = [self.accessibility copyWithZone: zone];
