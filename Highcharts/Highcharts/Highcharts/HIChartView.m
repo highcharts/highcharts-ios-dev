@@ -29,7 +29,6 @@
 @property (nonatomic, strong) HIGExport *export;
 @end
 
-static BOOL preloaded = NO;
 static NSNumber *_synced = nil;
 static NSBundle *highchartsBundle = nil;
 
@@ -37,15 +36,16 @@ static NSBundle *highchartsBundle = nil;
 
 + (void)preload
 {
-    if (!preloaded) {
-        [HIGBundle preloadBundle:kHighchartsChartBundle];
-        highchartsBundle = [HIGBundle bundle:kHighchartsChartBundle];
-    }
-    preloaded = YES;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        highchartsBundle = [HIGBundle sourceBundle:kHighchartsChartBundle];
+    });
 }
 
 + (void)addFont:(NSString *)path {
     [self.class preload];
+    [HIGBundle preloadBundle:kHighchartsChartBundle];
+    highchartsBundle = [HIGBundle bundle:kHighchartsChartBundle];
     [HICustomFont addFont:path bundle:highchartsBundle];
 }
 
@@ -82,7 +82,7 @@ static NSBundle *highchartsBundle = nil;
 {
     self.layoutMargins = UIEdgeInsetsZero;
     self.preservesSuperviewLayoutMargins = NO;
-    if (highchartsBundle == nil) highchartsBundle = [HIGBundle bundle:kHighchartsChartBundle];
+    highchartsBundle = [HIGBundle bundle:kHighchartsChartBundle];
     
     self.additionalPlugins = @[ @"exporting", @"offline-exporting", @"accessibility", @"boost", @"data", @"drilldown", @"moment", @"moment-timezone-with-data" ];
     
