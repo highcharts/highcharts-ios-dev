@@ -10,6 +10,8 @@
 
 static NSString *const kHIGBundleErrorDomain = @"com.highcharts.bundle.preload";
 static NSString *const kHIGBundleValidationFileName = @"highcharts.html";
+static NSString *const kHIGBundleVersionFileName = @".highcharts-bundle-version";
+static NSString *const kHIGBundleResourceVersion = @"12.0.2-arcana.off-main.slim.1";
 
 typedef NS_ENUM(NSInteger, HIGBundleErrorCode) {
     HIGBundleErrorCodeSourceBundleNotFound = 1,
@@ -42,6 +44,13 @@ static NSError *higBundleError(HIGBundleErrorCode code, NSString *localizedDescr
     return [NSError errorWithDomain:kHIGBundleErrorDomain code:code userInfo:userInfo];
 }
 
+static NSString *higBundleResourceMarker(void) {
+    NSBundle *frameworkBundle = [NSBundle bundleForClass:[HIGBundle class]];
+    NSString *shortVersion = frameworkBundle.infoDictionary[@"CFBundleShortVersionString"] ?: @"unknown";
+    NSString *buildVersion = frameworkBundle.infoDictionary[@"CFBundleVersion"] ?: @"unknown";
+    return [NSString stringWithFormat:@"%@-%@-%@", kHIGBundleResourceVersion, shortVersion, buildVersion];
+}
+
 @implementation HIGBundle
 
 + (BOOL)isValidBundleDirectory:(NSString*)path
@@ -65,7 +74,19 @@ static NSError *higBundleError(HIGBundleErrorCode code, NSString *localizedDescr
     }
     
     NSDictionary<NSFileAttributeKey, id> *attributes = [fileManager attributesOfItemAtPath:validationPath error:nil];
-    return attributes.fileSize > 0;
+    if (attributes.fileSize <= 0) {
+        return NO;
+    }
+    
+    NSString *versionPath = [path stringByAppendingPathComponent:kHIGBundleVersionFileName];
+    isDirectory = NO;
+    
+    if (![fileManager fileExistsAtPath:versionPath isDirectory:&isDirectory] || isDirectory) {
+        return NO;
+    }
+    
+    NSString *version = [NSString stringWithContentsOfFile:versionPath encoding:NSUTF8StringEncoding error:nil];
+    return [version isEqualToString:higBundleResourceMarker()];
 }
 
 + (nullable NSBundle*)sourceBundle:(NSString*)bundleName
@@ -102,6 +123,16 @@ static NSError *higBundleError(HIGBundleErrorCode code, NSString *localizedDescr
     if (![fileManager copyItemAtPath:sourceBundle.bundlePath toPath:stagingPath error:&copyError]) {
         if (error) {
             *error = higBundleError(HIGBundleErrorCodeCopyFailed, @"Unable to copy Highcharts resources.", copyError);
+        }
+        [fileManager removeItemAtPath:stagingPath error:nil];
+        return nil;
+    }
+    
+    NSString *stagingVersionPath = [stagingPath stringByAppendingPathComponent:kHIGBundleVersionFileName];
+    NSError *versionError = nil;
+    if (![higBundleResourceMarker() writeToFile:stagingVersionPath atomically:YES encoding:NSUTF8StringEncoding error:&versionError]) {
+        if (error) {
+            *error = higBundleError(HIGBundleErrorCodeValidationFailed, @"Unable to write Highcharts resource version marker.", versionError);
         }
         [fileManager removeItemAtPath:stagingPath error:nil];
         return nil;
