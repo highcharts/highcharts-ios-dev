@@ -27,9 +27,16 @@
 @property (nonatomic, strong) NSMutableDictionary *closures;
 @property (nonatomic, strong) NSArray *additionalPlugins;
 @property (nonatomic, strong) HIGExport *export;
+@property (nonatomic, assign) BOOL resourceSetupInProgress;
+@property (nonatomic, assign) BOOL resourceSetupComplete;
+@property (nonatomic, copy) NSDictionary *pendingJSONOptions;
+@property (nonatomic, copy) NSString *chartUUID;
+
+- (void)finishSetupWithFrame:(CGRect)frame bundle:(NSBundle *)bundle;
+- (void)loadHTMLWithFileURL:(NSString *)html;
 @end
 
-static BOOL preloaded = NO;
+static dispatch_once_t preloadOnceToken;
 static NSNumber *_synced = nil;
 static NSBundle *highchartsBundle = nil;
 
@@ -37,15 +44,15 @@ static NSBundle *highchartsBundle = nil;
 
 + (void)preload
 {
-    if (!preloaded) {
-        [HIGBundle preloadBundle:kHighchartsChartBundle];
-        highchartsBundle = [HIGBundle bundle:kHighchartsChartBundle];
-    }
-    preloaded = YES;
+    dispatch_once(&preloadOnceToken, ^{
+        [HIGBundle preloadBundleInBackground:kHighchartsChartBundle];
+    });
 }
 
 + (void)addFont:(NSString *)path {
     [self.class preload];
+    [HIGBundle preloadBundle:kHighchartsChartBundle];
+    highchartsBundle = [HIGBundle bundle:kHighchartsChartBundle];
     [HICustomFont addFont:path bundle:highchartsBundle];
 }
 
@@ -78,19 +85,43 @@ static NSBundle *highchartsBundle = nil;
     return self;
 }
 
-- (void)setupWithFrame: (CGRect) frame
+- (void)setupWithFrame:(CGRect)frame
 {
     self.layoutMargins = UIEdgeInsetsZero;
     self.preservesSuperviewLayoutMargins = NO;
-    if (highchartsBundle == nil) highchartsBundle = [HIGBundle bundle:kHighchartsChartBundle];
-    
     self.additionalPlugins = @[ @"exporting", @"offline-exporting", @"accessibility", @"boost", @"data", @"drilldown", @"moment", @"moment-timezone-with-data" ];
+    self.resourceSetupInProgress = YES;
+    
+    __weak typeof(self) weakSelf = self;
+    [HIGBundle preloadBundleInBackground:kHighchartsChartBundle completion:^(NSBundle * _Nullable bundle, NSError * _Nullable error) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!strongSelf) {
+            return;
+        }
+        
+        strongSelf.resourceSetupInProgress = NO;
+        
+        if (bundle) {
+            [strongSelf finishSetupWithFrame:strongSelf.bounds bundle:bundle];
+        } else {
+            NSLog(@"[Highcharts] Unable to prepare chart resources: %@", [error localizedDescription]);
+        }
+    }];
+}
+
+- (void)finishSetupWithFrame:(CGRect)frame bundle:(NSBundle *)bundle
+{
+    if (self.resourceSetupComplete) {
+        return;
+    }
+    
+    highchartsBundle = bundle;
     
     self.HTML = [[HIGHTML alloc] init];
     
-    self.HTML.baseURL = [highchartsBundle bundlePath];
+    self.HTML.baseURL = [bundle bundlePath];
     
-    [self.HTML loadHTML:[highchartsBundle pathForResource:@"highcharts" ofType:@"html"]];
+    [self.HTML loadHTML:[bundle pathForResource:@"highcharts" ofType:@"html"]];
     
     NSAssert(self.HTML.html, @"Highcharts HTML was not found!");
     
@@ -101,6 +132,8 @@ static NSBundle *highchartsBundle = nil;
     
     self.export = [[HIGExport alloc] init];
     self.closures = [[NSMutableDictionary alloc] init];
+    self.chartUUID = [[NSUUID UUID] UUIDString];
+    
     self.webView = [[_synced boolValue] ? [HIWKSyncedWebView alloc] : [WKWebView alloc] initWithFrame:frame configuration:configuration];
     self.webView.scrollView.scrollEnabled = NO;
     if (@available(iOS 16.4, *)) {
@@ -116,6 +149,22 @@ static NSBundle *highchartsBundle = nil;
     self.webView.backgroundColor = [UIColor clearColor];
     self.webView.scrollView.backgroundColor = [UIColor clearColor];
     self.webView.scrollView.opaque = NO;
+    
+    self.resourceSetupComplete = YES;
+    
+    if (self.superview) {
+        [self removeScriptMesssageHandlers];
+        [self addScriptMessageHandlers];
+    }
+    
+    NSDictionary *pendingJSONOptions = self.pendingJSONOptions;
+    self.pendingJSONOptions = nil;
+    
+    if (pendingJSONOptions) {
+        [self loadJSONOptions:pendingJSONOptions];
+    } else {
+        [self loadChartInternal];
+    }
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
@@ -146,6 +195,13 @@ static NSBundle *highchartsBundle = nil;
     if (self.options) {
         [self removeObserver:self forKeyPath:@"options.isUpdated"];
         [self removeObserver:self forKeyPath:@"options.jsClassMethod"];
+    }
+    if (_chartUUID) {
+        NSBundle *bundle = [HIGBundle bundleIfExists:kHighchartsChartBundle];
+        if (bundle) {
+            NSString *chartHTMLPath = [[bundle bundlePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"chart_%@.html", _chartUUID]];
+            [[NSFileManager defaultManager] removeItemAtPath:chartHTMLPath error:nil];
+        }
     }
 }
 
@@ -235,6 +291,10 @@ static NSBundle *highchartsBundle = nil;
 }
 
 - (void)updateOptions {
+    if (!self.resourceSetupComplete) {
+        return;
+    }
+    
     NSMutableDictionary *options = [[self.options getParams] mutableCopy];
     [self prepareHIObjects:options];
     [self.HTML prepareOptions:options];
@@ -248,6 +308,13 @@ static NSBundle *highchartsBundle = nil;
 }
 
 - (void)loadChartInternal {
+    if (!self.resourceSetupComplete) {
+        if (self.resourceSetupInProgress) {
+            return;
+        }
+        [self setupWithFrame:self.bounds];
+        return;
+    }
     if(self.reloadTimer) return;
     self.reloadTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(loadChartWorker) userInfo:nil repeats:NO];
 }
@@ -258,15 +325,9 @@ static NSBundle *highchartsBundle = nil;
     }
     
     NSMutableDictionary *options = [[self.options getParams] mutableCopy];
-    
-    // Prepare HI objects from options.
     [self prepareHIObjects:options];
-    
-    // Prepare HTML with options.
     [self prepareHTML:options];
-    
-    // Load HTML
-    [self.webView loadHTMLString:self.HTML.html baseURL:[highchartsBundle bundleURL]];
+    [self loadHTMLWithFileURL:self.HTML.html];
     if ([_synced boolValue]) CFRunLoopRunInMode((CFStringRef)NSDefaultRunLoopMode, 1, NO);
 }
 
@@ -275,16 +336,39 @@ static NSBundle *highchartsBundle = nil;
         return;
     }
     
+    if (!self.resourceSetupComplete) {
+        self.pendingJSONOptions = [options copy];
+        if (!self.resourceSetupInProgress) {
+            [self setupWithFrame:self.bounds];
+        }
+        return;
+    }
+    
     NSMutableDictionary *jsonOptions = [self recursiveMutableCopy:options];
-    
-    // Prepare HI objects from options.
     [self prepareHIObjects:jsonOptions];
-    
-    // Prepare HTML with options.
     [self prepareHTML:jsonOptions];
+    [self loadHTMLWithFileURL:self.HTML.html];
+}
+
+- (void)loadHTMLWithFileURL:(NSString *)html {
+    NSBundle *bundle = [HIGBundle bundleIfExists:kHighchartsChartBundle];
+    if (!bundle) {
+        NSLog(@"[Highcharts] Prepared resource bundle is no longer available");
+        return;
+    }
     
-    // Load HTML
-    [self.webView loadHTMLString:self.HTML.html baseURL:[highchartsBundle bundleURL]];
+    NSString *chartHTMLName = [NSString stringWithFormat:@"chart_%@.html", self.chartUUID];
+    NSString *chartHTMLPath = [[bundle bundlePath] stringByAppendingPathComponent:chartHTMLName];
+    NSError *error = nil;
+    
+    if (![html writeToFile:chartHTMLPath atomically:YES encoding:NSUTF8StringEncoding error:&error]) {
+        NSLog(@"[Highcharts] Error writing chart HTML: %@", [error localizedDescription]);
+        return;
+    }
+    
+    NSURL *fileURL = [NSURL fileURLWithPath:chartHTMLPath];
+    NSURL *bundleURL = [NSURL fileURLWithPath:[bundle bundlePath] isDirectory:YES];
+    [self.webView loadFileURL:fileURL allowingReadAccessToURL:bundleURL];
 }
 
 - (void)callJSMethod:(NSDictionary *)dict {

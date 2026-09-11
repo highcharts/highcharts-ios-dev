@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
+typedef void (^HIGBundlePreloadCompletion)(NSBundle * _Nullable bundle, NSError * _Nullable error);
+
 /**
  *  This class preloads and returns bundle assets needed.
  */
@@ -22,6 +26,14 @@
  */
 + (BOOL)preloadBundle:(NSString*)bundleName;
 
++ (void)preloadBundleInBackground:(NSString*)bundleName;
+
++ (void)preloadBundleInBackground:(NSString*)bundleName completion:(nullable HIGBundlePreloadCompletion)completion;
+
++ (nullable NSBundle*)bundleIfExists:(NSString*)bundleName;
+
++ (nullable NSBundle*)sourceBundle:(NSString*)bundleName;
+
 /**
  *  Returns bundle object that need to be preload.
  *
@@ -29,6 +41,8 @@
  *
  *  @return bundle object specified name. Returns nil if object is not found.
  */
-+ (NSBundle*)bundle:(NSString*)bundleName;
++ (nullable NSBundle*)bundle:(NSString*)bundleName;
 
 @end
+
+NS_ASSUME_NONNULL_END

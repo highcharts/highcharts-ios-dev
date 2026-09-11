@@ -45,6 +45,12 @@
     return wknavigation;
 }
 
+- (WKNavigation *)loadFileURL:(NSURL *)URL allowingReadAccessToURL:(NSURL *)readAccessURL {
+    WKNavigation *wknavigation = [super loadFileURL:URL allowingReadAccessToURL:readAccessURL];
+    CFRunLoopRunInMode((CFStringRef)NSDefaultRunLoopMode, 1, NO);
+    return wknavigation;
+}
+
 -(void)stopRunLoop {
     CFRunLoopRef runLoop = [[NSRunLoop currentRunLoop] getCFRunLoop];
     CFRunLoopStop(runLoop);
