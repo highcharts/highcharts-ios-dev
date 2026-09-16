@@ -8,8 +8,13 @@
 
 #import "HIGExport.h"
 
+static NSString *const kHIGExportDirectoryName = @"com.highcharts.exports";
+
 @interface HIGExport ()
 @property (nonatomic, strong) NSURL *downloadURL;
+
+- (NSString *)exportDirectoryPath;
+- (void)clearExportDirectory;
 @end
 
 @implementation HIGExport
@@ -68,26 +73,36 @@
     [self.viewController presentViewController:activityViewController animated:YES completion:nil];
 }
 
-- (void)clearTmpDirectory {
-    NSArray* tmpDirectory = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:NSTemporaryDirectory() error:NULL];
-  
-    for (NSString *file in tmpDirectory) {
-      NSError *error = nil;
-      [[NSFileManager defaultManager] removeItemAtPath:[NSTemporaryDirectory() stringByAppendingPathComponent:file] error:&error];
+- (NSString *)exportDirectoryPath {
+    NSString *path = [NSTemporaryDirectory() stringByAppendingPathComponent:kHIGExportDirectoryName];
+    [[NSFileManager defaultManager] createDirectoryAtPath:path
+                             withIntermediateDirectories:YES
+                                             attributes:nil
+                                                  error:NULL];
+    return path;
+}
+
+- (void)clearExportDirectory {
+    NSString *exportDirectory = [self exportDirectoryPath];
+    NSArray<NSString *> *contents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:exportDirectory error:NULL];
+    
+    for (NSString *file in contents) {
+        [[NSFileManager defaultManager] removeItemAtPath:[exportDirectory stringByAppendingPathComponent:file] error:NULL];
     }
 }
 
 #pragma mark - WKDownloadDelegate
 
 - (void)download:(WKDownload *)download decideDestinationUsingResponse:(NSURLResponse *)response suggestedFilename:(NSString *)suggestedFilename completionHandler:(void (^)(NSURL * _Nullable))completionHandler  API_AVAILABLE(ios(15.0)) {
-  self.downloadURL = nil;
-  [self clearTmpDirectory];
-  
-  NSURL *url = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:suggestedFilename]];
-  
-  self.downloadURL = url;
-  
-  completionHandler(url);
+    self.downloadURL = nil;
+    [self clearExportDirectory];
+    
+    NSString *fileName = suggestedFilename.length > 0 ? suggestedFilename : @"chart";
+    NSURL *url = [NSURL fileURLWithPath:[[self exportDirectoryPath] stringByAppendingPathComponent:fileName]];
+    
+    self.downloadURL = url;
+    
+    completionHandler(url);
 }
 
 - (void)downloadDidFinish:(WKDownload *)download  API_AVAILABLE(ios(15.0)) {

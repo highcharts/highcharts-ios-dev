@@ -29,11 +29,12 @@
 @property (nonatomic, strong) HIGExport *export;
 @property (nonatomic, assign) BOOL resourceSetupInProgress;
 @property (nonatomic, assign) BOOL resourceSetupComplete;
+@property (nonatomic, strong) NSBundle *resourceBundle;
 @property (nonatomic, copy) NSDictionary *pendingJSONOptions;
-@property (nonatomic, copy) NSString *chartUUID;
 
 - (void)finishSetupWithFrame:(CGRect)frame bundle:(NSBundle *)bundle;
-- (void)loadHTMLWithFileURL:(NSString *)html;
+- (void)loadPreparedHTML;
+- (void)restoreResourceBundleAndReload;
 @end
 
 static dispatch_once_t preloadOnceToken;
@@ -116,6 +117,7 @@ static NSBundle *highchartsBundle = nil;
     }
     
     highchartsBundle = bundle;
+    self.resourceBundle = bundle;
     
     self.HTML = [[HIGHTML alloc] init];
     
@@ -132,7 +134,6 @@ static NSBundle *highchartsBundle = nil;
     
     self.export = [[HIGExport alloc] init];
     self.closures = [[NSMutableDictionary alloc] init];
-    self.chartUUID = [[NSUUID UUID] UUIDString];
     
     self.webView = [[_synced boolValue] ? [HIWKSyncedWebView alloc] : [WKWebView alloc] initWithFrame:frame configuration:configuration];
     self.webView.scrollView.scrollEnabled = NO;
@@ -183,11 +184,13 @@ static NSBundle *highchartsBundle = nil;
 - (void)removeScriptMesssageHandlers {
     [self.webView.configuration.userContentController removeScriptMessageHandlerForName:@"observe"];
     [self.webView.configuration.userContentController removeScriptMessageHandlerForName:@"exporting"];
+    [self.webView.configuration.userContentController removeScriptMessageHandlerForName:@"chartLifecycle"];
 }
 
 - (void)addScriptMessageHandlers {
     [self.webView.configuration.userContentController addScriptMessageHandler:self name:@"observe"];
     [self.webView.configuration.userContentController addScriptMessageHandler:self name:@"exporting"];
+    [self.webView.configuration.userContentController addScriptMessageHandler:self name:@"chartLifecycle"];
 }
 
 - (void)dealloc {
@@ -195,13 +198,6 @@ static NSBundle *highchartsBundle = nil;
     if (self.options) {
         [self removeObserver:self forKeyPath:@"options.isUpdated"];
         [self removeObserver:self forKeyPath:@"options.jsClassMethod"];
-    }
-    if (_chartUUID) {
-        NSBundle *bundle = [HIGBundle bundleIfExists:kHighchartsChartBundle];
-        if (bundle) {
-            NSString *chartHTMLPath = [[bundle bundlePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"chart_%@.html", _chartUUID]];
-            [[NSFileManager defaultManager] removeItemAtPath:chartHTMLPath error:nil];
-        }
     }
 }
 
@@ -327,7 +323,7 @@ static NSBundle *highchartsBundle = nil;
     NSMutableDictionary *options = [[self.options getParams] mutableCopy];
     [self prepareHIObjects:options];
     [self prepareHTML:options];
-    [self loadHTMLWithFileURL:self.HTML.html];
+    [self loadPreparedHTML];
     if ([_synced boolValue]) CFRunLoopRunInMode((CFStringRef)NSDefaultRunLoopMode, 1, NO);
 }
 
@@ -347,28 +343,61 @@ static NSBundle *highchartsBundle = nil;
     NSMutableDictionary *jsonOptions = [self recursiveMutableCopy:options];
     [self prepareHIObjects:jsonOptions];
     [self prepareHTML:jsonOptions];
-    [self loadHTMLWithFileURL:self.HTML.html];
+    [self loadPreparedHTML];
 }
 
-- (void)loadHTMLWithFileURL:(NSString *)html {
-    NSBundle *bundle = [HIGBundle bundleIfExists:kHighchartsChartBundle];
+- (void)loadPreparedHTML {
+    NSBundle *bundle = self.resourceBundle ?: [HIGBundle bundleIfExists:kHighchartsChartBundle];
+    
     if (!bundle) {
         NSLog(@"[Highcharts] Prepared resource bundle is no longer available");
+        self.resourceBundle = nil;
+        [self restoreResourceBundleAndReload];
         return;
     }
     
-    NSString *chartHTMLName = [NSString stringWithFormat:@"chart_%@.html", self.chartUUID];
-    NSString *chartHTMLPath = [[bundle bundlePath] stringByAppendingPathComponent:chartHTMLName];
-    NSError *error = nil;
-    
-    if (![html writeToFile:chartHTMLPath atomically:YES encoding:NSUTF8StringEncoding error:&error]) {
-        NSLog(@"[Highcharts] Error writing chart HTML: %@", [error localizedDescription]);
+    self.resourceBundle = bundle;
+    [self.webView loadHTMLString:self.HTML.html baseURL:bundle.bundleURL];
+}
+
+- (void)restoreResourceBundleAndReload {
+    if (self.resourceSetupInProgress) {
         return;
     }
     
-    NSURL *fileURL = [NSURL fileURLWithPath:chartHTMLPath];
-    NSURL *bundleURL = [NSURL fileURLWithPath:[bundle bundlePath] isDirectory:YES];
-    [self.webView loadFileURL:fileURL allowingReadAccessToURL:bundleURL];
+    self.resourceSetupInProgress = YES;
+    
+    __weak typeof(self) weakSelf = self;
+    [HIGBundle preloadBundleInBackground:kHighchartsChartBundle completion:^(NSBundle * _Nullable bundle, NSError * _Nullable error) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!strongSelf) {
+            return;
+        }
+        
+        strongSelf.resourceSetupInProgress = NO;
+        
+        if (!bundle) {
+            NSLog(@"[Highcharts] Unable to restore chart resources: %@", [error localizedDescription]);
+            return;
+        }
+        
+        if (!strongSelf.resourceSetupComplete) {
+            [strongSelf finishSetupWithFrame:strongSelf.bounds bundle:bundle];
+            return;
+        }
+        
+        strongSelf.resourceBundle = bundle;
+        strongSelf.HTML.baseURL = [bundle bundlePath];
+        
+        NSDictionary *pendingJSONOptions = strongSelf.pendingJSONOptions;
+        strongSelf.pendingJSONOptions = nil;
+        
+        if (pendingJSONOptions) {
+            [strongSelf loadJSONOptions:pendingJSONOptions];
+        } else {
+            [strongSelf loadChartInternal];
+        }
+    }];
 }
 
 - (void)callJSMethod:(NSDictionary *)dict {
@@ -501,16 +530,41 @@ static NSBundle *highchartsBundle = nil;
 }
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
+    NSURL *url = navigationResponse.response.URL;
+    NSString *mimeType = navigationResponse.response.MIMEType.lowercaseString ?: @"";
+    BOOL isChartNavigation = [url.scheme isEqualToString:@"file"] ||
+        [url.scheme isEqualToString:@"about"] ||
+        [mimeType isEqualToString:@"text/html"] ||
+        [mimeType isEqualToString:@"application/xhtml+xml"];
+    BOOL isExportPayload = [mimeType hasPrefix:@"image/"] ||
+        [mimeType isEqualToString:@"application/pdf"] ||
+        [mimeType isEqualToString:@"text/csv"] ||
+        [mimeType isEqualToString:@"application/octet-stream"] ||
+        [mimeType isEqualToString:@"application/zip"];
+    
     if (@available(iOS 15.0, *)) {
-      decisionHandler(WKNavigationResponsePolicyDownload);
+        if ((isExportPayload && !isChartNavigation) || !navigationResponse.canShowMIMEType) {
+            decisionHandler(WKNavigationResponsePolicyDownload);
+        } else {
+            decisionHandler(WKNavigationResponsePolicyAllow);
+        }
     } else {
-      decisionHandler(WKNavigationResponsePolicyAllow);
+        decisionHandler(WKNavigationResponsePolicyAllow);
     }
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     [self resize];
     if ([self.delegate respondsToSelector:@selector(chartViewDidLoad:)]) [self.delegate chartViewDidLoad:self];
+}
+
+- (void)webViewWebContentProcessDidTerminate:(WKWebView *)webView {
+    // iOS terminates the WKWebView's WebContent process (jetsam) while the app
+    // is suspended in the background. All DOM/JS state is lost and the web view
+    // renders blank until content is loaded again. Reload the chart; the
+    // prepared resource bundle is re-checked (and restored if the temp
+    // directory was purged as well) inside the load path.
+    [self loadChartInternal];
 }
 
 #pragma mark - WKScriptMessageHandler
@@ -526,6 +580,13 @@ static NSBundle *highchartsBundle = nil;
             
             HIClosure closure = (HIClosure)self.closures[closureID];
             closure(context);
+        }
+    }
+    else if ([message.name isEqualToString:@"chartLifecycle"]) {
+        NSString *messageBody = message.body;
+        
+        if ([messageBody isEqualToString:@"render"]) {
+            if ([self.delegate respondsToSelector:@selector(chartViewDidRender:)]) [self.delegate chartViewDidRender:self];
         }
     }
     else if ([message.name isEqualToString:@"exporting"]) {

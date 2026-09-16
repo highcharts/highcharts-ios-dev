@@ -11,7 +11,7 @@
 static NSString *const kHIGBundleErrorDomain = @"com.highcharts.bundle.preload";
 static NSString *const kHIGBundleValidationFileName = @"highcharts.html";
 static NSString *const kHIGBundleVersionFileName = @".highcharts-bundle-version";
-static NSString *const kHIGBundleResourceVersion = @"12.0.2-arcana.off-main.slim.1";
+static NSString *const kHIGBundleResourceVersion = @"12.0.2-arcana.off-main.slim.2";
 
 typedef NS_ENUM(NSInteger, HIGBundleErrorCode) {
     HIGBundleErrorCodeSourceBundleNotFound = 1,
@@ -24,6 +24,7 @@ typedef NS_ENUM(NSInteger, HIGBundleErrorCode) {
 
 + (BOOL)isValidBundleDirectory:(NSString *)path;
 + (nullable NSBundle *)prepareBundle:(NSString *)bundleName error:(NSError * _Nullable * _Nullable)error;
++ (BOOL)installPreparedBundleFromPath:(NSString *)stagingPath toPath:(NSString *)destinationPath error:(NSError * _Nullable * _Nullable)error;
 
 @end
 
@@ -96,6 +97,65 @@ static NSString *higBundleResourceMarker(void) {
     return sourceBundlePath ? [NSBundle bundleWithPath:sourceBundlePath] : nil;
 }
 
++ (BOOL)installPreparedBundleFromPath:(NSString*)stagingPath toPath:(NSString*)destinationPath error:(NSError * _Nullable * _Nullable)error
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    if ([fileManager fileExistsAtPath:destinationPath]) {
+        NSURL *destinationURL = [NSURL fileURLWithPath:destinationPath isDirectory:YES];
+        NSURL *stagingURL = [NSURL fileURLWithPath:stagingPath isDirectory:YES];
+        NSURL *resultingURL = nil;
+        NSError *replaceError = nil;
+        BOOL replaced = [fileManager replaceItemAtURL:destinationURL
+                                        withItemAtURL:stagingURL
+                                       backupItemName:nil
+                                              options:0
+                                     resultingItemURL:&resultingURL
+                                                error:&replaceError];
+        
+        if (replaced) {
+            [fileManager removeItemAtPath:stagingPath error:nil];
+            return YES;
+        }
+        
+        NSString *oldPath = [NSString stringWithFormat:@"%@-%@.old", destinationPath, [[NSUUID UUID] UUIDString]];
+        [fileManager removeItemAtPath:oldPath error:nil];
+        
+        NSError *moveOldError = nil;
+        if ([fileManager moveItemAtPath:destinationPath toPath:oldPath error:&moveOldError]) {
+            NSError *moveError = nil;
+            if ([fileManager moveItemAtPath:stagingPath toPath:destinationPath error:&moveError]) {
+                [fileManager removeItemAtPath:oldPath error:nil];
+                return YES;
+            }
+            
+            [fileManager moveItemAtPath:oldPath toPath:destinationPath error:nil];
+            if (error) {
+                *error = higBundleError(HIGBundleErrorCodeInstallFailed, @"Unable to install prepared Highcharts resources.", moveError);
+            }
+            [fileManager removeItemAtPath:stagingPath error:nil];
+            return NO;
+        }
+        
+        if (error) {
+            *error = higBundleError(HIGBundleErrorCodeInstallFailed, @"Unable to replace prepared Highcharts resources.", replaceError ?: moveOldError);
+        }
+        [fileManager removeItemAtPath:stagingPath error:nil];
+        return NO;
+    }
+    
+    NSError *moveError = nil;
+    if ([fileManager moveItemAtPath:stagingPath toPath:destinationPath error:&moveError]) {
+        return YES;
+    }
+    
+    if (error) {
+        *error = higBundleError(HIGBundleErrorCodeInstallFailed, @"Unable to install prepared Highcharts resources.", moveError);
+    }
+    [fileManager removeItemAtPath:stagingPath error:nil];
+    return NO;
+}
+
 + (nullable NSBundle*)prepareBundle:(NSString*)bundleName error:(NSError * _Nullable * _Nullable)error
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -146,14 +206,7 @@ static NSString *higBundleResourceMarker(void) {
         return nil;
     }
     
-    [fileManager removeItemAtPath:destinationPath error:nil];
-    
-    NSError *moveError = nil;
-    if (![fileManager moveItemAtPath:stagingPath toPath:destinationPath error:&moveError]) {
-        if (error) {
-            *error = higBundleError(HIGBundleErrorCodeInstallFailed, @"Unable to install prepared Highcharts resources.", moveError);
-        }
-        [fileManager removeItemAtPath:stagingPath error:nil];
+    if (![self installPreparedBundleFromPath:stagingPath toPath:destinationPath error:error]) {
         return nil;
     }
     

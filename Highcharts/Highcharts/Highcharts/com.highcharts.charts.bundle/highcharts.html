@@ -32,12 +32,29 @@
             });
             var chart = new Highcharts.Chart({{options}});
             
+            function notifyChartRendered() {
+                // Double requestAnimationFrame: the notification fires only
+                // after the browser has committed the first painted frame
+                // containing chart content, not merely when scripts finished.
+                window.requestAnimationFrame(function() {
+                    window.requestAnimationFrame(function() {
+                        iOSLifecycleHandler("render");
+                    });
+                });
+            }
+            notifyChartRendered();
+            chart.callbacks.push(notifyChartRendered);
+            
             function updateOptions(options) {
                 chart.update(options, true, true, false);
             }
         
             function iOSEventHandler(event) {
                 window.webkit.messageHandlers.observe.postMessage(event);
+            }
+        
+            function iOSLifecycleHandler(event) {
+                window.webkit.messageHandlers.chartLifecycle.postMessage(event);
             }
         
             function iOSExportHandler(event) {
