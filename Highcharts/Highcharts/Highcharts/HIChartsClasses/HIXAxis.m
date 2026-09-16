@@ -57,6 +57,8 @@
 	copyXAxis.alternateGridColor = [self.alternateGridColor copyWithZone: zone];
 	copyXAxis.minorTickColor = [self.minorTickColor copyWithZone: zone];
 	copyXAxis.maxPadding = [self.maxPadding copyWithZone: zone];
+	copyXAxis.ordinal = [self.ordinal copyWithZone: zone];
+	copyXAxis.overscroll = [self.overscroll copyWithZone: zone];
 	copyXAxis.className = [self.className copyWithZone: zone];
 	copyXAxis.margin = [self.margin copyWithZone: zone];
 	copyXAxis.softMax = [self.softMax copyWithZone: zone];
@@ -127,6 +129,12 @@
 	}
 	if (self.tickInterval) {
 		params[@"tickInterval"] = self.tickInterval;
+	}
+	if (self.ordinal) {
+		params[@"ordinal"] = self.ordinal;
+	}
+	if (self.overscroll) {
+		params[@"overscroll"] = self.overscroll;
 	}
 	if (self.categories) {
 		NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -434,6 +442,18 @@
 	NSNumber *oldValue = _tickInterval;
 	_tickInterval = tickInterval;
 	[self updateNSObject:oldValue newValue:tickInterval propertyName:@"tickInterval"];
+}
+
+-(void)setOrdinal:(NSNumber *)ordinal {
+	NSNumber *oldValue = _ordinal;
+	_ordinal = ordinal;
+	[self updateNSObject:oldValue newValue:ordinal propertyName:@"ordinal"];
+}
+
+-(void)setOverscroll:(NSNumber *)overscroll {
+	NSNumber *oldValue = _overscroll;
+	_overscroll = overscroll;
+	[self updateNSObject:oldValue newValue:overscroll propertyName:@"overscroll"];
 }
 
 -(void)setCategories:(NSArray<NSString *> *)categories {
