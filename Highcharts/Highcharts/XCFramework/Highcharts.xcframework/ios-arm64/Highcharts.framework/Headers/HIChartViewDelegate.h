@@ -20,4 +20,14 @@
  */
 - (void) chartViewDidLoad: (HIChartView *) chart;
 
+@optional
+
+/**
+ *  Called when the Highcharts chart has actually finished rendering its SVG in
+ *  the web view (fired from the JS render callback), as opposed to
+ *  `chartViewDidLoad:` which fires on `didFinishNavigation` — before the chart
+ *  pixels exist. Use this to dismiss a loading skeleton without a blank gap.
+ */
+- (void) chartViewDidRender: (HIChartView *) chart;
+
 @end

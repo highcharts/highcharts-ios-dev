@@ -84,6 +84,20 @@ The interval of the tick marks in axis units. When `undefined`, the tick interva
 */
 @property(nonatomic, readwrite) NSNumber *tickInterval;
 /**
+Whether to treat the datetime axis as ordinal: points are laid out at equal
+distances by index and gaps without data (weekends, holidays, overnight)
+collapse. Requires `type` to be `datetime`.
+
+**Defaults to** `false`.
+*/
+@property(nonatomic, readwrite) NSNumber *ordinal;
+/**
+The amount of space in milliseconds rendered after the last data point
+(overscroll area). Used to reserve room until market close on intraday
+datetime axes.
+*/
+@property(nonatomic, readwrite) NSNumber *overscroll;
+/**
 If categories are present for the xAxis, names are used instead of numbers for that axis. Since Highcharts 3.0, categories can also be extracted by giving each point a `name` and setting axis `type` to `category`. However, if you have multiple series, best practice remains defining the `categories` array. Example: `categories: ['Apples', 'Bananas', 'Oranges']`
 
 **Try it**
